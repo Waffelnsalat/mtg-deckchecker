@@ -635,6 +635,20 @@ const cardBreakdownController = window.MtgDeckcheckerCardBreakdown.create({
     analysis: currentAnalysisSnapshot,
   }),
 });
+const recommendationsController = window.MtgDeckcheckerRecommendations.create({
+  elements: {
+    summary: recommendationsSummary,
+    list: recommendationsList,
+    summaryAdvanced: recommendationsSummaryAdvanced,
+    listAdvanced: recommendationsListAdvanced,
+  },
+  topics: RECOMMENDATION_TOPICS,
+  helpers: {
+    buildScryfallSearchUrl,
+    getCardVisual: getRecommendationCardVisual,
+  },
+  getRenderToken: () => recommendationVisualRenderToken,
+});
 
 fileField.addEventListener("change", async () => {
   const [file] = fileField.files ?? [];
@@ -2018,15 +2032,6 @@ function getCardPreviewUrl(card) {
   );
 }
 
-function buildRecommendationCardInitials(name) {
-  const words = String(name || "")
-    .split(/[\s,/-]+/)
-    .filter(Boolean)
-    .slice(0, 2);
-
-  return words.map((word) => word[0]?.toUpperCase() ?? "").join("") || "?";
-}
-
 function buildScryfallSearchUrl(name) {
   return `https://scryfall.com/search?q=%21%22${encodeURIComponent(name)}%22`;
 }
@@ -2491,38 +2496,7 @@ function renderScoreRadarChart(metrics) {
 }
 
 function renderRecommendations(recommendations, renderToken = recommendationVisualRenderToken) {
-  const topicMap = new Map((recommendations?.topics ?? []).map((topic) => [topic.key, topic]));
-  const topics = RECOMMENDATION_TOPICS.map((topic) => {
-    return (
-      topicMap.get(topic.key) ?? {
-        key: topic.key,
-        label: topic.label,
-        summary: "No card suggestion stands out here right now.",
-        cards: [],
-      }
-    );
-  });
-
-  renderRecommendationsInto(recommendationsSummary, recommendationsList, topics, recommendations, renderToken);
-  renderRecommendationsInto(
-    recommendationsSummaryAdvanced,
-    recommendationsListAdvanced,
-    topics,
-    recommendations,
-    renderToken,
-  );
-}
-
-function renderRecommendationsInto(summaryElement, listElement, topics, recommendations, renderToken) {
-  if (!summaryElement || !listElement) {
-    return;
-  }
-
-  summaryElement.textContent =
-    recommendations?.summary ?? "Bracket-directed card suggestions appear here after analysis.";
-  listElement.replaceChildren(
-    ...topics.map((topic) => createRecommendationTopicCard(topic, renderToken)),
-  );
+  recommendationsController.render(recommendations, renderToken);
 }
 
 function buildQuickReadMetrics(analysis) {
@@ -2613,31 +2587,6 @@ function buildPairedQuickReadNote(leftLabel, leftScore, rightLabel, rightScore) 
   return `${strongerLabel} is doing more of the work than ${weakerLabel} right now.`;
 }
 
-function getRecommendationDirectionBadgeLabel(direction) {
-  return direction === "up" ? "ADD" : "ADD-";
-}
-
-function getRecommendationStrength(levelIndex, totalCards) {
-  if (levelIndex <= 0) {
-    return {
-      level: "high",
-      label: totalCards <= 1 ? "Top Pick" : "Best Fit",
-    };
-  }
-
-  if (levelIndex === 1) {
-    return {
-      level: "medium",
-      label: "Solid Fit",
-    };
-  }
-
-  return {
-    level: "low",
-    label: "Optional",
-  };
-}
-
 function updateQuickReadMetric(element, metric) {
   if (!element || !metric) {
     return;
@@ -2645,200 +2594,6 @@ function updateQuickReadMetric(element, metric) {
 
   element.textContent = String(metric.score);
   applyScoreTone(element, metric.score);
-}
-
-function createRecommendationTopicCard(topic, renderToken) {
-  const article = document.createElement("article");
-  article.className = "recommendation-topic-card";
-
-  const header = document.createElement("div");
-  header.className = "recommendation-topic-header";
-
-  const title = document.createElement("strong");
-  title.className = "recommendation-topic-title";
-  title.textContent = topic.label;
-
-  const state = document.createElement("span");
-  const direction = topic.cards[0]?.direction ?? null;
-  state.className = `recommendation-topic-state recommendation-topic-state-${direction ?? "neutral"}`;
-  state.textContent =
-    direction === "up" ? "Push Up" : direction === "down" ? "Pull Down" : "Stable";
-  header.append(title, state);
-
-  const summary = document.createElement("p");
-  summary.className = "recommendation-topic-summary";
-  summary.textContent = topic.summary;
-
-  article.append(header, summary);
-
-  if (!topic.cards?.length) {
-    const empty = document.createElement("p");
-    empty.className = "recommendation-topic-empty";
-    empty.textContent = "No card suggestion stands out here right now.";
-    article.append(empty);
-    return article;
-  }
-
-  const cardList = document.createElement("div");
-  cardList.className = "recommendation-topic-card-list";
-  cardList.append(
-    ...topic.cards.map((card, index) =>
-      createRecommendationSuggestionVisual(card, renderToken, index, topic.cards.length),
-    ),
-  );
-  article.append(cardList);
-  return article;
-}
-
-function createRecommendationSuggestion(card, index = 0, totalCards = 1) {
-  const article = document.createElement("article");
-  const strength = getRecommendationStrength(index, totalCards);
-  article.className = `recommendation-suggestion recommendation-suggestion-${card.direction} recommendation-suggestion-strength-${strength.level}`;
-
-  const direction = document.createElement("span");
-  direction.className = `recommendation-direction-badge recommendation-direction-badge-${card.direction}`;
-  direction.textContent = card.direction === "up" ? "↑" : "↓";
-  direction.textContent = getRecommendationDirectionBadgeLabel(card.direction);
-  direction.setAttribute(
-    "aria-label",
-    card.direction === "up"
-      ? "This card would push the deck upward in power."
-      : "This card would pull the deck downward in power.",
-  );
-
-  const copy = document.createElement("div");
-  copy.className = "recommendation-suggestion-copy";
-
-  const title = document.createElement("strong");
-  title.className = "recommendation-suggestion-title";
-  title.textContent = card.name;
-
-  const meta = document.createElement("div");
-  meta.className = "recommendation-suggestion-meta";
-
-  const strengthBadge = document.createElement("span");
-  strengthBadge.className = `recommendation-strength-chip recommendation-strength-chip-${strength.level}`;
-  strengthBadge.textContent = strength.label;
-
-  meta.append(strengthBadge);
-  const sourceChip = createRecommendationSourceChip(card);
-  if (sourceChip) {
-    meta.append(sourceChip);
-  }
-
-  const reason = document.createElement("p");
-  reason.className = "recommendation-suggestion-reason";
-  reason.textContent = card.reason;
-
-  copy.append(title, meta, reason);
-  article.append(direction, copy);
-  return article;
-}
-
-function createRecommendationSuggestionVisual(card, renderToken, index = 0, totalCards = 1) {
-  const article = document.createElement("article");
-  const strength = getRecommendationStrength(index, totalCards);
-  article.className = `recommendation-suggestion recommendation-suggestion-${card.direction} recommendation-suggestion-strength-${strength.level}`;
-
-  const visual = document.createElement("a");
-  visual.className = "recommendation-suggestion-visual";
-  visual.href = buildScryfallSearchUrl(card.name);
-  visual.target = "_blank";
-  visual.rel = "noreferrer noopener";
-  visual.title = `Open ${card.name} on Scryfall`;
-
-  const image = document.createElement("img");
-  image.className = "recommendation-suggestion-image hidden";
-  image.alt = `${card.name} card image`;
-  image.loading = "lazy";
-  image.decoding = "async";
-  image.referrerPolicy = "no-referrer";
-
-  const placeholder = document.createElement("span");
-  placeholder.className = "recommendation-suggestion-placeholder";
-  placeholder.textContent = buildRecommendationCardInitials(card.name);
-
-  const direction = document.createElement("span");
-  direction.className = `recommendation-direction-badge recommendation-direction-badge-${card.direction}`;
-  direction.textContent = getRecommendationDirectionBadgeLabel(card.direction);
-  direction.setAttribute(
-    "aria-label",
-    card.direction === "up"
-      ? "This card would push the deck upward in power."
-      : "This card would pull the deck downward in power.",
-  );
-  visual.append(image, placeholder, direction);
-
-  const copy = document.createElement("div");
-  copy.className = "recommendation-suggestion-copy";
-
-  const title = document.createElement("strong");
-  title.className = "recommendation-suggestion-title";
-  title.textContent = card.name;
-
-  const meta = document.createElement("div");
-  meta.className = "recommendation-suggestion-meta";
-
-  const strengthBadge = document.createElement("span");
-  strengthBadge.className = `recommendation-strength-chip recommendation-strength-chip-${strength.level}`;
-  strengthBadge.textContent = strength.label;
-
-  meta.append(strengthBadge);
-  const sourceChip = createRecommendationSourceChip(card);
-  if (sourceChip) {
-    meta.append(sourceChip);
-  }
-
-  const reason = document.createElement("p");
-  reason.className = "recommendation-suggestion-reason";
-  reason.textContent = card.reason;
-
-  copy.append(title, meta, reason);
-  article.append(visual, copy);
-  hydrateRecommendationSuggestionVisual(card, { visual, image, placeholder }, renderToken);
-  return article;
-}
-
-function createRecommendationSourceChip(card) {
-  const label = card.sourceLabel ?? buildRecommendationSourceLabel(card);
-  if (!label) {
-    return null;
-  }
-
-  const chip = document.createElement("span");
-  chip.className = `recommendation-source-chip recommendation-source-chip-${card.source ?? "library"}`;
-  chip.textContent = label;
-  return chip;
-}
-
-function buildRecommendationSourceLabel(card) {
-  if (Number.isFinite(card.recommanderRank) && Number.isFinite(card.recommanderScore)) {
-    return `Recommander #${card.recommanderRank} · ${Math.round(card.recommanderScore * 100)}%`;
-  }
-
-  if (card.source === "recommander") {
-    return "Recommander";
-  }
-
-  return "";
-}
-
-async function hydrateRecommendationSuggestionVisual(card, elements, renderToken) {
-  const visualData = await getRecommendationCardVisual(card.name);
-  if (
-    renderToken !== recommendationVisualRenderToken ||
-    !elements.visual.isConnected ||
-    !visualData?.imageUrl
-  ) {
-    return;
-  }
-
-  elements.visual.href = visualData.scryfallUrl ?? buildScryfallSearchUrl(card.name);
-  elements.visual.title = `Open ${visualData.name ?? card.name} on Scryfall`;
-  elements.image.src = visualData.imageUrl;
-  elements.image.alt = `${visualData.name ?? card.name} card image`;
-  elements.image.classList.remove("hidden");
-  elements.placeholder.classList.add("hidden");
 }
 
 function initializeInsightDisclosures() {
