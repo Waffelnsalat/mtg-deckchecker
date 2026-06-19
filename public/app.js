@@ -316,8 +316,6 @@ let resultsViewMode = "simple";
 let advancedTabKey = "identity";
 let pendingTargetBracketPromptResolve = null;
 let recommendationVisualRenderToken = 0;
-let activeReportType = "";
-let activeWebsiteReportKind = "";
 const FRONTEND_CONFIG = window.MtgDeckcheckerFrontendConfig ?? {};
 const CARD_BREAKDOWN_CONFIG = FRONTEND_CONFIG.cardBreakdown ?? {};
 const CARD_BREAKDOWN_MAX_ROLES = CARD_BREAKDOWN_CONFIG.maxRoles ?? 5;
@@ -649,6 +647,43 @@ const recommendationsController = window.MtgDeckcheckerRecommendations.create({
   },
   getRenderToken: () => recommendationVisualRenderToken,
 });
+const reportDialogController = window.MtgDeckcheckerReportDialog.create({
+  elements: {
+    openButton: reportButton,
+    overlay: reportOverlay,
+    closeButton: reportCloseButton,
+    cancelButton: reportCancelButton,
+    submitButton: reportSubmitButton,
+    commentField: reportCommentField,
+    status: reportStatus,
+    typeButtons: reportTypeButtons,
+    websiteKindButtons: reportWebsiteKindButtons,
+    websitePanel: reportWebsitePanel,
+    evaluationPanel: reportEvaluationPanel,
+    evaluationCategoryFields: reportEvaluationCategoryFields,
+  },
+  getContext: () => ({
+    decklist: decklistField?.value ?? "",
+    deckUrl: deckUrlField?.value.trim() || undefined,
+    commanderName: commanderNameField?.value.trim() || undefined,
+    additionalCommanderName: additionalCommanderNameField?.value.trim() || undefined,
+    companionName: companionNameField?.value.trim() || undefined,
+    secretCommanderName: secretCommanderNameField?.value.trim() || undefined,
+    targetBracket: targetBracketField?.value || undefined,
+    selectedStrategyPerspectiveKey,
+    resultsViewMode,
+    advancedTabKey,
+    theme: getActiveTheme(),
+    pageUrl: window.location.href,
+    userAgent: window.navigator.userAgent,
+    viewport: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+    analysis: currentAnalysisSnapshot,
+  }),
+});
+reportDialogController.initialize();
 
 fileField.addEventListener("change", async () => {
   const [file] = fileField.files ?? [];
@@ -760,51 +795,6 @@ themeToggle?.addEventListener("click", () => {
   applyTheme(nextTheme);
 });
 
-reportButton?.addEventListener("click", () => {
-  openReportDialog();
-});
-
-reportCloseButton?.addEventListener("click", () => {
-  closeReportDialog();
-});
-
-reportCancelButton?.addEventListener("click", () => {
-  closeReportDialog();
-});
-
-reportOverlay?.addEventListener("click", (event) => {
-  if (event.target === reportOverlay) {
-    closeReportDialog();
-  }
-});
-
-reportTypeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    setActiveReportType(button.dataset.reportType ?? "");
-  });
-});
-
-reportWebsiteKindButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    activeWebsiteReportKind = button.dataset.websiteKind ?? "";
-    syncReportDialog();
-  });
-});
-
-reportEvaluationCategoryFields.forEach((field) => {
-  field.addEventListener("change", () => {
-    syncReportDialog();
-  });
-});
-
-reportCommentField?.addEventListener("input", () => {
-  syncReportDialog();
-});
-
-reportSubmitButton?.addEventListener("click", async () => {
-  await submitReport();
-});
-
 quickReadAdvancedButton?.addEventListener("click", () => {
   setResultsViewMode("advanced");
 });
@@ -836,11 +826,6 @@ targetBracketPrompt?.addEventListener("click", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && reportOverlay && !reportOverlay.classList.contains("hidden")) {
-    closeReportDialog();
-    return;
-  }
-
   if (event.key === "Escape" && pendingTargetBracketPromptResolve) {
     resolveTargetBracketPrompt(null);
   }
@@ -895,236 +880,6 @@ function waitForNextPaint() {
       window.requestAnimationFrame(resolve);
     });
   });
-}
-
-function openReportDialog() {
-  syncReportDialog();
-  reportOverlay?.classList.remove("hidden");
-  reportOverlay?.setAttribute("aria-hidden", "false");
-  document.body.classList.add("modal-active");
-  const activeButton =
-    reportTypeButtons.find((button) => button.dataset.reportType === activeReportType) ??
-    reportTypeButtons[0];
-  activeButton?.focus();
-}
-
-function closeReportDialog() {
-  reportOverlay?.classList.add("hidden");
-  reportOverlay?.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-active");
-  reportButton?.focus();
-}
-
-function resetReportDialog() {
-  activeReportType = "";
-  activeWebsiteReportKind = "";
-  reportCommentField.value = "";
-  reportEvaluationCategoryFields.forEach((field) => {
-    field.checked = false;
-  });
-  if (reportStatus) {
-    reportStatus.textContent = "";
-  }
-  syncReportDialog();
-}
-
-function setActiveReportType(type) {
-  activeReportType = ["website", "deck_evaluation", "other"].includes(type) ? type : "";
-  activeWebsiteReportKind = "";
-  reportWebsiteKindButtons.forEach((button) => {
-    button.classList.remove("is-active");
-  });
-  syncReportDialog();
-  if (activeReportType && reportCommentField) {
-    reportCommentField.focus();
-  }
-}
-
-function syncReportDialog() {
-  reportTypeButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.reportType === activeReportType);
-  });
-
-  reportWebsiteKindButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.websiteKind === activeWebsiteReportKind);
-  });
-
-  reportWebsitePanel?.classList.toggle("hidden", activeReportType !== "website");
-  reportEvaluationPanel?.classList.toggle("hidden", activeReportType !== "deck_evaluation");
-
-  if (reportSubmitButton) {
-    reportSubmitButton.disabled = Boolean(getReportDraftError());
-  }
-}
-
-function getReportDraftError() {
-  const comment = reportCommentField?.value.trim() ?? "";
-  const categories = getSelectedReportCategories();
-
-  if (!activeReportType) {
-    return "Choose a report type.";
-  }
-
-  if (activeReportType === "website") {
-    if (!activeWebsiteReportKind) {
-      return "Choose issue or feedback.";
-    }
-
-    return comment ? "" : "Add a short website report comment.";
-  }
-
-  if (activeReportType === "deck_evaluation") {
-    return comment || categories.length > 0
-      ? ""
-      : "Choose an evaluation category or add a comment.";
-  }
-
-  return comment ? "" : "Add a short comment.";
-}
-
-function getSelectedReportCategories() {
-  return reportEvaluationCategoryFields
-    .filter((field) => field.checked)
-    .map((field) => field.value)
-    .filter(Boolean);
-}
-
-async function submitReport() {
-  const draftError = getReportDraftError();
-  if (draftError) {
-    if (reportStatus) {
-      reportStatus.textContent = draftError;
-    }
-    return false;
-  }
-
-  const originalLabel = reportSubmitButton?.textContent ?? "Submit Report";
-  if (reportSubmitButton) {
-    reportSubmitButton.disabled = true;
-    reportSubmitButton.textContent = "Submitting...";
-  }
-  if (reportStatus) {
-    reportStatus.textContent = "Saving report...";
-  }
-  let submittedSuccessfully = false;
-
-  try {
-    const response = await fetch("/api/reports", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(buildReportPayload()),
-    });
-    const result = await response.json();
-
-    if (!response.ok) {
-      throw new Error(result.details || result.error || "Report could not be saved.");
-    }
-
-    if (reportStatus) {
-      reportStatus.textContent = `Report saved as ${result.fileName}.`;
-    }
-    submittedSuccessfully = true;
-    window.setTimeout(() => {
-      closeReportDialog();
-      resetReportDialog();
-    }, 850);
-    return true;
-  } catch (error) {
-    if (reportStatus) {
-      reportStatus.textContent = error instanceof Error ? error.message : "Report could not be saved.";
-    }
-    return false;
-  } finally {
-    if (reportSubmitButton) {
-      reportSubmitButton.textContent = originalLabel;
-      if (!submittedSuccessfully) {
-        syncReportDialog();
-      }
-    }
-  }
-}
-
-function buildReportPayload() {
-  return {
-    reportType: activeReportType,
-    websiteKind: activeReportType === "website" ? activeWebsiteReportKind : undefined,
-    evaluationCategories:
-      activeReportType === "deck_evaluation" ? getSelectedReportCategories() : [],
-    comment: reportCommentField?.value.trim() ?? "",
-    context: buildReportContext(),
-  };
-}
-
-function buildReportContext() {
-  return {
-    decklist: decklistField?.value ?? "",
-    deckUrl: deckUrlField?.value.trim() || undefined,
-    commanderName: commanderNameField?.value.trim() || undefined,
-    additionalCommanderName: additionalCommanderNameField?.value.trim() || undefined,
-    companionName: companionNameField?.value.trim() || undefined,
-    secretCommanderName: secretCommanderNameField?.value.trim() || undefined,
-    targetBracket: targetBracketField?.value || undefined,
-    selectedStrategyPerspectiveKey,
-    resultsViewMode,
-    advancedTabKey,
-    theme: getActiveTheme(),
-    pageUrl: window.location.href,
-    userAgent: window.navigator.userAgent,
-    viewport: {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    },
-    analysisSummary: buildReportAnalysisSummary(currentAnalysisSnapshot),
-  };
-}
-
-function buildReportAnalysisSummary(analysis) {
-  if (!analysis) {
-    return null;
-  }
-
-  const powerDimensions = analysis.power?.dimensions ?? [];
-
-  return {
-    power: {
-      score: analysis.power?.powerScore,
-      tier: analysis.power?.powerTier,
-      dimensions: powerDimensions,
-      dimensionScores: Object.fromEntries(
-        powerDimensions.map((dimension) => [dimension.key, dimension.score]),
-      ),
-    },
-    bracket: {
-      recommended: analysis.bracket?.recommendedBracket,
-      recommendedLabel: analysis.bracket?.recommendedLabel,
-      target: analysis.bracket?.targetBracket,
-      targetAlignment: analysis.bracket?.targetAlignment,
-      rulesFloor: analysis.bracket?.rulesFloor,
-    },
-    strategy: {
-      main: analysis.strategy?.mainStrategy,
-      subStrategies: analysis.strategy?.subStrategies,
-      synergy: analysis.strategy?.synergy,
-    },
-    winStrategy: {
-      primaryPlan: analysis.winStrategy?.primaryPlan,
-      backupPlans: analysis.winStrategy?.backupPlans,
-    },
-    scores: {
-      shell: analysis.structure?.structureScore,
-      landBase: analysis.landBase?.landBaseScore,
-      ramp: analysis.ramp?.rampScore,
-      cardFlow: analysis.draw?.drawScore,
-      consistency: analysis.consistency?.consistencyScore,
-      protection: analysis.protection?.protectionScore,
-      recursion: analysis.recursion?.recursionScore,
-      winConditions: analysis.winConditions?.finisherScore,
-      removal: analysis.removal?.removalScore,
-      spellInteraction: analysis.spellInteraction?.interactionScore,
-    },
-  };
 }
 
 function setTargetBracketPromptState(isOpen) {
