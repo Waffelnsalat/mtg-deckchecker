@@ -684,110 +684,42 @@ const reportDialogController = window.MtgDeckcheckerReportDialog.create({
   }),
 });
 reportDialogController.initialize();
-
-fileField.addEventListener("change", async () => {
-  const [file] = fileField.files ?? [];
-
-  if (!file) {
-    updateFilePickerLabel();
-    return;
-  }
-
-  updateFilePickerLabel(file.name);
-  const text = await file.text();
-  applyImportedDecklist(text, {
-    importedUrl: "",
-    statusMessage: `Loaded ${file.name}. Ready to analyze the deck.`,
-  });
+const deckInputController = window.MtgDeckcheckerDeckInput.create({
+  elements: {
+    form,
+    decklistField,
+    deckUrlField,
+    commanderNameField,
+    targetBracketField,
+    additionalCommanderEnabledField,
+    companionEnabledField,
+    secretCommanderEnabledField,
+    additionalCommanderNameField,
+    companionNameField,
+    secretCommanderNameField,
+    fileField,
+    fileNameLabel,
+    importUrlButton,
+    formStatus,
+  },
+  actions: {
+    applyImportedDecklist,
+    buildDeckIntakeStatus,
+    clearAutofilledLeaderFields,
+    formatFetchError,
+    markDeckAsEdited,
+    markLeaderFieldAsManual,
+    prefillLeaderFieldsFromDecklist,
+    promptForTargetBracketSelection,
+    runDeckAnalysis,
+    sanitizeDecklistInput,
+    setLoadingState,
+    syncDeckHighlight,
+    syncSupplementalLeaderFields,
+    waitForNextPaint,
+  },
 });
-
-importUrlButton?.addEventListener("click", async () => {
-  await importDeckFromUrl();
-});
-
-deckUrlField?.addEventListener("keydown", async (event) => {
-  if (event.key !== "Enter") {
-    return;
-  }
-
-  event.preventDefault();
-  await importDeckFromUrl();
-});
-
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const sanitizedDecklist = sanitizeDecklistInput(decklistField.value);
-  if (sanitizedDecklist !== decklistField.value) {
-    decklistField.value = sanitizedDecklist;
-    syncDeckHighlight();
-  }
-
-  if (!sanitizedDecklist.trim()) {
-    formStatus.textContent = "Paste a decklist or load a .txt file first.";
-    return;
-  }
-
-  const targetBracket = await promptForTargetBracketSelection();
-  if (!targetBracket) {
-    formStatus.textContent = "Analysis canceled. Choose a target bracket to continue.";
-    return;
-  }
-
-  targetBracketField.value = String(targetBracket);
-  await runDeckAnalysis({ targetBracket });
-});
-
-decklistField.addEventListener("blur", () => {
-  prefillLeaderFieldsFromDecklist(decklistField.value);
-  const intakeStatus = buildDeckIntakeStatus(decklistField.value);
-  if (intakeStatus) {
-    formStatus.textContent = intakeStatus;
-  }
-});
-
-decklistField.addEventListener("input", () => {
-  clearAutofilledLeaderFields();
-  markDeckAsEdited();
-  syncDeckHighlight();
-});
-
-commanderNameField.addEventListener("input", () => {
-  markLeaderFieldAsManual(commanderNameField);
-  markDeckAsEdited();
-});
-
-additionalCommanderNameField.addEventListener("input", () => {
-  markLeaderFieldAsManual(additionalCommanderNameField);
-  markDeckAsEdited();
-});
-
-companionNameField.addEventListener("input", () => {
-  markLeaderFieldAsManual(companionNameField);
-  markDeckAsEdited();
-});
-
-secretCommanderNameField.addEventListener("input", () => {
-  markLeaderFieldAsManual(secretCommanderNameField);
-  markDeckAsEdited();
-});
-
-additionalCommanderEnabledField.addEventListener("change", () => {
-  syncSupplementalLeaderFields();
-  prefillLeaderFieldsFromDecklist(decklistField.value);
-  markDeckAsEdited();
-});
-
-companionEnabledField.addEventListener("change", () => {
-  syncSupplementalLeaderFields();
-  prefillLeaderFieldsFromDecklist(decklistField.value);
-  markDeckAsEdited();
-});
-
-secretCommanderEnabledField.addEventListener("change", () => {
-  syncSupplementalLeaderFields();
-  markDeckAsEdited();
-});
+deckInputController.initialize();
 
 themeToggle?.addEventListener("click", () => {
   const nextTheme = getActiveTheme() === "dark" ? "light" : "dark";
@@ -835,10 +767,6 @@ advancedTabButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setAdvancedTabMode(button.dataset.advancedTab, { scrollToSection: true });
   });
-});
-
-decklistField.addEventListener("scroll", () => {
-  syncDeckHighlight();
 });
 
 function setLoadingState(isLoading, options = {}) {
@@ -1314,54 +1242,6 @@ async function runDeckAnalysis(options = {}) {
     if (requestId === analyzeRequestCounter) {
       setLoadingState(false);
     }
-  }
-}
-
-async function importDeckFromUrl() {
-  const deckUrl = deckUrlField?.value.trim() ?? "";
-
-  if (!deckUrl) {
-    formStatus.textContent = "Paste a Moxfield or Archidekt deck URL first.";
-    return false;
-  }
-
-  setLoadingState(true, {
-    buttonLabel: "Analyze Deck",
-    importButtonLabel: "Importing...",
-    title: "Importing Deck URL",
-    copy: "Fetching the public deck and converting it into the deck text format used by the analyzer.",
-  });
-  formStatus.textContent = "Importing deck URL...";
-  await waitForNextPaint();
-
-  try {
-    const response = await fetch("/api/edh/decklists/import", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ url: deckUrl }),
-    });
-    const result = await response.json();
-
-    if (!response.ok) {
-      throw new Error(result.details || result.error || "Deck URL import failed.");
-    }
-
-    if (fileField) {
-      fileField.value = "";
-    }
-    updateFilePickerLabel();
-    applyImportedDecklist(result.decklist, {
-      importedUrl: result.canonicalUrl || deckUrl,
-      statusMessage: `Imported "${result.title}" from ${result.sourceLabel}. Ready to analyze the deck.`,
-    });
-    return true;
-  } catch (error) {
-    formStatus.textContent = formatFetchError(error, "Deck URL import failed.");
-    return false;
-  } finally {
-    setLoadingState(false);
   }
 }
 
@@ -3055,7 +2935,7 @@ function clearAutofilledLeaderFields() {
 }
 
 syncSupplementalLeaderFields();
-updateFilePickerLabel();
+deckInputController.updateFilePickerLabel();
 initializeInsightDisclosures();
 renderHeroMediaCards();
 renderAmbientCardBackground();
@@ -3097,14 +2977,6 @@ function syncDeckHighlight() {
   decklistField.style.backgroundPosition = backgroundPosition.join(", ");
   decklistField.style.backgroundRepeat = backgroundRepeat.join(", ");
   decklistField.style.backgroundAttachment = backgroundAttachment.join(", ");
-}
-
-function updateFilePickerLabel(fileName = "") {
-  if (!fileNameLabel) {
-    return;
-  }
-
-  fileNameLabel.textContent = fileName || "No file selected";
 }
 
 function getStoredTheme() {
