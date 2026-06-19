@@ -1,0 +1,1718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTG Deckchecker | EDH Deck Analysis</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="ambient-card-background" class="ambient-card-background" aria-hidden="true"></div>
+    <div class="page-shell intake-mode">
+      <header class="hero">
+        <div class="hero-toolbar">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch to dark mode"
+          >
+            Dark mode
+          </button>
+        </div>
+        <div class="hero-layout">
+          <div class="hero-intro">
+            <div class="hero-meta">
+              <p class="eyebrow">Commander Ranking Intake</p>
+              <p class="hero-brand-note">Strategy, shell quality, and bracket read for EDH</p>
+            </div>
+            <h1>Analyze Your EDH Deck.</h1>
+            <p class="hero-copy">
+              Paste a decklist, import a Moxfield or Archidekt URL, or upload a `.txt` file to
+              validate the list, resolve every card, detect the deck's strategy and win plan, and
+              generate a full power and bracket read.
+            </p>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <figure class="hero-media-card hero-media-card-primary">
+              <img
+                src="/assets/hero-card-atraxa.jpg"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+            <figure class="hero-media-card hero-media-card-secondary">
+              <img
+                src="/assets/hero-card-sol-ring.jpg"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+            <figure class="hero-media-card hero-media-card-tertiary">
+              <img
+                src="/assets/hero-card-command-tower.jpg"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+          </div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="panel input-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Deck Intake</p>
+              <h2>Paste or Upload Your List</h2>
+            </div>
+            <span class="panel-badge">EDH only</span>
+          </div>
+
+          <form id="deck-form" class="deck-form">
+            <label class="field">
+              <span>Commander</span>
+              <input
+                id="commander-name"
+                name="commanderName"
+                type="text"
+                placeholder="Auto-filled from the first card on import"
+                autocomplete="off"
+              />
+              <small class="field-hint">
+                When no commander section is present, the first card is used as the default guess.
+              </small>
+            </label>
+
+            <input id="target-bracket" name="targetBracket" type="hidden" />
+
+            <div class="field field-toggle-group">
+              <span>Additional Commander</span>
+              <div class="toggle-row">
+                <label class="toggle-chip">
+                  <input
+                    id="additional-commander-enabled"
+                    name="additionalCommanderEnabled"
+                    type="checkbox"
+                  />
+                  <span>Use a second commander</span>
+                </label>
+              </div>
+              <small class="field-hint">
+                Use this for Partner, Background, Friends forever, Doctor's companion, or any
+                other legal two-commander shell. On import, the second commander entry is
+                auto-filled here.
+              </small>
+            </div>
+
+            <label id="additional-commander-field-wrap" class="field hidden">
+              <span>Additional Commander</span>
+              <input
+                id="additional-commander-name"
+                name="additionalCommanderName"
+                type="text"
+                placeholder="Auto-filled from the second commander card on import"
+                autocomplete="off"
+              />
+            </label>
+
+            <div class="field field-toggle-group">
+              <span>Optional Deck Roles</span>
+              <div class="toggle-row">
+                <label class="toggle-chip">
+                  <input id="companion-enabled" name="companionEnabled" type="checkbox" />
+                  <span>Companion</span>
+                </label>
+                <label class="toggle-chip">
+                  <input
+                    id="secret-commander-enabled"
+                    name="secretCommanderEnabled"
+                    type="checkbox"
+                  />
+                  <span>Secret Commander</span>
+                </label>
+              </div>
+              <small class="field-hint">
+                Companion sits outside the 100-card deck. Secret commander stays in the 99 and
+                only nudges strategy detection.
+              </small>
+            </div>
+
+            <label id="companion-field-wrap" class="field hidden">
+              <span>Companion</span>
+              <input
+                id="companion-name"
+                name="companionName"
+                type="text"
+                list="companion-list"
+                placeholder="Choose or type a companion"
+                autocomplete="off"
+              />
+            </label>
+
+            <label id="secret-commander-field-wrap" class="field hidden">
+              <span>Secret Commander</span>
+              <input
+                id="secret-commander-name"
+                name="secretCommanderName"
+                type="text"
+                placeholder="Manual card from the 99"
+                autocomplete="off"
+              />
+            </label>
+
+            <div class="field">
+              <span>Import Deck URL</span>
+              <div class="url-import-row">
+                <input
+                  id="deck-url"
+                  name="deckUrl"
+                  type="url"
+                  placeholder="https://moxfield.com/decks/... or https://archidekt.com/decks/..."
+                  autocomplete="off"
+                />
+                <button id="import-url-button" type="button" class="secondary-button">
+                  Import URL
+                </button>
+              </div>
+              <small class="field-hint">
+                Supports public Archidekt and Moxfield deck URLs. The deck is imported into the
+                editor first, then you can analyze it as usual.
+              </small>
+            </div>
+
+            <label class="field file-field">
+              <span>Upload .txt Decklist</span>
+              <input
+                id="deck-file"
+                name="deckFile"
+                class="file-input-hidden"
+                type="file"
+                accept=".txt,text/plain"
+              />
+              <div class="file-picker" aria-hidden="true">
+                <span class="file-picker-button">Choose Deck File</span>
+                <span id="deck-file-name" class="file-picker-name">No file selected</span>
+              </div>
+            </label>
+
+            <label class="field">
+              <span>Paste Decklist</span>
+              <div class="deck-editor">
+                <textarea
+                  id="decklist"
+                  name="decklist"
+                  rows="18"
+                  placeholder="// COMMANDER&#10;1 Delina, Wild Mage (AFR) 317&#10;&#10;1 Sol Ring (TMC) 59&#10;24 Mountain (ECL) 272"
+                  required
+                ></textarea>
+              </div>
+            </label>
+
+            <div class="action-row">
+              <button id="submit-button" type="submit" class="primary-button">
+                Analyze Deck
+              </button>
+              <p id="form-status" class="form-status">Waiting for a decklist.</p>
+            </div>
+
+          </form>
+        </section>
+
+        <section class="panel result-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Ranking Workspace</p>
+              <h2>Deck Status</h2>
+            </div>
+            <span class="panel-badge panel-badge-soft">Power live</span>
+          </div>
+
+          <div id="result-empty" class="empty-state">
+            <div class="empty-copy">
+              <p class="panel-kicker">Waiting for Analysis</p>
+              <h3>Analyze a deck to score the fundamentals.</h3>
+              <p>
+                Once the deck passes validation, this panel will show the current ranking layer:
+                  commander impact, strategy detection, land fit, creature density, mana curve, land-base quality, ramp, card flow, tutors, consistency, Game Changers, removal, spell interaction, protection, recursion, win strategy, win conditions, a final power readout, and a bracket recommendation.
+                </p>
+              </div>
+
+            <div class="future-list future-list-compact">
+              <article class="future-item">
+                <span>Identity</span>
+                <strong>Commander impact, strategy, side plans, and how the deck wants to win</strong>
+              </article>
+              <article class="future-item">
+                <span>Shell Quality</span>
+                <strong>Structure, mana curve, and land-base quality</strong>
+              </article>
+              <article class="future-item">
+                <span>Resource Engine</span>
+                <strong>Ramp, card flow, and tutor consistency</strong>
+              </article>
+              <article class="future-item">
+                <span>Interaction</span>
+                <strong>Removal, spell interaction, protection, and recursion</strong>
+              </article>
+              <article class="future-item">
+                <span>Closing</span>
+                <strong>Win strategy, finisher cards, combos, and pressure</strong>
+              </article>
+              <article class="future-item">
+                <span>Power</span>
+                <strong>Live now with bracket read</strong>
+              </article>
+            </div>
+          </div>
+
+          <div id="result-content" class="result-content hidden">
+            <section id="issues-box" class="note-box hidden">
+              <h3>Import Issues</h3>
+              <ul id="issues-list" class="note-list"></ul>
+            </section>
+
+            <div id="success-content" class="success-content hidden">
+                <section class="ready-banner">
+                  <div class="ready-banner-layout">
+                    <div class="ready-banner-copy">
+                      <p class="panel-kicker">Deck Read</p>
+                      <div id="analysis-status" class="analysis-status-grid" aria-label="Deck analysis summary"></div>
+                    </div>
+                    <div
+                      id="commander-visuals"
+                      class="commander-visuals hidden"
+                      aria-label="Commander card images"
+                    ></div>
+                  </div>
+                </section>
+
+                <div class="result-columns result-columns-top">
+                  <section class="note-box power-box">
+                    <h3>Power Rating</h3>
+                    <p id="power-summary" class="strategy-summary">
+                      The final power readout is generated after the shell, strategy, and closing plan are mapped.
+                    </p>
+
+                    <div class="future-grid power-grid">
+                      <article class="future-stat">
+                        <span>Power Score</span>
+                        <strong id="power-score">0.0 / 10</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Synergy</span>
+                        <strong id="power-synergy">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Speed</span>
+                        <strong id="power-speed">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Consistency</span>
+                        <strong id="power-consistency">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Interaction</span>
+                        <strong id="power-interaction">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Resilience</span>
+                        <strong id="power-resilience">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Closing Power</span>
+                        <strong id="power-closing">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Mana Quality</span>
+                        <strong id="power-mana">0</strong>
+                      </article>
+                    </div>
+                  </section>
+
+                  <div class="stats-grid composition-grid" aria-label="Deck composition">
+                    <article class="stat-card">
+                      <span class="stat-label">Lands</span>
+                      <strong id="land-count" class="stat-value">0</strong>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Creatures</span>
+                      <strong id="creature-count" class="stat-value">0</strong>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Instants</span>
+                      <strong id="instant-count" class="stat-value">0</strong>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Sorceries</span>
+                      <strong id="sorcery-count" class="stat-value">0</strong>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Artifacts</span>
+                      <strong id="artifact-count" class="stat-value">0</strong>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Enchantments</span>
+                      <strong id="enchantment-count" class="stat-value">0</strong>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Planeswalkers</span>
+                      <strong id="planeswalker-count" class="stat-value">0</strong>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Battles</span>
+                      <strong id="battle-count" class="stat-value">0</strong>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Average Mana Value</span>
+                      <strong id="average-cmc" class="stat-value">0.00</strong>
+                    </article>
+                  </div>
+
+                  <section class="note-box bracket-box">
+                    <h3>Bracket Read</h3>
+                    <p id="bracket-summary" class="strategy-summary">
+                      The bracket read combines the power profile with current Commander bracket rules and higher-bracket barometers.
+                    </p>
+
+                    <div class="future-grid ramp-grid">
+                      <article class="future-stat">
+                        <span>Recommended</span>
+                        <strong id="bracket-recommended">Bracket 1</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>User Target</span>
+                        <strong id="bracket-target">Not set</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Power Read</span>
+                        <strong id="bracket-power-read">Bracket 1</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Rules Floor</span>
+                        <strong id="bracket-rules-floor">Bracket 1</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Game Changers</span>
+                        <strong id="bracket-game-changers">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>2-Card Combos</span>
+                        <strong id="bracket-two-card-combos">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Extra Turns</span>
+                        <strong id="bracket-extra-turns">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Mass Land Denial</span>
+                        <strong id="bracket-land-denial">0</strong>
+                      </article>
+                    </div>
+                  </section>
+
+                  <section class="note-box power-notes-box">
+                    <h3>Power &amp; Bracket Notes</h3>
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Main Strengths</span>
+                      <ul id="power-strengths-list" class="note-list"></ul>
+                    </div>
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Main Brakes</span>
+                      <ul id="power-weaknesses-list" class="note-list"></ul>
+                    </div>
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Bracket Findings</span>
+                      <div id="bracket-findings-list" class="finding-list"></div>
+                    </div>
+                  </section>
+                </div>
+
+                <section id="quick-read-box" class="note-box quick-read-box">
+                  <p class="panel-kicker">Simple View</p>
+                  <h3>Quick Read</h3>
+                  <p id="quick-read-summary" class="strategy-summary">
+                    The simplest deck read appears here after analysis.
+                  </p>
+
+                  <div
+                    id="score-radar-chart"
+                    class="score-radar-chart"
+                    aria-label="Deck score network diagram"
+                  ></div>
+
+                  <div class="future-grid quick-read-grid">
+                    <article class="future-stat">
+                      <span>Shell</span>
+                      <strong id="quick-shell-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Land Base</span>
+                      <strong id="quick-land-base-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Ramp</span>
+                      <strong id="quick-ramp-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Card Flow</span>
+                      <strong id="quick-card-flow-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Consistency</span>
+                      <strong id="quick-consistency-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Interaction</span>
+                      <strong id="quick-interaction-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Resilience</span>
+                      <strong id="quick-resilience-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Closing</span>
+                      <strong id="quick-closing-score">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="quick-read-columns">
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Strongest Pillars</span>
+                      <ul id="quick-read-strengths-list" class="note-list"></ul>
+                    </div>
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Main Watch Points</span>
+                      <ul id="quick-read-risks-list" class="note-list"></ul>
+                    </div>
+                  </div>
+
+                  <div class="quick-read-actions">
+                    <button
+                      id="quick-read-advanced-button"
+                      class="secondary-button quick-read-advanced-button"
+                      type="button"
+                    >
+                      Open Advanced Breakdown
+                    </button>
+                  </div>
+                </section>
+
+                <section id="recommendations-box" class="note-box recommendations-box">
+                  <p class="panel-kicker">Next Steps</p>
+                  <h3>Suggestions</h3>
+                  <p id="recommendations-summary" class="strategy-summary">
+                    Bracket-directed card suggestions appear here after analysis.
+                  </p>
+                  <div id="recommendations-list" class="recommendation-list"></div>
+                </section>
+
+                <div id="advanced-analysis" class="advanced-analysis hidden">
+                <div class="advanced-tab-bar" role="tablist" aria-label="Advanced analysis sections">
+                  <button
+                    class="advanced-tab-button is-active"
+                    type="button"
+                    data-advanced-tab="identity"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    Identity
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
+                    data-advanced-tab="shell"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Shell
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
+                    data-advanced-tab="engine"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Engine
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
+                    data-advanced-tab="interaction"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Interaction
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
+                    data-advanced-tab="closing"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Closing
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
+                    data-advanced-tab="recommendations"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Suggestions
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
+                    data-advanced-tab="cards"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Cards
+                  </button>
+                </div>
+
+                <div class="analysis-tab-panel is-active" data-analysis-tab-panel="identity">
+                <section class="dashboard-section">
+                  <p class="panel-kicker">Stage 1</p>
+                  <h3>Deck Identity</h3>
+                  <p>Start with the command zone, then check what the deck is trying to be and how clearly it expects to finish a game.</p>
+                </section>
+
+                <div class="result-columns result-columns-wide">
+                  <section class="note-box commander-box">
+                    <h3>Commander Influence</h3>
+                    <p id="commander-summary" class="strategy-summary">
+                      Command-zone impact is checked before the rest of the shell is weighted into the final power read.
+                    </p>
+
+                    <div class="future-grid ramp-grid">
+                      <article class="future-stat">
+                        <span>Impact Score</span>
+                        <strong id="commander-impact-score">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Dependency</span>
+                        <strong id="commander-dependency-score">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Ceiling</span>
+                        <strong id="commander-ceiling-score">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Combo Lines</span>
+                        <strong id="commander-combo-lines">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Prior Score</span>
+                        <strong id="commander-prior-score">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Key Roles</span>
+                        <strong id="commander-key-roles">-</strong>
+                      </article>
+                    </div>
+
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Tagged Command Zone Cards</span>
+                      <div id="commander-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                      <ul id="commander-cards-list" class="note-list"></ul>
+                    </div>
+
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Commander Profile Read</span>
+                      <div id="commander-profiles-list" class="commander-profile-list"></div>
+                    </div>
+                  </section>
+
+                  <section class="note-box commander-findings-box">
+                    <h3>Commander Findings</h3>
+                    <div id="commander-findings-list" class="finding-list"></div>
+                  </section>
+                </div>
+
+                <div class="result-columns strategy-columns">
+                  <section class="note-box strategy-box">
+                    <h3>Strategy Overview</h3>
+                    <p id="strategy-summary" class="strategy-summary">
+                      Strategy detection runs after the baseline shell is validated.
+                    </p>
+                    <div id="strategy-switcher-wrap" class="strategy-switcher-wrap hidden">
+                      <span class="meta-label">Review Strategy As Main</span>
+                      <div id="strategy-switcher" class="strategy-switcher"></div>
+                    </div>
+
+                    <div class="future-grid ramp-grid">
+                      <article class="future-stat">
+                        <span>Main Strategy</span>
+                        <strong id="main-strategy-name">-</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Side Strategies</span>
+                        <strong id="sub-strategy-count">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Synergy Score</span>
+                        <strong id="strategy-synergy-score">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Support Cards</span>
+                        <strong id="strategy-support-count">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Core Pieces</span>
+                        <strong id="strategy-core-count">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Theme Focus</span>
+                        <strong id="strategy-focus-score">0%</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Commander Fit</span>
+                        <strong id="strategy-commander-fit">-</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Finisher Fit</span>
+                        <strong id="strategy-finisher-fit">-</strong>
+                      </article>
+                    </div>
+
+                    <p id="strategy-synergy-summary" class="strategy-summary">
+                      Strategy support is checked after the main archetype is detected.
+                    </p>
+
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Main Strategy Support Cards</span>
+                      <ul id="main-strategy-cards-list" class="note-list"></ul>
+                    </div>
+                  </section>
+
+                  <section class="note-box strategy-secondary-box">
+                    <h3>Strategy Synergy</h3>
+                    <div id="strategy-synergy-findings-list" class="finding-list"></div>
+                  </section>
+
+                  <section class="note-box strategy-secondary-box">
+                    <h3>Side Strategies</h3>
+                    <ul id="sub-strategies-list" class="note-list"></ul>
+                  </section>
+                </div>
+
+                <div class="result-columns result-columns-wide">
+                  <section class="note-box draw-box winplan-box">
+                    <h3>Win Strategy</h3>
+                    <div class="future-grid ramp-grid">
+                      <article class="future-stat">
+                        <span>Primary Plan</span>
+                        <strong id="win-strategy-primary">-</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Backup Plans</span>
+                        <strong id="win-strategy-backup-count">0</strong>
+                      </article>
+                      <article class="future-stat">
+                        <span>Perspective</span>
+                        <strong id="win-strategy-perspective">-</strong>
+                      </article>
+                    </div>
+
+                    <p id="win-strategy-summary" class="strategy-summary">
+                      Win strategy links the detected deck archetype to the way the shell actually expects to close a game.
+                    </p>
+
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Primary Plan Key Cards</span>
+                      <ul id="win-strategy-cards-list" class="note-list"></ul>
+                    </div>
+                  </section>
+
+                  <section class="note-box winplan-findings-box">
+                    <h3>Win Strategy Details</h3>
+
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Why This Looks Like The Main Plan</span>
+                      <ul id="win-strategy-reasons-list" class="note-list"></ul>
+                    </div>
+
+                    <div class="tagged-card-block">
+                      <span class="meta-label">Backup Plans</span>
+                      <ul id="win-strategy-backups-list" class="note-list"></ul>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="result-columns result-columns-wide">
+                  <section class="note-box profile-box">
+                  <h3>Prepared Deck Data</h3>
+                  <div class="profile-grid">
+                    <div>
+                      <span class="meta-label">Commander</span>
+                      <strong id="commander-display">-</strong>
+                    </div>
+                    <div>
+                      <span class="meta-label">Companion</span>
+                      <strong id="companion-display">-</strong>
+                    </div>
+                    <div>
+                      <span class="meta-label">Secret Commander</span>
+                      <strong id="secret-commander-display">-</strong>
+                    </div>
+                    <div>
+                      <span class="meta-label">Deck Size</span>
+                      <strong id="total-count">0</strong>
+                    </div>
+                    <div>
+                      <span class="meta-label">Resolved Entries</span>
+                      <strong id="resolved-count">0</strong>
+                    </div>
+                    <div>
+                      <span class="meta-label">Unique Cards</span>
+                      <strong id="unique-count">0</strong>
+                    </div>
+                    <div>
+                      <span class="meta-label">Recommended Lands</span>
+                      <strong id="recommended-lands">-</strong>
+                    </div>
+                    <div>
+                      <span class="meta-label">Median Mana Value</span>
+                      <strong id="median-cmc">0.00</strong>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="note-box gamechanger-box">
+                  <h3>Game Changers</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Total</span>
+                      <strong id="game-changer-total">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Unique</span>
+                      <strong id="game-changer-unique">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Commander</span>
+                      <strong id="game-changer-commander">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Mainboard</span>
+                      <strong id="game-changer-mainboard">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Companion</span>
+                      <strong id="game-changer-companion">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Game Changers</span>
+                    <div id="game-changer-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="game-changer-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+              </div>
+
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="shell">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Stage 2</p>
+                <h3>Shell Quality</h3>
+                <p>Check if the mana base, curve, and raw structure support the deck’s plan before looking at deeper support packages.</p>
+              </section>
+
+              <div class="result-columns result-columns-wide">
+                <section class="note-box ranking-box">
+                  <h3>Basic Structure</h3>
+                  <div class="future-grid">
+                    <article class="future-stat">
+                      <span>Structure Score</span>
+                      <strong id="structure-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Land Fit</span>
+                      <strong id="land-fit">-</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Curve Profile</span>
+                      <strong id="curve-profile">-</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Early Game</span>
+                      <strong id="early-share">0%</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Late Game</span>
+                      <strong id="late-share">0%</strong>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="note-box curve-box">
+                  <h3>Mana Curve</h3>
+                  <div id="curve-bars" class="curve-bars" aria-label="Mana curve distribution"></div>
+                </section>
+              </div>
+
+              <div class="result-columns">
+                <section class="note-box baseline-findings-box">
+                  <h3>Baseline Findings</h3>
+                  <div id="findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              <div class="result-columns">
+                <section class="note-box landbase-box">
+                  <h3>Land Base</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Land Score</span>
+                      <strong id="land-base-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Fast Lands</span>
+                      <strong id="land-base-fast">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Always Tapped</span>
+                      <strong id="land-base-always-tapped">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Conditional</span>
+                      <strong id="land-base-conditional">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Fetch / Search</span>
+                      <strong id="land-base-fetch">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Typed</span>
+                      <strong id="land-base-typed">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Utility</span>
+                      <strong id="land-base-utility">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Colorless Only</span>
+                      <strong id="land-base-colorless">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Costly Lands</span>
+                      <strong id="land-base-costly">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tap / Colorless Target</span>
+                      <strong id="land-base-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Lands</span>
+                    <div id="land-base-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="land-base-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box landbase-findings-box">
+                  <h3>Land Base Findings</h3>
+                  <div id="land-base-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="engine">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Stage 3</p>
+                <h3>Resource Engine</h3>
+                <p>Look at how the deck develops mana, finds cards, and repeats its best lines.</p>
+              </section>
+
+              <div class="result-columns">
+                <section class="note-box ramp-box">
+                  <h3>Mana Advantage</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Ramp Score</span>
+                      <strong id="ramp-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core Ramp</span>
+                      <strong id="core-ramp">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Stable Ramp</span>
+                      <strong id="stable-ramp">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Land Accel.</span>
+                      <strong id="land-ramp">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Burst Mana</span>
+                      <strong id="burst-ramp">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Fixing</span>
+                      <strong id="fixing-ramp">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Cost Reduction</span>
+                      <strong id="cost-ramp">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tagged Cards</span>
+                      <strong id="tagged-ramp-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core / Stable Target</span>
+                      <strong id="ramp-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Ramp Cards</span>
+                    <div id="ramp-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="ramp-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box ramp-findings-box">
+                  <h3>Ramp Findings</h3>
+                  <div id="ramp-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              <div class="result-columns">
+                <section class="note-box draw-box draw-main-box">
+                  <h3>Card Flow</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Draw Score</span>
+                      <strong id="draw-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core Flow</span>
+                      <strong id="core-draw">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Raw Draw</span>
+                      <strong id="raw-draw">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Selection</span>
+                      <strong id="selection-draw">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Repeatable</span>
+                      <strong id="repeatable-draw">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tagged Cards</span>
+                      <strong id="tagged-draw-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Draw / Engine Target</span>
+                      <strong id="draw-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Draw Cards</span>
+                    <div id="draw-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="draw-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box draw-findings-box">
+                  <h3>Draw Findings</h3>
+                  <div id="draw-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              <div class="result-columns">
+                <section class="note-box draw-box consistency-box">
+                  <h3>Tutors / Consistency</h3>
+                  <div class="future-grid ramp-grid consistency-grid">
+                    <article class="future-stat">
+                      <span>Consistency Score</span>
+                      <strong id="consistency-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core Consistency</span>
+                      <strong id="core-consistency">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Direct Tutors</span>
+                      <strong id="direct-tutors">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Restricted Tutors</span>
+                      <strong id="restricted-tutors">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Repeatable Tutors</span>
+                      <strong id="repeatable-tutors">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Land Tutors</span>
+                      <strong id="land-tutors">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Access Support</span>
+                      <strong id="selection-support">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tagged Cards</span>
+                      <strong id="tagged-consistency-count">0</strong>
+                    </article>
+                    <article class="future-stat consistency-target-card">
+                      <span>Targets</span>
+                      <strong id="consistency-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Tutor Cards</span>
+                    <div id="consistency-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="consistency-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box consistency-findings-box">
+                  <h3>Consistency Findings</h3>
+                  <div id="consistency-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="interaction">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Stage 4</p>
+                <h3>Interaction &amp; Resilience</h3>
+                <p>Measure how the deck answers opponents, protects its engine, and recovers after disruption.</p>
+              </section>
+
+              <div class="result-columns">
+                <section class="note-box draw-box removal-box">
+                  <h3>Removal</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Removal Score</span>
+                      <strong id="removal-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core Removal</span>
+                      <strong id="core-removal">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Targeted</span>
+                      <strong id="targeted-removal">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Sweepers</span>
+                      <strong id="mass-removal">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tempo</span>
+                      <strong id="tempo-removal">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Hand Attack</span>
+                      <strong id="hand-attack-removal">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tagged Cards</span>
+                      <strong id="tagged-removal-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Targeted / Sweeper / Tempo Target</span>
+                      <strong id="removal-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Removal Cards</span>
+                    <div id="removal-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="removal-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box removal-findings-box">
+                  <h3>Removal Findings</h3>
+                  <div id="removal-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              <div class="result-columns">
+                <section class="note-box draw-box interaction-box">
+                  <h3>Spell Interaction</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Interaction Score</span>
+                      <strong id="spell-interaction-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core Stack</span>
+                      <strong id="core-spell-interaction">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Hard Stack</span>
+                      <strong id="hard-spell-interaction">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Soft Stack</span>
+                      <strong id="soft-spell-interaction">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Spell Tempo</span>
+                      <strong id="tempo-spell-interaction">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Broad Stack</span>
+                      <strong id="broad-spell-interaction">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Stax / Hate</span>
+                      <strong id="stax-spell-interaction">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Grave Hate</span>
+                      <strong id="graveyard-hate-interaction">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tagged Cards</span>
+                      <strong id="tagged-spell-interaction-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Hard / Soft Target</span>
+                      <strong id="spell-interaction-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Spell-Interaction Cards</span>
+                    <div id="spell-interaction-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="spell-interaction-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box interaction-findings-box">
+                  <h3>Spell Interaction Findings</h3>
+                  <div id="spell-interaction-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              <div class="result-columns">
+                <section class="note-box draw-box protection-box">
+                  <h3>Protection</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Protection Score</span>
+                      <strong id="protection-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core Protection</span>
+                      <strong id="core-protection">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Broad Shields</span>
+                      <strong id="broad-protection">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Targeted Shields</span>
+                      <strong id="targeted-protection">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Equipment</span>
+                      <strong id="equipment-protection">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Self Bounce</span>
+                      <strong id="bounce-protection">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Flicker</span>
+                      <strong id="flicker-protection">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tagged Cards</span>
+                      <strong id="tagged-protection-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core / Broad Target</span>
+                      <strong id="protection-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Protection Cards</span>
+                    <div id="protection-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="protection-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box protection-findings-box">
+                  <h3>Protection Findings</h3>
+                  <div id="protection-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              <div class="result-columns">
+                <section class="note-box draw-box recursion-box">
+                  <h3>Recursion</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Recursion Score</span>
+                      <strong id="recursion-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core Recursion</span>
+                      <strong id="core-recursion">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Battlefield</span>
+                      <strong id="battlefield-recursion">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Hand Recovery</span>
+                      <strong id="hand-recursion">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Replay</span>
+                      <strong id="replay-recursion">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Mass</span>
+                      <strong id="mass-recursion">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Library</span>
+                      <strong id="library-recursion">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tagged Cards</span>
+                      <strong id="tagged-recursion-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core / Battle / Replay Target</span>
+                      <strong id="recursion-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Recursion Cards</span>
+                    <div id="recursion-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="recursion-cards-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box recursion-findings-box">
+                  <h3>Recursion Findings</h3>
+                  <div id="recursion-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="closing">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Stage 5</p>
+                <h3>Closing</h3>
+                <p>Only after the shell is healthy do the dedicated finishers and combo lines really matter.</p>
+              </section>
+
+              <div class="result-columns">
+                <section class="note-box draw-box finisher-box">
+                  <h3>Win Conditions</h3>
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>Finisher Score</span>
+                      <strong id="finisher-score">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core Finishers</span>
+                      <strong id="core-finisher">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Combat</span>
+                      <strong id="combat-finisher">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Direct</span>
+                      <strong id="direct-finisher">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Alternate</span>
+                      <strong id="alternate-finisher">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Repeatable</span>
+                      <strong id="repeatable-finisher">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Combo Bonus</span>
+                      <strong id="combo-finisher">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Combo Lines</span>
+                      <strong id="combo-line-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Combo Finishers</span>
+                      <strong id="combo-finisher-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Combo Engines</span>
+                      <strong id="combo-engine-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Tagged Cards</span>
+                      <strong id="tagged-finisher-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Near Misses</span>
+                      <strong id="combo-near-miss-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Core / Combat / Direct Target</span>
+                      <strong id="finisher-target">0</strong>
+                    </article>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Tagged Finisher Cards</span>
+                    <div id="finisher-cards-preview" class="tagged-card-preview-strip hidden"></div>
+                    <ul id="finisher-cards-list" class="note-list"></ul>
+                  </div>
+
+                  <div class="tagged-card-block">
+                    <span class="meta-label">Infinite Combo Lines</span>
+                    <ul id="combo-lines-list" class="note-list"></ul>
+                  </div>
+                </section>
+
+                <section class="note-box finisher-findings-box">
+                  <h3>Finisher Findings</h3>
+                  <div id="finisher-findings-list" class="finding-list"></div>
+                </section>
+              </div>
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="recommendations">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Stage 6</p>
+                <h3>Suggestions</h3>
+                <p>Use bracket-directed add suggestions to push the shell up or pull it down toward the bracket target you picked before the scan.</p>
+              </section>
+
+              <section class="note-box recommendations-box recommendations-box-advanced">
+                <p class="panel-kicker">Next Steps</p>
+                <h3>Suggestions</h3>
+                <p id="recommendations-summary-advanced" class="strategy-summary">
+                  Bracket-directed card suggestions appear here after analysis.
+                </p>
+                <div id="recommendations-list-advanced" class="recommendation-list"></div>
+              </section>
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="cards">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Stage 7</p>
+                <h3>Card Breakdown</h3>
+                <p>Every resolved card and up to five broad roles detected for it.</p>
+              </section>
+
+              <section class="note-box card-breakdown-box">
+                <div class="card-breakdown-head">
+                  <div>
+                    <p class="panel-kicker">Per Card Read</p>
+                    <h3>Detected Card Roles</h3>
+                  </div>
+                  <span id="card-breakdown-count" class="soft-pill">0 cards</span>
+                </div>
+                <p id="card-breakdown-summary" class="strategy-summary">
+                  Card-level role detection appears here after analysis.
+                </p>
+                <div class="card-breakdown-legend" aria-label="Card impact legend">
+                  <span class="card-breakdown-legend-item is-strong">Core piece</span>
+                  <span class="card-breakdown-legend-item is-useful">Useful</span>
+                  <span class="card-breakdown-legend-item is-minor">Minor</span>
+                  <span class="card-breakdown-legend-item is-none">No role</span>
+                </div>
+                <div class="card-breakdown-controls" aria-label="Card breakdown controls">
+                  <label class="card-breakdown-control is-search">
+                    <span>Search</span>
+                    <input id="card-breakdown-search" type="search" placeholder="Name, type, tag..." autocomplete="off" />
+                  </label>
+                  <label class="card-breakdown-control">
+                    <span>Section</span>
+                    <select id="card-breakdown-section-filter">
+                      <option value="all">All sections</option>
+                      <option value="commander">Commander</option>
+                      <option value="mainboard">Mainboard</option>
+                      <option value="companion">Companion</option>
+                    </select>
+                  </label>
+                  <label class="card-breakdown-control">
+                    <span>Role</span>
+                    <select id="card-breakdown-role-filter">
+                      <option value="all">All roles</option>
+                      <option value="tagged">Tagged only</option>
+                      <option value="none">No role</option>
+                      <option value="strong">Core piece</option>
+                      <option value="useful">Useful</option>
+                      <option value="minor">Minor</option>
+                    </select>
+                  </label>
+                  <label class="card-breakdown-control">
+                    <span>Sort</span>
+                    <select id="card-breakdown-sort">
+                      <option value="value_desc">Role strength high to low</option>
+                      <option value="value_asc">Role strength low to high</option>
+                      <option value="name_asc">Name A-Z</option>
+                      <option value="name_desc">Name Z-A</option>
+                      <option value="mv_asc">Mana value low to high</option>
+                      <option value="mv_desc">Mana value high to low</option>
+                      <option value="section">Section order</option>
+                    </select>
+                  </label>
+                </div>
+                <div id="card-breakdown-body" class="card-breakdown-list"></div>
+              </section>
+              </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <button
+      id="report-button"
+      class="secondary-button report-open-button"
+      type="button"
+      aria-label="Report a bug or feedback"
+      title="Report a bug or feedback"
+    >
+      <svg
+        class="report-open-icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path d="M9 8.2V6.7a3 3 0 0 1 6 0v1.5" />
+        <path d="M7.2 11.4c0-2.5 2-4.4 4.8-4.4s4.8 1.9 4.8 4.4v3.2c0 3.4-2.1 5.9-4.8 5.9s-4.8-2.5-4.8-5.9v-3.2Z" />
+        <path d="M12 7v13.5" />
+        <path d="M8.8 4.6 6.6 2.8" />
+        <path d="m15.2 4.6 2.2-1.8" />
+        <path d="M7.4 11.1 3.8 9.3" />
+        <path d="m16.6 11.1 3.6-1.8" />
+        <path d="M7.2 14H3.4" />
+        <path d="M20.6 14h-3.8" />
+        <path d="m7.8 16.9-3 2.4" />
+        <path d="m16.2 16.9 3 2.4" />
+        <circle cx="10.4" cy="11.5" r="0.55" />
+        <circle cx="13.6" cy="11.5" r="0.55" />
+      </svg>
+    </button>
+
+    <datalist id="companion-list">
+      <option value="Gyruda, Doom of Depths"></option>
+      <option value="Jegantha, the Wellspring"></option>
+      <option value="Kaheera, the Orphanguard"></option>
+      <option value="Keruga, the Macrosage"></option>
+      <option value="Lurrus of the Dream-Den"></option>
+      <option value="Lutri, the Spellchaser"></option>
+      <option value="Obosh, the Preypiercer"></option>
+      <option value="Umori, the Collector"></option>
+      <option value="Yorion, Sky Nomad"></option>
+      <option value="Zirda, the Dawnwaker"></option>
+    </datalist>
+
+    <div id="loading-overlay" class="loading-overlay hidden" aria-hidden="true">
+      <div class="loading-dialog" role="status" aria-live="polite" aria-atomic="true">
+        <div class="loading-head">
+          <div class="loading-spinner" aria-hidden="true"></div>
+          <div class="loading-copy-wrap">
+            <p class="panel-kicker">Working</p>
+            <h2 id="loading-title" class="loading-title">Analyzing Deck</h2>
+          </div>
+        </div>
+        <p id="loading-copy" class="loading-copy">
+          Resolving cards, validating the shell, and refreshing the deck read.
+        </p>
+      </div>
+    </div>
+
+    <div id="target-bracket-prompt" class="loading-overlay bracket-prompt-overlay hidden" aria-hidden="true">
+      <div
+        class="loading-dialog bracket-prompt-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="target-bracket-title"
+      >
+        <div class="loading-copy-wrap">
+          <p class="panel-kicker">Before Analysis</p>
+          <h2 id="target-bracket-title" class="loading-title">Choose the target bracket</h2>
+        </div>
+        <p class="loading-copy bracket-prompt-copy">
+          Pick the bracket the deck is aiming for. The scan compares the actual read against this target before suggestions.
+        </p>
+        <div class="bracket-choice-grid">
+          <button type="button" class="bracket-choice-button" data-target-bracket-choice="1">
+            <span>Bracket 1</span>
+            <strong>Exhibition</strong>
+            <small>Very casual, low-pressure tables.</small>
+          </button>
+          <button type="button" class="bracket-choice-button" data-target-bracket-choice="2">
+            <span>Bracket 2</span>
+            <strong>Core</strong>
+            <small>Precon-ish and lightly tuned decks.</small>
+          </button>
+          <button type="button" class="bracket-choice-button" data-target-bracket-choice="3">
+            <span>Bracket 3</span>
+            <strong>Upgraded</strong>
+            <small>Cleaner shells with stronger support.</small>
+          </button>
+          <button type="button" class="bracket-choice-button" data-target-bracket-choice="4">
+            <span>Bracket 4</span>
+            <strong>Optimized</strong>
+            <small>Fast, tuned, and high-pressure play.</small>
+          </button>
+          <button type="button" class="bracket-choice-button" data-target-bracket-choice="5">
+            <span>Bracket 5</span>
+            <strong>cEDH</strong>
+            <small>Top-end competitive intent.</small>
+          </button>
+        </div>
+        <div class="bracket-prompt-actions">
+          <button id="target-bracket-cancel" type="button" class="secondary-button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="report-overlay" class="loading-overlay report-overlay hidden" aria-hidden="true">
+      <div
+        class="loading-dialog report-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="report-dialog-title"
+      >
+        <div class="report-dialog-head">
+          <div class="loading-copy-wrap">
+            <p class="panel-kicker">Report</p>
+            <h2 id="report-dialog-title" class="loading-title">Send feedback or bug report</h2>
+          </div>
+          <button
+            id="report-close-button"
+            class="report-close-button"
+            type="button"
+            aria-label="Close report dialog"
+          >
+            x
+          </button>
+        </div>
+
+        <p class="loading-copy">
+          Choose what the report is about. The current decklist and useful analysis context are
+          saved with the report so it can be reviewed later.
+        </p>
+
+        <div class="report-choice-grid" aria-label="Report type">
+          <button type="button" class="report-choice-button" data-report-type="website">
+            <span>Website</span>
+            <strong>UI or usability</strong>
+            <small>Broken behavior, layout issues, confusing flow.</small>
+          </button>
+          <button type="button" class="report-choice-button" data-report-type="deck_evaluation">
+            <span>Deck Evaluation</span>
+            <strong>Wrong analysis</strong>
+            <small>Strategy, ranking, tags, or suggestions.</small>
+          </button>
+          <button type="button" class="report-choice-button" data-report-type="other">
+            <span>Other</span>
+            <strong>Anything else</strong>
+            <small>General notes that do not fit a category.</small>
+          </button>
+        </div>
+
+        <section id="report-website-panel" class="report-detail-panel hidden">
+          <p class="report-panel-title">What kind of website report is it?</p>
+          <div class="report-chip-row">
+            <button type="button" class="report-chip-button" data-website-kind="issue">
+              Issue
+            </button>
+            <button type="button" class="report-chip-button" data-website-kind="feedback">
+              Feedback
+            </button>
+          </div>
+        </section>
+
+        <section id="report-evaluation-panel" class="report-detail-panel hidden">
+          <p class="report-panel-title">Which evaluation areas are affected?</p>
+          <div class="report-category-group">
+            <span>Simple View</span>
+            <div class="report-checkbox-grid">
+              <label><input type="checkbox" value="Power / Bracket" />Power / Bracket</label>
+              <label><input type="checkbox" value="Shell" />Shell</label>
+              <label><input type="checkbox" value="Land Base" />Land Base</label>
+              <label><input type="checkbox" value="Ramp" />Ramp</label>
+              <label><input type="checkbox" value="Card Flow" />Card Flow</label>
+              <label><input type="checkbox" value="Consistency" />Consistency</label>
+              <label><input type="checkbox" value="Interaction" />Interaction</label>
+              <label><input type="checkbox" value="Resilience" />Resilience</label>
+              <label><input type="checkbox" value="Closing" />Closing</label>
+            </div>
+          </div>
+          <div class="report-category-group">
+            <span>Advanced View</span>
+            <div class="report-checkbox-grid">
+              <label><input type="checkbox" value="Commander" />Commander</label>
+              <label><input type="checkbox" value="Strategy" />Strategy</label>
+              <label><input type="checkbox" value="Win Strategy" />Win Strategy</label>
+              <label><input type="checkbox" value="Game Changers" />Game Changers</label>
+              <label><input type="checkbox" value="Protection" />Protection</label>
+              <label><input type="checkbox" value="Recursion" />Recursion</label>
+              <label><input type="checkbox" value="Removal" />Removal</label>
+              <label><input type="checkbox" value="Spell Interaction" />Spell Interaction</label>
+              <label><input type="checkbox" value="Suggestions" />Suggestions</label>
+            </div>
+          </div>
+        </section>
+
+        <label class="field report-comment-field">
+          <span>Comment</span>
+          <textarea
+            id="report-comment"
+            rows="5"
+            placeholder="Describe what happened, what looked wrong, or what you expected instead."
+          ></textarea>
+        </label>
+
+        <p id="report-status" class="form-status report-status"></p>
+
+        <div class="report-actions">
+          <button id="report-cancel-button" type="button" class="secondary-button">Cancel</button>
+          <button id="report-submit-button" type="button" class="primary-button" disabled>
+            Submit Report
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
