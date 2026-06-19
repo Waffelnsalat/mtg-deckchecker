@@ -356,6 +356,7 @@ function mapStrategyToWinPlan(
     case "monarch":
       return "value_attrition";
     case "theft":
+    case "donation":
       return "value_attrition";
     case "goad":
       return winConditions.counts.direct > 0 ? "drain_burn" : "lock_attrition";

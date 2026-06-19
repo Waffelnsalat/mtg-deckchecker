@@ -4057,6 +4057,7 @@ function isCommanderSpecificStrategy(key: StrategyKey) {
     "sagas",
     "monarch",
     "theft",
+    "donation",
     "goad",
     "shrines",
     "cycling",

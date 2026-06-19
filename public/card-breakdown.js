@@ -370,7 +370,7 @@ window.MtgDeckcheckerCardBreakdown = {
         normalizedParts.some((part) => patterns.some((pattern) => part.includes(pattern)));
 
       let label = "Utility";
-      if (hasPart("strategy", "substrategy", "win plan", "token support", "counter support", "artifact support", "enchantment support", "kindred support", "sacrifice support", "replacement engine", "multiplier support", "land synergy", "dungeon support", "dice support", "coin support", "energy support", "mill support", "theft support", "copy support", "tempo support", "lifegain")) {
+      if (hasPart("strategy", "substrategy", "win plan", "token support", "counter support", "artifact support", "enchantment support", "kindred support", "sacrifice support", "replacement engine", "multiplier support", "land synergy", "dungeon support", "dice support", "coin support", "energy support", "mill support", "theft support", "donation support", "copy support", "tempo support", "lifegain")) {
         label = "Synergy";
       } else if (hasPart("game changer")) {
         label = "Game Changer";

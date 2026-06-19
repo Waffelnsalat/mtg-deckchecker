@@ -441,6 +441,8 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
 }
 
 function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
+  const exchangeControl =
+    /\bexchange control of\b[^.]{0,220}\b(?:target|two|creature|artifact|enchantment|permanent|spell)\b/.test(text);
   const chosenRemoval =
     /\b(?:choose|chooses)\b[^.]{0,160}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b/.test(text) &&
     /\b(?:destroy|exile)\b[^.]{0,80}\b(?:the chosen|those|them|it)\b/.test(text);
@@ -490,7 +492,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\btap (?:up to )?(?:(?:one|two|three|four|five|six|\d+)\s+)?target\b[^.]{0,120}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?|lands?)\b/.test(text) ||
     /\btarget spell, nonland permanent, or card in a graveyard\b[^.]{0,160}\btop or bottom of (?:their|its) library\b/.test(text);
   const temporaryTheft =
-    /\bexchange control of\b[^.]{0,180}\btarget\b[^.]{0,120}\bcreature\b/.test(text) ||
+    exchangeControl ||
     /\bgain control of\b[^.]{0,120}\b(?:target|enchanted)\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,160}\buntil end of turn\b/.test(
       text,
     ) ||
@@ -568,6 +570,7 @@ function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
     /\bcounter target activated or triggered ability\b/.test(text) ||
     /\bcounter all abilities\b/.test(text) ||
     /\bexile all other spells\b/.test(text) ||
+    /\bexchange control of\b[^.]{0,180}\bspell\b/.test(text) ||
     /\bchange the target of target spell\b/.test(text) ||
     /\bspells you control can'?t be countered\b/.test(text);
   const castRestriction =
@@ -994,7 +997,7 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\bgain control of\b|\byou control enchanted (?:creature|artifact|permanent)\b|\bput that card onto the battlefield under your control\b/.test(text) ||
-    /\bexchange control of\b[^.]{0,180}\btarget\b[^.]{0,120}\bcreature\b/.test(text) ||
+    /\bexchange control of\b[^.]{0,220}\b(?:target|two|creature|artifact|enchantment|permanent|spell)\b/.test(text) ||
     /\bexile\b[^.]{0,180}\b(?:target|an opponent'?s|opponent'?s)\b[^.]{0,180}\byou may (?:cast|play)\b/.test(text) ||
     /\byou may (?:cast|play)\b[^.]{0,180}\bfrom (?:an|your) opponents?'? (?:graveyard|library|hand|exile)\b/.test(text) ||
     /\byou may (?:cast|play) spells? from (?:an opponent'?s|opponents?'?) (?:graveyard|library|hand|exile)\b/.test(text) ||
@@ -1002,6 +1005,16 @@ function detectAdvancedPurposeRoles(
     /\btarget opponent exiles cards\b[\s\S]{0,260}\byou may cast\b/.test(text)
   ) {
     addRole(profile, "theft_support", 0.5, "Advanced scan recognized theft or borrowed-resource support.");
+  }
+
+  if (
+    /\b(?:target|an|each) opponent gains? control of\b/.test(text) ||
+    /\bgains? control of target\b[^.]{0,140}\byou control\b/.test(text) ||
+    /\bexchange control of\b[^.]{0,220}\b(?:target|two|creature|artifact|enchantment|permanent|spell)\b/.test(text) ||
+    /\byou own\b[^.]{0,180}\b(?:an opponent controls|opponent controls)\b/.test(text) ||
+    /\bpermanents? you own but don'?t control\b/.test(text)
+  ) {
+    addRole(profile, "donation_support", permanent ? 0.64 : 0.56, "Advanced scan recognized donation, exchange, or political control-transfer support.");
   }
 
   if (

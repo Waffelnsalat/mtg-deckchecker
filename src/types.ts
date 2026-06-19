@@ -614,6 +614,7 @@ export type StrategyKey =
   | "sagas"
   | "monarch"
   | "theft"
+  | "donation"
   | "goad"
   | "shrines"
   | "cycling"

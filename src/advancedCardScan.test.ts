@@ -1103,6 +1103,40 @@ test("inferAdvancedRoleProfile recognizes generic X-spell scaling", () => {
   assert.ok(getRoleWeight(tokenProfile, "token_support") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes political control-exchange cards", () => {
+  const chimeraProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Perplexing Chimera",
+      "Enchantment Creature - Chimera",
+      5,
+      "Whenever an opponent casts a spell, you may exchange control of Perplexing Chimera and that spell. If you do, you may choose new targets for the spell.",
+    ),
+  );
+  const roleReversalProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Role Reversal",
+      "Sorcery",
+      3,
+      "Exchange control of two target permanents that share a permanent type.",
+    ),
+  );
+  const shiftingGriftProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Shifting Grift",
+      "Sorcery",
+      2,
+      "Spree. Exchange control of two target creatures. Exchange control of two target artifacts. Exchange control of two target enchantments.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(chimeraProfile, "broad_stack") > 0);
+  assert.ok(getRoleWeight(chimeraProfile, "donation_support") > 0);
+  assert.ok(getRoleWeight(roleReversalProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(roleReversalProfile, "donation_support") > 0);
+  assert.ok(getRoleWeight(shiftingGriftProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(shiftingGriftProfile, "donation_support") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

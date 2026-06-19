@@ -2391,6 +2391,94 @@ test("analyzeDeckStrategy identifies copy and clone commander shells", () => {
   assert.equal(analysis.synergy?.commanderAligned, true);
 });
 
+test("analyzeDeckStrategy keeps political donation shells out of token and upkeep plans", () => {
+  const analysis = analyzeDeckStrategy(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Ludevic, Necro-Alchemist",
+        "Legendary Creature - Human Wizard",
+        3,
+        "At the beginning of each player's end step, that player may draw a card if a player other than you lost life this turn.",
+        { color_identity: ["U", "R"] },
+      ),
+      createResolvedCard(
+        "commander",
+        1,
+        "Tymna the Weaver",
+        "Legendary Creature - Human Cleric",
+        3,
+        "Lifelink. At the beginning of your postcombat main phase, you may pay X life. If you do, draw X cards, where X is the number of opponents that were dealt combat damage this turn.",
+        { color_identity: ["W", "B"] },
+      ),
+      createResolvedCard(
+        "mainboard",
+        3,
+        "Harmless Offering",
+        "Sorcery",
+        3,
+        "Target opponent gains control of target permanent you control.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        3,
+        "Demonic Pact",
+        "Enchantment",
+        4,
+        "At the beginning of your upkeep, choose one that hasn't been chosen. Target opponent discards two cards. Demonic Pact deals 4 damage to any target and you gain 4 life. Draw two cards. You lose the game.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        2,
+        "Nine Lives",
+        "Enchantment",
+        3,
+        "When Nine Lives leaves the battlefield, you lose the game.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        2,
+        "Akroan Horse",
+        "Artifact Creature - Horse",
+        4,
+        "Defender. When Akroan Horse enters the battlefield, an opponent gains control of it. At the beginning of each opponent's upkeep, that player creates a 1/1 white Soldier creature token.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        2,
+        "Role Reversal",
+        "Sorcery",
+        3,
+        "Exchange control of two target permanents that share a permanent type.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        2,
+        "Jon Irenicus, Shattered One",
+        "Legendary Creature - Elf Wizard",
+        4,
+        "At the beginning of your end step, target opponent gains control of up to one target creature you control. Put two +1/+1 counters on it and tap it. It is goaded for the rest of the game.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        2,
+        "Zedruu the Greathearted",
+        "Legendary Creature - Minotaur Monk",
+        4,
+        "At the beginning of your upkeep, you gain X life and draw X cards, where X is the number of permanents you own that your opponents control.",
+      ),
+      createResolvedCard("mainboard", 80, "Filler Land", "Basic Land - Plains", 0, ""),
+    ]),
+    createEmptyWinConditions(),
+  );
+
+  assert.equal(analysis.mainStrategy?.key, "donation");
+  assert.notEqual(analysis.mainStrategy?.key, "tokens");
+  assert.notEqual(analysis.mainStrategy?.key, "extra_upkeep");
+  assert.ok(!analysis.subStrategies.some((strategy) => strategy.key === "tokens"));
+});
+
 function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocument {
   return {
     format: "edh",

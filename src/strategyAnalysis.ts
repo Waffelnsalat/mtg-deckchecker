@@ -37,6 +37,7 @@ const STRATEGY_LABELS: Record<StrategyKey, string> = {
   sagas: "Sagas",
   monarch: "Monarch",
   theft: "Theft",
+  donation: "Donation / Politics",
   goad: "Goad",
   shrines: "Shrines",
   cycling: "Cycling",
@@ -92,6 +93,7 @@ const STRATEGY_TARGETS: Record<StrategyKey, number> = {
   sagas: 5,
   monarch: 4.8,
   theft: 5,
+  donation: 4.8,
   goad: 4.8,
   shrines: 4.8,
   cycling: 5.1,
@@ -131,13 +133,19 @@ const COUNTER_TYPE_BLACKLIST = new Set([
   "an",
   "another",
   "any",
+  "bounty",
+  "collection",
   "each",
   "every",
+  "finality",
+  "lore",
   "more",
   "less",
   "many",
   "number",
   "same",
+  "shield",
+  "stun",
   "that",
   "those",
   "these",
@@ -153,6 +161,8 @@ const COUNTER_TYPE_BLACKLIST = new Set([
   "eight",
   "nine",
   "ten",
+  "time",
+  "oil",
 ]);
 const STRATEGY_SUPPORT_TARGETS: Record<StrategyKey, { support: number; core: number }> = {
   combo: { support: 6, core: 3 },
@@ -177,6 +187,7 @@ const STRATEGY_SUPPORT_TARGETS: Record<StrategyKey, { support: number; core: num
   sagas: { support: 12, core: 6 },
   monarch: { support: 9, core: 4 },
   theft: { support: 11, core: 5 },
+  donation: { support: 10, core: 5 },
   goad: { support: 10, core: 5 },
   shrines: { support: 9, core: 5 },
   cycling: { support: 14, core: 7 },
@@ -703,6 +714,17 @@ function detectStrategyHits(card: ScryfallCard, context: StrategyContext): Strat
         "Stealing permanents or opponents' cards supports a Theft shell.",
       );
       addStrategyHit(hits, "control", 0.12, "Theft effects often play as control or attrition.");
+    }
+
+    if (hasDonationText(text)) {
+      addStrategyHit(
+        hits,
+        "donation",
+        getDonationStrategyWeight(text),
+        "Giving permanents, drawbacks, or resources to opponents supports a Donation / Politics shell.",
+      );
+      addStrategyHit(hits, "group_hug", 0.16, "Donation effects overlap with political resource exchange.");
+      addStrategyHit(hits, "goad", 0.12, "Donation decks often redirect combat and table pressure.");
     }
 
     if (hasGoadText(text)) {
@@ -1740,6 +1762,7 @@ function normalizeStrategyScore(
       "sagas",
       "monarch",
       "theft",
+      "donation",
       "goad",
       "shrines",
       "cycling",
@@ -1842,6 +1865,10 @@ function addStrategyHit(
 }
 
 function hasTokenText(text: string) {
+  if (isOpponentTokenGiftText(text) || isNonCreatureResourceTokenText(text)) {
+    return false;
+  }
+
   return (
     /\bcreate\b[^.]{0,180}\bcreature tokens?\b/.test(text) ||
     /\bcreate\b[^.]{0,180}\btokens?\b/.test(text) ||
@@ -1852,6 +1879,21 @@ function hasTokenText(text: string) {
     /\bcreature tokens? you control\b/.test(text) ||
     /\bfor each token\b/.test(text) ||
     /\btokens? you control\b[^.]{0,80}\bget\b/.test(text)
+  );
+}
+
+function isOpponentTokenGiftText(text: string) {
+  return (
+    /\b(?:target|each|an) opponent\b[^.]{0,160}\bcreates?\b[^.]{0,120}\btokens?\b/.test(text) ||
+    /\bthat player creates?\b[^.]{0,120}\btokens?\b/.test(text) ||
+    /\beach player\b[^.]{0,160}\bcreates?\b[^.]{0,120}\btokens?\b/.test(text)
+  );
+}
+
+function isNonCreatureResourceTokenText(text: string) {
+  return (
+    /\bcreate\b[^.]{0,160}\b(?:treasure|gold|powerstone|food|clue|blood|map|junk) tokens?\b/.test(text) &&
+    !/\bcreature tokens?\b|\btokens? you control\b|\bpopulate\b/.test(text)
   );
 }
 
@@ -2193,6 +2235,41 @@ function getTheftStrategyWeight(text: string) {
   }
 
   return Math.min(1.34, weight);
+}
+
+function hasDonationText(text: string) {
+  return (
+    /\b(?:target|an|each) opponent gains? control of\b/.test(text) ||
+    /\bgains? control of target\b[^.]{0,120}\byou control\b/.test(text) ||
+    /\bexchange control of\b[^.]{0,180}\b(?:creature|permanent|artifact|enchantment)\b/.test(text) ||
+    /\byou own\b[^.]{0,160}\b(?:an opponent controls|opponent controls)\b/.test(text) ||
+    /\btarget opponent creates?\b[^.]{0,160}\b(?:treasure|gold|clue|food|creature)? ?tokens?\b/.test(text) ||
+    /\bthat player creates?\b[^.]{0,160}\b(?:creature )?tokens?\b/.test(text) ||
+    /\bwhen\b[^.]{0,120}\bleaves the battlefield\b[^.]{0,160}\byou lose the game\b/.test(text) ||
+    /\byou lose the game\b/.test(text) && /\bat the beginning of your upkeep\b|\bchoose one that hasn't been chosen\b/.test(text)
+  );
+}
+
+function getDonationStrategyWeight(text: string) {
+  let weight = 0.9;
+
+  if (
+    /\b(?:target|an|each) opponent gains? control of\b/.test(text) ||
+    /\bgains? control of target\b[^.]{0,120}\byou control\b/.test(text) ||
+    /\bexchange control of\b/.test(text)
+  ) {
+    weight += 0.34;
+  }
+
+  if (/\byou lose the game\b|\ban opponent controls\b|\byou own\b/.test(text)) {
+    weight += 0.22;
+  }
+
+  if (/\btarget opponent creates?\b|\bthat player creates?\b/.test(text)) {
+    weight += 0.12;
+  }
+
+  return Math.min(1.42, weight);
 }
 
 function hasGoadText(text: string) {
@@ -2741,16 +2818,30 @@ function hasCounterText(text: string, keywords: string[]) {
   return (
     /\b\+1\/\+1 counter\b/.test(text) ||
     /\bproliferate\b/.test(text) ||
-    /\bput a counter on\b/.test(text) ||
-    /\bput\b[^.]{0,80}\b[a-z0-9+/'-]+\s+counters?\b/.test(text) ||
-    /\bcounters? on\b/.test(text) ||
-    /\bremove\b[^.]{0,80}\bcounters?\b/.test(text) ||
-    /\bmove\b[^.]{0,80}\bcounters?\b/.test(text) ||
-    /\bdouble the number of\b[^.]{0,80}\bcounters?\b/.test(text) ||
+    hasStrategicNamedCounterText(text) ||
+    /\bput\b[^.]{0,80}\+1\/\+1 counters?\b/.test(text) ||
+    /\bremove\b[^.]{0,80}\+1\/\+1 counters?\b/.test(text) ||
+    /\bmove\b[^.]{0,80}\+1\/\+1 counters?\b/.test(text) ||
+    /\bdouble the number of\b[^.]{0,80}\+1\/\+1 counters?\b/.test(text) ||
     /\bcounters? would be (?:put|placed)\b[^.]{0,220}\b(?:that many plus|additional|twice that many)\b/.test(text) ||
     /\bchoose a kind of counter\b/.test(text) ||
     keywords.includes("Proliferate")
   );
+}
+
+function hasStrategicNamedCounterText(text: string) {
+  const matches = text.matchAll(
+    /\b(?:put|puts?|placed?|enters? (?:the battlefield )?with|remove|removes?|move|moves?|additional)\b[^.]{0,90}\b([a-z0-9+/'-]+)\s+counters?\b/g,
+  );
+
+  for (const match of matches) {
+    const counterType = match[1]?.toLowerCase();
+    if (counterType && !COUNTER_TYPE_BLACKLIST.has(counterType)) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 function hasDiceRollText(text: string) {
@@ -2805,8 +2896,6 @@ function hasExtraUpkeepText(text: string) {
   return (
     /\badditional upkeep steps?\b/.test(text) ||
     /\bextra upkeep steps?\b/.test(text) ||
-    /\bbeginning of (?:your|each|that player's|each player's) upkeep\b/.test(text) ||
-    /\bat the beginning of (?:your|each|that player's|each player's) upkeep\b/.test(text) ||
     /\bcumulative upkeep\b/.test(text)
   );
 }
@@ -3621,6 +3710,18 @@ function getCommanderBuildAroundProfiles(context: StrategyContext): CommanderBui
       });
     }
 
+    if (commanderAsksForDonation(text)) {
+      profiles.push({
+        key: "donation",
+        commander,
+        label: "Donation and political exchange cards",
+        supportReason: "Donation, exchange, or opponent-resource text follows the commander ask.",
+        minimumSupport: 4,
+        supportWeight: 0.82,
+        matcher: (deckCard) => isDonationSupport(deckCard.card),
+      });
+    }
+
     if (commanderAsksForGoad(text)) {
       profiles.push({
         key: "goad",
@@ -4409,6 +4510,12 @@ function commanderAsksForTheft(text: string) {
   );
 }
 
+function commanderAsksForDonation(text: string) {
+  return /\bopponent gains? control of\b|\bexchange control of\b|\byou own\b[^.]{0,160}\bopponent controls\b|\bpermanents? you own but don't control\b/.test(
+    text,
+  );
+}
+
 function commanderAsksForGoad(text: string) {
   return /\bgoad\b|\bgoaded\b|\battacks a player other than you if able\b|\bcreatures? your opponents control attack\b/.test(
     text,
@@ -4578,6 +4685,10 @@ function isTheftSupport(card: ScryfallCard) {
   return getStrategySegments(card).some((segment) => hasTheftText(segment.text));
 }
 
+function isDonationSupport(card: ScryfallCard) {
+  return getStrategySegments(card).some((segment) => hasDonationText(segment.text));
+}
+
 function isGoadSupport(card: ScryfallCard) {
   return getStrategySegments(card).some((segment) => hasGoadText(segment.text));
 }
@@ -4743,6 +4854,7 @@ function getCommanderThemeSupportMinimum(key: StrategyKey) {
     case "sagas":
     case "monarch":
     case "theft":
+    case "donation":
     case "goad":
     case "shrines":
     case "cycling":
@@ -4859,6 +4971,7 @@ function createStrategyTotals() {
     sagas: 0,
     monarch: 0,
     theft: 0,
+    donation: 0,
     goad: 0,
     shrines: 0,
     cycling: 0,
@@ -5089,6 +5202,7 @@ function isStrategyAlignedToFinishers(
       "pingers",
       "curses",
       "food",
+      "donation",
       "goad",
       "poison",
     ].includes(key)
@@ -5106,6 +5220,7 @@ function isStrategyAlignedToFinishers(
       "sagas",
       "monarch",
       "theft",
+      "donation",
       "shrines",
       "cycling",
       "mutate",

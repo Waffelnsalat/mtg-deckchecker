@@ -293,22 +293,8 @@ const collapsibleInsightLists = [
   removalCardsList,
   spellInteractionCardsList,
 ].filter(Boolean);
-const taggedCardPreviewContainers = [
-  commanderCardsPreview,
-  gameChangerCardsPreview,
-  landBaseCardsPreview,
-  rampCardsPreview,
-  drawCardsPreview,
-  consistencyCardsPreview,
-  removalCardsPreview,
-  spellInteractionCardsPreview,
-  protectionCardsPreview,
-  recursionCardsPreview,
-  finisherCardsPreview,
-].filter(Boolean);
 
 let highlightedIssueAnchors = [];
-let selectedStrategyPerspectiveKey = null;
 let currentAnalysisSnapshot = null;
 let currentAnalysisDocument = null;
 let analyzeRequestCounter = 0;
@@ -324,284 +310,9 @@ const CARD_BREAKDOWN_SYNERGY_LABELS = new Set(CARD_BREAKDOWN_CONFIG.synergyLabel
 const CARD_BREAKDOWN_LOW_SIGNAL_LAND_TAGS = new Set(
   CARD_BREAKDOWN_CONFIG.lowSignalLandTags ?? ["Land Base", "Land Slot", "Basic Land", "Mana Source"],
 );
-const THEME_STORAGE_KEY = FRONTEND_CONFIG.themeStorageKey ?? "mtg-deckchecker-theme";
-const TAGGED_CARD_PREVIEW_LIMIT = FRONTEND_CONFIG.taggedCardPreviewLimit ?? 4;
 const RECOMMENDATION_TOPICS = FRONTEND_CONFIG.recommendationTopics ?? [];
 const SIMPLE_VALUE_DRILLDOWNS = FRONTEND_CONFIG.simpleValueDrilldowns ?? {};
 const TAG_LABELS = FRONTEND_CONFIG.tagLabels ?? {};
-const AMBIENT_CARD_POOL = [
-  {
-    name: "Rhystic Study",
-    imageUrl: "https://cards.scryfall.io/normal/front/d/6/d6914dba-0d27-4055-ac34-b3ebf5802221.jpg?1600698439",
-  },
-  {
-    name: "Smothering Tithe",
-    imageUrl: "https://cards.scryfall.io/normal/front/8/6/861b5889-0183-4bee-afeb-a4b2aa700a8e.jpg?1689996018",
-  },
-  {
-    name: "Birds of Paradise",
-    imageUrl: "https://cards.scryfall.io/normal/front/3/d/3d69a3e0-6a2e-475a-964e-0affed1c017d.jpg?1722384747",
-  },
-  {
-    name: "Cyclonic Rift",
-    imageUrl: "https://cards.scryfall.io/normal/front/d/f/dfb7c4b9-f2f4-4d4e-baf2-86551c8150fe.jpg?1702429366",
-  },
-  {
-    name: "Swords to Plowshares",
-    imageUrl: "https://cards.scryfall.io/normal/front/6/8/68ec2aed-7662-48ae-ab25-04f74ece1e41.jpg?1775940857",
-  },
-  {
-    name: "Demonic Tutor",
-    imageUrl: "https://cards.scryfall.io/normal/front/a/2/a24b4cb6-cebb-428b-8654-74347a6a8d63.jpg?1763472867",
-  },
-  {
-    name: "Lightning Greaves",
-    imageUrl: "https://cards.scryfall.io/normal/front/0/8/08005be9-fbf4-43e6-a742-b1fb8196c4a5.jpg?1775942055",
-  },
-  {
-    name: "Cultivate",
-    imageUrl: "https://cards.scryfall.io/normal/front/f/1/f1cc00f9-ae7b-4f7b-95f2-bc5c00e4bd72.jpg?1775941453",
-  },
-  {
-    name: "Counterspell",
-    imageUrl: "https://cards.scryfall.io/normal/front/4/f/4f616706-ec97-4923-bb1e-11a69fbaa1f8.jpg?1751282477",
-  },
-  {
-    name: "Atraxa, Praetors' Voice",
-    imageUrl: "https://cards.scryfall.io/normal/front/d/0/d0d33d52-3d28-4635-b985-51e126289259.jpg?1599707796",
-  },
-  {
-    name: "Sol Ring",
-    imageUrl: "https://cards.scryfall.io/normal/front/8/7/870ec754-a76c-40ea-9b81-81b3dca1f62c.jpg?1775940518",
-  },
-  {
-    name: "Command Tower",
-    imageUrl: "https://cards.scryfall.io/normal/front/c/4/c46a217c-0ed2-4b3c-9a01-ee38d12d76f3.jpg?1775940525",
-  },
-  {
-    name: "Arcane Signet",
-    imageUrl: "https://cards.scryfall.io/normal/front/7/8/7811dd72-61b9-4067-ac20-cea153e625d2.jpg?1775940512",
-  },
-  {
-    name: "Fierce Guardianship",
-    imageUrl: "https://cards.scryfall.io/normal/front/f/7/f7f3dd95-bd14-4e0f-a388-444f9cf1b0dc.jpg?1767727540",
-  },
-  {
-    name: "Esper Sentinel",
-    imageUrl: "https://cards.scryfall.io/normal/front/f/3/f3537373-ef54-4578-9d05-6216420ee349.jpg?1626093502",
-  },
-  {
-    name: "Dockside Extortionist",
-    imageUrl: "https://cards.scryfall.io/normal/front/9/e/9e2e3efb-75cb-430f-b9f4-cb58f3aeb91b.jpg?1727093692",
-  },
-  {
-    name: "The One Ring",
-    imageUrl: "https://cards.scryfall.io/normal/front/d/5/d5806e68-1054-458e-866d-1f2470f682b2.jpg?1763472900",
-  },
-  {
-    name: "Teferi's Protection",
-    imageUrl: "https://cards.scryfall.io/normal/front/4/8/483fa1cb-1e35-44f2-a143-98c0f107f5ca.jpg?1745319936",
-  },
-  {
-    name: "The Ur-Dragon",
-    imageUrl: "https://cards.scryfall.io/normal/front/1/0/10d42b35-844f-4a64-9981-c6118d45e826.jpg?1689999317",
-  },
-  {
-    name: "Mystic Remora",
-    imageUrl: "https://cards.scryfall.io/normal/front/4/0/40140991-cffa-4b52-9a25-37e9a8aa9ddd.jpg?1675199366",
-  },
-];
-const HERO_CARD_POOL = [...AMBIENT_CARD_POOL];
-const AMBIENT_CARD_LAYOUT_PRESETS = {
-  light: {
-    desktop: {
-      gapX: 270,
-      gapY: 350,
-      startX: -88,
-      startY: 106,
-      rowOffset: 135,
-      edgeX: 135,
-      edgeY: 175,
-      maxSlots: 34,
-      widths: [
-        "224px",
-        "162px",
-        "210px",
-        "154px",
-        "220px",
-        "170px",
-        "228px",
-        "160px",
-        "214px",
-        "152px",
-        "222px",
-        "168px",
-        "226px",
-        "158px",
-        "216px",
-        "164px",
-        "230px",
-        "166px",
-        "212px",
-        "156px",
-      ],
-      rotations: [
-        "-11deg",
-        "7deg",
-        "-8deg",
-        "10deg",
-        "-9deg",
-        "6deg",
-        "-12deg",
-        "8deg",
-        "-7deg",
-        "9deg",
-        "-10deg",
-        "7deg",
-        "-11deg",
-        "6deg",
-        "-8deg",
-        "9deg",
-        "-12deg",
-        "7deg",
-        "-9deg",
-        "8deg",
-      ],
-    },
-    tablet: {
-      gapX: 300,
-      gapY: 350,
-      startX: -78,
-      startY: 116,
-      rowOffset: 138,
-      edgeX: 120,
-      edgeY: 165,
-      maxSlots: 20,
-      widths: [
-        "214px",
-        "158px",
-        "202px",
-        "150px",
-        "208px",
-        "164px",
-        "218px",
-        "156px",
-        "206px",
-        "152px",
-        "212px",
-        "160px",
-      ],
-      rotations: ["-10deg", "7deg", "-8deg", "9deg", "-9deg", "6deg", "-11deg", "7deg", "-8deg", "9deg", "-10deg", "6deg"],
-    },
-    mobile: {
-      gapX: 292,
-      gapY: 336,
-      startX: -68,
-      startY: 110,
-      rowOffset: 118,
-      edgeX: 92,
-      edgeY: 144,
-      maxSlots: 12,
-      widths: ["198px", "150px", "186px", "144px", "194px", "152px", "188px"],
-      rotations: ["-10deg", "7deg", "-7deg", "8deg", "-9deg", "6deg", "-8deg"],
-    },
-  },
-  dark: {
-    desktop: {
-      gapX: 315,
-      gapY: 355,
-      startX: -85,
-      startY: 110,
-      rowOffset: 155,
-      edgeX: 130,
-      edgeY: 170,
-      maxSlots: 29,
-      widths: [
-        "250px",
-        "172px",
-        "226px",
-        "160px",
-        "240px",
-        "186px",
-        "254px",
-        "168px",
-        "218px",
-        "156px",
-        "236px",
-        "178px",
-        "230px",
-        "164px",
-        "246px",
-        "184px",
-      ],
-      rotations: [
-        "-12deg",
-        "8deg",
-        "-8deg",
-        "11deg",
-        "-10deg",
-        "7deg",
-        "-13deg",
-        "6deg",
-        "-7deg",
-        "10deg",
-        "-9deg",
-        "8deg",
-        "-11deg",
-        "7deg",
-        "-12deg",
-        "9deg",
-      ],
-    },
-    tablet: {
-      gapX: 330,
-      gapY: 360,
-      startX: -75,
-      startY: 120,
-      rowOffset: 145,
-      edgeX: 115,
-      edgeY: 160,
-      maxSlots: 18,
-      widths: [
-        "222px",
-        "164px",
-        "208px",
-        "154px",
-        "216px",
-        "170px",
-        "224px",
-        "160px",
-        "210px",
-        "168px",
-      ],
-      rotations: [
-        "-11deg",
-        "8deg",
-        "-8deg",
-        "10deg",
-        "-9deg",
-        "7deg",
-        "-12deg",
-        "6deg",
-        "-8deg",
-        "9deg",
-      ],
-    },
-    mobile: {
-      gapX: 305,
-      gapY: 340,
-      startX: -68,
-      startY: 112,
-      rowOffset: 122,
-      edgeX: 90,
-      edgeY: 140,
-      maxSlots: 10,
-      widths: ["194px", "148px", "182px", "142px", "190px", "150px"],
-      rotations: ["-10deg", "7deg", "-7deg", "9deg", "-9deg", "6deg"],
-    },
-  },
-};
-let ambientResizeHandle = 0;
 let resolvedCardLookup = new Map();
 const recommendationCardVisualCache = new Map();
 const recommendationCardVisualPending = new Map();
@@ -647,6 +358,389 @@ const recommendationsController = window.MtgDeckcheckerRecommendations.create({
   },
   getRenderToken: () => recommendationVisualRenderToken,
 });
+const taggedCardSectionsController = window.MtgDeckcheckerTaggedCardSections.create({
+  elements: {
+    commander: {
+      list: commanderCardsList,
+      preview: commanderCardsPreview,
+    },
+    commanderProfiles: commanderProfilesList,
+    gameChanger: {
+      list: gameChangerCardsList,
+      preview: gameChangerCardsPreview,
+    },
+    landBase: {
+      list: landBaseCardsList,
+      preview: landBaseCardsPreview,
+    },
+    ramp: {
+      list: rampCardsList,
+      preview: rampCardsPreview,
+    },
+    draw: {
+      list: drawCardsList,
+      preview: drawCardsPreview,
+    },
+    consistency: {
+      list: consistencyCardsList,
+      preview: consistencyCardsPreview,
+    },
+    protection: {
+      list: protectionCardsList,
+      preview: protectionCardsPreview,
+    },
+    recursion: {
+      list: recursionCardsList,
+      preview: recursionCardsPreview,
+    },
+    finisher: {
+      list: finisherCardsList,
+      preview: finisherCardsPreview,
+    },
+    comboLines: comboLinesList,
+    removal: {
+      list: removalCardsList,
+      preview: removalCardsPreview,
+    },
+    spellInteraction: {
+      list: spellInteractionCardsList,
+      preview: spellInteractionCardsPreview,
+    },
+  },
+  config: {
+    tagLabels: TAG_LABELS,
+    previewLimit: FRONTEND_CONFIG.taggedCardPreviewLimit ?? 4,
+  },
+  helpers: {
+    findResolvedCardForTaggedName,
+    getCardImageUrl,
+  },
+});
+const quickReadController = window.MtgDeckcheckerQuickRead.create({
+  elements: {
+    summary: quickReadSummary,
+    radarChart: scoreRadarChart,
+    metrics: {
+      shell: quickShellScore,
+      landBase: quickLandBaseScore,
+      ramp: quickRampScore,
+      cardFlow: quickCardFlowScore,
+      consistency: quickConsistencyScore,
+      interaction: quickInteractionScore,
+      resilience: quickResilienceScore,
+      closing: quickClosingScore,
+    },
+    strengthsList: quickReadStrengthsList,
+    risksList: quickReadRisksList,
+  },
+});
+const themeMediaController = window.MtgDeckcheckerThemeMedia.create({
+  elements: {
+    ambientBackground: ambientCardBackground,
+    heroImages: heroMediaCardImages,
+    toggle: themeToggle,
+  },
+  config: {
+    themeStorageKey: FRONTEND_CONFIG.themeStorageKey,
+  },
+  helpers: {
+    normalizeCardKey: normalizeCardLookupKey,
+  },
+});
+const strategyRendererController = window.MtgDeckcheckerStrategyRenderer.create({
+  elements: {
+    summary: strategySummary,
+    switcherWrap: strategySwitcherWrap,
+    switcher: strategySwitcher,
+    mainName: mainStrategyName,
+    subStrategyCount,
+    synergyScore: strategySynergyScore,
+    supportCount: strategySupportCount,
+    coreCount: strategyCoreCount,
+    focusScore: strategyFocusScore,
+    commanderFit: strategyCommanderFit,
+    finisherFit: strategyFinisherFit,
+    synergySummary: strategySynergySummary,
+    synergyFindingsList: strategySynergyFindingsList,
+    mainCardsList: mainStrategyCardsList,
+    subStrategiesList,
+    winSummary: winStrategySummary,
+    winPrimary: winStrategyPrimary,
+    winBackupCount: winStrategyBackupCount,
+    winPerspective: winStrategyPerspective,
+    winCardsList: winStrategyCardsList,
+    winReasonsList: winStrategyReasonsList,
+    winBackupsList: winStrategyBackupsList,
+  },
+  actions: {
+    getCurrentAnalysis: () => currentAnalysisSnapshot,
+    isSubmitDisabled: () => submitButton.disabled,
+    runDeckAnalysis,
+  },
+});
+const deckIdentityController = window.MtgDeckcheckerDeckIdentity.create({
+  elements: {
+    analysisStatus,
+    commanderVisuals,
+    commanderDisplay,
+    companionDisplay,
+    secretCommanderDisplay,
+  },
+  helpers: {
+    getCardImageUrl,
+  },
+});
+const structureOverviewController = window.MtgDeckcheckerStructureOverview.create({
+  elements: {
+    structureScore,
+    landCount,
+    creatureCount,
+    instantCount,
+    sorceryCount,
+    artifactCount,
+    enchantmentCount,
+    planeswalkerCount,
+    battleCount,
+    averageManaValue: averageCmc,
+    resolvedCount,
+    uniqueCount,
+    totalCount,
+    recommendedLands,
+    medianManaValue: medianCmc,
+    landFit,
+    curveProfile,
+    earlyShare,
+    lateShare,
+    findingsList,
+    curveBars,
+  },
+});
+const metricDetailsController = window.MtgDeckcheckerMetricDetails.create({
+  elements: {
+    landBase: {
+      score: landBaseScore,
+      reliableUntapped: landBaseFast,
+      alwaysTapped: landBaseAlwaysTapped,
+      conditionalTapped: landBaseConditional,
+      fetch: landBaseFetch,
+      typed: landBaseTyped,
+      utility: landBaseUtility,
+      colorlessOnly: landBaseColorless,
+      costly: landBaseCostly,
+      target: landBaseTarget,
+    },
+    ramp: {
+      score: rampScore,
+      core: coreRamp,
+      stable: stableRamp,
+      landAcceleration: landRamp,
+      burst: burstRamp,
+      manaFixing: fixingRamp,
+      costReduction: costRamp,
+      taggedCount: taggedRampCount,
+      target: rampTarget,
+    },
+    draw: {
+      score: drawScore,
+      core: coreDraw,
+      raw: rawDraw,
+      selection: selectionDraw,
+      repeatable: repeatableDraw,
+      taggedCount: taggedDrawCount,
+      target: drawTarget,
+    },
+    consistency: {
+      score: consistencyScore,
+      core: coreConsistency,
+      direct: directTutors,
+      restricted: restrictedTutors,
+      repeatable: repeatableTutors,
+      land: landTutors,
+      selectionSupport,
+      taggedCount: taggedConsistencyCount,
+      target: consistencyTarget,
+    },
+    gameChangers: {
+      total: gameChangerTotal,
+      unique: gameChangerUnique,
+      commander: gameChangerCommander,
+      mainboard: gameChangerMainboard,
+      companion: gameChangerCompanion,
+    },
+    protection: {
+      score: protectionScore,
+      core: coreProtection,
+      broad: broadProtection,
+      targeted: targetedProtection,
+      equipment: equipmentProtection,
+      selfBounce: bounceProtection,
+      flicker: flickerProtection,
+      taggedCount: taggedProtectionCount,
+      target: protectionTarget,
+    },
+    recursion: {
+      score: recursionScore,
+      core: coreRecursion,
+      battlefield: battlefieldRecursion,
+      hand: handRecursion,
+      replay: replayRecursion,
+      mass: massRecursion,
+      library: libraryRecursion,
+      taggedCount: taggedRecursionCount,
+      target: recursionTarget,
+    },
+    finisher: {
+      score: finisherScore,
+      core: coreFinisher,
+      combat: combatFinisher,
+      direct: directFinisher,
+      alternate: alternateFinisher,
+      repeatable: repeatableFinisher,
+      combo: comboFinisher,
+      comboLineCount,
+      comboFinisherCount,
+      comboEngineCount,
+      taggedCount: taggedFinisherCount,
+      comboNearMissCount,
+      target: finisherTarget,
+    },
+    removal: {
+      score: removalScore,
+      core: coreRemoval,
+      targeted: targetedRemoval,
+      mass: massRemoval,
+      tempo: tempoRemoval,
+      handAttack: handAttackRemoval,
+      taggedCount: taggedRemovalCount,
+      target: removalTarget,
+    },
+    spellInteraction: {
+      score: spellInteractionScore,
+      core: coreSpellInteraction,
+      hard: hardSpellInteraction,
+      soft: softSpellInteraction,
+      tempo: tempoSpellInteraction,
+      broad: broadSpellInteraction,
+      stax: staxSpellInteraction,
+      graveyardHate: graveyardHateInteraction,
+      taggedCount: taggedSpellInteractionCount,
+      target: spellInteractionTarget,
+    },
+    findings: {
+      landBase: landBaseFindingsList,
+      ramp: rampFindingsList,
+      draw: drawFindingsList,
+      consistency: consistencyFindingsList,
+      protection: protectionFindingsList,
+      recursion: recursionFindingsList,
+      finisher: finisherFindingsList,
+      removal: removalFindingsList,
+      spellInteraction: spellInteractionFindingsList,
+    },
+  },
+});
+const summaryPanelsController = window.MtgDeckcheckerSummaryPanels.create({
+  elements: {
+    power: {
+      summary: powerSummary,
+      score: powerScore,
+      synergy: powerSynergy,
+      dimensions: {
+        speed: powerSpeed,
+        consistency: powerConsistency,
+        interaction: powerInteraction,
+        resilience: powerResilience,
+        closing: powerClosing,
+        mana: powerMana,
+      },
+      strengthsList: powerStrengthsList,
+      weaknessesList: powerWeaknessesList,
+    },
+    bracket: {
+      summary: bracketSummary,
+      recommended: bracketRecommended,
+      target: bracketTarget,
+      powerRead: bracketPowerRead,
+      rulesFloor: bracketRulesFloor,
+      gameChangers: bracketGameChangers,
+      twoCardCombos: bracketTwoCardCombos,
+      extraTurns: bracketExtraTurns,
+      landDenial: bracketLandDenial,
+      findingsList: bracketFindingsList,
+    },
+    commander: {
+      summary: commanderSummary,
+      impactScore: commanderImpactScore,
+      dependencyScore: commanderDependencyScore,
+      ceilingScore: commanderCeilingScore,
+      comboLines: commanderComboLines,
+      priorScore: commanderPriorScore,
+      keyRoles: commanderKeyRoles,
+      findingsList: commanderFindingsList,
+    },
+  },
+});
+const resultStateController = window.MtgDeckcheckerResultState.create({
+  elements: {
+    issuesBox,
+    issuesList,
+    successContent,
+    resultContent,
+    resultEmpty,
+    decklistField,
+    formStatus,
+    recommendationsSummary,
+    recommendationsList,
+    recommendationsSummaryAdvanced,
+    recommendationsListAdvanced,
+    cardBreakdownCount,
+    cardBreakdownSummary,
+    cardBreakdownBody,
+    taggedLists: {
+      landBaseCardsList,
+      rampCardsList,
+      drawCardsList,
+      consistencyCardsList,
+      gameChangerCardsList,
+      protectionCardsList,
+      recursionCardsList,
+      finisherCardsList,
+      comboLinesList,
+      removalCardsList,
+      spellInteractionCardsList,
+    },
+  },
+  controllers: {
+    structureOverview: structureOverviewController,
+    strategyRenderer: strategyRendererController,
+    metricDetails: metricDetailsController,
+    summaryPanels: summaryPanelsController,
+    quickRead: quickReadController,
+    deckIdentity: deckIdentityController,
+    taggedCardSections: taggedCardSectionsController,
+  },
+  actions: {
+    clearIssueAnchors: () => {
+      highlightedIssueAnchors = [];
+    },
+    clearResolvedCards: () => {
+      resolvedCardLookup = new Map();
+    },
+    clearAnalysisState: () => {
+      currentAnalysisSnapshot = null;
+      currentAnalysisDocument = null;
+    },
+    resetResultsViewMode: () => {
+      resultsViewMode = "simple";
+    },
+    resetAdvancedTab: () => {
+      advancedTabKey = "identity";
+    },
+    syncDeckHighlight,
+    syncWorkspaceMode,
+    syncResultsView,
+  },
+});
 const reportDialogController = window.MtgDeckcheckerReportDialog.create({
   elements: {
     openButton: reportButton,
@@ -670,10 +764,10 @@ const reportDialogController = window.MtgDeckcheckerReportDialog.create({
     companionName: companionNameField?.value.trim() || undefined,
     secretCommanderName: secretCommanderNameField?.value.trim() || undefined,
     targetBracket: targetBracketField?.value || undefined,
-    selectedStrategyPerspectiveKey,
+    selectedStrategyPerspectiveKey: strategyRendererController.getSelectedPerspectiveKey(),
     resultsViewMode,
     advancedTabKey,
-    theme: getActiveTheme(),
+    theme: themeMediaController.getActiveTheme(),
     pageUrl: window.location.href,
     userAgent: window.navigator.userAgent,
     viewport: {
@@ -684,6 +778,24 @@ const reportDialogController = window.MtgDeckcheckerReportDialog.create({
   }),
 });
 reportDialogController.initialize();
+const leaderFieldsController = window.MtgDeckcheckerDecklistIntake.createLeaderFieldsController({
+  fields: {
+    commander: commanderNameField,
+    additionalCommander: additionalCommanderNameField,
+    companion: companionNameField,
+    secretCommander: secretCommanderNameField,
+  },
+  toggles: {
+    additionalCommander: additionalCommanderEnabledField,
+    companion: companionEnabledField,
+    secretCommander: secretCommanderEnabledField,
+  },
+  wraps: {
+    additionalCommander: additionalCommanderFieldWrap,
+    companion: companionFieldWrap,
+    secretCommander: secretCommanderFieldWrap,
+  },
+});
 const deckInputController = window.MtgDeckcheckerDeckInput.create({
   elements: {
     form,
@@ -720,12 +832,6 @@ const deckInputController = window.MtgDeckcheckerDeckInput.create({
   },
 });
 deckInputController.initialize();
-
-themeToggle?.addEventListener("click", () => {
-  const nextTheme = getActiveTheme() === "dark" ? "light" : "dark";
-  window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
-  applyTheme(nextTheme);
-});
 
 quickReadAdvancedButton?.addEventListener("click", () => {
   setResultsViewMode("advanced");
@@ -1140,8 +1246,8 @@ function buildAnalyzePayload(preferredStrategyKey = null, targetBracketOverride 
     };
   }
 
-  const deckSummary = inspectDecklistSections(decklist);
-  const guessedLeaders = getLeaderPackageFromSummary(deckSummary);
+  const deckSummary = window.MtgDeckcheckerDecklistIntake.inspectSections(decklist);
+  const guessedLeaders = window.MtgDeckcheckerDecklistIntake.getLeaderPackageFromSummary(deckSummary);
 
   return {
     error: null,
@@ -1258,284 +1364,34 @@ function formatFetchError(error, fallbackMessage) {
 
 function renderAnalyzedDeck(result) {
   const { document, analysis } = result;
-  const commander = analysis.commander;
-  const power = analysis.power;
-  const bracket = analysis.bracket;
   const recommendations = analysis.recommendations;
   const strategy = analysis.strategy;
   const winStrategy = analysis.winStrategy;
   const structure = analysis.structure;
-  const landBase = analysis.landBase;
-  const ramp = analysis.ramp;
-  const draw = analysis.draw;
-  const consistency = analysis.consistency;
-  const gameChangers = analysis.gameChangers;
-  const protection = analysis.protection;
-  const recursion = analysis.recursion;
-  const winConditions = analysis.winConditions;
-  const removal = analysis.removal;
-  const spellInteraction = analysis.spellInteraction;
-  const commanderCards = document.result.resolvedCards.filter((item) => item.section === "commander");
-  const companionCard = document.result.resolvedCards.find((item) => item.section === "companion");
   syncResolvedCardLookup(document.result.resolvedCards);
   currentAnalysisSnapshot = analysis;
   currentAnalysisDocument = document;
-  ensureSelectedStrategyPerspective(strategy);
-
-  structureScore.textContent = String(structure.structureScore);
-  landCount.textContent = String(structure.counts.lands);
-  creatureCount.textContent = String(structure.counts.creatures);
-  averageCmc.textContent = structure.mana.averageManaValue.toFixed(2);
-  resolvedCount.textContent = String(document.result.resolvedCount);
-  uniqueCount.textContent = String(document.parse.uniqueCards);
-  const deckSize = document.result.resolvedCards
-    .filter((item) => item.section === "commander" || item.section === "mainboard")
-    .reduce((sum, item) => sum + item.quantity, 0);
-  totalCount.textContent = String(deckSize);
-  instantCount.textContent = String(structure.counts.instants);
-  sorceryCount.textContent = String(structure.counts.sorceries);
-  artifactCount.textContent = String(structure.counts.artifacts);
-  enchantmentCount.textContent = String(structure.counts.enchantments);
-  planeswalkerCount.textContent = String(structure.counts.planeswalkers);
-  battleCount.textContent = String(structure.counts.battles);
-  commanderDisplay.textContent =
-    commanderCards.map((item) => item.card.name).join(" + ") ||
-    commanderNameField.value.trim() ||
-    "Commander not detected";
-  renderCommanderVisuals(commanderCards);
-  companionDisplay.textContent = companionCard?.card.name || companionNameField.value.trim() || "-";
-  secretCommanderDisplay.textContent = secretCommanderNameField.value.trim() || "-";
-  renderAnalysisStatus({
-    commander,
-    power,
-    bracket,
-    strategy,
-    winStrategy,
-    structure,
-    ramp,
-    draw,
-    consistency,
-    removal,
-    spellInteraction,
-    protection,
-    recursion,
-    winConditions,
-    gameChangers,
+  structureOverviewController.render(document, structure);
+  deckIdentityController.render({
+    deckDocument: document,
+    analysis,
+    fallbackCommanderName: commanderNameField.value.trim(),
+    fallbackCompanionName: companionNameField.value.trim(),
+    fallbackSecretCommanderName: secretCommanderNameField.value.trim(),
   });
-  powerSummary.textContent = power.summary;
-  powerScore.textContent = `${power.powerScore.toFixed(1)} / 10`;
-  powerSynergy.textContent = String(strategy.synergy?.synergyScore ?? 0);
-  bracketSummary.textContent = bracket.summary;
-  bracketRecommended.textContent = bracket.recommendedLabel;
-  bracketTarget.textContent = bracket.targetLabel
-    ? `${bracket.targetLabel} | ${bracket.targetName}`
-    : "Not set";
-  bracketPowerRead.textContent = `${bracket.powerLabel} | ${bracket.powerName}`;
-  bracketRulesFloor.textContent = bracket.rulesFloorLabel;
-  bracketGameChangers.textContent = String(bracket.signals.gameChangers);
-  bracketTwoCardCombos.textContent = String(bracket.signals.twoCardCombos);
-  bracketExtraTurns.textContent = String(bracket.signals.extraTurns);
-  bracketLandDenial.textContent = String(bracket.signals.massLandDenial);
-  commanderSummary.textContent = commander.summary;
-  commanderImpactScore.textContent = String(Math.round(commander.impactScore));
-  commanderDependencyScore.textContent = String(Math.round(commander.dependencyScore));
-  commanderCeilingScore.textContent = String(Math.round(commander.ceilingScore));
-  commanderComboLines.textContent = String(commander.commanderInvolvedCombos);
-  commanderPriorScore.textContent = String(commander.prior.score);
-  commanderKeyRoles.textContent =
-    commander.keyRoles.length > 0 ? commander.keyRoles.join(" | ") : "Low";
-  powerSpeed.textContent = formatWholeScore(getPowerDimensionScore(power, "speed"));
-  powerConsistency.textContent = formatWholeScore(getPowerDimensionScore(power, "consistency"));
-  powerInteraction.textContent = formatWholeScore(getPowerDimensionScore(power, "interaction"));
-  powerResilience.textContent = formatWholeScore(getPowerDimensionScore(power, "resilience"));
-  powerClosing.textContent = formatWholeScore(getPowerDimensionScore(power, "closing"));
-  powerMana.textContent = formatWholeScore(getPowerDimensionScore(power, "mana"));
-  recommendedLands.textContent = `${structure.mana.recommendedLands.min}-${structure.mana.recommendedLands.max}`;
-  medianCmc.textContent = structure.mana.medianManaValue.toFixed(2);
-  landFit.textContent = formatFindingLabel(structure.findings[0]);
-  curveProfile.textContent = formatFindingLabel(structure.findings[2]);
-  earlyShare.textContent = formatPercent(structure.mana.shares.early);
-  lateShare.textContent = formatPercent(structure.mana.shares.late);
-  landBaseScore.textContent = String(landBase.landBaseScore);
-  landBaseFast.textContent = String(landBase.counts.reliableUntapped);
-  landBaseAlwaysTapped.textContent = String(landBase.counts.alwaysTapped);
-  landBaseConditional.textContent = String(landBase.counts.conditionalTapped);
-  landBaseFetch.textContent = String(landBase.counts.fetch);
-  landBaseTyped.textContent = String(landBase.counts.typed);
-  landBaseUtility.textContent = String(landBase.counts.utility);
-  landBaseColorless.textContent = String(landBase.counts.colorlessOnly);
-  landBaseCostly.textContent = String(landBase.counts.costly);
-  landBaseTarget.textContent =
-    `${landBase.recommendations.alwaysTappedMax} / ${landBase.recommendations.colorlessOnlyMax}`;
-  rampScore.textContent = String(ramp.rampScore);
-  coreRamp.textContent = formatDecimal(ramp.counts.core);
-  stableRamp.textContent = formatDecimal(ramp.counts.stable);
-  landRamp.textContent = formatDecimal(ramp.counts.landAcceleration);
-  burstRamp.textContent = formatDecimal(ramp.counts.burst);
-  fixingRamp.textContent = formatDecimal(ramp.counts.manaFixing);
-  costRamp.textContent = formatDecimal(ramp.counts.costReduction);
-  taggedRampCount.textContent = String(
-    ramp.taggedCards.reduce((total, card) => total + card.quantity, 0),
-  );
-  rampTarget.textContent = `${ramp.recommendations.coreTarget} / ${ramp.recommendations.stableTarget}`;
-  drawScore.textContent = String(draw.drawScore);
-  coreDraw.textContent = formatDecimal(draw.counts.core);
-  rawDraw.textContent = formatDecimal(draw.counts.draw);
-  selectionDraw.textContent = formatDecimal(draw.counts.selection);
-  repeatableDraw.textContent = formatDecimal(draw.counts.repeatable);
-  taggedDrawCount.textContent = String(
-    draw.taggedCards.reduce((total, card) => total + card.quantity, 0),
-  );
-  drawTarget.textContent = `${draw.recommendations.drawTarget} / ${draw.recommendations.repeatableTarget}`;
-  consistencyScore.textContent = String(consistency.consistencyScore);
-  coreConsistency.textContent = formatDecimal(consistency.counts.core);
-  directTutors.textContent = formatDecimal(consistency.counts.direct);
-  restrictedTutors.textContent = formatDecimal(consistency.counts.restricted);
-  repeatableTutors.textContent = formatDecimal(consistency.counts.repeatable);
-  landTutors.textContent = formatDecimal(consistency.counts.land);
-  selectionSupport.textContent = formatDecimal(consistency.counts.selectionSupport);
-  taggedConsistencyCount.textContent = String(
-    consistency.taggedCards.reduce((total, card) => total + card.quantity, 0),
-  );
-  consistencyTarget.textContent = `${formatDecimal(consistency.recommendations.coreTarget)} / ${formatDecimal(consistency.recommendations.directTarget)} / ${formatDecimal(consistency.recommendations.repeatableTarget)}`;
-  gameChangerTotal.textContent = String(gameChangers.counts.total);
-  gameChangerUnique.textContent = String(gameChangers.counts.unique);
-  gameChangerCommander.textContent = String(gameChangers.counts.commander);
-  gameChangerMainboard.textContent = String(gameChangers.counts.mainboard);
-  gameChangerCompanion.textContent = String(gameChangers.counts.companion);
-  protectionScore.textContent = String(protection.protectionScore);
-  coreProtection.textContent = formatDecimal(protection.counts.core);
-  broadProtection.textContent = formatDecimal(protection.counts.broad);
-  targetedProtection.textContent = formatDecimal(protection.counts.targeted);
-  equipmentProtection.textContent = formatDecimal(protection.counts.equipment);
-  bounceProtection.textContent = formatDecimal(protection.counts.selfBounce);
-  flickerProtection.textContent = formatDecimal(protection.counts.flicker);
-  taggedProtectionCount.textContent = String(
-    protection.taggedCards.reduce((total, card) => total + card.quantity, 0),
-  );
-  protectionTarget.textContent = `${protection.recommendations.coreTarget} / ${protection.recommendations.broadTarget}`;
-  recursionScore.textContent = String(recursion.recursionScore);
-  coreRecursion.textContent = formatDecimal(recursion.counts.core);
-  battlefieldRecursion.textContent = formatDecimal(recursion.counts.battlefield);
-  handRecursion.textContent = formatDecimal(recursion.counts.hand);
-  replayRecursion.textContent = formatDecimal(recursion.counts.replay);
-  massRecursion.textContent = formatDecimal(recursion.counts.mass);
-  libraryRecursion.textContent = formatDecimal(recursion.counts.library);
-  taggedRecursionCount.textContent = String(
-    recursion.taggedCards.reduce((total, card) => total + card.quantity, 0),
-  );
-  recursionTarget.textContent = `${recursion.recommendations.coreTarget} / ${recursion.recommendations.battlefieldTarget} / ${recursion.recommendations.replayTarget}`;
-  finisherScore.textContent = String(winConditions.finisherScore);
-  coreFinisher.textContent = formatDecimal(winConditions.counts.core);
-  combatFinisher.textContent = formatDecimal(winConditions.counts.combat);
-  directFinisher.textContent = formatDecimal(winConditions.counts.direct);
-  alternateFinisher.textContent = formatDecimal(winConditions.counts.alternate);
-  repeatableFinisher.textContent = formatDecimal(winConditions.counts.repeatable);
-  comboFinisher.textContent = formatDecimal(winConditions.counts.combo);
-  comboLineCount.textContent = String(winConditions.combos.exactCount);
-  comboFinisherCount.textContent = String(winConditions.combos.finisherCount);
-  comboEngineCount.textContent = String(winConditions.combos.engineCount);
-  taggedFinisherCount.textContent = String(
-    winConditions.taggedCards.reduce((total, card) => total + card.quantity, 0),
-  );
-  comboNearMissCount.textContent = String(winConditions.combos.nearMissCount);
-  finisherTarget.textContent = `${winConditions.recommendations.coreTarget} / ${winConditions.recommendations.combatTarget} / ${winConditions.recommendations.directTarget}`;
-  removalScore.textContent = String(removal.removalScore);
-  coreRemoval.textContent = formatDecimal(removal.counts.core);
-  targetedRemoval.textContent = formatDecimal(removal.counts.targeted);
-  massRemoval.textContent = formatDecimal(removal.counts.mass);
-  tempoRemoval.textContent = formatDecimal(removal.counts.tempo);
-  handAttackRemoval.textContent = formatDecimal(removal.counts.handAttack);
-  taggedRemovalCount.textContent = String(
-    removal.taggedCards.reduce((total, card) => total + card.quantity, 0),
-  );
-  removalTarget.textContent = `${removal.recommendations.targetedTarget} / ${removal.recommendations.massTarget} / ${removal.recommendations.tempoTarget}`;
-  spellInteractionScore.textContent = String(spellInteraction.interactionScore);
-  coreSpellInteraction.textContent = formatDecimal(spellInteraction.counts.core);
-  hardSpellInteraction.textContent = formatDecimal(spellInteraction.counts.hard);
-  softSpellInteraction.textContent = formatDecimal(spellInteraction.counts.soft);
-  tempoSpellInteraction.textContent = formatDecimal(spellInteraction.counts.spellTempo);
-  broadSpellInteraction.textContent = formatDecimal(spellInteraction.counts.broad);
-  staxSpellInteraction.textContent = formatDecimal(spellInteraction.counts.stax ?? 0);
-  graveyardHateInteraction.textContent = formatDecimal(spellInteraction.counts.graveyardHate ?? 0);
-  taggedSpellInteractionCount.textContent = String(
-    spellInteraction.taggedCards.reduce((total, card) => total + card.quantity, 0),
-  );
-  spellInteractionTarget.textContent = `${spellInteraction.recommendations.hardTarget} / ${spellInteraction.recommendations.softTarget}`;
-  applyScoreTone(powerScore, power.powerIndex);
-  applyScoreTone(powerSynergy, strategy.synergy?.synergyScore ?? 0);
-  applyScoreTone(commanderImpactScore, commander.impactScore);
-  applyScoreTone(commanderDependencyScore, commander.dependencyScore);
-  applyScoreTone(commanderCeilingScore, commander.ceilingScore);
-  applyScoreTone(powerSpeed, getPowerDimensionScore(power, "speed"));
-  applyScoreTone(powerConsistency, getPowerDimensionScore(power, "consistency"));
-  applyScoreTone(powerInteraction, getPowerDimensionScore(power, "interaction"));
-  applyScoreTone(powerResilience, getPowerDimensionScore(power, "resilience"));
-  applyScoreTone(powerClosing, getPowerDimensionScore(power, "closing"));
-  applyScoreTone(powerMana, getPowerDimensionScore(power, "mana"));
-  applyScoreTone(structureScore, structure.structureScore);
-  applyScoreTone(landBaseScore, landBase.landBaseScore);
-  applyScoreTone(rampScore, ramp.rampScore);
-  applyScoreTone(drawScore, draw.drawScore);
-  applyScoreTone(consistencyScore, consistency.consistencyScore);
-  applyScoreTone(removalScore, removal.removalScore);
-  applyScoreTone(spellInteractionScore, spellInteraction.interactionScore);
-  applyScoreTone(protectionScore, protection.protectionScore);
-  applyScoreTone(recursionScore, recursion.recursionScore);
-  applyScoreTone(finisherScore, winConditions.finisherScore);
-
-  renderFindings(structure.findings);
-  renderFindings(commander.findings, commanderFindingsList);
-  renderStrategy(strategy);
-  renderWinStrategy(strategy, winStrategy);
-  renderQuickRead(analysis);
+  summaryPanelsController.render(analysis);
+  metricDetailsController.render(analysis);
+  strategyRendererController.render(strategy, winStrategy);
+  quickReadController.render(analysis);
   recommendationVisualRenderToken += 1;
   const recommendationRenderToken = recommendationVisualRenderToken;
   renderRecommendations(recommendations, recommendationRenderToken);
-  renderSimpleList(
-    powerStrengthsList,
-    power.strengths,
-    "No single pillar clearly stands above the rest of the shell yet.",
-  );
-  renderSimpleList(
-    powerWeaknessesList,
-    power.weaknesses,
-    "No major brake stands out yet.",
-  );
-  renderFindings(bracket.findings, bracketFindingsList);
-  renderCommanderCards(commander.taggedCommanders);
-  renderCommanderProfiles(commander.profiles);
-  renderFindings(landBase.findings, landBaseFindingsList);
-  renderFindings(ramp.findings, rampFindingsList);
-  renderFindings(draw.findings, drawFindingsList);
-  renderFindings(consistency.findings, consistencyFindingsList);
-  renderFindings(protection.findings, protectionFindingsList);
-  renderFindings(recursion.findings, recursionFindingsList);
-  renderFindings(winConditions.findings, finisherFindingsList);
-  renderFindings(removal.findings, removalFindingsList);
-  renderFindings(spellInteraction.findings, spellInteractionFindingsList);
-  renderRampCards(ramp.taggedCards);
-  renderLandBaseCards(landBase.taggedCards);
-  renderDrawCards(draw.taggedCards);
-  renderConsistencyCards(consistency.taggedCards);
-  renderGameChangerCards(gameChangers.taggedCards);
-  renderProtectionCards(protection.taggedCards);
-  renderRecursionCards(recursion.taggedCards);
-  renderFinisherCards(winConditions.taggedCards);
-  renderComboLines(winConditions.combos);
-  renderRemovalCards(removal.taggedCards);
-  renderSpellInteractionCards(spellInteraction.taggedCards);
+  taggedCardSectionsController.render(analysis);
   renderCardBreakdown(document, analysis);
-  renderManaCurve(structure.mana.curve);
 
   highlightedIssueAnchors = [];
   syncDeckHighlight();
-  issuesBox.classList.add("hidden");
-  successContent.classList.remove("hidden");
-  resultEmpty.classList.add("hidden");
-  resultContent.classList.remove("hidden");
-  syncWorkspaceMode(false);
-  syncResultsView();
+  resultStateController.showAnalysisResults();
   triggerResultReveal();
 }
 
@@ -1579,12 +1435,7 @@ function applyImportedDecklist(decklistText, options = {}) {
 }
 
 function renderValidationIssues(issues) {
-  successContent.classList.add("hidden");
-  resultEmpty.classList.add("hidden");
-  resultContent.classList.remove("hidden");
-  issuesBox.classList.remove("hidden");
-  syncWorkspaceMode(false);
-  syncResultsView();
+  resultStateController.showValidationIssues();
   highlightedIssueAnchors = issues
     .map((issue) => createIssueAnchor(issue))
     .filter(Boolean);
@@ -1592,51 +1443,6 @@ function renderValidationIssues(issues) {
   issuesList.replaceChildren(
     ...issues.map((issue) => createListItem(formatIssue(issue))),
   );
-}
-
-function renderCommanderVisuals(commanderCards) {
-  if (!commanderVisuals) {
-    return;
-  }
-
-  const visuals = commanderCards
-    .map((deckCard) => createCommanderVisual(deckCard.card))
-    .filter(Boolean);
-
-  commanderVisuals.replaceChildren(...visuals);
-  commanderVisuals.classList.toggle("hidden", visuals.length === 0);
-}
-
-function createCommanderVisual(card) {
-  const imageUrl = getCardImageUrl(card);
-  if (!imageUrl) {
-    return null;
-  }
-
-  const figure = document.createElement("figure");
-  figure.className = "commander-visual";
-
-  const link = document.createElement("a");
-  link.className = "commander-visual-link";
-  link.href = card.scryfall_uri;
-  link.target = "_blank";
-  link.rel = "noreferrer noopener";
-  link.title = `Open ${card.name} on Scryfall`;
-
-  const image = document.createElement("img");
-  image.className = "commander-visual-image";
-  image.src = imageUrl;
-  image.alt = `${card.name} card image`;
-  image.loading = "lazy";
-  image.decoding = "async";
-  link.append(image);
-
-  const caption = document.createElement("figcaption");
-  caption.className = "commander-visual-caption";
-  caption.textContent = card.name;
-
-  figure.append(link, caption);
-  return figure;
 }
 
 function getCardImageUrl(card) {
@@ -1696,7 +1502,7 @@ async function getRecommendationCardVisual(name) {
     return resolvedVisual;
   }
 
-  const ambientCard = AMBIENT_CARD_POOL.find((card) => normalizeCardLookupKey(card.name) === key);
+  const ambientCard = themeMediaController.getCardByName(name);
   if (ambientCard) {
     const ambientVisual = {
       name: ambientCard.name,
@@ -1808,427 +1614,8 @@ function findResolvedCardForTaggedName(name) {
   return resolvedCardLookup.get(key) ?? null;
 }
 
-function renderTaggedCardPreviewStrip(previewElement, taggedCards, options = {}) {
-  if (!previewElement) {
-    return;
-  }
-
-  const previews = taggedCards
-    .map((taggedCard, index) => buildTaggedCardPreviewData(taggedCard, index, options))
-    .filter(Boolean)
-    .sort((left, right) => {
-      return (
-        right.priority - left.priority ||
-        right.quantity - left.quantity ||
-        left.index - right.index
-      );
-    })
-    .slice(0, TAGGED_CARD_PREVIEW_LIMIT)
-    .map((preview) => createTaggedCardPreview(preview));
-
-  previewElement.replaceChildren(...previews);
-  previewElement.classList.toggle("hidden", previews.length === 0);
-}
-
-function buildTaggedCardPreviewData(taggedCard, index, options) {
-  const lookupName = options.getLookupName?.(taggedCard) ?? taggedCard.name;
-  const resolvedCard =
-    findResolvedCardForTaggedName(lookupName) ?? findResolvedCardForTaggedName(taggedCard.name);
-  const imageUrl = resolvedCard ? getCardImageUrl(resolvedCard.card) : null;
-
-  if (!resolvedCard || !imageUrl) {
-    return null;
-  }
-
-  return {
-    index,
-    imageUrl,
-    priority: getTaggedCardPriority(taggedCard),
-    quantity: Math.max(1, Number(taggedCard.quantity) || 1),
-    taggedCard,
-    resolvedCard,
-  };
-}
-
-function getTaggedCardPriority(taggedCard) {
-  const directValue = [
-    "roleValue",
-    "landValue",
-    "rampValue",
-    "drawValue",
-    "consistencyValue",
-    "protectionValue",
-    "recursionValue",
-    "finisherValue",
-    "removalValue",
-    "interactionValue",
-  ]
-    .map((key) => taggedCard[key])
-    .find((value) => typeof value === "number");
-
-  if (typeof directValue === "number") {
-    return directValue;
-  }
-
-  if (Array.isArray(taggedCard.hits)) {
-    return taggedCard.hits.reduce((sum, hit) => sum + (Number(hit.weight) || 0), 0);
-  }
-
-  return 0;
-}
-
-function createTaggedCardPreview(preview) {
-  const {
-    imageUrl,
-    quantity,
-    resolvedCard: { card },
-  } = preview;
-
-  const figure = document.createElement("figure");
-  figure.className = "tagged-card-preview";
-
-  const link = document.createElement("a");
-  link.className = "tagged-card-preview-link";
-  link.href = card.scryfall_uri;
-  link.target = "_blank";
-  link.rel = "noreferrer noopener";
-  link.title = `Open ${card.name} on Scryfall`;
-
-  const image = document.createElement("img");
-  image.className = "tagged-card-preview-image";
-  image.src = imageUrl;
-  image.alt = `${card.name} card image`;
-  image.loading = "lazy";
-  image.decoding = "async";
-  link.append(image);
-
-  if (quantity > 1) {
-    const badge = document.createElement("span");
-    badge.className = "tagged-card-preview-badge";
-    badge.textContent = `${quantity}x`;
-    link.append(badge);
-  }
-
-  const caption = document.createElement("figcaption");
-  caption.className = "tagged-card-preview-caption";
-  caption.textContent = card.name;
-
-  figure.append(link, caption);
-  return figure;
-}
-
-function clearTaggedCardPreviews() {
-  taggedCardPreviewContainers.forEach((previewElement) => {
-    previewElement.replaceChildren();
-    previewElement.classList.add("hidden");
-  });
-}
-
-function renderQuickRead(analysis) {
-  const metrics = buildQuickReadMetrics(analysis);
-  const metricByKey = new Map(metrics.map((metric) => [metric.key, metric]));
-  const sortedMetrics = [...metrics].sort(
-    (left, right) => right.score - left.score || left.label.localeCompare(right.label),
-  );
-  const strongestMetrics = sortedMetrics.slice(0, 3);
-  const weakestMetrics = [...sortedMetrics].reverse().slice(0, 3);
-
-  updateQuickReadMetric(quickShellScore, metricByKey.get("shell"));
-  updateQuickReadMetric(quickLandBaseScore, metricByKey.get("landBase"));
-  updateQuickReadMetric(quickRampScore, metricByKey.get("ramp"));
-  updateQuickReadMetric(quickCardFlowScore, metricByKey.get("cardFlow"));
-  updateQuickReadMetric(quickConsistencyScore, metricByKey.get("consistency"));
-  updateQuickReadMetric(quickInteractionScore, metricByKey.get("interaction"));
-  updateQuickReadMetric(quickResilienceScore, metricByKey.get("resilience"));
-  updateQuickReadMetric(quickClosingScore, metricByKey.get("closing"));
-  renderScoreRadarChart(metrics);
-
-  quickReadSummary.textContent = buildQuickReadSummary(analysis, strongestMetrics[0], weakestMetrics[0]);
-  renderSimpleList(
-    quickReadStrengthsList,
-    strongestMetrics.map((metric) => `${metric.label} (${metric.score}): ${metric.note}`),
-    "No single pillar clearly leads the shell yet.",
-  );
-  renderSimpleList(
-    quickReadRisksList,
-    weakestMetrics.map((metric) => `${metric.label} (${metric.score}): ${metric.note}`),
-    "No major weak point stands out yet.",
-  );
-}
-
-function renderScoreRadarChart(metrics) {
-  if (!scoreRadarChart) {
-    return;
-  }
-
-  const normalizedMetrics = metrics.map((metric) => ({
-    ...metric,
-    score: Math.max(0, Math.min(100, Math.round(metric.score))),
-  }));
-
-  if (normalizedMetrics.length < 3) {
-    scoreRadarChart.replaceChildren();
-    return;
-  }
-
-  const svgNamespace = "http://www.w3.org/2000/svg";
-  const size = 460;
-  const center = size / 2;
-  const maxRadius = 118;
-  const labelRadius = 158;
-  const angleStep = (Math.PI * 2) / normalizedMetrics.length;
-  const startAngle = -Math.PI / 2;
-  const createSvgElement = (tagName, attributes = {}) => {
-    const element = document.createElementNS(svgNamespace, tagName);
-    Object.entries(attributes).forEach(([key, value]) => {
-      element.setAttribute(key, String(value));
-    });
-    return element;
-  };
-  const getPoint = (index, radius) => {
-    const angle = startAngle + index * angleStep;
-    return {
-      x: center + Math.cos(angle) * radius,
-      y: center + Math.sin(angle) * radius,
-    };
-  };
-  const formatPoints = (points) =>
-    points.map((point) => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-  const labelAnchor = (x) => {
-    if (x > center + 12) {
-      return "start";
-    }
-
-    if (x < center - 12) {
-      return "end";
-    }
-
-    return "middle";
-  };
-  const labelBaseline = (y) => {
-    if (y > center + 12) {
-      return "hanging";
-    }
-
-    if (y < center - 12) {
-      return "auto";
-    }
-
-    return "middle";
-  };
-
-  const svg = createSvgElement("svg", {
-    class: "score-radar-svg",
-    viewBox: `0 0 ${size} ${size}`,
-    role: "img",
-    "aria-labelledby": "score-radar-title score-radar-desc",
-  });
-
-  const title = createSvgElement("title", { id: "score-radar-title" });
-  title.textContent = "Deck score web";
-  const description = createSvgElement("desc", { id: "score-radar-desc" });
-  description.textContent =
-    "A radar chart showing shell, land base, ramp, card flow, consistency, interaction, resilience, and closing scores.";
-  svg.append(title, description);
-
-  const gridGroup = createSvgElement("g", { class: "score-radar-grid" });
-  [25, 50, 75, 100].forEach((level) => {
-    const radius = (level / 100) * maxRadius;
-    const points = normalizedMetrics.map((_, index) => getPoint(index, radius));
-    gridGroup.append(
-      createSvgElement("polygon", {
-        class: `score-radar-grid-ring score-radar-grid-ring-${level}`,
-        points: formatPoints(points),
-      }),
-    );
-  });
-
-  normalizedMetrics.forEach((_, index) => {
-    const outerPoint = getPoint(index, maxRadius);
-    gridGroup.append(
-      createSvgElement("line", {
-        class: "score-radar-axis",
-        x1: center,
-        y1: center,
-        x2: outerPoint.x.toFixed(1),
-        y2: outerPoint.y.toFixed(1),
-      }),
-    );
-  });
-  svg.append(gridGroup);
-
-  const dataPoints = normalizedMetrics.map((metric, index) =>
-    getPoint(index, (metric.score / 100) * maxRadius),
-  );
-  const dataGroup = createSvgElement("g", { class: "score-radar-data" });
-  dataGroup.append(
-    createSvgElement("polygon", {
-      class: "score-radar-area",
-      points: formatPoints(dataPoints),
-    }),
-    createSvgElement("polyline", {
-      class: "score-radar-outline",
-      points: formatPoints([...dataPoints, dataPoints[0]]),
-    }),
-  );
-
-  normalizedMetrics.forEach((metric, index) => {
-    const point = dataPoints[index];
-    const dot = createSvgElement("circle", {
-      class: `score-radar-dot score-radar-dot-${getScoreTone(metric.score)}`,
-      cx: point.x.toFixed(1),
-      cy: point.y.toFixed(1),
-      r: 4.6,
-    });
-    dataGroup.append(dot);
-  });
-  svg.append(dataGroup);
-
-  const labelGroup = createSvgElement("g", { class: "score-radar-labels" });
-  normalizedMetrics.forEach((metric, index) => {
-    const point = getPoint(index, labelRadius);
-    const text = createSvgElement("text", {
-      class: `score-radar-label score-radar-label-${getScoreTone(metric.score)}`,
-      x: point.x.toFixed(1),
-      y: point.y.toFixed(1),
-      "text-anchor": labelAnchor(point.x),
-      "dominant-baseline": labelBaseline(point.y),
-    });
-    const label = createSvgElement("tspan", { class: "score-radar-label-name", x: point.x.toFixed(1) });
-    label.textContent = metric.label;
-    const value = createSvgElement("tspan", {
-      class: "score-radar-label-score",
-      x: point.x.toFixed(1),
-      dy: "1.2em",
-    });
-    value.textContent = String(metric.score);
-    text.append(label, value);
-    labelGroup.append(text);
-  });
-  svg.append(labelGroup);
-
-  const legend = document.createElement("div");
-  legend.className = "score-radar-legend";
-  normalizedMetrics.forEach((metric) => {
-    const item = document.createElement("article");
-    item.className = `score-radar-legend-item score-radar-legend-${getScoreTone(metric.score)}`;
-
-    const label = document.createElement("span");
-    label.textContent = metric.label;
-
-    const value = document.createElement("strong");
-    value.textContent = String(metric.score);
-
-    item.append(label, value);
-    legend.append(item);
-  });
-
-  const visual = document.createElement("div");
-  visual.className = "score-radar-visual";
-  visual.append(svg);
-
-  scoreRadarChart.replaceChildren(visual, legend);
-}
-
 function renderRecommendations(recommendations, renderToken = recommendationVisualRenderToken) {
   recommendationsController.render(recommendations, renderToken);
-}
-
-function buildQuickReadMetrics(analysis) {
-  return [
-    {
-      key: "shell",
-      label: "Shell",
-      score: Math.round(analysis.structure.structureScore),
-      note: firstSentence(analysis.structure.summary),
-    },
-    {
-      key: "landBase",
-      label: "Land Base",
-      score: Math.round(analysis.landBase.landBaseScore),
-      note: firstSentence(analysis.landBase.summary),
-    },
-    {
-      key: "ramp",
-      label: "Ramp",
-      score: Math.round(analysis.ramp.rampScore),
-      note: firstSentence(analysis.ramp.summary),
-    },
-    {
-      key: "cardFlow",
-      label: "Card Flow",
-      score: Math.round(analysis.draw.drawScore),
-      note: firstSentence(analysis.draw.summary),
-    },
-    {
-      key: "consistency",
-      label: "Consistency",
-      score: Math.round(analysis.consistency.consistencyScore),
-      note: firstSentence(analysis.consistency.summary),
-    },
-    {
-      key: "interaction",
-      label: "Interaction",
-      score: averageScores(
-        analysis.removal.removalScore,
-        analysis.spellInteraction.interactionScore,
-      ),
-      note: buildPairedQuickReadNote(
-        "Removal",
-        analysis.removal.removalScore,
-        "Spell interaction",
-        analysis.spellInteraction.interactionScore,
-      ),
-    },
-    {
-      key: "resilience",
-      label: "Resilience",
-      score: averageScores(
-        analysis.protection.protectionScore,
-        analysis.recursion.recursionScore,
-      ),
-      note: buildPairedQuickReadNote(
-        "Protection",
-        analysis.protection.protectionScore,
-        "Recursion",
-        analysis.recursion.recursionScore,
-      ),
-    },
-    {
-      key: "closing",
-      label: "Closing",
-      score: Math.round(analysis.winConditions.finisherScore),
-      note: firstSentence(analysis.winConditions.summary),
-    },
-  ];
-}
-
-function buildQuickReadSummary(analysis, strongestMetric, weakestMetric) {
-  const strategyLabel = analysis.strategy.mainStrategy?.label ?? "Mixed shell";
-  const winPlanLabel = analysis.winStrategy.primaryPlan?.label ?? "No clear finish yet";
-  const strongestLabel = strongestMetric?.label?.toLowerCase() ?? "none";
-  const weakestLabel = weakestMetric?.label?.toLowerCase() ?? "none";
-
-  return `${analysis.bracket.recommendedLabel} ${analysis.bracket.recommendedName}. ${strategyLabel} is the clearest plan, ${winPlanLabel.toLowerCase()} is the main finish, ${strongestLabel} is the strongest pillar, and ${weakestLabel} needs the most work.`;
-}
-
-function buildPairedQuickReadNote(leftLabel, leftScore, rightLabel, rightScore) {
-  if (Math.abs(leftScore - rightScore) <= 8) {
-    return `${leftLabel} and ${rightLabel.toLowerCase()} are carrying similar weight right now.`;
-  }
-
-  const strongerLabel = leftScore > rightScore ? leftLabel : rightLabel;
-  const weakerLabel = leftScore > rightScore ? rightLabel.toLowerCase() : leftLabel.toLowerCase();
-  return `${strongerLabel} is doing more of the work than ${weakerLabel} right now.`;
-}
-
-function updateQuickReadMetric(element, metric) {
-  if (!element || !metric) {
-    return;
-  }
-
-  element.textContent = String(metric.score);
-  applyScoreTone(element, metric.score);
 }
 
 function initializeInsightDisclosures() {
@@ -2266,62 +1653,6 @@ function createListItem(text) {
   return item;
 }
 
-function renderTaggedCardSection({
-  listElement,
-  previewElement,
-  taggedCards,
-  emptyMessage,
-  formatItem,
-  getLookupName,
-}) {
-  renderTaggedCardPreviewStrip(previewElement, taggedCards, { getLookupName });
-
-  const items =
-    taggedCards.length > 0
-      ? taggedCards.map((taggedCard) => formatItem(taggedCard))
-      : [createListItem(emptyMessage)];
-
-  listElement.replaceChildren(...items);
-}
-
-function applyScoreTone(element, score) {
-  applyToneToCard(element, getScoreTone(score));
-}
-
-function getScoreTone(score) {
-  if (score >= 70) {
-    return "good";
-  }
-
-  if (score >= 40) {
-    return "watch";
-  }
-
-  return "risk";
-}
-
-function applyToneToCard(element, tone) {
-  const card = element.closest(".future-stat, .stat-card");
-
-  if (!card) {
-    return;
-  }
-
-  card.classList.remove(
-    "score-card",
-    "score-card-good",
-    "score-card-healthy",
-    "score-card-watch",
-    "score-card-risk",
-  );
-
-  if (!tone) {
-    return;
-  }
-
-  card.classList.add("score-card", `score-card-${tone}`);
-}
-
 function formatIssue(issue) {
   if (issue.lineNumber) {
     return `Line ${issue.lineNumber}: ${issue.message}`;
@@ -2331,305 +1662,23 @@ function formatIssue(issue) {
 }
 
 function resetResultState() {
-  highlightedIssueAnchors = [];
-  resolvedCardLookup = new Map();
-  syncDeckHighlight();
-  issuesBox.classList.add("hidden");
-  successContent.classList.add("hidden");
-  resultContent.classList.add("hidden");
-  resultEmpty.classList.remove("hidden");
-  issuesList.replaceChildren();
-  findingsList.replaceChildren();
-  strategySwitcher.replaceChildren();
-  strategySwitcherWrap.classList.add("hidden");
-  mainStrategyCardsList.replaceChildren();
-  strategySynergyFindingsList.replaceChildren();
-  subStrategiesList.replaceChildren();
-  winStrategyCardsList.replaceChildren();
-  winStrategyReasonsList.replaceChildren();
-  winStrategyBackupsList.replaceChildren();
-  landBaseFindingsList.replaceChildren();
-  landBaseCardsList.replaceChildren();
-  rampFindingsList.replaceChildren();
-  rampCardsList.replaceChildren();
-  drawFindingsList.replaceChildren();
-  drawCardsList.replaceChildren();
-  consistencyFindingsList.replaceChildren();
-  consistencyCardsList.replaceChildren();
-  gameChangerCardsList.replaceChildren();
-  powerStrengthsList.replaceChildren();
-  powerWeaknessesList.replaceChildren();
-  bracketFindingsList.replaceChildren();
-  protectionFindingsList.replaceChildren();
-  protectionCardsList.replaceChildren();
-  recursionFindingsList.replaceChildren();
-  recursionCardsList.replaceChildren();
-  finisherFindingsList.replaceChildren();
-  finisherCardsList.replaceChildren();
-  comboLinesList.replaceChildren();
-  removalFindingsList.replaceChildren();
-  removalCardsList.replaceChildren();
-  spellInteractionFindingsList.replaceChildren();
-  spellInteractionCardsList.replaceChildren();
-  quickReadStrengthsList.replaceChildren();
-  quickReadRisksList.replaceChildren();
-  scoreRadarChart?.replaceChildren();
-  quickReadSummary.textContent = "The simplest deck read appears here after analysis.";
-  recommendationsList.replaceChildren();
-  recommendationsSummary.textContent = "Bracket-directed card suggestions appear here after analysis.";
-  recommendationsListAdvanced?.replaceChildren();
-  cardBreakdownBody?.replaceChildren();
-  if (cardBreakdownCount) {
-    cardBreakdownCount.textContent = "0 cards";
-  }
-  if (cardBreakdownSummary) {
-    cardBreakdownSummary.textContent = "Card-level role detection appears here after analysis.";
-  }
-  if (recommendationsSummaryAdvanced) {
-    recommendationsSummaryAdvanced.textContent =
-      "Bracket-directed card suggestions appear here after analysis.";
-  }
-  commanderVisuals?.replaceChildren();
-  commanderVisuals?.classList.add("hidden");
-  clearTaggedCardPreviews();
-  [
-    quickShellScore,
-    quickLandBaseScore,
-    quickRampScore,
-    quickCardFlowScore,
-    quickConsistencyScore,
-    quickInteractionScore,
-    quickResilienceScore,
-    quickClosingScore,
-  ].forEach((element) => {
-    if (element) {
-      element.textContent = "0";
-      applyToneToCard(element, null);
-    }
-  });
-  curveBars.replaceChildren();
-  selectedStrategyPerspectiveKey = null;
-  currentAnalysisSnapshot = null;
-  currentAnalysisDocument = null;
-  resultsViewMode = "simple";
-  advancedTabKey = "identity";
-  syncWorkspaceMode(true);
-  syncResultsView();
+  resultStateController.resetResultState();
 }
 
 function markDeckAsEdited() {
-  successContent.classList.add("hidden");
-  commanderVisuals?.replaceChildren();
-  commanderVisuals?.classList.add("hidden");
-  scoreRadarChart?.replaceChildren();
-  resolvedCardLookup = new Map();
-  clearTaggedCardPreviews();
-  selectedStrategyPerspectiveKey = null;
-  currentAnalysisSnapshot = null;
-  currentAnalysisDocument = null;
-  resultsViewMode = "simple";
-  advancedTabKey = "identity";
-
-  if (!issuesBox.classList.contains("hidden") && issuesList.childElementCount > 0) {
-    resultEmpty.classList.add("hidden");
-    resultContent.classList.remove("hidden");
-    syncWorkspaceMode(false);
-  } else {
-    resultContent.classList.add("hidden");
-    resultEmpty.classList.remove("hidden");
-    syncWorkspaceMode(true);
-  }
-
-  if (decklistField.value.trim()) {
-    formStatus.textContent = "Decklist changed. Run the analysis again to refresh the ranking data.";
-  }
-
-  syncResultsView();
+  resultStateController.markDeckAsEdited();
 }
 
 function prepareForNewScan(options = {}) {
-  const { preserveSelectedStrategy = false, preserveResultsView = false } = options;
-
-  successContent.classList.add("hidden");
-  issuesBox.classList.add("hidden");
-  resultContent.classList.add("hidden");
-  resultEmpty.classList.remove("hidden");
-  commanderVisuals?.replaceChildren();
-  commanderVisuals?.classList.add("hidden");
-  resolvedCardLookup = new Map();
-  clearTaggedCardPreviews();
-  if (!preserveSelectedStrategy) {
-    selectedStrategyPerspectiveKey = null;
-  }
-  currentAnalysisSnapshot = null;
-  currentAnalysisDocument = null;
-  if (!preserveResultsView) {
-    resultsViewMode = "simple";
-  }
-  advancedTabKey = "identity";
-  syncWorkspaceMode(true);
-  syncResultsView();
+  resultStateController.prepareForNewScan(options);
 }
 
 function syncWorkspaceMode(showIntakeOnly) {
   pageShell?.classList.toggle("intake-mode", showIntakeOnly);
 }
 
-function renderAmbientCardBackground() {
-  if (!ambientCardBackground) {
-    return;
-  }
-
-  const slots = buildAmbientCardSlots();
-  const elements = slots.map((slot, index) =>
-    createAmbientCard(AMBIENT_CARD_POOL[index % AMBIENT_CARD_POOL.length], slot, index),
-  );
-  ambientCardBackground.replaceChildren(...elements);
-}
-
-function buildAmbientCardSlots() {
-  const preset = getAmbientCardLayoutPreset();
-  const viewportWidth = Math.max(window.innerWidth || 0, document.documentElement.clientWidth || 0);
-  const viewportHeight = Math.max(window.innerHeight || 0, document.documentElement.clientHeight || 0);
-  const slots = [];
-  let slotIndex = 0;
-
-  for (
-    let rowIndex = 0, top = preset.startY;
-    top <= viewportHeight + preset.edgeY && slots.length < preset.maxSlots;
-    rowIndex += 1, top += preset.gapY
-  ) {
-    const rowOffset = rowIndex % 2 === 0 ? 0 : preset.rowOffset;
-
-    for (
-      let left = preset.startX + rowOffset;
-      left <= viewportWidth + preset.edgeX && slots.length < preset.maxSlots;
-      left += preset.gapX
-    ) {
-      slots.push({
-        left: `${left}px`,
-        top: `${top}px`,
-        width: preset.widths[slotIndex % preset.widths.length],
-        rotation: preset.rotations[slotIndex % preset.rotations.length],
-        scale: "1",
-      });
-      slotIndex += 1;
-    }
-  }
-
-  return slots;
-}
-
-function getAmbientCardLayoutPreset() {
-  const viewportWidth = Math.max(window.innerWidth || 0, document.documentElement.clientWidth || 0);
-  const themePresets =
-    getActiveTheme() === "dark" ? AMBIENT_CARD_LAYOUT_PRESETS.dark : AMBIENT_CARD_LAYOUT_PRESETS.light;
-
-  if (viewportWidth <= 640) {
-    return themePresets.mobile;
-  }
-
-  if (viewportWidth <= 960) {
-    return themePresets.tablet;
-  }
-
-  return themePresets.desktop;
-}
-
-function renderHeroMediaCards() {
-  if (!heroMediaCardImages.length) {
-    return;
-  }
-
-  const cards = shuffleArray(HERO_CARD_POOL).slice(0, heroMediaCardImages.length);
-  heroMediaCardImages.forEach((image, index) => {
-    const card = cards[index];
-    if (!card) {
-      return;
-    }
-
-    image.src = card.imageUrl;
-    image.alt = "";
-    image.title = card.name;
-    image.loading = "eager";
-    image.decoding = "async";
-    image.referrerPolicy = "no-referrer";
-  });
-}
-
-function createAmbientCard(card, slot, index) {
-  const figure = document.createElement("figure");
-  figure.className = `ambient-card ambient-card-slot-${index + 1}`;
-  figure.style.left = slot.left;
-  figure.style.top = slot.top;
-  figure.style.width = slot.width;
-  figure.style.setProperty("--ambient-rotation", slot.rotation);
-  figure.style.setProperty("--ambient-scale", slot.scale);
-  figure.style.setProperty("--ambient-slot", String(index));
-
-  const image = document.createElement("img");
-  image.src = card.imageUrl;
-  image.alt = "";
-  image.loading = "eager";
-  image.decoding = "async";
-  image.referrerPolicy = "no-referrer";
-  image.title = card.name;
-
-  figure.append(image);
-  return figure;
-}
-
-function shuffleArray(values) {
-  const clone = [...values];
-
-  for (let index = clone.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [clone[index], clone[swapIndex]] = [clone[swapIndex], clone[index]];
-  }
-
-  return clone;
-}
-
-window.addEventListener("resize", () => {
-  if (!ambientCardBackground) {
-    return;
-  }
-
-  window.clearTimeout(ambientResizeHandle);
-  ambientResizeHandle = window.setTimeout(() => {
-    renderAmbientCardBackground();
-  }, 140);
-});
-
 function prefillCommanderFromDecklist(decklistText, options = {}) {
-  const summary = inspectDecklistSections(decklistText);
-  const leaderGuess = getLeaderPackageFromSummary(summary);
-
-  if (!commanderNameField.value.trim() && leaderGuess.commander) {
-    setAutofilledLeaderField(commanderNameField, leaderGuess.commander);
-  }
-
-  if (options.allowAdditionalCommanderAutoEnable && summary.commanderCards.length > 1) {
-    additionalCommanderEnabledField.checked = true;
-  }
-
-  if (
-    additionalCommanderEnabledField.checked &&
-    !additionalCommanderNameField.value.trim() &&
-    leaderGuess.secondary
-  ) {
-    setAutofilledLeaderField(additionalCommanderNameField, leaderGuess.secondary);
-  }
-
-  if (options.allowCompanionAutoEnable && summary.companion) {
-    companionEnabledField.checked = true;
-  }
-
-  if (companionEnabledField.checked && !companionNameField.value.trim() && summary.companion) {
-    setAutofilledLeaderField(companionNameField, summary.companion);
-  }
-
-  syncSupplementalLeaderFields();
+  leaderFieldsController.prefillFromDecklist(decklistText, options);
 }
 
 function prefillLeaderFieldsFromDecklist(decklistText, options = {}) {
@@ -2637,308 +1686,33 @@ function prefillLeaderFieldsFromDecklist(decklistText, options = {}) {
 }
 
 function buildDeckIntakeStatus(decklistText) {
-  if (!decklistText.trim()) {
-    return "";
-  }
-
-  const summary = inspectDecklistSections(decklistText);
-  if (summary.commanderCards.length > 0) {
-    const commanderText = summary.commanderCards.slice(0, 2).join(" + ");
-    return `Commander detected: ${commanderText}. Choose a target bracket and analyze when ready.`;
-  }
-
-  if (summary.fallbackCards.length > 0) {
-    return `No commander section found. The first card will be used as the commander guess: ${summary.fallbackCards[0]}.`;
-  }
-
-  return "Decklist text found, but no card lines were detected yet.";
-}
-
-function getLeaderPackageFromSummary(summary) {
-  if (summary.commanderCards.length > 0) {
-    return {
-      commander: summary.commanderCards[0] ?? "",
-      secondary: summary.commanderCards[1] ?? "",
-    };
-  }
-
-  return {
-    commander: summary.fallbackCards[0] ?? "",
-    secondary: summary.fallbackCards[1] ?? "",
-  };
-}
-
-function inspectDecklistSections(decklistText) {
-  const lines = decklistText.split(/\r?\n/);
-  let currentSection = "mainboard";
-  const explicitCommanderCards = [];
-  const fallbackCards = [];
-  const companionCards = [];
-
-  for (const rawLine of lines) {
-    const trimmedLine = rawLine.trim();
-    if (!trimmedLine) {
-      if (currentSection === "commander" || currentSection === "companion") {
-        currentSection = "mainboard";
-      }
-      continue;
-    }
-
-    const sectionHeader = normalizeSectionHeader(trimmedLine);
-    if (sectionHeader) {
-      currentSection = sectionHeader;
-      continue;
-    }
-
-    if (isStandaloneBracketSectionLine(trimmedLine)) {
-      currentSection = "mainboard";
-      continue;
-    }
-
-    if (trimmedLine.startsWith("#") || trimmedLine.startsWith("//")) {
-      continue;
-    }
-
-    const prefixedLine = extractSectionPrefix(trimmedLine);
-    const cleanedName = cleanupDeckEntryName(prefixedLine.line);
-
-    if (!cleanedName) {
-      continue;
-    }
-
-    if (prefixedLine.section === "companion" || currentSection === "companion") {
-      companionCards.push(cleanedName);
-      continue;
-    }
-
-    if (prefixedLine.section === "commander" || currentSection === "commander") {
-      explicitCommanderCards.push(cleanedName);
-      continue;
-    }
-
-    fallbackCards.push(cleanedName);
-  }
-
-  return {
-    commanderCards: explicitCommanderCards,
-    fallbackCards,
-    companion: companionCards[0] ?? "",
-  };
-}
-
-function normalizeSectionHeader(line) {
-  const normalized = normalizeHeaderLabel(line);
-
-  if (
-    [
-      "commander",
-      "commanders",
-      "partner",
-      "partners",
-      "background",
-      "backgrounds",
-      "doctor's companion",
-      "doctors companion",
-    ].includes(normalized)
-  ) {
-    return "commander";
-  }
-
-  if (["deck", "main", "mainboard"].includes(normalized)) {
-    return "mainboard";
-  }
-
-  if (normalized === "companion") {
-    return "companion";
-  }
-
-  if (["sideboard", "side"].includes(normalized)) {
-    return "sideboard";
-  }
-
-  if (["maybeboard", "maybe"].includes(normalized)) {
-    return "maybeboard";
-  }
-
-  return null;
-}
-
-function normalizeHeaderLabel(line) {
-  return line
-    .replace(/^(\/\/+|#+)\s*/, "")
-    .replace(/^\[(.+)\]$/, "$1")
-    .toLowerCase()
-    .replace(/\(\d+\)/g, "")
-    .replace(/[:\-]/g, "")
-    .trim()
-    .replace(/\s+/g, " ");
+  return window.MtgDeckcheckerDecklistIntake.buildDeckIntakeStatus(decklistText);
 }
 
 function sanitizeDecklistInput(decklistText) {
-  const sanitizedLines = decklistText
-    .split(/\r?\n/)
-    .filter((line) => !isRemovableDeckSectionLine(line));
-
-  return sanitizedLines.join("\n").replace(/\n{3,}/g, "\n\n").trimEnd();
-}
-
-function isRemovableDeckSectionLine(line) {
-  if (isStandaloneBracketSectionLine(line.trim())) {
-    return true;
-  }
-
-  const normalized = normalizeHeaderLabel(line.trim());
-
-  if (!normalized) {
-    return false;
-  }
-
-  return new Set([
-    "commander",
-    "commanders",
-    "partner",
-    "partners",
-    "background",
-    "backgrounds",
-    "doctor's companion",
-    "doctors companion",
-    "deck",
-    "main",
-    "mainboard",
-    "creature",
-    "creatures",
-    "artifact",
-    "artifacts",
-    "enchantment",
-    "enchantments",
-    "instant",
-    "instants",
-    "sorcery",
-    "sorceries",
-    "land",
-    "lands",
-    "planeswalker",
-    "planeswalkers",
-    "battle",
-    "battles",
-    "spell",
-    "spells",
-    "sideboard",
-    "side",
-    "maybeboard",
-    "maybe",
-  ]).has(normalized);
-}
-
-function isStandaloneBracketSectionLine(line) {
-  const cleanedLine = line
-    .replace(/^(\/\/+|#+)\s*/, "")
-    .trim();
-
-  return /^\[[^[\]]+\]\s*(?:\(\d+\))?$/u.test(cleanedLine);
-}
-
-function extractSectionPrefix(line) {
-  const match = line.match(/^(?<prefix>[A-Za-z]+):\s*(?<rest>.+)$/);
-  if (!match?.groups) {
-    return { section: null, line };
-  }
-
-  const prefixMap = {
-    cmdr: "commander",
-    cmndr: "commander",
-    commander: "commander",
-    partner: "commander",
-    partners: "commander",
-    background: "commander",
-    backgrounds: "commander",
-    "doctor's companion": "commander",
-    "doctors companion": "commander",
-    companion: "companion",
-    deck: "mainboard",
-    main: "mainboard",
-    mainboard: "mainboard",
-    mb: "mainboard",
-    sb: "sideboard",
-    sideboard: "sideboard",
-    maybe: "maybeboard",
-    maybeboard: "maybeboard",
-  };
-
-  return {
-    section: prefixMap[match.groups.prefix.toLowerCase()] ?? null,
-    line: match.groups.rest.trim(),
-  };
-}
-
-function cleanupDeckEntryName(line) {
-  const quantityMatch = line.match(/^(?<quantity>\d+)\s*x?\s+(?<card>.+)$/i);
-  let workingLine = quantityMatch?.groups?.card?.trim() ?? line.trim();
-
-  return workingLine
-    .replace(/^\[[^[\]]+\]\s*/, "")
-    .replace(/\s+\*[^*]+\*\s*$/, "")
-    .replace(/\s+\[[A-Za-z0-9]{2,6}\]\s*$/, "")
-    .replace(/\s+\([A-Za-z0-9]{2,6}\)(?:\s+[A-Za-z0-9-]+)?\s*$/, "")
-    .replace(/\s{2,}/g, " ")
-    .trim();
+  return window.MtgDeckcheckerDecklistIntake.sanitizeDecklistInput(decklistText);
 }
 
 function syncSupplementalLeaderFields() {
-  additionalCommanderFieldWrap.classList.toggle("hidden", !additionalCommanderEnabledField.checked);
-  companionFieldWrap.classList.toggle("hidden", !companionEnabledField.checked);
-  secretCommanderFieldWrap.classList.toggle("hidden", !secretCommanderEnabledField.checked);
-
-  if (!additionalCommanderEnabledField.checked) {
-    resetLeaderField(additionalCommanderNameField);
-  }
-
-  if (!companionEnabledField.checked) {
-    resetLeaderField(companionNameField);
-  }
-
-  if (!secretCommanderEnabledField.checked) {
-    resetLeaderField(secretCommanderNameField);
-  }
-}
-
-function setAutofilledLeaderField(field, value) {
-  field.value = value;
-  field.dataset.autofilled = "true";
+  leaderFieldsController.syncSupplementalFields();
 }
 
 function markLeaderFieldAsManual(field) {
-  if (field.value.trim()) {
-    field.dataset.autofilled = "false";
-    return;
-  }
-
-  delete field.dataset.autofilled;
+  leaderFieldsController.markFieldAsManual(field);
 }
 
 function resetLeaderField(field) {
-  field.value = "";
-  delete field.dataset.autofilled;
+  leaderFieldsController.resetField(field);
 }
 
 function clearAutofilledLeaderFields() {
-  [
-    commanderNameField,
-    additionalCommanderNameField,
-    companionNameField,
-    secretCommanderNameField,
-  ].forEach((field) => {
-    if (field.dataset.autofilled === "true") {
-      resetLeaderField(field);
-    }
-  });
+  leaderFieldsController.clearAutofilledFields();
 }
 
 syncSupplementalLeaderFields();
 deckInputController.updateFilePickerLabel();
 initializeInsightDisclosures();
-renderHeroMediaCards();
-renderAmbientCardBackground();
+themeMediaController.initialize();
 syncResultsView();
 
 function syncDeckHighlight() {
@@ -2978,56 +1752,6 @@ function syncDeckHighlight() {
   decklistField.style.backgroundRepeat = backgroundRepeat.join(", ");
   decklistField.style.backgroundAttachment = backgroundAttachment.join(", ");
 }
-
-function getStoredTheme() {
-  const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
-  return storedTheme === "dark" || storedTheme === "light" ? storedTheme : null;
-}
-
-function getPreferredTheme() {
-  const storedTheme = getStoredTheme();
-  if (storedTheme) {
-    return storedTheme;
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-}
-
-function getActiveTheme() {
-  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
-}
-
-function applyTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-
-  if (!themeToggle) {
-    if (ambientCardBackground?.childElementCount) {
-      renderAmbientCardBackground();
-    }
-    return;
-  }
-
-  const nextModeLabel = theme === "dark" ? "Light mode" : "Dark mode";
-  themeToggle.textContent = nextModeLabel;
-  themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
-  themeToggle.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} mode`);
-
-  if (ambientCardBackground?.childElementCount) {
-    renderAmbientCardBackground();
-  }
-}
-
-function syncSystemThemePreference(event) {
-  if (getStoredTheme() !== null) {
-    return;
-  }
-
-  applyTheme(event.matches ? "dark" : "light");
-}
-
-const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-applyTheme(getPreferredTheme());
-themeMediaQuery.addEventListener?.("change", syncSystemThemePreference);
 
 function clearDeckHighlight() {
   decklistField.style.backgroundImage = "";
@@ -3092,378 +1816,8 @@ function findBestMatchingLineIndex(lines, anchor, usedLineIndexes) {
   return bestIndex;
 }
 
-function renderFindings(findings, container = findingsList) {
-  const cards = findings.map((finding) => {
-    const article = document.createElement("article");
-    article.className = `finding-card finding-${finding.status}`;
-
-    const header = document.createElement("div");
-    header.className = "finding-header";
-
-    const title = document.createElement("strong");
-    title.textContent = finding.title;
-
-    const badge = document.createElement("span");
-    badge.className = `finding-badge finding-badge-${finding.status}`;
-    badge.textContent = finding.status;
-
-    header.append(title, badge);
-
-    const body = document.createElement("p");
-    body.textContent = finding.message;
-
-    article.append(header, body);
-    return article;
-  });
-
-  container.replaceChildren(...cards);
-}
-
-function ensureSelectedStrategyPerspective(strategy) {
-  if (
-    !selectedStrategyPerspectiveKey ||
-    !strategy.perspectives?.some((perspective) => perspective.strategy.key === selectedStrategyPerspectiveKey)
-  ) {
-    selectedStrategyPerspectiveKey =
-      strategy.mainStrategy?.key ?? strategy.perspectives?.[0]?.strategy.key ?? null;
-  }
-}
-
-function getActiveStrategyPerspective(strategy) {
-  ensureSelectedStrategyPerspective(strategy);
-
-  return (
-    strategy.perspectives?.find(
-      (perspective) => perspective.strategy.key === selectedStrategyPerspectiveKey,
-    ) ?? null
-  );
-}
-
-function renderWinStrategy(strategy, winStrategy) {
-  const activePerspective = getActiveStrategyPerspective(strategy);
-  const activeWinPerspective =
-    winStrategy.perspectives?.find(
-      (perspective) => perspective.strategyKey === activePerspective?.strategy.key,
-    ) ?? null;
-  const primaryPlan = activeWinPerspective?.primaryPlan ?? winStrategy.primaryPlan;
-  const backupPlans = activeWinPerspective?.backupPlans ?? winStrategy.backupPlans ?? [];
-  const perspectiveLabel =
-    activeWinPerspective?.strategyLabel ??
-    activePerspective?.strategy.label ??
-    strategy.mainStrategy?.label ??
-    "-";
-
-  winStrategyPrimary.textContent = primaryPlan?.label ?? "No clear closing plan";
-  winStrategyBackupCount.textContent = String(backupPlans.length);
-  winStrategyPerspective.textContent = perspectiveLabel;
-  winStrategySummary.textContent =
-    buildWinStrategySummary(winStrategy, primaryPlan, backupPlans, perspectiveLabel);
-
-  const reasonItems =
-    primaryPlan?.reasons?.length
-      ? primaryPlan.reasons.map((reason) => createListItem(reason))
-      : [createListItem("No singular closing plan stands out yet. The shell still looks mixed or setup-heavy.")];
-  const keyCardItems =
-    primaryPlan?.keyCards?.length
-      ? primaryPlan.keyCards.map((card) => createListItem(card))
-      : [createListItem("No key closing cards were isolated for this perspective yet.")];
-  const backupItems =
-    backupPlans.length > 0
-      ? backupPlans.map((plan) => createListItem(`${plan.label} | ${plan.summary}`))
-      : [createListItem("No strong backup win plans were detected.")];
-
-  winStrategyReasonsList.replaceChildren(...reasonItems);
-  winStrategyCardsList.replaceChildren(...keyCardItems);
-  winStrategyBackupsList.replaceChildren(...backupItems);
-}
-
-function renderStrategy(strategy) {
-  const perspectives = strategy.perspectives ?? [];
-  const activePerspective = getActiveStrategyPerspective(strategy);
-  const activeStrategy = activePerspective?.strategy ?? strategy.mainStrategy;
-  const activeSubStrategies = activePerspective?.subStrategies ?? strategy.subStrategies;
-  const activeSynergy = activePerspective?.synergy ?? strategy.synergy;
-  const detectedMainStrategy = getDetectedMainStrategy(strategy);
-  const reviewingAlternateMain =
-    !!activeStrategy &&
-    !!detectedMainStrategy &&
-    activeStrategy.key !== detectedMainStrategy.key;
-
-  strategySummary.textContent = buildStrategySummary(
-    strategy,
-    activeStrategy,
-    detectedMainStrategy,
-    reviewingAlternateMain,
-  );
-  mainStrategyName.textContent = activeStrategy?.label ?? "Mixed Shell";
-  subStrategyCount.textContent = String(activeSubStrategies.length);
-  strategySynergyScore.textContent = String(activeSynergy?.synergyScore ?? 0);
-  strategySupportCount.textContent = String(activeSynergy?.supportCards ?? 0);
-  strategyCoreCount.textContent = String(activeSynergy?.coreCards ?? 0);
-  strategyFocusScore.textContent = `${activeSynergy?.focusScore ?? 0}%`;
-  strategyCommanderFit.textContent = activeSynergy
-    ? activeSynergy.commanderAligned
-      ? "Aligned"
-      : "Light"
-    : "-";
-  strategyFinisherFit.textContent = activeSynergy
-    ? activeSynergy.finisherAligned
-      ? "Aligned"
-      : "Mixed"
-    : "-";
-  strategySynergySummary.textContent =
-    activeSynergy?.summary ?? "Strategy support is checked after the main archetype is detected.";
-
-  renderStrategySwitcher(strategy, activePerspective);
-  applyScoreTone(strategySynergyScore, activeSynergy?.synergyScore ?? 0);
-
-  const synergyFindings =
-    activeSynergy?.findings?.length
-      ? activeSynergy.findings
-      : [
-          {
-            title: "No main strategy yet",
-            status: "note",
-            message: "Synergy needs a clearer main strategy before the shell can be judged against it.",
-          },
-        ];
-  const mainCards =
-    activeStrategy?.keyCards?.length
-      ? activeStrategy.keyCards.map((card) => createListItem(card))
-      : [createListItem("No clear support cards were isolated for the main strategy yet.")];
-
-  const subItems =
-    activeSubStrategies.length > 0
-      ? activeSubStrategies.map((entry) =>
-          createListItem(
-            `${entry.label}${
-              entry.keyCards.length > 0 ? ` | ${entry.keyCards.join(", ")}` : ""
-            }`,
-          ),
-        )
-      : [createListItem("No strong secondary strategy was detected.")];
-
-  mainStrategyCardsList.replaceChildren(...mainCards);
-  subStrategiesList.replaceChildren(...subItems);
-  renderFindings(synergyFindings, strategySynergyFindingsList);
-}
-
-function renderStrategySwitcher(strategy, activePerspective) {
-  const perspectives = strategy.perspectives ?? [];
-  const detectedMainStrategy = getDetectedMainStrategy(strategy);
-  if (perspectives.length <= 1) {
-    strategySwitcher.replaceChildren();
-    strategySwitcherWrap.classList.add("hidden");
-    return;
-  }
-
-  const buttons = perspectives.map((perspective) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "strategy-chip";
-
-    if (perspective.strategy.key === activePerspective?.strategy.key) {
-      button.classList.add("strategy-chip-active");
-    }
-
-    if (perspective.strategy.key === detectedMainStrategy?.key) {
-      button.classList.add("strategy-chip-detected");
-    }
-
-    const label = document.createElement("span");
-    label.textContent = perspective.strategy.label;
-    button.append(label);
-
-    if (perspective.strategy.key === detectedMainStrategy?.key) {
-      const badge = document.createElement("span");
-      badge.className = "strategy-chip-badge";
-      badge.textContent = "Detected";
-      button.append(badge);
-    }
-
-    button.addEventListener("click", async () => {
-      if (submitButton.disabled || selectedStrategyPerspectiveKey === perspective.strategy.key) {
-        return;
-      }
-
-      const previousKey = selectedStrategyPerspectiveKey;
-      selectedStrategyPerspectiveKey = perspective.strategy.key;
-      const success = await runDeckAnalysis({
-        preferredStrategyKey: perspective.strategy.key,
-        preserveCurrentView: true,
-        statusMessage: `Re-scoring the deck as ${perspective.strategy.label}...`,
-        successMessage: `Deck re-scored as ${perspective.strategy.label}.`,
-        loadingTitleText: "Recalculating Strategy",
-        loadingCopyText: `Re-scoring the deck with ${perspective.strategy.label} as the main plan.`,
-      });
-
-      if (!success) {
-        selectedStrategyPerspectiveKey = previousKey;
-        renderStrategy(strategy);
-        if (currentAnalysisSnapshot?.winStrategy) {
-          renderWinStrategy(strategy, currentAnalysisSnapshot.winStrategy);
-        }
-      }
-    });
-
-    return button;
-  });
-
-  strategySwitcher.replaceChildren(...buttons);
-  strategySwitcherWrap.classList.remove("hidden");
-}
-
 function renderCardBreakdown(deckDocument, analysis) {
   cardBreakdownController.render(deckDocument, analysis);
-}
-
-function buildWinStrategySummary(winStrategy, primaryPlan, backupPlans, perspectiveLabel) {
-  if (!primaryPlan) {
-    return winStrategy.summary;
-  }
-
-  if (backupPlans.length === 0) {
-    return `${perspectiveLabel} currently looks like it mainly closes through ${primaryPlan.label.toLowerCase()}.`;
-  }
-
-  if (backupPlans.length === 1) {
-    return `${perspectiveLabel} currently looks like it mainly closes through ${primaryPlan.label.toLowerCase()}, with ${backupPlans[0].label.toLowerCase()} as the clearest backup plan.`;
-  }
-
-  return `${perspectiveLabel} currently looks like it mainly closes through ${primaryPlan.label.toLowerCase()}, with ${backupPlans[0].label.toLowerCase()} and ${backupPlans[1].label.toLowerCase()} as backup plans.`;
-}
-
-function getDetectedMainStrategy(strategy) {
-  return strategy.detectedMainStrategy ?? strategy.mainStrategy;
-}
-
-function renderAnalysisStatus(input) {
-  if (!analysisStatus) {
-    return;
-  }
-
-  const statusCards = [
-    {
-      label: "Bracket",
-      value: input.bracket.recommendedLabel,
-      note: input.bracket.targetLabel
-        ? `Target: ${input.bracket.targetLabel}`
-        : input.bracket.recommendedName,
-    },
-    {
-      label: "Power",
-      value: `${input.power.powerScore.toFixed(1)} / 10`,
-      note: input.power.powerTier,
-    },
-    {
-      label: "Strategy",
-      value: input.strategy.mainStrategy?.label ?? "Unclear",
-      note: input.strategy.subStrategies.length > 0
-        ? `Side plan: ${input.strategy.subStrategies[0].label}`
-        : "No strong side plan detected",
-    },
-    {
-      label: "Win Plan",
-      value: input.winStrategy.primaryPlan?.label ?? "Unclear",
-      note: input.winStrategy.backupPlans.length > 0
-        ? `Backup: ${input.winStrategy.backupPlans[0].label}`
-        : input.winConditions.summary,
-    },
-  ];
-
-  analysisStatus.replaceChildren(...statusCards.map(createAnalysisStatusCard));
-}
-
-function createAnalysisStatusCard(card) {
-  const article = document.createElement("article");
-  article.className = "analysis-status-card";
-
-  const label = document.createElement("span");
-  label.textContent = card.label;
-
-  const value = document.createElement("strong");
-  value.textContent = card.value;
-
-  const note = document.createElement("p");
-  note.textContent = card.note;
-
-  article.append(label, value, note);
-  return article;
-}
-
-function getPowerDimensionScore(power, key) {
-  return power.dimensions.find((dimension) => dimension.key === key)?.score ?? 0;
-}
-
-function buildStrategySummary(strategy, activeStrategy, detectedMainStrategy, reviewingAlternateMain) {
-  if (!activeStrategy) {
-    return strategy.summary;
-  }
-
-  if (!reviewingAlternateMain || !detectedMainStrategy) {
-    return strategy.summary;
-  }
-
-  return `Viewing ${activeStrategy.label} as the main plan. Detected main strategy remains ${detectedMainStrategy.label}.`;
-}
-
-function renderManaCurve(curve) {
-  const buckets = [
-    { label: "0-1", count: curve.zeroToOne },
-    { label: "2", count: curve.two },
-    { label: "3", count: curve.three },
-    { label: "4", count: curve.four },
-    { label: "5", count: curve.five },
-    { label: "6+", count: curve.sixPlus },
-  ];
-  const maxCount = Math.max(...buckets.map((bucket) => bucket.count), 1);
-  const bars = buckets.map((bucket) => {
-    const item = document.createElement("article");
-    item.className = "curve-item";
-
-    const value = document.createElement("span");
-    value.className = "curve-value";
-    value.textContent = String(bucket.count);
-
-    const bar = document.createElement("div");
-    bar.className = "curve-bar";
-    bar.style.height = `${Math.max(16, Math.round((bucket.count / maxCount) * 120))}px`;
-
-    const label = document.createElement("span");
-    label.className = "curve-label";
-    label.textContent = bucket.label;
-
-    item.append(value, bar, label);
-    return item;
-  });
-
-  curveBars.replaceChildren(...bars);
-}
-
-function averageScores(...scores) {
-  if (scores.length === 0) {
-    return 0;
-  }
-
-  return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
-}
-
-function firstSentence(text) {
-  const trimmedText = text?.trim();
-  if (!trimmedText) {
-    return "";
-  }
-
-  const sentenceMatch = trimmedText.match(/^.*?[.!?](?:\s|$)/);
-  return sentenceMatch ? sentenceMatch[0].trim() : trimmedText;
-}
-
-function formatPercent(value) {
-  return `${Math.round(value * 100)}%`;
-}
-
-function formatDecimal(value) {
-  return value.toFixed(2).replace(/\.00$/, "");
 }
 
 function formatOneDecimal(value) {
@@ -3496,337 +1850,4 @@ function formatTagLabel(value = "") {
   return String(value)
     .replace(/_/g, " ")
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
-}
-
-function formatWholeScore(value) {
-  return String(Math.round(value));
-}
-
-function formatTutorTag(tag) {
-  switch (tag) {
-    case "direct_tutor":
-      return "direct";
-    case "restricted_tutor":
-      return "restricted";
-    case "repeatable_tutor":
-      return "repeatable";
-    case "land_tutor":
-      return "land";
-    default:
-      return tag;
-  }
-}
-
-function formatFindingLabel(finding) {
-  if (!finding) {
-    return "-";
-  }
-
-  return `${capitalize(finding.status)}: ${finding.title}`;
-}
-
-function capitalize(value) {
-  return `${value.charAt(0).toUpperCase()}${value.slice(1)}`;
-}
-
-function renderRampCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: rampCardsList,
-    previewElement: rampCardsPreview,
-    taggedCards,
-    emptyMessage: "No ramp cards were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatRampTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderLandBaseCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: landBaseCardsList,
-    previewElement: landBaseCardsPreview,
-    taggedCards,
-    emptyMessage: "No special land traits were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatLandBaseTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderCommanderCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: commanderCardsList,
-    previewElement: commanderCardsPreview,
-    taggedCards,
-    emptyMessage: "No major command-zone engine roles were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatCommanderRoleTag(hit.tag)).join(", ");
-      return createListItem(`${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderCommanderProfiles(profiles = []) {
-  if (!commanderProfilesList) {
-    return;
-  }
-
-  commanderProfilesList.replaceChildren();
-
-  if (!profiles.length) {
-    const empty = document.createElement("p");
-    empty.className = "muted-inline";
-    empty.textContent = "No specific commander build-around profile was detected yet.";
-    commanderProfilesList.append(empty);
-    return;
-  }
-
-  profiles.slice(0, 4).forEach((profile) => {
-    const card = document.createElement("article");
-    card.className = "commander-profile-card";
-
-    const header = document.createElement("div");
-    header.className = "commander-profile-header";
-
-    const titleWrap = document.createElement("div");
-    const title = document.createElement("strong");
-    title.textContent = profile.label;
-    const commander = document.createElement("span");
-    commander.textContent = profile.commanderName;
-    titleWrap.append(title, commander);
-
-    const confidence = document.createElement("span");
-    confidence.className = `profile-confidence ${getProfileConfidenceClass(profile.confidence)}`;
-    confidence.textContent = `${Math.round(profile.confidence)}%`;
-
-    header.append(titleWrap, confidence);
-
-    const meter = document.createElement("div");
-    meter.className = "profile-meter";
-    const fill = document.createElement("span");
-    fill.style.width = `${Math.max(4, Math.min(100, profile.confidence))}%`;
-    meter.append(fill);
-
-    const body = document.createElement("p");
-    body.textContent = `${profile.supportCount}/${profile.supportTarget} support cards, ${profile.coreCount} core pieces. ${profile.supportReason}`;
-
-    const chips = document.createElement("div");
-    chips.className = "profile-chip-row";
-    (profile.supportCards ?? []).slice(0, 5).forEach((name) => {
-      const chip = document.createElement("span");
-      chip.className = "role-chip";
-      chip.textContent = name;
-      chips.append(chip);
-    });
-
-    if (profile.missingPieces?.length) {
-      const missing = document.createElement("div");
-      missing.className = "profile-missing";
-      missing.textContent = `Needs: ${profile.missingPieces.join(", ")}`;
-      card.append(header, meter, body, chips, missing);
-    } else {
-      card.append(header, meter, body, chips);
-    }
-
-    commanderProfilesList.append(card);
-  });
-}
-
-function getProfileConfidenceClass(value) {
-  if (value >= 72) {
-    return "profile-confidence-good";
-  }
-  if (value >= 52) {
-    return "profile-confidence-note";
-  }
-  return "profile-confidence-warning";
-}
-
-function renderDrawCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: drawCardsList,
-    previewElement: drawCardsPreview,
-    taggedCards,
-    emptyMessage: "No card-flow cards were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatDrawTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderConsistencyCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: consistencyCardsList,
-    previewElement: consistencyCardsPreview,
-    taggedCards,
-    emptyMessage: "No tutors were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatTutorTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderGameChangerCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: gameChangerCardsList,
-    previewElement: gameChangerCardsPreview,
-    taggedCards,
-    emptyMessage:
-      "No official Game Changers were found in the commander, mainboard, or companion slot.",
-    getLookupName: (card) => card.matchedName,
-    formatItem: (card) => {
-      const displayName =
-        card.name === card.matchedName ? card.name : `${card.matchedName} (${card.name})`;
-      return createListItem(`${card.quantity}x ${displayName} [${formatDeckSection(card.section)}]`);
-    },
-  });
-}
-
-function renderSimpleList(listElement, values, emptyMessage) {
-  const items =
-    values.length > 0
-      ? values.map((value) => createListItem(value))
-      : [createListItem(emptyMessage)];
-
-  listElement.replaceChildren(...items);
-}
-
-function renderRemovalCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: removalCardsList,
-    previewElement: removalCardsPreview,
-    taggedCards,
-    emptyMessage: "No removal cards were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatRemovalTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderProtectionCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: protectionCardsList,
-    previewElement: protectionCardsPreview,
-    taggedCards,
-    emptyMessage: "No protection cards were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatProtectionTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderRecursionCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: recursionCardsList,
-    previewElement: recursionCardsPreview,
-    taggedCards,
-    emptyMessage: "No recursion cards were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatRecursionTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderFinisherCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: finisherCardsList,
-    previewElement: finisherCardsPreview,
-    taggedCards,
-    emptyMessage: "No finishers were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatFinisherTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function renderComboLines(comboLookup) {
-  if (comboLookup.lookupStatus !== "ok") {
-    comboLinesList.replaceChildren(
-      createListItem(
-        comboLookup.error
-          ? `Commander Spellbook combo lookup was unavailable for this scan. (${comboLookup.error})`
-          : "Commander Spellbook combo lookup was unavailable for this scan.",
-      ),
-    );
-    return;
-  }
-
-  if (comboLookup.exact.length === 0) {
-    comboLinesList.replaceChildren(
-      createListItem("No exact infinite combo lines were found."),
-    );
-    return;
-  }
-
-  const items = comboLookup.exact.map((combo) => {
-    const typeLabel = combo.lineType === "finisher" ? "finisher" : "engine";
-    const outcomeLabel =
-      combo.outcomeNames.length > 0 ? ` -> ${combo.outcomeNames.join("; ")}` : "";
-    return createListItem(
-      `[${typeLabel}] ${combo.cardNames.join(" + ")}${outcomeLabel}`,
-    );
-  });
-
-  comboLinesList.replaceChildren(...items);
-}
-
-function renderSpellInteractionCards(taggedCards) {
-  renderTaggedCardSection({
-    listElement: spellInteractionCardsList,
-    previewElement: spellInteractionCardsPreview,
-    taggedCards,
-    emptyMessage: "No spell-interaction cards were detected from the wording rules.",
-    formatItem: (card) => {
-      const labels = card.hits.map((hit) => formatSpellInteractionTag(hit.tag)).join(", ");
-      return createListItem(`${card.quantity}x ${card.name} [${labels}]`);
-    },
-  });
-}
-
-function formatRampTag(tag) {
-  return TAG_LABELS.ramp?.[tag] ?? tag;
-}
-
-function formatLandBaseTag(tag) {
-  return TAG_LABELS.landBase?.[tag] ?? tag;
-}
-
-function formatDrawTag(tag) {
-  return TAG_LABELS.draw?.[tag] ?? tag;
-}
-
-function formatProtectionTag(tag) {
-  return TAG_LABELS.protection?.[tag] ?? tag;
-}
-
-function formatRecursionTag(tag) {
-  return TAG_LABELS.recursion?.[tag] ?? tag;
-}
-
-function formatFinisherTag(tag) {
-  return TAG_LABELS.finisher?.[tag] ?? tag;
-}
-
-function formatRemovalTag(tag) {
-  return TAG_LABELS.removal?.[tag] ?? tag;
-}
-
-function formatSpellInteractionTag(tag) {
-  return TAG_LABELS.spellInteraction?.[tag] ?? tag;
-}
-
-function formatCommanderRoleTag(tag) {
-  return TAG_LABELS.commanderRole?.[tag] ?? tag;
-}
-
-function formatDeckSection(section) {
-  return TAG_LABELS.deckSection?.[section] ?? section;
 }

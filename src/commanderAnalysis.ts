@@ -101,6 +101,7 @@ const STRATEGY_ROLE_HINTS: Record<StrategyKey, CommanderRoleTag[]> = {
   sagas: ["card_engine", "finisher_engine", "recursion_engine"],
   monarch: ["card_engine", "protection_engine", "interaction_engine"],
   theft: ["interaction_engine", "card_engine", "finisher_engine"],
+  donation: ["interaction_engine", "card_engine", "finisher_engine", "protection_engine"],
   goad: ["interaction_engine", "protection_engine", "finisher_engine"],
   shrines: ["finisher_engine", "card_engine", "recursion_engine"],
   cycling: ["card_engine", "token_engine", "recursion_engine"],
