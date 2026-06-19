@@ -318,85 +318,23 @@ let cardBreakdownSearchText = "";
 let cardBreakdownSectionMode = "all";
 let cardBreakdownRoleMode = "all";
 let cardBreakdownSortMode = "value_desc";
-const CARD_BREAKDOWN_MAX_ROLES = 5;
-const CARD_BREAKDOWN_ROLE_PRIORITY = [
-  "Synergy",
-  "Game Changer",
-  "Commander",
-  "Combo",
-  "Win Condition",
-  "Tutors",
-  "Ramp",
-  "Draw",
-  "Removal",
-  "Interaction",
-  "Protection",
-  "Recursion",
-  "Land Base",
-  "Combat",
-  "Utility",
-];
-const CARD_BREAKDOWN_SYNERGY_LABELS = new Set(["Synergy"]);
-const CARD_BREAKDOWN_LOW_SIGNAL_LAND_TAGS = new Set([
-  "Land Base",
-  "Land Slot",
-  "Basic Land",
-  "Mana Source",
-]);
 let pendingTargetBracketPromptResolve = null;
 let recommendationVisualRenderToken = 0;
 let activeReportType = "";
 let activeWebsiteReportKind = "";
-const THEME_STORAGE_KEY = "mtg-deckchecker-theme";
-const TAGGED_CARD_PREVIEW_LIMIT = 4;
-const RECOMMENDATION_TOPICS = [
-  { key: "shell", label: "Shell" },
-  { key: "land_base", label: "Land Base" },
-  { key: "ramp", label: "Ramp" },
-  { key: "card_flow", label: "Card Flow" },
-  { key: "consistency", label: "Consistency" },
-  { key: "interaction", label: "Interaction" },
-  { key: "resilience", label: "Resilience" },
-  { key: "closing", label: "Closing" },
-];
-const SIMPLE_VALUE_DRILLDOWNS = {
-  "power-score": { tab: "identity", target: "#commander-impact-score" },
-  "power-synergy": { tab: "identity", target: "#strategy-synergy-score" },
-  "power-speed": { tab: "engine", target: "#ramp-score" },
-  "power-consistency": { tab: "engine", target: "#consistency-score" },
-  "power-interaction": { tab: "interaction", target: "#removal-score" },
-  "power-resilience": { tab: "interaction", target: "#protection-score" },
-  "power-closing": { tab: "closing", target: "#finisher-score" },
-  "power-mana": { tab: "shell", target: "#land-base-score" },
-  "bracket-recommended": { tab: "identity", target: "#game-changer-total" },
-  "bracket-target": { tab: "recommendations", target: "#recommendations-list-advanced" },
-  "bracket-power-read": { tab: "identity", target: "#commander-impact-score" },
-  "bracket-rules-floor": { tab: "identity", target: "#game-changer-total" },
-  "bracket-game-changers": { tab: "identity", target: "#game-changer-total" },
-  "bracket-two-card-combos": { tab: "closing", target: "#combo-line-count" },
-  "bracket-extra-turns": { tab: "closing", target: "#finisher-score" },
-  "bracket-land-denial": { tab: "interaction", target: "#removal-score" },
-  "land-count": { tab: "shell", target: "#structure-score" },
-  "creature-count": { tab: "shell", target: "#structure-score" },
-  "instant-count": { tab: "interaction", target: "#spell-interaction-score" },
-  "sorcery-count": { tab: "engine", target: "#draw-score" },
-  "artifact-count": { tab: "identity", target: "#strategy-synergy-score" },
-  "enchantment-count": { tab: "identity", target: "#strategy-synergy-score" },
-  "planeswalker-count": { tab: "identity", target: "#strategy-synergy-score" },
-  "battle-count": { tab: "shell", target: "#structure-score" },
-  "average-cmc": { tab: "shell", target: "#curve-bars" },
-  "resolved-count": { tab: "cards", target: "#card-breakdown-body" },
-  "unique-count": { tab: "cards", target: "#card-breakdown-body" },
-  "total-count": { tab: "cards", target: "#card-breakdown-body" },
-  "quick-shell-score": { tab: "shell", target: "#structure-score" },
-  "quick-land-base-score": { tab: "shell", target: "#land-base-score" },
-  "quick-ramp-score": { tab: "engine", target: "#ramp-score" },
-  "quick-card-flow-score": { tab: "engine", target: "#draw-score" },
-  "quick-consistency-score": { tab: "engine", target: "#consistency-score" },
-  "quick-interaction-score": { tab: "interaction", target: "#removal-score" },
-  "quick-resilience-score": { tab: "interaction", target: "#protection-score" },
-  "quick-closing-score": { tab: "closing", target: "#finisher-score" },
-};
+const FRONTEND_CONFIG = window.MtgDeckcheckerFrontendConfig ?? {};
+const CARD_BREAKDOWN_CONFIG = FRONTEND_CONFIG.cardBreakdown ?? {};
+const CARD_BREAKDOWN_MAX_ROLES = CARD_BREAKDOWN_CONFIG.maxRoles ?? 5;
+const CARD_BREAKDOWN_ROLE_PRIORITY = CARD_BREAKDOWN_CONFIG.rolePriority ?? [];
+const CARD_BREAKDOWN_SYNERGY_LABELS = new Set(CARD_BREAKDOWN_CONFIG.synergyLabels ?? ["Synergy"]);
+const CARD_BREAKDOWN_LOW_SIGNAL_LAND_TAGS = new Set(
+  CARD_BREAKDOWN_CONFIG.lowSignalLandTags ?? ["Land Base", "Land Slot", "Basic Land", "Mana Source"],
+);
+const THEME_STORAGE_KEY = FRONTEND_CONFIG.themeStorageKey ?? "mtg-deckchecker-theme";
+const TAGGED_CARD_PREVIEW_LIMIT = FRONTEND_CONFIG.taggedCardPreviewLimit ?? 4;
+const RECOMMENDATION_TOPICS = FRONTEND_CONFIG.recommendationTopics ?? [];
+const SIMPLE_VALUE_DRILLDOWNS = FRONTEND_CONFIG.simpleValueDrilldowns ?? {};
+const TAG_LABELS = FRONTEND_CONFIG.tagLabels ?? {};
 const AMBIENT_CARD_POOL = [
   {
     name: "Rhystic Study",
@@ -5080,126 +5018,41 @@ function renderSpellInteractionCards(taggedCards) {
 }
 
 function formatRampTag(tag) {
-  const labels = {
-    stable_ramp: "stable",
-    burst_ramp: "burst",
-    land_acceleration: "land accel",
-    mana_fixing: "fixing",
-    cost_reduction: "cost reduction",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.ramp?.[tag] ?? tag;
 }
 
 function formatLandBaseTag(tag) {
-  const labels = {
-    land_slot: "land slot",
-    basic_land: "basic",
-    mana_source: "mana source",
-    always_tapped: "always tapped",
-    conditional_tapped: "conditional",
-    typed_land: "typed",
-    fetch_land: "fetch/search",
-    utility_land: "utility",
-    colorless_only: "colorless only",
-    costly_land: "costly",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.landBase?.[tag] ?? tag;
 }
 
 function formatDrawTag(tag) {
-  const labels = {
-    card_draw: "draw",
-    card_selection: "selection",
-    repeatable_advantage: "repeatable",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.draw?.[tag] ?? tag;
 }
 
 function formatProtectionTag(tag) {
-  const labels = {
-    broad_protection: "broad",
-    targeted_protection: "targeted",
-    equipment_protection: "equipment",
-    self_bounce: "self bounce",
-    flicker: "flicker",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.protection?.[tag] ?? tag;
 }
 
 function formatRecursionTag(tag) {
-  const labels = {
-    battlefield_recursion: "battlefield",
-    hand_recursion: "hand",
-    replay_recursion: "replay",
-    mass_recursion: "mass",
-    library_recursion: "library",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.recursion?.[tag] ?? tag;
 }
 
 function formatFinisherTag(tag) {
-  const labels = {
-    combat_finisher: "combat",
-    direct_finisher: "direct",
-    alternate_finisher: "alternate",
-    repeatable_finisher: "repeatable",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.finisher?.[tag] ?? tag;
 }
 
 function formatRemovalTag(tag) {
-  const labels = {
-    targeted_removal: "targeted",
-    mass_removal: "sweeper",
-    tempo_removal: "tempo",
-    hand_attack: "hand attack",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.removal?.[tag] ?? tag;
 }
 
 function formatSpellInteractionTag(tag) {
-  const labels = {
-    hard_stack: "hard stack",
-    soft_stack: "soft stack",
-    spell_tempo: "spell tempo",
-    broad_stack: "broad stack",
-    stax_piece: "stax/hate",
-    graveyard_hate: "grave hate",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.spellInteraction?.[tag] ?? tag;
 }
 
 function formatCommanderRoleTag(tag) {
-  const labels = {
-    mana_engine: "mana",
-    card_engine: "cards",
-    tutor_engine: "tutors",
-    interaction_engine: "interaction",
-    protection_engine: "protection",
-    recursion_engine: "recursion",
-    combo_enabler: "combo",
-    finisher_engine: "finisher",
-    token_engine: "tokens",
-    cost_reducer: "cost reducer",
-  };
-
-  return labels[tag] ?? tag;
+  return TAG_LABELS.commanderRole?.[tag] ?? tag;
 }
 
 function formatDeckSection(section) {
-  const labels = {
-    commander: "commander",
-    mainboard: "mainboard",
-    companion: "companion",
-  };
-
-  return labels[section] ?? section;
+  return TAG_LABELS.deckSection?.[section] ?? section;
 }
