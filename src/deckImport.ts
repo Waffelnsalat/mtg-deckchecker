@@ -26,6 +26,8 @@ export class DeckImportError extends Error {
 }
 
 const DECK_IMPORT_TIMEOUT_MS = 20_000;
+const MOXFIELD_BROWSER_TIMEOUT_MS = 45_000;
+const MOXFIELD_BROWSER_RESPONSE_TIMEOUT_MS = 12_000;
 const ALLOW_HEADED_BROWSER_FALLBACK =
   process.env.MTG_DECKCHECKER_ALLOW_HEADED_BROWSER === "1";
 
@@ -293,28 +295,19 @@ async function fetchMoxfieldDeckWithBrowser(
     try {
       const page = await browser.newPage();
       const responsePromise = page.waitForResponse(
-        (response) => response.url() === apiUrl,
-        { timeout: 45_000 },
-      );
+        (response) => isMoxfieldDeckApiUrl(response.url(), apiUrl),
+        { timeout: MOXFIELD_BROWSER_RESPONSE_TIMEOUT_MS },
+      ).then((response) => readMoxfieldBrowserResponse(response));
 
       await page.goto(parsedUrl.canonicalUrl, {
         waitUntil: "domcontentloaded",
-        timeout: 45_000,
+        timeout: MOXFIELD_BROWSER_TIMEOUT_MS,
       });
 
-      const deckResponse = await responsePromise;
-
-      if (!deckResponse.ok()) {
-        const status = deckResponse.status();
-        throw new DeckImportError(
-          status === 404
-            ? "Moxfield deck not found or not public."
-            : `Moxfield import failed with status ${status}.`,
-          status === 404 ? 404 : 502,
-        );
-      }
-
-      return (await deckResponse.json()) as MoxfieldDeckResponse;
+      return await firstSuccessfulMoxfieldBrowserResult(
+        fetchMoxfieldDeckFromPage(page, apiUrl),
+        responsePromise,
+      );
     } catch (error) {
       if (error instanceof DeckImportError) {
         throw error;
@@ -332,6 +325,80 @@ async function fetchMoxfieldDeckWithBrowser(
       : "Moxfield import could not be completed in this environment.",
     502,
   );
+}
+
+function isMoxfieldDeckApiUrl(responseUrl: string, apiUrl: string) {
+  try {
+    const response = new URL(responseUrl);
+    const expected = new URL(apiUrl);
+
+    return response.origin === expected.origin && response.pathname === expected.pathname;
+  } catch {
+    return responseUrl.startsWith(apiUrl);
+  }
+}
+
+function createMoxfieldStatusError(status: number) {
+  if (status === 404) {
+    return new DeckImportError("Moxfield deck not found or not public.", 404);
+  }
+
+  if (status === 403) {
+    return new DeckImportError(
+      "Moxfield blocked automated import in this environment. Export the deck as text from Moxfield and paste it into the decklist box.",
+      502,
+    );
+  }
+
+  return new DeckImportError(`Moxfield import failed with status ${status}.`, 502);
+}
+
+async function firstSuccessfulMoxfieldBrowserResult(
+  ...lookups: Array<Promise<MoxfieldDeckResponse>>
+) {
+  try {
+    return await Promise.any(lookups);
+  } catch (error) {
+    const errors = error instanceof AggregateError ? error.errors : [error];
+    const notFound = errors.find(
+      (entry): entry is DeckImportError =>
+        entry instanceof DeckImportError && entry.statusCode === 404,
+    );
+
+    if (notFound) {
+      throw notFound;
+    }
+
+    const firstError = errors.find((entry): entry is Error => entry instanceof Error);
+    throw new Error(firstError?.message ?? "Moxfield browser lookup failed.");
+  }
+}
+
+async function readMoxfieldBrowserResponse(response: import("playwright-core").Response) {
+  if (!response.ok()) {
+    throw createMoxfieldStatusError(response.status());
+  }
+
+  return (await response.json()) as MoxfieldDeckResponse;
+}
+
+async function fetchMoxfieldDeckFromPage(
+  page: import("playwright-core").Page,
+  apiUrl: string,
+) {
+  const response = await page.context().request.get(apiUrl, {
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      Referer: "https://moxfield.com/",
+    },
+    timeout: MOXFIELD_BROWSER_RESPONSE_TIMEOUT_MS,
+  });
+
+  if (!response.ok()) {
+    throw createMoxfieldStatusError(response.status());
+  }
+
+  return (await response.json()) as MoxfieldDeckResponse;
 }
 
 async function launchSystemChromium(

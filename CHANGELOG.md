@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.3.1 - 2026-06-20
+
+### Verbessert
+
+- Moxfield Browser-Fallback wartet nicht mehr 45 Sekunden starr auf exakt eine API-Response.
+- Der Fallback prueft API-Antworten jetzt per Origin/Path statt exakter URL und versucht zusaetzlich eine Anfrage ueber den Playwright-Request-Context.
+- Wenn Moxfield automatisierte Importe mit `403` blockiert, zeigt die App jetzt eine klare Meldung mit dem Hinweis, den Moxfield-Text-Export einzufuegen.
+
+### Validierung
+
+- `npm run check`
+- 295 Tests bestanden
+- Live-Test gegen Moxfield in dieser Umgebung endet weiterhin mit Moxfield/Cloudflare `403`, aber nicht mehr mit dem alten `page.waitForResponse` Timeout.
+
 ## 0.3.0 - 2026-06-20
 
 ### Neu
