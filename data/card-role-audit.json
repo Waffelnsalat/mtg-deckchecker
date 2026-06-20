@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "description": "Manual card role audit ledger. Review cards set by set, oldest first, and record expected analyzer roles, tag decisions, and follow-up code work here.",
+  "reviewPolicy": {
+    "unit": "oracle_id",
+    "setOrder": "Scryfall released_at ascending",
+    "reprints": "Review each oracle_id once. Later printings are skipped unless wording changed through Oracle text updates.",
+    "statuses": [
+      "covered",
+      "missing",
+      "wrong",
+      "intentional_ignore",
+      "needs_decision",
+      "unsupported"
+    ]
+  },
+  "roleLayers": {
+    "coreScore": [
+      "ramp",
+      "draw",
+      "selection",
+      "tutor",
+      "removal",
+      "interaction",
+      "protection",
+      "recursion",
+      "finisher",
+      "land_acceleration",
+      "cost_reduction",
+      "mana_fixing"
+    ],
+    "strategy": [
+      "aristocrats",
+      "tokens",
+      "lifegain",
+      "mill",
+      "stax",
+      "spellslinger",
+      "artifacts",
+      "enchantress",
+      "reanimator",
+      "lands_matter",
+      "voltron",
+      "kindred",
+      "blink"
+    ],
+    "mechanic": [
+      "cheat_into_play",
+      "extra_land_play",
+      "mana_storage",
+      "mana_doubler",
+      "treasure_engine",
+      "sacrifice_outlet",
+      "discard_outlet",
+      "graveyard_hate",
+      "theft",
+      "goad",
+      "monarch",
+      "initiative",
+      "face_down",
+      "discover",
+      "cascade",
+      "energy",
+      "food",
+      "clue",
+      "blood",
+      "map",
+      "proliferate",
+      "extra_turn",
+      "extra_combat"
+    ]
+  },
+  "cards": []
+}

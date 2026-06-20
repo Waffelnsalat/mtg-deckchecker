@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.4.0 - 2026-06-20
+
+### Neu
+
+- Neues Card-Role-Audit-Geruest fuer setweises Review aller Magic-Karten nach Scryfall-Releasedatum.
+- `data/scryfall-sets.json` speichert die komplette Scryfall-Setliste, damit kein Set vergessen wird.
+- `data/card-role-audit.json` dient als maschinenlesbares Ledger fuer Review-Status, erwartete Rollen, neue Tag-Entscheidungen und offene Code-Arbeit.
+- Neuer Befehl `npm run audit:cards` mit `refresh-sets`, `summary`, `next-set` und `set <code>`.
+- Neue Doku `docs/card-role-audit.md` beschreibt Workflow, Statuswerte und Tag-Layer.
+
+### Validierung
+
+- `npm run audit:cards -- refresh-sets`
+- `npm run audit:cards -- next-set`
+- `npm run check` konnte in dieser Runde wegen Approval-/Usage-Limit nicht erneut ausgefuehrt werden.
+
 ## 0.3.1 - 2026-06-20
 
 ### Verbessert

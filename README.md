@@ -10,12 +10,14 @@ First iteration of the backend and website for an EDH deck checker. The app acce
 - `npm start` runs the compiled server.
 - `npm test` runs the TypeScript test suite.
 - `npm run check` runs the TypeScript build and test suite.
+- `npm run audit:cards -- next-set` shows the oldest Scryfall set with open card-role review work.
 
 ## Finding Your Way Around
 
 - [CHANGELOG.md](CHANGELOG.md) lists what changed in each published version.
 - [docs/code-map.md](docs/code-map.md) explains where each major feature lives.
 - [docs/analysis-flow.md](docs/analysis-flow.md) diagrams the request flow, analysis dependencies, score calculation, and likely weak spots.
+- [docs/card-role-audit.md](docs/card-role-audit.md) explains the set-by-set card wording and role review workflow.
 - [src/README.md](src/README.md) maps the backend and analysis files.
 - [public/README.md](public/README.md) maps the browser UI files.
 
