@@ -1,10 +1,12 @@
 import { DeckResolutionDocument } from "./types";
+import { createLogger } from "./logger";
 
 const RECOMMANDER_SOURCE = "Recommander";
 const RECOMMANDER_API_URL =
   "https://api.recommander.cards/public-release/api/decks/recommend/top";
 const RECOMMANDER_TIMEOUT_MS = 7_000;
 const RECOMMANDER_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+const logger = createLogger("recommander");
 
 interface RecommanderApiCard {
   oracle_id?: string;
@@ -92,9 +94,10 @@ export async function lookupRecommanderRecommendations(
     });
 
     if (!response.ok) {
-      console.warn(
-        `[recommander] Lookup failed with status ${response.status} for ${commanderName}.`,
-      );
+      logger.warn("Lookup failed with non-OK status.", {
+        status: response.status,
+        commanderName,
+      });
       cache.set(cacheKey, { expiresAt: now + 60_000, value: null });
       return null;
     }
@@ -103,7 +106,7 @@ export async function lookupRecommanderRecommendations(
 
     if (payload.result_code !== "success") {
       const message = payload.error?.messages?.join("; ") || payload.result_code || "unknown error";
-      console.warn(`[recommander] Lookup failed for ${commanderName}: ${message}`);
+      logger.warn("Lookup failed.", { commanderName, message });
       cache.set(cacheKey, { expiresAt: now + 60_000, value: null });
       return null;
     }
@@ -125,7 +128,7 @@ export async function lookupRecommanderRecommendations(
     return insights;
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown Recommander lookup error.";
-    console.warn(`[recommander] Lookup failed for ${commanderName}: ${message}`);
+    logger.warn("Lookup failed.", { commanderName, message });
     cache.set(cacheKey, { expiresAt: now + 60_000, value: null });
     return null;
   }

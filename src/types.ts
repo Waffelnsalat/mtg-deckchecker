@@ -903,6 +903,7 @@ export interface DeckRecommendationAnalysis {
 
 export interface DeckAnalysisDocument {
   document: DeckResolutionDocument;
+  validation?: DeckValidationResult;
   analysis: {
     commander: DeckCommanderAnalysis;
     power: DeckPowerAnalysis;

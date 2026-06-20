@@ -1,9 +1,11 @@
 import { DeckBracketNumber, DeckResolutionDocument } from "./types";
+import { createLogger } from "./logger";
 
 const EDHREC_COMMANDER_BASE_URL = "https://edhrec.com/commanders";
 const EDHREC_SOURCE = "EDHREC";
 const EDHREC_TIMEOUT_MS = 7_000;
 const EDHREC_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+const logger = createLogger("edhrec");
 
 const BRACKET_SEGMENTS: Partial<
   Record<DeckBracketNumber, { path: string; label: string }>
@@ -171,7 +173,7 @@ async function fetchCommanderInsights(
     return parsed;
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown EDHREC lookup error.";
-    console.warn(`[edhrec] Commander lookup failed for ${url}: ${message}`);
+    logger.warn("Commander lookup failed.", { url, message });
     cache.set(url, {
       expiresAt: now + 60_000,
       value: null,

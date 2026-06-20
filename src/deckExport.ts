@@ -3,7 +3,7 @@ import path from "node:path";
 import { normalizeLookupKey, parseDecklist } from "./decklist";
 import { DeckValidationError, validateEdhDeck } from "./deckValidation";
 import { resolveDeckEntries } from "./scryfall";
-import { DeckExportDocument, DeckResolutionDocument } from "./types";
+import { DeckExportDocument, DeckResolutionDocument, DeckValidationResult } from "./types";
 
 const GENERATED_EXPORTS_DIR = path.resolve(process.cwd(), "generated-decks");
 
@@ -32,6 +32,27 @@ export async function resolveDecklistToDocument(
     | "assumeFirstCardAsCommander"
   > = {},
 ): Promise<DeckResolutionDocument> {
+  const { document, validation } = await resolveDecklistForAnalysis(decklist, options);
+
+  if (!validation.isValid) {
+    throw new DeckValidationError(validation);
+  }
+
+  return document;
+}
+
+export async function resolveDecklistForAnalysis(
+  decklist: string,
+  options: Pick<
+    CreateDeckExportOptions,
+    | "commanderName"
+    | "additionalCommanderName"
+    | "partnerName"
+    | "backgroundName"
+    | "companionName"
+    | "assumeFirstCardAsCommander"
+  > = {},
+): Promise<{ document: DeckResolutionDocument; validation: DeckValidationResult }> {
   const parsedDecklist = parseDecklist(decklist, {
     commanderName: options.commanderName,
     additionalCommanderName:
@@ -70,11 +91,14 @@ export async function resolveDecklistToDocument(
     companionName: options.companionName,
   });
 
-  if (!validation.isValid) {
-    throw new DeckValidationError(validation);
+  if (document.result.resolvedCount === 0) {
+    throw new Error("No deck cards could be resolved from the submitted decklist.");
   }
 
-  return document;
+  return {
+    document,
+    validation,
+  };
 }
 
 export async function createDeckExport(

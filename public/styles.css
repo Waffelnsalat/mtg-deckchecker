@@ -244,6 +244,37 @@ html[data-theme="dark"] .ambient-card {
   margin-bottom: 1rem;
 }
 
+.version-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0.62rem 0.82rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 252, 247, 0.66);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.version-badge:hover {
+  transform: translateY(-1px);
+  border-color: rgba(154, 61, 33, 0.28);
+  color: var(--accent-strong);
+  background: rgba(255, 252, 247, 0.92);
+}
+
+html[data-theme="dark"] .version-badge {
+  background: rgba(24, 30, 40, 0.72);
+}
+
 .hero-intro {
   display: grid;
   gap: 0.35rem;
@@ -2592,6 +2623,30 @@ html[data-theme="dark"] .ready-banner {
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
+.analysis-status-card-good {
+  border-color: rgba(84, 163, 107, 0.24);
+  background:
+    linear-gradient(135deg, rgba(238, 255, 242, 0.9), rgba(255, 252, 247, 0.88));
+}
+
+.analysis-status-card-warning {
+  border-color: rgba(199, 155, 57, 0.34);
+  background:
+    linear-gradient(135deg, rgba(255, 247, 222, 0.94), rgba(255, 252, 247, 0.88));
+}
+
+html[data-theme="dark"] .analysis-status-card-good {
+  border-color: rgba(123, 211, 146, 0.22);
+  background:
+    linear-gradient(135deg, rgba(36, 73, 51, 0.32), rgba(24, 30, 40, 0.9));
+}
+
+html[data-theme="dark"] .analysis-status-card-warning {
+  border-color: rgba(228, 190, 105, 0.25);
+  background:
+    linear-gradient(135deg, rgba(82, 63, 23, 0.34), rgba(24, 30, 40, 0.9));
+}
+
 .analysis-status-card:hover {
   transform: translateY(-2px);
   border-color: rgba(154, 61, 33, 0.26);
@@ -3495,6 +3550,12 @@ html[data-theme="dark"] .panel-badge-soft {
 .note-box h3 {
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
+}
+
+.note-box-intro {
+  margin: -0.3rem 0 0.85rem;
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 #issues-box {

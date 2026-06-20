@@ -5,6 +5,7 @@ import {
   WinConditionComboEntry,
   WinConditionComboLineType,
 } from "./types";
+import { createLogger } from "./logger";
 
 const COMMANDER_SPELLBOOK_FIND_MY_COMBOS_URL =
   "https://backend.commanderspellbook.com/find-my-combos";
@@ -13,6 +14,7 @@ const COMMANDER_SPELLBOOK_TIMEOUT_MS = 12_000;
 const COMMANDER_SPELLBOOK_MAX_TOTAL_MS = 35_000;
 const COMMANDER_SPELLBOOK_MAX_ATTEMPTS = 2;
 const COMMANDER_SPELLBOOK_RETRY_DELAY_MS = 1_200;
+const logger = createLogger("combo-lookup");
 
 interface CommanderSpellbookResponse {
   results?: {
@@ -83,7 +85,7 @@ export async function lookupDeckInfiniteCombos(
     };
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown combo lookup error.";
-    console.warn(`[combo-lookup] Commander Spellbook lookup failed: ${message}`);
+    logger.warn("Commander Spellbook lookup failed.", message);
     return {
       source: COMMANDER_SPELLBOOK_SOURCE,
       lookupStatus: "unavailable",

@@ -9,6 +9,7 @@ window.MtgDeckcheckerDeckIdentity = {
       fallbackCommanderName,
       fallbackCompanionName,
       fallbackSecretCommanderName,
+      validation,
     }) {
       const commanderCards = deckDocument.result.resolvedCards
         .filter((item) => item.section === "commander");
@@ -24,7 +25,7 @@ window.MtgDeckcheckerDeckIdentity = {
       elements.secretCommanderDisplay.textContent = fallbackSecretCommanderName || "-";
 
       renderCommanderVisuals(commanderCards);
-      renderAnalysisStatus(analysis);
+      renderAnalysisStatus(analysis, validation);
     }
 
     function reset() {
@@ -82,12 +83,21 @@ window.MtgDeckcheckerDeckIdentity = {
       return figure;
     }
 
-    function renderAnalysisStatus(analysis) {
+    function renderAnalysisStatus(analysis, validation) {
       if (!elements.analysisStatus) {
         return;
       }
 
+      const validationIssueCount = validation?.issues?.length ?? 0;
       const statusCards = [
+        {
+          label: "Confidence",
+          value: validation?.isValid === false ? "Limited" : "Checked",
+          note: validation?.isValid === false
+            ? `${validationIssueCount} validation issue${validationIssueCount === 1 ? "" : "s"}`
+            : "Deck passed validation",
+          tone: validation?.isValid === false ? "warning" : "good",
+        },
         {
           label: "Bracket",
           value: analysis.bracket.recommendedLabel,
@@ -126,6 +136,9 @@ window.MtgDeckcheckerDeckIdentity = {
     function createAnalysisStatusCard(card) {
       const article = document.createElement("article");
       article.className = "analysis-status-card";
+      if (card.tone) {
+        article.classList.add(`analysis-status-card-${card.tone}`);
+      }
 
       const label = document.createElement("span");
       label.textContent = card.label;

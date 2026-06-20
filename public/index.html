@@ -12,6 +12,16 @@
     <div class="page-shell intake-mode">
       <header class="hero">
         <div class="hero-toolbar">
+          <a
+            id="version-badge"
+            class="version-badge"
+            href="https://github.com/Waffelnsalat/mtg-deckchecker/blob/main/CHANGELOG.md"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Open release notes"
+          >
+            v0.2.0
+          </a>
           <button
             id="theme-toggle"
             class="theme-toggle"
@@ -273,7 +283,8 @@
 
           <div id="result-content" class="result-content hidden">
             <section id="issues-box" class="note-box hidden">
-              <h3>Import Issues</h3>
+              <h3 id="issues-title">Validation Issues</h3>
+              <p id="issues-summary" class="note-box-intro"></p>
               <ul id="issues-list" class="note-list"></ul>
             </section>
 

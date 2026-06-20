@@ -1,6 +1,6 @@
 {
   "name": "mtg-deckchecker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "API for parsing EDH decklists and resolving cards via Scryfall.",
   "private": true,
   "main": "dist/server.js",
@@ -10,7 +10,7 @@
     "check": "npm run build && npm test",
     "export:deck": "tsx src/exportDeck.ts",
     "start": "node dist/server.js",
-    "test": "tsx --test src/**/*.test.ts"
+    "test": "node scripts/run-tests.cjs"
   },
   "keywords": [
     "mtg",

@@ -1,6 +1,7 @@
 const pageShell = document.querySelector(".page-shell");
 const ambientCardBackground = document.querySelector("#ambient-card-background");
 const heroMediaCardImages = Array.from(document.querySelectorAll(".hero-media-card img"));
+const versionBadge = document.querySelector("#version-badge");
 const themeToggle = document.querySelector("#theme-toggle");
 const reportButton = document.querySelector("#report-button");
 const reportOverlay = document.querySelector("#report-overlay");
@@ -65,6 +66,8 @@ const advancedTabButtons = Array.from(document.querySelectorAll("[data-advanced-
 const advancedTabPanels = Array.from(document.querySelectorAll("[data-analysis-tab-panel]"));
 const commanderVisuals = document.querySelector("#commander-visuals");
 const issuesBox = document.querySelector("#issues-box");
+const issuesTitle = document.querySelector("#issues-title");
+const issuesSummary = document.querySelector("#issues-summary");
 const issuesList = document.querySelector("#issues-list");
 const structureScore = document.querySelector("#structure-score");
 const landCount = document.querySelector("#land-count");
@@ -313,6 +316,13 @@ const CARD_BREAKDOWN_LOW_SIGNAL_LAND_TAGS = new Set(
 const RECOMMENDATION_TOPICS = FRONTEND_CONFIG.recommendationTopics ?? [];
 const SIMPLE_VALUE_DRILLDOWNS = FRONTEND_CONFIG.simpleValueDrilldowns ?? {};
 const TAG_LABELS = FRONTEND_CONFIG.tagLabels ?? {};
+
+if (versionBadge && FRONTEND_CONFIG.appVersion) {
+  versionBadge.textContent = `v${FRONTEND_CONFIG.appVersion}`;
+  if (FRONTEND_CONFIG.releaseNotesUrl) {
+    versionBadge.href = FRONTEND_CONFIG.releaseNotesUrl;
+  }
+}
 let resolvedCardLookup = new Map();
 const recommendationCardVisualCache = new Map();
 const recommendationCardVisualPending = new Map();
@@ -1363,7 +1373,7 @@ function formatFetchError(error, fallbackMessage) {
 }
 
 function renderAnalyzedDeck(result) {
-  const { document, analysis } = result;
+  const { document, analysis, validation } = result;
   const recommendations = analysis.recommendations;
   const strategy = analysis.strategy;
   const winStrategy = analysis.winStrategy;
@@ -1378,6 +1388,7 @@ function renderAnalyzedDeck(result) {
     fallbackCommanderName: commanderNameField.value.trim(),
     fallbackCompanionName: companionNameField.value.trim(),
     fallbackSecretCommanderName: secretCommanderNameField.value.trim(),
+    validation,
   });
   summaryPanelsController.render(analysis);
   metricDetailsController.render(analysis);
@@ -1389,9 +1400,20 @@ function renderAnalyzedDeck(result) {
   taggedCardSectionsController.render(analysis);
   renderCardBreakdown(document, analysis);
 
-  highlightedIssueAnchors = [];
-  syncDeckHighlight();
   resultStateController.showAnalysisResults();
+
+  if (validation && validation.isValid === false) {
+    renderValidationIssues(validation.issues ?? [], {
+      preserveAnalysis: true,
+      title: "Analysis Limited",
+      summary: `This deck has ${formatIssueCount(validation.issues?.length ?? 0)}. The results below were still calculated, but power, bracket, and recommendations may be less accurate.`,
+    });
+    formStatus.textContent = "Deck analyzed with validation warnings.";
+  } else {
+    highlightedIssueAnchors = [];
+    syncDeckHighlight();
+  }
+
   triggerResultReveal();
 }
 
@@ -1434,8 +1456,27 @@ function applyImportedDecklist(decklistText, options = {}) {
   formStatus.textContent = statusMessage;
 }
 
-function renderValidationIssues(issues) {
-  resultStateController.showValidationIssues();
+function renderValidationIssues(issues, options = {}) {
+  const {
+    preserveAnalysis = false,
+    title = "Validation Issues",
+    summary = "Fix the listed deck issues before ranking.",
+  } = options;
+
+  if (!preserveAnalysis) {
+    resultStateController.showValidationIssues();
+  } else {
+    issuesBox.classList.remove("hidden");
+  }
+
+  if (issuesTitle) {
+    issuesTitle.textContent = title;
+  }
+
+  if (issuesSummary) {
+    issuesSummary.textContent = summary;
+  }
+
   highlightedIssueAnchors = issues
     .map((issue) => createIssueAnchor(issue))
     .filter(Boolean);
@@ -1443,6 +1484,10 @@ function renderValidationIssues(issues) {
   issuesList.replaceChildren(
     ...issues.map((issue) => createListItem(formatIssue(issue))),
   );
+}
+
+function formatIssueCount(count) {
+  return `${count} validation issue${count === 1 ? "" : "s"}`;
 }
 
 function getCardImageUrl(card) {

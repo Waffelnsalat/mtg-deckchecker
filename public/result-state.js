@@ -67,6 +67,7 @@ window.MtgDeckcheckerResultState = {
 
       elements.successContent.classList.add("hidden");
       elements.issuesBox.classList.add("hidden");
+      elements.issuesList.replaceChildren();
       elements.resultContent.classList.add("hidden");
       elements.resultEmpty.classList.remove("hidden");
       controllers.deckIdentity.reset();

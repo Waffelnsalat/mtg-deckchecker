@@ -13,7 +13,9 @@ First iteration of the backend and website for an EDH deck checker. The app acce
 
 ## Finding Your Way Around
 
+- [CHANGELOG.md](CHANGELOG.md) lists what changed in each published version.
 - [docs/code-map.md](docs/code-map.md) explains where each major feature lives.
+- [docs/analysis-flow.md](docs/analysis-flow.md) diagrams the request flow, analysis dependencies, score calculation, and likely weak spots.
 - [src/README.md](src/README.md) maps the backend and analysis files.
 - [public/README.md](public/README.md) maps the browser UI files.
 

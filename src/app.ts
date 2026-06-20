@@ -22,7 +22,7 @@ import { analyzeDeckWinStrategy } from "./winStrategyAnalysis";
 import { analyzeDeckAdvancedRoles } from "./advancedCardScan";
 import { DeckImportError, importDecklistFromUrl } from "./deckImport";
 import { DeckValidationError } from "./deckValidation";
-import { createDeckExport, getGeneratedExportsDir, resolveDecklistToDocument } from "./deckExport";
+import { createDeckExport, getGeneratedExportsDir, resolveDecklistForAnalysis, resolveDecklistToDocument } from "./deckExport";
 import { lookupCommanderEdhrecInsights } from "./edhrec";
 import { DeckBracketNumber } from "./types";
 
@@ -141,7 +141,7 @@ export function createApp() {
         parsedBody.data.additionalCommanderName ??
         parsedBody.data.partnerName ??
         parsedBody.data.backgroundName;
-      const document = await resolveDecklistToDocument(parsedBody.data.decklist, {
+      const { document, validation } = await resolveDecklistForAnalysis(parsedBody.data.decklist, {
         commanderName: parsedBody.data.commanderName,
         additionalCommanderName,
         partnerName: parsedBody.data.partnerName,
@@ -217,6 +217,7 @@ export function createApp() {
 
       response.json({
         document,
+        validation,
         analysis: {
           commander,
           power,
