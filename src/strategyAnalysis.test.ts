@@ -2479,6 +2479,41 @@ test("analyzeDeckStrategy keeps political donation shells out of token and upkee
   assert.ok(!analysis.subStrategies.some((strategy) => strategy.key === "tokens"));
 });
 
+test("analyzeDeckStrategy uses EDHREC commander themes only when the deck backs them up", () => {
+  const analysis = analyzeDeckStrategy(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Ivy, Gleeful Spellthief",
+        "Legendary Creature - Faerie Rogue",
+        2,
+        "Flying. Whenever a player casts a spell that targets only a single creature other than Ivy, Gleeful Spellthief, you may copy that spell. The copy targets Ivy.",
+        { color_identity: ["G", "U"] },
+      ),
+      createResolvedCard("mainboard", 8, "Combat Research", "Enchantment - Aura", 1, "Enchant creature. Enchanted creature has \"Whenever this creature deals combat damage to a player, draw a card.\""),
+      createResolvedCard("mainboard", 5, "Snake Umbra", "Enchantment - Aura", 3, "Enchant creature. Enchanted creature gets +1/+1 and has \"Whenever this creature deals combat damage to an opponent, draw a card.\""),
+      createResolvedCard("mainboard", 4, "Gemrazer", "Creature - Beast", 4, "Mutate {1}{G}{G}. Reach, trample. Whenever this creature mutates, destroy target artifact or enchantment.", { keywords: ["Mutate"] }),
+      createResolvedCard("mainboard", 2, "Vesuvan Duplimancy", "Enchantment", 4, "Whenever you cast a spell that targets only a single artifact or creature you control, create a token that's a copy of that artifact or creature."),
+      createResolvedCard("mainboard", 5, "Tyvar's Stand", "Instant", 1, "Target creature you control gets +X/+X and gains hexproof and indestructible until end of turn."),
+      createResolvedCard("mainboard", 75, "Forest", "Basic Land - Forest", 0, ""),
+    ]),
+    createEmptyWinConditions(),
+    {
+      edhrec: createEdhrecInsights([
+        { label: "Auras", slug: "auras", count: 101 },
+        { label: "Mutate", slug: "mutate", count: 88 },
+        { label: "Spell Copy", slug: "spell-copy", count: 21 },
+      ]),
+    },
+  );
+
+  assert.equal(analysis.mainStrategy?.key, "voltron");
+  assert.equal(analysis.commanderProfiles?.[0]?.label, "Auras Package");
+  assert.ok(analysis.commanderProfiles?.some((profile) => profile.key === "mutate"));
+  assert.ok(analysis.commanderProfiles?.some((profile) => profile.key === "copy_clone"));
+});
+
 function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocument {
   return {
     format: "edh",
@@ -2496,6 +2531,19 @@ function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocume
       unresolvedCount: 0,
     },
   };
+}
+
+function createEdhrecInsights(themes: Array<{ label: string; slug: string; count: number }>) {
+  return {
+    source: "EDHREC",
+    url: "https://edhrec.com/commanders/ivy-gleeful-spellthief",
+    pageLabel: "Core",
+    commanderNames: ["Ivy, Gleeful Spellthief"],
+    deckCount: 1000,
+    themes,
+    lists: [],
+    cardsByName: new Map(),
+  } as any;
 }
 
 function createResolvedCard(

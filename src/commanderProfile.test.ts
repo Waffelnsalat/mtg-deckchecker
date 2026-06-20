@@ -72,6 +72,44 @@ test("analyzeCommanderProfiles shows thin support when a commander ask is not ba
   assert.ok(tapProfile.missingPieces.length > 0);
 });
 
+test("analyzeCommanderProfiles does not treat commander creature types as kindred asks", () => {
+  const profiles = analyzeCommanderProfiles(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Ludevic, Necro-Alchemist",
+        "Legendary Creature - Human Wizard",
+        3,
+        "At the beginning of each player's end step, that player may draw a card if a player other than you lost life this turn.",
+      ),
+      createResolvedCard("mainboard", 6, "Helpful Human", "Creature - Human Advisor", 2, ""),
+      createResolvedCard("mainboard", 93, "Island", "Basic Land - Island", 0, ""),
+    ]),
+  );
+
+  assert.ok(!profiles.some((profile) => profile.key === "kindred"));
+});
+
+test("analyzeCommanderProfiles does not treat standalone lifelink as a lifegain ask", () => {
+  const profiles = analyzeCommanderProfiles(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Tymna the Weaver",
+        "Legendary Creature - Human Cleric",
+        3,
+        "Lifelink. At the beginning of your postcombat main phase, you may pay X life. If you do, draw X cards, where X is the number of opponents that were dealt combat damage this turn.",
+      ),
+      createResolvedCard("mainboard", 6, "Incidental Life Card", "Creature - Cleric", 2, "When this creature enters, you gain 2 life."),
+      createResolvedCard("mainboard", 93, "Plains", "Basic Land - Plains", 0, ""),
+    ]),
+  );
+
+  assert.ok(!profiles.some((profile) => profile.key === "lifegain"));
+});
+
 function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocument {
   return {
     format: "edh",

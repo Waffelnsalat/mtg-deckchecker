@@ -581,6 +581,52 @@ test("analyzeDeckRecommendations lets commander-specific EDHREC ramp beat generi
   assert.match(rampTopic?.cards[0]?.reason ?? "", /EDHREC/i);
 });
 
+test("analyzeDeckRecommendations treats EDHREC commander themes as package strategy signals", async () => {
+  const recommendations = await analyzeDeckRecommendations(
+    createInput({
+      document: createDocument([
+        createResolvedCard("commander", "Brago, King Eternal", "Legendary Creature - Spirit", 4, [
+          "W",
+          "U",
+        ]),
+        createResolvedCard("mainboard", "Azorius Signet", "Artifact", 2, []),
+        createResolvedCard("mainboard", "Basalt Monolith", "Artifact", 3, []),
+      ]),
+      bracket: createBracket(3, "below"),
+      structure: {
+        structureScore: 54,
+        counts: {
+          lands: 36,
+          creatures: 18,
+        },
+        mana: {
+          recommendedLands: {
+            min: 35,
+            max: 37,
+          },
+        },
+      },
+      strategy: createStrategyStub("artifacts", "Artifacts"),
+      edhrec: createEdhrecInsights(
+        "Upgraded",
+        [
+          {
+            name: "Ephemerate",
+            synergy: 0.45,
+            listTags: ["highsynergycards"],
+          },
+        ],
+        [{ slug: "blink", label: "Blink", count: 1813 }],
+      ),
+    }) as any,
+  );
+
+  const shellTopic = recommendations.topics.find((topic) => topic.key === "shell");
+
+  assert.ok(shellTopic);
+  assert.equal(shellTopic?.cards.some((card) => card.name === "Ephemerate"), true);
+});
+
 test("analyzeDeckRecommendations can use Recommander context-fit shell suggestions", async () => {
   const recommendations = await analyzeDeckRecommendations(
     createInput({
@@ -1107,6 +1153,11 @@ function createEdhrecInsights(
     synergy: number;
     listTags: string[];
   }>,
+  themes: Array<{
+    slug: string;
+    label: string;
+    count: number;
+  }> = [],
 ) {
   const cardsByName = new Map<string, any>();
 
@@ -1130,6 +1181,7 @@ function createEdhrecInsights(
     pageLabel,
     commanderNames: ["Teysa Karlov"],
     deckCount: 100,
+    themes,
     lists: [],
     cardsByName,
   };

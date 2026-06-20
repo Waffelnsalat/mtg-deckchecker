@@ -23,6 +23,7 @@ import { analyzeDeckAdvancedRoles } from "./advancedCardScan";
 import { DeckImportError, importDecklistFromUrl } from "./deckImport";
 import { DeckValidationError } from "./deckValidation";
 import { createDeckExport, getGeneratedExportsDir, resolveDecklistToDocument } from "./deckExport";
+import { lookupCommanderEdhrecInsights } from "./edhrec";
 import { DeckBracketNumber } from "./types";
 
 const importDeckSchema = z.object({
@@ -149,9 +150,12 @@ export function createApp() {
       });
       const draw = analyzeDeckDraw(document);
       const winConditions = await analyzeDeckWinConditions(document);
+      const targetBracket = toDeckBracketNumber(parsedBody.data.targetBracket);
+      const edhrec = await lookupCommanderEdhrecInsights(document, targetBracket);
       const strategy = analyzeDeckStrategy(document, winConditions, {
         secretCommanderName: parsedBody.data.secretCommanderName,
         preferredStrategyKey: parsedBody.data.preferredStrategyKey,
+        edhrec,
       });
       const winStrategy = analyzeDeckWinStrategy(document, strategy, winConditions);
       const commander = analyzeDeckCommander(document, strategy, winStrategy, winConditions);
@@ -190,7 +194,7 @@ export function createApp() {
         power,
         gameChangers,
         winConditions,
-        targetBracket: toDeckBracketNumber(parsedBody.data.targetBracket),
+        targetBracket,
       });
       const recommendations = await analyzeDeckRecommendations({
         document,
@@ -208,6 +212,7 @@ export function createApp() {
         winConditions,
         removal,
         spellInteraction,
+        edhrec,
       });
 
       response.json({

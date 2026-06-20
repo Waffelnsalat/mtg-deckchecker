@@ -171,6 +171,7 @@ export type LandBaseTag =
   | "always_tapped"
   | "conditional_tapped"
   | "typed_land"
+  | "artifact_land"
   | "fetch_land"
   | "utility_land"
   | "colorless_only"

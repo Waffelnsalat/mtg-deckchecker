@@ -91,6 +91,7 @@ window.MtgDeckcheckerFrontendConfig = {
       always_tapped: "always tapped",
       conditional_tapped: "conditional",
       typed_land: "typed",
+      artifact_land: "artifact land",
       fetch_land: "fetch/search",
       utility_land: "utility",
       colorless_only: "colorless only",

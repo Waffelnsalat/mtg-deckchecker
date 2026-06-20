@@ -163,6 +163,7 @@ function detectLandBaseHits(card: ScryfallCard): LandBaseTagHit[] {
     const fetchLand = isFetchOrSearchLand(text);
     const utilityLand = isUtilityLand(rawText, fetchLand);
     const typedLand = isTypedLand(typeLine, text);
+    const artifactLand = typeLine.includes("Artifact Land");
     const colorlessOnly = isColorlessOnlyLand(text);
     const costlyLand = isCostlyLand(text, fetchLand);
     const basicLand = isBasicLand(typeLine);
@@ -186,6 +187,10 @@ function detectLandBaseHits(card: ScryfallCard): LandBaseTagHit[] {
 
     if (typedLand) {
       addHit(hits, "typed_land", 0.72, "Carries basic land types for stronger land synergies.");
+    }
+
+    if (artifactLand) {
+      addHit(hits, "artifact_land", 0.78, "Artifact land slot that matters for artifact count and artifact synergies.");
     }
 
     if (fetchLand) {

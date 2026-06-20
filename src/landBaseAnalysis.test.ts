@@ -109,8 +109,9 @@ test("analyzeDeckLandBase gives every land a baseline tag", () => {
       ),
       createResolvedCard("mainboard", 20, "Forest", "Basic Land - Forest", 0, "({T}: Add {G}.)"),
       createResolvedCard("mainboard", 1, "Plain Dual", "Land", 0, "{T}: Add {G} or {W}."),
+      createResolvedCard("mainboard", 1, "Artifact Seat Style", "Artifact Land", 0, "{T}: Add {U}."),
       createResolvedCard("mainboard", 1, "Maze Style", "Land", 0, "{T}: Untap target attacking creature. Prevent all combat damage that would be dealt to and dealt by that creature this turn."),
-      createResolvedCard("mainboard", 77, "Filler Spell", "Creature - Elf", 2, "", { mana_cost: "{1}{G}" }),
+      createResolvedCard("mainboard", 76, "Filler Spell", "Creature - Elf", 2, "", { mana_cost: "{1}{G}" }),
     ]),
   );
 
@@ -123,9 +124,10 @@ test("analyzeDeckLandBase gives every land a baseline tag", () => {
   assert.ok(labels.get("Forest")?.has("mana_source"));
   assert.ok(labels.get("Plain Dual")?.has("land_slot"));
   assert.ok(labels.get("Plain Dual")?.has("mana_source"));
+  assert.ok(labels.get("Artifact Seat Style")?.has("artifact_land"));
   assert.ok(labels.get("Maze Style")?.has("land_slot"));
   assert.ok(labels.get("Maze Style")?.has("utility_land"));
-  assert.equal(analysis.taggedCards.filter((card) => card.section === "mainboard").length, 3);
+  assert.equal(analysis.taggedCards.filter((card) => card.section === "mainboard").length, 4);
 });
 
 test("analyzeDeckLandBase punishes too many always-tapped lands in a low-curve shell", () => {

@@ -19,6 +19,9 @@ interface EdhrecCommanderPagePayload {
     pageProps?: {
       data?: {
         num_decks_avg?: number;
+        panels?: {
+          taglinks?: EdhrecTagLinkPayload[];
+        };
         container?: {
           json_dict?: {
             cardlists?: EdhrecCardListPayload[];
@@ -33,6 +36,12 @@ interface EdhrecCardListPayload {
   header?: string;
   tag?: string;
   cardviews?: EdhrecCardViewPayload[];
+}
+
+interface EdhrecTagLinkPayload {
+  count?: number;
+  slug?: string;
+  value?: string;
 }
 
 interface EdhrecCardViewPayload {
@@ -62,12 +71,19 @@ export interface EdhrecCommanderCardList {
   cards: EdhrecCommanderCard[];
 }
 
+export interface EdhrecCommanderTheme {
+  label: string;
+  slug: string;
+  count: number;
+}
+
 export interface EdhrecCommanderInsights {
   source: typeof EDHREC_SOURCE;
   url: string;
   pageLabel: string;
   commanderNames: string[];
   deckCount: number;
+  themes: EdhrecCommanderTheme[];
   lists: EdhrecCommanderCardList[];
   cardsByName: Map<string, EdhrecCommanderCard>;
 }
@@ -203,9 +219,29 @@ function parseCommanderInsightsHtml(
     pageLabel: input.pageLabel,
     commanderNames: input.commanderNames,
     deckCount: toNumber(data?.num_decks_avg),
+    themes: normalizeThemeLinks(data?.panels?.taglinks ?? []),
     lists,
     cardsByName,
   };
+}
+
+function normalizeThemeLinks(taglinks: EdhrecTagLinkPayload[]) {
+  return taglinks
+    .map((taglink): EdhrecCommanderTheme | null => {
+      const label = taglink.value?.trim() ?? "";
+      const slug = taglink.slug?.trim() ?? "";
+
+      if (!label || !slug) {
+        return null;
+      }
+
+      return {
+        label,
+        slug,
+        count: toNumber(taglink.count),
+      };
+    })
+    .filter((theme): theme is EdhrecCommanderTheme => theme !== null);
 }
 
 function normalizeCardList(

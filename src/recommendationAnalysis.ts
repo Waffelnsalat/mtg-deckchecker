@@ -3927,6 +3927,9 @@ function getStrategyKeys(context: RecommendationContext) {
       keys.add(profile.key);
     }
   }
+  for (const key of getEdhrecThemeStrategyKeys(context)) {
+    keys.add(key);
+  }
   return keys;
 }
 
@@ -3967,6 +3970,11 @@ function getCandidateFitScore(
   const commanderProfileKeys = getCommanderProfileKeys(context);
   if (candidate.strategyKeys?.some((key) => commanderProfileKeys.has(key))) {
     score = Math.max(score, 4.9);
+  }
+
+  const edhrecThemeKeys = getEdhrecThemeStrategyKeys(context);
+  if (candidate.strategyKeys?.some((key) => edhrecThemeKeys.has(key))) {
+    score = Math.max(score, 3.9);
   }
 
   if (primaryPlanKey && candidate.winPlanKeys?.includes(primaryPlanKey)) {
@@ -4017,6 +4025,11 @@ function getCommanderSpecificSuggestionScore(
     score += 2.4;
   }
 
+  const edhrecThemeKeys = getEdhrecThemeStrategyKeys(context);
+  if (candidate.strategyKeys?.some((key) => edhrecThemeKeys.has(key))) {
+    score += 1.8;
+  }
+
   if (recommanderMatch) {
     score += getRecommanderFitBonus(recommanderMatch);
   }
@@ -4035,6 +4048,121 @@ function getEdhrecFitBonus(match: ReturnType<typeof getEdhrecCandidateMatch>) {
 
   const synergyBonus = match.synergy > 0 ? Math.min(2.5, match.synergy * 5) : 0;
   return roundTo(match.priority + synergyBonus, 2);
+}
+
+function getEdhrecThemeStrategyKeys(context: RecommendationContext) {
+  const keys = new Set<StrategyKey>();
+  const themes = context.edhrec?.themes ?? [];
+  const meaningfulThemeCount = themes.filter((theme) => theme.count >= 10).length;
+
+  for (const theme of themes.slice(0, Math.max(4, meaningfulThemeCount))) {
+    const key = mapEdhrecThemeToStrategyKey(theme.slug);
+    if (key) {
+      keys.add(key);
+    }
+  }
+
+  return keys;
+}
+
+function mapEdhrecThemeToStrategyKey(slug: string): StrategyKey | null {
+  switch (slug) {
+    case "aggro":
+      return "aggro";
+    case "aristocrats":
+      return "aristocrats";
+    case "artifacts":
+      return "artifacts";
+    case "blink":
+    case "etb":
+      return "blink";
+    case "clues":
+      return "clues";
+    case "coin-flips":
+      return "coin_flip";
+    case "combo":
+      return "combo";
+    case "control":
+      return "control";
+    case "counters":
+    case "plus-1-plus-1-counters":
+      return "counters";
+    case "curse":
+    case "curses":
+      return "curses";
+    case "dice":
+    case "dice-rolling":
+      return "dice_rolls";
+    case "discard":
+    case "madness":
+      return "madness";
+    case "dungeons":
+      return "dungeons";
+    case "energy":
+      return "energy";
+    case "enchantress":
+    case "enchantments":
+      return "enchantress";
+    case "equipment":
+    case "auras":
+    case "voltron":
+      return "voltron";
+    case "exile":
+      return "exile_cast";
+    case "extra-combats":
+    case "extra-combat":
+      return "extra_combat";
+    case "extra-turns":
+      return null;
+    case "food":
+      return "food";
+    case "goad":
+      return "goad";
+    case "group-hug":
+      return "group_hug";
+    case "group-slug":
+      return "group_slug";
+    case "lands":
+    case "landfall":
+      return "lands_matter";
+    case "lifegain":
+      return "lifegain";
+    case "mill":
+      return "mill";
+    case "clones":
+    case "copy":
+    case "spell-copy":
+      return "copy_clone";
+    case "monarch":
+      return "monarch";
+    case "ninjutsu":
+      return "ninjutsu";
+    case "pillow-fort":
+    case "pillowfort":
+      return "pillowfort";
+    case "infect":
+    case "poison":
+      return "poison";
+    case "reanimator":
+    case "graveyard":
+      return "reanimator";
+    case "sagas":
+      return "sagas";
+    case "spellslinger":
+    case "storm":
+    case "cantrips":
+      return "spellslinger";
+    case "stax":
+      return "stax";
+    case "tokens":
+      return "tokens";
+    case "theft":
+      return "theft";
+    case "x-spells":
+      return "x_spells";
+    default:
+      return null;
+  }
 }
 
 function isCommanderSpecificStrategy(key: StrategyKey) {

@@ -13,6 +13,7 @@ import {
 } from "./types";
 import { createEffectiveManaValueContext, sumEffectiveManaValue } from "./effectiveManaValue";
 import { analyzeCommanderProfiles } from "./commanderProfile";
+import type { EdhrecCommanderInsights } from "./edhrec";
 
 const STRATEGY_LABELS: Record<StrategyKey, string> = {
   combo: "Combo",
@@ -240,6 +241,7 @@ interface StrategyContext {
   artifactCount: number;
   enchantmentCount: number;
   instantSorceryCount: number;
+  spellslingerPayoffCount: number;
   planeswalkerCount: number;
   equipmentAuraCount: number;
   creatureCount: number;
@@ -300,9 +302,13 @@ interface LinkedSynergyProfile {
 export function analyzeDeckStrategy(
   document: DeckResolutionDocument,
   winConditions: DeckWinConditionAnalysis,
-  options: { secretCommanderName?: string; preferredStrategyKey?: string } = {},
+  options: {
+    secretCommanderName?: string;
+    preferredStrategyKey?: string;
+    edhrec?: EdhrecCommanderInsights | null;
+  } = {},
 ): DeckStrategyAnalysis {
-  const context = getStrategyContext(document);
+  const context = getStrategyContext(document, options.edhrec ?? null);
   const totals = createStrategyTotals();
   const keyCards = new Map<StrategyKey, Map<string, number>>();
   const reasons = new Map<StrategyKey, Map<string, number>>();
@@ -336,6 +342,7 @@ export function analyzeDeckStrategy(
   }
 
   applyCommanderBuildAroundAdjustments(totals, keyCards, supportBuckets, reasons, context);
+  applyCommanderProfileAdjustments(totals, keyCards, supportBuckets, reasons, context);
   applyLinkedSynergyAdjustments(totals, keyCards, supportBuckets, reasons, context);
   applyCommanderThemeAdjustments(totals, supportBuckets, reasons);
   applyDensityAdjustments(totals, context, reasons);
@@ -346,7 +353,9 @@ export function analyzeDeckStrategy(
     .map((key) => buildStrategyEntry(key, totals[key], totals, keyCards, reasons, context))
     .sort((left, right) => right.score - left.score || right.rawScore - left.rawScore);
 
-  const strongestStrategy = rankedStrategies[0] ?? null;
+  const strongestByScore = rankedStrategies[0] ?? null;
+  const commanderProfileStrategy = selectCommanderProfileMainStrategy(rankedStrategies, context);
+  const strongestStrategy = commanderProfileStrategy ?? strongestByScore;
   const mainStrategy =
     strongestStrategy && strongestStrategy.score >= 24 ? strongestStrategy : null;
   const mainStrategySeed =
@@ -414,11 +423,58 @@ function isSecretCommanderCard(deckCard: ResolvedDeckCard, normalizedSecretComma
   );
 }
 
-function getStrategyContext(document: DeckResolutionDocument): StrategyContext {
+function selectCommanderProfileMainStrategy(
+  rankedStrategies: DeckStrategyEntry[],
+  context: StrategyContext,
+) {
+  const strongest = rankedStrategies[0] ?? null;
+  if (!strongest) {
+    return null;
+  }
+
+  const profile = context.commanderProfiles.find(
+    (entry) =>
+      entry.supportReason.includes("EDHREC") &&
+      entry.confidence >= 85 &&
+      entry.supportCount >= entry.supportTarget &&
+      getCommanderProfileSpecificity(entry) >= 4,
+  );
+
+  if (!profile) {
+    return null;
+  }
+
+  const candidate = rankedStrategies.find((entry) => entry.key === profile.key) ?? null;
+  if (!candidate || candidate.score < 70 || candidate.score < strongest.score - 8) {
+    return null;
+  }
+
+  const broadStrategies = new Set<StrategyKey>([
+    "enchantress",
+    "artifacts",
+    "spellslinger",
+    "aggro",
+    "control",
+  ]);
+
+  if (candidate.key !== strongest.key && !broadStrategies.has(strongest.key)) {
+    return null;
+  }
+
+  return candidate;
+}
+
+function getStrategyContext(
+  document: DeckResolutionDocument,
+  edhrec: EdhrecCommanderInsights | null = null,
+): StrategyContext {
   const deckCards = document.result.resolvedCards.filter(
     (card) => card.section === "commander" || card.section === "mainboard",
   );
-  const commanderProfiles = analyzeCommanderProfiles(document);
+  const commanderProfiles = mergeCommanderProfiles([
+    ...analyzeCommanderProfiles(document),
+    ...createEdhrecCommanderProfiles(deckCards, edhrec),
+  ]);
   const creatureCount = sumMatchingCards(deckCards, (card) => hasCardType(card.card, "Creature"));
   const planeswalkerCount = sumMatchingCards(
     deckCards,
@@ -456,6 +512,11 @@ function getStrategyContext(document: DeckResolutionDocument): StrategyContext {
     instantSorceryCount: sumMatchingCards(
       deckCards,
       (card) => hasCardType(card.card, "Instant") || hasCardType(card.card, "Sorcery"),
+    ),
+    spellslingerPayoffCount: sumMatchingCards(deckCards, (card) =>
+      getStrategySegments(card.card).some((segment) =>
+        hasSpellslingerText(segment.text, card.card.keywords ?? []),
+      ),
     ),
     planeswalkerCount,
     equipmentAuraCount: sumMatchingCards(
@@ -500,6 +561,310 @@ function getStrategyContext(document: DeckResolutionDocument): StrategyContext {
     dominantCreatureRatio,
     kindredEnabled,
   };
+}
+
+function createEdhrecCommanderProfiles(
+  deckCards: ResolvedDeckCard[],
+  edhrec: EdhrecCommanderInsights | null,
+): DeckCommanderProfile[] {
+  if (!edhrec) {
+    return [];
+  }
+
+  const commanders = deckCards.filter((deckCard) => deckCard.section === "commander");
+  if (commanders.length === 0) {
+    return [];
+  }
+
+  const profiles: DeckCommanderProfile[] = [];
+  const meaningfulThemeCount = edhrec.themes.filter((theme) => theme.count >= 10).length;
+
+  for (const theme of edhrec.themes.slice(0, Math.max(4, meaningfulThemeCount))) {
+    for (const key of mapEdhrecThemeToStrategyKeys(theme.slug)) {
+      const matcher = getEdhrecThemeSupportMatcher(key, theme.slug);
+      const supportCards = deckCards.filter(
+        (deckCard) => deckCard.section === "mainboard" && matcher(deckCard.card),
+      );
+      const supportCount = supportCards.reduce((sum, deckCard) => sum + deckCard.quantity, 0);
+      const minimumSupport = getEdhrecThemeMinimumSupport(key, theme.slug);
+
+      if (supportCount < minimumSupport) {
+        continue;
+      }
+
+      const supportTarget = getEdhrecThemeSupportTarget(key, theme.slug);
+      const coreTarget = Math.max(2, Math.ceil(supportTarget * 0.45));
+      const coreCards = supportCards.filter((deckCard) =>
+        isEdhrecThemeCoreSupport(deckCard.card, key, theme.slug),
+      );
+      const coreCount = coreCards.reduce((sum, deckCard) => sum + deckCard.quantity, 0);
+      const supportRatio = Math.min(1.2, supportCount / Math.max(1, supportTarget));
+      const coreRatio = Math.min(1.2, coreCount / Math.max(1, coreTarget));
+      const confidence = roundTo(Math.min(100, 18 + supportRatio * 58 + coreRatio * 24), 0);
+      const commanderName = commanders.map((commander) => commander.card.name).join(" + ");
+
+      profiles.push({
+        commanderName,
+        key,
+        label: `${theme.label} Package`,
+        supportReason: `${theme.label} is an EDHREC commander theme, and these cards are the matching material present in this deck.`,
+        supportTarget,
+        supportCount,
+        coreCount,
+        confidence,
+        supportCards: supportCards
+          .sort(
+            (left, right) =>
+              Number(isEdhrecThemeCoreSupport(right.card, key, theme.slug)) -
+                Number(isEdhrecThemeCoreSupport(left.card, key, theme.slug)) ||
+              right.quantity - left.quantity ||
+              left.card.name.localeCompare(right.card.name),
+          )
+          .slice(0, 10)
+          .map((deckCard) => deckCard.card.name),
+        missingPieces:
+          supportCount >= supportTarget && coreCount >= coreTarget
+            ? []
+            : [
+                ...(coreCount < coreTarget ? ["More true core pieces"] : []),
+                ...(supportCount < supportTarget
+                  ? [`More ${theme.label.toLowerCase()} support`]
+                  : []),
+              ].slice(0, 3),
+      });
+    }
+  }
+
+  return profiles;
+}
+
+function mergeCommanderProfiles(profiles: DeckCommanderProfile[]) {
+  const bestByKey = new Map<string, DeckCommanderProfile>();
+
+  for (const profile of profiles) {
+    const key = `${normalizeText(profile.commanderName)}:${profile.key}:${normalizeText(profile.label)}`;
+    const existing = bestByKey.get(key);
+    if (
+      !existing ||
+      profile.confidence > existing.confidence ||
+      (profile.confidence === existing.confidence && profile.supportCount > existing.supportCount)
+    ) {
+      bestByKey.set(key, profile);
+    }
+  }
+
+  return [...bestByKey.values()]
+    .sort(
+      (left, right) =>
+        right.confidence - left.confidence ||
+        getCommanderProfileSpecificity(right) - getCommanderProfileSpecificity(left) ||
+        right.supportCount - left.supportCount,
+    )
+    .slice(0, 8);
+}
+
+function getCommanderProfileSpecificity(profile: DeckCommanderProfile) {
+  const label = normalizeText(profile.label);
+  if (label.includes("aura") || label.includes("mutate") || label.includes("copy")) {
+    return 5;
+  }
+  if (["face_down", "voltron", "copy_clone", "mutate", "poison"].includes(profile.key)) {
+    return 4;
+  }
+  if (["enchantress", "artifacts", "aggro", "control"].includes(profile.key)) {
+    return 2;
+  }
+  return 3;
+}
+
+function mapEdhrecThemeToStrategyKeys(slug: string): StrategyKey[] {
+  switch (slug) {
+    case "auras":
+    case "equipment":
+    case "voltron":
+      return ["voltron"];
+    case "mutate":
+      return ["mutate"];
+    case "clones":
+    case "copy":
+    case "spell-copy":
+      return ["copy_clone"];
+    case "enchantress":
+    case "enchantments":
+      return ["enchantress"];
+    case "infect":
+    case "poison":
+      return ["poison"];
+    case "tokens":
+      return ["tokens"];
+    case "aggro":
+      return ["aggro"];
+    case "blink":
+    case "etb":
+      return ["blink"];
+    case "spellslinger":
+    case "storm":
+    case "cantrips":
+      return ["spellslinger"];
+    case "artifacts":
+      return ["artifacts"];
+    case "counters":
+    case "plus-1-plus-1-counters":
+      return ["counters"];
+    case "lands":
+    case "landfall":
+      return ["lands_matter"];
+    case "pillow-fort":
+    case "pillowfort":
+      return ["pillowfort"];
+    case "theft":
+      return ["theft"];
+    case "group-hug":
+      return ["group_hug"];
+    case "group-slug":
+      return ["group_slug"];
+    case "stax":
+      return ["stax"];
+    case "control":
+      return ["control"];
+    case "combo":
+      return ["combo"];
+    default:
+      return [];
+  }
+}
+
+function getEdhrecThemeSupportMatcher(
+  key: StrategyKey,
+  slug: string,
+): (card: ScryfallCard) => boolean {
+  if (slug === "auras") {
+    return (card) => cardHasSubtype(card, "Aura") || isTargetedCreatureSpellSupport(card);
+  }
+
+  if (slug === "spell-copy") {
+    return (card) => isCopyCloneSupport(card);
+  }
+
+  switch (key) {
+    case "voltron":
+      return (card) =>
+        cardHasSubtype(card, "Aura") ||
+        cardHasSubtype(card, "Equipment") ||
+        isTargetedCreatureSpellSupport(card) ||
+        getStrategySegments(card).some((segment) => hasVoltronText(segment.text));
+    case "mutate":
+      return (card) => isMutateSupport(card);
+    case "copy_clone":
+      return (card) => isCopyCloneSupport(card);
+    case "enchantress":
+      return (card) =>
+        hasCardType(card, "Enchantment") ||
+        getStrategySegments(card).some((segment) =>
+          hasEnchantmentMattersText(segment.text, card.keywords),
+        );
+    case "poison":
+      return (card) => isPoisonSupport(card);
+    case "tokens":
+      return (card) => isTokenSupport(card);
+    case "blink":
+      return (card) => isBlinkSupport(card);
+    case "spellslinger":
+      return (card) =>
+        hasCardType(card, "Instant") ||
+        hasCardType(card, "Sorcery") ||
+        getStrategySegments(card).some((segment) =>
+          hasSpellslingerText(segment.text, card.keywords),
+        );
+    case "artifacts":
+      return (card) => hasCardType(card, "Artifact");
+    case "counters":
+      return (card) => isCounterSupport(card);
+    case "lands_matter":
+      return (card) => hasCardType(card, "Land") || hasLandMattersCardText(card);
+    case "pillowfort":
+      return (card) => isPillowfortSupport(card);
+    case "theft":
+      return (card) => isTheftSupport(card);
+    case "group_hug":
+      return (card) => isGroupHugSupport(card);
+    case "group_slug":
+      return (card) => isGroupSlugSupport(card);
+    case "stax":
+      return (card) => isStaxSupport(card);
+    case "control":
+      return (card) => getStrategySegments(card).some((segment) => hasControlText(segment.text));
+    case "combo":
+      return (card) => getStrategySegments(card).some((segment) => hasComboSupportText(segment.text));
+    case "aggro":
+      return (card) => hasCardType(card, "Creature") || hasAggroCardText(card);
+    default:
+      return () => false;
+  }
+}
+
+function isEdhrecThemeCoreSupport(card: ScryfallCard, key: StrategyKey, slug: string) {
+  if (slug === "auras") {
+    return cardHasSubtype(card, "Aura");
+  }
+
+  if (slug === "spell-copy") {
+    return isCopyCloneSupport(card);
+  }
+
+  switch (key) {
+    case "voltron":
+      return cardHasSubtype(card, "Aura") || cardHasSubtype(card, "Equipment");
+    case "enchantress":
+      return getStrategySegments(card).some((segment) =>
+        hasEnchantmentMattersText(segment.text, card.keywords),
+      );
+    case "mutate":
+      return isMutateSupport(card);
+    default:
+      return getEdhrecThemeSupportMatcher(key, slug)(card);
+  }
+}
+
+function getEdhrecThemeSupportTarget(key: StrategyKey, slug: string) {
+  if (slug === "auras") {
+    return 12;
+  }
+  if (slug === "spell-copy" || slug === "clones") {
+    return 6;
+  }
+  return STRATEGY_SUPPORT_TARGETS[key]?.support ?? 10;
+}
+
+function getEdhrecThemeMinimumSupport(key: StrategyKey, slug: string) {
+  if (slug === "spell-copy" || slug === "clones") {
+    return 1;
+  }
+  if (["auras", "mutate", "voltron", "infect", "poison"].includes(slug)) {
+    return 3;
+  }
+  if (
+    [
+      "aggro",
+      "artifacts",
+      "control",
+      "counters",
+      "enchantress",
+      "enchantments",
+      "lands_matter",
+      "lifegain",
+      "spellslinger",
+    ].includes(key)
+  ) {
+    return Math.max(4, Math.ceil(getEdhrecThemeSupportTarget(key, slug) * 0.35));
+  }
+  return 2;
+}
+
+function hasComboSupportText(text: string) {
+  return /\bcombo\b|\binfinite\b|\bwin the game\b|\buntap\b[^.]{0,120}\bpermanent\b|\bcopy\b[^.]{0,120}\bspell\b/.test(
+    text,
+  );
 }
 
 function detectStrategyHits(card: ScryfallCard, context: StrategyContext): StrategyHit[] {
@@ -1066,13 +1431,13 @@ function applyDensityAdjustments(
     );
   }
 
-  if (context.instantSorceryCount >= 16) {
+  if (context.instantSorceryCount >= 16 && context.spellslingerPayoffCount >= 3) {
     addStrategyBonus(
       totals,
       reasons,
       "spellslinger",
-      context.instantSorceryCount >= 24 ? 2.2 : 1.35,
-      `${context.instantSorceryCount} instants and sorceries support a spellslinger shell.`,
+      context.instantSorceryCount >= 24 && context.spellslingerPayoffCount >= 5 ? 2.2 : 1.15,
+      `${context.instantSorceryCount} instants and sorceries plus ${context.spellslingerPayoffCount} spell-matter payoffs support a spellslinger shell.`,
     );
   }
 
@@ -2744,8 +3109,8 @@ function hasEtbPayoffText(text: string) {
 
 function hasSpellslingerText(text: string, keywords: string[]) {
   return (
-    /\binstant or sorcery\b/.test(text) ||
-    /\bnoncreature spell\b/.test(text) ||
+    /\binstant or sorcery spells? you cast\b/.test(text) ||
+    /\bwhenever you cast\b[^.]{0,140}\b(?:instant|sorcery|noncreature)\b/.test(text) ||
     /\bcopy target spell\b/.test(text) ||
     /\bcopy\b[^.]{0,80}\binstant\b/.test(text) ||
     /\bmagecraft\b/.test(text) ||
@@ -3434,6 +3799,58 @@ function applyCommanderBuildAroundAdjustments(
   }
 }
 
+function applyCommanderProfileAdjustments(
+  totals: Record<StrategyKey, number>,
+  keyCards: Map<StrategyKey, Map<string, number>>,
+  supportBuckets: Map<StrategyKey, Map<string, StrategySupportCard>>,
+  reasons: Map<StrategyKey, Map<string, number>>,
+  context: StrategyContext,
+) {
+  for (const profile of context.commanderProfiles.slice(0, 5)) {
+    if (
+      !profile.supportReason.includes("EDHREC") ||
+      profile.key === "kindred" ||
+      profile.supportCount <= 0 ||
+      profile.confidence < 45
+    ) {
+      continue;
+    }
+
+    const supportRatio = Math.min(1.5, profile.supportCount / Math.max(1, profile.supportTarget));
+    const bonus = roundTo(
+      Math.min(
+        3.8,
+        0.55 + supportRatio * 1.15 + (profile.confidence / 100) * 1.25 + getCommanderProfileSpecificity(profile) * 0.12,
+      ),
+      2,
+    );
+    const reason = `${profile.commanderName}'s ${profile.label} is backed by ${profile.supportCount} cards in the 99.`;
+
+    addStrategyBonus(totals, reasons, profile.key, bonus, reason);
+    trackKeyCard(keyCards, profile.key, profile.commanderName, 1.5);
+
+    for (const commander of context.deckCards.filter((deckCard) => deckCard.section === "commander")) {
+      trackStrategySupportCard(
+        supportBuckets,
+        profile.key,
+        commander,
+        1.5,
+        `Commander profile points toward ${profile.label}.`,
+      );
+    }
+
+    const supportNames = new Set(profile.supportCards.map((name) => normalizeText(name)));
+    for (const deckCard of context.deckCards) {
+      if (deckCard.section !== "mainboard" || !supportNames.has(normalizeText(deckCard.card.name))) {
+        continue;
+      }
+      const amount = roundTo(0.42 * deckCard.quantity, 2);
+      trackKeyCard(keyCards, profile.key, deckCard.card.name, amount);
+      trackStrategySupportCard(supportBuckets, profile.key, deckCard, amount, profile.supportReason);
+    }
+  }
+}
+
 function getCommanderBuildAroundProfiles(context: StrategyContext): CommanderBuildAroundProfile[] {
   const profiles: CommanderBuildAroundProfile[] = [];
   const commanders = context.deckCards.filter((deckCard) => deckCard.section === "commander");
@@ -3989,6 +4406,30 @@ function getCommanderRequestedMaterialProfiles(
       supportWeight: 0.74,
       supportReason: "Aura cards follow the commander's Aura or enchanted-creature text.",
     });
+  }
+
+  if (commanderAsksForSingleTargetCreatureSpells(text)) {
+    addProfile(
+      "voltron",
+      "single-target creature spells",
+      (deckCard) => isTargetedCreatureSpellSupport(deckCard.card),
+      {
+        minimumSupport: 5,
+        supportWeight: 0.82,
+        supportReason:
+          "Auras, mutate spells, and single-creature buffs follow the commander's target-only spell text.",
+      },
+    );
+    addProfile(
+      "copy_clone",
+      "spell-copy payoffs",
+      (deckCard) => isCopyCloneSupport(deckCard.card),
+      {
+        minimumSupport: 1,
+        supportWeight: 0.92,
+        supportReason: "Copy payoffs follow the commander's copied-target spell text.",
+      },
+    );
   }
 
   if (commanderAsksForEquipment(text)) {
@@ -4558,6 +4999,15 @@ function commanderAsksForCopyClone(text: string) {
   );
 }
 
+function commanderAsksForSingleTargetCreatureSpells(text: string) {
+  return (
+    /\bspells? that targets? only a single creature\b/.test(text) ||
+    /\bspells? that targets? only one creature\b/.test(text) ||
+    /\bspell\b[^.]{0,140}\btargets? only (?:a single|one) creature\b/.test(text) ||
+    (/\bcopy that spell\b/.test(text) && /\bthe copy targets?\b/.test(text))
+  );
+}
+
 function commanderAsksForStax(text: string) {
   return hasStaxText(text);
 }
@@ -4719,6 +5169,22 @@ function isPillowfortSupport(card: ScryfallCard) {
 
 function isCopyCloneSupport(card: ScryfallCard) {
   return getStrategySegments(card).some((segment) => hasCopyCloneText(segment.text));
+}
+
+function isTargetedCreatureSpellSupport(card: ScryfallCard) {
+  return (
+    cardHasSubtype(card, "Aura") ||
+    isMutateSupport(card) ||
+    getStrategySegments(card).some((segment) =>
+      hasVoltronText(segment.text) || hasTargetedCreatureSupportText(segment.text),
+    )
+  );
+}
+
+function hasTargetedCreatureSupportText(text: string) {
+  return /\btarget creature(?: you control)?\b[^.]{0,180}\b(?:gets? \+|gains? (?:hexproof|indestructible|flying|trample|first strike|double strike|lifelink|protection)|can't be blocked|becomes? (?:a|an)|mutate)\b/.test(
+    text,
+  );
 }
 
 function isStaxSupport(card: ScryfallCard) {

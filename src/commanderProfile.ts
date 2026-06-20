@@ -35,7 +35,7 @@ export function analyzeCommanderProfiles(document: DeckResolutionDocument): Deck
   const profiles: DeckCommanderProfile[] = [];
 
   for (const commander of commanders) {
-    const commanderText = getCardText(commander.card);
+    const commanderText = getCommanderAskText(commander.card);
     const dynamicRules = getDynamicCommanderProfileRules(commanderText, context);
 
     for (const rule of [...BASE_COMMANDER_PROFILE_RULES, ...dynamicRules]) {
@@ -242,7 +242,7 @@ const BASE_COMMANDER_PROFILE_RULES: CommanderProfileRule[] = [
     supportReason: "Lifegain, lifelink, and life-payoff cards are the material this commander asks for.",
     supportTarget: 14,
     coreTarget: 7,
-    askMatcher: (text) => /\bwhenever you gain life\b|\blife total\b|\blifelink\b|\bgain that much life\b/.test(text),
+    askMatcher: (text) => /\bwhenever you gain life\b|\blife total\b|\bgain that much life\b|\bif you gained life\b|\bfor each life you gained\b/.test(text),
     supportMatcher: (deckCard) => /\bgain (?:\d+|x|that much)? ?life\b|\blifelink\b|\bwhenever you gain life\b|\blife total\b/.test(getCardText(deckCard.card)),
   },
   {
@@ -260,8 +260,21 @@ const BASE_COMMANDER_PROFILE_RULES: CommanderProfileRule[] = [
     supportReason: "Auras, Equipment, protection, evasion, and commander-damage support are the material this commander asks for.",
     supportTarget: 12,
     coreTarget: 6,
-    askMatcher: (text, commander) => /\bequipped creature\b|\benchanted creature\b|\bauras? you control\b|\bequipment you control\b|\bdeals combat damage to a player\b/.test(text) && hasCardType(commander, "Creature"),
-    supportMatcher: (deckCard) => hasSubtype(deckCard.card, "Equipment") || hasSubtype(deckCard.card, "Aura") || /\bgets \+\d\/\+\d\b|\bdouble strike\b|\bhexproof\b|\bindestructible\b|\bcan't be blocked\b/.test(getCardText(deckCard.card)),
+    askMatcher: (text, commander) =>
+      hasCardType(commander, "Creature") &&
+      (/\bequipped creature\b|\benchanted creature\b|\bauras? you control\b|\bequipment you control\b|\bdeals combat damage to a player\b/.test(text) ||
+        commanderAsksForSingleTargetCreatureSpells(text)),
+    supportMatcher: (deckCard) => isVoltronPackageSupport(deckCard.card),
+  },
+  {
+    key: "copy_clone",
+    label: "Copy / Clone Package",
+    supportReason: "Copy engines, copy payoffs, and cloned spell or permanent effects are the material this commander asks for.",
+    supportTarget: 6,
+    coreTarget: 3,
+    askMatcher: (text) =>
+      /\bcopy target\b|\bcopy (?:that|the|a) (?:spell|permanent|creature|artifact|enchantment|instant|sorcery|ability)\b|\btoken that's? a copy\b|\benters the battlefield as a copy\b|\bbecomes? a copy\b/.test(text),
+    supportMatcher: (deckCard) => hasCopyCloneProfileText(getCardText(deckCard.card)),
   },
 ];
 
@@ -387,6 +400,50 @@ function getCardText(card: ScryfallCard) {
     );
   }
   return normalizeText(`${card.type_line} ${card.oracle_text ?? ""} ${card.keywords.join(" ")}`);
+}
+
+function getCommanderAskText(card: ScryfallCard) {
+  if (card.card_faces?.length) {
+    return normalizeText(
+      card.card_faces
+        .map((face) => `${face.oracle_text ?? ""} ${(face as { keywords?: string[] }).keywords?.join(" ") ?? ""}`)
+        .join(" "),
+    );
+  }
+  return normalizeText(`${card.oracle_text ?? ""} ${card.keywords.join(" ")}`);
+}
+
+function commanderAsksForSingleTargetCreatureSpells(text: string) {
+  return (
+    /\bspells? that targets? only a single creature\b/.test(text) ||
+    /\bspells? that targets? only one creature\b/.test(text) ||
+    /\bspell\b[^.]{0,140}\btargets? only (?:a single|one) creature\b/.test(text) ||
+    (/\bcopy that spell\b/.test(text) && /\bthe copy targets?\b/.test(text))
+  );
+}
+
+function isVoltronPackageSupport(card: ScryfallCard) {
+  const text = getCardText(card);
+  return (
+    hasSubtype(card, "Equipment") ||
+    hasSubtype(card, "Aura") ||
+    /\bmutate\b|\bmutates?\b|\bmerged creatures?\b/.test(text) ||
+    /\btarget creature(?: you control)?\b[^.]{0,180}\b(?:gets? \+|gains? (?:hexproof|indestructible|flying|trample|first strike|double strike|lifelink|protection)|can't be blocked|becomes? (?:a|an))\b/.test(
+      text,
+    ) ||
+    /\bdouble strike\b|\bhexproof\b|\bindestructible\b|\bcan't be blocked\b/.test(text)
+  );
+}
+
+function hasCopyCloneProfileText(text: string) {
+  return (
+    /\bcopy target\b/.test(text) ||
+    /\bcopy (?:that|the|a) (?:spell|permanent|creature|artifact|enchantment|instant|sorcery|ability)\b/.test(text) ||
+    /\btoken that's? a copy\b/.test(text) ||
+    /\bcreate\b[^.]{0,120}\btoken\b[^.]{0,120}\bcopy\b/.test(text) ||
+    /\benters the battlefield as a copy\b/.test(text) ||
+    /\bbecomes? a copy\b/.test(text)
+  );
 }
 
 function getCreatureTypeCounts(deckCards: ResolvedDeckCard[]) {

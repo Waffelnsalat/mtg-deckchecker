@@ -11,6 +11,10 @@ test("lookupCommanderEdhrecInsights parses target-bracket commander pages", asyn
     return textResponse(
       createEdhrecHtml({
         numDecks: 1200,
+        taglinks: [
+          { slug: "spellslinger", value: "Spellslinger", count: 412 },
+          { slug: "storm", value: "Storm", count: 120 },
+        ],
         cardlists: [
           {
             header: "High Synergy Cards",
@@ -37,6 +41,10 @@ test("lookupCommanderEdhrecInsights parses target-bracket commander pages", asyn
     assert.ok(result);
     assert.equal(result?.pageLabel, "Optimized");
     assert.equal(result?.deckCount, 1200);
+    assert.deepEqual(result?.themes.slice(0, 2), [
+      { slug: "spellslinger", label: "Spellslinger", count: 412 },
+      { slug: "storm", label: "Storm", count: 120 },
+    ]);
     assert.equal(result?.cardsByName.get("mystical tutor")?.synergy, 0.47);
   } finally {
     restoreFetch();
@@ -162,6 +170,11 @@ function textResponse(payload: string, status = 200) {
 
 function createEdhrecHtml(input: {
   numDecks: number;
+  taglinks?: Array<{
+    slug: string;
+    value: string;
+    count: number;
+  }>;
   cardlists: Array<{
     header: string;
     tag: string;
@@ -180,6 +193,9 @@ function createEdhrecHtml(input: {
       pageProps: {
         data: {
           num_decks_avg: input.numDecks,
+          panels: {
+            taglinks: input.taglinks ?? [],
+          },
           container: {
             json_dict: {
               cardlists: input.cardlists,
