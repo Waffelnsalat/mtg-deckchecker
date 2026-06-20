@@ -24,7 +24,15 @@ import { DeckImportError, importDecklistFromUrl } from "./deckImport";
 import { DeckValidationError } from "./deckValidation";
 import { createDeckExport, getGeneratedExportsDir, resolveDecklistForAnalysis, resolveDecklistToDocument } from "./deckExport";
 import { lookupCommanderEdhrecInsights } from "./edhrec";
-import { DeckBracketNumber } from "./types";
+import { lookupRecommanderRecommendations } from "./recommander";
+import {
+  DeckAnalysisSources,
+  DeckBracketNumber,
+  DeckRecommendationAnalysis,
+  DeckResolutionDocument,
+  DeckValidationResult,
+  DeckWinConditionAnalysis,
+} from "./types";
 
 const importDeckSchema = z.object({
   url: z.string().trim().url().max(500),
@@ -152,6 +160,7 @@ export function createApp() {
       const winConditions = await analyzeDeckWinConditions(document);
       const targetBracket = toDeckBracketNumber(parsedBody.data.targetBracket);
       const edhrec = await lookupCommanderEdhrecInsights(document, targetBracket);
+      const recommander = await lookupRecommanderRecommendations(document);
       const strategy = analyzeDeckStrategy(document, winConditions, {
         secretCommanderName: parsedBody.data.secretCommanderName,
         preferredStrategyKey: parsedBody.data.preferredStrategyKey,
@@ -213,11 +222,21 @@ export function createApp() {
         removal,
         spellInteraction,
         edhrec,
+        recommander,
+      });
+      const sources = buildAnalysisSources({
+        document,
+        validation,
+        edhrec,
+        recommander,
+        recommendations,
+        winConditions,
       });
 
       response.json({
         document,
         validation,
+        sources,
         analysis: {
           commander,
           power,
@@ -333,6 +352,86 @@ export function createApp() {
   });
 
   return app;
+}
+
+export function buildAnalysisSources(input: {
+  document: DeckResolutionDocument;
+  validation: DeckValidationResult;
+  edhrec: Awaited<ReturnType<typeof lookupCommanderEdhrecInsights>>;
+  recommander: Awaited<ReturnType<typeof lookupRecommanderRecommendations>>;
+  recommendations: DeckRecommendationAnalysis;
+  winConditions: DeckWinConditionAnalysis;
+}): DeckAnalysisSources {
+  const commanderNames = input.document.result.resolvedCards
+    .filter((card) => card.section === "commander")
+    .map((card) => card.card.name);
+  const uniqueMainboardCount = new Set(
+    input.document.result.resolvedCards
+      .filter((card) => card.section === "mainboard")
+      .map((card) => card.card.name.toLowerCase()),
+  ).size;
+  const unresolvedCount = input.document.result.unresolvedCount;
+  const parseErrorCount = input.document.parse.errors.length;
+  const scryfallLimited = unresolvedCount > 0 || parseErrorCount > 0;
+  const hasCommander = commanderNames.length > 0;
+  const comboLookupUnavailable = input.winConditions.combos.lookupStatus !== "ok";
+  const recommendationCardCount = input.recommendations.topics.reduce(
+    (sum, topic) => sum + topic.cards.length,
+    0,
+  );
+
+  return {
+    scryfall: {
+      key: "scryfall",
+      label: "Scryfall",
+      status: scryfallLimited ? "partial" : "ok",
+      used: true,
+      summary: scryfallLimited
+        ? `${unresolvedCount} unresolved card${unresolvedCount === 1 ? "" : "s"} and ${parseErrorCount} parse issue${parseErrorCount === 1 ? "" : "s"} affected the resolved deck.`
+        : `${input.document.result.resolvedCount} card entries resolved.`,
+      detail: scryfallLimited
+        ? "Every score is based only on the cards that could be resolved."
+        : undefined,
+      affects: ["deck identity", "all scores", "card roles"],
+    },
+    edhrec: {
+      key: "edhrec",
+      label: "EDHREC",
+      status: input.edhrec ? "ok" : hasCommander ? "failed" : "partial",
+      used: Boolean(input.edhrec),
+      summary: input.edhrec
+        ? `${input.edhrec.pageLabel} commander page loaded with ${input.edhrec.lists.length} card list${input.edhrec.lists.length === 1 ? "" : "s"}.`
+        : hasCommander
+          ? "Commander-page data was unavailable, so commander-specific trends were not used."
+          : "No commander was resolved, so commander-page data could not be requested.",
+      url: input.edhrec?.url,
+      affects: ["strategy detection", "commander themes", "recommendation fit"],
+    },
+    commanderSpellbook: {
+      key: "commanderSpellbook",
+      label: "Commander Spellbook",
+      status: comboLookupUnavailable ? "failed" : "ok",
+      used: !comboLookupUnavailable,
+      summary: comboLookupUnavailable
+        ? "Combo lookup was unavailable, so exact external combo lines were not used."
+        : `${input.winConditions.combos.exactCount} exact combo line${input.winConditions.combos.exactCount === 1 ? "" : "s"} found.`,
+      detail: input.winConditions.combos.error,
+      affects: ["win conditions", "combo count", "bracket rules floor"],
+    },
+    recommander: {
+      key: "recommander",
+      label: "Recommander",
+      status: input.recommander ? "ok" : hasCommander && uniqueMainboardCount >= 5 ? "failed" : "partial",
+      used: Boolean(input.recommander),
+      summary: input.recommander
+        ? `${input.recommander.cards.length} deck-context recommendation${input.recommander.cards.length === 1 ? "" : "s"} loaded.`
+        : hasCommander && uniqueMainboardCount >= 5
+          ? "Deck-context recommendations were unavailable, so fallback and EDHREC/library suggestions were used."
+          : "The deck did not have enough resolved commander/mainboard context for deck-context recommendations.",
+      url: input.recommander?.url,
+      affects: ["card recommendations", "suggestion confidence"],
+    },
+  };
 }
 
 function validateReportContent(report: z.infer<typeof reportSchema>) {

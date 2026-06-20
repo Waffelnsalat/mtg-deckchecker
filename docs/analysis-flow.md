@@ -8,7 +8,7 @@ This document explains how a submitted EDH decklist moves through the app, how t
 flowchart TD
   Browser[Browser UI<br/>public/app.js] --> AnalyzeEndpoint[POST /api/edh/decklists/analyze<br/>src/app.ts]
   AnalyzeEndpoint --> ValidateBody[Validate request body<br/>zod schema]
-  ValidateBody --> ResolveDocument[resolveDecklistToDocument<br/>src/deckExport.ts]
+  ValidateBody --> ResolveDocument[resolveDecklistForAnalysis<br/>src/deckExport.ts]
   ResolveDocument --> ParseDecklist[parseDecklist<br/>src/decklist.ts]
   ParseDecklist --> Scryfall[resolveDeckEntries<br/>src/scryfall.ts]
   Scryfall --> ValidateDeck[validateEdhDeck<br/>src/deckValidation.ts]
@@ -16,7 +16,8 @@ flowchart TD
   ValidateDeck -->|soft validation issues| LimitedAnalysis[Limited analysis<br/>validation returned with results]
   LimitedAnalysis --> AnalysisPipeline
   ValidateDeck -->|hard parse/resolve failure| Error400[400/502 no analysis]
-  AnalysisPipeline --> Response[Return document + analysis]
+  AnalysisPipeline --> Sources[Build source status<br/>Scryfall + EDHREC + Spellbook + Recommander]
+  Sources --> Response[Return document + validation + sources + analysis]
   Response --> Render[Render results<br/>public/app.js]
 ```
 
@@ -79,6 +80,11 @@ flowchart TD
   GameChangers --> Bracket
   WinConditions --> Bracket
 
+  Document --> SourceStatus[Source status metadata]
+  EDHREC --> SourceStatus
+  Spellbook --> SourceStatus
+  Recommander --> SourceStatus
+
   Document --> Recommendations[recommendationAnalysis]
   Commander --> Recommendations
   Bracket --> Recommendations
@@ -103,6 +109,7 @@ flowchart TD
 | Result area | Main source file | Main inputs | Output role |
 | --- | --- | --- | --- |
 | `document` | `src/deckExport.ts` | raw decklist, commander options, Scryfall cards, validation | The canonical resolved deck object used by every later step. |
+| `sources` | `src/app.ts` | document, EDHREC, Commander Spellbook, Recommander, recommendations | Reports whether each external source was ready, partial, or failed, and which result areas may be affected. |
 | `structure` | `src/deckAnalysis.ts` | resolved deck cards | Counts lands, card types, curve, average mana value, and baseline shell health. |
 | `landBase` | `src/landBaseAnalysis.ts` | resolved deck cards | Scores land count, tapped lands, fixing, fetches, utility lands, and risky lands. |
 | `ramp` | `src/rampAnalysis.ts` | resolved deck cards | Finds stable ramp, burst mana, land acceleration, fixing, and cost reduction. |
@@ -194,7 +201,7 @@ The recommended bracket is the higher value between the power read and the rules
 | Area | Why it can be fragile | Where to inspect first |
 | --- | --- | --- |
 | Limited-analysis confidence | Invalid or incomplete decks can now receive partial analysis, but those results are less reliable and must stay clearly marked in the UI. | `src/deckExport.ts`, `src/app.ts`, `public/app.js`, `public/deck-identity.js` |
-| External service dependence | Scryfall is required for card resolution. Commander Spellbook, EDHREC, and Recommander can change or fail independently. | `src/scryfall.ts`, `src/commanderSpellbook.ts`, `src/edhrec.ts`, `src/recommander.ts` |
+| External service dependence | Scryfall is required for card resolution. Commander Spellbook, EDHREC, and Recommander can change or fail independently. The `sources` result must make that visible immediately. | `src/scryfall.ts`, `src/commanderSpellbook.ts`, `src/edhrec.ts`, `src/recommander.ts`, `src/app.ts` |
 | Regex-based card role detection | Many effects are inferred from oracle text patterns. New card wording can be missed or misclassified. | `src/advancedCardScan.ts`, `src/drawAnalysis.ts`, `src/rampAnalysis.ts`, `src/interactionAnalysis.ts` |
 | Large strategy rules file | Strategy detection has many overlapping archetype rules, so small changes can affect many decks. | `src/strategyAnalysis.ts`, `src/strategyAnalysis.test.ts` |
 | Large recommendation rules file | Recommendations combine static cards, bracket target, EDHREC, Recommander, and weak-topic logic. Priority bugs can be subtle. | `src/recommendationAnalysis.ts`, `src/recommendationAnalysis.test.ts` |
@@ -208,7 +215,8 @@ The recommended bracket is the higher value between the power read and the rules
 3. Inspect the focused module result before looking at power. For example, debug `ramp` before debugging `power.speed`.
 4. Inspect `strategy` and `winStrategy` before `commander`, `power`, `bracket`, and `recommendations`, because several later modules depend on them.
 5. If bracket looks too high, inspect `bracket.signals` for Game Changers, exact two-card combos, extra turns, and mass land denial.
-6. If recommendations look odd, inspect target bracket, weak topic scores, EDHREC context, and whether Recommander cards were classified into a topic.
+6. Check `sources` before trusting a surprising result. If EDHREC, Commander Spellbook, or Recommander is limited, the affected strategy, combo, bracket, or recommendation sections may be less complete.
+7. If recommendations look odd, inspect target bracket, weak topic scores, EDHREC context, and whether Recommander cards were classified into a topic.
 
 ## Fast Orientation
 

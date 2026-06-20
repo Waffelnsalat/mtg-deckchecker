@@ -10,6 +10,7 @@ window.MtgDeckcheckerDeckIdentity = {
       fallbackCompanionName,
       fallbackSecretCommanderName,
       validation,
+      sources,
     }) {
       const commanderCards = deckDocument.result.resolvedCards
         .filter((item) => item.section === "commander");
@@ -25,7 +26,7 @@ window.MtgDeckcheckerDeckIdentity = {
       elements.secretCommanderDisplay.textContent = fallbackSecretCommanderName || "-";
 
       renderCommanderVisuals(commanderCards);
-      renderAnalysisStatus(analysis, validation);
+      renderAnalysisStatus(analysis, validation, sources);
     }
 
     function reset() {
@@ -83,20 +84,29 @@ window.MtgDeckcheckerDeckIdentity = {
       return figure;
     }
 
-    function renderAnalysisStatus(analysis, validation) {
+    function renderAnalysisStatus(analysis, validation, sources) {
       if (!elements.analysisStatus) {
         return;
       }
 
       const validationIssueCount = validation?.issues?.length ?? 0;
+      const sourceStates = Object.values(sources ?? {});
+      const limitedSources = sourceStates.filter((source) => source.status !== "ok");
+      const sourceCount = sourceStates.length;
       const statusCards = [
         {
           label: "Confidence",
-          value: validation?.isValid === false ? "Limited" : "Checked",
-          note: validation?.isValid === false
-            ? `${validationIssueCount} validation issue${validationIssueCount === 1 ? "" : "s"}`
-            : "Deck passed validation",
-          tone: validation?.isValid === false ? "warning" : "good",
+          value: validation?.isValid === false || limitedSources.length > 0 ? "Limited" : "Checked",
+          note: buildConfidenceNote(validationIssueCount, limitedSources.length),
+          tone: validation?.isValid === false || limitedSources.length > 0 ? "warning" : "good",
+        },
+        {
+          label: "Sources",
+          value: limitedSources.length > 0 ? "Limited" : "Ready",
+          note: limitedSources.length > 0
+            ? `${sourceCount - limitedSources.length}/${sourceCount} sources ready`
+            : `${sourceCount}/${sourceCount} sources ready`,
+          tone: limitedSources.length > 0 ? "warning" : "good",
         },
         {
           label: "Bracket",
@@ -127,6 +137,20 @@ window.MtgDeckcheckerDeckIdentity = {
       ];
 
       elements.analysisStatus.replaceChildren(...statusCards.map(createAnalysisStatusCard));
+    }
+
+    function buildConfidenceNote(validationIssueCount, sourceIssueCount) {
+      const parts = [];
+
+      if (validationIssueCount > 0) {
+        parts.push(`${validationIssueCount} deck issue${validationIssueCount === 1 ? "" : "s"}`);
+      }
+
+      if (sourceIssueCount > 0) {
+        parts.push(`${sourceIssueCount} source warning${sourceIssueCount === 1 ? "" : "s"}`);
+      }
+
+      return parts.length > 0 ? parts.join(", ") : "Deck and sources checked";
     }
 
     function clearAnalysisStatus() {

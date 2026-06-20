@@ -901,9 +901,31 @@ export interface DeckRecommendationAnalysis {
   topics: DeckRecommendationTopicEntry[];
 }
 
+export type DeckAnalysisSourceKey =
+  | "scryfall"
+  | "edhrec"
+  | "commanderSpellbook"
+  | "recommander";
+
+export type DeckAnalysisSourceStatus = "ok" | "partial" | "failed";
+
+export interface DeckAnalysisSourceState {
+  key: DeckAnalysisSourceKey;
+  label: string;
+  status: DeckAnalysisSourceStatus;
+  used: boolean;
+  summary: string;
+  detail?: string;
+  url?: string;
+  affects: string[];
+}
+
+export type DeckAnalysisSources = Record<DeckAnalysisSourceKey, DeckAnalysisSourceState>;
+
 export interface DeckAnalysisDocument {
   document: DeckResolutionDocument;
   validation?: DeckValidationResult;
+  sources: DeckAnalysisSources;
   analysis: {
     commander: DeckCommanderAnalysis;
     power: DeckPowerAnalysis;

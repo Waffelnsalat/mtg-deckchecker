@@ -1373,11 +1373,13 @@ function formatFetchError(error, fallbackMessage) {
 }
 
 function renderAnalyzedDeck(result) {
-  const { document, analysis, validation } = result;
+  const { document, analysis, validation, sources } = result;
   const recommendations = analysis.recommendations;
   const strategy = analysis.strategy;
   const winStrategy = analysis.winStrategy;
   const structure = analysis.structure;
+  const sourceIssues = getSourceIssues(sources);
+  const hasValidationIssues = validation && validation.isValid === false;
   syncResolvedCardLookup(document.result.resolvedCards);
   currentAnalysisSnapshot = analysis;
   currentAnalysisDocument = document;
@@ -1389,6 +1391,7 @@ function renderAnalyzedDeck(result) {
     fallbackCompanionName: companionNameField.value.trim(),
     fallbackSecretCommanderName: secretCommanderNameField.value.trim(),
     validation,
+    sources,
   });
   summaryPanelsController.render(analysis);
   metricDetailsController.render(analysis);
@@ -1402,13 +1405,16 @@ function renderAnalyzedDeck(result) {
 
   resultStateController.showAnalysisResults();
 
-  if (validation && validation.isValid === false) {
-    renderValidationIssues(validation.issues ?? [], {
+  if (hasValidationIssues || sourceIssues.length > 0) {
+    const validationIssues = validation?.issues ?? [];
+    renderValidationIssues([...validationIssues, ...sourceIssues], {
       preserveAnalysis: true,
       title: "Analysis Limited",
-      summary: `This deck has ${formatIssueCount(validation.issues?.length ?? 0)}. The results below were still calculated, but power, bracket, and recommendations may be less accurate.`,
+      summary: buildAnalysisLimitedSummary(validationIssues.length, sourceIssues.length),
     });
-    formStatus.textContent = "Deck analyzed with validation warnings.";
+    formStatus.textContent = hasValidationIssues
+      ? "Deck analyzed with validation and source warnings."
+      : "Deck analyzed with source warnings.";
   } else {
     highlightedIssueAnchors = [];
     syncDeckHighlight();
@@ -1484,6 +1490,29 @@ function renderValidationIssues(issues, options = {}) {
   issuesList.replaceChildren(
     ...issues.map((issue) => createListItem(formatIssue(issue))),
   );
+}
+
+function getSourceIssues(sources) {
+  return Object.values(sources ?? {})
+    .filter((source) => source && source.status !== "ok")
+    .map((source) => ({
+      code: `source_${source.key}`,
+      message: `${source.label}: ${source.summary}`,
+    }));
+}
+
+function buildAnalysisLimitedSummary(validationIssueCount, sourceIssueCount) {
+  const parts = [];
+
+  if (validationIssueCount > 0) {
+    parts.push(formatIssueCount(validationIssueCount));
+  }
+
+  if (sourceIssueCount > 0) {
+    parts.push(`${sourceIssueCount} source warning${sourceIssueCount === 1 ? "" : "s"}`);
+  }
+
+  return `${parts.join(" and ")}. The results below were still calculated, but affected sections may be less accurate.`;
 }
 
 function formatIssueCount(count) {
