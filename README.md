@@ -11,6 +11,7 @@ First iteration of the backend and website for an EDH deck checker. The app acce
 - `npm test` runs the TypeScript test suite.
 - `npm run check` runs the TypeScript build and test suite.
 - `npm run audit:cards -- next-set` shows the oldest Scryfall set with open card-role review work.
+- `npm run audit:cards -- progress` writes done/in-progress/pending status for every Scryfall set.
 
 ## Finding Your Way Around
 

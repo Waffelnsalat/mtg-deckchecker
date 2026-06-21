@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { analyzeDeckAdvancedRoles } from "../src/advancedCardScan";
 import { analyzeDeckConsistency } from "../src/consistencyAnalysis";
@@ -13,6 +13,8 @@ const DATA_DIR = path.resolve(process.cwd(), "data");
 const SETS_PATH = path.join(DATA_DIR, "scryfall-sets.json");
 const AUDIT_PATH = path.join(DATA_DIR, "card-role-audit.json");
 const WORKSHEETS_DIR = path.join(DATA_DIR, "card-role-worksheets");
+const SET_PROGRESS_JSON_PATH = path.join(DATA_DIR, "card-role-set-progress.json");
+const SET_PROGRESS_TSV_PATH = path.join(DATA_DIR, "card-role-set-progress.tsv");
 const SCRYFALL_SETS_URL = "https://api.scryfall.com/sets";
 const SCRYFALL_SEARCH_URL = "https://api.scryfall.com/cards/search";
 const USER_AGENT = "mtg-deckchecker-card-role-audit/0.1";
@@ -78,6 +80,23 @@ interface StoredSet {
   parentSetCode?: string | null;
   scryfallUri: string;
   searchUri: string;
+}
+
+type SetAuditStatus = "done" | "in_progress" | "pending";
+
+interface SetProgressEntry {
+  code: string;
+  name: string;
+  releasedAt: string | null;
+  setType: string;
+  cardCount: number;
+  digital: boolean;
+  auditStatus: SetAuditStatus;
+  reviewedOracleIds: number;
+  totalUniqueOracleIds: number | null;
+  openOracleIds: number | null;
+  progressKnown: boolean;
+  worksheetPath?: string;
 }
 
 interface ScryfallSetPayload {
@@ -154,6 +173,9 @@ async function main() {
       return;
     case "import-worksheet":
       await importWorksheet(args[0]);
+      return;
+    case "progress":
+      await writeSetProgress();
       return;
     case "help":
     case "--help":
@@ -312,6 +334,73 @@ async function importWorksheet(setCode: string | undefined) {
   console.log(`Imported ${imported} reviewed cards from ${relativePath(worksheetPath)}.`);
   console.log(`Skipped ${skipped} rows without auditStatus.`);
   console.log(`Updated ${relativePath(AUDIT_PATH)}.`);
+}
+
+async function writeSetProgress() {
+  const [sets, ledger, worksheetProgress] = await Promise.all([
+    loadSets(),
+    loadAuditLedger(),
+    loadWorksheetProgress(),
+  ]);
+  const ledgerCounts = countLedgerEntriesByFirstSet(ledger);
+  const entries = sets.sets.map((set): SetProgressEntry => {
+    const worksheet = worksheetProgress.get(set.code);
+    if (worksheet) {
+      return {
+        code: set.code,
+        name: set.name,
+        releasedAt: set.releasedAt,
+        setType: set.setType,
+        cardCount: set.cardCount,
+        digital: set.digital,
+        auditStatus:
+          worksheet.openOracleIds === 0
+            ? "done"
+            : worksheet.reviewedOracleIds > 0
+              ? "in_progress"
+              : "pending",
+        reviewedOracleIds: worksheet.reviewedOracleIds,
+        totalUniqueOracleIds: worksheet.totalUniqueOracleIds,
+        openOracleIds: worksheet.openOracleIds,
+        progressKnown: true,
+        worksheetPath: worksheet.worksheetPath,
+      };
+    }
+
+    const reviewedOracleIds = ledgerCounts.get(set.code) ?? 0;
+    return {
+      code: set.code,
+      name: set.name,
+      releasedAt: set.releasedAt,
+      setType: set.setType,
+      cardCount: set.cardCount,
+      digital: set.digital,
+      auditStatus: reviewedOracleIds > 0 ? "in_progress" : "pending",
+      reviewedOracleIds,
+      totalUniqueOracleIds: null,
+      openOracleIds: null,
+      progressKnown: false,
+    };
+  });
+  const summary = countSetProgress(entries);
+
+  await writeJson(SET_PROGRESS_JSON_PATH, {
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    sourceSets: relativePath(SETS_PATH),
+    sourceLedger: relativePath(AUDIT_PATH),
+    note: "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
+    summary,
+    sets: entries,
+  });
+  await writeFile(SET_PROGRESS_TSV_PATH, buildSetProgressTsv(entries), "utf8");
+
+  console.log(`Wrote ${entries.length} set progress rows.`);
+  console.log(`Done: ${summary.done}`);
+  console.log(`In progress: ${summary.inProgress}`);
+  console.log(`Pending: ${summary.pending}`);
+  console.log(`JSON: ${relativePath(SET_PROGRESS_JSON_PATH)}`);
+  console.log(`TSV: ${relativePath(SET_PROGRESS_TSV_PATH)}`);
 }
 
 async function buildSetReport(
@@ -497,6 +586,96 @@ function parseWorksheetTsv(input: string) {
     row.__line = String(index + 2);
     return row;
   });
+}
+
+async function loadWorksheetProgress() {
+  const progress = new Map<string, {
+    reviewedOracleIds: number;
+    totalUniqueOracleIds: number;
+    openOracleIds: number;
+    worksheetPath: string;
+  }>();
+  let files: string[] = [];
+
+  try {
+    files = await readdir(WORKSHEETS_DIR);
+  } catch {
+    return progress;
+  }
+
+  for (const fileName of files) {
+    const match = /^(.+)-role-review\.tsv$/.exec(fileName);
+    if (!match) {
+      continue;
+    }
+
+    const worksheetPath = path.join(WORKSHEETS_DIR, fileName);
+    const rows = parseWorksheetTsv(await readFile(worksheetPath, "utf8"));
+    const reviewedOracleIds = rows.filter((row) => Boolean(parseAuditStatus(row.auditStatus))).length;
+    const totalUniqueOracleIds = rows.length;
+    progress.set(match[1], {
+      reviewedOracleIds,
+      totalUniqueOracleIds,
+      openOracleIds: totalUniqueOracleIds - reviewedOracleIds,
+      worksheetPath: relativePath(worksheetPath),
+    });
+  }
+
+  return progress;
+}
+
+function countLedgerEntriesByFirstSet(ledger: AuditLedger) {
+  const counts = new Map<string, number>();
+  for (const entry of ledger.cards) {
+    if (!entry.firstSet) {
+      continue;
+    }
+    counts.set(entry.firstSet, (counts.get(entry.firstSet) ?? 0) + 1);
+  }
+  return counts;
+}
+
+function countSetProgress(entries: SetProgressEntry[]) {
+  return {
+    done: entries.filter((entry) => entry.auditStatus === "done").length,
+    inProgress: entries.filter((entry) => entry.auditStatus === "in_progress").length,
+    pending: entries.filter((entry) => entry.auditStatus === "pending").length,
+  };
+}
+
+function buildSetProgressTsv(entries: SetProgressEntry[]) {
+  const headers = [
+    "code",
+    "name",
+    "releasedAt",
+    "setType",
+    "cardCount",
+    "digital",
+    "auditStatus",
+    "reviewedOracleIds",
+    "totalUniqueOracleIds",
+    "openOracleIds",
+    "progressKnown",
+    "worksheetPath",
+  ];
+  const rows = entries.map((entry) =>
+    [
+      entry.code,
+      entry.name,
+      entry.releasedAt ?? "",
+      entry.setType,
+      entry.cardCount,
+      entry.digital,
+      entry.auditStatus,
+      entry.reviewedOracleIds,
+      entry.totalUniqueOracleIds ?? "",
+      entry.openOracleIds ?? "",
+      entry.progressKnown,
+      entry.worksheetPath ?? "",
+    ].map(formatTsvCell).join("\t"),
+  );
+
+  return `${headers.join("\t")}\n${rows.join("\n")}\n`;
 }
 
 function parseAuditStatus(value: string | undefined): AuditStatus | null {
@@ -809,6 +988,7 @@ function printHelp() {
   console.log("  npm run audit:cards -- set <code>    Show audit status for one set.");
   console.log("  npm run audit:cards -- worksheet <code>  Write a TSV review worksheet for one set.");
   console.log("  npm run audit:cards -- import-worksheet <code>  Import reviewed TSV rows into the ledger.");
+  console.log("  npm run audit:cards -- progress     Write done/in-progress/pending status for every set.");
 }
 
 main().catch((error) => {

@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.5 - 2026-06-21
+
+### Neu
+
+- Neuer Audit-Befehl `npm run audit:cards -- progress` erzeugt eine Set-Fortschrittsuebersicht.
+- Neue Dateien `data/card-role-set-progress.json` und `data/card-role-set-progress.tsv` markieren jede Edition als `done`, `in_progress` oder `pending`.
+
+### Validierung
+
+- `npm run audit:cards -- progress`
+- `npm run check`
+
 ## 0.4.4 - 2026-06-21
 
 ### Neu

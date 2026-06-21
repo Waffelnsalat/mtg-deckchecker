@@ -1,0 +1,1044 @@
+code	name	releasedAt	setType	cardCount	digital	auditStatus	reviewedOracleIds	totalUniqueOracleIds	openOracleIds	progressKnown	worksheetPath
+lea	Limited Edition Alpha	1993-08-05	core	295	false	in_progress	23	290	267	true	data/card-role-worksheets/lea-role-review.tsv
+leb	Limited Edition Beta	1993-10-04	core	302	false	pending	0			false	
+2ed	Unlimited Edition	1993-12-01	core	302	false	pending	0			false	
+ced	Collectors' Edition	1993-12-10	memorabilia	302	false	pending	0			false	
+cei	Intl. Collectors' Edition	1993-12-10	memorabilia	302	false	pending	0			false	
+arn	Arabian Nights	1993-12-17	expansion	92	false	pending	0			false	
+atq	Antiquities	1994-03-04	expansion	102	false	pending	0			false	
+3ed	Revised Edition	1994-04-11	core	306	false	pending	0			false	
+fbb	Foreign Black Border	1994-04-11	core	307	false	pending	0			false	
+leg	Legends	1994-06-01	expansion	310	false	pending	0			false	
+sum	Summer Magic / Edgar	1994-06-21	core	306	false	pending	0			false	
+pdrc	Dragon Con	1994-07-15	promo	1	false	pending	0			false	
+drk	The Dark	1994-08-01	expansion	122	false	pending	0			false	
+phpr	HarperPrism Book Promos	1994-09-01	promo	5	false	pending	0			false	
+fem	Fallen Empires	1994-11-01	expansion	187	false	pending	0			false	
+pmei	Media and Collaboration Promos	1995-01-01	promo	98	false	pending	0			false	
+4bb	Fourth Edition Foreign Black Border	1995-04-01	core	378	false	pending	0			false	
+4ed	Fourth Edition	1995-04-01	core	380	false	pending	0			false	
+ice	Ice Age	1995-06-03	expansion	383	false	pending	0			false	
+bchr	Chronicles Foreign Black Border	1995-07-01	masters	125	false	pending	0			false	
+chr	Chronicles	1995-07-01	masters	125	false	pending	0			false	
+ren	Renaissance	1995-08-01	masters	122	false	pending	0			false	
+rin	Rinascimento	1995-08-01	masters	69	false	pending	0			false	
+hml	Homelands	1995-10-01	expansion	140	false	pending	0			false	
+o90p	Oversized 90's Promos	1996-04-01	memorabilia	10	false	pending	0			false	
+ptc	Pro Tour Collector Set	1996-05-01	memorabilia	308	false	pending	0			false	
+all	Alliances	1996-06-10	expansion	199	false	pending	0			false	
+plgm	DCI Legend Membership	1996-07-01	promo	2	false	pending	0			false	
+rqs	Rivals Quick Start Set	1996-07-01	box	65	false	pending	0			false	
+parl	Arena League 1996	1996-08-02	promo	7	false	pending	0			false	
+pcel	Celebration Cards	1996-08-14	memorabilia	9	false	pending	0			false	
+pred	Redemption Program	1996-10-01	promo	1	false	pending	0			false	
+mir	Mirage	1996-10-08	expansion	353	false	pending	0			false	
+mgb	Multiverse Gift Box	1996-11-01	box	10	false	pending	0			false	
+itp	Introductory Two-Player Set	1996-12-31	starter	67	false	pending	0			false	
+vis	Visions	1997-02-03	expansion	167	false	pending	0			false	
+5ed	Fifth Edition	1997-03-24	core	460	false	pending	0			false	
+past	Astral Cards	1997-04-01	box	12	true	pending	0			false	
+pmic	MicroProse Promos	1997-04-01	memorabilia	1	false	pending	0			false	
+por	Portal	1997-05-01	starter	257	false	pending	0			false	
+pvan	Vanguard Series	1997-05-01	vanguard	32	false	pending	0			false	
+olep	Oversized League Prizes	1997-05-30	memorabilia	83	false	pending	0			false	
+wth	Weatherlight	1997-06-09	expansion	167	false	pending	0			false	
+wc97	World Championship Decks 1997	1997-08-13	memorabilia	131	false	pending	0			false	
+ptmp	Tempest Promos	1997-10-14	promo	1	false	pending	0			false	
+tmp	Tempest	1997-10-14	expansion	350	false	pending	0			false	
+jgp	Judge Gift Cards 1998	1998-01-01	promo	3	false	pending	0			false	
+psth	Stronghold Promos	1998-03-02	promo	1	false	pending	0			false	
+sth	Stronghold	1998-03-02	expansion	143	false	pending	0			false	
+exo	Exodus	1998-06-15	expansion	143	false	pending	0			false	
+pexo	Exodus Promos	1998-06-15	promo	1	false	pending	0			false	
+p02	Portal Second Age	1998-06-24	starter	165	false	pending	0			false	
+tugl	Unglued Tokens	1998-08-11	token	6	false	pending	0			false	
+ugl	Unglued	1998-08-11	funny	88	false	pending	0			false	
+wc98	World Championship Decks 1998	1998-08-12	memorabilia	117	false	pending	0			false	
+palp	Asia Pacific Land Program	1998-09-01	promo	15	false	pending	0			false	
+pusg	Urza's Saga Promos	1998-10-12	promo	1	false	pending	0			false	
+usg	Urza's Saga	1998-10-12	expansion	357	false	pending	0			false	
+ath	Anthologies	1998-11-01	box	85	false	pending	0			false	
+g99	Judge Gift Cards 1999	1999-01-01	promo	1	false	pending	0			false	
+pal99	Arena League 1999	1999-01-01	promo	10	false	pending	0			false	
+pulg	Urza's Legacy Promos	1999-02-15	promo	2	false	pending	0			false	
+ulg	Urza's Legacy	1999-02-15	expansion	143	false	pending	0			false	
+6ed	Classic Sixth Edition	1999-04-21	core	351	false	pending	0			false	
+pptk	Portal Three Kingdoms Promos	1999-05-01	promo	2	false	pending	0			false	
+ptk	Portal Three Kingdoms	1999-05-01	starter	180	false	pending	0			false	
+puds	Urza's Destiny Promos	1999-06-07	promo	1	false	pending	0			false	
+uds	Urza's Destiny	1999-06-07	expansion	143	false	pending	0			false	
+s99	Starter 1999	1999-07-01	starter	173	false	pending	0			false	
+pgru	Guru	1999-07-12	promo	5	false	pending	0			false	
+pwor	World Championship Promos	1999-08-04	promo	2	false	pending	0			false	
+wc99	World Championship Decks 1999	1999-08-04	memorabilia	111	false	pending	0			false	
+pwos	Wizards of the Coast Online Store	1999-09-04	promo	1	false	pending	0			false	
+mmq	Mercadian Masques	1999-10-04	expansion	350	false	pending	0			false	
+pmmq	Mercadian Masques Promos	1999-10-04	promo	1	false	pending	0			false	
+brb	Battle Royale Box Set	1999-11-12	box	136	false	pending	0			false	
+psus	Junior Super Series	1999-12-01	promo	18	false	pending	0			false	
+fnm	Friday Night Magic 2000	2000-01-01	promo	11	false	pending	0			false	
+g00	Judge Gift Cards 2000	2000-01-01	promo	2	false	pending	0			false	
+pal00	Arena League 2000	2000-01-01	promo	11	false	pending	0			false	
+pelp	European Land Program	2000-02-05	promo	15	false	pending	0			false	
+nem	Nemesis	2000-02-14	expansion	143	false	pending	0			false	
+pnem	Nemesis Promos	2000-02-14	promo	1	false	pending	0			false	
+s00	Starter 2000	2000-04-01	starter	20	false	pending	0			false	
+pcy	Prophecy	2000-06-05	expansion	144	false	pending	0			false	
+ppcy	Prophecy Promos	2000-06-05	promo	1	false	pending	0			false	
+wc00	World Championship Decks 2000	2000-08-02	memorabilia	117	false	pending	0			false	
+btd	Beatdown Box Set	2000-10-01	box	90	false	pending	0			false	
+inv	Invasion	2000-10-02	expansion	354	false	pending	0			false	
+pinv	Invasion Promos	2000-10-02	promo	1	false	pending	0			false	
+f01	Friday Night Magic 2001	2001-01-01	promo	7	false	pending	0			false	
+g01	Judge Gift Cards 2001	2001-01-01	promo	2	false	pending	0			false	
+mpr	Magic Player Rewards 2001	2001-01-01	promo	8	false	pending	0			false	
+pal01	Arena League 2001	2001-01-01	promo	12	false	pending	0			false	
+pls	Planeshift	2001-02-05	expansion	146	false	pending	0			false	
+ppls	Planeshift Promos	2001-02-05	promo	1	false	pending	0			false	
+7ed	Seventh Edition	2001-04-11	core	708	false	pending	0			false	
+apc	Apocalypse	2001-06-04	expansion	143	false	pending	0			false	
+papc	Apocalypse Promos	2001-06-04	promo	1	false	pending	0			false	
+psdg	Sega Dreamcast Cards	2001-06-28	box	10	true	pending	0			false	
+wc01	World Championship Decks 2001	2001-08-08	memorabilia	138	false	pending	0			false	
+ody	Odyssey	2001-10-01	expansion	353	false	pending	0			false	
+pody	Odyssey Promos	2001-10-01	promo	1	false	pending	0			false	
+dkm	Deckmasters	2001-12-01	box	58	false	pending	0			false	
+f02	Friday Night Magic 2002	2002-01-01	promo	12	false	pending	0			false	
+g02	Judge Gift Cards 2002	2002-01-01	promo	2	false	pending	0			false	
+pal02	Arena League 2002	2002-01-01	promo	5	false	pending	0			false	
+pr2	Magic Player Rewards 2002	2002-01-01	promo	6	false	pending	0			false	
+ptor	Torment Promos	2002-02-04	promo	3	false	pending	0			false	
+tor	Torment	2002-02-04	expansion	143	false	pending	0			false	
+jud	Judgment	2002-05-27	expansion	143	false	pending	0			false	
+pjud	Judgment Promos	2002-05-27	promo	1	false	pending	0			false	
+prm	Magic Online Promos	2002-06-24	promo	3110	true	pending	0			false	
+jp1	Hobby Japan Promos	2002-07-01	promo	5	false	pending	0			false	
+pons	Onslaught Promos	2002-09-28	promo	1	false	pending	0			false	
+ons	Onslaught	2002-10-07	expansion	351	false	pending	0			false	
+wc02	World Championship Decks 2002	2002-12-01	memorabilia	153	false	pending	0			false	
+f03	Friday Night Magic 2003	2003-01-01	promo	13	false	pending	0			false	
+g03	Judge Gift Cards 2003	2003-01-01	promo	3	false	pending	0			false	
+ovnt	Vintage Championship	2003-01-01	memorabilia	35	false	pending	0			false	
+p03	Magic Player Rewards 2003	2003-01-01	promo	7	false	pending	0			false	
+pal03	Arena League 2003	2003-01-01	promo	8	false	pending	0			false	
+pjjt	Japan Junior Tournament	2003-01-01	promo	12	false	pending	0			false	
+pmoa	Magic Online Avatars	2003-01-01	vanguard	85	true	pending	0			false	
+lgn	Legions	2003-02-03	expansion	145	false	pending	0			false	
+plgn	Legions Promos	2003-02-03	promo	1	false	pending	0			false	
+pscg	Scourge Promos	2003-05-26	promo	1	false	pending	0			false	
+scg	Scourge	2003-05-26	expansion	143	false	pending	0			false	
+8ed	Eighth Edition	2003-07-28	core	711	false	pending	0			false	
+p8ed	Eighth Edition Promos	2003-07-28	promo	1	false	pending	0			false	
+wc03	World Championship Decks 2003	2003-08-06	memorabilia	142	false	pending	0			false	
+mrd	Mirrodin	2003-10-02	expansion	306	false	pending	0			false	
+f04	Friday Night Magic 2004	2004-01-01	promo	12	false	pending	0			false	
+g04	Judge Gift Cards 2004	2004-01-01	promo	6	false	pending	0			false	
+p04	Magic Player Rewards 2004	2004-01-01	promo	6	false	pending	0			false	
+pal04	Arena League 2004	2004-01-01	promo	14	false	pending	0			false	
+dst	Darksteel	2004-02-06	expansion	165	false	pending	0			false	
+pdst	Darksteel Promos	2004-02-06	promo	1	false	pending	0			false	
+5dn	Fifth Dawn	2004-06-04	expansion	165	false	pending	0			false	
+p5dn	Fifth Dawn Promos	2004-06-04	promo	1	false	pending	0			false	
+pmrd	Mirrodin Promos	2004-06-04	promo	1	false	pending	0			false	
+wc04	World Championship Decks 2004	2004-09-01	memorabilia	103	false	pending	0			false	
+chk	Champions of Kamigawa	2004-10-01	expansion	307	false	pending	0			false	
+pchk	Champions of Kamigawa Promos	2004-10-01	promo	1	false	pending	0			false	
+punh	Unhinged Promos	2004-11-19	promo	1	false	pending	0			false	
+unh	Unhinged	2004-11-19	funny	168	false	pending	0			false	
+f05	Friday Night Magic 2005	2005-01-01	promo	12	false	pending	0			false	
+g05	Judge Gift Cards 2005	2005-01-01	promo	4	false	pending	0			false	
+p05	Magic Player Rewards 2005	2005-01-01	promo	6	false	pending	0			false	
+pal05	Arena League 2005	2005-01-01	promo	8	false	pending	0			false	
+pjse	Junior Series Europe	2005-01-01	promo	8	false	pending	0			false	
+bok	Betrayers of Kamigawa	2005-02-04	expansion	165	false	pending	0			false	
+pbok	Betrayers of Kamigawa Promos	2005-02-04	promo	2	false	pending	0			false	
+psok	Saviors of Kamigawa Promos	2005-06-03	promo	2	false	pending	0			false	
+sok	Saviors of Kamigawa	2005-06-03	expansion	165	false	pending	0			false	
+9ed	Ninth Edition	2005-07-29	core	710	false	pending	0			false	
+p9ed	Ninth Edition Promos	2005-07-29	promo	2	false	pending	0			false	
+psal	Salvat 2005	2005-08-22	box	720	false	pending	0			false	
+pmps	Magic Premiere Shop 2005	2005-10-07	promo	20	false	pending	0			false	
+prav	Ravnica: City of Guilds Promos	2005-10-07	promo	2	false	pending	0			false	
+rav	Ravnica: City of Guilds	2005-10-07	expansion	306	false	pending	0			false	
+p2hg	Two-Headed Giant Tournament	2005-12-09	promo	1	false	pending	0			false	
+dci	DCI Promos	2006-01-01	promo	80	false	pending	0			false	
+f06	Friday Night Magic 2006	2006-01-01	promo	12	false	pending	0			false	
+g06	Judge Gift Cards 2006	2006-01-01	promo	4	false	pending	0			false	
+p06	Magic Player Rewards 2006	2006-01-01	promo	7	false	pending	0			false	
+pal06	Arena League 2006	2006-01-01	promo	9	false	pending	0			false	
+phuk	Hachette UK	2006-01-01	box	60	false	pending	0			false	
+pjas	Junior APAC Series	2006-01-01	promo	6	false	pending	0			false	
+pmps06	Magic Premiere Shop 2006	2006-01-01	promo	5	false	pending	0			false	
+gpt	Guildpact	2006-02-03	expansion	167	false	pending	0			false	
+pgpt	Guildpact Promos	2006-02-03	promo	2	false	pending	0			false	
+pcmp	Champs and States	2006-03-18	promo	12	false	pending	0			false	
+dis	Dissension	2006-05-05	expansion	180	false	pending	0			false	
+pdis	Dissension Promos	2006-05-05	promo	2	false	pending	0			false	
+csp	Coldsnap	2006-07-21	expansion	155	false	pending	0			false	
+cst	Coldsnap Theme Decks	2006-07-21	box	62	false	pending	0			false	
+pcsp	Coldsnap Promos	2006-07-21	promo	2	false	pending	0			false	
+ptsp	Time Spiral Promos	2006-10-06	promo	3	false	pending	0			false	
+tsb	Time Spiral Timeshifted	2006-10-06	expansion	121	false	pending	0			false	
+tsp	Time Spiral	2006-10-06	expansion	301	false	pending	0			false	
+hho	Happy Holidays	2006-12-31	funny	23	false	pending	0			false	
+f07	Friday Night Magic 2007	2007-01-01	promo	12	false	pending	0			false	
+g07	Judge Gift Cards 2007	2007-01-01	promo	5	false	pending	0			false	
+p07	Magic Player Rewards 2007	2007-01-01	promo	7	false	pending	0			false	
+pmps07	Magic Premiere Shop 2007	2007-01-01	promo	5	false	pending	0			false	
+plc	Planar Chaos	2007-02-02	expansion	165	false	pending	0			false	
+pplc	Planar Chaos Promos	2007-02-02	promo	2	false	pending	0			false	
+ppro	Pro Tour Promos	2007-02-09	promo	18	false	pending	0			false	
+pgpx	Grand Prix Promos	2007-02-24	promo	20	false	pending	0			false	
+fut	Future Sight	2007-05-04	expansion	180	false	pending	0			false	
+pfut	Future Sight Promos	2007-05-04	promo	2	false	pending	0			false	
+10e	Tenth Edition	2007-07-13	core	510	false	pending	0			false	
+p10e	Tenth Edition Promos	2007-07-13	promo	3	false	pending	0			false	
+t10e	Tenth Edition Tokens	2007-07-13	token	6	false	pending	0			false	
+me1	Masters Edition	2007-09-10	masters	195	true	pending	0			false	
+lrw	Lorwyn	2007-10-12	expansion	301	false	pending	0			false	
+plrw	Lorwyn Promos	2007-10-12	promo	3	false	pending	0			false	
+tlrw	Lorwyn Tokens	2007-10-12	token	11	false	pending	0			false	
+dd1	Duel Decks: Elves vs. Goblins	2007-11-16	duel_deck	62	false	pending	0			false	
+tdd1	Duel Decks: Elves vs. Goblins Tokens	2007-11-16	token	3	false	pending	0			false	
+f08	Friday Night Magic 2008	2008-01-01	promo	12	false	pending	0			false	
+g08	Judge Gift Cards 2008	2008-01-01	promo	5	false	pending	0			false	
+p08	Magic Player Rewards 2008	2008-01-01	promo	7	false	pending	0			false	
+pmps08	Magic Premiere Shop 2008	2008-01-01	promo	6	false	pending	0			false	
+mor	Morningtide	2008-02-01	expansion	150	false	pending	0			false	
+pmor	Morningtide Promos	2008-02-01	promo	2	false	pending	0			false	
+tmor	Morningtide Tokens	2008-02-01	token	3	false	pending	0			false	
+p15a	15th Anniversary Cards	2008-04-01	promo	2	false	pending	0			false	
+pshm	Shadowmoor Promos	2008-05-02	promo	2	false	pending	0			false	
+shm	Shadowmoor	2008-05-02	expansion	302	false	pending	0			false	
+tshm	Shadowmoor Tokens	2008-05-02	token	12	false	pending	0			false	
+eve	Eventide	2008-07-25	expansion	180	false	pending	0			false	
+peve	Eventide Promos	2008-07-25	promo	2	false	pending	0			false	
+teve	Eventide Tokens	2008-07-25	token	7	false	pending	0			false	
+drb	From the Vault: Dragons	2008-08-29	from_the_vault	15	false	pending	0			false	
+me2	Masters Edition II	2008-09-22	masters	245	true	pending	0			false	
+ala	Shards of Alara	2008-10-03	expansion	250	false	pending	0			false	
+pala	Shards of Alara Promos	2008-10-03	promo	2	false	pending	0			false	
+tala	Shards of Alara Tokens	2008-10-03	token	10	false	pending	0			false	
+dd2	Duel Decks: Jace vs. Chandra	2008-11-07	duel_deck	64	false	pending	0			false	
+tdd2	Duel Decks: Jace vs. Chandra Tokens	2008-11-07	token	1	false	pending	0			false	
+f09	Friday Night Magic 2009	2009-01-01	promo	12	false	pending	0			false	
+g09	Judge Gift Cards 2009	2009-01-01	promo	10	false	pending	0			false	
+p09	Magic Player Rewards 2009	2009-01-01	promo	13	false	pending	0			false	
+pdtp	Duels of the Planeswalkers 2009 Promos	2009-01-01	promo	1	false	pending	0			false	
+pmps09	Magic Premiere Shop 2009	2009-01-01	promo	5	false	pending	0			false	
+con	Conflux	2009-02-06	expansion	145	false	pending	0			false	
+pcon	Conflux Promos	2009-02-06	promo	2	false	pending	0			false	
+tcon	Conflux Tokens	2009-02-06	token	2	false	pending	0			false	
+purl	URL/Convention Promos	2009-02-08	promo	16	false	pending	0			false	
+ddc	Duel Decks: Divine vs. Demonic	2009-04-10	duel_deck	62	false	pending	0			false	
+tddc	Duel Decks: Divine vs. Demonic Tokens	2009-04-10	token	3	false	pending	0			false	
+arb	Alara Reborn	2009-04-30	expansion	145	false	pending	0			false	
+parb	Alara Reborn Promos	2009-04-30	promo	3	false	pending	0			false	
+tarb	Alara Reborn Tokens	2009-04-30	token	4	false	pending	0			false	
+pm10	Magic 2010 Promos	2009-07-16	promo	3	false	pending	0			false	
+m10	Magic 2010	2009-07-17	core	249	false	pending	0			false	
+tm10	Magic 2010 Tokens	2009-07-17	token	8	false	pending	0			false	
+v09	From the Vault: Exiled	2009-08-28	from_the_vault	15	false	pending	0			false	
+hop	Planechase	2009-09-04	planechase	169	false	pending	0			false	
+ohop	Planechase Planes	2009-09-04	planechase	40	false	pending	0			false	
+phop	Planechase Promos	2009-09-04	promo	1	false	pending	0			false	
+me3	Masters Edition III	2009-09-07	masters	230	true	pending	0			false	
+pzen	Zendikar Promos	2009-10-02	promo	5	false	pending	0			false	
+tzen	Zendikar Tokens	2009-10-02	token	11	false	pending	0			false	
+zen	Zendikar	2009-10-02	expansion	269	false	pending	0			false	
+ddd	Duel Decks: Garruk vs. Liliana	2009-10-30	duel_deck	63	false	pending	0			false	
+tddd	Duel Decks: Garruk vs. Liliana Tokens	2009-10-30	token	3	false	pending	0			false	
+h09	Premium Deck Series: Slivers	2009-11-20	premium_deck	41	false	pending	0			false	
+f10	Friday Night Magic 2010	2010-01-01	promo	12	false	pending	0			false	
+g10	Judge Gift Cards 2010	2010-01-01	promo	8	false	pending	0			false	
+p10	Magic Player Rewards 2010	2010-01-01	promo	13	false	pending	0			false	
+pdp10	Duels of the Planeswalkers 2010 Promos	2010-01-01	promo	2	false	pending	0			false	
+pmps10	Magic Premiere Shop 2010	2010-01-01	promo	5	false	pending	0			false	
+pwwk	Worldwake Promos	2010-02-05	promo	6	false	pending	0			false	
+twwk	Worldwake Tokens	2010-02-05	token	6	false	pending	0			false	
+wwk	Worldwake	2010-02-05	expansion	145	false	pending	0			false	
+dde	Duel Decks: Phyrexia vs. the Coalition	2010-03-19	duel_deck	71	false	pending	0			false	
+tdde	Duel Decks: Phyrexia vs. the Coalition Tokens	2010-03-19	token	3	false	pending	0			false	
+proe	Rise of the Eldrazi Promos	2010-04-23	promo	4	false	pending	0			false	
+roe	Rise of the Eldrazi	2010-04-23	expansion	248	false	pending	0			false	
+troe	Rise of the Eldrazi Tokens	2010-04-23	token	7	false	pending	0			false	
+dpa	Duels of the Planeswalkers	2010-06-04	box	113	false	pending	0			false	
+arc	Archenemy	2010-06-18	archenemy	150	false	pending	0			false	
+oarc	Archenemy Schemes	2010-06-18	archenemy	45	false	pending	0			false	
+pm11	Magic 2011 Promos	2010-07-15	promo	6	false	pending	0			false	
+m11	Magic 2011	2010-07-16	core	249	false	pending	0			false	
+tm11	Magic 2011 Tokens	2010-07-16	token	6	false	pending	0			false	
+v10	From the Vault: Relics	2010-08-27	from_the_vault	15	false	pending	0			false	
+ddf	Duel Decks: Elspeth vs. Tezzeret	2010-09-03	duel_deck	79	false	pending	0			false	
+tddf	Duel Decks: Elspeth vs. Tezzeret Tokens	2010-09-03	token	1	false	pending	0			false	
+psom	Scars of Mirrodin Promos	2010-09-30	promo	4	false	pending	0			false	
+som	Scars of Mirrodin	2010-10-01	expansion	249	false	pending	0			false	
+tsom	Scars of Mirrodin Tokens	2010-10-01	token	10	false	pending	0			false	
+td0	Magic Online Theme Decks	2010-11-08	box	197	true	pending	0			false	
+pd2	Premium Deck Series: Fire and Lightning	2010-11-19	premium_deck	34	false	pending	0			false	
+f11	Friday Night Magic 2011	2011-01-01	promo	12	false	pending	0			false	
+g11	Judge Gift Cards 2011	2011-01-01	promo	8	false	pending	0			false	
+olgc	Legacy Championship	2011-01-01	memorabilia	27	false	pending	0			false	
+p11	Magic Player Rewards 2011	2011-01-01	promo	7	false	pending	0			false	
+pdp12	Duels of the Planeswalkers 2012 Promos	2011-01-01	promo	3	false	pending	0			false	
+pmps11	Magic Premiere Shop 2011	2011-01-01	promo	5	false	pending	0			false	
+ps11	Salvat 2011	2011-01-01	box	224	false	pending	0			false	
+pw11	Wizards Play Network 2011	2011-01-01	promo	3	false	pending	0			false	
+me4	Masters Edition IV	2011-01-10	masters	269	true	pending	0			false	
+pmbs	Mirrodin Besieged Promos	2011-02-03	promo	4	false	pending	0			false	
+mbs	Mirrodin Besieged	2011-02-04	expansion	155	false	pending	0			false	
+tmbs	Mirrodin Besieged Tokens	2011-02-04	token	6	false	pending	0			false	
+ddg	Duel Decks: Knights vs. Dragons	2011-04-01	duel_deck	81	false	pending	0			false	
+tddg	Duel Decks: Knights vs. Dragons Tokens	2011-04-01	token	1	false	pending	0			false	
+pnph	New Phyrexia Promos	2011-05-12	promo	4	false	pending	0			false	
+nph	New Phyrexia	2011-05-13	expansion	175	false	pending	0			false	
+tnph	New Phyrexia Tokens	2011-05-13	token	5	false	pending	0			false	
+td2	Duel Decks: Mirrodin Pure vs. New Phyrexia	2011-05-14	duel_deck	88	true	pending	0			false	
+cmd	Commander 2011	2011-06-17	commander	318	false	pending	0			false	
+ocmd	Commander 2011 Oversized	2011-06-17	memorabilia	15	false	pending	0			false	
+pcmd	Commander 2011 Launch Party	2011-06-17	memorabilia	5	false	pending	0			false	
+pm12	Magic 2012 Promos	2011-07-14	promo	3	false	pending	0			false	
+m12	Magic 2012	2011-07-15	core	249	false	pending	0			false	
+tm12	Magic 2012 Tokens	2011-07-15	token	7	false	pending	0			false	
+v11	From the Vault: Legends	2011-08-26	from_the_vault	15	false	pending	0			false	
+ddh	Duel Decks: Ajani vs. Nicol Bolas	2011-09-02	duel_deck	80	false	pending	0			false	
+tddh	Duel Decks: Ajani vs. Nicol Bolas Tokens	2011-09-02	token	2	false	pending	0			false	
+pisd	Innistrad Promos	2011-09-24	promo	5	false	pending	0			false	
+isd	Innistrad	2011-09-30	expansion	264	false	pending	0			false	
+tisd	Innistrad Tokens	2011-09-30	token	13	false	pending	0			false	
+pd3	Premium Deck Series: Graveborn	2011-11-18	premium_deck	30	false	pending	0			false	
+f12	Friday Night Magic 2012	2012-01-01	promo	13	false	pending	0			false	
+j12	Judge Gift Cards 2012	2012-01-01	promo	9	false	pending	0			false	
+l12	League Tokens 2012	2012-01-01	token	2	false	pending	0			false	
+pdp13	Duels of the Planeswalkers 2013 Promos	2012-01-01	promo	3	false	pending	0			false	
+pidw	IDW Comics Inserts	2012-01-01	promo	17	false	pending	0			false	
+pw12	Wizards Play Network 2012	2012-01-01	promo	3	false	pending	0			false	
+pdka	Dark Ascension Promos	2012-01-28	promo	5	false	pending	0			false	
+dka	Dark Ascension	2012-02-03	expansion	158	false	pending	0			false	
+tdka	Dark Ascension Tokens	2012-02-03	token	4	false	pending	0			false	
+ddi	Duel Decks: Venser vs. Koth	2012-03-30	duel_deck	77	false	pending	0			false	
+tddi	Duel Decks: Venser vs. Koth Tokens	2012-03-30	token	2	false	pending	0			false	
+pavr	Avacyn Restored Promos	2012-04-28	promo	6	false	pending	0			false	
+phel	Open the Helvault	2012-04-28	memorabilia	6	false	pending	0			false	
+avr	Avacyn Restored	2012-05-04	expansion	244	false	pending	0			false	
+tavr	Avacyn Restored Tokens	2012-05-04	token	8	false	pending	0			false	
+opc2	Planechase 2012 Planes	2012-06-01	planechase	40	false	pending	0			false	
+pc2	Planechase 2012	2012-06-01	planechase	156	false	pending	0			false	
+pm13	Magic 2013 Promos	2012-07-12	promo	6	false	pending	0			false	
+m13	Magic 2013	2012-07-13	core	249	false	pending	0			false	
+tm13	Magic 2013 Tokens	2012-07-13	token	11	false	pending	0			false	
+v12	From the Vault: Realms	2012-08-31	from_the_vault	15	false	pending	0			false	
+ddj	Duel Decks: Izzet vs. Golgari	2012-09-07	duel_deck	90	false	pending	0			false	
+tddj	Duel Decks: Izzet vs. Golgari Tokens	2012-09-07	token	1	false	pending	0			false	
+prtr	Return to Ravnica Promos	2012-10-05	promo	10	false	pending	0			false	
+rtr	Return to Ravnica	2012-10-05	expansion	274	false	pending	0			false	
+trtr	Return to Ravnica Tokens	2012-10-05	token	12	false	pending	0			false	
+cm1	Commander's Arsenal	2012-11-02	arsenal	18	false	pending	0			false	
+ocm1	Commander's Arsenal Oversized	2012-11-02	memorabilia	10	false	pending	0			false	
+f13	Friday Night Magic 2013	2013-01-01	promo	12	false	pending	0			false	
+j13	Judge Gift Cards 2013	2013-01-01	promo	9	false	pending	0			false	
+l13	League Tokens 2013	2013-01-01	token	4	false	pending	0			false	
+pdp14	Duels of the Planeswalkers 2014 Promos	2013-01-01	promo	3	false	pending	0			false	
+pgtc	Gatecrash Promos	2013-01-26	promo	10	false	pending	0			false	
+gtc	Gatecrash	2013-02-01	expansion	249	false	pending	0			false	
+tgtc	Gatecrash Tokens	2013-02-01	token	8	false	pending	0			false	
+ddk	Duel Decks: Sorin vs. Tibalt	2013-03-15	duel_deck	80	false	pending	0			false	
+tddk	Duel Decks: Sorin vs. Tibalt Tokens	2013-03-15	token	1	false	pending	0			false	
+wmc	World Magic Cup Qualifiers	2013-04-06	promo	5	false	pending	0			false	
+pdgm	Dragon's Maze Promos	2013-04-27	promo	6	false	pending	0			false	
+dgm	Dragon's Maze	2013-05-03	expansion	156	false	pending	0			false	
+tdgm	Dragon's Maze Tokens	2013-05-03	token	1	false	pending	0			false	
+mma	Modern Masters	2013-06-07	masters	229	false	pending	0			false	
+tmma	Modern Masters Tokens	2013-06-07	token	16	false	pending	0			false	
+pm14	Magic 2014 Promos	2013-07-18	promo	6	false	pending	0			false	
+psdc	San Diego Comic-Con 2013	2013-07-18	promo	5	false	pending	0			false	
+m14	Magic 2014	2013-07-19	core	249	false	pending	0			false	
+tm14	Magic 2014 Tokens	2013-07-19	token	13	false	pending	0			false	
+v13	From the Vault: Twenty	2013-08-23	from_the_vault	20	false	pending	0			false	
+ddl	Duel Decks: Heroes vs. Monsters	2013-09-06	duel_deck	81	false	pending	0			false	
+tddl	Duel Decks: Heroes vs. Monsters Tokens	2013-09-06	token	2	false	pending	0			false	
+pths	Theros Promos	2013-09-21	promo	10	false	pending	0			false	
+thp1	Theros Hero's Path	2013-09-27	memorabilia	7	false	pending	0			false	
+ths	Theros	2013-09-27	expansion	249	false	pending	0			false	
+tths	Theros Tokens	2013-09-27	token	11	false	pending	0			false	
+tfth	Face the Hydra	2013-10-19	memorabilia	15	false	pending	0			false	
+c13	Commander 2013	2013-11-01	commander	356	false	pending	0			false	
+oc13	Commander 2013 Oversized	2013-11-01	memorabilia	15	false	pending	0			false	
+f14	Friday Night Magic 2014	2014-01-01	promo	12	false	pending	0			false	
+j14	Judge Gift Cards 2014	2014-01-01	promo	14	false	pending	0			false	
+l14	League Tokens 2014	2014-01-01	token	4	false	pending	0			false	
+pbng	Born of the Gods Promos	2014-02-01	promo	9	false	pending	0			false	
+bng	Born of the Gods	2014-02-07	expansion	165	false	pending	0			false	
+tbng	Born of the Gods Tokens	2014-02-07	token	11	false	pending	0			false	
+thp2	Born of the Gods Hero's Path	2014-02-07	memorabilia	7	false	pending	0			false	
+tbth	Battle the Horde	2014-03-01	memorabilia	15	false	pending	0			false	
+ddm	Duel Decks: Jace vs. Vraska	2014-03-14	duel_deck	88	false	pending	0			false	
+tddm	Duel Decks: Jace vs. Vraska Tokens	2014-03-14	token	1	false	pending	0			false	
+pjou	Journey into Nyx Promos	2014-04-26	promo	10	false	pending	0			false	
+jou	Journey into Nyx	2014-05-02	expansion	165	false	pending	0			false	
+thp3	Journey into Nyx Hero's Path	2014-05-02	memorabilia	8	false	pending	0			false	
+tjou	Journey into Nyx Tokens	2014-05-02	token	6	false	pending	0			false	
+tdag	Defeat a God	2014-05-25	memorabilia	15	false	pending	0			false	
+md1	Modern Event Deck 2014	2014-05-30	box	26	false	pending	0			false	
+tmd1	Modern Event Deck 2014 Tokens	2014-05-30	token	4	false	pending	0			false	
+cns	Conspiracy	2014-06-06	draft_innovation	210	false	pending	0			false	
+pcns	Conspiracy Promos	2014-06-06	promo	1	false	pending	0			false	
+tcns	Conspiracy Tokens	2014-06-06	token	9	false	pending	0			false	
+vma	Vintage Masters	2014-06-16	masters	325	true	pending	0			false	
+ps14	San Diego Comic-Con 2014	2014-07-08	promo	6	false	pending	0			false	
+pdp15	Duels of the Planeswalkers 2015 Promos	2014-07-09	promo	2	false	pending	0			false	
+ppc1	M15 Prerelease Challenge	2014-07-12	memorabilia	2	false	pending	0			false	
+pm15	Magic 2015 Promos	2014-07-17	promo	14	false	pending	0			false	
+cp1	Magic 2015 Clash Pack	2014-07-18	starter	6	false	pending	0			false	
+m15	Magic 2015	2014-07-18	core	284	false	pending	0			false	
+tm15	Magic 2015 Tokens	2014-07-18	token	14	false	pending	0			false	
+v14	From the Vault: Annihilation	2014-08-22	from_the_vault	15	false	pending	0			false	
+ddn	Duel Decks: Speed vs. Cunning	2014-09-05	duel_deck	82	false	pending	0			false	
+ktk	Khans of Tarkir	2014-09-26	expansion	293	false	pending	0			false	
+pktk	Khans of Tarkir Promos	2014-09-26	promo	56	false	pending	0			false	
+tktk	Khans of Tarkir Tokens	2014-09-26	token	13	false	pending	0			false	
+c14	Commander 2014	2014-11-07	commander	337	false	pending	0			false	
+oc14	Commander 2014 Oversized	2014-11-07	memorabilia	5	false	pending	0			false	
+tc14	Commander 2014 Tokens	2014-11-07	token	36	false	pending	0			false	
+dvd	Duel Decks Anthology: Divine vs. Demonic	2014-12-05	duel_deck	62	false	pending	0			false	
+evg	Duel Decks Anthology: Elves vs. Goblins	2014-12-05	duel_deck	62	false	pending	0			false	
+gvl	Duel Decks Anthology: Garruk vs. Liliana	2014-12-05	duel_deck	63	false	pending	0			false	
+jvc	Duel Decks Anthology: Jace vs. Chandra	2014-12-05	duel_deck	62	false	pending	0			false	
+tdvd	Duel Decks Anthology: Divine vs. Demonic Tokens	2014-12-05	token	3	false	pending	0			false	
+tevg	Duel Decks Anthology: Elves vs. Goblins Tokens	2014-12-05	token	3	false	pending	0			false	
+tgvl	Duel Decks Anthology: Garruk vs. Liliana Tokens	2014-12-05	token	4	false	pending	0			false	
+tjvc	Duel Decks Anthology: Jace vs. Chandra Tokens	2014-12-05	token	1	false	pending	0			false	
+f15	Friday Night Magic 2015	2015-01-01	promo	12	false	pending	0			false	
+j15	Judge Gift Cards 2015	2015-01-01	promo	8	false	pending	0			false	
+l15	League Tokens 2015	2015-01-01	token	1	false	pending	0			false	
+ugin	Ugin's Fate	2015-01-17	promo	26	false	pending	0			false	
+cp2	Fate Reforged Clash Pack	2015-01-23	starter	6	false	pending	0			false	
+frf	Fate Reforged	2015-01-23	expansion	191	false	pending	0			false	
+pfrf	Fate Reforged Promos	2015-01-23	promo	43	false	pending	0			false	
+tfrf	Fate Reforged Tokens	2015-01-23	token	4	false	pending	0			false	
+ddo	Duel Decks: Elspeth vs. Kiora	2015-02-27	duel_deck	67	false	pending	0			false	
+dtk	Dragons of Tarkir	2015-03-27	expansion	264	false	pending	0			false	
+pdtk	Dragons of Tarkir Promos	2015-03-27	promo	51	false	pending	0			false	
+tdtk	Dragons of Tarkir Tokens	2015-03-27	token	8	false	pending	0			false	
+ptkdf	Tarkir Dragonfury	2015-04-03	promo	4	false	pending	0			false	
+tpr	Tempest Remastered	2015-05-06	masters	269	true	pending	0			false	
+mm2	Modern Masters 2015	2015-05-22	masters	249	false	pending	0			false	
+tmm2	Modern Masters 2015 Tokens	2015-05-22	token	16	false	pending	0			false	
+ps15	San Diego Comic-Con 2015	2015-07-09	promo	5	false	pending	0			false	
+cp3	Magic Origins Clash Pack	2015-07-17	starter	6	false	pending	0			false	
+ori	Magic Origins	2015-07-17	core	288	false	pending	0			false	
+pori	Magic Origins Promos	2015-07-17	promo	54	false	pending	0			false	
+tori	Magic Origins Tokens	2015-07-17	token	15	false	pending	0			false	
+v15	From the Vault: Angels	2015-08-21	from_the_vault	15	false	pending	0			false	
+ddp	Duel Decks: Zendikar vs. Eldrazi	2015-08-28	duel_deck	80	false	pending	0			false	
+bfz	Battle for Zendikar	2015-10-02	expansion	299	false	pending	0			false	
+exp	Zendikar Expeditions	2015-10-02	masterpiece	45	false	pending	0			false	
+pbfz	Battle for Zendikar Promos	2015-10-02	promo	90	false	pending	0			false	
+pss1	BFZ Standard Series	2015-10-02	promo	5	false	pending	0			false	
+tbfz	Battle for Zendikar Tokens	2015-10-02	token	14	false	pending	0			false	
+c15	Commander 2015	2015-11-13	commander	342	false	pending	0			false	
+oc15	Commander 2015 Oversized	2015-11-13	memorabilia	5	false	pending	0			false	
+tc15	Commander 2015 Tokens	2015-11-13	token	25	false	pending	0			false	
+pz1	Legendary Cube Prize Pack	2015-11-18	treasure_chest	149	true	pending	0			false	
+f16	Friday Night Magic 2016	2016-01-01	promo	12	false	pending	0			false	
+j16	Judge Gift Cards 2016	2016-01-01	promo	8	false	pending	0			false	
+l16	League Tokens 2016	2016-01-01	token	1	false	pending	0			false	
+ogw	Oath of the Gatewatch	2016-01-22	expansion	187	false	pending	0			false	
+pogw	Oath of the Gatewatch Promos	2016-01-22	promo	65	false	pending	0			false	
+togw	Oath of the Gatewatch Tokens	2016-01-22	token	11	false	pending	0			false	
+ddq	Duel Decks: Blessed vs. Cursed	2016-02-26	duel_deck	80	false	pending	0			false	
+psoi	Shadows over Innistrad Promos	2016-04-08	promo	90	false	pending	0			false	
+soi	Shadows over Innistrad	2016-04-08	expansion	302	false	pending	0			false	
+tsoi	Shadows over Innistrad Tokens	2016-04-08	token	20	false	pending	0			false	
+w16	Welcome Deck 2016	2016-04-08	starter	16	false	pending	0			false	
+ema	Eternal Masters	2016-06-10	masters	249	false	pending	0			false	
+tema	Eternal Masters Tokens	2016-06-10	token	16	false	pending	0			false	
+emn	Eldritch Moon	2016-07-22	expansion	208	false	pending	0			false	
+pemn	Eldritch Moon Promos	2016-07-22	promo	77	false	pending	0			false	
+temn	Eldritch Moon Tokens	2016-07-22	token	11	false	pending	0			false	
+v16	From the Vault: Lore	2016-08-19	from_the_vault	16	false	pending	0			false	
+cn2	Conspiracy: Take the Crown	2016-08-26	draft_innovation	222	false	pending	0			false	
+tcn2	Conspiracy: Take the Crown Tokens	2016-08-26	token	12	false	pending	0			false	
+ddr	Duel Decks: Nissa vs. Ob Nixilis	2016-09-02	duel_deck	76	false	pending	0			false	
+kld	Kaladesh	2016-09-30	expansion	278	false	pending	0			false	
+mps	Kaladesh Inventions	2016-09-30	masterpiece	54	false	pending	0			false	
+pkld	Kaladesh Promos	2016-09-30	promo	83	false	pending	0			false	
+tkld	Kaladesh Tokens	2016-09-30	token	13	false	pending	0			false	
+ps16	San Diego Comic-Con 2016	2016-10-01	promo	5	false	pending	0			false	
+c16	Commander 2016	2016-11-11	commander	351	false	pending	0			false	
+oc16	Commander 2016 Oversized	2016-11-11	memorabilia	5	false	pending	0			false	
+tc16	Commander 2016 Tokens	2016-11-11	token	21	false	pending	0			false	
+pz2	Treasure Chest	2016-11-16	treasure_chest	282	true	pending	0			false	
+opca	Planechase Anthology Planes	2016-11-25	planechase	86	false	pending	0			false	
+pca	Planechase Anthology	2016-11-25	planechase	156	false	pending	0			false	
+tpca	Planechase Anthology Tokens	2016-11-25	token	19	false	pending	0			false	
+f17	Friday Night Magic 2017	2017-01-01	promo	12	false	pending	0			false	
+j17	Judge Gift Cards 2017	2017-01-01	promo	9	false	pending	0			false	
+l17	League Tokens 2017	2017-01-01	token	1	false	pending	0			false	
+aer	Aether Revolt	2017-01-20	expansion	197	false	pending	0			false	
+paer	Aether Revolt Promos	2017-01-20	promo	65	false	pending	0			false	
+taer	Aether Revolt Tokens	2017-01-20	token	4	false	pending	0			false	
+mm3	Modern Masters 2017	2017-03-17	masters	249	false	pending	0			false	
+tmm3	Modern Masters 2017 Tokens	2017-03-17	token	21	false	pending	0			false	
+dds	Duel Decks: Mind vs. Might	2017-03-31	duel_deck	65	false	pending	0			false	
+tdds	Duel Decks: Mind vs. Might Tokens	2017-03-31	token	7	false	pending	0			false	
+w17	Welcome Deck 2017	2017-04-15	starter	30	false	pending	0			false	
+akh	Amonkhet	2017-04-28	expansion	287	false	pending	0			false	
+mp2	Amonkhet Invocations	2017-04-28	masterpiece	54	false	pending	0			false	
+pakh	Amonkhet Promos	2017-04-28	promo	77	false	pending	0			false	
+takh	Amonkhet Tokens	2017-04-28	token	26	false	pending	0			false	
+cma	Commander Anthology	2017-06-09	commander	320	false	pending	0			false	
+tcma	Commander Anthology Tokens	2017-06-09	token	20	false	pending	0			false	
+e01	Archenemy: Nicol Bolas	2017-06-16	archenemy	106	false	pending	0			false	
+oe01	Archenemy: Nicol Bolas Schemes	2017-06-16	archenemy	20	false	pending	0			false	
+hou	Hour of Devastation	2017-07-14	expansion	209	false	pending	0			false	
+phou	Hour of Devastation Promos	2017-07-14	promo	62	false	pending	0			false	
+thou	Hour of Devastation Tokens	2017-07-14	token	13	false	pending	0			false	
+ps17	San Diego Comic-Con 2017	2017-07-20	promo	6	false	pending	0			false	
+c17	Commander 2017	2017-08-25	commander	309	false	pending	0			false	
+oc17	Commander 2017 Oversized	2017-08-25	memorabilia	4	false	pending	0			false	
+tc17	Commander 2017 Tokens	2017-08-25	token	11	false	pending	0			false	
+te01	Archenemy: Nicol Bolas Tokens	2017-09-08	token	5	false	pending	0			false	
+h17	HasCon 2017	2017-09-20	funny	4	false	pending	0			false	
+phtr	2016 Heroes of the Realm	2017-09-20	funny	3	false	pending	0			false	
+pss2	XLN Standard Showdown	2017-09-29	promo	5	false	pending	0			false	
+pxln	Ixalan Promos	2017-09-29	promo	120	false	pending	0			false	
+txln	Ixalan Tokens	2017-09-29	token	11	false	pending	0			false	
+xln	Ixalan	2017-09-29	expansion	289	false	pending	0			false	
+g17	2017 Gift Pack	2017-10-20	box	5	false	pending	0			false	
+ddt	Duel Decks: Merfolk vs. Goblins	2017-10-24	duel_deck	63	false	pending	0			false	
+tddt	Duel Decks: Merfolk vs. Goblins Tokens	2017-10-24	token	3	false	pending	0			false	
+ima	Iconic Masters	2017-11-17	masters	249	false	pending	0			false	
+e02	Explorers of Ixalan	2017-11-24	box	48	false	pending	0			false	
+pxtc	XLN Treasure Chest	2017-11-24	promo	10	false	pending	0			false	
+v17	From the Vault: Transform	2017-11-24	from_the_vault	16	false	pending	0			false	
+tima	Iconic Masters Tokens	2017-11-29	token	7	false	pending	0			false	
+pust	Unstable Promos	2017-12-08	promo	1	false	pending	0			false	
+tust	Unstable Tokens	2017-12-08	token	20	false	pending	0			false	
+ust	Unstable	2017-12-08	funny	268	false	pending	0			false	
+f18	Friday Night Magic 2018	2017-12-27	promo	3	false	pending	0			false	
+j18	Judge Gift Cards 2018	2018-01-01	promo	8	false	pending	0			false	
+prix	Rivals of Ixalan Promos	2018-01-19	promo	98	false	pending	0			false	
+rix	Rivals of Ixalan	2018-01-19	expansion	205	false	pending	0			false	
+trix	Rivals of Ixalan Tokens	2018-01-19	token	7	false	pending	0			false	
+pnat	Nationals Promos	2018-01-25	promo	1	false	pending	0			false	
+plny	Lunar New Year 2018	2018-02-16	promo	1	false	pending	0			false	
+a25	Masters 25	2018-03-16	masters	249	false	pending	0			false	
+ta25	Masters 25 Tokens	2018-03-16	token	16	false	pending	0			false	
+ddu	Duel Decks: Elves vs. Inventors	2018-04-06	duel_deck	76	false	pending	0			false	
+tddu	Duel Decks: Elves vs. Inventors Tokens	2018-04-06	token	4	false	pending	0			false	
+dom	Dominaria	2018-04-27	expansion	280	false	pending	0			false	
+pdom	Dominaria Promos	2018-04-27	promo	118	false	pending	0			false	
+tdom	Dominaria Tokens	2018-04-27	token	16	false	pending	0			false	
+bbd	Battlebond	2018-06-08	draft_innovation	256	false	pending	0			false	
+cm2	Commander Anthology Volume II	2018-06-08	commander	312	false	pending	0			false	
+pbbd	Battlebond Promos	2018-06-08	promo	22	false	pending	0			false	
+tbbd	Battlebond Tokens	2018-06-08	token	8	false	pending	0			false	
+tcm2	Commander Anthology Volume II Tokens	2018-06-08	token	19	false	pending	0			false	
+ss1	Signature Spellbook: Jace	2018-06-15	spellbook	8	false	pending	0			false	
+gs1	Global Series Jiang Yanggu & Mu Yanling	2018-06-22	duel_deck	41	false	pending	0			false	
+m19	Core Set 2019	2018-07-13	core	314	false	pending	0			false	
+pm19	Core Set 2019 Promos	2018-07-13	promo	95	false	pending	0			false	
+pss3	M19 Standard Showdown	2018-07-13	promo	5	false	pending	0			false	
+tm19	Core Set 2019 Tokens	2018-07-13	token	18	false	pending	0			false	
+ana	Arena New Player Experience	2018-07-14	starter	46	true	pending	0			false	
+oana	Arena New Player Experience Cards	2018-07-14	starter	14	true	pending	0			false	
+pana	MTG Arena Promos	2018-07-14	promo	83	true	pending	0			false	
+xana	Arena New Player Experience Extras	2018-07-14	memorabilia	20	true	pending	0			false	
+ps18	San Diego Comic-Con 2018	2018-07-19	promo	5	false	pending	0			false	
+ph17	2017 Heroes of the Realm	2018-08-01	funny	3	false	pending	0			false	
+oc18	Commander 2018 Oversized	2018-08-09	memorabilia	4	false	pending	0			false	
+tc18	Commander 2018 Tokens	2018-08-09	token	26	false	pending	0			false	
+c18	Commander 2018	2018-08-10	commander	307	false	pending	0			false	
+grn	Guilds of Ravnica	2018-10-05	expansion	273	false	pending	0			false	
+med	Mythic Edition	2018-10-05	masterpiece	24	false	pending	0			false	
+pgrn	Guilds of Ravnica Promos	2018-10-05	promo	84	false	pending	0			false	
+tgrn	Guilds of Ravnica Tokens	2018-10-05	token	8	false	pending	0			false	
+tmed	Mythic Edition Tokens	2018-10-05	token	16	false	pending	0			false	
+gk1	GRN Guild Kit	2018-11-02	box	127	false	pending	0			false	
+tgk1	GRN Guild Kit Tokens	2018-11-02	token	10	false	pending	0			false	
+prwk	GRN Ravnica Weekend	2018-11-09	promo	10	false	pending	0			false	
+g18	M19 Gift Pack	2018-11-16	box	5	false	pending	0			false	
+gnt	Game Night	2018-11-16	box	68	false	pending	0			false	
+puma	Ultimate Box Topper	2018-12-07	masterpiece	40	false	pending	0			false	
+tuma	Ultimate Masters Tokens	2018-12-07	token	16	false	pending	0			false	
+uma	Ultimate Masters	2018-12-07	masters	254	false	pending	0			false	
+pf19	MagicFest 2019	2019-01-01	promo	7	false	pending	0			false	
+prna	Ravnica Allegiance Promos	2019-01-25	promo	81	false	pending	0			false	
+rna	Ravnica Allegiance	2019-01-25	expansion	273	false	pending	0			false	
+trna	Ravnica Allegiance Tokens	2019-01-25	token	13	false	pending	0			false	
+gk2	RNA Guild Kit	2019-02-15	box	133	false	pending	0			false	
+tgk2	RNA Guild Kit Tokens	2019-02-15	token	9	false	pending	0			false	
+prw2	RNA Ravnica Weekend	2019-02-16	promo	10	false	pending	0			false	
+j19	Judge Gift Cards 2019	2019-04-10	promo	8	false	pending	0			false	
+pwar	War of the Spark Promos	2019-05-03	promo	176	false	pending	0			false	
+twar	War of the Spark Tokens	2019-05-03	token	19	false	pending	0			false	
+war	War of the Spark	2019-05-03	expansion	312	false	pending	0			false	
+tmh1	Modern Horizons Tokens	2019-05-30	token	21	false	pending	0			false	
+amh1	Modern Horizons Art Series	2019-06-05	memorabilia	54	false	pending	0			false	
+mh1	Modern Horizons	2019-06-14	draft_innovation	255	false	pending	0			false	
+pmh1	Modern Horizons Promos	2019-06-14	promo	2	false	pending	0			false	
+ss2	Signature Spellbook: Gideon	2019-06-28	spellbook	8	false	pending	0			false	
+m20	Core Set 2020	2019-07-12	core	346	false	pending	0			false	
+pm20	Core Set 2020 Promos	2019-07-12	promo	144	false	pending	0			false	
+ppp1	M20 Promo Packs	2019-07-12	promo	5	false	pending	0			false	
+tm20	Core Set 2020 Tokens	2019-07-12	token	12	false	pending	0			false	
+ps19	San Diego Comic-Con 2019	2019-07-18	promo	5	false	pending	0			false	
+ph18	2018 Heroes of the Realm	2019-08-01	funny	5	false	pending	0			false	
+tc19	Commander 2019 Tokens	2019-08-01	token	29	false	pending	0			false	
+c19	Commander 2019	2019-08-23	commander	302	false	pending	0			false	
+oc19	Commander 2019 Oversized	2019-08-31	memorabilia	4	false	pending	0			false	
+pwcs	Planeswalker Championship Promos	2019-10-01	promo	46	false	pending	0			false	
+eld	Throne of Eldraine	2019-10-04	expansion	398	false	pending	0			false	
+peld	Throne of Eldraine Promos	2019-10-04	promo	138	false	pending	0			false	
+teld	Throne of Eldraine Tokens	2019-10-04	token	20	false	pending	0			false	
+ptg	Ponies: The Galloping	2019-10-22	funny	3	false	pending	0			false	
+cmb1	Mystery Booster Playtest Cards 2019	2019-11-07	funny	121	false	pending	0			false	
+gn2	Game Night 2019	2019-11-15	box	64	false	pending	0			false	
+tgn2	Game Night 2019 Tokens	2019-11-15	token	3	false	pending	0			false	
+ha1	Historic Anthology 1	2019-11-21	box	20	true	pending	0			false	
+sld	Secret Lair Drop	2019-12-02	box	2581	false	pending	0			false	
+j20	Judge Gift Cards 2020	2020-01-01	promo	10	false	pending	0			false	
+pf20	MagicFest 2020	2020-01-01	promo	6	false	pending	0			false	
+pthb	Theros Beyond Death Promos	2020-01-24	promo	137	false	pending	0			false	
+thb	Theros Beyond Death	2020-01-24	expansion	358	false	pending	0			false	
+tthb	Theros Beyond Death Tokens	2020-01-24	token	14	false	pending	0			false	
+tund	Unsanctioned Tokens	2020-02-29	token	6	false	pending	0			false	
+und	Unsanctioned	2020-02-29	funny	96	false	pending	0			false	
+ha2	Historic Anthology 2	2020-03-12	box	25	true	pending	0			false	
+c20	Commander 2020	2020-04-17	commander	322	false	pending	0			false	
+oc20	Commander 2020 Oversized	2020-04-17	memorabilia	5	false	pending	0			false	
+tc20	Commander 2020 Tokens	2020-04-17	token	20	false	pending	0			false	
+iko	Ikoria: Lair of Behemoths	2020-04-24	expansion	390	false	pending	0			false	
+piko	Ikoria: Lair of Behemoths Promos	2020-04-24	promo	137	false	pending	0			false	
+tiko	Ikoria: Lair of Behemoths Tokens	2020-04-24	token	14	false	pending	0			false	
+plg20	Love Your LGS 2020	2020-05-18	promo	2	false	pending	0			false	
+ha3	Historic Anthology 3	2020-05-21	box	27	true	pending	0			false	
+slu	Secret Lair: Ultimate Edition	2020-05-29	box	16	false	pending	0			false	
+fjmp	Jumpstart Front Cards	2020-06-18	memorabilia	46	false	pending	0			false	
+ss3	Signature Spellbook: Chandra	2020-06-26	spellbook	8	false	pending	0			false	
+m21	Core Set 2021	2020-07-03	core	397	false	pending	0			false	
+pm21	Core Set 2021 Promos	2020-07-03	promo	137	false	pending	0			false	
+tm21	Core Set 2021 Tokens	2020-07-03	token	20	false	pending	0			false	
+ajmp	Jumpstart Arena Exclusives	2020-07-17	starter	18	true	pending	0			false	
+jmp	Jumpstart	2020-07-17	draft_innovation	497	false	pending	0			false	
+ph19	2019 Heroes of the Realm	2020-08-01	funny	7	false	pending	0			false	
+2xm	Double Masters	2020-08-07	masters	384	false	pending	0			false	
+t2xm	Double Masters Tokens	2020-08-07	token	31	false	pending	0			false	
+akr	Amonkhet Remastered	2020-08-13	masters	339	true	pending	0			false	
+anb	Arena Beginner Set	2020-08-13	starter	120	true	pending	0			false	
+aznr	Zendikar Rising Art Series	2020-09-25	memorabilia	81	false	pending	0			false	
+mznr	Zendikar Rising Minigames	2020-09-25	minigame	5	false	pending	0			false	
+pznr	Zendikar Rising Promos	2020-09-25	promo	153	false	pending	0			false	
+sznr	Zendikar Rising Substitute Cards	2020-09-25	token	9	false	pending	0			false	
+tznc	Zendikar Rising Commander Tokens	2020-09-25	token	11	false	pending	0			false	
+tznr	Zendikar Rising Tokens	2020-09-25	token	12	false	pending	0			false	
+znc	Zendikar Rising Commander	2020-09-25	commander	142	false	pending	0			false	
+zne	Zendikar Rising Expeditions	2020-09-25	masterpiece	30	false	pending	0			false	
+znr	Zendikar Rising	2020-09-25	expansion	407	false	pending	0			false	
+plst	The List	2020-09-26	masters	5120	false	pending	0			false	
+klr	Kaladesh Remastered	2020-11-12	masters	302	true	pending	0			false	
+cmr	Commander Legends	2020-11-20	draft_innovation	718	false	pending	0			false	
+pcmr	Commander Legends Promos	2020-11-20	promo	6	false	pending	0			false	
+tcmr	Commander Legends Tokens	2020-11-20	token	23	false	pending	0			false	
+cc1	Commander Collection: Green	2020-12-04	arsenal	8	false	pending	0			false	
+pj21	Judge Gift Cards 2021	2021-01-01	promo	10	false	pending	0			false	
+pl21	Year of the Ox 2021	2021-01-25	promo	6	false	pending	0			false	
+akhm	Kaldheim Art Series	2021-02-05	memorabilia	81	false	pending	0			false	
+khc	Kaldheim Commander	2021-02-05	commander	119	false	pending	0			false	
+khm	Kaldheim	2021-02-05	expansion	425	false	pending	0			false	
+mkhm	Kaldheim Minigames	2021-02-05	minigame	5	false	pending	0			false	
+pkhm	Kaldheim Promos	2021-02-05	promo	158	false	pending	0			false	
+skhm	Kaldheim Substitute Cards	2021-02-05	token	9	false	pending	0			false	
+tkhc	Kaldheim Commander Tokens	2021-02-05	token	8	false	pending	0			false	
+tkhm	Kaldheim Tokens	2021-02-05	token	23	false	pending	0			false	
+ha4	Historic Anthology 4	2021-03-11	box	25	true	pending	0			false	
+tsr	Time Spiral Remastered	2021-03-19	masters	411	false	pending	0			false	
+ttsr	Time Spiral Remastered Tokens	2021-03-19	token	15	false	pending	0			false	
+astx	Strixhaven Art Series	2021-04-23	memorabilia	162	false	pending	0			false	
+c21	Commander 2021	2021-04-23	commander	409	false	pending	0			false	
+mstx	Strixhaven: School of Mages Minigames	2021-04-23	minigame	5	false	pending	0			false	
+oc21	Commander 2021 Display Commanders	2021-04-23	memorabilia	5	false	pending	0			false	
+pstx	Strixhaven: School of Mages Promos	2021-04-23	promo	164	false	pending	0			false	
+sstx	Strixhaven: School of Mages Substitute Cards	2021-04-23	token	9	false	pending	0			false	
+sta	Strixhaven Mystical Archive	2021-04-23	masterpiece	126	false	pending	0			false	
+stx	Strixhaven: School of Mages	2021-04-23	expansion	393	false	pending	0			false	
+tc21	Commander 2021 Tokens	2021-04-23	token	30	false	pending	0			false	
+tstx	Strixhaven: School of Mages Tokens	2021-04-23	token	9	false	pending	0			false	
+ha5	Historic Anthology 5	2021-05-27	box	25	true	pending	0			false	
+amh2	Modern Horizons 2 Art Series	2021-06-18	memorabilia	162	false	pending	0			false	
+h1r	Modern Horizons 1 Timeshifts	2021-06-18	draft_innovation	40	false	pending	0			false	
+mh2	Modern Horizons 2	2021-06-18	draft_innovation	493	false	pending	0			false	
+mmh2	Modern Horizons 2 Minigames	2021-06-18	minigame	5	false	pending	0			false	
+pmh2	Modern Horizons 2 Promos	2021-06-18	promo	86	false	pending	0			false	
+pw21	Wizards Play Network 2021	2021-06-18	promo	6	false	pending	0			false	
+tmh2	Modern Horizons 2 Tokens	2021-06-18	token	21	false	pending	0			false	
+plg21	Love Your LGS 2021	2021-06-22	promo	11	false	pending	0			false	
+aafr	Adventures in the Forgotten Realms Art Series	2021-07-23	memorabilia	81	false	pending	0			false	
+afc	Forgotten Realms Commander	2021-07-23	commander	331	false	pending	0			false	
+afr	Adventures in the Forgotten Realms	2021-07-23	expansion	424	false	pending	0			false	
+mafr	Adventures in the Forgotten Realms Minigames	2021-07-23	minigame	5	false	pending	0			false	
+oafc	Forgotten Realms Commander Display Commanders	2021-07-23	memorabilia	4	false	pending	0			false	
+oafr	Forgotten Realms Oversized Cards	2021-07-23	memorabilia	3	false	pending	0			false	
+pafr	Adventures in the Forgotten Realms Promos	2021-07-23	promo	241	false	pending	0			false	
+tafc	Forgotten Realms Commander Tokens	2021-07-23	token	13	false	pending	0			false	
+tafr	Adventures in the Forgotten Realms Tokens	2021-07-23	token	22	false	pending	0			false	
+ph20	2020 Heroes of the Realm	2021-08-01	funny	3	false	pending	0			false	
+cmb2	Mystery Booster Playtest Cards 2021	2021-08-20	funny	121	false	pending	0			false	
+j21	Jumpstart: Historic Horizons	2021-08-26	draft_innovation	389	true	pending	0			false	
+amid	Midnight Hunt Art Series	2021-09-24	memorabilia	81	false	pending	0			false	
+mic	Midnight Hunt Commander	2021-09-24	commander	187	false	pending	0			false	
+mid	Innistrad: Midnight Hunt	2021-09-24	expansion	399	false	pending	0			false	
+mmid	Innistrad: Midnight Hunt Minigames	2021-09-24	minigame	3	false	pending	0			false	
+omic	Midnight Hunt Commander Display Commanders	2021-09-24	memorabilia	2	false	pending	0			false	
+pmid	Innistrad: Midnight Hunt Promos	2021-09-24	promo	155	false	pending	0			false	
+smid	Innistrad: Midnight Hunt Substitute Cards	2021-09-24	token	9	false	pending	0			false	
+tmic	Midnight Hunt Commander Tokens	2021-09-24	token	11	false	pending	0			false	
+tmid	Innistrad: Midnight Hunt Tokens	2021-09-24	token	19	false	pending	0			false	
+q06	Pioneer Challenger Decks 2021	2021-10-15	box	10	false	pending	0			false	
+avow	Crimson Vow Art Series	2021-11-19	memorabilia	81	false	pending	0			false	
+mvow	Innistrad: Crimson Vow Minigames	2021-11-19	minigame	3	false	pending	0			false	
+ovoc	Crimson Vow Commander Display Commanders	2021-11-19	memorabilia	2	false	pending	0			false	
+pvow	Innistrad: Crimson Vow Promos	2021-11-19	promo	121	false	pending	0			false	
+svow	Innistrad: Crimson Vow Substitute Cards	2021-11-19	token	9	false	pending	0			false	
+tvoc	Crimson Vow Commander Tokens	2021-11-19	token	6	false	pending	0			false	
+tvow	Innistrad: Crimson Vow Tokens	2021-11-19	token	21	false	pending	0			false	
+voc	Crimson Vow Commander	2021-11-19	commander	188	false	pending	0			false	
+vow	Innistrad: Crimson Vow	2021-11-19	expansion	423	false	pending	0			false	
+ymid	Alchemy: Innistrad	2021-12-09	alchemy	63	true	pending	0			false	
+p22	Judge Gift Cards 2022	2022-01-01	promo	10	false	pending	0			false	
+cc2	Commander Collection: Black	2022-01-28	arsenal	9	false	pending	0			false	
+dbl	Innistrad: Double Feature	2022-01-28	draft_innovation	535	false	pending	0			false	
+aneo	Neon Dynasty Art Series	2022-02-18	memorabilia	81	false	pending	0			false	
+mneo	Kamigawa: Neon Dynasty Minigames	2022-02-18	minigame	3	false	pending	0			false	
+nec	Neon Dynasty Commander	2022-02-18	commander	179	false	pending	0			false	
+neo	Kamigawa: Neon Dynasty	2022-02-18	expansion	531	false	pending	0			false	
+pneo	Kamigawa: Neon Dynasty Promos	2022-02-18	promo	148	false	pending	0			false	
+sneo	Kamigawa: Neon Dynasty Substitute Cards	2022-02-18	token	9	false	pending	0			false	
+tnec	Neon Dynasty Commander Tokens	2022-02-18	token	12	false	pending	0			false	
+tneo	Kamigawa: Neon Dynasty Tokens	2022-02-18	token	19	false	pending	0			false	
+pl22	Year of the Tiger 2022	2022-02-25	promo	5	false	pending	0			false	
+slx	Universes Within	2022-03-03	masters	30	false	pending	0			false	
+pw22	Wizards Play Network 2022	2022-03-05	promo	6	false	pending	0			false	
+yneo	Alchemy: Kamigawa	2022-03-17	alchemy	30	true	pending	0			false	
+q07	Challenger Decks 2022	2022-04-01	box	1	false	pending	0			false	
+gdy	Game Day Promos	2022-04-08	promo	9	false	pending	0			false	
+asnc	New Capenna Art Series	2022-04-29	memorabilia	81	false	pending	0			false	
+msnc	Streets of New Capenna Minigames	2022-04-29	minigame	3	false	pending	0			false	
+ncc	New Capenna Commander	2022-04-29	commander	447	false	pending	0			false	
+pncc	New Capenna Commander Promos	2022-04-29	promo	75	false	pending	0			false	
+psnc	Streets of New Capenna Promos	2022-04-29	promo	161	false	pending	0			false	
+snc	Streets of New Capenna	2022-04-29	expansion	513	false	pending	0			false	
+tncc	New Capenna Commander Tokens	2022-04-29	token	36	false	pending	0			false	
+tsnc	Streets of New Capenna Tokens	2022-04-29	token	19	false	pending	0			false	
+ptsnc	Streets of New Capenna Southeast Asia Tokens	2022-04-30	promo	6	false	pending	0			false	
+ysnc	Alchemy: New Capenna	2022-06-02	alchemy	30	true	pending	0			false	
+aclb	Battle for Baldur's Gate Art Series	2022-06-10	memorabilia	81	false	pending	0			false	
+clb	Commander Legends: Battle for Baldur's Gate	2022-06-10	draft_innovation	936	false	pending	0			false	
+mclb	Commander Legends: Battle for Baldur's Gate Minigames	2022-06-10	minigame	3	false	pending	0			false	
+oclb	Battle for Baldur's Gate Oversized Cards	2022-06-10	memorabilia	1	false	pending	0			false	
+pclb	Battle for Baldur's Gate Promos	2022-06-10	promo	104	false	pending	0			false	
+tclb	Battle for Baldur's Gate Tokens	2022-06-10	token	51	false	pending	0			false	
+plg22	Love Your LGS 2022	2022-07-01	promo	2	false	pending	0			false	
+hbg	Alchemy Horizons: Baldur's Gate	2022-07-07	alchemy	436	true	pending	0			false	
+2x2	Double Masters 2022	2022-07-08	masters	579	false	pending	0			false	
+t2x2	Double Masters 2022 Tokens	2022-07-08	token	24	false	pending	0			false	
+sch	Store Championships	2022-07-09	promo	50	false	pending	0			false	
+ea1	Explorer Anthology 1	2022-07-28	box	20	true	pending	0			false	
+ha6	Historic Anthology 6	2022-07-28	box	20	true	pending	0			false	
+ph21	2021 Heroes of the Realm	2022-08-01	funny	4	false	pending	0			false	
+psvc	Summer Vacation Promos 2022	2022-08-01	promo	3	false	pending	0			false	
+p30a	30th Anniversary Play Promos	2022-09-02	promo	30	false	pending	0			false	
+p30m	30th Anniversary Misc Promos	2022-09-02	promo	5	false	pending	0			false	
+admu	Dominaria United Art Series	2022-09-09	memorabilia	81	false	pending	0			false	
+dmc	Dominaria United Commander	2022-09-09	commander	240	false	pending	0			false	
+dmu	Dominaria United	2022-09-09	expansion	453	false	pending	0			false	
+fdmu	Dominaria United Jumpstart Front Cards	2022-09-09	memorabilia	10	false	pending	0			false	
+mdmu	Dominaria United Minigames	2022-09-09	minigame	3	false	pending	0			false	
+p30h	30th Anniversary History Promos	2022-09-09	promo	10	false	pending	0			false	
+pdmu	Dominaria United Promos	2022-09-09	promo	161	false	pending	0			false	
+ptdmu	Dominaria United Southeast Asia Tokens	2022-09-09	token	3	false	pending	0			false	
+tdmc	Dominaria United Commander Tokens	2022-09-09	token	12	false	pending	0			false	
+tdmu	Dominaria United Tokens	2022-09-09	token	26	false	pending	0			false	
+wdmu	DMU Japanese Promo Tokens	2022-09-09	token	5	false	pending	0			false	
+prcq	Regional Championship Qualifiers 2022	2022-10-01	promo	3	false	pending	0			false	
+ydmu	Alchemy: Dominaria	2022-10-05	alchemy	39	true	pending	0			false	
+40k	Warhammer 40,000 Commander	2022-10-07	commander	617	false	pending	0			false	
+sunf	Unfinity Sticker Sheets	2022-10-07	funny	48	false	pending	0			false	
+t40k	Warhammer 40,000 Tokens	2022-10-07	token	31	false	pending	0			false	
+tunf	Unfinity Tokens	2022-10-07	token	14	false	pending	0			false	
+ulst	The List (Unfinity Foil Edition)	2022-10-07	funny	62	false	pending	0			false	
+unf	Unfinity	2022-10-07	funny	639	false	pending	0			false	
+gn3	Game Night: Free-for-All	2022-10-14	box	135	false	pending	0			false	
+tgn3	Game Night: Free-for-All Tokens	2022-10-14	token	10	false	pending	0			false	
+slc	Secret Lair Countdown	2022-11-01	box	84	false	pending	0			false	
+abro	The Brothers' War Art Series	2022-11-18	memorabilia	81	false	pending	0			false	
+bot	Transformers	2022-11-18	eternal	29	false	pending	0			false	
+brc	The Brothers' War Commander	2022-11-18	commander	209	false	pending	0			false	
+bro	The Brothers' War	2022-11-18	expansion	399	false	pending	0			false	
+brr	The Brothers' War Retro Artifacts	2022-11-18	masterpiece	189	false	pending	0			false	
+fbro	The Brothers' War Jumpstart Front Cards	2022-11-18	memorabilia	5	false	pending	0			false	
+mbro	The Brothers' War Minigames	2022-11-18	minigame	3	false	pending	0			false	
+pbro	The Brothers' War Promos	2022-11-18	promo	171	false	pending	0			false	
+ptbro	The Brothers' War Southeast Asia Tokens	2022-11-18	token	3	false	pending	0			false	
+sbro	The Brothers' War Substitute Cards	2022-11-18	token	1	false	pending	0			false	
+tbot	Transformers Tokens	2022-11-18	token	2	false	pending	0			false	
+tbrc	The Brothers' War Commander Tokens	2022-11-18	token	14	false	pending	0			false	
+tbro	The Brothers' War Tokens	2022-11-18	token	12	false	pending	0			false	
+pewk	Eternal Weekend	2022-11-26	promo	10	false	pending	0			false	
+30a	30th Anniversary Edition	2022-11-28	memorabilia	594	false	pending	0			false	
+t30a	30th Anniversary Tokens	2022-11-28	token	16	false	pending	0			false	
+fj22	Jumpstart 2022 Front Cards	2022-12-02	memorabilia	46	false	pending	0			false	
+j22	Jumpstart 2022	2022-12-02	draft_innovation	835	false	pending	0			false	
+scd	Starter Commander Decks	2022-12-02	commander	352	false	pending	0			false	
+tscd	Starter Commander Deck Tokens	2022-12-02	token	27	false	pending	0			false	
+ea2	Explorer Anthology 2	2022-12-13	box	25	true	pending	0			false	
+ybro	Alchemy: The Brothers' War	2022-12-13	alchemy	31	true	pending	0			false	
+p23	Judge Gift Cards 2023	2023-01-01	promo	10	false	pending	0			false	
+pw23	Wizards Play Network 2023	2023-01-01	promo	11	false	pending	0			false	
+pr23	Regional Championship Qualifiers 2023	2023-01-07	promo	3	false	pending	0			false	
+dmr	Dominaria Remastered	2023-01-13	masters	457	false	pending	0			false	
+tdmr	Dominaria Remastered Tokens	2023-01-13	token	14	false	pending	0			false	
+wone	ONE Japanese Promo Tokens	2023-01-27	token	6	false	pending	0			false	
+aone	Phyrexia: All Will Be One Art Series	2023-02-03	memorabilia	81	false	pending	0			false	
+fone	Phyrexia: All Will Be One Jumpstart Front Cards	2023-02-03	memorabilia	5	false	pending	0			false	
+mone	Phyrexia: All Will Be One Minigames	2023-02-03	minigame	5	false	pending	0			false	
+tonc	Phyrexia: All Will Be One Commander Tokens	2023-02-03	token	23	false	pending	0			false	
+tone	Phyrexia: All Will Be One Tokens	2023-02-03	token	14	false	pending	0			false	
+onc	Phyrexia: All Will Be One Commander	2023-02-10	commander	174	false	pending	0			false	
+one	Phyrexia: All Will Be One	2023-02-10	expansion	479	false	pending	0			false	
+pl23	Year of the Rabbit 2023	2023-02-10	promo	6	false	pending	0			false	
+pone	Phyrexia: All Will Be One Promos	2023-02-10	promo	160	false	pending	0			false	
+unk	Unknown Event	2023-02-15	funny	512	false	pending	0			false	
+slp	Secret Lair Promo	2023-02-17	promo	54	false	pending	0			false	
+yone	Alchemy: Phyrexia	2023-02-28	alchemy	30	true	pending	0			false	
+sir	Shadows over Innistrad Remastered	2023-03-21	masters	294	true	pending	0			false	
+sis	Shadows of the Past	2023-03-21	masters	76	true	pending	0			false	
+amom	March of the Machine Art Series	2023-04-21	memorabilia	81	false	pending	0			false	
+fmom	March of the Machine Jumpstart Front Cards	2023-04-21	memorabilia	5	false	pending	0			false	
+moc	March of the Machine Commander	2023-04-21	commander	450	false	pending	0			false	
+mom	March of the Machine	2023-04-21	expansion	387	false	pending	0			false	
+mul	Multiverse Legends	2023-04-21	masterpiece	261	false	pending	0			false	
+pmom	March of the Machine Promos	2023-04-21	promo	134	false	pending	0			false	
+smom	March of the Machine Substitute Cards	2023-04-21	token	1	false	pending	0			false	
+tmoc	March of the Machine Commander Tokens	2023-04-21	token	46	false	pending	0			false	
+tmom	March of the Machine Tokens	2023-04-21	token	23	false	pending	0			false	
+tmul	Multiverse Legends Tokens	2023-04-21	token	2	false	pending	0			false	
+wmom	MOM Japanese Promo Tokens	2023-04-21	token	12	false	pending	0			false	
+mat	March of the Machine: The Aftermath	2023-05-12	expansion	230	false	pending	0			false	
+altr	Tales of Middle-earth Art Series	2023-06-23	memorabilia	81	false	pending	0			false	
+fltr	Tales of Middle-earth Front Cards	2023-06-23	memorabilia	10	false	pending	0			false	
+ltc	Tales of Middle-earth Commander	2023-06-23	commander	591	false	pending	0			false	
+ltr	The Lord of the Rings: Tales of Middle-earth	2023-06-23	draft_innovation	856	false	pending	0			false	
+mltr	The Lord of the Rings: Tales of Middle-earth Minigames	2023-06-23	minigame	1	false	pending	0			false	
+pltr	Tales of Middle-earth Promos	2023-06-23	promo	86	false	pending	0			false	
+tltc	Tales of Middle-earth Commander Tokens	2023-06-23	token	15	false	pending	0			false	
+tltr	Tales of Middle-earth Tokens	2023-06-23	token	25	false	pending	0			false	
+pf23	MagicFest 2023	2023-07-01	promo	4	false	pending	0			false	
+ea3	Explorer Anthology 3	2023-07-18	box	25	true	pending	0			false	
+ha7	Historic Anthology 7	2023-07-18	box	25	true	pending	0			false	
+ph22	2022 Heroes of the Realm	2023-08-01	funny	5	false	pending	0			false	
+acmm	Commander Masters Art Series	2023-08-04	memorabilia	81	false	pending	0			false	
+cmm	Commander Masters	2023-08-04	masters	1067	false	pending	0			false	
+tcmm	Commander Masters Tokens	2023-08-04	token	81	false	pending	0			false	
+p30t	30th Anniversary Celebration Tokyo	2023-09-01	promo	2	false	pending	0			false	
+awoe	Wilds of Eldraine Art Series	2023-09-08	memorabilia	81	false	pending	0			false	
+pmda	Magic × Duel Masters Promos	2023-09-08	promo	4	false	pending	0			false	
+ptsr	Time Spiral Remastered Promos	2023-09-08	promo	3	false	pending	0			false	
+pwoe	Wilds of Eldraine Promos	2023-09-08	promo	160	false	pending	0			false	
+twoc	Wilds of Eldraine Commander Tokens	2023-09-08	token	10	false	pending	0			false	
+twoe	Wilds of Eldraine Tokens	2023-09-08	token	18	false	pending	0			false	
+woc	Wilds of Eldraine Commander	2023-09-08	commander	173	false	pending	0			false	
+woe	Wilds of Eldraine	2023-09-08	expansion	381	false	pending	0			false	
+wot	Wilds of Eldraine: Enchanting Tales	2023-09-08	masterpiece	103	false	pending	0			false	
+wwoe	WOE Japanese Promo Tokens	2023-09-08	token	6	false	pending	0			false	
+ywoe	Alchemy: Wilds of Eldraine	2023-10-10	alchemy	30	true	pending	0			false	
+twho	Doctor Who Tokens	2023-10-13	token	64	false	pending	0			false	
+who	Doctor Who	2023-10-13	commander	1178	false	pending	0			false	
+altc	Tales of Middle-earth Scene Box	2023-11-04	memorabilia	24	false	pending	0			false	
+alci	The Lost Caverns of Ixalan Art Series	2023-11-17	memorabilia	81	false	pending	0			false	
+lcc	The Lost Caverns of Ixalan Commander	2023-11-17	commander	370	false	pending	0			false	
+lci	The Lost Caverns of Ixalan	2023-11-17	expansion	416	false	pending	0			false	
+plci	The Lost Caverns of Ixalan Promos	2023-11-17	promo	136	false	pending	0			false	
+pmat	March of the Machine: The Aftermath Promos	2023-11-17	promo	8	false	pending	0			false	
+rex	Jurassic World Collection	2023-11-17	eternal	45	false	pending	0			false	
+slci	The Lost Caverns of Ixalan Substitute Cards	2023-11-17	token	1	false	pending	0			false	
+spg	Special Guests	2023-11-17	masterpiece	165	false	pending	0			false	
+tlcc	The Lost Caverns of Ixalan Commander Tokens	2023-11-17	token	18	false	pending	0			false	
+tlci	The Lost Caverns of Ixalan Tokens	2023-11-17	token	19	false	pending	0			false	
+trex	Jurassic World Collection Tokens	2023-11-17	token	2	false	pending	0			false	
+ylci	Alchemy: Ixalan	2023-12-05	alchemy	30	true	pending	0			false	
+pf24	MagicFest 2024	2024-01-01	promo	2	false	pending	0			false	
+pw24	Wizards Play Network 2024	2024-01-01	promo	18	false	pending	0			false	
+rvr	Ravnica Remastered	2024-01-12	masters	531	false	pending	0			false	
+trvr	Ravnica Remastered Tokens	2024-01-12	token	20	false	pending	0			false	
+pl24	Year of the Dragon 2024	2024-02-08	promo	7	false	pending	0			false	
+amkm	Murders at Karlov Manor Art Series	2024-02-09	memorabilia	49	false	pending	0			false	
+mkc	Murders at Karlov Manor Commander	2024-02-09	commander	358	false	pending	0			false	
+mkm	Murders at Karlov Manor	2024-02-09	expansion	451	false	pending	0			false	
+pmkm	Murders at Karlov Manor Promos	2024-02-09	promo	180	false	pending	0			false	
+tmkc	Murders at Karlov Manor Commander Tokens	2024-02-09	token	31	false	pending	0			false	
+tmkm	Murders at Karlov Manor Tokens	2024-02-09	token	22	false	pending	0			false	
+wmkm	MKM Japanese Promo Tokens	2024-02-09	token	4	false	pending	0			false	
+pss4	MKM Standard Showdown	2024-02-10	promo	5	false	pending	0			false	
+clu	Ravnica: Clue Edition	2024-02-23	draft_innovation	284	false	pending	0			false	
+fclu	Ravnica: Clue Edition Front Cards	2024-02-23	memorabilia	10	false	pending	0			false	
+punk	Black Lotus Unknown Planechase	2024-02-24	funny	52	false	pending	0			false	
+ymkm	Alchemy: Murders at Karlov Manor	2024-03-05	alchemy	30	true	pending	0			false	
+pip	Fallout	2024-03-08	commander	1068	false	pending	0			false	
+tpip	Fallout Tokens	2024-03-08	token	22	false	pending	0			false	
+aotj	Outlaws of Thunder Junction Art Series	2024-04-19	memorabilia	54	false	pending	0			false	
+big	The Big Score	2024-04-19	expansion	95	false	pending	0			false	
+otc	Outlaws of Thunder Junction Commander	2024-04-19	commander	342	false	pending	0			false	
+otj	Outlaws of Thunder Junction	2024-04-19	expansion	374	false	pending	0			false	
+otp	Breaking News	2024-04-19	masterpiece	80	false	pending	0			false	
+potj	Outlaws of Thunder Junction Promos	2024-04-19	promo	160	false	pending	0			false	
+tbig	The Big Score Tokens	2024-04-19	token	7	false	pending	0			false	
+totc	Outlaws of Thunder Junction Commander Tokens	2024-04-19	token	41	false	pending	0			false	
+totj	Outlaws of Thunder Junction Tokens	2024-04-19	token	19	false	pending	0			false	
+totp	Breaking News Tokens	2024-04-19	token	5	false	pending	0			false	
+yotj	Alchemy: Outlaws of Thunder Junction	2024-05-07	alchemy	30	true	pending	0			false	
+h2r	Modern Horizons 2 Timeshifts	2024-06-07	draft_innovation	16	false	pending	0			false	
+amh3	Modern Horizons 3 Art Series	2024-06-14	memorabilia	54	false	pending	0			false	
+m3c	Modern Horizons 3 Commander	2024-06-14	commander	398	false	pending	0			false	
+mh3	Modern Horizons 3	2024-06-14	draft_innovation	528	false	pending	0			false	
+pmh3	Modern Horizons 3 Promos	2024-06-14	promo	92	false	pending	0			false	
+smh3	Modern Horizons 3 Substitute Cards	2024-06-14	token	1	false	pending	0			false	
+tm3c	Modern Horizons 3 Commander Tokens	2024-06-14	token	28	false	pending	0			false	
+tmh3	Modern Horizons 3 Tokens	2024-06-14	token	43	false	pending	0			false	
+aacr	Assassin's Creed Art Series	2024-07-05	memorabilia	20	false	pending	0			false	
+acr	Assassin's Creed	2024-07-05	draft_innovation	309	false	pending	0			false	
+macr	Assassin's Creed Minigames	2024-07-05	minigame	3	false	pending	0			false	
+tacr	Assassin's Creed Tokens	2024-07-05	token	8	false	pending	0			false	
+ablb	Bloomburrow Art Series	2024-08-02	memorabilia	54	false	pending	0			false	
+blb	Bloomburrow	2024-08-02	expansion	398	false	pending	0			false	
+blc	Bloomburrow Commander	2024-08-02	commander	356	false	pending	0			false	
+mb2	Mystery Booster 2	2024-08-02	masters	385	false	pending	0			false	
+pblb	Bloomburrow Promos	2024-08-02	promo	160	false	pending	0			false	
+pcbb	Cowboy Bebop	2024-08-02	promo	5	false	pending	0			false	
+tblb	Bloomburrow Tokens	2024-08-02	token	30	false	pending	0			false	
+tblc	Bloomburrow Commander Tokens	2024-08-02	token	41	false	pending	0			false	
+plg24	Love Your LGS 2024	2024-08-06	promo	7	false	pending	0			false	
+yblb	Alchemy: Bloomburrow	2024-08-20	alchemy	30	true	pending	0			false	
+adsk	Duskmourn: House of Horror Art Series	2024-09-27	memorabilia	54	false	pending	0			false	
+dsc	Duskmourn: House of Horror Commander	2024-09-27	commander	373	false	pending	0			false	
+dsk	Duskmourn: House of Horror	2024-09-27	expansion	419	false	pending	0			false	
+pdsk	Duskmourn: House of Horror Promos	2024-09-27	promo	160	false	pending	0			false	
+tdsc	Duskmourn Commander Tokens	2024-09-27	token	23	false	pending	0			false	
+tdsk	Duskmourn: House of Horror Tokens	2024-09-27	token	19	false	pending	0			false	
+ydsk	Alchemy: Duskmourn	2024-10-15	alchemy	30	true	pending	0			false	
+pltc	Tales of Middle-earth Deluxe Commander Kit	2024-10-16	promo	4	false	pending	0			false	
+afdn	Foundations Art Series	2024-11-15	memorabilia	55	false	pending	0			false	
+fdc	Foundations Commander	2024-11-15	commander	3	false	pending	0			false	
+fdn	Foundations	2024-11-15	core	771	false	pending	0			false	
+ffdn	Foundations Front Cards	2024-11-15	memorabilia	10	false	pending	0			false	
+fj25	Foundations Jumpstart Front Cards	2024-11-15	memorabilia	46	false	pending	0			false	
+j25	Foundations Jumpstart	2024-11-15	draft_innovation	779	false	pending	0			false	
+pfdn	Foundations Promos	2024-11-15	promo	106	false	pending	0			false	
+tfdn	Foundations Tokens	2024-11-15	token	33	false	pending	0			false	
+pio	Pioneer Masters	2024-12-10	masters	398	true	pending	0			false	
+pf25	MagicFest 2025	2025-01-01	promo	19	false	pending	0			false	
+pw25	Wizards Play Network 2025	2025-01-01	promo	16	false	pending	0			false	
+pspl	Spotlight Series	2025-01-03	promo	12	false	pending	0			false	
+ainr	Innistrad Remastered Art Series	2025-01-24	memorabilia	25	false	pending	0			false	
+inr	Innistrad Remastered	2025-01-24	masters	495	false	pending	0			false	
+tinr	Innistrad Remastered Tokens	2025-01-24	token	27	false	pending	0			false	
+pjsc	Japan Standard Cup	2025-02-09	promo	4	false	pending	0			false	
+adft	Aetherdrift Art Series	2025-02-14	memorabilia	54	false	pending	0			false	
+dft	Aetherdrift	2025-02-14	expansion	553	false	pending	0			false	
+drc	Aetherdrift Commander	2025-02-14	commander	184	false	pending	0			false	
+pdft	Aetherdrift Promos	2025-02-14	promo	160	false	pending	0			false	
+pl25	Year of the Snake 2025	2025-02-14	promo	6	false	pending	0			false	
+tdft	Aetherdrift Tokens	2025-02-14	token	14	false	pending	0			false	
+tdrc	Aetherdrift Commander Tokens	2025-02-14	token	17	false	pending	0			false	
+pssc	Secret Lair Showcase Planes	2025-02-21	memorabilia	10	false	pending	0			false	
+ydft	Alchemy: Aetherdrift	2025-03-04	alchemy	30	true	pending	0			false	
+plg25	Love Your LGS 2025	2025-03-26	promo	2	false	pending	0			false	
+atdm	Tarkir: Dragonstorm Art Series	2025-04-11	memorabilia	54	false	pending	0			false	
+ptdm	Tarkir: Dragonstorm Promos	2025-04-11	promo	160	false	pending	0			false	
+tdc	Tarkir: Dragonstorm Commander	2025-04-11	commander	413	false	pending	0			false	
+tdm	Tarkir: Dragonstorm	2025-04-11	expansion	427	false	pending	0			false	
+ttdc	Tarkir: Dragonstorm Commander Tokens	2025-04-11	token	34	false	pending	0			false	
+ttdm	Tarkir: Dragonstorm Tokens	2025-04-11	token	16	false	pending	0			false	
+ytdm	Alchemy: Tarkir	2025-04-29	alchemy	30	true	pending	0			false	
+pa1	Pioneer Anthology 1	2025-05-05	box	11	true	pending	0			false	
+afin	Final Fantasy Art Series	2025-06-13	memorabilia	53	false	pending	0			false	
+fca	Final Fantasy: Through the Ages	2025-06-13	masterpiece	66	false	pending	0			false	
+fic	Final Fantasy Commander	2025-06-13	commander	486	false	pending	0			false	
+fin	Final Fantasy	2025-06-13	expansion	599	false	pending	0			false	
+pfin	Final Fantasy Promos	2025-06-13	promo	94	false	pending	0			false	
+pss5	FIN Standard Showdown	2025-06-13	promo	2	false	pending	0			false	
+rfin	Final Fantasy Regional Promos	2025-06-13	promo	2	false	pending	0			false	
+tfic	Final Fantasy Commander Tokens	2025-06-13	token	11	false	pending	0			false	
+tfin	Final Fantasy Tokens	2025-06-13	token	37	false	pending	0			false	
+wfin	FIN Asia WPN Promo Tokens	2025-06-13	token	3	false	pending	0			false	
+aeoe	Edge of Eternities Art Series	2025-08-01	memorabilia	54	false	pending	0			false	
+eoc	Edge of Eternities Commander	2025-08-01	commander	191	false	pending	0			false	
+eoe	Edge of Eternities	2025-08-01	expansion	400	false	pending	0			false	
+eos	Edge of Eternities: Stellar Sights	2025-08-01	masterpiece	180	false	pending	0			false	
+pbig	The Big Score Promos	2025-08-01	promo	14	false	pending	0			false	
+peoe	Edge of Eternities Promos	2025-08-01	promo	160	false	pending	0			false	
+teoc	Edge of Eternities Commander Tokens	2025-08-01	token	16	false	pending	0			false	
+teoe	Edge of Eternities Tokens	2025-08-01	token	12	false	pending	0			false	
+aa1	Arena Anthology 1	2025-08-19	box	26	true	pending	0			false	
+aa2	Arena Anthology 2	2025-08-19	box	25	true	pending	0			false	
+yeoe	Alchemy: Edge of Eternities	2025-08-19	alchemy	40	true	pending	0			false	
+ph23	2023 Heroes of the Realm	2025-08-24	funny	2	false	pending	0			false	
+aa3	Arena Anthology 3	2025-09-23	box	25	true	pending	0			false	
+aa4	Arena Anthology 4	2025-09-23	box	28	true	pending	0			false	
+om1	Through the Omenpaths	2025-09-23	expansion	189	true	pending	0			false	
+omb	Through the Omenpaths Bonus Sheet	2025-09-23	masterpiece	40	true	pending	0			false	
+aspm	Marvel's Spider-Man Art Series	2025-09-26	memorabilia	54	false	pending	0			false	
+mar	Marvel Universe	2025-09-26	masterpiece	100	false	pending	0			false	
+pspm	Marvel's Spider-Man Promos	2025-09-26	promo	68	false	pending	0			false	
+spe	Marvel's Spider-Man Eternal	2025-09-26	eternal	26	false	pending	0			false	
+spm	Marvel's Spider-Man	2025-09-26	expansion	286	false	pending	0			false	
+tspm	Marvel's Spider-Man Tokens	2025-09-26	token	7	false	pending	0			false	
+lmar	Marvel Legends Series Inserts	2025-09-30	promo	4	false	pending	0			false	
+atla	Avatar: the Last Airbender Art Series	2025-11-21	memorabilia	54	false	pending	0			false	
+atle	Avatar: the Last Airbender Eternal Art Series	2025-11-21	memorabilia	12	false	pending	0			false	
+ftla	Avatar: The Last Airbender Beginner Box Front Cards	2025-11-21	memorabilia	10	false	pending	0			false	
+jtla	Avatar: The Last Airbender Jumpstart Front Cards	2025-11-21	memorabilia	46	false	pending	0			false	
+ptla	Avatar: The Last Airbender Promos	2025-11-21	promo	80	false	pending	0			false	
+tla	Avatar: The Last Airbender	2025-11-21	expansion	394	false	pending	0			false	
+tle	Avatar: The Last Airbender Eternal	2025-11-21	eternal	317	false	pending	0			false	
+ttla	Avatar: The Last Airbender Tokens	2025-11-21	token	22	false	pending	0			false	
+ttle	Avatar: The Last Airbender Eternal Tokens	2025-11-21	token	2	false	pending	0			false	
+afic	Final Fantasy Scene Box	2025-12-05	memorabilia	24	false	pending	0			false	
+pf26	MagicFest 2026	2026-01-01	promo	7	false	pending	0			false	
+pw26	Wizards Play Network 2026	2026-01-01	promo	16	false	pending	0			false	
+aecl	Lorwyn Eclipsed Art Series	2026-01-23	memorabilia	54	false	pending	0			false	
+ecc	Lorwyn Eclipsed Commander	2026-01-23	commander	176	false	pending	0			false	
+ecl	Lorwyn Eclipsed	2026-01-23	expansion	408	false	pending	0			false	
+pecl	Lorwyn Eclipsed Promos	2026-01-23	promo	80	false	pending	0			false	
+tecc	Lorwyn Eclipsed Commander Tokens	2026-01-23	token	13	false	pending	0			false	
+tecl	Lorwyn Eclipsed Tokens	2026-01-23	token	13	false	pending	0			false	
+yecl	Alchemy: Lorwyn Eclipsed	2026-02-03	alchemy	30	true	pending	0			false	
+pl26	Year of the Horse 2026	2026-02-17	promo	5	false	pending	0			false	
+atmt	Teenage Mutant Ninja Turtles Art Series	2026-03-06	memorabilia	54	false	pending	0			false	
+ftmc	Teenage Mutant Ninja Turtles Eternal Front Cards	2026-03-06	memorabilia	5	false	pending	0			false	
+pza	Teenage Mutant Ninja Turtles Source Material	2026-03-06	masterpiece	20	false	pending	0			false	
+tmc	Teenage Mutant Ninja Turtles Eternal	2026-03-06	eternal	132	false	pending	0			false	
+tmt	Teenage Mutant Ninja Turtles	2026-03-06	expansion	320	false	pending	0			false	
+ttmc	Teenage Mutant Ninja Turtles Eternal Tokens	2026-03-06	token	31	false	pending	0			false	
+ttmt	Teenage Mutant Ninja Turtles Tokens	2026-03-06	token	10	false	pending	0			false	
+asos	Secrets of Strixhaven Art Series	2026-04-24	memorabilia	54	false	pending	0			false	
+psos	Secrets of Strixhaven Promos	2026-04-24	promo	80	false	pending	0			false	
+soa	Secrets of Strixhaven Mystical Archive	2026-04-24	masterpiece	195	false	pending	0			false	
+soc	Secrets of Strixhaven Commander	2026-04-24	commander	426	false	pending	0			false	
+sos	Secrets of Strixhaven	2026-04-24	expansion	368	false	pending	0			false	
+tsoc	Secrets of Strixhaven Commander Tokens	2026-04-24	token	30	false	pending	0			false	
+tsos	Secrets of Strixhaven Tokens	2026-04-24	token	14	false	pending	0			false	
+ysos	Alchemy: Secrets of Strixhaven	2026-05-19	alchemy	30	true	pending	0			false	
+amsh	Marvel Super Heroes Art Series	2026-06-26	memorabilia	66	false	pending	0			false	
+fmsc	Marvel Super Heroes Jumpstart Front Cards	2026-06-26	memorabilia	61	false	pending	0			false	
+msc	Marvel Super Heroes Commander	2026-06-26	commander	866	false	pending	0			false	
+msh	Marvel Super Heroes	2026-06-26	expansion	453	false	pending	0			false	
+tmsc	Marvel Super Heroes Commander Tokens	2026-06-26	token	32	false	pending	0			false	
+tmsh	Marvel Super Heroes Tokens	2026-06-26	token	27	false	pending	0			false	
+hob	The Hobbit	2026-08-14	expansion	39	false	pending	0			false	
+hoc	The Hobbit Commander	2026-08-14	commander	7	false	pending	0			false	
+thob	The Hobbit Tokens	2026-08-14	token	2	false	pending	0			false	
+fra	Reality Fracture	2026-10-02	expansion	7	false	pending	0			false	
+trc	Star Trek Commander	2026-11-20	commander	1	false	pending	0			false	
+trk	Star Trek	2026-11-20	expansion	0	false	pending	0			false	

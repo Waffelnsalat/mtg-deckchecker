@@ -5,6 +5,8 @@ This workflow reviews Magic cards set by set, oldest first, so wording gaps and 
 ## Files
 
 - `data/scryfall-sets.json`: generated list of every Scryfall set, sorted by release date.
+- `data/card-role-set-progress.json`: generated progress state for every set.
+- `data/card-role-set-progress.tsv`: generated readable progress table for every set.
 - `data/card-role-audit.json`: manual review ledger, keyed by `oracleId`.
 - `data/card-role-worksheets/<set>-role-review.tsv`: generated manual review worksheets.
 - `docs/card-role-todo.md`: larger follow-up list for tag taxonomy and analyzer design work.
@@ -19,6 +21,7 @@ npm run audit:cards -- next-set
 npm run audit:cards -- set lea
 npm run audit:cards -- worksheet lea
 npm run audit:cards -- import-worksheet lea
+npm run audit:cards -- progress
 ```
 
 ## Review Rule
@@ -34,8 +37,19 @@ The normal loop is:
 5. Run `npm run audit:cards -- import-worksheet <set>` to copy reviewed rows into `data/card-role-audit.json`.
 6. For `missing` or `wrong` entries, add or adjust analyzer tags and tests.
 7. Rerun the audit command until the set has no open cards.
+8. Run `npm run audit:cards -- progress` to refresh the edition progress overview.
 
 The worksheet is for human review and can be imported after editing. The ledger is the source of truth for completed decisions. Do not regenerate a worksheet over manual edits before importing it.
+
+## Set Progress
+
+The progress command marks every tracked Scryfall set as:
+
+- `done`: worksheet exists and every unique oracle ID in the set is reviewed.
+- `in_progress`: at least one card is reviewed, but open cards remain.
+- `pending`: no reviewed cards are known locally yet.
+
+`progressKnown` is `true` when a worksheet exists for the set, because the command can count total unique oracle IDs from that worksheet. Without a worksheet, progress can only use existing ledger entries.
 
 ## Statuses
 
