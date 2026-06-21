@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.4.8 - 2026-06-21
+
+### Neu
+
+- Alpha-Karten ohne Analyzer-Rolle werden jetzt durch zusaetzliche alte Wording-Muster erfasst.
+- Neue Detailtags erkennen unter anderem `color_change`, `text_change`, `ante_card`, `land_type_change`, `animation_effect`, `tap_untap`, `hand_info`, `player_control`, `regeneration_protection`, `combat_body` und Alpha-Land-Basistags.
+- `data/card-role-worksheets/lea-role-review.tsv` wurde neu erzeugt; Alpha hat jetzt keine Karten mehr ohne Analyzer-Rolle.
+
+### Validierung
+
+- `npm test -- --test-name-pattern Alpha-era`
+- `npm run build`
+- `npm run audit:cards -- worksheet lea`
+- Null-Rollen-Pruefung auf `lea-role-review.tsv`: `missing=0`
+
+## 0.4.7 - 2026-06-21
+
+### Neu
+
+- Die Card View trennt Hauptrollen jetzt sichtbar von konkreten Analyzer-Detailtags.
+- Rollen-Chips zeigen Details wie `Targeted Removal`, `Land Denial` oder `Broad Protection` direkt unter der Hauptrolle statt nur im Tooltip.
+- Die Website-Version wurde auf `v0.4.7` angehoben.
+
+### Validierung
+
+- `npm run check`
+
 ## 0.4.6 - 2026-06-21
 
 ### Neu

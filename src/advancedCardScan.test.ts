@@ -873,6 +873,121 @@ test("inferAdvancedRoleProfile recognizes Alpha-era extra turns and table damage
   assert.ok(getRoleWeight(venomProfile, "damage_engine") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Alpha-era utility, laces, and ante cards", () => {
+  const laceProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Purelace",
+      "Instant",
+      1,
+      "Target spell or permanent becomes white. (Mana symbols on that permanent remain unchanged.)",
+    ),
+  );
+  const hackProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Magical Hack",
+      "Instant",
+      1,
+      'Change the text of target spell or permanent by replacing all instances of one basic land type with another. (For example, you may change "swampwalk" to "plainswalk." This effect lasts indefinitely.)',
+    ),
+  );
+  const anteProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Demonic Attorney",
+      "Sorcery",
+      3,
+      "Remove this card from your deck before playing if you're not playing for ante. Each player antes the top card of their library.",
+    ),
+  );
+  const wordProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Word of Command",
+      "Instant",
+      2,
+      "Look at target opponent's hand and choose a card from it. You control that player until Word of Command finishes resolving.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(laceProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(hackProfile, "text_change") > 0);
+  assert.ok(getRoleWeight(anteProfile, "ante_card") > 0);
+  assert.ok(getRoleWeight(wordProfile, "hand_info") > 0);
+  assert.ok(getRoleWeight(wordProfile, "player_control") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Alpha-era combat and lockdown oddities", () => {
+  const paralyzeProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Paralyze",
+      "Enchantment - Aura",
+      1,
+      "Enchant creature. When this Aura enters, tap enchanted creature. Enchanted creature doesn't untap during its controller's untap step.",
+    ),
+  );
+  const weaknessProfile = inferAdvancedRoleProfile(
+    createCard("Weakness", "Enchantment - Aura", 1, "Enchant creature. Enchanted creature gets -2/-1."),
+  );
+  const basiliskProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Thicket Basilisk",
+      "Creature - Basilisk",
+      5,
+      "Whenever this creature blocks or becomes blocked by a non-Wall creature, destroy that creature at end of combat.",
+    ),
+  );
+  const lureProfile = inferAdvancedRoleProfile(
+    createCard("Lure", "Enchantment - Aura", 3, "Enchant creature. All creatures able to block enchanted creature do so."),
+  );
+  const meekstoneProfile = inferAdvancedRoleProfile(
+    createCard("Meekstone", "Artifact", 1, "Creatures with power 3 or greater don't untap during their controllers' untap steps."),
+  );
+
+  assert.ok(getRoleWeight(paralyzeProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(weaknessProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(basiliskProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(basiliskProfile, "combat_body") > 0);
+  assert.ok(getRoleWeight(lureProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(meekstoneProfile, "hate_piece") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Alpha-era lands, animation, regeneration, and low-signal bodies", () => {
+  const dualProfile = inferAdvancedRoleProfile(
+    createCard("Badlands", "Land - Swamp Mountain", 0, "({T}: Add {B} or {R}.)"),
+  );
+  const basicProfile = inferAdvancedRoleProfile(
+    createCard("Forest", "Basic Land - Forest", 0, "({T}: Add {G}.)"),
+  );
+  const animateProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Animate Artifact",
+      "Enchantment - Aura",
+      1,
+      "Enchant artifact. As long as enchanted artifact isn't a creature, it's an artifact creature with power and toughness each equal to its mana value.",
+    ),
+  );
+  const terrainProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Phantasmal Terrain",
+      "Enchantment - Aura",
+      2,
+      "Enchant land. As this Aura enters, choose a basic land type. Enchanted land is the chosen type.",
+    ),
+  );
+  const regenerationProfile = inferAdvancedRoleProfile(
+    createCard("Regeneration", "Enchantment - Aura", 2, "Enchant creature. {G}: Regenerate enchanted creature."),
+  );
+  const bearProfile = inferAdvancedRoleProfile(
+    createCard("Grizzly Bears", "Creature - Bear", 2, ""),
+  );
+
+  assert.ok(getRoleWeight(dualProfile, "land_base") > 0);
+  assert.ok(getRoleWeight(dualProfile, "typed_land") > 0);
+  assert.ok(getRoleWeight(basicProfile, "basic_land") > 0);
+  assert.ok(getRoleWeight(animateProfile, "animation_effect") > 0);
+  assert.ok(getRoleWeight(terrainProfile, "land_type_change") > 0);
+  assert.ok(getRoleWeight(regenerationProfile, "regeneration_protection") > 0);
+  assert.ok(getRoleWeight(bearProfile, "combat_body") > 0);
+});
+
 test("inferAdvancedRoleProfile recognizes broader theft and borrowed-resource effects", () => {
   const permanentTheftProfile = inferAdvancedRoleProfile(
     createCard(

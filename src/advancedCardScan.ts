@@ -65,11 +65,6 @@ export function inferAdvancedRoleProfile(card: ScryfallCard) {
   }
 
   const text = getCardOracleText(card);
-  if (!text) {
-    advancedRoleCache.set(cacheKey, null);
-    return null;
-  }
-
   const profile = createCardRoleProfile();
   const permanent = isPermanentCard(card);
   const land = hasCardType(card, "Land");
@@ -305,7 +300,8 @@ function detectAdvancedRampRoles(
     /\bsearch(?:es)?\b[^.]{0,220}\byour library\b[^.]{0,220}\bfor\b[^.]{0,160}\b(?:forest|plains|island|swamp|mountain)\b[^.]{0,120}\binto your hand\b/.test(text);
   const extraLandPlays =
     /\byou may play\b[^.]{0,60}\ban additional land\b/.test(text) ||
-    /\byou can play\b[^.]{0,60}\ban additional land\b/.test(text);
+    /\byou can play\b[^.]{0,60}\ban additional land\b/.test(text) ||
+    /\byou may play any number of lands\b/.test(text);
   const handLandAcceleration =
     /\bput\b[^.]{0,120}\ba land card from your hand\b[^.]{0,80}\bonto the battlefield\b/.test(text) ||
     /\bput any number of land cards\b[^.]{0,160}\bonto the battlefield\b/.test(text);
@@ -447,6 +443,12 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bdestroy target (?:nonbasic |basic )?(?:land|plains|island|swamp|mountain|forest)\b/.test(text) ||
     /\benchanted land\b[^.]{0,160}\bdestroy it\b/.test(text);
   const targetedWallRemoval = /\bdestroy target wall\b/.test(text);
+  const shrinkingAura = /\benchanted creature\b[^.]{0,80}\bgets? -\d+\/-\d+\b/.test(text);
+  const combatTriggeredRemoval =
+    /\bwhenever this creature blocks or becomes blocked\b[^.]{0,180}\bdestroy that creature\b/.test(text);
+  const lockdownAura =
+    /\benchanted creature doesn't untap during its controller'?s untap step\b/.test(text) ||
+    /\bwhen this aura enters\b[^.]{0,120}\btap enchanted creature\b/.test(text);
   const massLandDenial =
     /\bdestroy all (?:nonbasic )?(?:lands|plains|islands|swamps|mountains|forests)\b/.test(text) ||
     /\bexile all lands\b/.test(text) ||
@@ -479,6 +481,8 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     auraNeutralization ||
     targetedLandRemoval ||
     targetedWallRemoval ||
+    shrinkingAura ||
+    combatTriggeredRemoval ||
     /\bdestroy each permanent chosen this way\b/.test(text);
   const targetedDamageRemoval =
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
@@ -554,12 +558,12 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     addRole(profile, "mass_removal", 1.02, "Advanced scan recognized a sweeper effect.");
   }
 
-  if (tempoRemoval || temporaryTheft || permanentTheft) {
+  if (tempoRemoval || lockdownAura || temporaryTheft || permanentTheft) {
     addRole(profile, "removal", 0.58, "Advanced scan recognized tempo-based battlefield interaction.");
     addRole(
       profile,
       "tempo_removal",
-      permanentTheft ? 0.72 : temporaryTheft ? 0.58 : 0.68,
+      permanentTheft ? 0.72 : lockdownAura ? 0.76 : temporaryTheft ? 0.58 : 0.68,
       "Advanced scan recognized bounce, theft, or tuck interaction.",
     );
   }
@@ -650,10 +654,13 @@ function detectAdvancedProtectionRoles(
   const playerProtection =
     /\byou (?:gain|have) protection from everything\b/.test(text) ||
     /\byou (?:gain|have) hexproof\b/.test(text);
+  const regenerationProtection =
+    /\bregenerate (?:this creature|enchanted creature|target creature|that creature)\b/.test(text);
   const targetedProtection =
     /\btarget\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,120}\b(?:gains?|gain)\b[^.]{0,120}\b(?:hexproof|indestructible|ward|protection from)\b/.test(text) ||
     /\btarget\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,120}\bphases out\b/.test(text) ||
     /\bregenerate target\b/.test(text) ||
+    regenerationProtection ||
     /\bprevent the next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to (?:any target|target (?:creature|permanent|artifact|enchantment|planeswalker|player)|that (?:permanent|creature|player))\b/.test(text) ||
     /\bthe next time\b[^.]{0,100}\bsource of your choice would deal damage to target creature\b[^.]{0,120}\bdeals that damage to you instead\b/.test(text);
   const selfBounce =
@@ -681,7 +688,17 @@ function detectAdvancedProtectionRoles(
 
   if (targetedProtection) {
     addRole(profile, "protection", repeatable ? 0.9 : 0.82, "Advanced scan recognized single-target protection.");
-    addRole(profile, "targeted_protection", repeatable ? 0.94 : 0.84, "Advanced scan recognized single-target protection.");
+    addRole(
+      profile,
+      "targeted_protection",
+      regenerationProtection ? 0.72 : repeatable ? 0.94 : 0.84,
+      regenerationProtection
+        ? "Advanced scan recognized regeneration as protection."
+        : "Advanced scan recognized single-target protection.",
+    );
+    if (regenerationProtection) {
+      addRole(profile, "regeneration_protection", 0.72, "Advanced scan recognized regeneration as protection.");
+    }
   }
 
   if (equipmentProtection) {
@@ -883,6 +900,86 @@ function detectAdvancedPurposeRoles(
   const tokenKeyword = hasAnyKeyword(keywords, ["amass", "incubate", "living weapon", "for mirrodin"]);
   const combatKeywordSupport = hasAnyKeyword(keywords, ["backup", "exalted", "bloodrush", "dash", "ninjutsu", "mutate", "monstrosity", "adapt", "level up"]);
   const dungeonKeyword = hasAnyKeyword(keywords, ["venture into the dungeon", "take the initiative"]);
+  const land = hasCardType(card, "Land");
+  const normalizedTypeLine = normalizeText(card.type_line);
+
+  if (land) {
+    addRole(profile, "land_base", 0.2, "Advanced scan recognized a land slot.");
+    addRole(profile, "land_slot", 0.2, "Advanced scan recognized a land slot.");
+    if (/\bbasic land\b/.test(normalizedTypeLine)) {
+      addRole(profile, "basic_land", 0.28, "Advanced scan recognized a basic land.");
+    }
+    if (/\{t\}: add\b|\badd \{[wubrgc]\}\b|\badd\b[^.]{0,40}\{[wubrg]\}\s*or\s*\{[wubrg]\}/.test(text)) {
+      addRole(profile, "mana_source", 0.3, "Advanced scan recognized land mana production.");
+    }
+    if (/\b(?:plains|island|swamp|mountain|forest)\b/.test(normalizedTypeLine) && !/\bbasic land\b/.test(normalizedTypeLine)) {
+      addRole(profile, "typed_land", 0.46, "Advanced scan recognized basic land types on a nonbasic land.");
+    }
+  }
+
+  if (/\btarget spell or permanent becomes\b[^.]{0,40}\b(?:white|blue|black|red|green)\b/.test(text)) {
+    addRole(profile, "color_change", 0.3, "Advanced scan recognized color-changing utility.");
+  }
+
+  if (/\bchange the text of target spell or permanent\b/.test(text)) {
+    addRole(profile, "text_change", 0.34, "Advanced scan recognized text-changing utility.");
+  }
+
+  if (/\bremove this card from your deck before playing if you're not playing for ante\b/.test(text)) {
+    addRole(profile, "ante_card", 0.18, "Advanced scan recognized an ante-only card.");
+  }
+
+  if (
+    /\bas long as enchanted artifact isn't a creature\b[^.]{0,120}\bit's an artifact creature\b/.test(text) ||
+    /\bthis artifact becomes\b[^.]{0,80}\bartifact creature\b/.test(text) ||
+    /\ball (?:forests|swamps)\b[^.]{0,120}\bare 1\/1\b[^.]{0,80}\bcreatures\b/.test(text)
+  ) {
+    addRole(profile, "animation_effect", 0.44, "Advanced scan recognized a permanent-animation effect.");
+    addRole(profile, "combat_support", 0.34, "Advanced scan recognized permanent animation as combat material.");
+  }
+
+  if (/\benchanted land is (?:the chosen type|(?:a |an )?(?:plains|island|swamp|mountain|forest))\b/.test(text)) {
+    addRole(profile, "land_type_change", 0.4, "Advanced scan recognized land type-changing utility.");
+    addRole(profile, "land_denial", 0.34, "Advanced scan recognized land type changes as possible mana disruption.");
+  }
+
+  if (/\byou may tap or untap target artifact, creature, or land\b/.test(text)) {
+    addRole(profile, "tap_untap", 0.48, "Advanced scan recognized tap-or-untap utility.");
+    addRole(profile, "tempo_support", 0.44, "Advanced scan recognized tap-or-untap tempo utility.");
+    addRole(profile, "ramp", 0.28, "Advanced scan recognized untapping lands as possible mana utility.");
+  }
+
+  if (
+    /\btarget creature defending player controls can block any number of creatures\b/.test(text) ||
+    /\bremove target creature defending player controls from combat\b/.test(text) ||
+    /\ball creatures able to block enchanted creature do so\b/.test(text)
+  ) {
+    addRole(profile, "combat_support", 0.48, "Advanced scan recognized a combat-manipulation effect.");
+    addRole(profile, "tempo_support", 0.36, "Advanced scan recognized combat manipulation as tempo utility.");
+  }
+
+  if (/\blook at target (?:player|opponent)'?s hand\b/.test(text)) {
+    addRole(profile, "hand_info", 0.28, "Advanced scan recognized hand-information utility.");
+  }
+
+  if (/\blook at the top three cards of target player'?s library\b/.test(text)) {
+    addRole(profile, "selection", 0.36, "Advanced scan recognized top-of-library ordering utility.");
+    addRole(profile, "topdeck_control", 0.34, "Advanced scan recognized top-of-library ordering utility.");
+  }
+
+  if (/\byou control that player\b/.test(text)) {
+    addRole(profile, "player_control", 0.46, "Advanced scan recognized player-control utility.");
+    addRole(profile, "theft_support", 0.34, "Advanced scan recognized control of another player's choices.");
+  }
+
+  if (/\byou have no maximum hand size\b/.test(text)) {
+    addRole(profile, "hand_size", 0.34, "Advanced scan recognized maximum-hand-size utility.");
+  }
+
+  if (/\bdiscard it, but you may put it on top of your library instead of into your graveyard\b/.test(text)) {
+    addRole(profile, "discard_protection", 0.38, "Advanced scan recognized discard replacement utility.");
+    addRole(profile, "protection", 0.26, "Advanced scan recognized discard replacement as a resilience tool.");
+  }
 
   if (diceText) {
     addRole(profile, "dice_support", permanent ? 0.66 : 0.52, "Advanced scan recognized dice-roll support.");
@@ -998,11 +1095,13 @@ function detectAdvancedPurposeRoles(
     /\bcreatures you control gain haste\b/.test(text) ||
     /\bcreatures your opponents control\b[^.]{0,120}\bcan'?t block\b/.test(text) ||
     /\btarget creature blocks this turn if able\b/.test(text) ||
+    /\btarget creature defending player controls can block any number of creatures\b/.test(text) ||
+    /\ball creatures able to block enchanted creature do so\b/.test(text) ||
     /\btarget creature attacks target opponent this turn if able\b/.test(text) ||
     /\b(?:target creature|creature you control|equipped creature|enchanted creature)\b[^.]{0,140}\bgets? (?:\+\d+\/\+\d+|\+x\/\+x)\b/.test(text) ||
     combatKeywordSupport ||
     /\bgets? (?:\+\d+\/\+\d+|\+x\/\+x) for each\b/.test(text) ||
-    /\bpower and toughness are each equal to\b/.test(text) ||
+    /\bpower and toughness (?:are )?each equal to\b/.test(text) ||
     /\bswitch the power and toughness\b/.test(text) ||
     /\bdistribute x \+\d+\/\+\d+ counters?\b/.test(text) ||
     /\bhave base power and toughness x\/x\b/.test(text) ||
@@ -1016,10 +1115,15 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "combat_threat", 0.44, "Advanced scan recognized a combat-relevant body.");
   }
 
+  if (hasCardType(card, "Creature") && !hasCardType(card, "Land")) {
+    addRole(profile, "combat_body", 0.12, "Advanced scan recognized a creature body.");
+  }
+
   if (
     /\bplayers can't search libraries\b|\bopponents can't search libraries\b|\byour opponents can'?t search\b|\bcan'?t cast\b|\bskip\b|\bspells cost\b[^.]{0,80}\bmore\b|\btarget enchantment\b[^.]{0,160}\bdamage\b|\bgain control of target artifact\b/.test(
       text,
     ) ||
+    /\bcreatures with power \d+ or greater don't untap during their controllers'? untap steps\b/.test(text) ||
     /\bspells you control can'?t be countered\b/.test(text) ||
     /\btarget player puts all the cards from their graveyard on the bottom of their library\b/.test(text)
   ) {
@@ -1414,6 +1518,8 @@ function hasCombatKeyword(card: ScryfallCard) {
     "haste",
     "vigilance",
     "lifelink",
+    "reach",
+    "banding",
     "skulk",
     "shadow",
     "unblockable",

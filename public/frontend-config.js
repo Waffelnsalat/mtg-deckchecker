@@ -1,8 +1,9 @@
 window.MtgDeckcheckerFrontendConfig = {
-  appVersion: "0.4.6",
+  appVersion: "0.4.8",
   releaseNotesUrl: "https://github.com/Waffelnsalat/mtg-deckchecker/blob/main/CHANGELOG.md",
   cardBreakdown: {
     maxRoles: 5,
+    maxRoleDetails: 4,
     rolePriority: [
       "Synergy",
       "Game Changer",

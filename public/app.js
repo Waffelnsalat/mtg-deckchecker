@@ -308,6 +308,7 @@ let recommendationVisualRenderToken = 0;
 const FRONTEND_CONFIG = window.MtgDeckcheckerFrontendConfig ?? {};
 const CARD_BREAKDOWN_CONFIG = FRONTEND_CONFIG.cardBreakdown ?? {};
 const CARD_BREAKDOWN_MAX_ROLES = CARD_BREAKDOWN_CONFIG.maxRoles ?? 5;
+const CARD_BREAKDOWN_MAX_ROLE_DETAILS = CARD_BREAKDOWN_CONFIG.maxRoleDetails ?? 4;
 const CARD_BREAKDOWN_ROLE_PRIORITY = CARD_BREAKDOWN_CONFIG.rolePriority ?? [];
 const CARD_BREAKDOWN_SYNERGY_LABELS = new Set(CARD_BREAKDOWN_CONFIG.synergyLabels ?? ["Synergy"]);
 const CARD_BREAKDOWN_LOW_SIGNAL_LAND_TAGS = new Set(
@@ -338,6 +339,7 @@ const cardBreakdownController = window.MtgDeckcheckerCardBreakdown.create({
   },
   config: {
     maxRoles: CARD_BREAKDOWN_MAX_ROLES,
+    maxRoleDetails: CARD_BREAKDOWN_MAX_ROLE_DETAILS,
     rolePriority: CARD_BREAKDOWN_ROLE_PRIORITY,
     synergyLabels: CARD_BREAKDOWN_SYNERGY_LABELS,
     lowSignalLandTags: CARD_BREAKDOWN_LOW_SIGNAL_LAND_TAGS,

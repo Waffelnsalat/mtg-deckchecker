@@ -14,6 +14,7 @@ window.MtgDeckcheckerCardBreakdown = {
     const lowSignalLandTags = config.lowSignalLandTags;
     const rolePriority = config.rolePriority;
     const maxRoles = config.maxRoles;
+    const maxRoleDetails = config.maxRoleDetails ?? 4;
 
     function initializeControls() {
       elements.search?.addEventListener("input", () => {
@@ -364,7 +365,7 @@ window.MtgDeckcheckerCardBreakdown = {
 
     function getDisplayRole(role) {
       const rawLabel = String(role.label ?? "");
-      const rawTags = (role.tags ?? []).map((tag) => String(tag));
+      const rawTags = (role.tags ?? []).map((tag) => String(tag)).filter(Boolean);
       const normalizedParts = [rawLabel, ...rawTags].map(helpers.normalizeText);
       const hasPart = (...patterns) =>
         normalizedParts.some((part) => patterns.some((pattern) => part.includes(pattern)));
@@ -400,10 +401,18 @@ window.MtgDeckcheckerCardBreakdown = {
         label = "Combat";
       }
 
+      const formattedLabel = helpers.formatTagLabel(rawLabel);
+      const formattedTags = rawTags.map(helpers.formatTagLabel);
+      const details = formattedTags.length > 0
+        ? formattedTags
+        : formattedLabel && formattedLabel !== label
+          ? [formattedLabel]
+          : [];
+
       return {
         label,
         value: Number.isFinite(role.value) ? role.value : 0,
-        tags: Array.from(new Set([rawLabel, ...rawTags].filter(Boolean).map(helpers.formatTagLabel))),
+        tags: Array.from(new Set(details.filter((tag) => tag && tag !== label))),
       };
     }
 
@@ -597,11 +606,28 @@ window.MtgDeckcheckerCardBreakdown = {
     function createRoleChip(role) {
       const chip = document.createElement("span");
       chip.className = "card-breakdown-role-chip";
-      chip.textContent = role.label;
+
+      const label = document.createElement("span");
+      label.className = "card-breakdown-role-chip-label";
+      label.textContent = role.label;
+      chip.append(label);
+
       if (role.tags.length > 0) {
+        const details = document.createElement("span");
+        details.className = "card-breakdown-role-chip-details";
+        details.textContent = formatRoleDetails(role.tags);
+        chip.append(details);
         chip.title = role.tags.join(", ");
       }
       return chip;
+    }
+
+    function formatRoleDetails(tags) {
+      const visibleTags = tags.slice(0, maxRoleDetails);
+      const remaining = tags.length - visibleTags.length;
+      return remaining > 0
+        ? `${visibleTags.join(" / ")} +${remaining}`
+        : visibleTags.join(" / ");
     }
 
     function getLookupKey(deckCard) {
