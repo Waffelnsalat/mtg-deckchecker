@@ -12,6 +12,7 @@ import { DeckResolutionDocument, DeckSection, ScryfallCard } from "../src/types"
 const DATA_DIR = path.resolve(process.cwd(), "data");
 const SETS_PATH = path.join(DATA_DIR, "scryfall-sets.json");
 const AUDIT_PATH = path.join(DATA_DIR, "card-role-audit.json");
+const WORKSHEETS_DIR = path.join(DATA_DIR, "card-role-worksheets");
 const SCRYFALL_SETS_URL = "https://api.scryfall.com/sets";
 const SCRYFALL_SEARCH_URL = "https://api.scryfall.com/cards/search";
 const USER_AGENT = "mtg-deckchecker-card-role-audit/0.1";
@@ -138,6 +139,9 @@ async function main() {
     case "set":
       await printSet(args[0]);
       return;
+    case "worksheet":
+      await writeWorksheet(args[0]);
+      return;
     case "help":
     case "--help":
     case "-h":
@@ -223,6 +227,27 @@ async function printSet(setCode: string | undefined) {
   printSetReport(await buildSetReport(set, ledger, getReviewedOracleIds(ledger)));
 }
 
+async function writeWorksheet(setCode: string | undefined) {
+  if (!setCode) {
+    throw new Error("Pass a set code, for example: npm run audit:cards -- worksheet lea");
+  }
+
+  const [sets, ledger] = await Promise.all([loadSets(), loadAuditLedger()]);
+  const set = sets.sets.find((entry) => entry.code.toLowerCase() === setCode.toLowerCase());
+  if (!set) {
+    throw new Error(`Set "${setCode}" is not in ${relativePath(SETS_PATH)}. Run refresh-sets first.`);
+  }
+
+  const report = await buildSetReport(set, ledger, getReviewedOracleIds(ledger));
+  await mkdir(WORKSHEETS_DIR, { recursive: true });
+  const outputPath = path.join(WORKSHEETS_DIR, `${set.code}-role-review.tsv`);
+  await writeFile(outputPath, buildWorksheetTsv(report), "utf8");
+
+  console.log(`Wrote ${report.uniqueCards.length} unique cards to ${relativePath(outputPath)}.`);
+  console.log(`Open cards: ${report.openCards.length}`);
+  console.log(`Attention candidates: ${report.needsAttention.length}`);
+}
+
 async function buildSetReport(
   set: StoredSet,
   ledger: AuditLedger,
@@ -286,6 +311,108 @@ function printCardRows(cards: AuditedCard[]) {
     console.log(`  analyzerRoles: ${entry.currentRoles.length ? entry.currentRoles.join(", ") : "-"}`);
     console.log(`  url: ${entry.card.scryfall_uri}`);
   }
+}
+
+function buildWorksheetTsv(report: Awaited<ReturnType<typeof buildSetReport>>) {
+  const headers = [
+    "setCode",
+    "setName",
+    "releasedAt",
+    "collectorNumber",
+    "name",
+    "oracleId",
+    "auditStatus",
+    "expectedRoles",
+    "actualAnalyzerRoles",
+    "needsCodeChange",
+    "tagDecision",
+    "manualNotes",
+    "typeLine",
+    "manaCost",
+    "manaValue",
+    "colors",
+    "colorIdentity",
+    "keywords",
+    "scryfallOracleTags",
+    "attentionHint",
+    "scryfallUrl",
+    "oracleText",
+  ];
+  const rows = report.uniqueCards.map((entry) => {
+    const audit = entry.auditEntry;
+    return [
+      report.set.code,
+      report.set.name,
+      report.set.releasedAt ?? "",
+      entry.card.collector_number ?? "",
+      entry.card.name,
+      entry.oracleId,
+      audit?.status ?? "",
+      audit?.expectedRoles?.join(", ") ?? "",
+      entry.currentRoles.join(", "),
+      audit?.needsCodeChange === undefined ? "" : String(audit.needsCodeChange),
+      formatTagDecisions(audit),
+      audit?.notes ?? "",
+      entry.card.type_line ?? "",
+      entry.card.mana_cost ?? "",
+      entry.card.cmc ?? "",
+      entry.card.colors?.join("") ?? "",
+      entry.card.color_identity?.join("") ?? "",
+      entry.card.keywords?.join(", ") ?? "",
+      entry.scryfallTags.join(", "),
+      getAttentionHint(entry),
+      entry.card.scryfall_uri,
+      getOracleText(entry.card),
+    ].map(formatTsvCell).join("\t");
+  });
+
+  return `${headers.join("\t")}\n${rows.join("\n")}\n`;
+}
+
+function formatTagDecisions(audit: AuditEntry | null) {
+  return audit?.tagDecisions
+    ?.map((decision) =>
+      [
+        decision.tag,
+        decision.action,
+        decision.layer,
+        decision.note,
+      ].filter(Boolean).join(":"),
+    )
+    .join(" | ") ?? "";
+}
+
+function getAttentionHint(entry: AuditedCard) {
+  if (entry.auditEntry) {
+    return "already reviewed";
+  }
+
+  if ((entry.scryfallTags.length > 0 || entry.card.keywords?.length) && entry.currentRoles.length === 0) {
+    return "has Scryfall tags/keywords but no analyzer role";
+  }
+
+  if (entry.currentRoles.length > 0) {
+    return "verify analyzer roles";
+  }
+
+  return "manual review";
+}
+
+function getOracleText(card: ScryfallApiCard) {
+  if (card.card_faces?.length) {
+    return card.card_faces
+      .map((face) => `${face.name}: ${face.oracle_text ?? ""}`)
+      .join(" // ");
+  }
+
+  return card.oracle_text ?? "";
+}
+
+function formatTsvCell(value: unknown) {
+  return String(value ?? "")
+    .replace(/\r?\n/g, " ")
+    .replace(/\t/g, " ")
+    .trim();
 }
 
 async function auditCard(card: ScryfallApiCard, ledger: AuditLedger): Promise<AuditedCard> {
@@ -485,6 +612,7 @@ function printHelp() {
   console.log("  npm run audit:cards -- summary       Show ledger progress.");
   console.log("  npm run audit:cards -- next-set      Show the oldest set with open oracle IDs.");
   console.log("  npm run audit:cards -- set <code>    Show audit status for one set.");
+  console.log("  npm run audit:cards -- worksheet <code>  Write a TSV review worksheet for one set.");
 }
 
 main().catch((error) => {

@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.1 - 2026-06-21
+
+### Neu
+
+- Neuer Audit-Befehl `npm run audit:cards -- worksheet <set>` erzeugt eine TSV-Datei fuer manuelle Set-Reviews.
+- Erstes Worksheet fuer `lea` wurde unter `data/card-role-worksheets/lea-role-review.tsv` erstellt.
+
+### Validierung
+
+- `npm run audit:cards -- worksheet lea`
+
 ## 0.4.0 - 2026-06-20
 
 ### Neu

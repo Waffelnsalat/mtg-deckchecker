@@ -6,6 +6,7 @@ This workflow reviews Magic cards set by set, oldest first, so wording gaps and 
 
 - `data/scryfall-sets.json`: generated list of every Scryfall set, sorted by release date.
 - `data/card-role-audit.json`: manual review ledger, keyed by `oracleId`.
+- `data/card-role-worksheets/<set>-role-review.tsv`: generated manual review worksheets.
 - `scripts/card-role-audit.ts`: CLI for refreshing set data and finding the next open set.
 
 ## Commands
@@ -15,6 +16,7 @@ npm run audit:cards -- refresh-sets
 npm run audit:cards -- summary
 npm run audit:cards -- next-set
 npm run audit:cards -- set lea
+npm run audit:cards -- worksheet lea
 ```
 
 ## Review Rule
@@ -24,10 +26,13 @@ Review each `oracle_id` once. Reprints are skipped automatically unless Oracle w
 The normal loop is:
 
 1. Run `npm run audit:cards -- next-set`.
-2. Review the listed cards in Scryfall.
-3. Add decisions to `data/card-role-audit.json`.
-4. For `missing` or `wrong` entries, add or adjust analyzer tags and tests.
-5. Rerun the audit command until the set has no open cards.
+2. Run `npm run audit:cards -- worksheet <set>` to create a TSV review file.
+3. Review the listed cards in Scryfall and in the worksheet.
+4. Add decisions to `data/card-role-audit.json`.
+5. For `missing` or `wrong` entries, add or adjust analyzer tags and tests.
+6. Rerun the audit command until the set has no open cards.
+
+The worksheet is for human review. The ledger is the source of truth for completed decisions.
 
 ## Statuses
 
