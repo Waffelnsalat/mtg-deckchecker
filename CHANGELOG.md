@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.2 - 2026-06-21
+
+### Neu
+
+- Neuer Audit-Befehl `npm run audit:cards -- import-worksheet <set>` importiert manuell bearbeitete TSV-Reviews in `data/card-role-audit.json`.
+- Die Audit-Doku beschreibt jetzt den kompletten Worksheet-Loop von manueller Pruefung bis Ledger-Import.
+
+### Validierung
+
+- `npm run audit:cards -- help`
+- `npm run check`
+
 ## 0.4.1 - 2026-06-21
 
 ### Neu

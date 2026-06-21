@@ -17,6 +17,7 @@ npm run audit:cards -- summary
 npm run audit:cards -- next-set
 npm run audit:cards -- set lea
 npm run audit:cards -- worksheet lea
+npm run audit:cards -- import-worksheet lea
 ```
 
 ## Review Rule
@@ -28,11 +29,12 @@ The normal loop is:
 1. Run `npm run audit:cards -- next-set`.
 2. Run `npm run audit:cards -- worksheet <set>` to create a TSV review file.
 3. Review the listed cards in Scryfall and in the worksheet.
-4. Add decisions to `data/card-role-audit.json`.
-5. For `missing` or `wrong` entries, add or adjust analyzer tags and tests.
-6. Rerun the audit command until the set has no open cards.
+4. Fill `auditStatus`, `expectedRoles`, `needsCodeChange`, `tagDecision`, and `manualNotes` in the worksheet.
+5. Run `npm run audit:cards -- import-worksheet <set>` to copy reviewed rows into `data/card-role-audit.json`.
+6. For `missing` or `wrong` entries, add or adjust analyzer tags and tests.
+7. Rerun the audit command until the set has no open cards.
 
-The worksheet is for human review. The ledger is the source of truth for completed decisions.
+The worksheet is for human review and can be imported after editing. The ledger is the source of truth for completed decisions. Do not regenerate a worksheet over manual edits before importing it.
 
 ## Statuses
 
@@ -73,3 +75,11 @@ If a new tag is added, wire it into the right layer:
 - Core score tags affect module scores and recommendations.
 - Strategy tags help identify archetypes.
 - Mechanic tags preserve wording/mechanic knowledge and may later feed scores.
+
+In the worksheet, write tag decisions as `tag:action:layer:note`. Multiple decisions can be separated with ` | `.
+
+Example:
+
+```text
+extra_land_play:add_new:mechanic:Extra land wording is not covered yet | land_acceleration:use_existing:coreScore:Should count as ramp support
+```

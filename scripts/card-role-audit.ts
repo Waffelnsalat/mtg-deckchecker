@@ -17,6 +17,16 @@ const SCRYFALL_SETS_URL = "https://api.scryfall.com/sets";
 const SCRYFALL_SEARCH_URL = "https://api.scryfall.com/cards/search";
 const USER_AGENT = "mtg-deckchecker-card-role-audit/0.1";
 const PREVIEW_LIMIT = 40;
+const AUDIT_STATUSES = [
+  "covered",
+  "missing",
+  "wrong",
+  "intentional_ignore",
+  "needs_decision",
+  "unsupported",
+] as const;
+const TAG_ACTIONS = ["use_existing", "add_new", "adjust_weight", "ignore"] as const;
+const TAG_LAYERS = ["coreScore", "strategy", "mechanic"] as const;
 
 type AuditStatus =
   | "covered"
@@ -142,6 +152,9 @@ async function main() {
     case "worksheet":
       await writeWorksheet(args[0]);
       return;
+    case "import-worksheet":
+      await importWorksheet(args[0]);
+      return;
     case "help":
     case "--help":
     case "-h":
@@ -246,6 +259,59 @@ async function writeWorksheet(setCode: string | undefined) {
   console.log(`Wrote ${report.uniqueCards.length} unique cards to ${relativePath(outputPath)}.`);
   console.log(`Open cards: ${report.openCards.length}`);
   console.log(`Attention candidates: ${report.needsAttention.length}`);
+}
+
+async function importWorksheet(setCode: string | undefined) {
+  if (!setCode) {
+    throw new Error("Pass a set code, for example: npm run audit:cards -- import-worksheet lea");
+  }
+
+  const [sets, ledger] = await Promise.all([loadSets(), loadAuditLedger()]);
+  const set = sets.sets.find((entry) => entry.code.toLowerCase() === setCode.toLowerCase());
+  if (!set) {
+    throw new Error(`Set "${setCode}" is not in ${relativePath(SETS_PATH)}. Run refresh-sets first.`);
+  }
+
+  const worksheetPath = path.join(WORKSHEETS_DIR, `${set.code}-role-review.tsv`);
+  const rows = parseWorksheetTsv(await readFile(worksheetPath, "utf8"));
+  const importedAt = new Date().toISOString();
+  const existingByOracleId = new Map(ledger.cards.map((entry) => [entry.oracleId, entry]));
+  let imported = 0;
+  let skipped = 0;
+
+  for (const row of rows) {
+    const status = parseAuditStatus(row.auditStatus);
+    if (!status) {
+      skipped += 1;
+      continue;
+    }
+
+    const oracleId = requireWorksheetValue(row, "oracleId");
+    const entry: AuditEntry = {
+      ...existingByOracleId.get(oracleId),
+      oracleId,
+      name: requireWorksheetValue(row, "name"),
+      firstSet: row.setCode || set.code,
+      releasedAt: row.releasedAt || set.releasedAt || undefined,
+      reviewedAt: importedAt,
+      expectedRoles: parseList(row.expectedRoles),
+      actualRoles: parseList(row.actualAnalyzerRoles),
+      status,
+      needsCodeChange: parseNeedsCodeChange(row.needsCodeChange, status),
+      notes: row.manualNotes || undefined,
+      tagDecisions: parseTagDecisionList(row.tagDecision),
+    };
+
+    existingByOracleId.set(oracleId, removeEmptyAuditFields(entry));
+    imported += 1;
+  }
+
+  ledger.cards = [...existingByOracleId.values()].sort(compareAuditEntries);
+  await writeJson(AUDIT_PATH, ledger);
+
+  console.log(`Imported ${imported} reviewed cards from ${relativePath(worksheetPath)}.`);
+  console.log(`Skipped ${skipped} rows without auditStatus.`);
+  console.log(`Updated ${relativePath(AUDIT_PATH)}.`);
 }
 
 async function buildSetReport(
@@ -415,6 +481,127 @@ function formatTsvCell(value: unknown) {
     .trim();
 }
 
+function parseWorksheetTsv(input: string) {
+  const lines = input.split(/\r?\n/).filter((line) => line.trim().length > 0);
+  const headers = lines.shift()?.split("\t") ?? [];
+  if (headers.length === 0) {
+    throw new Error("Worksheet is empty or missing a TSV header row.");
+  }
+
+  return lines.map((line, index) => {
+    const cells = line.split("\t");
+    const row: Record<string, string> = {};
+    headers.forEach((header, cellIndex) => {
+      row[header] = cells[cellIndex]?.trim() ?? "";
+    });
+    row.__line = String(index + 2);
+    return row;
+  });
+}
+
+function parseAuditStatus(value: string | undefined): AuditStatus | null {
+  const normalized = value?.trim();
+  if (!normalized) {
+    return null;
+  }
+
+  if (AUDIT_STATUSES.includes(normalized as AuditStatus)) {
+    return normalized as AuditStatus;
+  }
+
+  throw new Error(`Invalid auditStatus "${value}". Use one of: ${AUDIT_STATUSES.join(", ")}`);
+}
+
+function parseNeedsCodeChange(value: string | undefined, status: AuditStatus) {
+  const normalized = value?.trim().toLowerCase();
+  if (!normalized) {
+    return status === "missing" || status === "wrong";
+  }
+
+  if (["true", "yes", "ja", "1"].includes(normalized)) {
+    return true;
+  }
+
+  if (["false", "no", "nein", "0"].includes(normalized)) {
+    return false;
+  }
+
+  throw new Error(`Invalid needsCodeChange "${value}". Use true/false or leave it empty.`);
+}
+
+function parseList(value: string | undefined) {
+  return value
+    ?.split(",")
+    .map((entry) => entry.trim())
+    .filter(Boolean);
+}
+
+function parseTagDecisionList(value: string | undefined): AuditEntry["tagDecisions"] {
+  const decisions = value
+    ?.split("|")
+    .map((entry) => entry.trim())
+    .filter(Boolean)
+    .map(parseTagDecision);
+
+  return decisions?.length ? decisions : undefined;
+}
+
+function parseTagDecision(value: string) {
+  const [tag = "", action = "", layer = "", ...noteParts] = value.split(":").map((part) => part.trim());
+  if (!tag) {
+    throw new Error(`Invalid tagDecision "${value}". Expected tag:action:layer:note.`);
+  }
+
+  if (!TAG_ACTIONS.includes(action as AuditEntry["tagDecisions"][number]["action"])) {
+    throw new Error(`Invalid tagDecision action "${action}". Use one of: ${TAG_ACTIONS.join(", ")}`);
+  }
+
+  const decision: AuditEntry["tagDecisions"][number] = {
+    tag,
+    action: action as AuditEntry["tagDecisions"][number]["action"],
+  };
+
+  if (layer) {
+    if (!TAG_LAYERS.includes(layer as NonNullable<AuditEntry["tagDecisions"][number]["layer"]>)) {
+      throw new Error(`Invalid tagDecision layer "${layer}". Use one of: ${TAG_LAYERS.join(", ")}`);
+    }
+    decision.layer = layer as NonNullable<AuditEntry["tagDecisions"][number]["layer"]>;
+  }
+
+  const note = noteParts.join(":").trim();
+  if (note) {
+    decision.note = note;
+  }
+
+  return decision;
+}
+
+function requireWorksheetValue(row: Record<string, string>, field: string) {
+  const value = row[field]?.trim();
+  if (!value) {
+    throw new Error(`Worksheet row ${row.__line ?? "?"} is missing required field "${field}".`);
+  }
+
+  return value;
+}
+
+function removeEmptyAuditFields(entry: AuditEntry) {
+  const normalized = { ...entry };
+  if (!normalized.expectedRoles?.length) {
+    delete normalized.expectedRoles;
+  }
+  if (!normalized.actualRoles?.length) {
+    delete normalized.actualRoles;
+  }
+  if (!normalized.tagDecisions?.length) {
+    delete normalized.tagDecisions;
+  }
+  if (!normalized.notes) {
+    delete normalized.notes;
+  }
+  return normalized;
+}
+
 async function auditCard(card: ScryfallApiCard, ledger: AuditLedger): Promise<AuditedCard> {
   const oracleId = card.oracle_id ?? card.id;
   const auditEntry = ledger.cards.find((entry) => entry.oracleId === oracleId) ?? null;
@@ -569,6 +756,14 @@ function countStatuses(entries: AuditEntry[]) {
   return counts;
 }
 
+function compareAuditEntries(left: AuditEntry, right: AuditEntry) {
+  return (
+    (left.releasedAt ?? "9999-99-99").localeCompare(right.releasedAt ?? "9999-99-99") ||
+    (left.firstSet ?? "").localeCompare(right.firstSet ?? "") ||
+    left.name.localeCompare(right.name)
+  );
+}
+
 async function fetchJson<T>(url: string) {
   const response = await fetch(url, {
     headers: {
@@ -613,6 +808,7 @@ function printHelp() {
   console.log("  npm run audit:cards -- next-set      Show the oldest set with open oracle IDs.");
   console.log("  npm run audit:cards -- set <code>    Show audit status for one set.");
   console.log("  npm run audit:cards -- worksheet <code>  Write a TSV review worksheet for one set.");
+  console.log("  npm run audit:cards -- import-worksheet <code>  Import reviewed TSV rows into the ledger.");
 }
 
 main().catch((error) => {
