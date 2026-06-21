@@ -607,9 +607,13 @@ function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
   const hardCounter =
     /\bcounter (?:up to one )?target\b[^.]{0,60}\bspell\b/.test(text) &&
     !/\bunless\b/.test(text);
+  const triggeredHardCounter =
+    /\bwhenever a player casts\b[^.]{0,80}\b(?:spell|enchantment spell|instant spell|sorcery spell)\b[^.]{0,40}\bcounter it\b/.test(text) &&
+    !/\bunless\b/.test(text);
   const softCounter =
     /\bcounter (?:up to one )?target\b[^.]{0,60}\bspell\b[^.]{0,120}\bunless\b/.test(text) ||
-    /\bcounter target spell if\b/.test(text);
+    /\bcounter target spell if\b/.test(text) ||
+    /\bwhenever a player casts\b[^.]{0,80}\b(?:spell|enchantment spell|instant spell|sorcery spell)\b[^.]{0,80}\bcounter it unless\b/.test(text);
   const spellTempo =
     /\breturn target spell\b[^.]{0,120}\bto (?:its|their) owner's hand\b/.test(text) ||
     /\bcopy target instant or sorcery spell\b[^.]{0,160}\breturn it to (?:its|their) owner'?s hand\b/.test(text) ||
@@ -620,6 +624,7 @@ function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
     /\bcounter target spell or ability\b/.test(text) ||
     /\bexile target spell or ability\b/.test(text) ||
     /\bexile any number of target spells?\b/.test(text) ||
+    /\bcounter target activated ability\b/.test(text) ||
     /\bcounter target activated or triggered ability\b/.test(text) ||
     /\bcounter all abilities\b/.test(text) ||
     /\bexile all other spells\b/.test(text) ||
@@ -632,9 +637,9 @@ function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
     ) ||
     /\bcan'?t cast noncreature spells\b/.test(text);
 
-  if (hardCounter) {
+  if (hardCounter || triggeredHardCounter) {
     addRole(profile, "stack", 0.9, "Advanced scan recognized a hard counterspell.");
-    addRole(profile, "hard_stack", 0.92, "Advanced scan recognized a hard counterspell.");
+    addRole(profile, "hard_stack", triggeredHardCounter ? 0.82 : 0.92, "Advanced scan recognized a hard counterspell.");
   }
 
   if (softCounter) {
@@ -684,6 +689,8 @@ function detectAdvancedProtectionRoles(
   const targetedProtection =
     /\btarget\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,120}\b(?:gains?|gain)\b[^.]{0,120}\b(?:hexproof|indestructible|ward|protection from)\b/.test(text) ||
     /\btarget\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,80}\byou control\b[^.]{0,80}\bphases out\b/.test(text) ||
+    /\benchanted creature can'?t be the target of spells\b/.test(text) ||
+    /\bif a spell or ability that targets that creature would cause a source to deal damage to that creature\b[^.]{0,120}\bprevent that damage\b/.test(text) ||
     /\bregenerate target\b/.test(text) ||
     regenerationProtection ||
     /\bthe next time target land would be destroyed this turn\b/.test(text) ||
@@ -950,7 +957,12 @@ function detectAdvancedPurposeRoles(
     }
   }
 
-  if (/\btarget spell or permanent becomes\b[^.]{0,40}\b(?:white|blue|black|red|green)\b/.test(text)) {
+  if (
+    /\btarget spell or permanent becomes\b[^.]{0,40}\b(?:white|blue|black|red|green)\b/.test(text) ||
+    /\bone or more target creatures become (?:white|blue|black|red|green)\b/.test(text) ||
+    /\benchanted creature becomes the colors? or colors? of your choice\b/.test(text) ||
+    /\btarget permanent you control becomes the color of your choice\b/.test(text)
+  ) {
     addRole(profile, "color_change", 0.3, "Advanced scan recognized color-changing utility.");
   }
 
@@ -965,6 +977,7 @@ function detectAdvancedPurposeRoles(
   if (
     /\bas long as enchanted artifact isn't a creature\b[^.]{0,120}\bit's an artifact creature\b/.test(text) ||
     /\bthis artifact becomes\b[^.]{0,80}\bartifact creature\b/.test(text) ||
+    /\ball lands are 1\/1 creatures\b/.test(text) ||
     /\ball (?:forests|swamps)\b[^.]{0,120}\bare 1\/1\b[^.]{0,80}\bcreatures\b/.test(text)
   ) {
     addRole(profile, "animation_effect", 0.44, "Advanced scan recognized a permanent-animation effect.");
@@ -994,7 +1007,10 @@ function detectAdvancedPurposeRoles(
   }
 
   if (
-    /\bsource of your choice would deal damage to you\b[^.]{0,180}\bdeals that much damage to that source'?s controller\b/.test(text)
+    /\bsource of your choice would deal damage to you\b[^.]{0,180}\bdeals that much damage to that source'?s controller\b/.test(text) ||
+    /\ball damage that would be dealt\b[^.]{0,180}\bby target sorcery spell\b[^.]{0,120}\bis dealt to that spell'?s controller instead\b/.test(text) ||
+    /\bdeals damage to that player equal to half the damage dealt by one of those sorcery spells\b/.test(text) ||
+    /\bthe next time a source of your choice would deal damage to you\b[^.]{0,180}\bthat damage is dealt to target creature\b/.test(text)
   ) {
     addRole(profile, "damage_reflection", 0.5, "Advanced scan recognized damage-reflection text.");
     addRole(profile, "damage_engine", 0.36, "Advanced scan recognized reflected damage pressure.");
@@ -1023,13 +1039,18 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "tempo_support", 0.36, "Advanced scan recognized combat manipulation as tempo utility.");
   }
 
-  if (/\blook at target (?:player|opponent)'?s hand\b/.test(text)) {
+  if (/\blook at target (?:player|opponent)'?s hand\b|\bplayers play with their hands revealed\b/.test(text)) {
     addRole(profile, "hand_info", 0.28, "Advanced scan recognized hand-information utility.");
   }
 
-  if (/\blook at the top three cards of target player'?s library\b/.test(text)) {
+  if (/\blook at the top (?:three|five|\d+) cards of target player'?s library\b/.test(text)) {
     addRole(profile, "selection", 0.36, "Advanced scan recognized top-of-library ordering utility.");
     addRole(profile, "topdeck_control", 0.34, "Advanced scan recognized top-of-library ordering utility.");
+  }
+
+  if (/\bplayers play with the top card of their libraries revealed\b/.test(text)) {
+    addRole(profile, "topdeck_info", 0.3, "Advanced scan recognized top-of-library information.");
+    addRole(profile, "selection", 0.22, "Advanced scan recognized revealed-library information as planning utility.");
   }
 
   if (/\bput any number of target\b[^.]{0,160}\bfrom target player's graveyard on top of their library\b/.test(text)) {
@@ -1053,6 +1074,11 @@ function detectAdvancedPurposeRoles(
   if (/\bdiscard it, but you may put it on top of your library instead of into your graveyard\b/.test(text)) {
     addRole(profile, "discard_protection", 0.38, "Advanced scan recognized discard replacement utility.");
     addRole(profile, "protection", 0.26, "Advanced scan recognized discard replacement as a resilience tool.");
+  }
+
+  if (/\battach target aura attached to a creature or land to another permanent of that type\b/.test(text)) {
+    addRole(profile, "aura_support", 0.36, "Advanced scan recognized Aura attachment utility.");
+    addRole(profile, "attachment_support", 0.32, "Advanced scan recognized attachment-moving utility.");
   }
 
   if (diceText) {
@@ -1089,6 +1115,11 @@ function detectAdvancedPurposeRoles(
   if (delayedCastKeyword) {
     addRole(profile, "selection", permanent ? 0.5 : 0.42, "Advanced scan recognized delayed-cast setup.");
     addRole(profile, "cost_reduction", permanent ? 0.42 : 0.36, "Advanced scan recognized alternate timing or setup cost.");
+  }
+
+  if (/\beach player may put a permanent card from their hand onto the battlefield\b/.test(text)) {
+    addRole(profile, "cheat_into_play", 0.54, "Advanced scan recognized permanent cheat-into-play text.");
+    addRole(profile, "cost_reduction", 0.42, "Advanced scan recognized putting permanents from hand onto the battlefield as mana-equivalent setup.");
   }
 
   if (graveyardCastKeyword || graveyardBodyKeyword) {
@@ -1146,6 +1177,14 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "hate_piece", 0.52, "Advanced scan recognized mana denial as a hate piece.");
   }
 
+  if (
+    /\bwhenever a player casts\b[^.]{0,80}\b(?:spell|enchantment spell)\b[^.]{0,80}\bcounter it\b/.test(text) ||
+    /\blegendary creatures don'?t untap during their controllers'? untap steps\b/.test(text)
+  ) {
+    addRole(profile, "hate_piece", 0.58, "Advanced scan recognized a spell or untap lock as a hate piece.");
+    addRole(profile, "stax_piece", 0.62, "Advanced scan recognized a spell or untap lock.");
+  }
+
   if (/\bwhenever an artifact becomes tapped\b[^.]{0,220}\bdeals? \d+ damage to that artifact's controller\b/.test(text)) {
     addRole(profile, "artifact_hate", 0.52, "Advanced scan recognized artifact-punisher text.");
     addRole(profile, "hate_piece", 0.44, "Advanced scan recognized artifact pressure as a hate piece.");
@@ -1153,6 +1192,8 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\bat the beginning of (?:each player's upkeep|the upkeep of enchanted [^.]{0,80} controller)\b[^.]{0,180}\bdeals? (?:\d+ damage|damage to that player equal to|damage [^.]{0,80} equal to) (?:to )?(?:that player|enchanted .* controller|enchanted .*'s controller)?\b/.test(text) ||
+    /\bwhenever enchanted creature deals damage to you\b[^.]{0,160}\bdeals? that much damage to that creature'?s controller\b/.test(text) ||
+    /\bwhenever an opponent draws a card\b[^.]{0,140}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever a player taps a land for mana\b[^.]{0,160}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever an artifact becomes tapped\b[^.]{0,220}\bdeals? \d+ damage to that artifact's controller\b/.test(text) ||
     /\bwhenever enchanted (?:land|artifact) becomes tapped\b[^.]{0,160}\bdeals? \d+ damage to that (?:land|artifact)'?s controller\b/.test(text) ||
@@ -1162,6 +1203,14 @@ function detectAdvancedPurposeRoles(
   ) {
     addRole(profile, "group_slug", 0.62, "Advanced scan recognized repeatable table damage.");
     addRole(profile, "damage_engine", 0.56, "Advanced scan recognized repeatable damage pressure.");
+  }
+
+  if (
+    /\bdeals damage to target player equal to the number of cards in that player'?s hand\b/.test(text) ||
+    /\bdeals damage to each opponent equal to the number of islands that player controls\b/.test(text)
+  ) {
+    addRole(profile, "direct_finisher", 0.54, "Advanced scan recognized scalable direct player damage.");
+    addRole(profile, "finisher", 0.42, "Advanced scan recognized scalable player damage as closing pressure.");
   }
 
   if (
@@ -1175,6 +1224,7 @@ function detectAdvancedPurposeRoles(
     /\b(?:all |other |face-down |attacking |blocking |tapped |untapped )?(?:creatures?|creature tokens?|sliver creatures|knight creatures|zombies|skeletons|elves|goblins|dragons|vampires|soldiers|warriors|slivers|eldrazi|angels|humans|wizards|rogues|knights|merfolk|pirates|cats|beasts)(?: you control)?\b[^.]{0,160}\b(?:gain|gains|have|has)\b[^.]{0,120}\b(?:flying|haste|double strike|first strike|menace|trample|lifelink|vigilance|deathtouch|indestructible|ward)\b/.test(text) ||
     /\bcreatures you control gain haste\b/.test(text) ||
     /\bcreatures your opponents control\b[^.]{0,120}\bcan'?t block\b/.test(text) ||
+    /\ball creatures lose flying\b/.test(text) ||
     /\btarget creature blocks this turn if able\b/.test(text) ||
     /\btarget creature defending player controls can block any number of creatures\b/.test(text) ||
     /\ball creatures able to block enchanted creature do so\b/.test(text) ||
@@ -1184,7 +1234,7 @@ function detectAdvancedPurposeRoles(
     combatKeywordSupport ||
     /\bgets? (?:\+\d+\/\+\d+|\+x\/\+x) for each\b/.test(text) ||
     /\bpower and toughness (?:are )?each equal to\b/.test(text) ||
-    /\bswitch the power and toughness\b/.test(text) ||
+    /\bswitch (?:target creature'?s|the) power and toughness\b/.test(text) ||
     /\bdistribute x \+\d+\/\+\d+ counters?\b/.test(text) ||
     /\bhave base power and toughness x\/x\b/.test(text) ||
     /\bequipped creature\b[^.]{0,120}\b(?:gets|has|gains)\b[^.]{0,120}(?:\+\d+\/\+\d+|\+\d+\/\+0|\b(?:trample|double strike|first strike|menace|flying|lifelink)\b)/.test(text) ||

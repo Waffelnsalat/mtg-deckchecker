@@ -1554,6 +1554,138 @@ test("inferAdvancedRoleProfile recognizes Antiquities recursion and rescue wordi
   assert.equal(getRoleWeight(drafnasRestorationProfile, "targeted_removal"), 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Legends color and information utility wording", () => {
+  const gateProfile = inferAdvancedRoleProfile(
+    createCard("Heaven's Gate", "Instant", 1, "One or more target creatures become white until end of turn."),
+  );
+  const dreamCoatProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Dream Coat",
+      "Enchantment - Aura",
+      1,
+      "Enchant creature. {0}: Enchanted creature becomes the color or colors of your choice. Activate only once each turn.",
+    ),
+  );
+  const tombProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Alchor's Tomb",
+      "Artifact",
+      4,
+      "{2}, {T}: Target permanent you control becomes the color of your choice. This effect lasts indefinitely.",
+    ),
+  );
+  const visionsProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Visions",
+      "Sorcery",
+      1,
+      "Look at the top five cards of target player's library. You may then have that player shuffle that library.",
+    ),
+  );
+  const revelationProfile = inferAdvancedRoleProfile(
+    createCard("Revelation", "World Enchantment", 1, "Players play with their hands revealed."),
+  );
+  const fieldProfile = inferAdvancedRoleProfile(
+    createCard("Field of Dreams", "World Enchantment", 1, "Players play with the top card of their libraries revealed."),
+  );
+
+  assert.ok(getRoleWeight(gateProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(dreamCoatProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(tombProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(visionsProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(revelationProfile, "hand_info") > 0);
+  assert.ok(getRoleWeight(fieldProfile, "topdeck_info") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Legends stack locks and protection wording", () => {
+  const presenceProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Presence of the Master",
+      "Enchantment",
+      4,
+      "Whenever a player casts an enchantment spell, counter it.",
+    ),
+  );
+  const netherVoidProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Nether Void",
+      "World Enchantment",
+      4,
+      "Whenever a player casts a spell, counter it unless that player pays {3}.",
+    ),
+  );
+  const rustProfile = inferAdvancedRoleProfile(
+    createCard("Rust", "Instant", 1, "Counter target activated ability from an artifact source. Mana abilities can't be targeted."),
+  );
+  const auraProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Anti-Magic Aura",
+      "Enchantment - Aura",
+      3,
+      "Enchant creature. Enchanted creature can't be the target of spells and can't be enchanted by other Auras.",
+    ),
+  );
+  const silhouetteProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Silhouette",
+      "Instant",
+      2,
+      "Choose target creature. If a spell or ability that targets that creature would cause a source to deal damage to that creature this turn, prevent that damage.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(presenceProfile, "hard_stack") > 0);
+  assert.ok(getRoleWeight(presenceProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(netherVoidProfile, "soft_stack") > 0);
+  assert.ok(getRoleWeight(netherVoidProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(rustProfile, "broad_stack") > 0);
+  assert.ok(getRoleWeight(auraProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(silhouetteProfile, "targeted_protection") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Legends reflection, animation, and cheat wording", () => {
+  const backfireProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Backfire",
+      "Enchantment - Aura",
+      1,
+      "Enchant creature. Whenever enchanted creature deals damage to you, this Aura deals that much damage to that creature's controller.",
+    ),
+  );
+  const reverberationProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Reverberation",
+      "Instant",
+      4,
+      "All damage that would be dealt this turn by target sorcery spell is dealt to that spell's controller instead.",
+    ),
+  );
+  const eurekaProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Eureka",
+      "Sorcery",
+      4,
+      "Starting with you, each player may put a permanent card from their hand onto the battlefield. Repeat this process until no one puts a card onto the battlefield.",
+    ),
+  );
+  const livingPlaneProfile = inferAdvancedRoleProfile(
+    createCard("Living Plane", "World Enchantment", 4, "All lands are 1/1 creatures that are still lands."),
+  );
+  const gravityProfile = inferAdvancedRoleProfile(
+    createCard("Gravity Sphere", "World Enchantment", 3, "All creatures lose flying."),
+  );
+  const transmutationProfile = inferAdvancedRoleProfile(
+    createCard("Transmutation", "Instant", 2, "Switch target creature's power and toughness until end of turn."),
+  );
+
+  assert.ok(getRoleWeight(backfireProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(reverberationProfile, "damage_reflection") > 0);
+  assert.ok(getRoleWeight(eurekaProfile, "cheat_into_play") > 0);
+  assert.ok(getRoleWeight(livingPlaneProfile, "animation_effect") > 0);
+  assert.ok(getRoleWeight(gravityProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(transmutationProfile, "combat_support") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

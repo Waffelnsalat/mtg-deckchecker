@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-21T17:27:05.430Z",
+  "generatedAt": "2026-06-21T17:48:36.049Z",
   "sourceSets": "data/scryfall-sets.json",
   "selector": "reviewed",
-  "setCount": 4,
+  "setCount": 6,
   "sets": [
     {
       "code": "lea",
@@ -48,6 +48,28 @@
       "printCount": 100,
       "uniqueNameCount": 85,
       "filePath": "data/card-name-lists/atq-card-names.txt"
+    },
+    {
+      "code": "leg",
+      "name": "Legends",
+      "releasedAt": "1994-06-01",
+      "setType": "expansion",
+      "cardCount": 310,
+      "digital": false,
+      "printCount": 310,
+      "uniqueNameCount": 310,
+      "filePath": "data/card-name-lists/leg-card-names.txt"
+    },
+    {
+      "code": "pdrc",
+      "name": "Dragon Con",
+      "releasedAt": "1994-07-15",
+      "setType": "promo",
+      "cardCount": 1,
+      "digital": false,
+      "printCount": 1,
+      "uniqueNameCount": 1,
+      "filePath": "data/card-name-lists/pdrc-card-names.txt"
     }
   ]
 }

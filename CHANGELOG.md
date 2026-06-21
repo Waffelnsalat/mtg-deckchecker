@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.4.13 - 2026-06-21
+
+### Neu
+
+- Legends wurde vollstaendig als `covered` in das Card-Role-Audit importiert.
+- Dragon Con (`pdrc`) wurde direkt mit abgeschlossen; `Nalathni Dragon` ist als reviewed erfasst.
+- Der Advanced Scanner erkennt jetzt alte Legends-Wording-Familien fuer Farbwechsel, Reveal-Information, Aura-Umhaengen, Spell-Locks, Damage Reflection, Damage Redirection, Land-Animation, Flying-Hate und symmetrisches Cheat-into-play.
+- Legends hat jetzt keine Karten mehr ohne Analyzer-Rollen und keine Attention Candidates.
+- Neue Website-Pruefdateien fuer Legends dokumentieren die wichtigsten erwarteten Rollen.
+- Fortschritt und Namenslisten wurden aktualisiert; 6 Editionen sind abgeschlossen. Naechster grosser Set-Block laut lokaler Setliste: The Dark (`drk`).
+
+### Validierung
+
+- `npm test -- --test-name-pattern Legends`
+- `npm run audit:cards -- worksheet leg`
+- `npm run audit:cards -- import-worksheet leg`
+- `npm run audit:cards -- worksheet pdrc`
+- `npm run audit:cards -- import-worksheet pdrc`
+- `npm run audit:cards -- progress`
+- `npm run audit:cards -- names reviewed`
+- `npm run check`
+
 ## 0.4.12 - 2026-06-21
 
 ### Neu

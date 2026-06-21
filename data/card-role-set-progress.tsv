@@ -8,9 +8,9 @@ arn	Arabian Nights	1993-12-17	expansion	92	false	done	78	78	0	true	data/card-rol
 atq	Antiquities	1994-03-04	expansion	102	false	done	85	85	0	true	data/card-role-worksheets/atq-role-review.tsv
 3ed	Revised Edition	1994-04-11	core	306	false	pending	0			false	
 fbb	Foreign Black Border	1994-04-11	core	307	false	pending	0			false	
-leg	Legends	1994-06-01	expansion	310	false	pending	0			false	
+leg	Legends	1994-06-01	expansion	310	false	done	310	310	0	true	data/card-role-worksheets/leg-role-review.tsv
 sum	Summer Magic / Edgar	1994-06-21	core	306	false	pending	0			false	
-pdrc	Dragon Con	1994-07-15	promo	1	false	pending	0			false	
+pdrc	Dragon Con	1994-07-15	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pdrc-role-review.tsv
 drk	The Dark	1994-08-01	expansion	122	false	pending	0			false	
 phpr	HarperPrism Book Promos	1994-09-01	promo	5	false	pending	0			false	
 fem	Fallen Empires	1994-11-01	expansion	187	false	pending	0			false	
