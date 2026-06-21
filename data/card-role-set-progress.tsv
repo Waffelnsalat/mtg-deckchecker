@@ -5,7 +5,7 @@ leb	Limited Edition Beta	1993-10-04	core	302	false	done	292	292	0	true	data/card
 ced	Collectors' Edition	1993-12-10	memorabilia	302	false	pending	0			false	
 cei	Intl. Collectors' Edition	1993-12-10	memorabilia	302	false	pending	0			false	
 arn	Arabian Nights	1993-12-17	expansion	92	false	done	78	78	0	true	data/card-role-worksheets/arn-role-review.tsv
-atq	Antiquities	1994-03-04	expansion	102	false	pending	0	85	85	true	data/card-role-worksheets/atq-role-review.tsv
+atq	Antiquities	1994-03-04	expansion	102	false	done	85	85	0	true	data/card-role-worksheets/atq-role-review.tsv
 3ed	Revised Edition	1994-04-11	core	306	false	pending	0			false	
 fbb	Foreign Black Border	1994-04-11	core	307	false	pending	0			false	
 leg	Legends	1994-06-01	expansion	310	false	pending	0			false	

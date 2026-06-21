@@ -129,6 +129,30 @@ test("analyzeDeckRemoval treats bounce and tuck as tempo removal, not clean remo
   assert.ok(labels.get("Aether Gust Style")?.has("tempo_removal"));
 });
 
+test("analyzeDeckRemoval does not treat graveyard-to-library artifact recursion as tempo removal", () => {
+  const analysis = analyzeDeckRemoval(
+    createDocument([
+      createResolvedCard("commander", 1, "Test Commander", "Legendary Creature - Wizard", 3),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Drafna's Restoration",
+        "Sorcery",
+        1,
+        "Put any number of target artifact cards from target player's graveyard on top of their library in any order.",
+      ),
+      createResolvedCard("mainboard", 98, "Filler Spell", "Creature - Human", 2, ""),
+    ]),
+  );
+
+  const labels = new Map(
+    analysis.taggedCards.map((card) => [card.name, new Set(card.hits.map((hit) => hit.tag))]),
+  );
+
+  assert.ok(!labels.get("Drafna's Restoration")?.has("tempo_removal"));
+  assert.ok(!labels.get("Drafna's Restoration")?.has("targeted_removal"));
+});
+
 test("analyzeDeckRemoval ignores protection and flicker shells", () => {
   const analysis = analyzeDeckRemoval(
     createDocument([

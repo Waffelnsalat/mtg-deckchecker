@@ -1,0 +1,310 @@
+Akron Legionnaire
+Alabaster Potion
+Amrou Kithkin
+Angelic Voices
+Cleanse
+Clergy of the Holy Nimbus
+D'Avenant Archer
+Divine Intervention
+Divine Offering
+Divine Transformation
+Elder Land Wurm
+Enchanted Being
+Equinox
+Fortified Area
+Glyph of Life
+Great Defender
+Great Wall
+Greater Realm of Preservation
+Heaven's Gate
+Holy Day
+Indestructible Aura
+Infinite Authority
+Ivory Guardians
+Keepers of the Faith
+Kismet
+Land Tax
+Lifeblood
+Moat
+Osai Vultures
+Petra Sphinx
+Presence of the Master
+Rapid Fire
+Remove Enchantments
+Righteous Avengers
+Seeker
+Shield Wall
+Spirit Link
+Spiritual Sanctuary
+Thunder Spirit
+Tundra Wolves
+Visions
+Wall of Caltrops
+Wall of Light
+Acid Rain
+Anti-Magic Aura
+Azure Drake
+Backfire
+Boomerang
+Brine Hag
+Devouring Deep
+Dream Coat
+Elder Spawn
+Enchantment Alteration
+Energy Tap
+Field of Dreams
+Flash Counter
+Flash Flood
+Force Spike
+Gaseous Form
+Glyph of Delusion
+In the Eye of Chaos
+Invoke Prejudice
+Juxtapose
+Land Equilibrium
+Mana Drain
+Part Water
+Psionic Entity
+Psychic Purge
+Puppet Master
+Recall
+Relic Bind
+Remove Soul
+Reset
+Reverberation
+Sea Kings' Blessing
+Segovian Leviathan
+Silhouette
+Spectral Cloak
+Telekinesis
+Teleport
+Time Elemental
+Undertow
+Venarian Gold
+Wall of Vapor
+Wall of Wonder
+Zephyr Falcon
+Abomination
+All Hallow's Eve
+Blight
+Carrion Ants
+Chains of Mephistopheles
+Cosmic Horror
+Cyclopean Mummy
+Darkness
+Demonic Torment
+Evil Eye of Orms-by-Gore
+Fallen Angel
+Ghosts of the Damned
+Giant Slug
+Glyph of Doom
+Greed
+Headless Horseman
+Hell Swarm
+Hell's Caretaker
+Hellfire
+Horror of Horrors
+Imprison
+Infernal Medusa
+Jovial Evil
+Lesser Werewolf
+Lost Soul
+Mold Demon
+Nether Void
+Pit Scorpion
+Quagmire
+Shimian Night Stalker
+Spirit Shackle
+Syphon Soul
+Takklemaggot
+The Abyss
+The Wretched
+Touch of Darkness
+Transmutation
+Underworld Dreams
+Vampire Bats
+Walking Dead
+Wall of Putrid Flesh
+Wall of Shadows
+Wall of Tombstones
+Active Volcano
+Aerathi Berserker
+Backdraft
+Beasts of Bogardan
+Blazing Effigy
+Blood Lust
+Caverns of Despair
+Chain Lightning
+Crevasse
+Crimson Kobolds
+Crimson Manticore
+Crookshank Kobolds
+Disharmony
+Dwarven Song
+Eternal Warrior
+Falling Star
+Feint
+Firestorm Phoenix
+Frost Giant
+Giant Strength
+Glyph of Destruction
+Gravity Sphere
+Hyperion Blacksmith
+Immolation
+Kobold Drill Sergeant
+Kobold Overlord
+Kobold Taskmaster
+Kobolds of Kher Keep
+Land's Edge
+Mountain Yeti
+Primordial Ooze
+Pyrotechnics
+Quarum Trench Gnomes
+Raging Bull
+Spinal Villain
+Storm World
+Tempest Efreet
+The Brute
+Wall of Dust
+Wall of Earth
+Wall of Heat
+Wall of Opposition
+Winds of Change
+Aisling Leprechaun
+Arboria
+Avoid Fate
+Barbary Apes
+Cat Warriors
+Cocoon
+Concordant Crossroads
+Craw Giant
+Deadfall
+Durkwood Boars
+Elven Riders
+Emerald Dragonfly
+Eureka
+Fire Sprites
+Floral Spuzzem
+Giant Turtle
+Glyph of Reincarnation
+Hornet Cobra
+Ichneumon Druid
+Killer Bees
+Living Plane
+Master of the Hunt
+Moss Monster
+Pixie Queen
+Pradesh Gypsies
+Rabid Wombat
+Radjan Spirit
+Rebirth
+Reincarnation
+Revelation
+Rust
+Shelkin Brownie
+Storm Seeker
+Subdue
+Sylvan Library
+Sylvan Paradise
+Typhoon
+Untamed Wilds
+Whirling Dervish
+Willow Satyr
+Winter Blast
+Wolverine Pack
+Wood Elemental
+Adun Oakenshield
+Angus Mackenzie
+Arcades Sabboth
+Axelrod Gunnarson
+Ayesha Tanaka
+Barktooth Warbeard
+Bartel Runeaxe
+Boris Devilboon
+Chromium
+Dakkon Blackblade
+Gabriel Angelfire
+Gosta Dirk
+Gwendlyn Di Corci
+Halfdane
+Hazezon Tamar
+Hunding Gjornersen
+Jacques le Vert
+Jasmine Boreal
+Jedit Ojanen
+Jerrard of the Closed Fist
+Johan
+Kasimir the Lone Wolf
+Kei Takahashi
+Lady Caleria
+Lady Evangela
+Lady Orca
+Livonya Silone
+Lord Magnus
+Marhault Elsdragon
+Nebuchadnezzar
+Nicol Bolas
+Palladia-Mors
+Pavel Maliki
+Princess Lucrezia
+Ragnar
+Ramirez DePietro
+Ramses Overdark
+Rasputin Dreamweaver
+Riven Turnbull
+Rohgahh of Kher Keep
+Rubinia Soulsinger
+Sir Shandlar of Eberyn
+Sivitri Scarzam
+Sol'kanar the Swamp King
+Stangg
+Sunastian Falconer
+Tetsuo Umezawa
+The Lady of the Mountain
+Tobias Andrion
+Tor Wauki
+Torsten Von Ursus
+Tuknir Deathlock
+Ur-Drago
+Vaevictis Asmadi
+Xira Arien
+Al-abara's Carpet
+Alchor's Tomb
+Arena of the Ancients
+Black Mana Battery
+Blue Mana Battery
+Bronze Horse
+Forethought Amulet
+Gauntlets of Chaos
+Green Mana Battery
+Horn of Deafening
+Knowledge Vault
+Kry Shield
+Life Chisel
+Life Matrix
+Mana Matrix
+Marble Priest
+Mirror Universe
+North Star
+Nova Pentacle
+Planar Gate
+Red Mana Battery
+Relic Barrier
+Ring of Immortals
+Sentinel
+Serpent Generator
+Sword of the Ages
+Triassic Egg
+Voodoo Doll
+White Mana Battery
+Adventurers' Guildhouse
+Cathedral of Serra
+Hammerheim
+Karakas
+Mountain Stronghold
+Pendelhaven
+Seafarer's Quay
+The Tabernacle at Pendrell Vale
+Tolaria
+Unholy Citadel
+Urborg

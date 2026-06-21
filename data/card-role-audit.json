@@ -6867,6 +6867,1668 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "8eca999e-f7f8-4354-b419-2df4249c4361",
+      "name": "Amulet of Kroog",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "4b889ec0-6130-4e31-bb02-03fdabd28bee",
+      "name": "Argivian Archaeologist",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "card_selection",
+        "combat_body",
+        "hand_recursion",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "hand_recursion",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "80240b6b-d20d-4dfb-a2c5-c272c3b43a70",
+      "name": "Argivian Blacksmith",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "bbf183bc-d502-4432-8202-f29f60c08396",
+      "name": "Argothian Pixies",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "f3aaef18-dc32-40d6-b48c-f957aa31247f",
+      "name": "Argothian Treefolk",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "70d90ef4-0cda-405f-abf1-734fa909efa6",
+      "name": "Armageddon Clock",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "counter_support"
+      ],
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "2d4aedc5-31c5-4281-98e1-b0c2233c3c8a",
+      "name": "Artifact Blast",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "5c641df8-97d7-484b-8d0e-790279fd6177",
+      "name": "Artifact Possession",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "9bd3a4bb-cc12-4e5f-a33f-77ab0c7788db",
+      "name": "Artifact Ward",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "4d18bcba-a346-445e-a182-6cc30b7e066d",
+      "name": "Ashnod's Altar",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "b5a390fd-2864-4481-84b4-41e8fac91a80",
+      "name": "Ashnod's Battle Gear",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "1a8072c9-e2b8-4173-af88-ed0dd64d10fe",
+      "name": "Ashnod's Transmogrant",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "3095f2cf-05c3-4381-929f-c526b6fc30a7",
+      "name": "Atog",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "e7b91fba-8d96-4040-95e8-f0023b65c497",
+      "name": "Battering Ram",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "a1ab033f-9605-4ca2-a98b-c0b2e1599609",
+      "name": "Bronze Tablet",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "ante_card",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "ante_card",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "c7c7bffa-442d-4ba5-b778-ad394c192f27",
+      "name": "Candelabra of Tawnos",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "2e61e9c0-a2b9-4a24-8cb0-5160accce183",
+      "name": "Circle of Protection: Artifacts",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "0d292575-c4ff-427a-953a-abc89e40caa6",
+      "name": "Citanul Druid",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "cc1ba59c-bb70-4da9-bbd0-a466075f9053",
+      "name": "Clay Statue",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "3d5b71d4-ed5e-4c6d-be70-bebbb1475257",
+      "name": "Clockwork Avian",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "9be9625e-b98b-416b-aac4-9f7b2dfbd39d",
+      "name": "Colossus of Sardia",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "aa2970c8-f2ea-4e06-8b8f-ec89af0012a0",
+      "name": "Coral Helm",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "8d6e39b0-a190-40a0-a8e1-ee82f477376f",
+      "name": "Crumble",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "lifegain",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "4f04603f-8f91-405b-b6ac-d2b66f05e32f",
+      "name": "Cursed Rack",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "hand_denial",
+        "hand_size",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hand_denial",
+        "hand_size",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "6b2184ce-d6b1-411e-80ac-05a6e5993a39",
+      "name": "Damping Field",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "daa90a75-c600-41bd-9311-ec21cf51480b",
+      "name": "Detonate",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "24a78116-d5e0-4e30-b192-d8bffe347a0c",
+      "name": "Drafna's Restoration",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "library_recursion",
+        "recursion",
+        "topdeck_control"
+      ],
+      "actualRoles": [
+        "library_recursion",
+        "recursion",
+        "topdeck_control"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "727a6474-d5b5-42ab-ace3-352d28f499eb",
+      "name": "Dragon Engine",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "a3541870-3dc9-4571-be98-c0a2b6c468fb",
+      "name": "Dwarven Weaponsmith",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "7a756cd1-29a8-4edf-bb74-fbb5b4020022",
+      "name": "Energy Flux",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "9b884dfd-59f4-45c0-bf1e-6ad9f5b58895",
+      "name": "Feldon's Cane",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "library_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "library_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "a4b60080-3f80-4aeb-8bd9-7953e77aaf75",
+      "name": "Gaea's Avenger",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "bbb005de-bbba-458e-87c1-912a004e80da",
+      "name": "Gate to Phyrexia",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "ec85a375-fe38-4b11-af0e-f2b466181dd7",
+      "name": "Goblin Artisans",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "card_draw",
+        "coin_support",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "hard_stack",
+        "repeatable_draw",
+        "stack"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "coin_support",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "hard_stack",
+        "repeatable_draw",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "95197f8f-c24e-4d13-a106-7186b3cc59e0",
+      "name": "Golgothian Sylex",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "hate_piece",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "23f73983-0337-4464-8817-5f7596d65b38",
+      "name": "Grapeshot Catapult",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "cbd2d38b-6402-44b7-ba27-d854268e31d0",
+      "name": "Haunting Wind",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "artifact_hate",
+        "damage_engine",
+        "group_slug",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "artifact_hate",
+        "damage_engine",
+        "group_slug",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "ed1e5d24-c8a8-48fe-a88f-1003ad432477",
+      "name": "Hurkyl's Recall",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "d416a4ed-9f16-4a8b-8aee-03c630e1eb6c",
+      "name": "Ivory Tower",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "lifegain",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "32d9fd98-142b-41d2-b8f0-40ae1d4cb991",
+      "name": "Jalum Tome",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "7ca54a23-f8eb-4982-b4ee-7392e2f2a1b3",
+      "name": "Martyrs of Korlis",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_body",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "2f578020-9b39-4c61-8b0b-6d29187e022a",
+      "name": "Mightstone",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "3212e47a-5492-4c50-9d4a-6ea562f1a6e1",
+      "name": "Millstone",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "mill_support"
+      ],
+      "actualRoles": [
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "5963e0ef-e0bc-4611-ad4f-813a4c0eacfb",
+      "name": "Mishra's Factory",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "combat_support",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "combat_support",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "18b1f96f-de35-4f0a-8b0e-81576471fd15",
+      "name": "Mishra's War Machine",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "ba284fe6-bb29-455c-8321-9714a0cdc05e",
+      "name": "Mishra's Workshop",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "299ea6dd-79eb-4c25-a05d-ff6fcad663cf",
+      "name": "Obelisk of Undoing",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "protection",
+        "rescue_protection",
+        "self_bounce"
+      ],
+      "actualRoles": [
+        "protection",
+        "rescue_protection",
+        "self_bounce"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "598f948b-bdd3-490f-b3e9-f0f9dc470522",
+      "name": "Onulet",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "0ec58835-de2d-4064-89a9-f92db80bc276",
+      "name": "Orcish Mechanics",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "407a0761-7ccc-4607-8df6-e744d30a81a0",
+      "name": "Phyrexian Gremlins",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "9a8c8d52-1701-4ae0-9d2d-cce4e476673b",
+      "name": "Power Artifact",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "877d42be-f74d-4521-87b7-bb59824d0acc",
+      "name": "Powerleech",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "cb6465f9-dcf8-4258-aa18-661ad252b58b",
+      "name": "Priest of Yawgmoth",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "combat_body",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "combat_body",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "dccf2ca8-8c87-41c9-8373-351859396d05",
+      "name": "Primal Clay",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "193c1671-328e-4f9c-836e-055f46c3aab0",
+      "name": "Rakalite",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "ad8fb78b-5ca5-4ef1-8c68-ee57d1e32fec",
+      "name": "Reconstruction",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "c7076e2c-81f1-44ad-a4dd-45a01802d364",
+      "name": "Reverse Polarity",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "lifegain",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "11720db4-5b6b-49ba-bf31-4d944921d6f1",
+      "name": "Rocket Launcher",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "f34be3cc-ff47-4415-a6a8-ed142891dc0c",
+      "name": "Sage of Lat-Nam",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "82a6d89d-9215-4540-b7d5-26cdd6afb05b",
+      "name": "Shapeshifter",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "96ce2403-4607-440a-92ae-80aceb458c5d",
+      "name": "Shatterstorm",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "52c53132-146a-4912-8e0f-1d4d9937fff3",
+      "name": "Staff of Zegon",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "d21a89eb-7c5b-459a-acc7-12b20b13bf79",
+      "name": "Strip Mine",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "land_base",
+        "land_denial",
+        "land_slot",
+        "mana_source",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_denial",
+        "land_slot",
+        "mana_source",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "9a28d53e-c789-47de-8f3e-a251843ac596",
+      "name": "Su-Chi",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "691896d7-9894-4845-be1d-08b053897fdb",
+      "name": "Tablet of Epityr",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "artifact_support",
+        "lifegain"
+      ],
+      "actualRoles": [
+        "artifact_support",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "05f20087-416f-4928-a0ab-6d0d2ca2ad05",
+      "name": "Tawnos's Coffin",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "counter_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "2138533a-d33c-477a-9765-7369d1ec30b0",
+      "name": "Tawnos's Wand",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "f07f98bb-4190-4643-aeb9-c5eaf358c97c",
+      "name": "Tawnos's Weaponry",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "85255c26-4e74-4cf0-91a6-78ddba5abdc6",
+      "name": "Tetravus",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "3d873e1d-4fac-42c4-bb31-77e76099e1ef",
+      "name": "The Rack",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "30ac0f06-3dd3-4827-8136-4cf8adbf9b12",
+      "name": "Titania's Song",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "dbe792f9-22be-4972-b418-99a6190c4421",
+      "name": "Transmute Artifact",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "restricted_tutor",
+        "sacrifice_support",
+        "scalable_spell",
+        "tutor"
+      ],
+      "actualRoles": [
+        "restricted_tutor",
+        "sacrifice_support",
+        "scalable_spell",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "74f67dcf-5afb-45aa-8d4b-3cdb23f6f2a1",
+      "name": "Triskelion",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "1cfeb5c4-a2d0-4872-a907-a6d484be85a5",
+      "name": "Urza's Avenger",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "fde25440-1810-46ba-a112-b54091593b66",
+      "name": "Urza's Chalice",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "33e85a8a-86df-4cdc-a9cc-8cbabe92c3c0",
+      "name": "Urza's Mine",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "57f0c89c-79ad-4786-9497-c7e668620fc0",
+      "name": "Urza's Miter",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "artifact_support",
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "artifact_support",
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "e11966cd-2ee3-4df4-b099-abf42dcdf0db",
+      "name": "Urza's Power Plant",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "32fbb638-ab14-4e8b-a07a-d4c44e3496f2",
+      "name": "Urza's Tower",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "ed836d84-ff1e-4af8-b4b8-314569b3faec",
+      "name": "Wall of Spears",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "004584f8-fd89-4a3e-9782-c117dbe1532b",
+      "name": "Weakstone",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "fb8f80cc-6214-4ab9-a9a9-1873ab9feb0c",
+      "name": "Xenic Poltergeist",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "6c54fc14-2af8-46e8-a4dc-b2a0a88ef2e1",
+      "name": "Yawgmoth Demon",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
+    },
+    {
+      "oracleId": "645571f1-a775-4834-8b79-8852d38c9587",
+      "name": "Yotian Soldier",
+      "firstSet": "atq",
+      "releasedAt": "1994-03-04",
+      "reviewedAt": "2026-06-21T17:26:39.124Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Antiquities role audit."
     }
   ]
 }

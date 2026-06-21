@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.4.12 - 2026-06-21
+
+### Neu
+
+- Antiquities wurde vollstaendig als `covered` in das Card-Role-Audit importiert.
+- `Drafna's Restoration` wird jetzt auch in der Interaction-Analyse nicht mehr als `tempo_removal` fehlklassifiziert.
+- Das Antiquities-Worksheet wurde neu erzeugt; alle 85 Karten haben Analyzer-Rollen.
+- Die Fortschrittsdateien markieren jetzt 4 abgeschlossene Editionen: Alpha, Beta, Arabian Nights und Antiquities.
+- Legends wurde als naechste Audit-Edition vorbereitet, inklusive Worksheet mit 310 Karten und kompletter Namensliste.
+
+### Validierung
+
+- `npm test -- --test-name-pattern "Antiquities|Arabian Nights"`
+- `npm test -- --test-name-pattern "Antiquities|graveyard-to-library|bounce and tuck"`
+- `npm run audit:cards -- worksheet atq`
+- `npm run audit:cards -- import-worksheet atq`
+- `npm run audit:cards -- progress`
+- `npm run audit:cards -- names reviewed`
+- `npm run audit:cards -- next-set`
+- `npm run audit:cards -- worksheet leg`
+- `npm run check`
+
 ## 0.4.11 - 2026-06-21
 
 ### Neu

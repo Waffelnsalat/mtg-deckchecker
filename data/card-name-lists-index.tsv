@@ -2,3 +2,4 @@ code	name	releasedAt	setType	cardCount	digital	printCount	uniqueNameCount	filePa
 lea	Limited Edition Alpha	1993-08-05	core	295	false	295	290	data/card-name-lists/lea-card-names.txt
 leb	Limited Edition Beta	1993-10-04	core	302	false	302	292	data/card-name-lists/leb-card-names.txt
 arn	Arabian Nights	1993-12-17	expansion	92	false	78	78	data/card-name-lists/arn-card-names.txt
+atq	Antiquities	1994-03-04	expansion	102	false	100	85	data/card-name-lists/atq-card-names.txt

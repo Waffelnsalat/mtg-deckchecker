@@ -1580,6 +1580,7 @@ function hasSplitCreatureBounce(sentence: string) {
 function hasPermanentTuck(sentence: string) {
   return (
     /\bput\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:nonland permanent|permanent|creature|artifact|enchantment|planeswalker|spell or permanent|permanent or spell)\b[^.]{0,140}\b(?:on the top or bottom of|on top of|on the bottom of|into)\b[^.]{0,60}\blibrary\b/.test(sentence) &&
+    !/\bgraveyard\b/.test(sentence) &&
     !hasSelfTargetDescriptor(sentence)
   );
 }
