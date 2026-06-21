@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-21T17:48:36.049Z",
+  "generatedAt": "2026-06-21T18:04:27.907Z",
   "sourceSets": "data/scryfall-sets.json",
   "selector": "reviewed",
-  "setCount": 6,
+  "setCount": 8,
   "sets": [
     {
       "code": "lea",
@@ -70,6 +70,28 @@
       "printCount": 1,
       "uniqueNameCount": 1,
       "filePath": "data/card-name-lists/pdrc-card-names.txt"
+    },
+    {
+      "code": "drk",
+      "name": "The Dark",
+      "releasedAt": "1994-08-01",
+      "setType": "expansion",
+      "cardCount": 122,
+      "digital": false,
+      "printCount": 119,
+      "uniqueNameCount": 119,
+      "filePath": "data/card-name-lists/drk-card-names.txt"
+    },
+    {
+      "code": "phpr",
+      "name": "HarperPrism Book Promos",
+      "releasedAt": "1994-09-01",
+      "setType": "promo",
+      "cardCount": 5,
+      "digital": false,
+      "printCount": 5,
+      "uniqueNameCount": 5,
+      "filePath": "data/card-name-lists/phpr-card-names.txt"
     }
   ]
 }

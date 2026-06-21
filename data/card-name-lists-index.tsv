@@ -5,3 +5,5 @@ arn	Arabian Nights	1993-12-17	expansion	92	false	78	78	data/card-name-lists/arn-
 atq	Antiquities	1994-03-04	expansion	102	false	100	85	data/card-name-lists/atq-card-names.txt
 leg	Legends	1994-06-01	expansion	310	false	310	310	data/card-name-lists/leg-card-names.txt
 pdrc	Dragon Con	1994-07-15	promo	1	false	1	1	data/card-name-lists/pdrc-card-names.txt
+drk	The Dark	1994-08-01	expansion	122	false	119	119	data/card-name-lists/drk-card-names.txt
+phpr	HarperPrism Book Promos	1994-09-01	promo	5	false	5	5	data/card-name-lists/phpr-card-names.txt

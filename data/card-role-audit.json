@@ -14463,6 +14463,2438 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Dragon Con role audit."
+    },
+    {
+      "oracleId": "8345187a-a210-49d7-bdce-10fb2909e050",
+      "name": "Amnesia",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "hand_attack",
+        "hand_info",
+        "removal"
+      ],
+      "actualRoles": [
+        "hand_attack",
+        "hand_info",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "967c2c79-7e49-448d-8d30-b2eb08b21d0a",
+      "name": "Angry Mob",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "d16d2451-1c21-4a6b-8a4a-40ac8cd9fe08",
+      "name": "Apprentice Wizard",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "944a52d9-bb14-43c5-8d05-2afaf023dc9f",
+      "name": "Ashes to Ashes",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "7485cf25-eb41-4397-be13-7f0b8c10c70a",
+      "name": "Ball Lightning",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "438546b8-0b67-4bec-a43b-f2fc7449c90e",
+      "name": "Banshee",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "eb260cd3-9060-4a5e-bc60-a8ca13d542cc",
+      "name": "Barl's Cage",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "94fac5fe-97d5-4c12-a80c-8efff9d853ae",
+      "name": "Blood Moon",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "0e69e6c2-fdc5-4c1a-bd96-c4283b82743a",
+      "name": "Blood of the Martyr",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "45b94e3c-a905-435b-aee5-bec9239fd24c",
+      "name": "Bog Imp",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "035d61a9-5ca2-4275-b8df-fcfa9f5c1b31",
+      "name": "Bog Rats",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "8664a004-d786-4357-8856-2f8f5a9ae24d",
+      "name": "Bone Flute",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "a5e3ca74-ec33-4679-9366-8b1a45048783",
+      "name": "Book of Rass",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "5a81755f-bc44-47ac-8039-8847a5e37922",
+      "name": "Brainwash",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "ee9208e7-2075-45b9-9ed7-b18e1a280d79",
+      "name": "Brothers of Fire",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "3a7478d7-b33e-4227-8cc3-b30643624d56",
+      "name": "Carnivorous Plant",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "6a4e8d44-e6ee-40f7-8df4-52fa4cb346aa",
+      "name": "Cave People",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "043192d8-6077-46c3-b43f-b7caf6762869",
+      "name": "City of Shadows",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "46b83657-1699-4162-a4bb-b792da396fe6",
+      "name": "Cleansing",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "64b63847-27dd-469b-aad3-58e061f92817",
+      "name": "Coal Golem",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "combat_body",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "combat_body",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "f08ae501-8b96-40ee-aa7b-c25293ddfa88",
+      "name": "Curse Artifact",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "72e1a239-11a7-4dbe-b093-65d395e3ccc9",
+      "name": "Dance of Many",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "copy_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "copy_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "c44f40da-867e-4237-b4b1-ed6feb1f37b7",
+      "name": "Dark Heart of the Wood",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "397f53f7-f801-4442-a778-2f26ac246b62",
+      "name": "Dark Sphere",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "cf9ef041-5396-4f18-8233-42d667db0888",
+      "name": "Deep Water",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "mana_fixing",
+        "ramp"
+      ],
+      "actualRoles": [
+        "mana_fixing",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "afd9b232-3f46-40c5-b1cf-2a7e8c955eba",
+      "name": "Diabolic Machine",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "3da87e58-6a4b-48c3-873c-bc654277d4df",
+      "name": "Drowned",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "b17eb586-0272-4d02-be75-de06ea044b6f",
+      "name": "Dust to Dust",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "3c414ace-fd04-4fac-9379-24f5910f20e4",
+      "name": "Eater of the Dead",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "graveyard_hate",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "graveyard_hate",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "ad8213db-074d-475c-b94a-9f1e81c8f4fd",
+      "name": "Electric Eel",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "20347559-95a9-4689-bb79-c5bb3809b719",
+      "name": "Elves of Deep Shadow",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "155ee24f-a458-4df4-86d5-5eb7396ebf45",
+      "name": "Erosion",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "removal",
+        "stax_piece",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "removal",
+        "stax_piece",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "b3119f27-45fd-4411-8a09-5f8d3cd8d927",
+      "name": "Eternal Flame",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "2a1ca3e2-e1d1-4525-a07e-13d5ba1ac431",
+      "name": "Exorcist",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "0d787c6b-ab82-42c5-b840-8f3a09af30ac",
+      "name": "Fasting",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "card_draw",
+        "counter_support",
+        "direct_draw",
+        "draw",
+        "hate_piece",
+        "lifegain",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "replacement_engine",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "counter_support",
+        "direct_draw",
+        "draw",
+        "hate_piece",
+        "lifegain",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "replacement_engine",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+      "name": "Fellwar Stone",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "8e594801-4a8d-4dcd-b328-7eb3de65cf90",
+      "name": "Festival",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "b1f857c5-cd22-4a4e-8039-1e7eeb3754d8",
+      "name": "Fire and Brimstone",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "fd3bcc9b-7d84-478e-aef5-2e44610107c7",
+      "name": "Fire Drake",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "c8b1e9f3-b014-4e57-b278-6d84a7e88b23",
+      "name": "Fissure",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "e8eb2abb-daf9-43e0-b909-d96b679f71c2",
+      "name": "Flood",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "b906923c-9997-4da5-a05e-53eb4d2dff32",
+      "name": "Fountain of Youth",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "100218ce-1572-4bce-bb00-d2df5f68705c",
+      "name": "Frankenstein's Monster",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "ddd053ea-5b91-4def-a003-2e297a170d99",
+      "name": "Gaea's Touch",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "09de1136-8a8f-4539-92a2-611dcdd0790b",
+      "name": "Ghost Ship",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "44a10a63-be9c-4f1d-aad6-b5337112bda5",
+      "name": "Giant Shark",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "3ab5c3a7-12e7-4394-a495-0bc7c310bf9c",
+      "name": "Goblin Caves",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "8408f2a1-e321-43f5-a7d1-1911eba9d706",
+      "name": "Goblin Digging Team",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "ee969637-a20e-4163-97c0-9fd5cb17b741",
+      "name": "Goblin Hero",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "ada3247e-ec5e-499d-bc15-1d9dd80a59ae",
+      "name": "Goblin Rock Sled",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "5e35df8a-2404-4b3b-888a-25d663bd4383",
+      "name": "Goblin Shrine",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "912c99a0-ee97-4bb9-8ab7-2e469d74fa03",
+      "name": "Goblin Wizard",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "cost_reduction",
+        "ramp",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "cost_reduction",
+        "ramp",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "3a620d92-ec92-4733-8c05-7fa1b956bab6",
+      "name": "Goblins of the Flarg",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "6698b059-f1ed-4023-9d44-fbdf39fb159a",
+      "name": "Grave Robbers",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "graveyard_hate",
+        "lifegain",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "graveyard_hate",
+        "lifegain",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "f1c9f5df-d36a-4e15-bae4-81190e4be477",
+      "name": "Hidden Path",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "8f7dd328-b367-4546-ba79-1efc1e97f2ab",
+      "name": "Holy Light",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "69e2df4e-c7f3-4c3a-be5b-1c4afb29cead",
+      "name": "Inferno",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "9178253e-0d89-450d-a93b-ed4765e945db",
+      "name": "Inquisition",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "hand_info"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "6d8e1a97-67bf-4260-888c-c10c498b98d8",
+      "name": "Knights of Thorn",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "228f0afa-146b-4564-a380-71595cdf1ef4",
+      "name": "Land Leeches",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "d8c49932-9b4f-4cb0-a7e9-4b7eb12203ee",
+      "name": "Leviathan",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "7a32b0d1-d9dc-4d24-ae60-3f3a0e18ec03",
+      "name": "Living Armor",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support",
+        "counter_support",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "counter_support",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "4aedbbaf-b6ae-4bf0-84eb-31b0b28cfdfa",
+      "name": "Lurker",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "a2f5a5fd-14dc-48e8-bdb0-984a83288023",
+      "name": "Mana Clash",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "coin_support"
+      ],
+      "actualRoles": [
+        "coin_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "98b88734-09e2-4209-a787-9b5b345391f9",
+      "name": "Mana Vortex",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "08ae9f91-48c8-4721-a82d-063defc1b727",
+      "name": "Marsh Gas",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "a2c5a504-5c8f-4c1b-a8b1-4e045aee4673",
+      "name": "Marsh Goblins",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "5249df56-7571-46c0-882e-cf88e452fb4d",
+      "name": "Marsh Viper",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "b636f17d-b54a-4a72-9a5e-ce13e7b4f00a",
+      "name": "Martyr's Cry",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "card_draw",
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "38a12bd7-4394-44a8-91a0-6a4ff7fa4f71",
+      "name": "Maze of Ith",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_support",
+        "land_base",
+        "land_slot",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "land_base",
+        "land_slot",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "7edd536c-c043-4189-aa57-83d22eed3103",
+      "name": "Merfolk Assassin",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "fad1562d-0ab9-4a3f-b80a-476d8132f66d",
+      "name": "Mind Bomb",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug",
+        "hand_attack",
+        "removal"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "86ddbc56-3318-49cf-be95-78772ef87637",
+      "name": "Miracle Worker",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "8af9d623-efa3-4cbc-a903-aaec32d78b0a",
+      "name": "Morale",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "00358a89-2058-448b-a2fd-389f639ba2da",
+      "name": "Murk Dwellers",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "35a717ea-bd32-4714-b402-de7f15398e52",
+      "name": "Nameless Race",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "c84adca4-19dd-432d-a363-e98d3b699af8",
+      "name": "Necropolis",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "9d2dd032-bcef-4d04-8836-1eaff1c56b98",
+      "name": "Niall Silvain",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "1f696446-30ba-42ab-b4fc-ee9c956b0a62",
+      "name": "Orc General",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "66e7a760-2b2f-4af9-983c-300c657beaaf",
+      "name": "People of the Woods",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "5556a897-8947-4b78-81ce-a829508a4f11",
+      "name": "Pikemen",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "d5ea9176-30c1-4152-9086-322f39245f46",
+      "name": "Preacher",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "58e0cc31-7f7c-4cea-9453-d377a039da36",
+      "name": "Psychic Allergy",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "8132c521-44e2-4fc0-b3de-e5b92d04463a",
+      "name": "Rag Man",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "hand_attack",
+        "removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "2fb505c6-3d28-4b83-9820-4b9db64c8304",
+      "name": "Reflecting Mirror",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "broad_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "broad_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "b4541f38-23c1-4f51-a35b-0b222cdaed2c",
+      "name": "Riptide",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "964c2003-cef0-4ac7-9f66-4e20893c8e50",
+      "name": "Runesword",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "8f7f4061-8998-40e9-b980-c63f27e7a5cd",
+      "name": "Safe Haven",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "330e109c-1885-4946-9edc-895408519b3d",
+      "name": "Savaen Elves",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "58616e15-531f-4680-8294-35ab7e962c96",
+      "name": "Scarecrow",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_body",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "7fcc8aab-6f7b-4474-b4e4-58cf4a119b22",
+      "name": "Scarwood Bandits",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "hate_piece",
+        "landwalk_support",
+        "removal",
+        "stax_piece",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "hate_piece",
+        "landwalk_support",
+        "removal",
+        "stax_piece",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "5314e57b-107c-4478-9cdb-51d1732f9468",
+      "name": "Scarwood Goblins",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "2b483041-4dea-468a-9857-50dae2e8a57d",
+      "name": "Scarwood Hag",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "74f361f8-a0d8-4824-9380-61469d6a19cf",
+      "name": "Scavenger Folk",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "307813c5-c3a8-46c5-8ed4-3b244dd169dc",
+      "name": "Season of the Witch",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "389a9d46-d3fb-47f0-91cd-f6d487636916",
+      "name": "Sisters of the Flame",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "67601399-089b-44fe-82db-c319729c75bf",
+      "name": "Skull of Orm",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "5419eae0-3c12-4748-9cf8-d927752e527e",
+      "name": "Sorrow's Path",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "77af5e31-ac4d-4112-9138-e12abb5ce144",
+      "name": "Spitting Slug",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+      "name": "Squire",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "2cc8c24f-cca8-462c-a5ad-1f8662e69a8a",
+      "name": "Standing Stones",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "mana_fixing",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "mana_fixing",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "301a59c1-e372-4c31-a2a8-88c5ba7d822a",
+      "name": "Stone Calendar",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "17841133-c526-42a3-a1d2-a874e9bb7138",
+      "name": "Sunken City",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "06ba313f-50b4-4e84-a8e0-b6dda47225f2",
+      "name": "Tangle Kelp",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "19348c1e-b683-4d2c-b4eb-82e538b314b0",
+      "name": "The Fallen",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "direct_finisher",
+        "finisher",
+        "repeatable_finisher"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "direct_finisher",
+        "finisher",
+        "repeatable_finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "5cf4d98e-f2f4-435b-a633-990b2e654f3a",
+      "name": "Tivadar's Crusade",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+      "name": "Tormod's Crypt",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "graveyard_hate",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "graveyard_hate",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "f9afad36-933f-4d18-acb7-32e5cb5c8161",
+      "name": "Tower of Coireall",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "86260d53-a68e-43cb-88ba-6a97c0b2f4f4",
+      "name": "Tracker",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "44e855a4-95f9-4515-a868-a8ad7a2db751",
+      "name": "Uncle Istvan",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "ee55ca31-73f3-4e9d-8373-0a44009a25bd",
+      "name": "Venom",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "3ec1ccd7-4970-4032-be7a-9e76ca6a139e",
+      "name": "Wand of Ith",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "hand_attack",
+        "hand_info",
+        "removal"
+      ],
+      "actualRoles": [
+        "hand_attack",
+        "hand_info",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "fd57331f-1cfa-4f88-a925-fc171738c3c0",
+      "name": "War Barge",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "cfa373c4-6e42-4cf3-94a4-841f2824603e",
+      "name": "Water Wurm",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "84050a10-e1f1-413e-aa21-5c1f47bb2a64",
+      "name": "Whippoorwill",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "5fc1f04a-2c39-4b3a-b62e-6e30c3d8a583",
+      "name": "Witch Hunter",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "8bbc9f21-2b4d-4d03-aef1-f5bf0b79257c",
+      "name": "Word of Binding",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "9638ec0c-c8bf-4aa5-a7ca-8677e4b9f241",
+      "name": "Worms of the Earth",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "2a014ef1-0450-4485-8a8c-8210a985be4c",
+      "name": "Wormwood Treefolk",
+      "firstSet": "drk",
+      "releasedAt": "1994-08-01",
+      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by The Dark role audit."
+    },
+    {
+      "oracleId": "12326d23-1fb5-4084-a23a-d6e2c90ea36c",
+      "name": "Arena",
+      "firstSet": "phpr",
+      "releasedAt": "1994-09-01",
+      "reviewedAt": "2026-06-21T18:04:13.837Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by HarperPrism Book Promos role audit."
+    },
+    {
+      "oracleId": "a4109138-5d69-4510-a228-7c1f88c0c8c0",
+      "name": "Giant Badger",
+      "firstSet": "phpr",
+      "releasedAt": "1994-09-01",
+      "reviewedAt": "2026-06-21T18:04:13.837Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by HarperPrism Book Promos role audit."
+    },
+    {
+      "oracleId": "2c63e4e1-89d2-4bc6-a232-94e75c4b1c8a",
+      "name": "Mana Crypt",
+      "firstSet": "phpr",
+      "releasedAt": "1994-09-01",
+      "reviewedAt": "2026-06-21T18:04:13.837Z",
+      "expectedRoles": [
+        "coin_support",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "coin_support",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by HarperPrism Book Promos role audit."
+    },
+    {
+      "oracleId": "2482f98a-eadf-450d-9e73-fc441b572862",
+      "name": "Sewers of Estark",
+      "firstSet": "phpr",
+      "releasedAt": "1994-09-01",
+      "reviewedAt": "2026-06-21T18:04:13.837Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by HarperPrism Book Promos role audit."
+    },
+    {
+      "oracleId": "b3d40cf7-a529-4bd0-8df7-231630a49bb8",
+      "name": "Windseeker Centaur",
+      "firstSet": "phpr",
+      "releasedAt": "1994-09-01",
+      "reviewedAt": "2026-06-21T18:04:13.837Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by HarperPrism Book Promos role audit."
     }
   ]
 }

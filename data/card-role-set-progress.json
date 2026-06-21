@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-21T17:48:36.959Z",
+  "generatedAt": "2026-06-21T18:04:36.629Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 6,
+    "done": 8,
     "inProgress": 0,
-    "pending": 1037
+    "pending": 1035
   },
   "sets": [
     {
@@ -179,11 +179,12 @@
       "setType": "expansion",
       "cardCount": 122,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 119,
+      "totalUniqueOracleIds": 119,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/drk-role-review.tsv"
     },
     {
       "code": "phpr",
@@ -192,11 +193,12 @@
       "setType": "promo",
       "cardCount": 5,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 5,
+      "totalUniqueOracleIds": 5,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/phpr-role-review.tsv"
     },
     {
       "code": "fem",

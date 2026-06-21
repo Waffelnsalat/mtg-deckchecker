@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.4.14 - 2026-06-21
+
+### Neu
+
+- The Dark wurde vollstaendig als `covered` in das Card-Role-Audit importiert.
+- HarperPrism Book Promos (`phpr`) wurde direkt mit abgeschlossen.
+- Der Advanced Scanner erkennt jetzt alte The-Dark-Wording-Muster fuer Land-Denial mit Zahlungsausweichung, kleine Sweeper, Mana-Konvertierung, globale Tap-Effekte, Hand-Reveal-Discard und Combat-Removal-Auren.
+- `Cleansing` wird als Mass-Land-Denial gelesen, waehrend `Erosion` targeted Land-Denial bleibt.
+- Neue Website-Pruefdateien fuer The Dark dokumentieren die wichtigsten erwarteten Rollen.
+- Fortschritt und Namenslisten wurden aktualisiert; 8 Editionen sind abgeschlossen. Naechster grosser Set-Block laut lokaler Setliste: Fallen Empires (`fem`).
+
+### Validierung
+
+- `npm test -- --test-name-pattern "The Dark"`
+- `npm run audit:cards -- worksheet drk`
+- `npm run audit:cards -- import-worksheet drk`
+- `npm run audit:cards -- worksheet phpr`
+- `npm run audit:cards -- import-worksheet phpr`
+- `npm run audit:cards -- progress`
+- `npm run audit:cards -- names reviewed`
+- `npm run check`
+
 ## 0.4.13 - 2026-06-21
 
 ### Neu

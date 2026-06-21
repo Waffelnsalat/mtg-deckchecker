@@ -1686,6 +1686,96 @@ test("inferAdvancedRoleProfile recognizes Legends reflection, animation, and che
   assert.ok(getRoleWeight(transmutationProfile, "combat_support") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes The Dark land denial and small sweeper wording", () => {
+  const cleansingProfile = inferAdvancedRoleProfile(
+    createCard("Cleansing", "Sorcery", 3, "For each land, destroy that land unless any player pays 1 life."),
+  );
+  const erosionProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Erosion",
+      "Enchantment - Aura",
+      3,
+      "Enchant land. At the beginning of the upkeep of enchanted land's controller, destroy that land unless that player pays {1} or 1 life.",
+    ),
+  );
+  const holyLightProfile = inferAdvancedRoleProfile(
+    createCard("Holy Light", "Instant", 3, "Nonwhite creatures get -1/-1 until end of turn."),
+  );
+  const crusadeProfile = inferAdvancedRoleProfile(
+    createCard("Tivadar's Crusade", "Sorcery", 3, "Destroy all Goblins."),
+  );
+
+  assert.ok(getRoleWeight(cleansingProfile, "mass_land_denial") > 0);
+  assert.ok(getRoleWeight(cleansingProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(erosionProfile, "targeted_land_removal") > 0);
+  assert.ok(getRoleWeight(holyLightProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(crusadeProfile, "mass_removal") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes The Dark hand pressure and tap-lock wording", () => {
+  const mindBombProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Mind Bomb",
+      "Sorcery",
+      1,
+      "Each player may discard up to three cards. Mind Bomb deals damage to each player equal to 3 minus the number of cards they discarded this way.",
+    ),
+  );
+  const inquisitionProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Inquisition",
+      "Sorcery",
+      3,
+      "Target player reveals their hand. Inquisition deals damage to that player equal to the number of white cards in their hand.",
+    ),
+  );
+  const cageProfile = inferAdvancedRoleProfile(
+    createCard("Barl's Cage", "Artifact", 4, "{3}: Target creature doesn't untap during its controller's next untap step."),
+  );
+  const wandProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Wand of Ith",
+      "Artifact",
+      4,
+      "{3}, {T}: Target player reveals a card at random from their hand. If it's a land card, that player discards it unless they pay 1 life. If it isn't a land card, the player discards it unless they pay life equal to its mana value. Activate only during your turn.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(mindBombProfile, "group_slug") > 0);
+  assert.ok(getRoleWeight(mindBombProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(inquisitionProfile, "hand_info") > 0);
+  assert.ok(getRoleWeight(inquisitionProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(cageProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(wandProfile, "hand_info") > 0);
+  assert.ok(getRoleWeight(wandProfile, "hand_attack") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes The Dark mana conversion and creature combat tricks", () => {
+  const deepWaterProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Deep Water",
+      "Enchantment",
+      2,
+      "{U}: Until end of turn, if you tap a land you control for mana, it produces {U} instead of any other type.",
+    ),
+  );
+  const riptideProfile = inferAdvancedRoleProfile(
+    createCard("Riptide", "Instant", 1, "Tap all blue creatures."),
+  );
+  const venomProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Venom",
+      "Enchantment - Aura",
+      3,
+      "Enchant creature. Whenever enchanted creature blocks or becomes blocked by a non-Wall creature, destroy the other creature at end of combat.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(deepWaterProfile, "mana_fixing") > 0);
+  assert.ok(getRoleWeight(riptideProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(venomProfile, "targeted_removal") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

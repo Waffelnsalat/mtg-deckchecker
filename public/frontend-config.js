@@ -1,5 +1,5 @@
 window.MtgDeckcheckerFrontendConfig = {
-  appVersion: "0.4.13",
+  appVersion: "0.4.14",
   releaseNotesUrl: "https://github.com/Waffelnsalat/mtg-deckchecker/blob/main/CHANGELOG.md",
   cardBreakdown: {
     maxRoles: 5,
