@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-21T00:54:49.565Z",
+  "sourceSets": "data/scryfall-sets.json",
+  "selector": "reviewed",
+  "setCount": 1,
+  "sets": [
+    {
+      "code": "lea",
+      "name": "Limited Edition Alpha",
+      "releasedAt": "1993-08-05",
+      "setType": "core",
+      "cardCount": 295,
+      "digital": false,
+      "printCount": 295,
+      "uniqueNameCount": 290,
+      "filePath": "data/card-name-lists/lea-card-names.txt"
+    }
+  ]
+}

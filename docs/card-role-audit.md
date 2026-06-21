@@ -7,6 +7,8 @@ This workflow reviews Magic cards set by set, oldest first, so wording gaps and 
 - `data/scryfall-sets.json`: generated list of every Scryfall set, sorted by release date.
 - `data/card-role-set-progress.json`: generated progress state for every set.
 - `data/card-role-set-progress.tsv`: generated readable progress table for every set.
+- `data/card-name-lists/<set>-card-names.txt`: generated card-name-only lists for reviewed sets.
+- `data/card-name-lists-index.tsv`: generated index of card-name-only lists.
 - `data/card-role-audit.json`: manual review ledger, keyed by `oracleId`.
 - `data/card-role-worksheets/<set>-role-review.tsv`: generated manual review worksheets.
 - `docs/card-role-todo.md`: larger follow-up list for tag taxonomy and analyzer design work.
@@ -22,6 +24,7 @@ npm run audit:cards -- set lea
 npm run audit:cards -- worksheet lea
 npm run audit:cards -- import-worksheet lea
 npm run audit:cards -- progress
+npm run audit:cards -- names reviewed
 ```
 
 ## Review Rule
@@ -38,6 +41,7 @@ The normal loop is:
 6. For `missing` or `wrong` entries, add or adjust analyzer tags and tests.
 7. Rerun the audit command until the set has no open cards.
 8. Run `npm run audit:cards -- progress` to refresh the edition progress overview.
+9. Run `npm run audit:cards -- names reviewed` to refresh plain card-name lists for reviewed editions.
 
 The worksheet is for human review and can be imported after editing. The ledger is the source of truth for completed decisions. Do not regenerate a worksheet over manual edits before importing it.
 
@@ -50,6 +54,16 @@ The progress command marks every tracked Scryfall set as:
 - `pending`: no reviewed cards are known locally yet.
 
 `progressKnown` is `true` when a worksheet exists for the set, because the command can count total unique oracle IDs from that worksheet. Without a worksheet, progress can only use existing ledger entries.
+
+## Card Name Lists
+
+The names command writes simple one-name-per-line lists. By default it only writes sets that have local review progress.
+
+- `npm run audit:cards -- names reviewed`: writes lists for reviewed or in-progress sets.
+- `npm run audit:cards -- names lea`: writes one specific set.
+- `npm run audit:cards -- names all`: writes every tracked Scryfall set.
+
+The list removes duplicate names inside a set, so alternate print variants do not appear multiple times.
 
 ## Statuses
 

@@ -13,6 +13,9 @@ const DATA_DIR = path.resolve(process.cwd(), "data");
 const SETS_PATH = path.join(DATA_DIR, "scryfall-sets.json");
 const AUDIT_PATH = path.join(DATA_DIR, "card-role-audit.json");
 const WORKSHEETS_DIR = path.join(DATA_DIR, "card-role-worksheets");
+const CARD_NAME_LISTS_DIR = path.join(DATA_DIR, "card-name-lists");
+const CARD_NAME_INDEX_JSON_PATH = path.join(DATA_DIR, "card-name-lists-index.json");
+const CARD_NAME_INDEX_TSV_PATH = path.join(DATA_DIR, "card-name-lists-index.tsv");
 const SET_PROGRESS_JSON_PATH = path.join(DATA_DIR, "card-role-set-progress.json");
 const SET_PROGRESS_TSV_PATH = path.join(DATA_DIR, "card-role-set-progress.tsv");
 const SCRYFALL_SETS_URL = "https://api.scryfall.com/sets";
@@ -176,6 +179,9 @@ async function main() {
       return;
     case "progress":
       await writeSetProgress();
+      return;
+    case "names":
+      await writeCardNameLists(args[0]);
       return;
     case "help":
     case "--help":
@@ -401,6 +407,78 @@ async function writeSetProgress() {
   console.log(`Pending: ${summary.pending}`);
   console.log(`JSON: ${relativePath(SET_PROGRESS_JSON_PATH)}`);
   console.log(`TSV: ${relativePath(SET_PROGRESS_TSV_PATH)}`);
+}
+
+async function writeCardNameLists(setCode: string | undefined) {
+  const sets = await loadSets();
+  const selector = setCode?.toLowerCase() ?? "reviewed";
+  const selectedSets =
+    selector === "all"
+      ? sets.sets
+      : ["reviewed", "checked", "geprueft", "geprüft"].includes(selector)
+        ? await getReviewedSets(sets)
+        : sets.sets.filter((set) => set.code.toLowerCase() === selector);
+
+  if (selectedSets.length === 0) {
+    throw new Error(`No sets matched "${setCode ?? "reviewed"}". Run progress first or pass a set code.`);
+  }
+
+  await mkdir(CARD_NAME_LISTS_DIR, { recursive: true });
+  const indexEntries: Array<{
+    code: string;
+    name: string;
+    releasedAt: string | null;
+    setType: string;
+    cardCount: number;
+    digital: boolean;
+    printCount: number;
+    uniqueNameCount: number;
+    filePath: string;
+  }> = [];
+
+  for (const [index, set] of selectedSets.entries()) {
+    const cards = await fetchCardsForSet(set.code);
+    const names = getUniqueCardNames(cards);
+    const outputPath = path.join(CARD_NAME_LISTS_DIR, `${set.code}-card-names.txt`);
+    await writeFile(outputPath, `${names.join("\n")}\n`, "utf8");
+    indexEntries.push({
+      code: set.code,
+      name: set.name,
+      releasedAt: set.releasedAt,
+      setType: set.setType,
+      cardCount: set.cardCount,
+      digital: set.digital,
+      printCount: cards.length,
+      uniqueNameCount: names.length,
+      filePath: relativePath(outputPath),
+    });
+
+    console.log(`[${index + 1}/${selectedSets.length}] ${set.code} ${set.name}: ${names.length} names`);
+  }
+
+  if (["all", "reviewed", "checked", "geprueft", "geprüft"].includes(selector)) {
+    await writeJson(CARD_NAME_INDEX_JSON_PATH, {
+      schemaVersion: 1,
+      generatedAt: new Date().toISOString(),
+      sourceSets: relativePath(SETS_PATH),
+      selector,
+      setCount: indexEntries.length,
+      sets: indexEntries,
+    });
+    await writeFile(CARD_NAME_INDEX_TSV_PATH, buildCardNameIndexTsv(indexEntries), "utf8");
+    console.log(`Index JSON: ${relativePath(CARD_NAME_INDEX_JSON_PATH)}`);
+    console.log(`Index TSV: ${relativePath(CARD_NAME_INDEX_TSV_PATH)}`);
+  }
+}
+
+async function getReviewedSets(sets: StoredSetList) {
+  const [ledger, worksheetProgress] = await Promise.all([loadAuditLedger(), loadWorksheetProgress()]);
+  const ledgerCounts = countLedgerEntriesByFirstSet(ledger);
+
+  return sets.sets.filter((set) => {
+    const worksheet = worksheetProgress.get(set.code);
+    return (worksheet?.reviewedOracleIds ?? 0) > 0 || (ledgerCounts.get(set.code) ?? 0) > 0;
+  });
 }
 
 async function buildSetReport(
@@ -911,6 +989,61 @@ function dedupeByOracleId(cards: ScryfallApiCard[]) {
   return uniqueCards;
 }
 
+function getUniqueCardNames(cards: ScryfallApiCard[]) {
+  const seen = new Set<string>();
+  const names: string[] = [];
+
+  for (const card of cards) {
+    if (seen.has(card.name)) {
+      continue;
+    }
+
+    seen.add(card.name);
+    names.push(card.name);
+  }
+
+  return names;
+}
+
+function buildCardNameIndexTsv(entries: Array<{
+  code: string;
+  name: string;
+  releasedAt: string | null;
+  setType: string;
+  cardCount: number;
+  digital: boolean;
+  printCount: number;
+  uniqueNameCount: number;
+  filePath: string;
+}>) {
+  const headers = [
+    "code",
+    "name",
+    "releasedAt",
+    "setType",
+    "cardCount",
+    "digital",
+    "printCount",
+    "uniqueNameCount",
+    "filePath",
+  ];
+  const rows = entries.map((entry) =>
+    [
+      entry.code,
+      entry.name,
+      entry.releasedAt ?? "",
+      entry.setType,
+      entry.cardCount,
+      entry.digital,
+      entry.printCount,
+      entry.uniqueNameCount,
+      entry.filePath,
+    ].map(formatTsvCell).join("\t"),
+  );
+
+  return `${headers.join("\t")}\n${rows.join("\n")}\n`;
+}
+
 async function loadSets() {
   try {
     return JSON.parse(await readFile(SETS_PATH, "utf8")) as StoredSetList;
@@ -989,6 +1122,7 @@ function printHelp() {
   console.log("  npm run audit:cards -- worksheet <code>  Write a TSV review worksheet for one set.");
   console.log("  npm run audit:cards -- import-worksheet <code>  Import reviewed TSV rows into the ledger.");
   console.log("  npm run audit:cards -- progress     Write done/in-progress/pending status for every set.");
+  console.log("  npm run audit:cards -- names <code|reviewed|all>  Write card-name-only lists per set.");
 }
 
 main().catch((error) => {

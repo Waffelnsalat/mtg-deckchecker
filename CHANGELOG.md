@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.6 - 2026-06-21
+
+### Neu
+
+- Neuer Audit-Befehl `npm run audit:cards -- names reviewed` erzeugt reine Kartennamenlisten fuer gepruefte Editionen.
+- Neue Dateien `data/card-name-lists/lea-card-names.txt`, `data/card-name-lists-index.json` und `data/card-name-lists-index.tsv` dokumentieren die aktuell gepruefte Alpha-Liste.
+
+### Validierung
+
+- `npm run audit:cards -- names reviewed`
+- `npm run check`
+
 ## 0.4.5 - 2026-06-21
 
 ### Neu
