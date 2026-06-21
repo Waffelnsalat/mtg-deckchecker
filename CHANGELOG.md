@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.3 - 2026-06-21
+
+### Neu
+
+- Alpha-Audit-Batch 1 erkennt alte Wording-Muster fuer Land Denial, Mana Denial, Damage Prevention, Extra Turns und wiederholten Tischschaden.
+- `data/card-role-audit.json` enthaelt jetzt die ersten 23 geprueften Alpha-Karten.
+- Neue Website-Pruefdateien unter `data/card-role-verification/` liefern eine Deckliste und erwartete Rollen fuer manuelle UI-Kontrolle.
+
+### Validierung
+
+- `npm run audit:cards -- worksheet lea`
+- `npm run check`
+
 ## 0.4.2 - 2026-06-21
 
 ### Neu

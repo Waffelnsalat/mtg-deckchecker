@@ -772,9 +772,105 @@ test("inferAdvancedRoleProfile recognizes fog and damage-prevention effects", ()
       "Creatures deal no combat damage to players.",
     ),
   );
+  const circleProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Circle Style",
+      "Enchantment",
+      2,
+      "{1}: The next time a blue source of your choice would deal damage to you this turn, prevent that damage.",
+    ),
+  );
+  const healerProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Healer Style",
+      "Creature - Human Cleric",
+      2,
+      "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+    ),
+  );
+  const conservatorProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Conservator",
+      "Artifact",
+      4,
+      "{3}, {T}: Prevent the next 2 damage that would be dealt to you this turn.",
+    ),
+  );
+  const monolithProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Jade Monolith",
+      "Artifact",
+      4,
+      "{1}: The next time a source of your choice would deal damage to target creature this turn, that source deals that damage to you instead.",
+    ),
+  );
 
   assert.ok(getRoleWeight(fogProfile, "broad_protection") > 0);
   assert.ok(getRoleWeight(noDamageProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(circleProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(healerProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(conservatorProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(monolithProfile, "targeted_protection") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Alpha-era land denial and mana denial", () => {
+  const armageddonProfile = inferAdvancedRoleProfile(
+    createCard("Armageddon", "Sorcery", 4, "Destroy all lands."),
+  );
+  const stoneRainProfile = inferAdvancedRoleProfile(
+    createCard("Stone Rain", "Sorcery", 3, "Destroy target land."),
+  );
+  const manaShortProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Mana Short",
+      "Instant",
+      3,
+      "Tap all lands target player controls and that player loses all unspent mana.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(armageddonProfile, "mass_land_denial") > 0);
+  assert.ok(getRoleWeight(armageddonProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(stoneRainProfile, "targeted_land_removal") > 0);
+  assert.ok(getRoleWeight(stoneRainProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(manaShortProfile, "mana_denial") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Alpha-era extra turns and table damage", () => {
+  const timeWalkProfile = inferAdvancedRoleProfile(
+    createCard("Time Walk", "Sorcery", 2, "Take an extra turn after this one."),
+  );
+  const manabarbsProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Manabarbs",
+      "Enchantment",
+      4,
+      "Whenever a player taps a land for mana, this enchantment deals 1 damage to that player.",
+    ),
+  );
+  const karmaProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Karma",
+      "Enchantment",
+      4,
+      "At the beginning of each player's upkeep, this enchantment deals damage to that player equal to the number of Swamps they control.",
+    ),
+  );
+  const venomProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Psychic Venom",
+      "Enchantment - Aura",
+      2,
+      "Enchant land. Whenever enchanted land becomes tapped, this Aura deals 2 damage to that land's controller.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(timeWalkProfile, "extra_turn") > 0);
+  assert.ok(getRoleWeight(timeWalkProfile, "finisher") > 0);
+  assert.ok(getRoleWeight(manabarbsProfile, "group_slug") > 0);
+  assert.ok(getRoleWeight(manabarbsProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(karmaProfile, "group_slug") > 0);
+  assert.ok(getRoleWeight(venomProfile, "damage_engine") > 0);
 });
 
 test("inferAdvancedRoleProfile recognizes broader theft and borrowed-resource effects", () => {

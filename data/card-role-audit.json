@@ -70,5 +70,468 @@
       "extra_combat"
     ]
   },
-  "cards": []
+  "cards": [
+    {
+      "oracleId": "63c1eda1-3e6f-4e9c-adf3-a43164df98bb",
+      "name": "Ankh of Mishra",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "c9ed8b01-959a-47d6-891e-0abbdccf6e4f",
+      "name": "Armageddon",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "d7572f17-f85d-45c0-ac64-43aac760eafe",
+      "name": "Circle of Protection: Blue",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "1940e56d-0972-4ca4-946c-bbd42dde1dcb",
+      "name": "Conservator",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "16d1023b-2162-4010-8bf4-218dbe7c99a0",
+      "name": "Copper Tablet",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "1973f1e9-aa14-49dc-bafe-be17b30ba288",
+      "name": "Dingus Egg",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "0669172d-396b-4f5a-9703-129c5c849b55",
+      "name": "Drain Power",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "caf3c6ec-d17e-497c-8fe7-6f818ce93f96",
+      "name": "Dwarven Demolition Team",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "c281f436-8c77-48f7-b31c-d40cd7f9ed6a",
+      "name": "Flashfires",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "a0b97e33-2d0c-4800-a9f5-9cd9be651ea8",
+      "name": "Ice Storm",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "1e105ab7-fb10-4cfd-ac2f-5e11488cf1b0",
+      "name": "Jade Monolith",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "fac4da47-f0b2-4b57-9703-e0ed100d3499",
+      "name": "Karma",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "51ca5965-ae39-4e51-8948-9a230a03f906",
+      "name": "Kudzu",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "48207d1c-448a-4e1b-974a-642dfea75933",
+      "name": "Mana Short",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "0f1afedd-c60f-454f-b84a-c8117aec0128",
+      "name": "Manabarbs",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "a60422e8-f2f4-4c37-a0f4-eedad27eb08c",
+      "name": "Psychic Venom",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "95a0ca48-d924-47f4-86ed-42c673ee778c",
+      "name": "Samite Healer",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "5a46ad2a-35b1-4dd5-b7c3-fec36b7c67ab",
+      "name": "Sinkhole",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+      "name": "Stone Rain",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "d0209d3f-3f7e-4fd5-bce5-10bce6f29c86",
+      "name": "Time Walk",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "extra_turn",
+        "finisher"
+      ],
+      "actualRoles": [
+        "extra_turn",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "ef2b1565-7b02-4cab-9031-beb1701ee929",
+      "name": "Tsunami",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "80559618-9dd9-4987-b3bc-1a1b5537bbc5",
+      "name": "Tunnel",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "d29078c0-1fb8-437a-81d1-bb319f646941",
+      "name": "Veteran Bodyguard",
+      "firstSet": "lea",
+      "releasedAt": "1993-08-05",
+      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Alpha role audit batch 1."
+    }
+  ]
 }
