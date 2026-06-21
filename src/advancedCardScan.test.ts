@@ -1466,6 +1466,94 @@ test("inferAdvancedRoleProfile recognizes political control-exchange cards", () 
   assert.ok(getRoleWeight(shiftingGriftProfile, "donation_support") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Antiquities utility and hate wording", () => {
+  const powerArtifactProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Power Artifact",
+      "Enchantment - Aura",
+      2,
+      "Enchant artifact. Enchanted artifact's activated abilities cost {2} less to activate. This effect can't reduce the mana in that cost to less than one mana.",
+    ),
+  );
+  const hauntingWindProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Haunting Wind",
+      "Enchantment",
+      4,
+      "Whenever an artifact becomes tapped or a player activates an artifact's ability without {T} in its activation cost, Haunting Wind deals 1 damage to that artifact's controller.",
+    ),
+  );
+  const cursedRackProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Cursed Rack",
+      "Artifact",
+      4,
+      "As Cursed Rack enters, choose an opponent. The chosen player's maximum hand size is four.",
+    ),
+  );
+  const golgothianSylexProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Golgothian Sylex",
+      "Artifact",
+      4,
+      "{1}, {T}: Each nontoken permanent originally printed in the Antiquities expansion is sacrificed by its controller.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(powerArtifactProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(powerArtifactProfile, "ramp") > 0);
+  assert.ok(getRoleWeight(hauntingWindProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(hauntingWindProfile, "artifact_hate") > 0);
+  assert.ok(getRoleWeight(cursedRackProfile, "hand_size") > 0);
+  assert.ok(getRoleWeight(cursedRackProfile, "hand_denial") > 0);
+  assert.ok(getRoleWeight(golgothianSylexProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(golgothianSylexProfile, "hate_piece") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Antiquities recursion and rescue wording", () => {
+  const battleGearProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Ashnod's Battle Gear",
+      "Artifact",
+      2,
+      "You may choose not to untap Ashnod's Battle Gear during your untap step. {2}, {T}: Target creature you control gets +2/-2 for as long as Ashnod's Battle Gear remains tapped.",
+    ),
+  );
+  const feldonsCaneProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Feldon's Cane",
+      "Artifact",
+      1,
+      "{T}, Exile Feldon's Cane: Shuffle your graveyard into your library.",
+    ),
+  );
+  const obeliskProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Obelisk of Undoing",
+      "Artifact",
+      1,
+      "{6}, {T}: Return target permanent you both own and control to your hand.",
+    ),
+  );
+  const drafnasRestorationProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Drafna's Restoration",
+      "Sorcery",
+      1,
+      "Put any number of target artifact cards from target player's graveyard on top of their library in any order.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(battleGearProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(feldonsCaneProfile, "library_recursion") > 0);
+  assert.ok(getRoleWeight(obeliskProfile, "self_bounce") > 0);
+  assert.ok(getRoleWeight(obeliskProfile, "rescue_protection") > 0);
+  assert.ok(getRoleWeight(drafnasRestorationProfile, "library_recursion") > 0);
+  assert.ok(getRoleWeight(drafnasRestorationProfile, "topdeck_control") > 0);
+  assert.equal(getRoleWeight(drafnasRestorationProfile, "tempo_removal"), 0);
+  assert.equal(getRoleWeight(drafnasRestorationProfile, "targeted_removal"), 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

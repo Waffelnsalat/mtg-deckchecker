@@ -1,5 +1,5 @@
 window.MtgDeckcheckerFrontendConfig = {
-  appVersion: "0.4.10",
+  appVersion: "0.4.11",
   releaseNotesUrl: "https://github.com/Waffelnsalat/mtg-deckchecker/blob/main/CHANGELOG.md",
   cardBreakdown: {
     maxRoles: 5,
@@ -130,6 +130,7 @@ window.MtgDeckcheckerFrontendConfig = {
       mass_removal: "sweeper",
       tempo_removal: "tempo",
       hand_attack: "hand attack",
+      hand_denial: "hand denial",
     },
     spellInteraction: {
       hard_stack: "hard stack",
@@ -138,6 +139,8 @@ window.MtgDeckcheckerFrontendConfig = {
       broad_stack: "broad stack",
       stax_piece: "stax/hate",
       graveyard_hate: "grave hate",
+      hate_piece: "hate",
+      artifact_hate: "artifact hate",
     },
     commanderRole: {
       mana_engine: "mana",

@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.11 - 2026-06-21
+
+### Neu
+
+- Antiquities wurde als naechste Audit-Edition bearbeitet und die Website-Pruefliste fuer die kritischen Karten angelegt.
+- Der Advanced Scanner erkennt jetzt aktivierte Ability-Kostenreduktion, Artefakt-Punisher, alte `+N/-N`-Combat-Pumps, Handgroessen-Locks, Graveyard-zu-Library-Recycling, setbezogene Sacrifice-Sweeper und Self-Bounce nach altem Antiquities-Wording.
+- `Drafna's Restoration` wird nicht mehr als Tempo Removal fehlklassifiziert, sondern als Library Recursion/Topdeck Control vorbereitet.
+- Neue Detail-Labels machen `hand_denial`, `hate_piece` und `artifact_hate` in der Website lesbarer.
+
+### Validierung
+
+- Blockiert: `npm test -- --test-name-pattern "Antiquities|Arabian Nights"` und `npm run check` konnten wegen Sandbox-/Usage-Limit nicht ausgefuehrt werden.
+
 ## 0.4.10 - 2026-06-21
 
 ### Neu
