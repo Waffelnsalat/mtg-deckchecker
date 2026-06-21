@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.4.10 - 2026-06-21
+
+### Neu
+
+- Arabian Nights wurde im Card-Role-Audit vollstaendig geprueft und als `covered` importiert.
+- Der Analyzer erkennt jetzt alte Arabian-Nights-Wording-Muster wie `damage_reflection`, `subgame`, `landwalk_support`, `desert_hate`, `land_protection` und `life_total_protection`.
+- `Oubliette` wird jetzt als Removal/Tempo-Removal erkannt und nicht mehr als Protection-Karte zusammengefuehrt.
+- `Ali from Cairo` wird als Life-Total-Schutz erkannt und nicht mehr als Lifegain.
+- Neue Website-Pruefdateien fuer Arabian Nights dokumentieren die wichtigsten erwarteten Tags.
+- Antiquities wurde als naechste Arbeitsedition vorbereitet, inklusive Worksheet und Kartennamenliste.
+
+### Validierung
+
+- `npm test -- --test-name-pattern Arabian Nights|Oubliette`
+- `npm run audit:cards -- worksheet arn`
+- `npm run audit:cards -- import-worksheet arn`
+- `npm run audit:cards -- progress`
+- `npm run audit:cards -- names reviewed`
+- `npm run audit:cards -- worksheet atq`
+- `npm run check`
+
 ## 0.4.9 - 2026-06-21
 
 ### Neu

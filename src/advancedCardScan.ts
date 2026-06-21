@@ -443,9 +443,14 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bdestroy target (?:nonbasic |basic )?(?:land|plains|island|swamp|mountain|forest)\b/.test(text) ||
     /\benchanted land\b[^.]{0,160}\bdestroy it\b/.test(text);
   const targetedWallRemoval = /\bdestroy target wall\b/.test(text);
+  const targetedKindredRemoval = /\bdestroy target (?:djinn|efreet)\b/.test(text);
+  const targetedAuraRemoval = /\bdestroy target aura attached to\b/.test(text);
   const shrinkingAura = /\benchanted creature\b[^.]{0,80}\bgets? -\d+\/-\d+\b/.test(text);
+  const powerResetRemoval =
+    /\btarget (?:(?:attacking )?creature(?: other than this creature)?|creature with flying)\b[^.]{0,120}\bhas base power (?:and toughness )?0(?:\/\d+)?\b/.test(text);
   const combatTriggeredRemoval =
     /\bwhenever this creature blocks or becomes blocked\b[^.]{0,180}\bdestroy that creature\b/.test(text);
+  const phaseOutRemoval = /\btarget creature phases out until\b[^.]{0,120}\bleaves the battlefield\b/.test(text);
   const lockdownAura =
     /\benchanted creature doesn't untap during its controller'?s untap step\b/.test(text) ||
     /\bwhen this aura enters\b[^.]{0,120}\btap enchanted creature\b/.test(text);
@@ -459,6 +464,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
   const chosenRemoval =
     /\b(?:choose|chooses)\b[^.]{0,160}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b/.test(text) &&
     /\b(?:destroy|exile)\b[^.]{0,80}\b(?:the chosen|those|them|it)\b/.test(text);
+  const leastPowerRemoval = /\bdestroy the creature with the least power\b/.test(text);
   const auraNeutralization =
     /\benchant (?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent)\b/.test(text) &&
     (
@@ -481,8 +487,13 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     auraNeutralization ||
     targetedLandRemoval ||
     targetedWallRemoval ||
+    targetedKindredRemoval ||
+    targetedAuraRemoval ||
     shrinkingAura ||
+    powerResetRemoval ||
     combatTriggeredRemoval ||
+    phaseOutRemoval ||
+    leastPowerRemoval ||
     /\bdestroy each permanent chosen this way\b/.test(text);
   const targetedDamageRemoval =
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
@@ -501,6 +512,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\ball creatures get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
     /\bcreatures your opponents control get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
     /\bcreatures your opponents control have base power and toughness 0\/1\b/.test(text) ||
+    /\b(?:deals? (?:x|\d+) damage|deals? damage equal to [^.]{0,80}) to each (?:attacking )?creature\b/.test(text) ||
     massLandDenial;
   const tempoRemoval =
     /\breturn\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent)\b[^.]{0,120}\bto (?:its|their) owner's hand\b/.test(text) ||
@@ -508,6 +520,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\breturn\b[^.]{0,80}\b(?:one|two|three|four|five|six|\d+|up to \d+|up to [a-z]+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?)\b[^.]{0,120}\bto (?:their|its) owners'? hands?\b/.test(text) ||
     /\b(?:put|puts)\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent)\b[^.]{0,120}\blibrary\b/.test(text) ||
     /\btap (?:up to )?(?:(?:one|two|three|four|five|six|\d+)\s+)?target\b[^.]{0,120}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?|lands?)\b/.test(text) ||
+    phaseOutRemoval ||
     /\btarget spell, nonland permanent, or card in a graveyard\b[^.]{0,160}\btop or bottom of (?:their|its) library\b/.test(text);
   const temporaryTheft =
     exchangeControl ||
@@ -537,7 +550,15 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     addRole(
       profile,
       "targeted_removal",
-      chosenRemoval ? 0.94 : edictRemoval ? 0.78 : auraNeutralization ? 0.72 : targetedDamageRemoval ? 0.68 : 0.82,
+      chosenRemoval
+        ? 0.94
+        : edictRemoval
+          ? 0.78
+          : auraNeutralization || phaseOutRemoval
+            ? 0.72
+            : targetedDamageRemoval
+              ? 0.68
+              : 0.82,
       "Advanced scan recognized targeted or chosen removal.",
     );
   }
@@ -653,14 +674,16 @@ function detectAdvancedProtectionRoles(
     /\bprevent the next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to you\b/.test(text);
   const playerProtection =
     /\byou (?:gain|have) protection from everything\b/.test(text) ||
-    /\byou (?:gain|have) hexproof\b/.test(text);
+    /\byou (?:gain|have) hexproof\b/.test(text) ||
+    /\bdamage that would reduce your life total to less than 1 reduces it to 1 instead\b/.test(text);
   const regenerationProtection =
     /\bregenerate (?:this creature|enchanted creature|target creature|that creature)\b/.test(text);
   const targetedProtection =
     /\btarget\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,120}\b(?:gains?|gain)\b[^.]{0,120}\b(?:hexproof|indestructible|ward|protection from)\b/.test(text) ||
-    /\btarget\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,120}\bphases out\b/.test(text) ||
+    /\btarget\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,80}\byou control\b[^.]{0,80}\bphases out\b/.test(text) ||
     /\bregenerate target\b/.test(text) ||
     regenerationProtection ||
+    /\bthe next time target land would be destroyed this turn\b/.test(text) ||
     /\bprevent the next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to (?:any target|target (?:creature|permanent|artifact|enchantment|planeswalker|player)|that (?:permanent|creature|player))\b/.test(text) ||
     /\bthe next time\b[^.]{0,100}\bsource of your choice would deal damage to target creature\b[^.]{0,120}\bdeals that damage to you instead\b/.test(text);
   const selfBounce =
@@ -674,7 +697,8 @@ function detectAdvancedProtectionRoles(
       /\bequipped creature\b[^.]{0,120}\bphases out\b/.test(text));
   const selfProtection =
     /\b(?:this creature|this artifact|this enchantment|this permanent|this planeswalker)\b[^.]{0,120}\b(?:has|gains)\b[^.]{0,120}\b(?:hexproof|shroud|ward|indestructible|protection from)\b/.test(text) ||
-    /\b(?:hexproof|shroud|ward \d+|ward—|ward \{|indestructible)\b/.test(text);
+    /\b(?:hexproof|shroud|ward \d+|ward—|ward \{|indestructible)\b/.test(text) ||
+    (/\bprotection from [a-z]+\b/.test(text) && !/\b(?:enchanted|target) creature\b/.test(text));
 
   if (broadProtection) {
     addRole(profile, "protection", repeatable ? 0.96 : 0.88, "Advanced scan recognized broad board protection.");
@@ -684,6 +708,9 @@ function detectAdvancedProtectionRoles(
   if (playerProtection) {
     addRole(profile, "protection", 0.66, "Advanced scan recognized player protection.");
     addRole(profile, "broad_protection", 0.68, "Advanced scan recognized player protection.");
+    if (/\blife total\b/.test(text)) {
+      addRole(profile, "life_total_protection", 0.44, "Advanced scan recognized life-total protection.");
+    }
   }
 
   if (targetedProtection) {
@@ -943,10 +970,42 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "land_denial", 0.34, "Advanced scan recognized land type changes as possible mana disruption.");
   }
 
-  if (/\byou may tap or untap target artifact, creature, or land\b/.test(text)) {
+  if (
+    /\byou may tap or untap target artifact, creature, or land\b/.test(text) ||
+    /\buntap target (?:artifact|creature|land|permanent)\b/.test(text)
+  ) {
     addRole(profile, "tap_untap", 0.48, "Advanced scan recognized tap-or-untap utility.");
     addRole(profile, "tempo_support", 0.44, "Advanced scan recognized tap-or-untap tempo utility.");
-    addRole(profile, "ramp", 0.28, "Advanced scan recognized untapping lands as possible mana utility.");
+    if (/\b(?:land|artifact, creature, or land)\b/.test(text)) {
+      addRole(profile, "ramp", 0.28, "Advanced scan recognized untapping lands as possible mana utility.");
+    }
+  }
+
+  if (/\bplayers play a magic subgame\b/.test(text)) {
+    addRole(profile, "subgame", 0.36, "Advanced scan recognized subgame text.");
+    addRole(profile, "alternate_play", 0.3, "Advanced scan recognized alternate-gameplay text.");
+    addRole(profile, "life_pressure", 0.22, "Advanced scan recognized subgame life-loss pressure.");
+  }
+
+  if (
+    /\bsource of your choice would deal damage to you\b[^.]{0,180}\bdeals that much damage to that source'?s controller\b/.test(text)
+  ) {
+    addRole(profile, "damage_reflection", 0.5, "Advanced scan recognized damage-reflection text.");
+    addRole(profile, "damage_engine", 0.36, "Advanced scan recognized reflected damage pressure.");
+  }
+
+  if (/\b(?:islandwalk|swampwalk|plainswalk|mountainwalk|forestwalk|desertwalk|landwalk)\b/.test(text)) {
+    addRole(profile, "landwalk_support", 0.38, "Advanced scan recognized landwalk or landwalk-granting text.");
+    addRole(profile, "combat_support", 0.28, "Advanced scan recognized landwalk as combat evasion.");
+  }
+
+  if (/\bprevent all damage deserts would deal\b/.test(text)) {
+    addRole(profile, "desert_hate", 0.26, "Advanced scan recognized Desert-specific prevention text.");
+    addRole(profile, "self_protection", 0.18, "Advanced scan recognized narrow self-protection.");
+  }
+
+  if (/\bthe next time target land would be destroyed this turn\b/.test(text)) {
+    addRole(profile, "land_protection", 0.46, "Advanced scan recognized land-protection text.");
   }
 
   if (
@@ -1053,7 +1112,7 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "token_support", permanent ? 0.68 : 0.58, "Advanced scan recognized token support.");
   }
 
-  if (/\bgain(?:s)?\b[^.]{0,40}\blife\b|\bwhenever you gain life\b|\blife total\b|\blifelink\b/.test(text)) {
+  if (/\bgain(?:s)?\b[^.]{0,40}\blife\b|\bwhenever you gain life\b|\blifelink\b/.test(text)) {
     addRole(profile, "lifegain", permanent ? 0.58 : 0.46, "Advanced scan recognized lifegain support.");
   }
 
@@ -1077,7 +1136,8 @@ function detectAdvancedPurposeRoles(
     /\bwhenever a player taps a land for mana\b[^.]{0,160}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever enchanted (?:land|artifact) becomes tapped\b[^.]{0,160}\bdeals? \d+ damage to that (?:land|artifact)'?s controller\b/.test(text) ||
     /\bwhenever a land enters\b[^.]{0,160}\bdeals? \d+ damage to that land'?s controller\b/.test(text) ||
-    /\bwhenever a land is put into a graveyard\b[^.]{0,180}\bdeals? \d+ damage to that land'?s controller\b/.test(text)
+    /\bwhenever a land is put into a graveyard\b[^.]{0,180}\bdeals? \d+ damage to that land'?s controller\b/.test(text) ||
+    /\b(?:deals? (?:x|\d+) damage|deals? damage equal to [^.]{0,80}) to each creature\b[^.]{0,80}\band each player\b/.test(text)
   ) {
     addRole(profile, "group_slug", 0.62, "Advanced scan recognized repeatable table damage.");
     addRole(profile, "damage_engine", 0.56, "Advanced scan recognized repeatable damage pressure.");
@@ -1123,7 +1183,7 @@ function detectAdvancedPurposeRoles(
     /\bplayers can't search libraries\b|\bopponents can't search libraries\b|\byour opponents can'?t search\b|\bcan'?t cast\b|\bskip\b|\bspells cost\b[^.]{0,80}\bmore\b|\btarget enchantment\b[^.]{0,160}\bdamage\b|\bgain control of target artifact\b/.test(
       text,
     ) ||
-    /\bcreatures with power \d+ or greater don't untap during their controllers'? untap steps\b/.test(text) ||
+    /\b(?:blue creatures|creatures with power \d+ or greater) don't untap during (?:their|their controllers'?) untap steps\b/.test(text) ||
     /\bspells you control can'?t be countered\b/.test(text) ||
     /\btarget player puts all the cards from their graveyard on the bottom of their library\b/.test(text)
   ) {

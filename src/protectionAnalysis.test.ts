@@ -208,6 +208,25 @@ test("analyzeDeckProtection catches equipment that grants phasing protection", (
   assert.ok(robe?.hits.some((hit) => hit.tag === "equipment_protection"));
 });
 
+test("analyzeDeckProtection does not treat Oubliette-style phasing removal as protection", () => {
+  const analysis = analyzeDeckProtection(
+    createDocument([
+      createResolvedCard("commander", 1, "Test Commander", "Legendary Creature - Human", 3),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Oubliette Style",
+        "Enchantment",
+        3,
+        "When this enchantment enters, target creature phases out until this enchantment leaves the battlefield. Tap that creature as it phases in this way.",
+      ),
+      createResolvedCard("mainboard", 98, "Filler Spell", "Creature - Human", 2, ""),
+    ]),
+  );
+
+  assert.ok(!analysis.taggedCards.some((card) => card.name === "Oubliette Style"));
+});
+
 test("analyzeDeckProtection treats Brago and Eldrazi Displacer as flicker protection", () => {
   const analysis = analyzeDeckProtection(
     createDocument([

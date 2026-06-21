@@ -936,7 +936,9 @@ function hasTargetedPhasing(text: string) {
     (sentence) =>
       /\b(?:another |up to one |any )?target\b[^.]{0,120}\b(?:creature|permanent|artifact|enchantment|planeswalker|commander)\b[^.]{0,140}\b(?:phase out|phases out)\b/.test(
         sentence,
-      ) && !/\btarget opponent\b/.test(sentence),
+      ) &&
+      !/\btarget opponent\b/.test(sentence) &&
+      !/\buntil\b[^.]{0,120}\bleaves the battlefield\b/.test(sentence),
   );
 }
 

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-21T12:42:14.547Z",
+  "generatedAt": "2026-06-21T13:09:55.173Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 2,
+    "done": 3,
     "inProgress": 0,
-    "pending": 1041
+    "pending": 1040
   },
   "sets": [
     {
@@ -84,11 +84,12 @@
       "setType": "expansion",
       "cardCount": 92,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 78,
+      "totalUniqueOracleIds": 78,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/arn-role-review.tsv"
     },
     {
       "code": "atq",
@@ -99,9 +100,10 @@
       "digital": false,
       "auditStatus": "pending",
       "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "totalUniqueOracleIds": 85,
+      "openOracleIds": 85,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/atq-role-review.tsv"
     },
     {
       "code": "3ed",

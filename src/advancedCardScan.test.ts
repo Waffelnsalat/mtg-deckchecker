@@ -988,6 +988,124 @@ test("inferAdvancedRoleProfile recognizes Alpha-era lands, animation, regenerati
   assert.ok(getRoleWeight(bearProfile, "combat_body") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Arabian Nights oddities", () => {
+  const eyeProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Eye for an Eye",
+      "Instant",
+      2,
+      "The next time a source of your choice would deal damage to you this turn, instead that source deals that much damage to you and Eye for an Eye deals that much damage to that source's controller.",
+    ),
+  );
+  const shahrazadProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Shahrazad",
+      "Sorcery",
+      2,
+      "Players play a Magic subgame, using their libraries as their decks. Each player who doesn't win the subgame loses half their life, rounded up.",
+    ),
+  );
+  const mountainProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Magnetic Mountain",
+      "Enchantment",
+      3,
+      "Blue creatures don't untap during their controllers' untap steps. At the beginning of each player's upkeep, that player may choose any number of tapped blue creatures they control and pay {4} for each creature chosen this way. If the player does, untap those creatures.",
+    ),
+  );
+  const sandstormProfile = inferAdvancedRoleProfile(
+    createCard("Sandstorm", "Instant", 1, "Sandstorm deals 1 damage to each attacking creature."),
+  );
+  const saddlebagsProfile = inferAdvancedRoleProfile(
+    createCard("Jandor's Saddlebags", "Artifact", 3, "{3}, {T}: Untap target creature."),
+  );
+  const pyramidsProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Pyramids",
+      "Artifact",
+      6,
+      "{2}: Choose one — • Destroy target Aura attached to a land. • The next time target land would be destroyed this turn, remove all damage marked on it instead.",
+    ),
+  );
+  const dropProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Drop of Honey",
+      "Enchantment",
+      1,
+      "At the beginning of your upkeep, destroy the creature with the least power. It can't be regenerated. If two or more creatures are tied for least power, you choose one of them. When there are no creatures on the battlefield, sacrifice this enchantment.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(eyeProfile, "damage_reflection") > 0);
+  assert.ok(getRoleWeight(shahrazadProfile, "subgame") > 0);
+  assert.ok(getRoleWeight(mountainProfile, "hate_piece") > 0);
+  assert.ok(getRoleWeight(sandstormProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(saddlebagsProfile, "tap_untap") > 0);
+  assert.equal(getRoleWeight(saddlebagsProfile, "ramp"), 0);
+  assert.ok(getRoleWeight(pyramidsProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(pyramidsProfile, "land_protection") > 0);
+  assert.ok(getRoleWeight(dropProfile, "targeted_removal") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Arabian Nights combat and protection details", () => {
+  const kingProfile = inferAdvancedRoleProfile(
+    createCard("King Suleiman", "Creature - Human Noble", 2, "{T}: Destroy target Djinn or Efreet."),
+  );
+  const blacksmithProfile = inferAdvancedRoleProfile(
+    createCard("Repentant Blacksmith", "Creature - Human", 2, "Protection from red"),
+  );
+  const wardProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Red Ward",
+      "Enchantment - Aura",
+      1,
+      "Enchant creature. Enchanted creature has protection from red. This effect doesn't remove this Aura.",
+    ),
+  );
+  const fishliverProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Fishliver Oil",
+      "Enchantment - Aura",
+      2,
+      "Enchant creature. Enchanted creature has islandwalk.",
+    ),
+  );
+  const queenProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Sorceress Queen",
+      "Creature - Human Wizard",
+      3,
+      "{T}: Target creature other than this creature has base power and toughness 0/2 until end of turn.",
+    ),
+  );
+  const oublietteProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Oubliette",
+      "Enchantment",
+      3,
+      "When this enchantment enters, target creature phases out until this enchantment leaves the battlefield. Tap that creature as it phases in this way.",
+    ),
+  );
+  const aliProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Ali from Cairo",
+      "Creature - Human",
+      4,
+      "Damage that would reduce your life total to less than 1 reduces it to 1 instead.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(kingProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(blacksmithProfile, "self_protection") > 0);
+  assert.equal(getRoleWeight(wardProfile, "self_protection"), 0);
+  assert.ok(getRoleWeight(fishliverProfile, "landwalk_support") > 0);
+  assert.ok(getRoleWeight(queenProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(oublietteProfile, "tempo_removal") > 0);
+  assert.equal(getRoleWeight(oublietteProfile, "targeted_protection"), 0);
+  assert.ok(getRoleWeight(aliProfile, "life_total_protection") > 0);
+  assert.equal(getRoleWeight(aliProfile, "lifegain"), 0);
+});
+
 test("inferAdvancedRoleProfile recognizes broader theft and borrowed-resource effects", () => {
   const permanentTheftProfile = inferAdvancedRoleProfile(
     createCard(

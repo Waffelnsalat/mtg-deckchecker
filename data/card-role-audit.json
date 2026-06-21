@@ -2969,27 +2969,6 @@
       "needsCodeChange": false
     },
     {
-      "oracleId": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
-      "name": "Mountain",
-      "firstSet": "leb",
-      "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
-      "expectedRoles": [
-        "basic_land",
-        "land_base",
-        "land_slot",
-        "mana_source"
-      ],
-      "actualRoles": [
-        "basic_land",
-        "land_base",
-        "land_slot",
-        "mana_source"
-      ],
-      "status": "covered",
-      "needsCodeChange": false
-    },
-    {
       "oracleId": "376ee366-e082-402f-b4db-6592fcfcacd2",
       "name": "Mox Emerald",
       "firstSet": "leb",
@@ -5310,6 +5289,1584 @@
       ],
       "status": "covered",
       "needsCodeChange": false
+    },
+    {
+      "oracleId": "a2404d88-0621-49ae-9908-052c23a96ac6",
+      "name": "Abu Ja'far",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "9a410f83-ed92-4b55-834a-c7cec8f5d1e2",
+      "name": "Aladdin",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "donation_support",
+        "hate_piece",
+        "removal",
+        "stax_piece",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "donation_support",
+        "hate_piece",
+        "removal",
+        "stax_piece",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "2aa2f96b-5784-4767-b9ea-b8d9222cb1de",
+      "name": "Aladdin's Lamp",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "7810915f-df4d-445a-8ba8-fe6ed3abf1ae",
+      "name": "Aladdin's Ring",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "ef3fdfea-330d-4948-94ec-67e344b48086",
+      "name": "Ali Baba",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "6517edb3-30e2-40ba-b6e4-4554b4bbb342",
+      "name": "Ali from Cairo",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_body",
+        "life_total_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "life_total_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "3483946d-8645-4c22-b0ba-a65a44456324",
+      "name": "Army of Allah",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "54022a10-c9f0-458d-a0ed-228843cd9a40",
+      "name": "Bazaar of Baghdad",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "land_base",
+        "land_slot",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "land_base",
+        "land_slot",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "bddd6b93-7c69-427a-97ee-0c1f9f950f09",
+      "name": "Bird Maiden",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "f32d19d6-8ac1-4744-b2c2-5c9d4cd0da70",
+      "name": "Bottle of Suleiman",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "coin_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "coin_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "64f56228-7874-4465-ba58-1049083ea02f",
+      "name": "Brass Man",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "d33b3591-c01f-4ac4-8626-7cbfdabaf90d",
+      "name": "Camel",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "desert_hate",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "desert_hate",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "a83f25e3-4d84-4c9b-ab12-19b8d326e459",
+      "name": "City in a Bottle",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "hate_piece",
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "f25351e3-539b-4bbc-b92d-6480acf4d722",
+      "name": "City of Brass",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "638eeb16-9e0e-4cc6-b97e-8ff0df81ca58",
+      "name": "Cuombajj Witches",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "fc9e82b2-f148-431b-9312-97b7101cffe4",
+      "name": "Cyclone",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "counter_support",
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "82b13601-d460-45c5-94a1-07e146d463a9",
+      "name": "Dancing Scimitar",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "88929373-b2c8-4a81-a809-fed87fd5b0d7",
+      "name": "Dandân",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "195107ad-879d-4b02-a44a-a3ba70fedf88",
+      "name": "Desert",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "3247fca3-7458-47ee-875b-c55f2a3e2962",
+      "name": "Desert Nomads",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "6f880348-6dc8-4cf8-9313-9893c41a70a3",
+      "name": "Desert Twister",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "84cef34a-c3e1-4059-b4cd-c481938a53a5",
+      "name": "Diamond Valley",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "383e9005-5869-4d1d-917d-30e5f214fbd9",
+      "name": "Drop of Honey",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "4eb67ba3-35e3-47c3-820f-62814cf202a7",
+      "name": "Ebony Horse",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "f92c9a5d-853f-4157-89ba-8d8c8033c533",
+      "name": "El-Hajjâj",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "8ada7388-fd8b-434c-a17a-bce19cf3e615",
+      "name": "Elephant Graveyard",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "7feba745-7d27-4225-bc9d-9b7a8692872d",
+      "name": "Erg Raiders",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "d48a38c9-3dcd-4c18-8840-1b057ede3ff0",
+      "name": "Erhnam Djinn",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "22647b1a-5a7c-41b5-b820-b2e9f49c7aad",
+      "name": "Eye for an Eye",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "damage_engine",
+        "damage_reflection"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "damage_reflection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "75457fe5-4ab6-42c4-98e5-8ed6e8bf122c",
+      "name": "Fishliver Oil",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "453524fb-2ffa-421f-883c-b77ae2850c52",
+      "name": "Flying Carpet",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "b5666c68-059d-4e32-9b04-548b3058430d",
+      "name": "Flying Men",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "d361bdd4-afb8-493d-9091-ebe22f215834",
+      "name": "Ghazbán Ogre",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "2dd50d7f-941f-4deb-a15c-ee2357844c35",
+      "name": "Giant Tortoise",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "34c3aebe-a224-426a-ae06-f3145193313e",
+      "name": "Guardian Beast",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "artifact_support",
+        "combat_body",
+        "combat_support",
+        "self_protection",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "artifact_support",
+        "combat_body",
+        "combat_support",
+        "self_protection",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "a57d4a9d-4ac5-4a68-adb9-a73754034d7c",
+      "name": "Hasran Ogress",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "d17f5afa-a884-4b99-aa9e-89ddb3d43b22",
+      "name": "Hurr Jackal",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "e503a4f2-a785-4e7a-89a7-a9b24fb98831",
+      "name": "Ifh-Bíff Efreet",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "bb217f12-532f-4833-a27a-99e290aa47d0",
+      "name": "Island Fish Jasconius",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "d427e61d-5b30-4d2a-bad2-2e7f016036ca",
+      "name": "Island of Wak-Wak",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "737db899-dcdb-48f9-8d30-cbbce3ae3434",
+      "name": "Jandor's Ring",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "3aa0e73f-ac88-47a5-9cc5-0c941a939eae",
+      "name": "Jandor's Saddlebags",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "tap_untap",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "89f5b21c-18da-4071-bc42-9cdc433734bf",
+      "name": "Jeweled Bird",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "ante_card",
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "ante_card",
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "b18b9869-8490-4875-a5bb-484c3299f2c5",
+      "name": "Jihad",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "afda663e-c5f7-4182-86f7-d95d71793717",
+      "name": "Junún Efreet",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "4e81596c-9225-43d1-bd35-798212144f2c",
+      "name": "Juzám Djinn",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "cb558dda-0c05-426d-aedc-bc07cc54db76",
+      "name": "Khabál Ghoul",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "97f548b1-6398-4dc7-b5eb-da5a3f24ddb7",
+      "name": "King Suleiman",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "fbbc3acb-c917-44ff-ac6f-9dd6ebe3f4ad",
+      "name": "Kird Ape",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "2111588d-9af5-4a33-989e-b074d83f0463",
+      "name": "Library of Alexandria",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "5c28fc22-7da6-4f15-b02b-6ff10981466c",
+      "name": "Magnetic Mountain",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "69556f6c-c05b-4902-bac7-012f0ed81b75",
+      "name": "Merchant Ship",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "7140d726-0136-43af-84b5-85005a66a186",
+      "name": "Metamorphosis",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "61bebdfa-5df0-4952-abf9-dc5e0e4f57ea",
+      "name": "Mijae Djinn",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "coin_support",
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "coin_support",
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "bccdc42f-9e55-4f8e-a29e-ef39f38add6a",
+      "name": "Moorish Cavalry",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "da7bc9d6-a0cc-407a-bed9-d677c2dd74f2",
+      "name": "Nafs Asp",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "4533ce78-0594-4195-96fb-46cbadd0db69",
+      "name": "Oasis",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "cce84cf1-5574-43b0-9d75-72e6451403a7",
+      "name": "Old Man of the Sea",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "c753e9e3-9374-4e3c-8622-94576a8c1da3",
+      "name": "Oubliette",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "removal",
+        "replacement_engine",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "replacement_engine",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "0c017406-7fc3-4701-93ec-ddb02044c12a",
+      "name": "Piety",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "da2f0d16-3cb4-492d-8535-52a31dbae95e",
+      "name": "Pyramids",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "land_protection",
+        "protection",
+        "removal",
+        "targeted_protection",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_protection",
+        "protection",
+        "removal",
+        "targeted_protection",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "a83073a2-e63d-4105-8bad-9612e411fc85",
+      "name": "Repentant Blacksmith",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "c79b9187-cbfe-43a0-bdc8-4f7e0d215607",
+      "name": "Ring of Ma'rûf",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "98116aec-2ab1-4bee-b727-9feff6274825",
+      "name": "Rukh Egg",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "ff77074f-48ef-4c01-8ede-4e9be3e483f4",
+      "name": "Sandals of Abdallah",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_support",
+        "landwalk_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "landwalk_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "7bb41690-f8ec-462a-ba29-be453eb86fca",
+      "name": "Sandstorm",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "683e7135-de54-49c8-a978-4f84628a6a91",
+      "name": "Serendib Djinn",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "dd520d83-297a-487f-b8f3-4997bbc056e0",
+      "name": "Serendib Efreet",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "fc04f621-338b-4d4c-bf57-5e5a00d990f0",
+      "name": "Shahrazad",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "alternate_play",
+        "life_pressure",
+        "subgame"
+      ],
+      "actualRoles": [
+        "alternate_play",
+        "life_pressure",
+        "subgame"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "dc81069b-b2cf-44b3-98fc-45bb24b815cb",
+      "name": "Sindbad",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "23f9bee4-ac7e-4828-82c0-576fee0d29b7",
+      "name": "Singing Tree",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "3e4cb1b2-e2cc-4925-a226-6c6f1501d9c1",
+      "name": "Sorceress Queen",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "124c8663-21f3-4cd8-a060-9d04be35c43f",
+      "name": "Stone-Throwing Devils",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "278b237e-9699-43eb-a03e-0b68eccc08b3",
+      "name": "Unstable Mutation",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_support",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "2b7c9fe0-5a23-4172-b31f-b0d85cd465f6",
+      "name": "War Elephant",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "00185f3b-2777-4417-a8e0-4691f41c0ec1",
+      "name": "Wyluli Wolf",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
+    },
+    {
+      "oracleId": "15b9b0cc-47ef-4147-aba7-a7adae41921b",
+      "name": "Ydwen Efreet",
+      "firstSet": "arn",
+      "releasedAt": "1993-12-17",
+      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "expectedRoles": [
+        "coin_support",
+        "combat_body"
+      ],
+      "actualRoles": [
+        "coin_support",
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Arabian Nights role audit."
     }
   ]
 }

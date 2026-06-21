@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-21T12:42:56.107Z",
+  "generatedAt": "2026-06-21T13:08:29.136Z",
   "sourceSets": "data/scryfall-sets.json",
   "selector": "reviewed",
-  "setCount": 2,
+  "setCount": 3,
   "sets": [
     {
       "code": "lea",
@@ -26,6 +26,17 @@
       "printCount": 302,
       "uniqueNameCount": 292,
       "filePath": "data/card-name-lists/leb-card-names.txt"
+    },
+    {
+      "code": "arn",
+      "name": "Arabian Nights",
+      "releasedAt": "1993-12-17",
+      "setType": "expansion",
+      "cardCount": 92,
+      "digital": false,
+      "printCount": 78,
+      "uniqueNameCount": 78,
+      "filePath": "data/card-name-lists/arn-card-names.txt"
     }
   ]
 }
