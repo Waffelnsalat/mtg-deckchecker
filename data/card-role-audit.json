@@ -72,11 +72,94 @@
   },
   "cards": [
     {
+      "oracleId": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "name": "Air Elemental",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "550c74d4-1fcb-406a-b02a-639a760a4380",
+      "name": "Ancestral Recall",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_draw"
+      ],
+      "actualRoles": [
+        "card_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2dd7a4dc-902a-4e85-8a3b-c96a898fba86",
+      "name": "Animate Artifact",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c0d8fef4-65f4-4769-982d-b397d2b7e977",
+      "name": "Animate Dead",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c7a6a165-b709-46e0-ae42-6f69a17c0621",
+      "name": "Animate Wall",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
       "oracleId": "63c1eda1-3e6f-4e9c-adf3-a43164df98bb",
       "name": "Ankh of Mishra",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "damage_engine",
         "group_slug"
@@ -92,9 +175,9 @@
     {
       "oracleId": "c9ed8b01-959a-47d6-891e-0abbdccf6e4f",
       "name": "Armageddon",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -114,13 +197,487 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "77b7277d-90a1-4774-a998-8c35c3f94e4a",
+      "name": "Aspect of Wolf",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fc5d3341-cbce-49e5-93cc-8add92479dca",
+      "name": "Bad Moon",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "13ff3222-91cb-4796-a34e-899ed817694c",
+      "name": "Badlands",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "17fa98cd-ed8f-483f-9525-7e989a82ebb2",
+      "name": "Balance",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6b8cf2a0-b045-4d91-9d91-c602d40c6237",
+      "name": "Basalt Monolith",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b76d1ae6-ad1d-4bac-b4c3-2e03e0e84d9b",
+      "name": "Bayou",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4c81cfb7-8765-4e28-ae33-4287fa9a86cc",
+      "name": "Benalish Hero",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8b67d192-9a05-4a47-82ae-5fc4b7834d88",
+      "name": "Berserk",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d3a0b660-358c-41bd-9cd2-41fbf3491b1a",
+      "name": "Birds of Paradise",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9456c5b6-946d-403a-8ed0-dff9f921d98c",
+      "name": "Black Knight",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5089ec1a-f881-4d55-af14-5d996171203b",
+      "name": "Black Lotus",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "de7839fb-7040-48ab-a6d4-d1952972943d",
+      "name": "Black Vise",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7861ac9b-3024-4935-804c-2ca4c5a46bf4",
+      "name": "Black Ward",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b330ac89-790e-4cc9-96a5-532c48252088",
+      "name": "Blaze of Glory",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5c84d8da-2bfb-4618-89a0-7d9ed604e854",
+      "name": "Blessing",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "65e1558c-6b09-4ddc-b520-f19f4fb972af",
+      "name": "Blue Elemental Blast",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hard_stack",
+        "removal",
+        "stack",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "removal",
+        "stack",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fc0bf1d0-46a2-4305-ab2e-466d79d60ab2",
+      "name": "Blue Ward",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "508248d1-09a4-4e41-a4c9-286618e5061e",
+      "name": "Bog Wraith",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9908e597-9470-4c13-8387-39431b380138",
+      "name": "Braingeyser",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d6b9b88b-e31b-4b88-9d53-3df5687804ba",
+      "name": "Burrowing",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9cf44db4-627a-4197-9588-6da72e41f03d",
+      "name": "Camouflage",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f3179c3c-7e53-44d2-b579-b9e677efe9d9",
+      "name": "Castle",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "eb228a6c-bceb-45c3-a258-3f209682e1c6",
+      "name": "Celestial Prism",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d1b815d1-2848-40d4-a555-66822d1becbc",
+      "name": "Channel",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "edb455f4-8dc9-4b7c-b25c-cb51b7dfbb41",
+      "name": "Chaos Orb",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "08842aa3-f923-46e9-a106-f542331e9cc1",
+      "name": "Chaoslace",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "color_change"
+      ],
+      "actualRoles": [
+        "color_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7a5a8414-4da4-4dd0-93ae-210d50f4d6f6",
+      "name": "Circle of Protection: Black",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Beta role audit; same prevention pattern as other Circle of Protection cards."
     },
     {
       "oracleId": "d7572f17-f85d-45c0-ac64-43aac760eafe",
       "name": "Circle of Protection: Blue",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "broad_protection",
         "protection"
@@ -132,13 +689,138 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "41b0f347-1398-4778-bf3f-4007d8a77162",
+      "name": "Circle of Protection: Green",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "df2738fe-9cd1-4347-8808-105fcfde1190",
+      "name": "Circle of Protection: Red",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5f46f86a-9779-4ed3-99cb-76a03d380598",
+      "name": "Circle of Protection: White",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "eb97c8db-ac6c-476c-b14d-87785e9c82f0",
+      "name": "Clockwork Beast",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "42226b87-0746-4ebf-9fd0-108d508462af",
+      "name": "Clone",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "copy_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "copy_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "af354337-424c-4c7e-8ca5-6149261368d2",
+      "name": "Cockatrice",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4627691c-4ed4-4add-9cc3-2e019be2f9fd",
+      "name": "Consecrate Land",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "self_protection"
+      ],
+      "actualRoles": [
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "1940e56d-0972-4ca4-946c-bbd42dde1dcb",
       "name": "Conservator",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "broad_protection",
         "protection"
@@ -150,13 +832,70 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "9e0ed4b0-28b5-44be-ab83-f1e8eb07138d",
+      "name": "Contract from Below",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ante_card",
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "selection"
+      ],
+      "actualRoles": [
+        "ante_card",
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+      "name": "Control Magic",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a24e05fb-dffb-4400-b4ca-22fdde45e7a7",
+      "name": "Conversion",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "16d1023b-2162-4010-8bf4-218dbe7c99a0",
       "name": "Copper Tablet",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "damage_engine",
         "group_slug"
@@ -168,13 +907,277 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "80bc56a9-40e0-48da-ae86-190e39c8a4a3",
+      "name": "Copy Artifact",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "copy_support"
+      ],
+      "actualRoles": [
+        "copy_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "70492e32-ba4d-4314-b016-892fb15f7a23",
+      "name": "Creature Bond",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4692740f-be90-459f-8d90-c4ae71771595",
+      "name": "Crusade",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e68bc048-1009-46a5-97d6-ec77a18067da",
+      "name": "Crystal Rod",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0d61239f-28e4-4adb-8f6e-b56e9c8699af",
+      "name": "Cursed Land",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1edee40f-d153-4d67-aee7-ef08e11e4a79",
+      "name": "Cyclopean Tomb",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "counter_support"
+      ],
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+      "name": "Dark Ritual",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "74f10b9a-a286-49b2-bfa1-a427ff041bd4",
+      "name": "Darkpact",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ante_card"
+      ],
+      "actualRoles": [
+        "ante_card"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0544b707-ec67-43e3-a25d-fd7005ab673d",
+      "name": "Death Ward",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "20ae75a7-14ca-4366-af0a-3f3f02159f3f",
+      "name": "Deathgrip",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fb80aaba-352a-4b58-8db2-1e02d542819c",
+      "name": "Deathlace",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "color_change"
+      ],
+      "actualRoles": [
+        "color_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "65a9f643-063f-406a-8d5a-5ebbe0f04c3d",
+      "name": "Demonic Attorney",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ante_card"
+      ],
+      "actualRoles": [
+        "ante_card"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2847c8a0-f6aa-4e4a-a7b8-fc116436a264",
+      "name": "Demonic Hordes",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "82004860-e589-4e38-8d61-8c0210e4ea39",
+      "name": "Demonic Tutor",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "direct_tutor",
+        "tutor"
+      ],
+      "actualRoles": [
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "1973f1e9-aa14-49dc-bafe-be17b30ba288",
       "name": "Dingus Egg",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "damage_engine",
         "group_slug"
@@ -186,13 +1189,122 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+      "name": "Disenchant",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "92d6af2f-728e-4e41-87cb-5c90878a2f2f",
+      "name": "Disintegrate",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "removal",
+        "replacement_engine",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "removal",
+        "replacement_engine",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cd30a128-4b23-476e-8066-2272fdc395d9",
+      "name": "Disrupting Scepter",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "705a1985-ed39-4a4b-812e-a677170b596e",
+      "name": "Dragon Whelp",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e75ba79f-4cc2-4ede-8641-559ab94e7e36",
+      "name": "Drain Life",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "lifegain",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "lifegain",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "0669172d-396b-4f5a-9703-129c5c849b55",
       "name": "Drain Power",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -208,31 +1320,289 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+      "name": "Drudge Skeletons",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "caf3c6ec-d17e-497c-8fe7-6f818ce93f96",
       "name": "Dwarven Demolition Team",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
       ],
       "actualRoles": [
+        "combat_body",
         "removal",
         "targeted_removal"
       ],
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "cfc553cd-3b4c-47a9-bffb-e5790befb32c",
+      "name": "Dwarven Warriors",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3c97c311-7ad5-47ec-b421-f6c3bfbda9fb",
+      "name": "Earth Elemental",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e8e35b49-8cfb-4fb5-89aa-8050f15b11bf",
+      "name": "Earthbind",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9a40614b-50a3-422c-849e-53c8b7d3d204",
+      "name": "Earthquake",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "mass_removal",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "mass_removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "534ce8e2-53a1-407c-9881-d3b5347d43c3",
+      "name": "Elvish Archers",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3d8ac41c-0566-48b2-a744-39db2f72272c",
+      "name": "Evil Presence",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_denial",
+        "land_type_change"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "land_type_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "38c5c952-8153-4d98-89b5-a75260383345",
+      "name": "False Orders",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0d71b157-09a0-4fd4-beb9-103117a784ad",
+      "name": "Farmstead",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e27193b7-1a47-4555-865d-b1fd4c6d597f",
+      "name": "Fastbond",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "ramp"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "355bbe9b-59bf-470f-8600-410af4c7fe18",
+      "name": "Fear",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2ff92886-5c17-47a4-a02b-a97432d9203e",
+      "name": "Feedback",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3912d21e-1ebc-4a81-9dc9-f404248d564a",
+      "name": "Fire Elemental",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "aa7714b0-2bfb-458a-8ebf-37ec2c53383e",
+      "name": "Fireball",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8603bf74-faab-4910-8e45-0f2e3b318efb",
+      "name": "Firebreathing",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "c281f436-8c77-48f7-b31c-d40cd7f9ed6a",
       "name": "Flashfires",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -252,13 +1622,536 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "6a4068b0-fb4f-429c-a94e-47849f3eb7ef",
+      "name": "Flight",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+      "name": "Fog",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e3c4c27d-f263-4c69-a4fe-2928136ff68b",
+      "name": "Force of Nature",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "bd6823fb-a696-4e6d-9c5e-3b55dfe03730",
+      "name": "Forcefield",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "50c53ae0-51ba-4046-ac74-87c65e688032",
+      "name": "Fork",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "copy_support"
+      ],
+      "actualRoles": [
+        "copy_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f75f9006-217d-4ec8-9c35-ceefe1c5ae4e",
+      "name": "Frozen Shade",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3e771f5b-2de3-4a1b-8281-ab1f7491e5a1",
+      "name": "Fungusaur",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8d134a60-e1e5-4163-8bdc-36af91567185",
+      "name": "Gaea's Liege",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d38ad188-515e-4865-a0ed-5d0fd4c7b453",
+      "name": "Gauntlet of Might",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "af7fabf4-8d55-4b06-9c21-472f4a5775b4",
+      "name": "Glasses of Urza",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hand_info"
+      ],
+      "actualRoles": [
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4d022f53-b1fb-4071-afcc-0af3214fe604",
+      "name": "Gloom",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "10bc98b0-3fdc-46d1-8d3b-6d160e9dd62f",
+      "name": "Goblin Balloon Brigade",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d236b3fc-0d3f-4d99-875d-e32a33fe5767",
+      "name": "Goblin King",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ef5248d4-4cd1-447c-bdcc-78a09a67d923",
+      "name": "Granite Gargoyle",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "83c8a3a6-2e1a-4e26-8847-6d066f42d906",
+      "name": "Gray Ogre",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "727ab7f2-741e-4442-b5cb-e3032549fa87",
+      "name": "Green Ward",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1a91ca69-e890-41dc-866b-3aabf10c9a9c",
+      "name": "Guardian Angel",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mana_sink",
+        "protection",
+        "scalable_spell",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "protection",
+        "scalable_spell",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8da8644c-75a1-4fe9-8e94-900d948d631c",
+      "name": "Healing Salve",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain",
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "948e3bb7-8265-4e95-acd1-a0c4f22441df",
+      "name": "Helm of Chatzuk",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "912164c2-b4d4-42e3-a10e-903b8c7b2e6d",
+      "name": "Holy Armor",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+      "name": "Holy Strength",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "403cf6ae-48a9-4ea9-894e-7135cfca4e1b",
+      "name": "Howl from Beyond",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+      "name": "Howling Mine",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_draw",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8f1dae40-b307-446e-bbd2-86aa35813871",
+      "name": "Hurloon Minotaur",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9c021685-4017-49c7-9f58-2ae0243361a0",
+      "name": "Hurricane",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "mass_removal",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "mass_removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "759af941-f6a3-4726-91f2-9b1e4e55ea71",
+      "name": "Hypnotic Specter",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "a0b97e33-2d0c-4800-a9f5-9cd9be651ea8",
       "name": "Ice Storm",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "land_denial",
         "removal",
@@ -274,13 +2167,189 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+      "name": "Icy Manipulator",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "05ac866d-0405-4d25-986a-c10fcfc097e6",
+      "name": "Illusionary Mask",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_selection",
+        "face_down_support",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "replacement_engine",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "face_down_support",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "replacement_engine",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8695c3c1-fb4b-4429-ae33-ec186f68796b",
+      "name": "Instill Energy",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "de26b0c6-dfb7-45a8-9d7f-f8d45522d675",
+      "name": "Invisibility",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e9ec67e1-7064-44d4-a1ed-04b7893ffb15",
+      "name": "Iron Star",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c645a616-0d7d-416c-b5f3-057b3a1666a0",
+      "name": "Ironclaw Orcs",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b7c0bb85-fb87-4c73-bc1b-7b4dc763c7e8",
+      "name": "Ironroot Treefolk",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7d1769d0-d942-45b3-a31c-2bbe45e68661",
+      "name": "Island Sanctuary",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hate_piece",
+        "replacement_engine",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "replacement_engine",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8e2017c3-057d-4e30-bd60-f486fddbc6ca",
+      "name": "Ivory Cup",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "1e105ab7-fb10-4cfd-ac2f-5e11488cf1b0",
       "name": "Jade Monolith",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "protection",
         "targeted_protection"
@@ -292,13 +2361,85 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "96162b22-41e7-4559-aa1b-c18f42abcb52",
+      "name": "Jade Statue",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "39ee576a-0803-4063-9c84-f2b537e4d44c",
+      "name": "Jayemdae Tome",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4ac9116f-36bc-4d71-b696-d6ee064e1d58",
+      "name": "Juggernaut",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f7518456-45ed-41d4-bd3c-5aacea28eb35",
+      "name": "Jump",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "fac4da47-f0b2-4b57-9703-e0ed100d3499",
       "name": "Karma",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "damage_engine",
         "group_slug"
@@ -310,13 +2451,47 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "acc869f8-dcbe-4d57-baa0-3eef4aceb251",
+      "name": "Keldon Warlord",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d2d477a5-f055-4d47-a852-26e8239f2a01",
+      "name": "Kormus Bell",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "51ca5965-ae39-4e51-8948-9a230a03f906",
       "name": "Kudzu",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "land_denial",
         "removal",
@@ -332,13 +2507,329 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "5960dd01-6797-4c73-b48a-f637b9c288cc",
+      "name": "Lance",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a4ae41c7-9631-407d-8fd3-04f403d940a8",
+      "name": "Ley Druid",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "867def48-4be8-4056-bcf1-d6b00450b9a3",
+      "name": "Library of Leng",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "discard_protection",
+        "hand_size",
+        "protection"
+      ],
+      "actualRoles": [
+        "discard_protection",
+        "hand_size",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5b7515f2-7a5a-4e2a-9784-6cbacd768172",
+      "name": "Lich",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_draw",
+        "lifegain",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "lifegain",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "07ae1fe5-5c3e-4d94-b809-8defd2ef44e3",
+      "name": "Lifeforce",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "eec1de80-4b3d-481d-a235-c299e0381830",
+      "name": "Lifelace",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "color_change"
+      ],
+      "actualRoles": [
+        "color_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "52ac09af-2aa7-4d80-be26-3e6a6efd5c23",
+      "name": "Lifetap",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4ff9af56-ac18-4966-9e48-183e1ca1c2d0",
+      "name": "Living Artifact",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "counter_support",
+        "lifegain"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8f0179fe-6d7d-49cc-ab06-d3b402c6fc8d",
+      "name": "Living Lands",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4844312c-3c9d-4ca1-986d-4ad35e68454e",
+      "name": "Living Wall",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "68954295-54e3-4303-a6bc-fc4547a4e3a3",
+      "name": "Llanowar Elves",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cc7f290f-ca00-4285-9bdb-4b4402444f30",
+      "name": "Lord of Atlantis",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ea152809-85a2-4fde-8251-3b1f267e4443",
+      "name": "Lord of the Pit",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7a7425ba-4478-4bc4-855f-abf947ea4fa2",
+      "name": "Lure",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cba229fa-9035-405b-b091-3798898a37ee",
+      "name": "Magical Hack",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "text_change"
+      ],
+      "actualRoles": [
+        "text_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c39ea5f9-6ec0-4697-897b-779e326754a7",
+      "name": "Mahamoti Djinn",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "97159138-c34b-416e-b079-5c952383a243",
+      "name": "Mana Flare",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mana_fixing",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "mana_fixing",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "48207d1c-448a-4e1b-974a-642dfea75933",
       "name": "Mana Short",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -354,13 +2845,30 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "736892cb-a34b-4bb9-b56c-e26e3db207a2",
+      "name": "Mana Vault",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "0f1afedd-c60f-454f-b84a-c8117aec0128",
       "name": "Manabarbs",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "damage_engine",
         "group_slug"
@@ -372,13 +2880,659 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "5ba73182-30a7-4bad-9cb6-c0feecc2db33",
+      "name": "Meekstone",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+      "name": "Merfolk of the Pearl Trident",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8161f5b8-6aab-4133-ba2c-2e7b5774153e",
+      "name": "Mesa Pegasus",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "78f9c223-9982-4282-a496-a6f892f0a5bf",
+      "name": "Mind Twist",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hand_attack",
+        "mana_sink",
+        "removal",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "hand_attack",
+        "mana_sink",
+        "removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a37159df-f6d7-4db6-85de-0ea77f425993",
+      "name": "Mons's Goblin Raiders",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "376ee366-e082-402f-b4db-6592fcfcacd2",
+      "name": "Mox Emerald",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0677f49e-f8bf-4349-af52-2ccde9287c2e",
+      "name": "Mox Jet",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "824597b8-c89a-47ec-8526-7efc6e24ef0e",
+      "name": "Mox Pearl",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ed85fa82-e4fa-434b-92a8-36b6075708d1",
+      "name": "Mox Ruby",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d5ed1233-df87-4b90-8918-13922ec95249",
+      "name": "Mox Sapphire",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "57f90b30-bcb0-447e-8788-5c5ded187207",
+      "name": "Natural Selection",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_selection",
+        "selection",
+        "topdeck_control"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "selection",
+        "topdeck_control"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c358b9e2-524c-434b-b3fa-74d2aa6d1df7",
+      "name": "Nether Shadow",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c58dfcbf-49e6-4ef0-bd31-ebd81b0cfa41",
+      "name": "Nettling Imp",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "96230edf-568a-47dd-b877-9d92aa58fac8",
+      "name": "Nevinyrral's Disk",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "375932e6-1b3e-48dc-8154-9b664c3add34",
+      "name": "Nightmare",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f5975294-508a-453e-893a-2fbea2487d17",
+      "name": "Northern Paladin",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ac41171e-c454-49e9-9004-c082ae099630",
+      "name": "Obsianus Golem",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c000811e-bde7-4840-a3bb-9714d5c977eb",
+      "name": "Orcish Artillery",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0b16a650-68b0-44dc-a9e1-15b7966e0b18",
+      "name": "Orcish Oriflamme",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e9b4e857-39e5-4a06-89ad-3dd94b3f252a",
+      "name": "Paralyze",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c071be90-0531-40cc-af46-0cbe80c4ddd4",
+      "name": "Pearled Unicorn",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6e49a5b8-6bc4-4c7b-82c1-957f1fb0ca5f",
+      "name": "Personal Incarnation",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "dafe63ef-f3d6-45e7-877a-573da92ba85e",
+      "name": "Pestilence",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mass_removal",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "06a158c6-7e36-49f8-a8e0-a7b7df5fd7ed",
+      "name": "Phantasmal Forces",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7dcbce46-2973-4a9f-93df-95ac41ce668a",
+      "name": "Phantasmal Terrain",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_denial",
+        "land_type_change"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "land_type_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "bbd30183-524c-4b93-b953-90853ec3f39f",
+      "name": "Phantom Monster",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c6b3f924-806d-47d3-b044-72b48470196c",
+      "name": "Pirate Ship",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "16cf1cf9-6900-406c-a5b4-0e5750f530e0",
+      "name": "Plague Rats",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c7a15ca4-085f-4d92-8387-c3711c04c8fa",
+      "name": "Plateau",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "dc2f0000-870b-487f-9623-618fc8eb9765",
+      "name": "Power Leak",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "39412e6d-2837-4729-abf9-e64a5ba87e40",
+      "name": "Power Sink",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mana_sink",
+        "scalable_spell",
+        "soft_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "156b2228-f7b2-4816-b894-c4953a32c05f",
+      "name": "Power Surge",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+      "name": "Prodigal Sorcerer",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7f221ad6-7ec4-483d-a6b5-1456c95c1cad",
+      "name": "Psionic Blast",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "a60422e8-f2f4-4c37-a0f4-eedad27eb08c",
       "name": "Psychic Venom",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "damage_engine",
         "group_slug"
@@ -390,31 +3544,565 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "3773001a-8868-49ec-a406-298cf72359c2",
+      "name": "Purelace",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "color_change"
+      ],
+      "actualRoles": [
+        "color_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a2310312-6e1e-4e34-a351-9aef499a810f",
+      "name": "Raging River",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cbc9c731-181a-4f00-a7b0-eb7e56eac2ea",
+      "name": "Raise Dead",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "bb329a5c-b9f9-4973-a53f-090024146325",
+      "name": "Red Elemental Blast",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hard_stack",
+        "removal",
+        "stack",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "removal",
+        "stack",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "73f84440-425f-4cf5-b01a-3ae89f1f6e37",
+      "name": "Red Ward",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "89390a33-b289-4edd-a114-6616e49a49c2",
+      "name": "Regeneration",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e6e4a8bd-5c40-4654-8de1-0da9afed90fd",
+      "name": "Regrowth",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "837417d8-8260-486d-a3ed-3b5711eaf34a",
+      "name": "Resurrection",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "recursion"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "eaaf7c30-f463-4115-a40e-7dc717063413",
+      "name": "Reverse Damage",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "broad_protection",
+        "lifegain",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "lifegain",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3f6b2f76-0364-415e-a6a2-e9e5bf31b745",
+      "name": "Righteousness",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "01f07ab9-3c3e-4fea-9cd6-543a5b7056b8",
+      "name": "Roc of Kher Ridges",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "aff84707-f5f8-4f53-869e-feec78da8d8d",
+      "name": "Rock Hydra",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c29a04ab-4e14-45d8-a993-3fffd0e2f6eb",
+      "name": "Rod of Ruin",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9ed6f28f-a3db-48c5-9ab0-b90a7fba5f57",
+      "name": "Royal Assassin",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "068b3692-411b-44d4-a7e9-005262760cfc",
+      "name": "Sacrifice",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "95a0ca48-d924-47f4-86ed-42c673ee778c",
       "name": "Samite Healer",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "protection",
         "targeted_protection"
       ],
       "actualRoles": [
+        "combat_body",
         "protection",
         "targeted_protection"
       ],
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "703243f0-8cb3-420f-958f-5fd4bde30293",
+      "name": "Savannah",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+      "name": "Savannah Lions",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "68c0c04e-b0d5-4721-83bf-bf18e8b7e680",
+      "name": "Scavenging Ghoul",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c8d95ca8-7d12-4072-aeaf-e20f248c7e39",
+      "name": "Scrubland",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a1f20695-6f08-4d5c-9fba-b0018bee298e",
+      "name": "Scryb Sprites",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c16495fc-784d-4bac-9a68-ed437008df73",
+      "name": "Sea Serpent",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a6a43190-cca2-4f07-afe9-8af681d777da",
+      "name": "Sedge Troll",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "749141aa-f6c4-4ad8-b146-406e68ae9b0b",
+      "name": "Sengir Vampire",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+      "name": "Serra Angel",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "998484cc-fefc-4da5-9987-5d6e89599c34",
+      "name": "Shanodin Dryads",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "84d32e68-72b9-432d-a023-7bc6a26b8ad0",
+      "name": "Shatter",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+      "name": "Shivan Dragon",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "20d69989-7250-40c7-a064-8ed78ccbe556",
+      "name": "Simulacrum",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "5a46ad2a-35b1-4dd5-b7c3-fec36b7c67ab",
       "name": "Sinkhole",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "land_denial",
         "removal",
@@ -430,13 +4118,174 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "269fc857-a052-4f0a-9759-467ccf42bebb",
+      "name": "Siren's Call",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "99dba614-40d3-41c1-a3b2-edc8777b010f",
+      "name": "Sleight of Mind",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "text_change"
+      ],
+      "actualRoles": [
+        "text_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8aa97d25-cd51-4ceb-b7eb-af64f0914a8c",
+      "name": "Smoke",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6021c2d6-d098-4de2-9c7e-4c571f9238f6",
+      "name": "Soul Net",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "04477339-7ed5-4770-9e5c-6e481ffcc858",
+      "name": "Spell Blast",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hard_stack",
+        "mana_sink",
+        "scalable_spell",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "mana_sink",
+        "scalable_spell",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a8cf1379-0195-4e11-b994-481ef1284245",
+      "name": "Stasis",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hate_piece",
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cd8ae9f2-edac-473a-8846-c08219e617c3",
+      "name": "Steal Artifact",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "artifact_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "artifact_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0b8e3f9b-a4da-49a3-8545-ce7a265e5856",
+      "name": "Stone Giant",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
       "name": "Stone Rain",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "land_denial",
         "removal",
@@ -452,13 +4301,233 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "9eb2912d-2130-49f2-9529-b58fa5a97a15",
+      "name": "Stream of Life",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "eea64b1f-d6a9-4f72-8612-efab4b124b63",
+      "name": "Sunglasses of Urza",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "basic_land",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+      "name": "Taiga",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b81f041d-98db-4408-9472-c483e4a502bc",
+      "name": "Terror",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "87a77482-f286-4fb1-b179-85b2095bb768",
+      "name": "The Hive",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c4822813-cd81-465d-9fe8-3a4c2dcd31ef",
+      "name": "Thicket Basilisk",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6452b6a6-6235-46a3-a712-a26592450438",
+      "name": "Thoughtlace",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "color_change"
+      ],
+      "actualRoles": [
+        "color_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f73c7edf-ed2c-41e8-ac83-c83ddd543f14",
+      "name": "Throne of Bone",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "35d07ac9-b184-4b5f-8192-34b1db042f69",
+      "name": "Timber Wolves",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "99d4d99d-cf56-45aa-aa39-a250695612f2",
+      "name": "Time Vault",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "extra_turn",
+        "finisher",
+        "hate_piece",
+        "replacement_engine",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "extra_turn",
+        "finisher",
+        "hate_piece",
+        "replacement_engine",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "d0209d3f-3f7e-4fd5-bce5-10bce6f29c86",
       "name": "Time Walk",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "extra_turn",
         "finisher"
@@ -470,13 +4539,66 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "c823e687-6311-4c99-974b-fd77d204141a",
+      "name": "Timetwister",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_draw"
+      ],
+      "actualRoles": [
+        "card_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f671e3c3-cd59-4d06-a1af-5d04892cf74d",
+      "name": "Tranquility",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "74b7fe23-5d3a-4092-8d78-7c0eba8f6f73",
+      "name": "Tropical Island",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "ef2b1565-7b02-4cab-9031-beb1701ee929",
       "name": "Tsunami",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -496,13 +4618,34 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "02418479-9455-417f-a6a1-004356faff37",
+      "name": "Tundra",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     },
     {
       "oracleId": "80559618-9dd9-4987-b3bc-1a1b5537bbc5",
       "name": "Tunnel",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -516,22 +4659,657 @@
       "notes": "Covered by Alpha role audit batch 1."
     },
     {
+      "oracleId": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "38aa31bd-7145-43b9-9409-463d9ad6cd69",
+      "name": "Two-Headed Giant of Foriys",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4b22be3a-8ce1-47d1-b82e-6c3ccfb0548b",
+      "name": "Underground Sea",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "090d88a9-7f2d-4bd1-a30a-7c48d05068be",
+      "name": "Unholy Strength",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d6329dcc-b450-482a-8ee3-45449f7a4b3d",
+      "name": "Uthden Troll",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cd98a31b-cc7e-43f9-982e-109ad9850908",
+      "name": "Verduran Enchantress",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "aeaccab9-3e2c-4a40-a483-52c4972b2014",
+      "name": "Vesuvan Doppelganger",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "copy_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "copy_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
       "oracleId": "d29078c0-1fb8-437a-81d1-bb319f646941",
       "name": "Veteran Bodyguard",
-      "firstSet": "lea",
-      "releasedAt": "1993-08-05",
-      "reviewedAt": "2026-06-21T00:00:00.000Z",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
       "expectedRoles": [
         "broad_protection",
         "protection"
       ],
       "actualRoles": [
         "broad_protection",
+        "combat_body",
         "protection"
       ],
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Alpha role audit batch 1."
+    },
+    {
+      "oracleId": "4c15889e-3172-413b-b805-a2b7ad05f636",
+      "name": "Volcanic Eruption",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mana_sink",
+        "mass_recursion",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "mass_recursion",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c718911c-c955-4eb9-9e16-be4bd49a4e4e",
+      "name": "Volcanic Island",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "typed_land"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Beta role audit; typed dual land is recognized as land base and mana source."
+    },
+    {
+      "oracleId": "b2d3da40-e2f7-4480-9da9-33019d6f4071",
+      "name": "Wall of Air",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8ffe4986-9e09-4421-ad26-296a4c0df9e4",
+      "name": "Wall of Bone",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f8d82a00-c10e-4b9e-9642-d05706900a97",
+      "name": "Wall of Brambles",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f38c8b47-e8e0-4d2f-b1da-d8d986805a48",
+      "name": "Wall of Fire",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1945e165-7636-4727-89ba-3811251ef175",
+      "name": "Wall of Ice",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+      "name": "Wall of Stone",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "eb098958-50d3-4476-ba74-382033703ff9",
+      "name": "Wall of Swords",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "608cc65c-f99a-4ca3-be24-190d2556b411",
+      "name": "Wall of Water",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "aa5e6894-8c97-46f8-a0fd-07c6db51e9a7",
+      "name": "Wall of Wood",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "73bddfdb-d1fb-4038-b676-201f6b82beb0",
+      "name": "Wanderlust",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b2a8fcf9-2ec2-40a9-9955-90f8605b11a3",
+      "name": "War Mammoth",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f4b18451-1f40-48bd-8ca9-eec784ad5dd7",
+      "name": "Warp Artifact",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c470fbe1-0538-46ec-8741-3143f5e78af8",
+      "name": "Water Elemental",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f07a24c0-bf3c-4733-9473-c6be3b16950e",
+      "name": "Weakness",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5aa12aff-db3c-4be5-822b-3afdf536b33e",
+      "name": "Web",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a8abd966-de7b-46a3-8ac7-8747ab35653a",
+      "name": "Wheel of Fortune",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "card_draw",
+        "hand_attack"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "hand_attack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ddb021df-ae4a-4ac1-8353-d0b375761714",
+      "name": "White Knight",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "860468b3-625a-4663-a5ae-336ae10fc7d0",
+      "name": "White Ward",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "706ae742-1807-44b7-a4fa-f2e26f61519a",
+      "name": "Wild Growth",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8b60fcfe-fb90-4a00-a708-25b59bfc9b5a",
+      "name": "Will-o'-the-Wisp",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1dcbd583-3388-4b34-a7cd-131648aa6abd",
+      "name": "Winter Orb",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0bd8917c-bec4-4603-bc3f-8e0c2afae56a",
+      "name": "Wooden Sphere",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e8ad3a77-b293-4d69-b080-27ca9f95d443",
+      "name": "Word of Command",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "hand_info",
+        "player_control",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "hand_info",
+        "player_control",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "name": "Wrath of God",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5446c92f-ff22-4e9b-a2f6-e64c8560c1e0",
+      "name": "Zombie Master",
+      "firstSet": "leb",
+      "releasedAt": "1993-10-04",
+      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     }
   ]
 }

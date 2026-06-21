@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.4.9 - 2026-06-21
+
+### Neu
+
+- Alpha wurde im Card-Role-Audit-Ledger vollstaendig als `covered` abgeschlossen.
+- Beta wurde vorbereitet und direkt abgeschlossen; offen waren nur `Circle of Protection: Black` und `Volcanic Island`.
+- Neue Beta-Website-Pruefdateien dokumentieren die erwarteten Rollen fuer die beiden Beta-spezifischen Karten.
+- Arabian Nights wurde als naechste Arbeitsedition vorbereitet, inklusive Worksheet und reiner Kartennamenliste.
+
+### Validierung
+
+- `npm run audit:cards -- import-worksheet lea`
+- `npm run audit:cards -- worksheet leb`
+- `npm run audit:cards -- import-worksheet leb`
+- `npm run audit:cards -- progress`
+- `npm run audit:cards -- worksheet arn`
+- `npm run check`
+
 ## 0.4.8 - 2026-06-21
 
 ### Neu

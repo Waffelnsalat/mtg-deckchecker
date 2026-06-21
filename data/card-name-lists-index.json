@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-21T00:54:49.565Z",
+  "generatedAt": "2026-06-21T12:42:56.107Z",
   "sourceSets": "data/scryfall-sets.json",
   "selector": "reviewed",
-  "setCount": 1,
+  "setCount": 2,
   "sets": [
     {
       "code": "lea",
@@ -15,6 +15,17 @@
       "printCount": 295,
       "uniqueNameCount": 290,
       "filePath": "data/card-name-lists/lea-card-names.txt"
+    },
+    {
+      "code": "leb",
+      "name": "Limited Edition Beta",
+      "releasedAt": "1993-10-04",
+      "setType": "core",
+      "cardCount": 302,
+      "digital": false,
+      "printCount": 302,
+      "uniqueNameCount": 292,
+      "filePath": "data/card-name-lists/leb-card-names.txt"
     }
   ]
 }

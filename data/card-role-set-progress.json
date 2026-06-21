@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-21T00:47:34.842Z",
+  "generatedAt": "2026-06-21T12:42:14.547Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 0,
-    "inProgress": 1,
-    "pending": 1042
+    "done": 2,
+    "inProgress": 0,
+    "pending": 1041
   },
   "sets": [
     {
@@ -17,10 +17,10 @@
       "setType": "core",
       "cardCount": 295,
       "digital": false,
-      "auditStatus": "in_progress",
-      "reviewedOracleIds": 23,
+      "auditStatus": "done",
+      "reviewedOracleIds": 290,
       "totalUniqueOracleIds": 290,
-      "openOracleIds": 267,
+      "openOracleIds": 0,
       "progressKnown": true,
       "worksheetPath": "data/card-role-worksheets/lea-role-review.tsv"
     },
@@ -31,11 +31,12 @@
       "setType": "core",
       "cardCount": 302,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 292,
+      "totalUniqueOracleIds": 292,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/leb-role-review.tsv"
     },
     {
       "code": "2ed",

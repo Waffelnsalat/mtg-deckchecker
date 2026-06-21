@@ -1,2 +1,3 @@
 code	name	releasedAt	setType	cardCount	digital	printCount	uniqueNameCount	filePath
 lea	Limited Edition Alpha	1993-08-05	core	295	false	295	290	data/card-name-lists/lea-card-names.txt
+leb	Limited Edition Beta	1993-10-04	core	302	false	302	292	data/card-name-lists/leb-card-names.txt
