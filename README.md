@@ -18,6 +18,7 @@ First iteration of the backend and website for an EDH deck checker. The app acce
 - [docs/code-map.md](docs/code-map.md) explains where each major feature lives.
 - [docs/analysis-flow.md](docs/analysis-flow.md) diagrams the request flow, analysis dependencies, score calculation, and likely weak spots.
 - [docs/card-role-audit.md](docs/card-role-audit.md) explains the set-by-set card wording and role review workflow.
+- [docs/card-role-todo.md](docs/card-role-todo.md) tracks larger follow-up work such as splitting broad tags into clearer sub-tags.
 - [src/README.md](src/README.md) maps the backend and analysis files.
 - [public/README.md](public/README.md) maps the browser UI files.
 

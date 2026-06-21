@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.4 - 2026-06-21
+
+### Neu
+
+- Neue Todo-Datei `docs/card-role-todo.md` haelt groessere Tag-Taxonomie-Aufgaben fest.
+- Protection-Tags sollen spaeter nach geschuetztem Objekt, Methode, Dauer und Scope unterschieden werden.
+
+### Validierung
+
+- Doku-Aenderung, keine Tests ausgefuehrt.
+
 ## 0.4.3 - 2026-06-21
 
 ### Neu

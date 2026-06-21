@@ -7,6 +7,7 @@ This workflow reviews Magic cards set by set, oldest first, so wording gaps and 
 - `data/scryfall-sets.json`: generated list of every Scryfall set, sorted by release date.
 - `data/card-role-audit.json`: manual review ledger, keyed by `oracleId`.
 - `data/card-role-worksheets/<set>-role-review.tsv`: generated manual review worksheets.
+- `docs/card-role-todo.md`: larger follow-up list for tag taxonomy and analyzer design work.
 - `scripts/card-role-audit.ts`: CLI for refreshing set data and finding the next open set.
 
 ## Commands
