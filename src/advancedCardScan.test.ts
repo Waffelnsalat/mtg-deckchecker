@@ -1776,6 +1776,147 @@ test("inferAdvancedRoleProfile recognizes The Dark mana conversion and creature 
   assert.ok(getRoleWeight(venomProfile, "targeted_removal") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Ice Age control, snow, and Aura utility wording", () => {
+  const hallowedGroundProfile = inferAdvancedRoleProfile(
+    createCard("Hallowed Ground", "Enchantment", 2, "{W}{W}: Return target nonsnow land you control to its owner's hand."),
+  );
+  const prismaticWardProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Prismatic Ward",
+      "Enchantment - Aura",
+      2,
+      "Enchant creature. As this Aura enters, choose a color. Prevent all damage that would be dealt to enchanted creature by sources of the chosen color.",
+    ),
+  );
+  const soulBarrierProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Soul Barrier",
+      "Enchantment",
+      3,
+      "Whenever an opponent casts a creature spell, this enchantment deals 2 damage to that player unless they pay {2}.",
+    ),
+  );
+  const wordOfUndoingProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Word of Undoing",
+      "Instant",
+      1,
+      "Return target creature and all white Auras you own attached to it to their owners' hands.",
+    ),
+  );
+  const leshracsSigilProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Leshrac's Sigil",
+      "Enchantment",
+      2,
+      "Whenever an opponent casts a green spell, you may pay {B}{B}. If you do, look at that player's hand and choose a card from it. The player discards that card. {B}{B}: Return this enchantment to its owner's hand.",
+    ),
+  );
+  const hexProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Lim-Dul's Hex",
+      "Enchantment",
+      3,
+      "At the beginning of your upkeep, for each player, this enchantment deals 1 damage to that player unless they pay {B} or {3}.",
+    ),
+  );
+  const mindWhipProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Mind Whip",
+      "Enchantment - Aura",
+      3,
+      "Enchant creature. At the beginning of the upkeep of enchanted creature's controller, that player may pay {3}. If they don't, this Aura deals 2 damage to that player and you tap that creature.",
+    ),
+  );
+  const conquerProfile = inferAdvancedRoleProfile(
+    createCard("Conquer", "Enchantment - Aura", 5, "Enchant land. You control enchanted land."),
+  );
+  const curseProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Curse of Marit Lage",
+      "Enchantment",
+      5,
+      "When this enchantment enters, tap all Islands. Islands don't untap during their controllers' untap steps.",
+    ),
+  );
+  const meltingProfile = inferAdvancedRoleProfile(createCard("Melting", "Enchantment", 4, "All lands are no longer snow."));
+  const mudslideProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Mudslide",
+      "Enchantment",
+      3,
+      "Creatures without flying don't untap during their controllers' untap steps. At the beginning of each player's upkeep, that player may choose any number of tapped creatures without flying they control and pay {2} for each creature chosen this way. If the player does, untap those creatures.",
+    ),
+  );
+  const forgottenLoreProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Forgotten Lore",
+      "Sorcery",
+      1,
+      "Target opponent chooses a card in your graveyard. You may pay {G}. If you do, repeat this process except that opponent can't choose a card already chosen for Forgotten Lore. Then put the last chosen card into your hand.",
+    ),
+  );
+  const snowblindProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Snowblind",
+      "Enchantment - Aura",
+      4,
+      "Enchant creature. Enchanted creature gets -X/-Y. If that creature is attacking, X is the number of snow lands defending player controls. Otherwise, X is the number of snow lands its controller controls. Y is equal to X or to enchanted creature's toughness minus 1, whichever is smaller.",
+    ),
+  );
+  const stuntedGrowthProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Stunted Growth",
+      "Sorcery",
+      5,
+      "Target player chooses three cards from their hand and puts them on top of their library in any order.",
+    ),
+  );
+  const ghostlyFlameProfile = inferAdvancedRoleProfile(
+    createCard("Ghostly Flame", "Enchantment", 3, "Black and/or red permanents and spells are colorless sources of damage."),
+  );
+  const weatherVaneProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Arcum's Weathervane",
+      "Artifact",
+      2,
+      "{2}, {T}: Target snow land is no longer snow. {2}, {T}: Target nonsnow basic land becomes snow.",
+    ),
+  );
+  const crownProfile = inferAdvancedRoleProfile(
+    createCard("Crown of the Ages", "Artifact", 2, "{4}, {T}: Attach target Aura attached to a creature to another creature."),
+  );
+  const arcanixProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Vexing Arcanix",
+      "Artifact",
+      4,
+      "{3}, {T}: Target player chooses a card name, then reveals the top card of their library. If that card has the chosen name, that player puts it into their hand. Otherwise, they put it into their graveyard and this artifact deals 2 damage to them.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(hallowedGroundProfile, "self_bounce") > 0);
+  assert.ok(getRoleWeight(prismaticWardProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(soulBarrierProfile, "group_slug") > 0);
+  assert.ok(getRoleWeight(wordOfUndoingProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(leshracsSigilProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(hexProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(mindWhipProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(conquerProfile, "theft_support") > 0);
+  assert.ok(getRoleWeight(curseProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(meltingProfile, "snow_support") > 0);
+  assert.ok(getRoleWeight(mudslideProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(forgottenLoreProfile, "hand_recursion") > 0);
+  assert.ok(getRoleWeight(snowblindProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(stuntedGrowthProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(stuntedGrowthProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(ghostlyFlameProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(weatherVaneProfile, "snow_support") > 0);
+  assert.ok(getRoleWeight(crownProfile, "attachment_support") > 0);
+  assert.ok(getRoleWeight(arcanixProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(arcanixProfile, "damage_engine") > 0);
+});
+
 test("inferAdvancedRoleProfile keeps Fallen Empires creature-only damage out of direct finishers", () => {
   const farrelsZealotProfile = inferAdvancedRoleProfile(
     createCard(
@@ -1806,11 +1947,21 @@ test("inferAdvancedRoleProfile keeps Fallen Empires creature-only damage out of 
       { mana_cost: "{X}{R}" },
     ),
   );
+  const fireCovenantProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Fire Covenant",
+      "Instant",
+      3,
+      "As an additional cost to cast this spell, pay X life. Fire Covenant deals X damage divided as you choose among any number of target creatures.",
+    ),
+  );
 
   assert.equal(getRoleWeight(farrelsZealotProfile, "direct_finisher"), 0);
   assert.equal(getRoleWeight(dwarvenCatapultProfile, "direct_finisher"), 0);
+  assert.equal(getRoleWeight(fireCovenantProfile, "direct_finisher"), 0);
   assert.ok(getRoleWeight(dwarvenCatapultProfile, "removal") > 0);
   assert.ok(getRoleWeight(dwarvenCatapultProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(fireCovenantProfile, "targeted_removal") > 0);
   assert.ok(getRoleWeight(blazeProfile, "direct_finisher") > 0);
   assert.ok(getRoleWeight(fireballProfile, "direct_finisher") > 0);
   assert.ok(getRoleWeight(fireballProfile, "targeted_removal") > 0);

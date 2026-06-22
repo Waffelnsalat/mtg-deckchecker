@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.4.17 - 2026-06-22
+
+### Neu
+
+- Ice Age (`ice`) wurde vollstaendig als `covered` in das Card-Role-Audit importiert.
+- Die komplette Namensliste fuer `ice` wurde unter `data/card-name-lists/ice-card-names.txt` angelegt.
+- Neue Website-Pruefdateien fuer Ice Age dokumentieren Snow-, Aura-, Upkeep-, Land-Control- und Creature-only-X-Damage-Fokusfaelle.
+- Der Advanced Scanner erkennt weitere alte Ice-Age-Formulierungen fuer Snow-Utility, Aura-Support, Hand-Attack, Hand-Recursion, Damage Engines, Land-Theft, Stax und Protection.
+- `Fire Covenant` und aehnliche `any number of target creatures`-Texte werden nicht mehr als Direct Finisher fehlgelesen.
+- Scryfall-Audit-Fetches haben jetzt ein kleines Rate-Limit und Retry-Handling fuer 429-Antworten.
+- Fortschritt und Namenslisten wurden aktualisiert; 11 Editionen sind abgeschlossen.
+
+### Validierung
+
+- `npm test -- --run src/advancedCardScan.test.ts`
+- `npm run audit:cards -- worksheet ice`
+- `npm run audit:cards -- import-worksheet ice`
+- `npm run audit:cards -- progress`
+- `npm run audit:cards -- names ice`
+
 ## 0.4.16 - 2026-06-22
 
 ### Neu

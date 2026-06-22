@@ -17,7 +17,7 @@ fem	Fallen Empires	1994-11-01	expansion	187	false	done	102	102	0	true	data/card-
 pmei	Media and Collaboration Promos	1995-01-01	promo	98	false	done	90	90	0	true	data/card-role-worksheets/pmei-role-review.tsv
 4bb	Fourth Edition Foreign Black Border	1995-04-01	core	378	false	pending	0			false	
 4ed	Fourth Edition	1995-04-01	core	380	false	pending	0			false	
-ice	Ice Age	1995-06-03	expansion	383	false	pending	0			false	
+ice	Ice Age	1995-06-03	expansion	383	false	done	373	373	0	true	data/card-role-worksheets/ice-role-review.tsv
 bchr	Chronicles Foreign Black Border	1995-07-01	masters	125	false	pending	0			false	
 chr	Chronicles	1995-07-01	masters	125	false	pending	0			false	
 ren	Renaissance	1995-08-01	masters	122	false	pending	0			false	

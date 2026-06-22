@@ -21,6 +21,8 @@ const SET_PROGRESS_TSV_PATH = path.join(DATA_DIR, "card-role-set-progress.tsv");
 const SCRYFALL_SETS_URL = "https://api.scryfall.com/sets";
 const SCRYFALL_SEARCH_URL = "https://api.scryfall.com/cards/search";
 const USER_AGENT = "mtg-deckchecker-card-role-audit/0.1";
+const SCRYFALL_MIN_REQUEST_INTERVAL_MS = 150;
+const SCRYFALL_RATE_LIMIT_RETRY_MS = 65_000;
 const PREVIEW_LIMIT = 40;
 const AUDIT_STATUSES = [
   "covered",
@@ -32,6 +34,7 @@ const AUDIT_STATUSES = [
 ] as const;
 const TAG_ACTIONS = ["use_existing", "add_new", "adjust_weight", "ignore"] as const;
 const TAG_LAYERS = ["coreScore", "strategy", "mechanic"] as const;
+let lastScryfallRequestAt = 0;
 
 type AuditStatus =
   | "covered"
@@ -1078,18 +1081,59 @@ function compareAuditEntries(left: AuditEntry, right: AuditEntry) {
 }
 
 async function fetchJson<T>(url: string) {
-  const response = await fetch(url, {
-    headers: {
-      Accept: "application/json",
-      "User-Agent": USER_AGENT,
-    },
-  });
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    await waitForScryfallSlot();
+    const response = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": USER_AGENT,
+      },
+    });
+    lastScryfallRequestAt = Date.now();
 
-  if (!response.ok) {
-    throw new Error(`Scryfall request failed ${response.status}: ${await response.text()}`);
+    if (response.ok) {
+      return (await response.json()) as T;
+    }
+
+    const responseText = await response.text();
+    if (response.status === 429 && attempt < 3) {
+      const retryMs = getScryfallRetryDelayMs(response, responseText);
+      console.warn(`Scryfall rate-limited request. Waiting ${Math.ceil(retryMs / 1000)}s before retry ${attempt + 1}/3.`);
+      await sleep(retryMs);
+      continue;
+    }
+
+    throw new Error(`Scryfall request failed ${response.status}: ${responseText}`);
   }
 
-  return (await response.json()) as T;
+  throw new Error("Scryfall request failed after retries.");
+}
+
+async function waitForScryfallSlot() {
+  const elapsed = Date.now() - lastScryfallRequestAt;
+  const waitMs = SCRYFALL_MIN_REQUEST_INTERVAL_MS - elapsed;
+  if (waitMs > 0) {
+    await sleep(waitMs);
+  }
+}
+
+function getScryfallRetryDelayMs(response: Response, responseText: string) {
+  const retryAfter = Number(response.headers.get("retry-after"));
+  if (Number.isFinite(retryAfter) && retryAfter > 0) {
+    return Math.max(retryAfter * 1000, SCRYFALL_RATE_LIMIT_RETRY_MS);
+  }
+
+  const textDelay = /try again after (\d+) seconds/i.exec(responseText)?.[1];
+  const seconds = textDelay ? Number(textDelay) : NaN;
+  if (Number.isFinite(seconds) && seconds > 0) {
+    return Math.max(seconds * 1000, SCRYFALL_RATE_LIMIT_RETRY_MS);
+  }
+
+  return SCRYFALL_RATE_LIMIT_RETRY_MS;
+}
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function writeJson(filePath: string, value: unknown) {

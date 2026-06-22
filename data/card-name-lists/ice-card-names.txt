@@ -1,0 +1,373 @@
+Adarkar Unicorn
+Arctic Foxes
+Arenson's Aura
+Armor of Faith
+Battle Cry
+Black Scarab
+Blessed Wine
+Blinking Spirit
+Blue Scarab
+Call to Arms
+Caribou Range
+Circle of Protection: Black
+Circle of Protection: Blue
+Circle of Protection: Green
+Circle of Protection: Red
+Circle of Protection: White
+Cold Snap
+Cooperation
+Death Ward
+Disenchant
+Drought
+Elvish Healer
+Enduring Renewal
+Energy Storm
+Formation
+Fylgja
+General Jarkeld
+Green Scarab
+Hallowed Ground
+Heal
+Hipparion
+Justice
+Kelsinko Ranger
+Kjeldoran Elite Guard
+Kjeldoran Guard
+Kjeldoran Knight
+Kjeldoran Phalanx
+Kjeldoran Royal Guard
+Kjeldoran Skycaptain
+Kjeldoran Skyknight
+Kjeldoran Warrior
+Lightning Blow
+Lost Order of Jarkeld
+Mercenaries
+Order of the Sacred Torch
+Order of the White Shield
+Prismatic Ward
+Rally
+Red Scarab
+Sacred Boon
+Seraph
+Shield Bearer
+Snow Hound
+Swords to Plowshares
+Warning
+White Scarab
+Arnjlot's Ascent
+Balduvian Conjurer
+Balduvian Shaman
+Binding Grasp
+Brainstorm
+Breath of Dreams
+Clairvoyance
+Counterspell
+Deflection
+Dreams of the Dead
+Enervate
+Errant Minion
+Essence Flare
+Force Void
+Glacial Wall
+Hydroblast
+Iceberg
+Icy Prison
+Illusionary Forces
+Illusionary Presence
+Illusionary Terrain
+Illusionary Wall
+Illusions of Grandeur
+Infuse
+Krovikan Sorcerer
+Magus of the Unseen
+Mesmeric Trance
+Mistfolk
+Musician
+Mystic Might
+Mystic Remora
+Phantasmal Mount
+Polar Kraken
+Portent
+Power Sink
+Ray of Command
+Ray of Erasure
+Reality Twist
+Sea Spirit
+Shyft
+Sibilant Spirit
+Silver Erne
+Sleight of Mind
+Snow Devil
+Snowfall
+Soldevi Machinist
+Soul Barrier
+Thunder Wall
+Updraft
+Wind Spirit
+Winter's Chill
+Word of Undoing
+Wrath of Marit Lage
+Zur's Weirding
+Zuran Enchanter
+Zuran Spellcaster
+Abyssal Specter
+Ashen Ghoul
+Brine Shaman
+Burnt Offering
+Cloak of Confusion
+Dance of the Dead
+Dark Banishing
+Dark Ritual
+Demonic Consultation
+Dread Wight
+Drift of the Dead
+Fear
+Flow of Maggots
+Foul Familiar
+Gangrenous Zombies
+Gaze of Pain
+Gravebind
+Hecatomb
+Hoar Shade
+Howl from Beyond
+Hyalopterous Lemure
+Icequake
+Infernal Darkness
+Infernal Denizen
+Kjeldoran Dead
+Knight of Stromgald
+Krovikan Elementalist
+Krovikan Fetish
+Krovikan Vampire
+Legions of Lim-Dûl
+Leshrac's Rite
+Leshrac's Sigil
+Lim-Dûl's Cohort
+Lim-Dûl's Hex
+Mind Ravel
+Mind Warp
+Mind Whip
+Minion of Leshrac
+Minion of Tevesh Szat
+Mole Worms
+Moor Fiend
+Necropotence
+Norritt
+Oath of Lim-Dûl
+Pestilence Rats
+Pox
+Seizures
+Songs of the Damned
+Soul Burn
+Soul Kiss
+Spoils of Evil
+Spoils of War
+Stench of Evil
+Stromgald Cabal
+Touch of Death
+Withering Wisps
+Aggression
+Anarchy
+Avalanche
+Balduvian Barbarians
+Balduvian Hydra
+Barbarian Guides
+Battle Frenzy
+Bone Shaman
+Brand of Ill Omen
+Chaos Lord
+Chaos Moon
+Conquer
+Curse of Marit Lage
+Dwarven Armory
+Errantry
+Flame Spirit
+Flare
+Game of Chaos
+Glacial Crevasses
+Goblin Mutant
+Goblin Sappers
+Goblin Ski Patrol
+Goblin Snowman
+Grizzled Wolverine
+Imposing Visage
+Incinerate
+Jokulhaups
+Karplusan Giant
+Karplusan Yeti
+Lava Burst
+Márton Stromgald
+Melee
+Melting
+Meteor Shower
+Mountain Goat
+Mudslide
+Orcish Cannoneers
+Orcish Conscripts
+Orcish Farmer
+Orcish Healer
+Orcish Librarian
+Orcish Lumberjack
+Orcish Squatters
+Panic
+Pyroblast
+Pyroclasm
+Sabretooth Tiger
+Shatter
+Stone Rain
+Stone Spirit
+Stonehands
+Tor Giant
+Total War
+Vertigo
+Wall of Lava
+Word of Blasting
+Aurochs
+Balduvian Bears
+Blizzard
+Brown Ouphe
+Chub Toad
+Dire Wolves
+Earthlore
+Elder Druid
+Essence Filter
+Fanatical Fever
+Folk of the Pines
+Forbidden Lore
+Forgotten Lore
+Foxfire
+Freyalise Supplicant
+Freyalise's Charm
+Freyalise's Winds
+Fyndhorn Brownie
+Fyndhorn Elder
+Fyndhorn Elves
+Fyndhorn Pollen
+Giant Growth
+Gorilla Pack
+Hot Springs
+Hurricane
+Johtull Wurm
+Juniper Order Druid
+Lhurgoyf
+Lure
+Maddening Wind
+Nature's Lore
+Pale Bears
+Pygmy Allosaurus
+Pyknite
+Regeneration
+Rime Dryad
+Ritual of Subdual
+Scaled Wurm
+Shambling Strider
+Snowblind
+Stampede
+Stunted Growth
+Tarpan
+Thermokarst
+Thoughtleech
+Tinder Wall
+Touch of Vitae
+Trailblazer
+Venomous Breath
+Wall of Pine Needles
+Whiteout
+Wiitigo
+Wild Growth
+Woolly Mammoths
+Woolly Spider
+Yavimaya Gnats
+Altar of Bone
+Centaur Archer
+Chromatic Armor
+Diabolic Vision
+Earthlink
+Elemental Augury
+Essence Vortex
+Fiery Justice
+Fire Covenant
+Flooded Woodlands
+Fumarole
+Ghostly Flame
+Giant Trap Door Spider
+Glaciers
+Hymn of Rebirth
+Kjeldoran Frostbeast
+Merieke Ri Berit
+Monsoon
+Mountain Titan
+Reclamation
+Skeleton Ship
+Spectral Shield
+Storm Spirit
+Stormbind
+Wings of Aesthir
+Adarkar Sentinel
+Aegis of the Meek
+Amulet of Quoz
+Arcum's Sleigh
+Arcum's Weathervane
+Arcum's Whistle
+Barbed Sextant
+Baton of Morale
+Celestial Sword
+Crown of the Ages
+Despotic Scepter
+Elkin Bottle
+Fyndhorn Bow
+Goblin Lyre
+Hematite Talisman
+Ice Cauldron
+Icy Manipulator
+Infinite Hourglass
+Jester's Cap
+Jester's Mask
+Jeweled Amulet
+Lapis Lazuli Talisman
+Malachite Talisman
+Nacre Talisman
+Naked Singularity
+Onyx Talisman
+Pentagram of the Ages
+Pit Trap
+Runed Arch
+Shield of the Ages
+Skull Catapult
+Snow Fortress
+Soldevi Golem
+Soldevi Simulacrum
+Staff of the Ages
+Sunstone
+Time Bomb
+Urza's Bauble
+Vexing Arcanix
+Vibrating Sphere
+Walking Wall
+Wall of Shields
+War Chariot
+Whalebone Glider
+Zuran Orb
+Adarkar Wastes
+Brushland
+Glacial Chasm
+Halls of Mist
+Ice Floe
+Karplusan Forest
+Land Cap
+Lava Tubes
+River Delta
+Sulfurous Springs
+Timberline Ridge
+Underground River
+Veldt
+Plains
+Snow-Covered Plains
+Island
+Snow-Covered Island
+Snow-Covered Swamp
+Swamp
+Mountain
+Snow-Covered Mountain
+Forest
+Snow-Covered Forest
