@@ -14,7 +14,7 @@ pdrc	Dragon Con	1994-07-15	promo	1	false	done	1	1	0	true	data/card-role-workshee
 drk	The Dark	1994-08-01	expansion	122	false	done	119	119	0	true	data/card-role-worksheets/drk-role-review.tsv
 phpr	HarperPrism Book Promos	1994-09-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/phpr-role-review.tsv
 fem	Fallen Empires	1994-11-01	expansion	187	false	done	102	102	0	true	data/card-role-worksheets/fem-role-review.tsv
-pmei	Media and Collaboration Promos	1995-01-01	promo	98	false	pending	0			false	
+pmei	Media and Collaboration Promos	1995-01-01	promo	98	false	done	90	90	0	true	data/card-role-worksheets/pmei-role-review.tsv
 4bb	Fourth Edition Foreign Black Border	1995-04-01	core	378	false	pending	0			false	
 4ed	Fourth Edition	1995-04-01	core	380	false	pending	0			false	
 ice	Ice Age	1995-06-03	expansion	383	false	pending	0			false	

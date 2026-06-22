@@ -1557,12 +1557,13 @@ function hasXDamageText(text: string) {
 function hasXTargetedDamageText(text: string) {
   return (
     /\bdeals? (?:\w+\s+times\s+)?x damage to (?:any (?:other )?target|target\b|each of up to x targets?)\b/.test(text) ||
-    /\bdeals? (?:\w+\s+times\s+)?x damage divided as you choose\b/.test(text)
+    /\bdeals? (?:\w+\s+times\s+)?x damage divided as you choose\b/.test(text) ||
+    /\bdeals? (?:\w+\s+times\s+)?x damage divided\b[^.]{0,120}\bamong any number of targets?\b/.test(text)
   );
 }
 
 function hasXPlayerDamageText(text: string) {
-  return /\bdeals? (?:\w+\s+times\s+)?x damage\b[^.]{0,120}\b(?:any target|target player|target opponent(?! controls)|each (?:player|opponent)|each opponent)\b/.test(
+  return /\bdeals? (?:\w+\s+times\s+)?x damage\b[^.]{0,160}\b(?:any target|any number of targets?|target player|target opponent(?! controls)|each (?:player|opponent)|each opponent)\b/.test(
     text,
   );
 }

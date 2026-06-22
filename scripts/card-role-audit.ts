@@ -315,19 +315,20 @@ async function importWorksheet(setCode: string | undefined) {
     }
 
     const oracleId = requireWorksheetValue(row, "oracleId");
+    const existingEntry = existingByOracleId.get(oracleId);
     const entry: AuditEntry = {
-      ...existingByOracleId.get(oracleId),
+      ...existingEntry,
       oracleId,
       name: requireWorksheetValue(row, "name"),
-      firstSet: row.setCode || set.code,
-      releasedAt: row.releasedAt || set.releasedAt || undefined,
+      firstSet: existingEntry?.firstSet ?? (row.setCode || set.code),
+      releasedAt: existingEntry?.releasedAt ?? (row.releasedAt || set.releasedAt || undefined),
       reviewedAt: importedAt,
       expectedRoles: parseList(row.expectedRoles),
       actualRoles: parseList(row.actualAnalyzerRoles),
       status,
       needsCodeChange: parseNeedsCodeChange(row.needsCodeChange, status),
-      notes: row.manualNotes || undefined,
-      tagDecisions: parseTagDecisionList(row.tagDecision),
+      notes: row.manualNotes || existingEntry?.notes || undefined,
+      tagDecisions: parseTagDecisionList(row.tagDecision) ?? existingEntry?.tagDecisions,
     };
 
     existingByOracleId.set(oracleId, removeEmptyAuditFields(entry));

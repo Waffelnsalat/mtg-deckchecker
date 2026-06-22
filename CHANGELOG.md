@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.4.16 - 2026-06-22
+
+### Neu
+
+- Media and Collaboration Promos (`pmei`) wurde vollstaendig als `covered` in das Card-Role-Audit importiert.
+- Die komplette Namensliste fuer `pmei` wurde unter `data/card-name-lists/pmei-card-names.txt` angelegt.
+- Neue Website-Pruefdateien fuer `pmei` dokumentieren Reprint-, X-Damage-, Stack-, Tutor-, Removal- und moderne Engine-Fokusfaelle.
+- Der Worksheet-Import erhaelt bei Reprints jetzt bestehende `firstSet`-/`releasedAt`-Werte und vorhandene Notizen/Tag-Entscheidungen.
+- `Fireball` und aehnliche `any number of targets`-X-Schadenstexte werden wieder als Direct Finisher und Removal erkannt.
+- Fortschritt und Namenslisten wurden aktualisiert; 10 Editionen sind abgeschlossen.
+
+### Validierung
+
+- `npm test -- --test-name-pattern "Fallen Empires|creature-only damage"`
+- `npm run audit:cards -- worksheet pmei`
+- `npm run audit:cards -- import-worksheet pmei`
+- `npm run audit:cards -- progress`
+- `npm run audit:cards -- names reviewed`
+- `npm run check`
+
 ## 0.4.15 - 2026-06-21
 
 ### Neu

@@ -470,7 +470,7 @@
       "name": "Blue Elemental Blast",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "hard_stack",
         "removal",
@@ -928,7 +928,7 @@
       "name": "Counterspell",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "hard_stack",
         "stack"
@@ -1037,7 +1037,7 @@
       "name": "Dark Ritual",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "burst_ramp",
         "ramp"
@@ -1195,7 +1195,7 @@
       "name": "Disenchant",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -1566,18 +1566,22 @@
       "name": "Fireball",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
         "mana_sink",
-        "scalable_spell"
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
       ],
       "actualRoles": [
         "direct_finisher",
         "finisher",
         "mana_sink",
-        "scalable_spell"
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
       ],
       "status": "covered",
       "needsCodeChange": false
@@ -4047,7 +4051,7 @@
       "name": "Shivan Dragon",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -4286,7 +4290,7 @@
       "name": "Stream of Life",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "lifegain",
         "mana_sink",
@@ -4341,7 +4345,7 @@
       "name": "Swords to Plowshares",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "lifegain",
         "removal",
@@ -5172,7 +5176,7 @@
       "name": "Wild Growth",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "stable_ramp"
       ],
@@ -5261,7 +5265,7 @@
       "name": "Wrath of God",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -13007,7 +13011,7 @@
       "name": "Shield Wall",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-21T17:43:18.829Z",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -18991,7 +18995,1740 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "e46b2ac6-97d6-48f2-aba3-cd92f8e092c6",
+      "name": "Aang, Air Nomad",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "a612bd38-069f-4bdc-9aa6-c172435e3841",
+      "name": "Ajani, Mentor of Heroes",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_selection",
+        "lifegain",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "lifegain",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "db5380ed-ba28-4ea2-abc3-4998e2022903",
+      "name": "Ancestral Mask",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "215215b8-6ddc-4e94-8640-6d324ff65f9c",
+      "name": "Appa, Aang's Companion",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "9971697b-2acc-4bc2-a44e-074d03a51df7",
+      "name": "Archangel",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "e32c0de7-132d-4a39-85fb-da0ed1132878",
+      "name": "Ascendant Evincar",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "c9048d35-aff7-45ae-ae97-db89397b3e74",
+      "name": "Avalanche Riders",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "land_denial",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "land_denial",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "69aa1ac7-17da-4fc9-a3dc-df8a52841f4a",
+      "name": "Bone Shredder",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "67aa946d-e694-494e-ba0c-44880d5bc03e",
+      "name": "Captain America, Living Legend",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "cdaab6b0-1a2d-4809-8e6b-56013acd8f78",
+      "name": "Cast Down",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "47437865-0032-4f47-b0ab-034cc841bb84",
+      "name": "Chandra's Outrage",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "5a0eb270-b142-45da-87a2-2f1c4e25db17",
+      "name": "Chandra's Spitfire",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "837c5d0e-0a33-4f9d-ae25-68a687bdf640",
+      "name": "Chrome Host Seedshark",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "33d2584b-bf29-4c22-bd45-14ba2fb98c0e",
+      "name": "Cloud, Midgar Mercenary",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "copy_support",
+        "multiplier_support",
+        "replacement_engine",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "copy_support",
+        "multiplier_support",
+        "replacement_engine",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "8512bd08-ecba-4e0e-b65c-8209764a65e5",
+      "name": "Cloud, Planet's Champion",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "cost_reduction",
+        "ramp",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "cost_reduction",
+        "ramp",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
+      "name": "Command Tower",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "28b46183-c62f-47b1-9fee-3ba148202cab",
+      "name": "Crop Rotation",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "6385fd0d-256d-4400-9319-afa8170024db",
+      "name": "Culling the Weak",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "ab4a25d8-e1d0-454e-9d06-f7960a0352bc",
+      "name": "Cunning Sparkmage",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "4893a301-29a8-4a0e-845c-8ddb5cb8db25",
+      "name": "Darksteel Juggernaut",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "artifact_support",
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "artifact_support",
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "9d3c7c96-056f-408e-a834-fa45a430d3d4",
+      "name": "Daxos, Blessed by the Sun",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "058917c1-21ab-488a-9f9c-591c55f3c596",
+      "name": "Diabolic Edict",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "33d405ea-7a9a-4970-b70f-9c05d90dd6f0",
+      "name": "Duress",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "hand_attack"
+      ],
+      "actualRoles": [
+        "hand_attack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "16e015b2-f8a3-4b1a-80be-58a8f5fb5e8c",
+      "name": "Frantic Search",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "10b8d4c7-7553-4d76-b643-d98b80701e13",
+      "name": "Gingerbrute",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "a311daab-40dc-4433-9ed8-feab7c558bbf",
+      "name": "Gishath, Sun's Avatar",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "selection",
+        "tutor"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "selection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "16d8ee99-8ec8-429f-9ba7-818a74b6f910",
+      "name": "Gush",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "0089b07c-7f47-4a9a-9fb7-cc38ec9d7bcd",
+      "name": "Harald, King of Skemfar",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "0fe01c7d-f435-44c1-82f1-0ec2c47d4704",
+      "name": "Heliod's Pilgrim",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "9f2e7533-cfc1-4dd8-a9b8-09cdc712ef2f",
+      "name": "Hulking Raptor",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "self_protection",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "self_protection",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "1f9efad1-9f51-47aa-a5a7-9c8103435a01",
+      "name": "Hypnotic Sprite // Mesmeric Glare",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "ee8e6ef3-eb96-48bd-8619-8a9112b3d4f0",
+      "name": "Iroh, Grand Lotus",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_selection",
+        "combat_body",
+        "recursion",
+        "repeatable_advantage",
+        "replay_recursion",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "recursion",
+        "repeatable_advantage",
+        "replay_recursion",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "name": "Jace Beleren",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "mill_support",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "mill_support",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "4a4dc133-541f-456b-a95f-3d707e1c95e9",
+      "name": "Jace, Memory Adept",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "mill_support",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "mill_support",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "b558541f-ae57-41f7-a5bd-e23fa35e68b4",
+      "name": "Jamuraan Lion",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "cb8d80c9-ed58-4f2d-aa8c-c383370c7f1a",
+      "name": "Kaalia of the Vast",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "cost_reduction",
+        "ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "884260cf-b3f3-43a4-82b6-4f6a0b19cc75",
+      "name": "Kuldotha Phoenix",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "fa71db44-5181-4c51-8b24-7fbedf36e3ca",
+      "name": "Lava Coil",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "removal",
+        "replacement_engine",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "replacement_engine",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "b50c2f63-750c-4cfc-8a74-5a7a3d9b46c4",
+      "name": "Lightning Hounds",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "e1626880-0fa3-441a-9978-b293fc87c418",
+      "name": "Lightning, Security Sergeant",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "92301066-8904-41bc-84bd-4aa286cbab9c",
+      "name": "Liliana of the Dark Realms",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "combat_support",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "scalable_spell",
+        "stable_ramp",
+        "tutor"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "combat_support",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "scalable_spell",
+        "stable_ramp",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "c112852f-61d5-4b94-b864-c7d0b5333b29",
+      "name": "Loki, God of Mischief",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "1a0770e6-b093-4439-baff-6889a50ba12e",
+      "name": "Mental Misstep",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "05e9b55e-6329-48ec-b7d7-24c6b9692244",
+      "name": "Nicol Bolas, Planeswalker",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "6ec7a7fb-0bf9-47fa-af2b-5b13b3af3947",
+      "name": "Parallax Dementia",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_support",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "4fb00dbe-1f82-4ba6-b18c-97e816d10d3a",
+      "name": "Patchwork Banner",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_support",
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "f1b7488c-c675-42e9-818a-24a50347ec2c",
+      "name": "Peter Parker // Amazing Spider-Man",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "7f32c581-4d4a-4873-8e4b-b95e13790481",
+      "name": "Phantasmal Dragon",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "e409c9be-0c9a-43c3-adb4-8c47afc1d551",
+      "name": "Phyrexian Rager",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "5cbb70e7-a52c-4b35-bc31-d9a0a7df893c",
+      "name": "Pyromancer's Gauntlet",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "8afc00d4-a1c6-4329-af2c-a7f58a0c33e7",
+      "name": "Ruin Crab",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "mill_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "e11926bf-ca14-4e1e-aca5-9ffedb91868c",
+      "name": "Sandbar Crocodile",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "ff50d002-834e-4b5e-8db0-b0c8b4efb21f",
+      "name": "Scent of Cinder",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "6af71c5a-2c1b-4120-b3c9-c3c70d94a5c9",
+      "name": "Sephiroth, Planet's Heir",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "name": "Shock",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "2a8e14be-6f93-428d-a204-e2399dc93797",
+      "name": "Shrieking Drake",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "a8c047fc-20a9-4c62-b8a6-9ead56d60ad0",
+      "name": "Shuri, Wakandan Inventor",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "artifact_support",
+        "combat_body",
+        "copy_support",
+        "cost_reduction",
+        "ramp"
+      ],
+      "actualRoles": [
+        "artifact_support",
+        "combat_body",
+        "copy_support",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "ec7eb7d8-92b2-4442-856e-a9790301c3b3",
+      "name": "Silver Drake",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "324824cb-f938-401c-b9b5-d8908b431ef0",
+      "name": "Snuff Out",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "229ecaa1-b3c9-44a1-8e7a-857ea5b8b0df",
+      "name": "Spider-Man, Miles Morales",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "05425f2f-7228-4bf5-8fe1-6fe99107e8e0",
+      "name": "Spined Wurm",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "a9d8ab76-70a4-475e-b87e-4737c090553a",
+      "name": "Sprite Dragon",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "09071f5f-c9cb-43a9-b41d-faf6caf3beff",
+      "name": "Staggering Insight",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "lifegain",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "lifegain",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "9352e742-9a22-4463-b41f-3117ff1540ed",
+      "name": "Talruum Champion",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "53542c79-a62a-4d6a-97db-5296e9c68302",
+      "name": "Tangled Florahedron // Tangled Vale",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "de595f1b-3f7d-45e0-a31b-ed23e5d1ee48",
+      "name": "The Goose Mother",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "direct_draw",
+        "draw",
+        "mana_sink",
+        "repeatable_draw",
+        "sacrifice_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "direct_draw",
+        "draw",
+        "mana_sink",
+        "repeatable_draw",
+        "sacrifice_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "9cdf840d-314e-46ef-9c04-74f145d9e65b",
+      "name": "Thorn Elemental",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "eb002bbc-08df-4bf0-bea3-46494ad261b6",
+      "name": "Turtle Lair",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_support",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "5a8e7e35-e9ea-4808-8aa7-7580a23b9d9d",
+      "name": "Ultimecia, Temporal Threat",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "a6eb06dc-a62d-4fdb-b336-e304d8d68c92",
+      "name": "Usher of the Fallen",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "09aeea91-b1dc-443f-a509-4758f052c0a7",
+      "name": "Voltaic Key",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "tap_untap",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "bae92332-1a0b-476b-8719-190e8d8cc03a",
+      "name": "Warmonger",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "42fb1a1c-ab3d-4cdc-a6ff-a591f7481583",
+      "name": "Warstorm Surge",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "a178a789-1f5f-46ca-a90b-574bd236a671",
+      "name": "Winged Boots",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "artifact_support",
+        "combat_support",
+        "equipment_protection",
+        "protection",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "artifact_support",
+        "combat_support",
+        "equipment_protection",
+        "protection",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "b166b670-febc-4821-855e-f8d465644c03",
+      "name": "Worn Powerstone",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "e84d146a-1c67-49df-b062-622794e45c42",
+      "name": "Zack Fair",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "protection",
+        "sacrifice_support",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "protection",
+        "sacrifice_support",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "7da0e5de-3e4c-420a-8685-991206100b9d",
+      "name": "Zetalpa, Primal Dawn",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "a534f06e-dae4-4d1a-96e9-7693bbb21e12",
+      "name": "Zhalfirin Knight",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
+    },
+    {
+      "oracleId": "f267fb54-1881-464c-81af-9e03c3f3b41d",
+      "name": "Zidane, Tantalus Thief",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "combat_body",
+        "donation_support",
+        "lifegain",
+        "mana_fixing",
+        "ramp",
+        "removal",
+        "tempo_removal",
+        "theft_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "combat_body",
+        "donation_support",
+        "lifegain",
+        "mana_fixing",
+        "ramp",
+        "removal",
+        "tempo_removal",
+        "theft_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit."
     }
   ]
 }
-

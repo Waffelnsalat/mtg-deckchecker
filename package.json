@@ -1,6 +1,6 @@
 {
   "name": "mtg-deckchecker",
-  "version": "0.4.15",
+  "version": "0.4.16",
   "description": "API for parsing EDH decklists and resolving cards via Scryfall.",
   "private": true,
   "main": "dist/server.js",

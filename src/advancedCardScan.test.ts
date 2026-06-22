@@ -1797,12 +1797,23 @@ test("inferAdvancedRoleProfile keeps Fallen Empires creature-only damage out of 
   const blazeProfile = inferAdvancedRoleProfile(
     createCard("Blaze", "Sorcery", 1, "Blaze deals X damage to any target.", { mana_cost: "{X}{R}" }),
   );
+  const fireballProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Fireball",
+      "Sorcery",
+      1,
+      "This spell costs {1} more to cast for each target beyond the first. Fireball deals X damage divided evenly, rounded down, among any number of targets.",
+      { mana_cost: "{X}{R}" },
+    ),
+  );
 
   assert.equal(getRoleWeight(farrelsZealotProfile, "direct_finisher"), 0);
   assert.equal(getRoleWeight(dwarvenCatapultProfile, "direct_finisher"), 0);
   assert.ok(getRoleWeight(dwarvenCatapultProfile, "removal") > 0);
   assert.ok(getRoleWeight(dwarvenCatapultProfile, "mass_removal") > 0);
   assert.ok(getRoleWeight(blazeProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(fireballProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(fireballProfile, "targeted_removal") > 0);
 });
 
 function createCard(
