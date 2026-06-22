@@ -487,6 +487,8 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
       text,
     ) &&
     !/\byou sacrifice\b/.test(text);
+  const delayedAuraEdict =
+    /\bwhen enchanted creature leaves the battlefield\b[^.]{0,140}\bits controller sacrifices a creature\b/.test(text);
   const targetedRemoval =
     /\b(?:destroy|exile)\b[^.]{0,120}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\btap target creature\b[\s\S]{0,140}\bexile that creature\b/.test(text) ||
@@ -494,6 +496,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\btarget permanent\b[^.]{0,120}\bshuffles? (?:it|itself) into (?:their|its) owner's library\b/.test(text) ||
     /\bthe owner of target permanent\b[^.]{0,120}\bshuffles? it into (?:their|its) library\b/.test(text) ||
     edictRemoval ||
+    delayedAuraEdict ||
     auraNeutralization ||
     targetedLandRemoval ||
     targetedWallRemoval ||
@@ -525,6 +528,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bnonwhite creatures get -\d+\/-\d+\b/.test(text) ||
     /\bcreatures your opponents control get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
     /\bcreatures your opponents control have base power and toughness 0\/1\b/.test(text) ||
+    /\bdeals? \d+ damage to each (?:white|blue|black|red|green)(?: and\/or (?:white|blue|black|red|green))? creature\b/.test(text) ||
     /\b(?:deals? (?:x|\d+) damage|deals? damage equal to [^.]{0,80}) to each (?:attacking )?creature\b/.test(text) ||
     massLandDenial;
   const tempoRemoval =
@@ -570,7 +574,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
       "targeted_removal",
       chosenRemoval
         ? 0.94
-        : edictRemoval
+        : edictRemoval || delayedAuraEdict
           ? 0.78
           : auraNeutralization || phaseOutRemoval
             ? 0.72
@@ -650,7 +654,8 @@ function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
     /\b(?:target player|target opponent|each opponent|your opponents)\b[^.]{0,160}\bcan'?t cast\b[^.]{0,120}\b(?:spells|noncreature spells|instant spells|sorcery spells)\b/.test(
       text,
     ) ||
-    /\bcan'?t cast noncreature spells\b/.test(text);
+    /\bcan'?t cast noncreature spells\b/.test(text) ||
+    /\bcreature spells can'?t be cast\b/.test(text);
 
   if (hardCounter || triggeredHardCounter) {
     addRole(profile, "stack", 0.9, "Advanced scan recognized a hard counterspell.");
@@ -675,6 +680,10 @@ function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
   if (castRestriction) {
     addRole(profile, "stack", 0.6, "Advanced scan recognized a spell-lock or casting restriction.");
     addRole(profile, "soft_stack", 0.68, "Advanced scan recognized a spell-lock or casting restriction.");
+    if (/\bcreature spells can'?t be cast\b/.test(text)) {
+      addRole(profile, "hate_piece", 0.58, "Advanced scan recognized a creature-spell lock as a hate piece.");
+      addRole(profile, "stax_piece", 0.62, "Advanced scan recognized a creature-spell lock.");
+    }
   }
 }
 
@@ -1229,6 +1238,7 @@ function detectAdvancedPurposeRoles(
     /\bwhenever a player casts\b[^.]{0,80}\b(?:spell|enchantment spell)\b[^.]{0,80}\bcounter it\b/.test(text) ||
     /\blegendary creatures don'?t untap during their controllers'? untap steps\b/.test(text) ||
     /\bcreatures without flying don't untap during their controllers'? untap steps\b/.test(text) ||
+    /\bcreatures of the chosen type don't untap during their controllers'? untap steps\b/.test(text) ||
     /\b(?:plains|islands|swamps|mountains|forests)\b[^.]{0,120}\bdon't untap during their controllers'? untap steps\b/.test(text)
   ) {
     addRole(profile, "hate_piece", 0.58, "Advanced scan recognized a spell or untap lock as a hate piece.");
@@ -1287,6 +1297,7 @@ function detectAdvancedPurposeRoles(
     /\btarget creature blocks this turn if able\b/.test(text) ||
     /\btarget creature defending player controls can block any number of creatures\b/.test(text) ||
     /\bcreatures without flying don't untap during their controllers'? untap steps\b/.test(text) ||
+    /\bcreatures of the chosen type don't untap during their controllers'? untap steps\b/.test(text) ||
     /\ball creatures able to block enchanted creature do so\b/.test(text) ||
     /\btarget creature attacks target opponent this turn if able\b/.test(text) ||
     /\b(?:target creature|creature you control|equipped creature|enchanted creature)\b[^.]{0,140}\bgets? (?:\+\d+\/\+\d+|\+x\/\+x)\b/.test(text) ||
@@ -1317,11 +1328,16 @@ function detectAdvancedPurposeRoles(
       text,
     ) ||
     /\beach nontoken permanent\b[^.]{0,120}\bis sacrificed by its controller\b/.test(text) ||
-    /\b(?:blue creatures|creatures with power \d+ or greater) don't untap during (?:their|their controllers'?) untap steps\b/.test(text) ||
+    /\b(?:blue creatures|creatures with power \d+ or greater|creatures of the chosen type) don't untap during (?:their|their controllers'?) untap steps\b/.test(text) ||
     /\bspells you control can'?t be countered\b/.test(text) ||
     /\btarget player puts all the cards from their graveyard on the bottom of their library\b/.test(text)
   ) {
     addRole(profile, "hate_piece", 0.72, "Advanced scan recognized a hate or tax piece.");
+  }
+
+  if (/\btarget player loses all poison counters\b/.test(text)) {
+    addRole(profile, "poison_hate", 0.34, "Advanced scan recognized poison-counter removal.");
+    addRole(profile, "hate_piece", 0.24, "Advanced scan recognized poison-counter removal as narrow hate.");
   }
 
   if (

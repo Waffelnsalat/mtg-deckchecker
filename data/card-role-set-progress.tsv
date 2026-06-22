@@ -22,7 +22,7 @@ bchr	Chronicles Foreign Black Border	1995-07-01	masters	125	false	pending	0			fa
 chr	Chronicles	1995-07-01	masters	125	false	pending	0			false	
 ren	Renaissance	1995-08-01	masters	122	false	pending	0			false	
 rin	Rinascimento	1995-08-01	masters	69	false	pending	0			false	
-hml	Homelands	1995-10-01	expansion	140	false	pending	0			false	
+hml	Homelands	1995-10-01	expansion	140	false	done	115	115	0	true	data/card-role-worksheets/hml-role-review.tsv
 o90p	Oversized 90's Promos	1996-04-01	memorabilia	10	false	pending	0			false	
 ptc	Pro Tour Collector Set	1996-05-01	memorabilia	308	false	pending	0			false	
 all	Alliances	1996-06-10	expansion	199	false	pending	0			false	

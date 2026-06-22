@@ -1917,6 +1917,47 @@ test("inferAdvancedRoleProfile recognizes Ice Age control, snow, and Aura utilit
   assert.ok(getRoleWeight(arcanixProfile, "damage_engine") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Homelands lock, poison, and delayed edict wording", () => {
+  const leechesProfile = inferAdvancedRoleProfile(
+    createCard("Leeches", "Sorcery", 3, "Target player loses all poison counters. Leeches deals that much damage to that player."),
+  );
+  const aetherStormProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Aether Storm",
+      "Enchantment",
+      4,
+      "Creature spells can't be cast. Pay 4 life: Destroy this enchantment. It can't be regenerated. Any player may activate this ability.",
+    ),
+  );
+  const funeralMarchProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Funeral March",
+      "Enchantment - Aura",
+      3,
+      "Enchant creature. When enchanted creature leaves the battlefield, its controller sacrifices a creature of their choice.",
+    ),
+  );
+  const ruinsProfile = inferAdvancedRoleProfile(
+    createCard(
+      "An-Zerrin Ruins",
+      "Enchantment",
+      4,
+      "As this enchantment enters, choose a creature type. Creatures of the chosen type don't untap during their controllers' untap steps.",
+    ),
+  );
+  const evaporateProfile = inferAdvancedRoleProfile(
+    createCard("Evaporate", "Sorcery", 3, "Evaporate deals 1 damage to each white and/or blue creature."),
+  );
+
+  assert.ok(getRoleWeight(leechesProfile, "poison_hate") > 0);
+  assert.ok(getRoleWeight(aetherStormProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(aetherStormProfile, "soft_stack") > 0);
+  assert.ok(getRoleWeight(funeralMarchProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(ruinsProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(ruinsProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(evaporateProfile, "mass_removal") > 0);
+});
+
 test("inferAdvancedRoleProfile keeps Fallen Empires creature-only damage out of direct finishers", () => {
   const farrelsZealotProfile = inferAdvancedRoleProfile(
     createCard(

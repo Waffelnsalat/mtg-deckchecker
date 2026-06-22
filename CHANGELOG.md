@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.4.18 - 2026-06-22
+
+### Neu
+
+- Homelands (`hml`) wurde vollstaendig als `covered` in das Card-Role-Audit importiert.
+- Die komplette Namensliste fuer `hml` wurde unter `data/card-name-lists/hml-card-names.txt` angelegt.
+- Neue Website-Pruefdateien fuer Homelands dokumentieren Poison-Hate, Creature-Spell-Locks, delayed Edict Auras, Type-Untap-Locks und farbbasierte Kleinsweeper.
+- Der Advanced Scanner erkennt weitere Homelands-Formulierungen fuer `Leeches`, `Aether Storm`, `Funeral March`, `An-Zerrin Ruins` und `Evaporate`.
+- Fortschritt und Namenslisten wurden aktualisiert; 12 Editionen sind abgeschlossen.
+
+### Validierung
+
+- `npm test -- --run src/advancedCardScan.test.ts`
+- `npm run audit:cards -- worksheet hml`
+- `npm run audit:cards -- import-worksheet hml`
+- `npm run audit:cards -- progress`
+- `npm run audit:cards -- names hml`
+- `npm run audit:cards -- set hml`
+
 ## 0.4.17 - 2026-06-22
 
 ### Neu
