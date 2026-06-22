@@ -16895,6 +16895,2103 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by HarperPrism Book Promos role audit."
+    },
+    {
+      "oracleId": "0897adea-2759-40e8-a05a-c722473e1cf3",
+      "name": "Aeolipile",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "35453c9e-e1ae-4fe9-926d-75724deb0555",
+      "name": "Armor Thrull",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "45a40b4c-1d37-4d87-adf1-abf0ea4c86b4",
+      "name": "Balm of Restoration",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "lifegain",
+        "protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "9da50130-3f83-4968-983c-7dcba257cf1b",
+      "name": "Basal Thrull",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "combat_body",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "combat_body",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "e43413e4-be17-49af-978a-26210d05f52a",
+      "name": "Bottomless Vault",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "c8ce324f-aa58-48f9-9f56-435e49dfff0a",
+      "name": "Brassclaw Orcs",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "ddc83b35-cf7c-495b-bd30-e409b622e299",
+      "name": "Breeding Pit",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "541b7b2f-7bb0-4858-8dc5-6e50de443c33",
+      "name": "Combat Medic",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "b019cc20-d32d-4cdf-80cc-eafb3f78db88",
+      "name": "Conch Horn",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "d1aba343-d85a-4829-bdfe-db31fcb3c320",
+      "name": "Deep Spawn",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "mill_support",
+        "sacrifice_support",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mill_support",
+        "sacrifice_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "8af33199-d3ad-44fe-8ee0-abbe36a2278b",
+      "name": "Delif's Cone",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "3106ba15-08d7-474c-a384-6848b713ba8d",
+      "name": "Delif's Cube",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support",
+        "counter_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "counter_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "43f2969e-46eb-4fd4-8b2d-ff81aafcc24a",
+      "name": "Derelor",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "0880b36a-6141-4955-b532-cf88daca0869",
+      "name": "Draconian Cylix",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "5bbd27b1-0afd-4d98-a73c-c348c8f08625",
+      "name": "Dwarven Armorer",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "2aae77ed-1a91-41f5-8dc2-e353d63a7586",
+      "name": "Dwarven Catapult",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "mana_sink",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "4a6625bd-3dd2-45f1-8dc9-034c833fa90c",
+      "name": "Dwarven Hold",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "06e18c42-d158-494d-979c-c2ac074a8ee3",
+      "name": "Dwarven Lieutenant",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "cbef6ad5-717f-4b02-9c62-e5deba407ad1",
+      "name": "Dwarven Ruins",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "88f9075c-ea96-4f8d-b0d1-e5e244e824c1",
+      "name": "Dwarven Soldier",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "0501af1f-c67c-4cb1-aced-4be426c83316",
+      "name": "Ebon Praetor",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "4d4b9512-d29d-4b99-9249-d37e1199a1f5",
+      "name": "Ebon Stronghold",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "29f34e18-2102-4ded-912f-4ac3e9e6744c",
+      "name": "Elven Fortress",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "7601378d-42cb-4351-8316-8f78a3b49a85",
+      "name": "Elven Lyre",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "91fe1075-e170-4575-ae28-8d692f051637",
+      "name": "Elvish Farmer",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "lifegain",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "lifegain",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "49b351d8-8b63-4f9e-a323-344ed35fdfff",
+      "name": "Elvish Hunter",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "d39a492e-a599-4283-bfc1-8e99065a9303",
+      "name": "Elvish Scout",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "ffae3ff4-67f7-4e41-b166-c63f88c7aa08",
+      "name": "Farrel's Mantle",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "0d063c0e-66bc-4a9c-98aa-a381b9cea120",
+      "name": "Farrel's Zealot",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "3ee18e5f-3d12-489e-b337-29208caaed7a",
+      "name": "Farrelite Priest",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "ramp",
+        "sacrifice_support",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "sacrifice_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "3953fd17-03f4-4431-99b5-87dcac5a279d",
+      "name": "Feral Thallid",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "fa76ee16-ff48-418b-819a-69f1139b36f3",
+      "name": "Fungal Bloom",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support"
+      ],
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "ea55db87-a5c3-49f7-b968-77510cdeb469",
+      "name": "Goblin Chirurgeon",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "014ca38f-d4ac-4417-bfa8-785a7d6fce43",
+      "name": "Goblin Flotilla",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "20aecb7b-7e37-4efe-ac27-f9f9042203f4",
+      "name": "Goblin Grenade",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "6efd11c8-be8a-4d44-a776-66d058638ad1",
+      "name": "Goblin Kites",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "coin_support",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "coin_support",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "29c21edd-781b-448e-824a-17bc8b8f4077",
+      "name": "Goblin War Drums",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "c1161505-1623-4475-a88e-2e48072cc2f1",
+      "name": "Goblin Warrens",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "af8eb20a-dfa2-49a4-892b-26d7e276fcd2",
+      "name": "Hand of Justice",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "18cbb47a-85b1-48f6-a024-8c3bbffa0d87",
+      "name": "Havenwood Battleground",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "74716642-fc8c-4f62-a556-154ed0b4af0e",
+      "name": "Heroism",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "dc671205-f2fa-454f-9957-921a6069ad53",
+      "name": "High Tide",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "burst_ramp"
+      ],
+      "actualRoles": [
+        "burst_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "3348df85-e61c-47b5-857d-c79befb38a8a",
+      "name": "Hollow Trees",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "5d02b0d9-cc53-4967-84bb-8b7f5c489b5c",
+      "name": "Homarid",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "137e3974-74e1-4941-8597-10aeba6cac37",
+      "name": "Homarid Shaman",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "173f2b8e-8072-4fdd-a469-8a1fb0bb6e64",
+      "name": "Homarid Spawning Bed",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "6facb0f6-fa49-4ce6-9f95-15bb3ce4bcf2",
+      "name": "Homarid Warrior",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "992d9a72-d34d-47d7-96fb-37f0efb515ef",
+      "name": "Hymn to Tourach",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "9eb274f3-ef55-4545-81b4-29454a48f075",
+      "name": "Icatian Infantry",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "26112ba7-2859-4af3-93c3-e62c31177216",
+      "name": "Icatian Javelineers",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "51e9af95-745b-45b9-b870-7f768578fa4f",
+      "name": "Icatian Lieutenant",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "9b81aa32-e0f7-493f-92b8-85c2c46aef91",
+      "name": "Icatian Moneychanger",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "a1160b8d-c4e4-4869-b7a5-c6a826eb1ba4",
+      "name": "Icatian Phalanx",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "3a9d29ce-e8e2-402f-b0c2-873f70418234",
+      "name": "Icatian Priest",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "b1a9f49a-b0e2-481f-806d-0bc321517a4f",
+      "name": "Icatian Scout",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "8ddbe82b-7fc9-4b2c-85de-dc747adbb3ca",
+      "name": "Icatian Skirmishers",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "87a0e0b9-6c2d-47a4-a3ed-7e0ae62fbffc",
+      "name": "Icatian Store",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "aa8b60b6-cf55-4aaa-9caa-2b17942d8269",
+      "name": "Icatian Town",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "token_support"
+      ],
+      "actualRoles": [
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "74558981-4226-4961-be33-0af867d0bdf2",
+      "name": "Implements of Sacrifice",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "0bf359ef-669f-41dc-8ab5-ba8e58b2f398",
+      "name": "Initiates of the Ebon Hand",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "ramp",
+        "sacrifice_support",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "sacrifice_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "b6b6e085-eef8-486d-9d66-1b7f1ee7d0dc",
+      "name": "Merseine",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support",
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "43abe1f3-7b92-411a-bf93-e158f949685c",
+      "name": "Mindstab Thrull",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "e6ab8a04-e225-4ff0-bb8b-c80d0e6ce50c",
+      "name": "Necrite",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "3165fe8f-52d7-40f7-bb14-8f4300a564e6",
+      "name": "Night Soil",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "token_support"
+      ],
+      "actualRoles": [
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "76c06de7-39ff-4b80-8e54-20910372cffd",
+      "name": "Orcish Captain",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "coin_support",
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "coin_support",
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "0d058991-3751-4afe-80c9-79f0c6e10282",
+      "name": "Orcish Spy",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "card_selection",
+        "combat_body",
+        "selection",
+        "topdeck_control"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "selection",
+        "topdeck_control"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "a3b66180-ee08-4bef-90aa-7859dc77cb10",
+      "name": "Orcish Veteran",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "d8f5279f-c58e-4560-9c68-77d226a3c86c",
+      "name": "Order of Leitbur",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "2f65f16f-c6c2-48f0-b556-63cf7d162000",
+      "name": "Order of the Ebon Hand",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "f6ea2b1b-1403-4ccd-a23c-48e0e81ceb91",
+      "name": "Orgg",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "1d9b8859-14e3-4bbe-ad92-916b25a37b31",
+      "name": "Raiding Party",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "76695b15-d0ba-41eb-85f1-52ba5d14b8ba",
+      "name": "Rainbow Vale",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "donation_support",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "donation_support",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "45964368-ea9e-415f-9faf-870c7bf550d4",
+      "name": "Ring of Renewal",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "2f503ee5-9180-438e-8af5-2af7f8f08a3a",
+      "name": "River Merfolk",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "ad7b610c-e276-4c71-9b53-1ccb6d2dafd2",
+      "name": "Ruins of Trokair",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "48a830f1-8965-4f97-b3d8-ca98eab1ba33",
+      "name": "Sand Silos",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "land_base",
+        "land_slot",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "13745b92-1e30-4075-9733-5d00da11408c",
+      "name": "Seasinger",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "donation_support",
+        "removal",
+        "sacrifice_support",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "donation_support",
+        "removal",
+        "sacrifice_support",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "366ea3b4-5e7e-4693-9f4b-1e549972609e",
+      "name": "Soul Exchange",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "counter_support",
+        "recursion"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "counter_support",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "db53fad4-03b8-47bb-9459-b1eb6cca961c",
+      "name": "Spirit Shield",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "36d55084-4696-4d16-ab3a-b00f1456603f",
+      "name": "Spore Cloud",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "f352ec62-bf09-45f2-b5b7-75931177b15f",
+      "name": "Spore Flower",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "fb7adbee-a3b0-42bf-988f-9d4faf6bd006",
+      "name": "Svyelunite Priest",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "5578cf33-62f5-456c-a58c-f744a25df79b",
+      "name": "Svyelunite Temple",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "46abaabe-7015-4d82-a5aa-2706b1f51bed",
+      "name": "Thallid",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "b7326fd9-7648-4db3-b506-61a7de8a4094",
+      "name": "Thallid Devourer",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "ff4ccf8d-7d3d-4a44-a9ab-6bc88e90d6a7",
+      "name": "Thelon's Chant",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "f6880f71-a05a-4752-ba33-ffbc450606bf",
+      "name": "Thelon's Curse",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "adbc8970-1bbc-4f30-9a2e-eebaf074eae6",
+      "name": "Thelonite Druid",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "26b0b742-48f7-4ab5-93de-6bd39a7f61ea",
+      "name": "Thelonite Monk",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "1239d3bf-06e8-4732-b1e2-f6eb145e5894",
+      "name": "Thorn Thallid",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "728f0a3f-722d-4936-ade8-31883499f56d",
+      "name": "Thrull Champion",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "donation_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "donation_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "81a47019-1343-4a63-893a-0d8ba5e848d5",
+      "name": "Thrull Retainer",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "3cae0e4b-1827-4ed2-832f-98f8e79941a5",
+      "name": "Thrull Wizard",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "soft_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "bf39d0f7-f689-45fd-b37b-12d1618fd6e7",
+      "name": "Tidal Flats",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "b1393388-b8b3-4c54-a086-f5e6d9908972",
+      "name": "Tidal Influence",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "bdf4e225-23b5-47d9-9936-ddcec8aa1ca4",
+      "name": "Tourach's Chant",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "03e27ebd-6141-4002-b41f-0bf9d6ec2908",
+      "name": "Tourach's Gate",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "f6daa28f-e5ce-440c-8dc2-b36f59ae0d4f",
+      "name": "Vodalian Knights",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "8dee4577-0315-4c9f-ab1c-0c68e2ab6a76",
+      "name": "Vodalian Mage",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "soft_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "0e3ac78c-8a98-4786-b86c-ecfe61e13c83",
+      "name": "Vodalian Soldiers",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "f72511b0-9993-4998-b646-65a855cb8170",
+      "name": "Vodalian War Machine",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "mass_removal",
+        "removal",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "mass_removal",
+        "removal",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
+    },
+    {
+      "oracleId": "991038e0-f8d6-42e6-b8a2-3d77aae7a256",
+      "name": "Zelyon Sword",
+      "firstSet": "fem",
+      "releasedAt": "1994-11-01",
+      "reviewedAt": "2026-06-21T18:31:27.129Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Fallen Empires role audit."
     }
   ]
 }
+

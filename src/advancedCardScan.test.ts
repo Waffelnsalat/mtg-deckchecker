@@ -1776,6 +1776,35 @@ test("inferAdvancedRoleProfile recognizes The Dark mana conversion and creature 
   assert.ok(getRoleWeight(venomProfile, "targeted_removal") > 0);
 });
 
+test("inferAdvancedRoleProfile keeps Fallen Empires creature-only damage out of direct finishers", () => {
+  const farrelsZealotProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Farrel's Zealot",
+      "Creature - Human",
+      3,
+      "Whenever this creature attacks and isn't blocked, you may have it deal 3 damage to target creature. If you do, this creature assigns no combat damage this turn.",
+    ),
+  );
+  const dwarvenCatapultProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Dwarven Catapult",
+      "Instant",
+      1,
+      "Dwarven Catapult deals X damage divided evenly, rounded down, among all creatures target opponent controls.",
+      { mana_cost: "{X}{R}" },
+    ),
+  );
+  const blazeProfile = inferAdvancedRoleProfile(
+    createCard("Blaze", "Sorcery", 1, "Blaze deals X damage to any target.", { mana_cost: "{X}{R}" }),
+  );
+
+  assert.equal(getRoleWeight(farrelsZealotProfile, "direct_finisher"), 0);
+  assert.equal(getRoleWeight(dwarvenCatapultProfile, "direct_finisher"), 0);
+  assert.ok(getRoleWeight(dwarvenCatapultProfile, "removal") > 0);
+  assert.ok(getRoleWeight(dwarvenCatapultProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(blazeProfile, "direct_finisher") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

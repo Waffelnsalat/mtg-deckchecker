@@ -5,9 +5,9 @@
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 8,
+    "done": 9,
     "inProgress": 0,
-    "pending": 1035
+    "pending": 1034
   },
   "sets": [
     {
@@ -207,11 +207,12 @@
       "setType": "expansion",
       "cardCount": 187,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 102,
+      "totalUniqueOracleIds": 102,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/fem-role-review.tsv"
     },
     {
       "code": "pmei",

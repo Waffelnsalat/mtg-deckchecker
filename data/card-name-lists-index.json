@@ -3,7 +3,7 @@
   "generatedAt": "2026-06-21T18:04:27.907Z",
   "sourceSets": "data/scryfall-sets.json",
   "selector": "reviewed",
-  "setCount": 8,
+  "setCount": 9,
   "sets": [
     {
       "code": "lea",
@@ -92,6 +92,17 @@
       "printCount": 5,
       "uniqueNameCount": 5,
       "filePath": "data/card-name-lists/phpr-card-names.txt"
+    },
+    {
+      "code": "fem",
+      "name": "Fallen Empires",
+      "releasedAt": "1994-11-01",
+      "setType": "expansion",
+      "cardCount": 187,
+      "digital": false,
+      "printCount": 187,
+      "uniqueNameCount": 102,
+      "filePath": "data/card-name-lists/fem-card-names.txt"
     }
   ]
 }

@@ -862,14 +862,14 @@ function detectAdvancedFinisherRoles(
     /\bwhenever\b[^.]{0,120}\battacks\b[^.]{0,160}\beach opponent loses\b/.test(text) ||
     /\bwhenever\b[^.]{0,120}\battacks\b[^.]{0,160}\bdeals? \d+ damage to each opponent\b/.test(text);
   const attackTargetedDamage =
-    /\bwhenever\b[^.]{0,120}\battacks\b[^.]{0,200}\bdeals? (?:x|\d+|that much) damage to (?:any (?:other )?target|target\b)/.test(
+    /\bwhenever\b[^.]{0,120}\battacks\b[^.]{0,200}\bdeals? (?:x|\d+|that much) damage to (?:any (?:other )?target|target (?:player|opponent)|each opponent)\b/.test(
       text,
     ) ||
-    /\bwhenever this permanent enters or attacks\b[^.]{0,200}\bdeals? (?:x|\d+|that much) damage to (?:any (?:other )?target|target\b)/.test(
+    /\bwhenever this permanent enters or attacks\b[^.]{0,200}\bdeals? (?:x|\d+|that much) damage to (?:any (?:other )?target|target (?:player|opponent)|each opponent)\b/.test(
       text,
     );
   const damageReflection =
-    /\bwhenever\b[^.]{0,160}\bis dealt damage\b[^.]{0,200}\bdeals? that much damage to (?:any (?:other )?target|target\b)/.test(
+    /\bwhenever\b[^.]{0,160}\bis dealt damage\b[^.]{0,200}\bdeals? that much damage to (?:any (?:other )?target|target (?:player|opponent)|each opponent)\b/.test(
       text,
     );
   const scalableTargetDamage =
@@ -1392,14 +1392,19 @@ function detectAdvancedScalableSpellRoles(
     );
   }
 
-  if (hasXDamageText(text)) {
+  if (hasXDamageText(text) && hasXPlayerDamageText(text)) {
     addRole(profile, "finisher", 0.74, "Advanced scan recognized scalable X damage as a mana-sink finisher.");
     addRole(profile, "direct_finisher", 0.76, "Advanced scan recognized scalable X damage as a mana-sink finisher.");
+  }
 
-    if (hasXTargetedDamageText(text)) {
-      addRole(profile, "removal", 0.66, "Advanced scan recognized scalable X damage as battlefield interaction.");
-      addRole(profile, "targeted_removal", 0.62, "Advanced scan recognized scalable X damage as battlefield interaction.");
-    }
+  if (hasXDamageText(text) && hasXTargetedDamageText(text)) {
+    addRole(profile, "removal", 0.66, "Advanced scan recognized scalable X damage as battlefield interaction.");
+    addRole(profile, "targeted_removal", 0.62, "Advanced scan recognized scalable X damage as battlefield interaction.");
+  }
+
+  if (hasXDamageText(text) && hasXCreatureDamageText(text)) {
+    addRole(profile, "removal", 0.66, "Advanced scan recognized scalable X creature damage as battlefield interaction.");
+    addRole(profile, "mass_removal", 0.6, "Advanced scan recognized scalable X creature damage as broad battlefield interaction.");
   }
 
   if (hasXLifeLossText(text)) {
@@ -1553,6 +1558,18 @@ function hasXTargetedDamageText(text: string) {
   return (
     /\bdeals? (?:\w+\s+times\s+)?x damage to (?:any (?:other )?target|target\b|each of up to x targets?)\b/.test(text) ||
     /\bdeals? (?:\w+\s+times\s+)?x damage divided as you choose\b/.test(text)
+  );
+}
+
+function hasXPlayerDamageText(text: string) {
+  return /\bdeals? (?:\w+\s+times\s+)?x damage\b[^.]{0,120}\b(?:any target|target player|target opponent(?! controls)|each (?:player|opponent)|each opponent)\b/.test(
+    text,
+  );
+}
+
+function hasXCreatureDamageText(text: string) {
+  return /\bdeals? (?:\w+\s+times\s+)?x damage\b[^.]{0,160}\b(?:target creature|all creatures|each creature|creatures target opponent controls|creatures? [^.]{0,80} controls)\b/.test(
+    text,
   );
 }
 

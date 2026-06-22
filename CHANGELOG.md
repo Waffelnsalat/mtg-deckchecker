@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.4.15 - 2026-06-21
+
+### Neu
+
+- Fallen Empires (`fem`) wurde vollstaendig als `covered` in das Card-Role-Audit importiert.
+- Die komplette Namensliste fuer Fallen Empires wurde unter `data/card-name-lists/fem-card-names.txt` angelegt.
+- Neue Website-Pruefdateien fuer Fallen Empires dokumentieren die wichtigsten erwarteten Rollen.
+- Der Advanced Scanner unterscheidet skalierbaren Kreaturen-Schaden jetzt sauber von Direct-Finisher-Schaden.
+- `Farrel's Zealot` bleibt dadurch Removal statt Direct Finisher; `Dwarven Catapult` wird als Scalable Spell/Mass Removal statt Direct Finisher gelesen.
+- Fortschritt und Namenslisten wurden aktualisiert; 9 Editionen sind abgeschlossen.
+
+### Validierung
+
+- `npm test -- --test-name-pattern "Fallen Empires|creature-only damage"`
+- `npm run audit:cards -- worksheet fem`
+- Lokaler Ledger-/Progress-/Namenslisten-Abgleich aus `data/card-role-worksheets/fem-role-review.tsv`
+- `npm run check`
+
 ## 0.4.14 - 2026-06-21
 
 ### Neu
