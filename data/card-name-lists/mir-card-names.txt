@@ -1,0 +1,335 @@
+Afterlife
+Alarum
+Auspicious Ancestor
+Benevolent Unicorn
+Blinding Light
+Celestial Dawn
+Civic Guildmage
+Dazzling Beauty
+Disempower
+Disenchant
+Divine Offering
+Divine Retribution
+Ekundu Griffin
+Enlightened Tutor
+Ethereal Champion
+Favorable Destiny
+Femeref Healer
+Femeref Knight
+Femeref Scouts
+Healing Salve
+Illumination
+Iron Tusk Elephant
+Ivory Charm
+Jabari's Influence
+Mangara's Blessing
+Mangara's Equity
+Melesse Spirit
+Mtenda Griffin
+Mtenda Herder
+Noble Elephant
+Null Chamber
+Pacifism
+Pearl Dragon
+Prismatic Circle
+Rashida Scalebane
+Ritual of Steel
+Sacred Mesa
+Shadowbane
+Sidar Jabari
+Soul Echo
+Spectral Guardian
+Sunweb
+Teremko Griffin
+Unyaro Griffin
+Vigilant Martyr
+Wall of Resistance
+Ward of Lights
+Yare
+Zhalfirin Commander
+Zhalfirin Knight
+Zuberi, Golden Feather
+Ancestral Memories
+Azimaet Drake
+Bay Falcon
+Bazaar of Wonders
+Boomerang
+Cerulean Wyvern
+Cloak of Invisibility
+Coral Fighters
+Daring Apprentice
+Dissipate
+Dream Cache
+Dream Fighter
+Energy Vortex
+Ether Well
+Flash
+Floodgate
+Hakim, Loreweaver
+Harmattan Efreet
+Jolt
+Kukemssa Pirates
+Kukemssa Serpent
+Meddle
+Memory Lapse
+Merfolk Raiders
+Merfolk Seer
+Mind Bend
+Mind Harness
+Mist Dragon
+Mystical Tutor
+Political Trickery
+Polymorph
+Power Sink
+Prismatic Lace
+Psychic Transfer
+Ray of Command
+Reality Ripple
+Sandbar Crocodile
+Sapphire Charm
+Sea Scryer
+Shaper Guildmage
+Shimmer
+Soar
+Suq'Ata Firewalker
+Taniwha
+Teferi's Curse
+Teferi's Drake
+Teferi's Imp
+Thirst
+Tidal Wave
+Vaporous Djinn
+Wave Elemental
+Abyssal Hunter
+Ashen Powder
+Barbed-Back Wurm
+Binding Agony
+Blighted Shaman
+Bone Harvest
+Breathstealer
+Cadaverous Knight
+Carrion
+Catacomb Dragon
+Choking Sands
+Crypt Cobra
+Dark Banishing
+Dark Ritual
+Dirtwater Wraith
+Drain Life
+Dread Specter
+Ebony Charm
+Enfeeblement
+Feral Shadow
+Fetid Horror
+Forbidden Crypt
+Forsaken Wastes
+Grave Servitude
+Gravebane Zombie
+Harbinger of Night
+Infernal Contract
+Kaervek's Hex
+Mire Shade
+Nocturnal Raid
+Painful Memories
+Phyrexian Tribute
+Purraj of Urborg
+Ravenous Vampire
+Reign of Terror
+Restless Dead
+Sewer Rats
+Shadow Guildmage
+Shallow Grave
+Shauku, Endbringer
+Skulking Ghost
+Soul Rend
+Soulshriek
+Spirit of the Night
+Stupor
+Tainted Specter
+Tombstone Stairwell
+Urborg Panther
+Wall of Corpses
+Withering Boon
+Zombie Mob
+Agility
+Aleatory
+Armorer Guildmage
+Barreling Attack
+Blind Fury
+Blistering Barrier
+Builder's Bane
+Burning Palm Efreet
+Burning Shield Askari
+Chaos Charm
+Chaosphere
+Cinder Cloud
+Consuming Ferocity
+Crimson Hellkite
+Crimson Roc
+Dwarven Miner
+Dwarven Nomad
+Ekundu Cyclops
+Emberwilde Djinn
+Final Fortune
+Firebreathing
+Flame Elemental
+Flare
+Goblin Elite Infantry
+Goblin Scouts
+Goblin Soothsayer
+Goblin Tinkerer
+Hammer of Bogardan
+Hivis of the Scale
+Illicit Auction
+Incinerate
+Kaervek's Torch
+Lightning Reflexes
+Pyric Salamander
+Raging Spirit
+Reckless Embermage
+Reign of Chaos
+Searing Spear Askari
+Sirocco
+Spitting Earth
+Stone Rain
+Subterranean Spirit
+Talruum Minotaur
+Telim'Tor
+Telim'Tor's Edict
+Torrent of Lava
+Viashino Warrior
+Volcanic Dragon
+Volcanic Geyser
+Wildfire Emissary
+Zirilan of the Claw
+Afiya Grove
+Armor of Thorns
+Barbed Foliage
+Brushwagg
+Canopy Dragon
+Crash of Rhinos
+Cycle of Life
+Decomposition
+Early Harvest
+Fallow Earth
+Femeref Archers
+Fog
+Foratog
+Giant Mantis
+Gibbering Hyenas
+Granger Guildmage
+Hall of Gemstone
+Jolrael's Centaur
+Jungle Patrol
+Jungle Wurm
+Karoo Meerkat
+Locust Swarm
+Lure of Prey
+Maro
+Mindbender Spores
+Mtenda Lion
+Natural Balance
+Nettletooth Djinn
+Preferred Selection
+Quirion Elves
+Rampant Growth
+Regeneration
+Roots of Life
+Sabertooth Cobra
+Sandstorm
+Seedling Charm
+Seeds of Innocence
+Serene Heart
+Stalking Tiger
+Superior Numbers
+Tranquil Domain
+Tropical Storm
+Uktabi Faerie
+Uktabi Wildcats
+Unseen Walker
+Unyaro Bee Sting
+Village Elder
+Waiting in the Weeds
+Wall of Roots
+Wild Elephant
+Worldly Tutor
+Asmira, Holy Avenger
+Benthic Djinn
+Cadaverous Bloom
+Circle of Despair
+Delirium
+Discordant Spirit
+Emberwilde Caliph
+Energy Bolt
+Frenetic Efreet
+Grim Feast
+Harbor Guardian
+Haunting Apparition
+Hazerider Drake
+Jungle Troll
+Kaervek's Purge
+Leering Gargoyle
+Malignant Growth
+Phyrexian Purge
+Prismatic Boon
+Purgatory
+Radiant Essence
+Reflect Damage
+Reparations
+Rock Basilisk
+Savage Twister
+Sawback Manticore
+Sealed Fate
+Shauku's Minion
+Spatial Binding
+Unfulfilled Desires
+Vitalizing Cascade
+Warping Wurm
+Wellspring
+Windreaper Falcon
+Zebra Unicorn
+Acidic Dagger
+Amber Prison
+Amulet of Unmaking
+Basalt Golem
+Bone Mask
+Charcoal Diamond
+Chariot of the Sun
+Crystal Golem
+Cursed Totem
+Elixir of Vitality
+Ersatz Gnomes
+Fire Diamond
+Grinning Totem
+Horrible Hordes
+Igneous Golem
+Lead Golem
+Lion's Eye Diamond
+Mana Prism
+Mangara's Tome
+Marble Diamond
+Misers' Cage
+Moss Diamond
+Patagia Golem
+Paupers' Cage
+Phyrexian Dreadnought
+Phyrexian Vault
+Razor Pendulum
+Sand Golem
+Sky Diamond
+Teeka's Dragon
+Telim'Tor's Darts
+Unerring Sling
+Ventifact Bottle
+Bad River
+Crystal Vein
+Flood Plain
+Grasslands
+Mountain Valley
+Rocky Tar Pit
+Teferi's Isle
+Plains
+Island
+Swamp
+Mountain
+Forest

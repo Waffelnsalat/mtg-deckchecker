@@ -1308,7 +1308,7 @@ function isActualDrawSentence(sentence: string) {
   }
 
   if (
-    /\btarget opponent may draw\b/.test(sentence) &&
+    /\b(?:target opponent|defending player|that player|its controller) may draw\b/.test(sentence) &&
     !/\byou (?:may )?draw\b|\beach player (?:may )?draws?\b/.test(sentence)
   ) {
     return false;

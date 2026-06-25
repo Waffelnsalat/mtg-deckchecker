@@ -1041,7 +1041,7 @@
       "name": "Dark Ritual",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "burst_ramp",
         "ramp"
@@ -1201,7 +1201,7 @@
       "name": "Disenchant",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -1284,7 +1284,7 @@
       "name": "Drain Life",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
@@ -1304,7 +1304,8 @@
         "targeted_removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
     },
     {
       "oracleId": "0669172d-396b-4f5a-9703-129c5c849b55",
@@ -1599,7 +1600,7 @@
       "name": "Firebreathing",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -1607,7 +1608,8 @@
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
     },
     {
       "oracleId": "c281f436-8c77-48f7-b31c-d40cd7f9ed6a",
@@ -1655,7 +1657,7 @@
       "name": "Fog",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "broad_protection",
         "combat_support",
@@ -1667,7 +1669,8 @@
         "protection"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
     },
     {
       "oracleId": "e3c4c27d-f263-4c69-a4fe-2928136ff68b",
@@ -1708,7 +1711,7 @@
       "name": "Forest",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -1997,7 +2000,7 @@
       "name": "Healing Salve",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "lifegain",
         "protection",
@@ -2009,7 +2012,8 @@
         "targeted_protection"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
     },
     {
       "oracleId": "948e3bb7-8265-4e95-acd1-a0c4f22441df",
@@ -2317,7 +2321,7 @@
       "name": "Island",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -3403,7 +3407,7 @@
       "name": "Plains",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -3461,7 +3465,7 @@
       "name": "Power Sink",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "mana_sink",
         "scalable_spell",
@@ -3641,7 +3645,7 @@
       "name": "Regeneration",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "protection",
         "regeneration_protection",
@@ -4294,7 +4298,7 @@
       "name": "Stone Rain",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "land_denial",
         "removal",
@@ -4350,7 +4354,7 @@
       "name": "Swamp",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -6448,7 +6452,7 @@
       "name": "Mountain",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -6672,7 +6676,7 @@
       "name": "Sandstorm",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -9232,7 +9236,7 @@
       "name": "Boomerang",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-21T17:43:18.829Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "removal",
         "tempo_removal"
@@ -9794,7 +9798,7 @@
       "name": "Divine Offering",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-21T17:43:18.829Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "lifegain",
         "removal",
@@ -20142,7 +20146,7 @@
       "name": "Sandbar Crocodile",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "combat_body",
         "replacement_engine"
@@ -20730,7 +20734,7 @@
       "name": "Zhalfirin Knight",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -21930,7 +21934,7 @@
       "name": "Dark Banishing",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -22486,7 +22490,7 @@
       "name": "Flare",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "card_draw",
         "direct_draw",
@@ -23708,7 +23712,7 @@
       "name": "Incinerate",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -25698,7 +25702,7 @@
       "name": "Ray of Command",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "combat_support",
         "tap_untap",
@@ -29082,7 +29086,7 @@
       "name": "Memory Lapse",
       "firstSet": "hml",
       "releasedAt": "1995-10-01",
-      "reviewedAt": "2026-06-22T21:59:07.801Z",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
       "expectedRoles": [
         "hard_stack",
         "stack"
@@ -33040,6 +33044,6228 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Celebration Cards role audit."
+    },
+    {
+      "oracleId": "b96ccc2f-88e5-4522-924e-76fc76dc3b39",
+      "name": "Abyssal Hunter",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "bf034a20-e362-4f38-9bf9-857777c62598",
+      "name": "Acidic Dagger",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "056a98aa-f3f7-4ac9-9755-3e8a60a59abb",
+      "name": "Afiya Grove",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "4c13e2b5-961a-4031-84b1-15bd19b94286",
+      "name": "Afterlife",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0f5f8b47-d104-4e29-b052-02d730d76ec0",
+      "name": "Agility",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "18e96674-6fd8-4046-a3fe-7ba80138d85d",
+      "name": "Alarum",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "da4cab2d-0068-440f-ba7c-f2d4e5fa976e",
+      "name": "Aleatory",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "coin_support",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "coin_support",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "1c69fdcf-ba87-480a-88df-70aa4ec9fff0",
+      "name": "Amber Prison",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "945d5351-ce7d-488c-bc63-269ad82b74cb",
+      "name": "Amulet of Unmaking",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "95a2802a-2621-40c3-84f8-51e8aad7b6f0",
+      "name": "Ancestral Memories",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_selection"
+      ],
+      "actualRoles": [
+        "card_selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "31ead5a5-aa01-4601-8d3e-267b65fce3bb",
+      "name": "Armor of Thorns",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "7b75b74c-6003-4b34-bae3-2c9e2f880042",
+      "name": "Armorer Guildmage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "d906965a-0f33-4d75-8abe-66f2cf4817b8",
+      "name": "Ashen Powder",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "theft_support"
+      ],
+      "actualRoles": [
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a0397f06-d557-4c9f-af89-238ab38ada3e",
+      "name": "Asmira, Holy Avenger",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "82fb9834-de65-41a5-b908-f49668dee3ec",
+      "name": "Auspicious Ancestor",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a82d9c9b-ec17-4f51-a6bf-5984ca4433e5",
+      "name": "Azimaet Drake",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "259fc423-d078-4668-9e95-8c1a0d2e49ba",
+      "name": "Bad River",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f9275c99-0616-44b3-a19e-98c683e87ad3",
+      "name": "Barbed Foliage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "d60cbdf0-f20f-4306-be6b-eed90d2a2f77",
+      "name": "Barbed-Back Wurm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f44eab45-8ff9-40eb-9919-28fe5203fc48",
+      "name": "Barreling Attack",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9155f78e-0ccc-4e08-ae79-ef5b2db1183f",
+      "name": "Basalt Golem",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "709e99f1-288b-49e0-80a1-f817b457a2cf",
+      "name": "Bay Falcon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "7fca65b8-01fe-4858-97c6-f97ae82cd801",
+      "name": "Bazaar of Wonders",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "graveyard_hate",
+        "hard_stack",
+        "hate_piece",
+        "stack",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "graveyard_hate",
+        "hard_stack",
+        "hate_piece",
+        "stack",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b437c963-def5-40d6-b567-ae9f1d2a0fa5",
+      "name": "Benevolent Unicorn",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "7e8d40fd-c324-4ec2-897d-b46368b050e6",
+      "name": "Benthic Djinn",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "dcd41ed1-4a12-416b-8ba0-51a9c0927ddb",
+      "name": "Binding Agony",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "damage_engine",
+        "damage_reflection"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "damage_reflection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2f14e92d-307f-4854-b7ec-a2f6ce03dced",
+      "name": "Blighted Shaman",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5dbfd316-a0a9-4caa-99b1-069931d2aaa4",
+      "name": "Blind Fury",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6b315dc3-c330-4b30-b6ad-4da12ccf6ca3",
+      "name": "Blinding Light",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8783533d-dd98-4b80-b348-29051e1b5c28",
+      "name": "Blistering Barrier",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0cc38d20-5ae8-413a-9f26-ff13cd92f24c",
+      "name": "Bone Harvest",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "library_recursion",
+        "mass_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "library_recursion",
+        "mass_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ddfc7dac-f921-4529-935c-6c588890c522",
+      "name": "Bone Mask",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "17d18e2f-2d8d-449e-9356-a7351bf0f8c2",
+      "name": "Breathstealer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "33a981ac-878d-4257-936f-55b4e6543c12",
+      "name": "Brushwagg",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "814adb99-6100-4c36-96d9-763bc20dca5d",
+      "name": "Builder's Bane",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mana_sink",
+        "mass_recursion",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "mass_recursion",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "55cbc0e8-eeec-433a-b70c-3501238b658b",
+      "name": "Burning Palm Efreet",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "042fd95a-5e85-4ce5-bb68-066a295c54fb",
+      "name": "Burning Shield Askari",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "fbb0f73b-5e30-4632-99c1-e49582e41f8d",
+      "name": "Cadaverous Bloom",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "250a027f-2b3e-4eaf-899a-a9da8be20070",
+      "name": "Cadaverous Knight",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a9e59ee4-02a6-498c-82f0-f4f2ff334d65",
+      "name": "Canopy Dragon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "84ca8d74-95ec-4a9c-8793-7a195ad28be9",
+      "name": "Carrion",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a5e9f72b-7628-4265-8b43-592a0bf678b3",
+      "name": "Catacomb Dragon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b4d27fad-9a94-4760-80a6-6a2948109864",
+      "name": "Celestial Dawn",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "7a7f37a3-9e99-4d3d-b705-b074fb3e9b3e",
+      "name": "Cerulean Wyvern",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b81e5dbd-47a5-4994-91b7-e2a50c8e098d",
+      "name": "Chaos Charm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ed01d5d7-8f34-47b3-9ca8-d82c242d38b4",
+      "name": "Chaosphere",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "1386d111-a2a7-4df1-91d7-947664126989",
+      "name": "Charcoal Diamond",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b0af249d-9255-42f5-bafc-ac61ee281930",
+      "name": "Chariot of the Sun",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3bcb7436-f7d9-4bb0-81be-7a3db9d8329f",
+      "name": "Choking Sands",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f64ea1a7-0e10-4549-8056-25ebc2ce0175",
+      "name": "Cinder Cloud",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "4ad57fbf-69f3-4367-b061-ed8e0b83b9af",
+      "name": "Circle of Despair",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6e93cb9a-44c8-49fb-b6a7-bfdf7bd725fe",
+      "name": "Civic Guildmage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "68b06917-7f83-47d4-a466-4e6698cae56d",
+      "name": "Cloak of Invisibility",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8efbe68c-622c-4986-a375-7e0bf780eb2e",
+      "name": "Consuming Ferocity",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8a397a64-542f-43fb-bf54-27ac651e1819",
+      "name": "Coral Fighters",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b2d7251e-2848-4b85-8d99-7c43be163dfb",
+      "name": "Crash of Rhinos",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "37a1f340-10d5-407e-bf2b-cbbbb6cab985",
+      "name": "Crimson Hellkite",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "acc7d3b8-60f2-4f3b-9cf9-b6b39627d8f6",
+      "name": "Crimson Roc",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "456bbc0e-a648-481f-b37e-9996029556bd",
+      "name": "Crypt Cobra",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "alternate_finisher",
+        "combat_body",
+        "combat_support",
+        "finisher"
+      ],
+      "actualRoles": [
+        "alternate_finisher",
+        "combat_body",
+        "combat_support",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "82246ef2-4267-4daf-9463-908c2e142e7d",
+      "name": "Crystal Golem",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "616d6013-24f4-4999-9bf3-5b0764e52fa6",
+      "name": "Crystal Vein",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6225a704-430a-4f56-ad87-0e8d87f285f5",
+      "name": "Cursed Totem",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5941374b-eeb8-4d0e-9367-f7f0f8b79739",
+      "name": "Cycle of Life",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "863ad4b8-094b-46b3-b6cd-0640e1f01d6d",
+      "name": "Daring Apprentice",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "hard_stack",
+        "sacrifice_support",
+        "stack"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "hard_stack",
+        "sacrifice_support",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "de96ef93-a2e0-409d-9d25-fcb2405039b5",
+      "name": "Dazzling Beauty",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "62817ef5-9b8d-4bca-bdd4-ab3bc4e063d0",
+      "name": "Decomposition",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a00e5eb6-b916-4cd6-8ff2-c02f4929abc7",
+      "name": "Delirium",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection",
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0126f620-1dbf-405c-b5cf-f48b7ef02d32",
+      "name": "Dirtwater Wraith",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ce785306-eaf5-42b3-9840-884cd690ae0a",
+      "name": "Discordant Spirit",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ff9f4bfe-1585-4eaa-943c-1e85ed79a820",
+      "name": "Disempower",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "4b2e9aa9-6f91-41de-84b6-e9a89be06a53",
+      "name": "Dissipate",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b08b348c-cf74-4aea-ab88-38201e04e42c",
+      "name": "Divine Retribution",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "da21c21c-88d8-4a93-b2b4-6d7bb28959c9",
+      "name": "Dread Specter",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "81338d64-8fc3-41ac-afc8-e2a79df1159b",
+      "name": "Dream Cache",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ea8d1c55-e045-4a3f-92f0-4ecd86362b97",
+      "name": "Dream Fighter",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0935377b-384f-4e4c-9fbb-8d2a7d5dc280",
+      "name": "Dwarven Miner",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "db130ff4-7525-421f-b7e7-200921ecbdec",
+      "name": "Dwarven Nomad",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "32001382-3079-4bbe-8d86-05da654c0d1a",
+      "name": "Early Harvest",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2f3237fe-9e07-4aad-8bc8-7ef4b510dd36",
+      "name": "Ebony Charm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "lifegain"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6c89e4e6-c4d7-416c-b985-41739c6f5b50",
+      "name": "Ekundu Cyclops",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "852b6e19-4594-41ea-9267-0911df643af5",
+      "name": "Ekundu Griffin",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "635cc10e-ca25-49a2-af44-3b064263a254",
+      "name": "Elixir of Vitality",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8434bdb1-286b-484e-904e-946d074614e7",
+      "name": "Emberwilde Caliph",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3e1a7146-75d5-499f-8718-303bc6ea139b",
+      "name": "Emberwilde Djinn",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5c19db44-0eae-4d22-9bf4-7e6cdc6b9d8f",
+      "name": "Energy Bolt",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "lifegain",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "lifegain",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "bcb2f489-9d58-424d-96c1-a124a8d25a14",
+      "name": "Energy Vortex",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support"
+      ],
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "42b2db4c-4a1d-436f-9eeb-53a04db46c58",
+      "name": "Enfeeblement",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c5229c17-b7be-4b05-b683-f2277edc4849",
+      "name": "Enlightened Tutor",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ea016b84-7f77-42e7-bd14-2e62a1e35f3b",
+      "name": "Ersatz Gnomes",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a2b6faca-3321-45d2-a027-ff3a8ae61f10",
+      "name": "Ether Well",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f203671b-76f7-4be0-80a9-826fbb450fe7",
+      "name": "Ethereal Champion",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "05a4acfd-3bf3-4ec2-a28a-bc43ba7c6fbf",
+      "name": "Fallow Earth",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ee04afb0-184f-4a13-8d44-0fbe121b1eff",
+      "name": "Favorable Destiny",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b5867796-5898-4a75-a75a-c802407ab338",
+      "name": "Femeref Archers",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "e2117373-6f0a-41c8-ab6a-9014b9628e64",
+      "name": "Femeref Healer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "4365521e-996d-4eca-bbc9-b0988fa973ae",
+      "name": "Femeref Knight",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "18710b5e-5403-48cd-9541-8154ba0a0b30",
+      "name": "Femeref Scouts",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "cf26dcb4-e181-4ba5-bc03-b56f57032b85",
+      "name": "Feral Shadow",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "4863e1cf-3ef2-4c2d-a0ea-b73ca60c660d",
+      "name": "Fetid Horror",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8d0adc5c-3fdd-4e22-b783-5651f8e57b65",
+      "name": "Final Fortune",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "extra_turn",
+        "finisher"
+      ],
+      "actualRoles": [
+        "extra_turn",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "97b477d8-2e05-475e-8ed6-7d680cb21cd9",
+      "name": "Fire Diamond",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "975226a4-2d03-4993-9337-cfd6595011bd",
+      "name": "Flame Elemental",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3e057471-e415-4105-9064-8236a0a5047d",
+      "name": "Flash",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "cost_reduction",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "cost_reduction",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9043d8d5-b38a-406f-a44c-49f579c644f0",
+      "name": "Flood Plain",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f5a85674-fd09-42d8-bba7-5656be25fcea",
+      "name": "Floodgate",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "77f257b9-2047-40a3-85c2-00ad17deeb08",
+      "name": "Foratog",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8b34b211-985b-4934-bb3b-8e6672685ac2",
+      "name": "Forbidden Crypt",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_selection",
+        "repeatable_advantage",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "repeatable_advantage",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b9e61e68-9dc8-4295-95dc-dd66a0907c8c",
+      "name": "Forsaken Wastes",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c21d3360-8be0-477e-a592-7e64a76570d3",
+      "name": "Frenetic Efreet",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "coin_support",
+        "combat_body",
+        "combat_threat",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "coin_support",
+        "combat_body",
+        "combat_threat",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "481ede6a-3ac3-45bc-85aa-311b3dbefc40",
+      "name": "Giant Mantis",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2a073f00-0d03-43d0-a0a8-f5bcee0855fc",
+      "name": "Gibbering Hyenas",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a6a8861c-b6fe-45a6-86e4-9160c36362ff",
+      "name": "Goblin Elite Infantry",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "87b55d99-badc-45e3-8364-173a400c4d7e",
+      "name": "Goblin Scouts",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "landwalk_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "landwalk_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a9277df9-1417-45bc-bebf-d9a7595f54c9",
+      "name": "Goblin Soothsayer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0afc2d2f-4fdb-440f-9c35-45bf103c0437",
+      "name": "Goblin Tinkerer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0230fdda-d916-457e-9dfd-61783fcf4652",
+      "name": "Granger Guildmage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "e80bd454-8bc5-4921-90cf-6ad28a27a88b",
+      "name": "Grasslands",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6f54e7ea-bb87-4ce0-96b6-4fc82605ed2a",
+      "name": "Grave Servitude",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "d04a836b-7e42-424d-9600-42a40d0dfccd",
+      "name": "Gravebane Zombie",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "331233ba-0ddc-4cb2-b3b7-1b782e03529f",
+      "name": "Grim Feast",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "fa798a3d-7797-4795-b251-a45f0429d169",
+      "name": "Grinning Totem",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "43e99cba-a6e3-4abc-a92b-aaf5839c72d2",
+      "name": "Hakim, Loreweaver",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "recursion",
+        "removal",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "recursion",
+        "removal",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3da9fecc-064a-44e6-b88e-4b10194e367e",
+      "name": "Hall of Gemstone",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3089bdd7-87e6-4d0e-ad98-c32e6f861c30",
+      "name": "Hammer of Bogardan",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_selection",
+        "hand_recursion",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9827d01d-c822-4f1b-9042-a2092c72c914",
+      "name": "Harbinger of Night",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "d72b69aa-fb61-441e-9b62-4534d7a32a69",
+      "name": "Harbor Guardian",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "84b1d4e1-ca8a-4eed-b5c4-364876938aee",
+      "name": "Harmattan Efreet",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ced9130c-2865-49df-abdd-84069aa1b180",
+      "name": "Haunting Apparition",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b9be76a3-e14f-48dd-8824-17d5708ac7e0",
+      "name": "Hazerider Drake",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "797adc7e-03a9-4221-bdaf-4c46dcb95701",
+      "name": "Hivis of the Scale",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "donation_support",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "donation_support",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "79bfef02-3586-424a-aff9-a6ec0d4f1135",
+      "name": "Horrible Hordes",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "7c4408eb-b3e2-407f-9018-197787edeae7",
+      "name": "Igneous Golem",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "dea8c725-455e-4668-877a-df388fe22255",
+      "name": "Illicit Auction",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "cd1a6508-aaba-4515-9496-057915d02040",
+      "name": "Illumination",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "4372205f-45e6-49c7-b1fd-13a41e20d4de",
+      "name": "Infernal Contract",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a299470a-72ea-4848-833b-dc894db7be15",
+      "name": "Iron Tusk Elephant",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "dded2874-e80f-401a-b700-52c54dd6da60",
+      "name": "Ivory Charm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mass_removal",
+        "protection",
+        "removal",
+        "targeted_protection",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "protection",
+        "removal",
+        "targeted_protection",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8930b1ce-80ac-48b6-a368-ccff9fd01d38",
+      "name": "Jabari's Influence",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "39b699e1-79c6-4960-97dc-d58574181bbe",
+      "name": "Jolrael's Centaur",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "13f69c70-dc93-4983-b649-d91b22633eb9",
+      "name": "Jolt",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5bc8e918-7824-4ad7-a5c0-05537ce81641",
+      "name": "Jungle Patrol",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "combat_body",
+        "ramp",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "combat_body",
+        "ramp",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f1bb17d7-5396-4c99-88bb-f7ab7d47b023",
+      "name": "Jungle Troll",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "457705c9-5b0c-4c3a-89dd-80286fac6a6c",
+      "name": "Jungle Wurm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "7c69cb2b-14f1-4215-aba8-c107493c3036",
+      "name": "Kaervek's Hex",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "daa86c76-aacb-4244-9639-81f758c634b2",
+      "name": "Kaervek's Purge",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c629feae-084c-452f-9c09-4b9716331498",
+      "name": "Kaervek's Torch",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "871549e6-24c0-4fbd-8b71-ba8639b0ee47",
+      "name": "Karoo Meerkat",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "280148c5-3a2f-48f7-a147-4578f2068073",
+      "name": "Kukemssa Pirates",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "hate_piece",
+        "removal",
+        "stax_piece",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "hate_piece",
+        "removal",
+        "stax_piece",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "49e3ac82-7c22-4dec-b61a-b581148c0419",
+      "name": "Kukemssa Serpent",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5810c1e2-5a36-4a87-be4e-890ba1627b46",
+      "name": "Lead Golem",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "fc0907eb-a3fc-40ef-950d-b05aee9d5da7",
+      "name": "Leering Gargoyle",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2b0c82f1-078a-4e8b-8e43-407f5c5d8549",
+      "name": "Lightning Reflexes",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ee6099b0-fb1f-42f1-b862-7708c6e36d05",
+      "name": "Lion's Eye Diamond",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9963b6a9-d715-430e-9b5e-576fb688d944",
+      "name": "Locust Swarm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3c83ea11-7141-41a2-ba77-1ed2722dfe74",
+      "name": "Lure of Prey",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b3235d21-ce52-4a99-a2fe-99b0fe7cc8bc",
+      "name": "Malignant Growth",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "counter_support",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "counter_support",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f4669822-716b-45c7-a7f2-040062509fe9",
+      "name": "Mana Prism",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5d9431de-7cf0-43d4-9b86-e0ef4a7756f9",
+      "name": "Mangara's Blessing",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_selection",
+        "hand_recursion",
+        "lifegain"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c7986014-30e0-4999-ab95-b86620471419",
+      "name": "Mangara's Equity",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f515c691-07be-47ea-8bc0-46221eab8b46",
+      "name": "Mangara's Tome",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "direct_tutor",
+        "draw",
+        "face_down_support",
+        "repeatable_draw",
+        "tutor"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "direct_tutor",
+        "draw",
+        "face_down_support",
+        "repeatable_draw",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "910488bf-66ab-415e-973b-1262b2ab7454",
+      "name": "Marble Diamond",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ef32258a-d567-4fbc-ab85-8c00080f5b36",
+      "name": "Maro",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "67d6fbcb-2df7-4b5a-8464-158f6b720a2e",
+      "name": "Meddle",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "broad_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "broad_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "1c4bd85b-03c2-4235-aea1-76c48520adf3",
+      "name": "Melesse Spirit",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "19edc98c-edc2-47bf-b2da-00f536d7c158",
+      "name": "Merfolk Raiders",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2351a9fa-17b5-41fc-93d0-34731d54f915",
+      "name": "Merfolk Seer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "d8377869-f8f7-4b4b-93ad-3ad3c4826b1a",
+      "name": "Mind Bend",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "bba30360-c54a-4906-8b2e-84bb1209c43d",
+      "name": "Mind Harness",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support",
+        "removal",
+        "sacrifice_support",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "removal",
+        "sacrifice_support",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0e3b7ec1-3760-4ac4-81ef-1ab389392f1b",
+      "name": "Mindbender Spores",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b77a7f4a-1b3a-440e-977c-1ba39e450581",
+      "name": "Mire Shade",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "72a1e724-eb32-4781-b44d-3b1ed02a5a8b",
+      "name": "Misers' Cage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "448f5c55-7334-4fa4-9d90-0e57bae19444",
+      "name": "Mist Dragon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "02500f21-6e15-423e-93ff-891e09fe9904",
+      "name": "Moss Diamond",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0b7393aa-d563-45bc-9946-8e7d1729d498",
+      "name": "Mountain Valley",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "273f0353-4936-491b-82da-6d4d7f3259a6",
+      "name": "Mtenda Griffin",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "hand_recursion",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "hand_recursion",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0edf5bac-36a9-4f35-afd1-73f7e1aab51b",
+      "name": "Mtenda Herder",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "af029853-cfb0-403b-af51-141ba02ae2e4",
+      "name": "Mtenda Lion",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
+      "name": "Mystical Tutor",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "69acaa6f-3ba2-420c-9069-02958f844121",
+      "name": "Natural Balance",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "scalable_spell",
+        "tutor"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "scalable_spell",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f1d300b6-f9cf-40a9-8520-d78cd7d813cf",
+      "name": "Nettletooth Djinn",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "99dd6f15-855f-431f-a3c8-31f1421af88f",
+      "name": "Noble Elephant",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5b4b08a5-3af8-4c33-ab5e-7bee7f79e77a",
+      "name": "Nocturnal Raid",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "cb75aca6-dfc7-460d-b90c-80b7988f39a8",
+      "name": "Null Chamber",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "hate_piece",
+        "land_denial",
+        "soft_stack",
+        "stack",
+        "stax_piece"
+      ],
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "soft_stack",
+        "stack",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+      "name": "Pacifism",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "27a3faa1-4f1a-4581-9e19-9265faa9c10b",
+      "name": "Painful Memories",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "hand_info"
+      ],
+      "actualRoles": [
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "85308fb8-e5a1-4ff1-8606-283cf2056895",
+      "name": "Patagia Golem",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "38ec5b13-b143-4818-9243-b1715dab3bef",
+      "name": "Paupers' Cage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f4e0e2e0-8d64-40a3-92da-3951a696b5f3",
+      "name": "Pearl Dragon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a7950edb-5670-46fd-a30e-0fe888a5a32b",
+      "name": "Phyrexian Dreadnought",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "df032801-fccf-4bff-aa88-d01650b6c81e",
+      "name": "Phyrexian Purge",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c06b993b-a36a-412a-a732-d678a4179791",
+      "name": "Phyrexian Tribute",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b628150b-08a1-4ea3-978d-60255dfb0b7e",
+      "name": "Phyrexian Vault",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "e0eaa43f-1c46-4299-9ecd-5f4a32d292cd",
+      "name": "Political Trickery",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "donation_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "donation_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "039115f2-6322-4674-bc64-f21883ed375a",
+      "name": "Polymorph",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "1d05d2d6-3ea1-4d8a-9f1c-6fc3f5e38ea9",
+      "name": "Preferred Selection",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_selection",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "aee5dda1-2181-40d5-9846-85d154e1d5da",
+      "name": "Prismatic Boon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mana_sink",
+        "scalable_spell",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "022dae2e-7fc3-486e-9168-59652d9ab21c",
+      "name": "Prismatic Circle",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "d4a3c9a5-3c91-4135-a19d-98eb5bcf5e00",
+      "name": "Prismatic Lace",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "color_change"
+      ],
+      "actualRoles": [
+        "color_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5554d422-6513-4c7e-866d-9d5f0403fc80",
+      "name": "Psychic Transfer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "life_pressure",
+        "lifegain"
+      ],
+      "actualRoles": [
+        "life_pressure",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2fb8e100-58a1-4dc6-bc38-ad7f115e3e46",
+      "name": "Purgatory",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ae86965c-3330-48bf-abf7-3142c61099ea",
+      "name": "Purraj of Urborg",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "745a2815-8487-4b78-93b7-d1d4ef6adc8f",
+      "name": "Pyric Salamander",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "e2975a88-5a5a-462a-90b9-d8c00150b6d3",
+      "name": "Quirion Elves",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "48e2f2c3-9d99-4535-915f-551fbb59ade5",
+      "name": "Radiant Essence",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "137e0ad2-e10a-4327-86a3-5ac7bc7fc469",
+      "name": "Raging Spirit",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8539f295-5d58-4436-a73a-b9277c4c7795",
+      "name": "Rampant Growth",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "tutor"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "4aff0f09-0607-41b7-8f60-4ef35ff6183e",
+      "name": "Rashida Scalebane",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "lifegain",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "lifegain",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2c029419-3601-4158-b10f-45a19de7faa3",
+      "name": "Ravenous Vampire",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "bf7c16db-01c9-41ed-bda6-c5326198ce77",
+      "name": "Razor Pendulum",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "504d5c29-7c37-4c31-8549-2a49eeef74c8",
+      "name": "Reality Ripple",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "replacement_engine",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "replacement_engine",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5771296a-16f8-423e-9b83-8e6f687cbb34",
+      "name": "Reckless Embermage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "21565b0d-f814-49ca-8613-f40040c4ba6c",
+      "name": "Reflect Damage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "damage_engine",
+        "damage_reflection"
+      ],
+      "actualRoles": [
+        "damage_engine",
+        "damage_reflection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "436b5989-9b8c-4e03-a82e-046837c891ca",
+      "name": "Reign of Chaos",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "67d12a5a-9e0c-4550-86ad-cd1e173fea8f",
+      "name": "Reign of Terror",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3cb86deb-f4e5-41c5-bfcd-614a24f3499c",
+      "name": "Reparations",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5315ba59-ca80-498e-b21a-ed87e6a4c955",
+      "name": "Restless Dead",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0af91b63-a874-4184-8f8f-3871429fd1ad",
+      "name": "Ritual of Steel",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6e7bb687-8243-4377-80b5-67ce6b65f9b7",
+      "name": "Rock Basilisk",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8709b5b1-ef9e-45b2-bf4f-ef4c4d613dcd",
+      "name": "Rocky Tar Pit",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "29ec9b49-fbe5-49ac-8ad6-7159cb88bc66",
+      "name": "Roots of Life",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "115c7ca7-c27b-43ca-9281-be6913e90059",
+      "name": "Sabertooth Cobra",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "alternate_finisher",
+        "combat_body",
+        "finisher"
+      ],
+      "actualRoles": [
+        "alternate_finisher",
+        "combat_body",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8776d14f-a5a2-4ef3-98d0-e1148e579e4d",
+      "name": "Sacred Mesa",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0f9b78ca-1556-4157-a91c-55276fd78127",
+      "name": "Sand Golem",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "counter_support",
+        "repeatable_advantage"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "counter_support",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2ea2bf6c-a427-4d0c-b447-159959327697",
+      "name": "Sapphire Charm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_support",
+        "replacement_engine",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "replacement_engine",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5268518e-7631-4149-8eea-c2475b9b14df",
+      "name": "Savage Twister",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mana_sink",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9360d30c-4556-4b41-bd50-08b4367e5efb",
+      "name": "Sawback Manticore",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f17954dd-c8e0-4983-b81e-5440cca41afc",
+      "name": "Sea Scryer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0b9b5856-9396-4a55-8675-58cd171df708",
+      "name": "Sealed Fate",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "d3c68573-95b1-4db5-bbea-363b86f713c1",
+      "name": "Searing Spear Askari",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b8d66cd6-15db-41ff-bae3-60f1aad3ea23",
+      "name": "Seedling Charm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "protection",
+        "removal",
+        "targeted_protection",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "protection",
+        "removal",
+        "targeted_protection",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f5ebad5c-9675-4a37-b76c-760416083939",
+      "name": "Seeds of Innocence",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "lifegain",
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f38b03dd-a200-48a6-ab65-fb2ac47456df",
+      "name": "Serene Heart",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "bf526a0d-65cc-445f-b2b8-19a2cfdd836b",
+      "name": "Sewer Rats",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "cdda63d7-e3ea-455c-b7d4-c6cfdda2703c",
+      "name": "Shadow Guildmage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9e9ec33b-b923-40e5-81a8-e1e78df63ec7",
+      "name": "Shadowbane",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "broad_protection",
+        "lifegain",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "lifegain",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9843d8a6-bcbf-40c2-8c41-316e97db9c62",
+      "name": "Shallow Grave",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "dfbce321-d3c1-4b76-a3fa-27f875015085",
+      "name": "Shaper Guildmage",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "49478593-29ff-4e5a-b1e8-6462c2d6176d",
+      "name": "Shauku, Endbringer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5cf1d7c3-6ebe-440b-88c8-33b7f6aa0d7c",
+      "name": "Shauku's Minion",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f557fb2c-581b-4a8d-8766-1e46e92224fa",
+      "name": "Shimmer",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "cb637dfd-4022-43a4-8632-77e614436f38",
+      "name": "Sidar Jabari",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a9bdf857-0c6b-4afa-afbb-aff7e4b61b09",
+      "name": "Sirocco",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "hand_info"
+      ],
+      "actualRoles": [
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "cd97f8b4-e751-4b52-987b-a442aef57809",
+      "name": "Skulking Ghost",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2224b6e0-c5ff-45d0-84e3-83758c5fc99f",
+      "name": "Sky Diamond",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "acee6f4f-8b66-495d-bb0e-71c339e7dc49",
+      "name": "Soar",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8bc5546e-554f-430d-80b1-99578b5ea188",
+      "name": "Soul Echo",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support",
+        "mana_sink",
+        "replacement_engine",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "mana_sink",
+        "replacement_engine",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "80d233cc-7748-41a2-bfd6-2189d0136900",
+      "name": "Soul Rend",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "77ae796e-fc56-47b9-b8a0-97e24fbd60f7",
+      "name": "Soulshriek",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "52fc8217-5a14-40b5-a8fc-b6fc45af5f33",
+      "name": "Spatial Binding",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "87d734bc-4e4d-4013-91ed-c6bf1dde824e",
+      "name": "Spectral Guardian",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "73016220-2436-4072-96dd-65c0cb05fff4",
+      "name": "Spirit of the Night",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0c3bf4e1-d91e-4dd3-a800-e40971222c71",
+      "name": "Spitting Earth",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "e6af1429-276f-41a8-88d0-062661dc0cd4",
+      "name": "Stalking Tiger",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c19e3560-d304-4d91-aa2a-463d7dbb35bb",
+      "name": "Stupor",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "58917163-584d-4c74-8243-f56c5d4b49e7",
+      "name": "Subterranean Spirit",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "mass_removal",
+        "removal",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "mass_removal",
+        "removal",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "832f96a4-0f4d-47bb-bc1c-3884e73feabc",
+      "name": "Sunweb",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b98177b5-599f-41b0-aa1e-4769d7005bbd",
+      "name": "Superior Numbers",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c9c0bb7e-8dfc-481c-80f7-b6652b63df39",
+      "name": "Suq'Ata Firewalker",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "fc638800-6aec-4a48-ad2c-c9a5ce93c236",
+      "name": "Tainted Specter",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "damage_engine",
+        "group_slug",
+        "hand_attack",
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "damage_engine",
+        "group_slug",
+        "hand_attack",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c5661500-c48f-4f6d-bbe7-c8bd7118d862",
+      "name": "Talruum Minotaur",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "371c993a-69b8-4a51-af89-982b79940b2d",
+      "name": "Taniwha",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6fb6e37e-d774-4a50-8ea3-b955535c2065",
+      "name": "Teeka's Dragon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6e422d5e-d9f5-492d-b82a-31f7274d4153",
+      "name": "Teferi's Curse",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3605c5ac-3b35-41a5-9266-286fb1d11716",
+      "name": "Teferi's Drake",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "e4826967-b2f9-4f32-8411-d243edf41082",
+      "name": "Teferi's Imp",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "ce55657d-d82f-4528-a83e-5cad7de111fd",
+      "name": "Teferi's Isle",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "replacement_engine",
+        "stable_ramp"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "replacement_engine",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "b13a723d-80a9-4116-9857-baf3b373f87a",
+      "name": "Telim'Tor",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0c978da4-9caa-4b4b-be52-889677962ec9",
+      "name": "Telim'Tor's Darts",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0e768d03-b2a3-4783-9cf5-7470f0203349",
+      "name": "Telim'Tor's Edict",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a00cb1fa-a196-4403-9008-532dbd15769e",
+      "name": "Teremko Griffin",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "61b3ad9d-485f-4479-b18f-506847af43f2",
+      "name": "Thirst",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "sacrifice_support",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c5f5b7e5-af1e-4c8a-8d44-3e2152955d4e",
+      "name": "Tidal Wave",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9aaf1149-eccb-434a-a1a7-14b93fa50141",
+      "name": "Tombstone Stairwell",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f467ec85-ffe2-4963-82e0-509a7873fd63",
+      "name": "Torrent of Lava",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mana_sink",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "87547bf0-02cf-4d83-9a1f-c82d2f1a22f1",
+      "name": "Tranquil Domain",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "9b3b0bef-cdbb-41c2-b8f1-ddda9903b43a",
+      "name": "Tropical Storm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "mana_sink",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "mana_sink",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "447f1cce-bbc5-473b-a838-34070f8fd2dc",
+      "name": "Uktabi Faerie",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "dd25afe0-a69a-4e0b-b364-b88d3a522ed3",
+      "name": "Uktabi Wildcats",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "10a52a73-157f-475e-975a-eb00c80573d4",
+      "name": "Unerring Sling",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a5827d57-ae8b-44b0-a81b-3d191a0ba2fa",
+      "name": "Unfulfilled Desires",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f1768dd5-c5c8-4059-9695-55b8a11eeffd",
+      "name": "Unseen Walker",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "a500313b-35e3-4ebc-9144-e9486784757b",
+      "name": "Unyaro Bee Sting",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "27d80a75-688e-4f68-9622-54484dd3bd91",
+      "name": "Unyaro Griffin",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "hard_stack",
+        "sacrifice_support",
+        "stack"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "hard_stack",
+        "sacrifice_support",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "0678beaf-564c-4e98-b45f-a544925683a1",
+      "name": "Urborg Panther",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "removal",
+        "restricted_tutor",
+        "sacrifice_support",
+        "targeted_removal",
+        "tutor"
+      ],
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "removal",
+        "restricted_tutor",
+        "sacrifice_support",
+        "targeted_removal",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "66fc64db-7dc4-43fa-8087-281a72286c35",
+      "name": "Vaporous Djinn",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8f167e2f-7b89-4ae2-8332-7c978f71522e",
+      "name": "Ventifact Bottle",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "counter_support"
+      ],
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f46e06e2-1658-4bec-b94e-91935cc667fb",
+      "name": "Viashino Warrior",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "122dfe9f-e0e2-4f69-9637-289c956fd54a",
+      "name": "Vigilant Martyr",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "hard_stack",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "stack",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "hard_stack",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "stack",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "adea6cb4-1e74-4137-9c80-1dde004a6b26",
+      "name": "Village Elder",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "aaf176ff-646f-4182-a546-fe648498587d",
+      "name": "Vitalizing Cascade",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "lifegain",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "lifegain",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "994db177-03f5-43dd-bf7b-2994e8d430d3",
+      "name": "Volcanic Dragon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "846a4f9c-d955-403f-8a08-5c7c3d32e180",
+      "name": "Volcanic Geyser",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5a61d51e-1a3f-49f6-9a94-a708dd6f69df",
+      "name": "Waiting in the Weeds",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "token_support"
+      ],
+      "actualRoles": [
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "16a7895a-ca23-4112-a91f-4b1528e75cea",
+      "name": "Wall of Corpses",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "e6f5f80c-2620-4558-8a5f-8fc36cea4793",
+      "name": "Wall of Resistance",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+      "name": "Wall of Roots",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "edc05b33-2bfa-4692-bb3b-26b7cf111ce8",
+      "name": "Ward of Lights",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "replacement_engine",
+        "targeted_protection",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "replacement_engine",
+        "targeted_protection",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c54c1517-cf7c-4afb-92f8-70c9d1591b45",
+      "name": "Warping Wurm",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "d8eed5f7-8724-45c7-b6fc-dcfcc400f09a",
+      "name": "Wave Elemental",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8650bd97-ecf6-420f-9b72-a749970afcd4",
+      "name": "Wellspring",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "theft_support"
+      ],
+      "actualRoles": [
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3b2ce431-7101-4256-827d-a14de9f867fd",
+      "name": "Wild Elephant",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "8fb44b03-017f-4cf3-a79b-8f6cc33570ca",
+      "name": "Wildfire Emissary",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "aa17782b-d8e7-423b-9f03-01ccb600f69a",
+      "name": "Windreaper Falcon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "6d87415b-0618-48e1-9510-320c4611ecda",
+      "name": "Withering Boon",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "e8863518-0bfa-49c3-8c6e-6c9116a81051",
+      "name": "Worldly Tutor",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "f0f24c6d-80fb-4e99-a74d-6ed9d349ed3d",
+      "name": "Yare",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "2f91818f-a6fe-4472-b52b-ab574f790905",
+      "name": "Zebra Unicorn",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "1053a778-da6a-4b8e-81fb-537a355d4bfe",
+      "name": "Zhalfirin Commander",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "3aeb28ac-8ed2-4a90-a631-d84361ac6acc",
+      "name": "Zirilan of the Claw",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "c56f0f4c-c85a-4931-b22a-42dc5d1dc7dd",
+      "name": "Zombie Mob",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "5a43b164-61a4-4dcb-9397-45356ad4260e",
+      "name": "Zuberi, Golden Feather",
+      "firstSet": "mir",
+      "releasedAt": "1996-10-08",
+      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Mirage role audit."
     }
   ]
 }

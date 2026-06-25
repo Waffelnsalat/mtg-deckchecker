@@ -2181,6 +2181,117 @@ test("inferAdvancedRoleProfile recognizes Celebration Card old wording", () => {
   assert.ok(getRoleWeight(debProfile, "token_support") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Mirage utility wording and avoids compensation overtags", () => {
+  const untapProfile = inferAdvancedRoleProfile(
+    createCard("Alarum", "Instant", 2, "Untap target nonattacking creature. It gets +1/+3 until end of turn."),
+  );
+  const spellLockProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Null Chamber",
+      "World Enchantment",
+      4,
+      "As this enchantment enters, you and an opponent each choose a card name other than a basic land card name. Spells with the chosen names can't be cast and lands with the chosen names can't be played.",
+    ),
+  );
+  const targetChangeProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Meddle",
+      "Instant",
+      2,
+      "If target spell has only one target and that target is a creature, change that spell's target to another creature.",
+    ),
+  );
+  const theftProfile = inferAdvancedRoleProfile(
+    createCard("Ashen Powder", "Sorcery", 4, "Put target creature card from an opponent's graveyard onto the battlefield under your control."),
+  );
+  const landRemovalProfile = inferAdvancedRoleProfile(
+    createCard("Choking Sands", "Sorcery", 3, "Destroy target non-Swamp land. If that land was nonbasic, Choking Sands deals 2 damage to the land's controller."),
+  );
+  const smallSweeperProfile = inferAdvancedRoleProfile(
+    createCard("Kaervek's Hex", "Sorcery", 4, "Kaervek's Hex deals 1 damage to each nonblack creature and an additional 1 damage to each green creature."),
+  );
+  const landUntapProfile = inferAdvancedRoleProfile(
+    createCard("Early Harvest", "Instant", 3, "Target player untaps all basic lands they control."),
+  );
+  const colorDenialProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Hall of Gemstone",
+      "World Enchantment",
+      3,
+      "At the beginning of each player's upkeep, that player chooses a color. Until end of turn, lands tapped for mana produce mana of the chosen color instead of any other color.",
+    ),
+  );
+  const exileRecursionProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Purgatory",
+      "Enchantment",
+      4,
+      "Whenever a nontoken creature is put into your graveyard from the battlefield, exile that card. At the beginning of your upkeep, you may pay {4} and 2 life. If you do, return a card exiled with this enchantment to the battlefield.",
+    ),
+  );
+  const reflectionProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Reflect Damage",
+      "Instant",
+      5,
+      "The next time a source of your choice would deal damage this turn, that damage is dealt to that source's controller instead.",
+    ),
+  );
+  const playerDamageProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Misers' Cage",
+      "Artifact",
+      3,
+      "At the beginning of each opponent's upkeep, if that player has five or more cards in hand, this artifact deals 2 damage to that player.",
+    ),
+  );
+  const opponentDrawProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Harbor Guardian",
+      "Creature - Gargoyle",
+      6,
+      "Reach. Whenever this creature attacks, defending player may draw a card.",
+    ),
+  );
+  const lifeSwapProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Psychic Transfer",
+      "Sorcery",
+      5,
+      "If the difference between your life total and target player's life total is 5 or less, exchange life totals with that player.",
+    ),
+  );
+  const damageRemovalProfile = inferAdvancedRoleProfile(
+    createCard("Spitting Earth", "Sorcery", 2, "Spitting Earth deals damage to target creature equal to the number of Mountains you control."),
+  );
+  const tokenCompensationProfile = inferAdvancedRoleProfile(
+    createCard("Afterlife", "Instant", 3, "Destroy target nonblack creature. It can't be regenerated. Its controller creates a 1/1 white Spirit creature token with flying."),
+  );
+  const lifeCompensationProfile = inferAdvancedRoleProfile(
+    createCard("Illumination", "Instant", 2, "Counter target artifact or enchantment spell. Its controller gains life equal to its mana value."),
+  );
+
+  assert.ok(getRoleWeight(untapProfile, "tap_untap") > 0);
+  assert.ok(getRoleWeight(untapProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(spellLockProfile, "soft_stack") > 0);
+  assert.ok(getRoleWeight(spellLockProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(targetChangeProfile, "broad_stack") > 0);
+  assert.ok(getRoleWeight(theftProfile, "theft_support") > 0);
+  assert.ok(getRoleWeight(landRemovalProfile, "targeted_land_removal") > 0);
+  assert.ok(getRoleWeight(smallSweeperProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(landUntapProfile, "tap_untap") > 0);
+  assert.ok(getRoleWeight(landUntapProfile, "ramp") > 0);
+  assert.ok(getRoleWeight(colorDenialProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(exileRecursionProfile, "battlefield_recursion") > 0);
+  assert.ok(getRoleWeight(reflectionProfile, "damage_reflection") > 0);
+  assert.ok(getRoleWeight(playerDamageProfile, "damage_engine") > 0);
+  assert.equal(getRoleWeight(opponentDrawProfile, "draw"), 0);
+  assert.ok(getRoleWeight(lifeSwapProfile, "life_pressure") > 0);
+  assert.ok(getRoleWeight(damageRemovalProfile, "targeted_removal") > 0);
+  assert.equal(getRoleWeight(tokenCompensationProfile, "token_support"), 0);
+  assert.equal(getRoleWeight(lifeCompensationProfile, "lifegain"), 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
