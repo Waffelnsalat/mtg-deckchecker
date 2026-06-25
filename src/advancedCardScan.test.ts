@@ -2025,6 +2025,162 @@ test("inferAdvancedRoleProfile keeps Fallen Empires creature-only damage out of 
   assert.ok(getRoleWeight(fireballProfile, "targeted_removal") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Alliances utility wording and avoids one-shot draw overtagging", () => {
+  const carrierPigeonsProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Carrier Pigeons",
+      "Creature - Bird",
+      4,
+      "Flying When this creature enters, draw a card at the beginning of the next turn's upkeep.",
+    ),
+  );
+  const hereticProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Soldevi Heretic",
+      "Creature - Human Cleric",
+      3,
+      "{W}, {T}: Prevent the next 2 damage that would be dealt to target creature this turn. Target opponent may draw a card.",
+    ),
+  );
+  const diminishingProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Diminishing Returns",
+      "Sorcery",
+      4,
+      "Each player shuffles their hand and graveyard into their library. You exile the top ten cards of your library. Then each player draws up to seven cards.",
+    ),
+  );
+  const martyrdomProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Martyrdom",
+      "Instant",
+      3,
+      'Until end of turn, target creature you control gains "{0}: The next 1 damage that would be dealt to target creature, planeswalker, or player this turn is dealt to this creature instead." Only you may activate this ability.',
+    ),
+  );
+  const contagionProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Contagion",
+      "Instant",
+      5,
+      "You may pay 1 life and exile a black card from your hand rather than pay this spell's mana cost. Distribute two -2/-1 counters among one or two target creatures.",
+    ),
+  );
+  const stenchProfile = inferAdvancedRoleProfile(
+    createCard("Stench of Decay", "Instant", 3, "Nonartifact creatures get -1/-1 until end of turn."),
+  );
+  const bountyProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Bounty of the Hunt",
+      "Instant",
+      5,
+      "You may exile a green card from your hand rather than pay this spell's mana cost. Distribute three +1/+1 counters among one, two, or three target creatures.",
+    ),
+  );
+  const castingProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Casting of Bones",
+      "Enchantment - Aura",
+      3,
+      "Enchant creature When enchanted creature dies, draw three cards, then discard one of them.",
+    ),
+  );
+  const misinformationProfile = inferAdvancedRoleProfile(
+    createCard("Misinformation", "Instant", 1, "Put up to three target cards from an opponent's graveyard on top of their library in any order."),
+  );
+  const winterNightProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Winter's Night",
+      "World Enchantment",
+      3,
+      "Whenever a player taps a snow land for mana, that player adds one mana of any type that land produced. That land doesn't untap during its controller's next untap step.",
+    ),
+  );
+  const floodwaterProfile = inferAdvancedRoleProfile(
+    createCard("Floodwater Dam", "Artifact", 3, "{X}{X}{1}, {T}: Tap X target lands."),
+  );
+  const compassProfile = inferAdvancedRoleProfile(
+    createCard("Mystic Compass", "Artifact", 2, "{1}, {T}: Target land becomes the basic land type of your choice until end of turn."),
+  );
+  const diggerProfile = inferAdvancedRoleProfile(
+    createCard("Soldevi Digger", "Artifact", 2, "{2}: Put the top card of your graveyard on the bottom of your library."),
+  );
+  const cauldronProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Storm Cauldron",
+      "Artifact",
+      5,
+      "Each player may play an additional land during each of their turns. Whenever a land is tapped for mana, return it to its owner's hand.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(carrierPigeonsProfile, "draw") > 0);
+  assert.equal(getRoleWeight(carrierPigeonsProfile, "repeatable_draw"), 0);
+  assert.equal(getRoleWeight(hereticProfile, "draw"), 0);
+  assert.ok(getRoleWeight(hereticProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(diminishingProfile, "draw") > 0);
+  assert.ok(getRoleWeight(martyrdomProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(contagionProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(contagionProfile, "counter_support") > 0);
+  assert.ok(getRoleWeight(stenchProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(bountyProfile, "counter_support") > 0);
+  assert.ok(getRoleWeight(castingProfile, "draw") > 0);
+  assert.equal(getRoleWeight(castingProfile, "repeatable_draw"), 0);
+  assert.ok(getRoleWeight(misinformationProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(winterNightProfile, "snow_support") > 0);
+  assert.ok(getRoleWeight(floodwaterProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(compassProfile, "land_type_change") > 0);
+  assert.ok(getRoleWeight(diggerProfile, "library_recursion") > 0);
+  assert.ok(getRoleWeight(cauldronProfile, "land_acceleration") > 0);
+  assert.ok(getRoleWeight(cauldronProfile, "mana_denial") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Celebration Card old wording", () => {
+  const championProfile = inferAdvancedRoleProfile(
+    createCard(
+      "1996 World Champion",
+      "Summon Legend",
+      5,
+      "Cannot be the target of spells or effects. World Champion has power and toughness equal to the life total of target opponent. {0}: Discard your hand to search your library for 1996 World Champion and reveal it to all players. Shuffle your library and put 1996 World Champion on top of it. Use this ability only at the beginning of your upkeep, and only if 1996 World Champion is in your library.",
+    ),
+  );
+  const dragonProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Shichifukujin Dragon",
+      "Summon Dragon",
+      9,
+      "When Shichifukujin Dragon comes into play, put seven +1/+1 counters on it. {R}{R}{R}, Sacrifice two +1/+1 counters: Put three +1/+1 counters on Shichifukujin Dragon at end of turn. Play this ability as a sorcery.",
+    ),
+  );
+  const robotProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Robot Chicken",
+      "Artifact Creature - Chicken Construct",
+      4,
+      "Whenever you cast a spell, put a 0/1 colorless Egg artifact creature token onto the battlefield. Whenever an Egg you control is put into a graveyard from the battlefield, destroy target artifact or creature.",
+    ),
+  );
+  const debProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Deb Thomas",
+      "Legendary Planeswalker - Deb",
+      4,
+      "Whenever an Employee enters under your control, put a loyalty counter on Deb Thomas. +1: Create a 1/1 red Employee creature token. -X: Employees and Dogs you control get +X/+0 until end of turn.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(championProfile, "combat_body") > 0);
+  assert.ok(getRoleWeight(championProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(championProfile, "self_protection") > 0);
+  assert.ok(getRoleWeight(championProfile, "direct_tutor") > 0);
+  assert.ok(getRoleWeight(dragonProfile, "combat_body") > 0);
+  assert.ok(getRoleWeight(dragonProfile, "counter_support") > 0);
+  assert.ok(getRoleWeight(robotProfile, "token_support") > 0);
+  assert.ok(getRoleWeight(robotProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(debProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(debProfile, "token_support") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

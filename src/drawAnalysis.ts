@@ -1308,6 +1308,13 @@ function isActualDrawSentence(sentence: string) {
   }
 
   if (
+    /\btarget opponent may draw\b/.test(sentence) &&
+    !/\byou (?:may )?draw\b|\beach player (?:may )?draws?\b/.test(sentence)
+  ) {
+    return false;
+  }
+
+  if (
     /\b(?:when|whenever)\s+[^,]*\bdraws?\b[^,]*,/.test(sentence) &&
     !/,\s*(?:you|that player|its controller|they|each player|each opponent)\s+draw(?:s)?\b/.test(sentence) &&
     !/,\s*draw(?:s)?\b/.test(sentence)

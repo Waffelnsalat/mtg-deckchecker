@@ -85,6 +85,25 @@ test("analyzeDeckDraw treats looting as selection first, not full draw", () => {
   assert.ok(analysis.counts.selection > analysis.counts.draw);
 });
 
+test("analyzeDeckDraw ignores cards that only let an opponent draw", () => {
+  const analysis = analyzeDeckDraw(
+    createDocument([
+      createResolvedCard("commander", 1, "Test Commander", "Legendary Creature - Advisor", 2),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Opponent Gift Style",
+        "Creature - Cleric",
+        3,
+        "{W}, {T}: Prevent the next 2 damage that would be dealt to target creature this turn. Target opponent may draw a card.",
+      ),
+      createResolvedCard("mainboard", 98, "Filler Spell", "Creature - Human", 2, ""),
+    ]),
+  );
+
+  assert.equal(analysis.taggedCards.some((card) => card.name === "Opponent Gift Style"), false);
+});
+
 test("analyzeDeckDraw treats top filtering as selection, not repeatable card advantage", () => {
   const analysis = analyzeDeckDraw(
     createDocument([

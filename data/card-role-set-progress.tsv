@@ -25,11 +25,11 @@ rin	Rinascimento	1995-08-01	masters	69	false	pending	0			false
 hml	Homelands	1995-10-01	expansion	140	false	done	115	115	0	true	data/card-role-worksheets/hml-role-review.tsv
 o90p	Oversized 90's Promos	1996-04-01	memorabilia	10	false	done	9	9	0	true	data/card-role-worksheets/o90p-role-review.tsv
 ptc	Pro Tour Collector Set	1996-05-01	memorabilia	308	false	done	117	117	0	true	data/card-role-worksheets/ptc-role-review.tsv
-all	Alliances	1996-06-10	expansion	199	false	pending	0			false	
+all	Alliances	1996-06-10	expansion	199	false	done	144	144	0	true	data/card-role-worksheets/all-role-review.tsv
 plgm	DCI Legend Membership	1996-07-01	promo	2	false	pending	0			false	
 rqs	Rivals Quick Start Set	1996-07-01	box	65	false	pending	0			false	
 parl	Arena League 1996	1996-08-02	promo	7	false	pending	0			false	
-pcel	Celebration Cards	1996-08-14	memorabilia	9	false	pending	0			false	
+pcel	Celebration Cards	1996-08-14	memorabilia	9	false	done	9	9	0	true	data/card-role-worksheets/pcel-role-review.tsv
 pred	Redemption Program	1996-10-01	promo	1	false	pending	0			false	
 mir	Mirage	1996-10-08	expansion	353	false	pending	0			false	
 mgb	Multiverse Gift Box	1996-11-01	box	10	false	pending	0			false	

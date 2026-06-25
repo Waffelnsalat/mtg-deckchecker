@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-25T08:54:59.635Z",
+  "generatedAt": "2026-06-25T09:38:44.050Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 14,
+    "done": 16,
     "inProgress": 0,
-    "pending": 1029
+    "pending": 1027
   },
   "sets": [
     {
@@ -369,11 +369,12 @@
       "setType": "expansion",
       "cardCount": 199,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 144,
+      "totalUniqueOracleIds": 144,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/all-role-review.tsv"
     },
     {
       "code": "plgm",
@@ -421,11 +422,12 @@
       "setType": "memorabilia",
       "cardCount": 9,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 9,
+      "totalUniqueOracleIds": 9,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pcel-role-review.tsv"
     },
     {
       "code": "pred",

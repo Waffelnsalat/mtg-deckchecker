@@ -175,6 +175,19 @@ function applyEffectQualityDiscountToProfile(profile: CardRoleProfile, text: str
 
 function detectAdvancedDrawRoles(profile: CardRoleProfile, text: string, permanent: boolean) {
   const repeatable = isRepeatableText(text, permanent);
+  const opponentOnlyDraw =
+    /\btarget opponent may draw\b/.test(text) &&
+    !/\byou (?:may )?draw\b|\beach player (?:may )?draws?\b|\ban opponent chooses one\b[\s\S]{0,120}\byou draw\b/.test(
+      text,
+    );
+  const delayedNextTurnDraw =
+    /\bdraw (?:a card|one|two|three|four|five|six|seven|eight|nine|ten|\d+ cards?)\b[^.]{0,100}\bat the beginning of the next turn'?s upkeep\b/.test(
+      text,
+    );
+  const oneShotDrawTrigger =
+    /\bwhen\b[^.]{0,120}\b(?:enters(?: the battlefield)?|dies|leaves the battlefield)\b[^.]{0,160}\bdraw(?:s)?\b/.test(
+      text,
+    );
   const hasImpulseAccess =
     /\bexile the top\b.{0,180}\byou may (?:play|cast)\b/.test(text) ||
     /\blook at the top\b.{0,120}\byou may (?:play|cast)\b/.test(text);
@@ -214,14 +227,18 @@ function detectAdvancedDrawRoles(profile: CardRoleProfile, text: string, permane
     }
   } else {
     if (
-      /\bdraw (?:a|an|one|two|three|four|five|six|seven|eight|nine|ten|\d+|x)\b/.test(text) &&
+      (
+        /\bdraw (?:a|an|one|two|three|four|five|six|seven|eight|nine|ten|\d+|x)\b/.test(text) ||
+        /\b(?:you|each player) draws? up to (?:one|two|three|four|five|six|seven|eight|nine|ten|\d+) cards?\b/.test(text)
+      ) &&
+      !opponentOnlyDraw &&
       !/\bif you would draw\b/.test(text) &&
       !/\bwhenever (?:you|a player|an opponent|one or more players) draw\b/.test(text) &&
       !hasSelfReplacingTopDraw
     ) {
       addRole(profile, "draw", 0.92, "Advanced scan recognized direct card draw.");
       addRole(profile, "direct_draw", 0.76, "Advanced scan recognized direct card draw.");
-      if (repeatable) {
+      if (repeatable && !delayedNextTurnDraw && !oneShotDrawTrigger) {
         addRole(profile, "repeatable_draw", 0.64, "Advanced scan recognized recurring draw text.");
       }
     }
@@ -237,7 +254,7 @@ function detectAdvancedDrawRoles(profile: CardRoleProfile, text: string, permane
 
     if (/\bdraw\b[^.]{0,80}\bdiscard\b|\bdiscard\b[^.]{0,80}\bdraw\b/.test(text)) {
       addRole(profile, "selection", 0.62, "Advanced scan recognized looting-style card selection.");
-      if (repeatable) {
+      if (repeatable && !oneShotDrawTrigger) {
         addRole(profile, "repeatable_advantage", 0.36, "Advanced scan recognized recurring looting as a small engine.");
       }
     }
@@ -534,6 +551,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bdeals? (?:\w+\s+times\s+)?x damage to each of up to x targets?\b/.test(text) ||
     /\bdeals? damage equal to (?:its|that creature'?s|their) power to any target\b/.test(text) ||
     /\bdeals? (?:x|\d+|that much) damage divided as you choose among any number of targets?(?!\s+creatures?\b)\b/.test(text) ||
+    /\bdistribute\b[^.]{0,80}-\d+\/-\d+ counters? among\b[^.]{0,120}target creatures?\b/.test(text) ||
     /\bchoose any target\b[\s\S]{0,180}\bdeals? (?:x|\d+|that much) damage to each of them\b/.test(text);
   const massRemoval =
     /\b(?:destroy|exile|return) all\b[^.]{0,120}\b(?:creatures|artifacts|enchantments|permanents|nonland permanents)\b/.test(text) ||
@@ -544,6 +562,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bfor each attacking creature\b[^.]{0,160}\bputs? it on (?:their|its) choice of the top or bottom of (?:their|its) library\b/.test(text) ||
     /\beach creature deals damage to itself equal to its power\b/.test(text) ||
     /\ball creatures get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
+    /\bnonartifact creatures get -\d+\/-\d+\b/.test(text) ||
     /\bnonwhite creatures get -\d+\/-\d+\b/.test(text) ||
     /\bcreatures your opponents control get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
     /\bcreatures your opponents control have base power and toughness 0\/1\b/.test(text) ||
@@ -740,6 +759,8 @@ function detectAdvancedProtectionRoles(
     /\bthe next time target land would be destroyed this turn\b/.test(text) ||
     /\bprevent the next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to (?:any target|target (?:creature|permanent|artifact|enchantment|planeswalker|player)|that (?:permanent|creature|player))\b/.test(text) ||
     /\bthe next time\b[^.]{0,100}\bsource of your choice would deal damage to target creature\b[^.]{0,120}\bdeals that damage to you instead\b/.test(text);
+  const redirectedDamageProtection =
+    /\bgains?\b[^.]{0,120}\bthe next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to target\b[^.]{0,180}\bis dealt to (?:this|that) creature instead\b/.test(text);
   const selfBounce =
     /\breturn target\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent|land)\b[^.]{0,120}\byou control\b[^.]{0,120}\bto (?:its|their) owner's hand\b/.test(text) ||
     /\breturn target permanent you both own and control to your hand\b/.test(text);
@@ -753,6 +774,7 @@ function detectAdvancedProtectionRoles(
   const selfProtection =
     /\b(?:this creature|this artifact|this enchantment|this permanent|this planeswalker)\b[^.]{0,120}\b(?:has|gains)\b[^.]{0,120}\b(?:hexproof|shroud|ward|indestructible|protection from)\b/.test(text) ||
     /\b(?:hexproof|shroud|ward \d+|ward—|ward \{|indestructible)\b/.test(text) ||
+    /\bcannot be the target of spells or effects\b/.test(text) ||
     (/\bprotection from [a-z]+\b/.test(text) && !/\b(?:enchanted|target) creature\b/.test(text));
 
   if (broadProtection) {
@@ -768,7 +790,7 @@ function detectAdvancedProtectionRoles(
     }
   }
 
-  if (targetedProtection) {
+  if (targetedProtection || redirectedDamageProtection) {
     addRole(profile, "protection", repeatable ? 0.9 : 0.82, "Advanced scan recognized single-target protection.");
     addRole(
       profile,
@@ -831,6 +853,7 @@ function detectAdvancedRecursionRoles(profile: CardRoleProfile, text: string, pe
     /\bshuffle your graveyard into your library\b/.test(text) ||
     /\bshuffle\b[^.]{0,120}\bfrom your graveyard\b[^.]{0,120}\binto your library\b/.test(text) ||
     /\bput\b[^.]{0,120}\bfrom your graveyard\b[^.]{0,120}\bon top of your library\b/.test(text) ||
+    /\bput the top card of your graveyard on the bottom of your library\b/.test(text) ||
     /\bput any number of target\b[^.]{0,160}\bfrom target player's graveyard on top of their library\b/.test(text);
 
   if (battlefield) {
@@ -1035,6 +1058,31 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "land_denial", 0.34, "Advanced scan recognized land type changes as possible mana disruption.");
   }
 
+  if (/\btarget land becomes the basic land type of your choice\b/.test(text)) {
+    addRole(profile, "land_type_change", 0.42, "Advanced scan recognized land type-changing utility.");
+    addRole(profile, "land_denial", 0.32, "Advanced scan recognized land type changes as possible mana disruption.");
+  }
+
+  if (
+    /\bwhenever a player taps a snow land for mana\b[^.]{0,180}\badds? one mana\b/.test(text) ||
+    /\bthat land doesn't untap during its controller'?s next untap step\b/.test(text)
+  ) {
+    addRole(profile, "snow_support", 0.5, "Advanced scan recognized snow-land mana support.");
+    addRole(profile, "land_synergy", 0.44, "Advanced scan recognized snow-land utility.");
+    addRole(profile, "ramp", 0.34, "Advanced scan recognized snow-land mana multiplication.");
+    addRole(profile, "mana_denial", 0.3, "Advanced scan recognized delayed snow-land untap pressure.");
+  }
+
+  if (
+    /\beach player may play an additional land\b/.test(text) ||
+    /\bwhenever a land is tapped for mana\b[^.]{0,120}\breturn it to its owner'?s hand\b/.test(text)
+  ) {
+    addRole(profile, "land_synergy", 0.58, "Advanced scan recognized extra land-play and land-bounce utility.");
+    addRole(profile, "land_acceleration", 0.42, "Advanced scan recognized additional land plays.");
+    addRole(profile, "mana_denial", 0.44, "Advanced scan recognized land-bounce mana pressure.");
+    addRole(profile, "stax_piece", 0.4, "Advanced scan recognized symmetrical land-bounce pressure.");
+  }
+
   if (
     /\ball lands are no longer snow\b/.test(text) ||
     /\btarget snow land is no longer snow\b/.test(text) ||
@@ -1049,7 +1097,8 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\byou may tap or untap target artifact, creature, or land\b/.test(text) ||
-    /\buntap target (?:artifact|creature|land|permanent)\b/.test(text)
+    /\buntap target (?:artifact|creature|land|permanent)\b/.test(text) ||
+    /\btap (?:x|one|two|three|four|five|six|\d+) target lands?\b/.test(text)
   ) {
     addRole(profile, "tap_untap", 0.48, "Advanced scan recognized tap-or-untap utility.");
     addRole(profile, "tempo_support", 0.44, "Advanced scan recognized tap-or-untap tempo utility.");
@@ -1107,6 +1156,7 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\blook at the top (?:three|five|\d+) cards of target player'?s library\b/.test(text) ||
+    /\btarget player looks at the top (?:three|five|\d+) cards of their library\b/.test(text) ||
     /\btarget player chooses a card name\b[^.]{0,140}\breveals? the top card of their library\b/.test(text)
   ) {
     addRole(profile, "selection", 0.36, "Advanced scan recognized top-of-library ordering utility.");
@@ -1120,6 +1170,11 @@ function detectAdvancedPurposeRoles(
 
   if (/\bput any number of target\b[^.]{0,160}\bfrom target player's graveyard on top of their library\b/.test(text)) {
     addRole(profile, "topdeck_control", 0.42, "Advanced scan recognized graveyard-to-library ordering utility.");
+  }
+
+  if (/\bput up to\b[^.]{0,80}\btarget cards? from an opponent'?s graveyard on top of their library\b/.test(text)) {
+    addRole(profile, "topdeck_control", 0.42, "Advanced scan recognized graveyard-to-library ordering utility.");
+    addRole(profile, "graveyard_hate", 0.34, "Advanced scan recognized opposing graveyard disruption.");
   }
 
   if (/\byou control that player\b/.test(text)) {
@@ -1225,13 +1280,19 @@ function detectAdvancedPurposeRoles(
   if (
     /\bcreates?\b[^.]{0,140}\btokens?\b|\bpopulate\b|\btokens you control\b/.test(text) ||
     tokenKeyword ||
+    /\bput\b[^.]{0,140}\b(?:creature|artifact creature|egg artifact creature)\s+token\b[^.]{0,120}\bonto the battlefield\b/.test(text) ||
     /\btokens? would be created\b[\s\S]{0,180}\b(?:twice that many|that many plus|additional)\b/.test(text) ||
     /\bcreate\b[\s\S]{0,120}\b(?:twice that many|that many plus|additional)\b[\s\S]{0,80}\btokens?\b/.test(text)
   ) {
-    addRole(profile, "token_support", permanent ? 0.68 : 0.58, "Advanced scan recognized token support.");
+    if (!/\btarget opponent creates?\b/.test(text)) {
+      addRole(profile, "token_support", permanent ? 0.68 : 0.58, "Advanced scan recognized token support.");
+    }
   }
 
-  if (/\bgain(?:s)?\b[^.]{0,40}\blife\b|\bwhenever you gain life\b|\blifelink\b/.test(text)) {
+  if (
+    (/\bgain(?:s)?\b[^.]{0,40}\blife\b|\bwhenever you gain life\b|\blifelink\b/.test(text)) &&
+    !/\btarget opponent gains?\b[^.]{0,40}\blife\b/.test(text)
+  ) {
     addRole(profile, "lifegain", permanent ? 0.58 : 0.46, "Advanced scan recognized lifegain support.");
   }
 
@@ -1243,6 +1304,7 @@ function detectAdvancedPurposeRoles(
   if (
     /\btarget player activates a mana ability of each land they control\b/.test(text) ||
     /\btap all lands target player controls\b/.test(text) ||
+    /\btap (?:x|one|two|three|four|five|six|\d+) target lands?\b/.test(text) ||
     /\btarget player\b[^.]{0,120}\bloses all unspent mana\b/.test(text) ||
     /\bdestroy that land unless (?:that|any) player pays\b/.test(text) ||
     /\bwhen this enchantment enters, tap all (?:plains|islands|swamps|mountains|forests)\b/.test(text) ||
@@ -1305,6 +1367,7 @@ function detectAdvancedPurposeRoles(
     ) ||
     /\bcreatures? (?:can't|can not) block\b/.test(text) ||
     /\b(?:all |other |face-down |attacking |blocking |tapped |untapped )?(?:creatures?|creature tokens?|zombies|skeletons|elves|goblins|dragons|vampires|soldiers|warriors|slivers|eldrazi|angels|humans|wizards|rogues|knights|merfolk|pirates|cats|beasts|tokens)(?: you control)?\b[^.]{0,160}\b(?:get|gets) (?:\+\d+\/\+\d+|\+\d+\/\+0|\+0\/\+\d+|\+x\/\+x)\b/.test(text) ||
+    /\b(?:creatures?|employees|dogs|tokens)(?: and (?:creatures?|employees|dogs|tokens))? you control\b[^.]{0,160}\b(?:get|gets) (?:\+x\/\+\d+|\+x\/\+0|\+\d+\/\+\d+|\+\d+\/\+0|\+0\/\+\d+|\+x\/\+x)\b/.test(text) ||
     /\bother (?:zombies|skeletons|elves|goblins|dragons|vampires|soldiers|warriors|slivers|eldrazi|angels|humans|wizards|rogues|knights|merfolk|pirates|cats|beasts)\b[^.]{0,140}\byou control get \+\d+\/\+\d+\b/.test(text) ||
     /\ball (?:zombies|skeletons|elves|goblins|dragons|vampires|soldiers|warriors|slivers|eldrazi|angels|humans|wizards|rogues|knights|merfolk|pirates|cats|beasts)\b[^.]{0,120}\bgain\b/.test(text) ||
     /\b(?:all |other |face-down |attacking |blocking |tapped |untapped )?(?:creatures?|creature tokens?|sliver creatures|knight creatures|zombies|skeletons|elves|goblins|dragons|vampires|soldiers|warriors|slivers|eldrazi|angels|humans|wizards|rogues|knights|merfolk|pirates|cats|beasts)(?: you control)?\b[^.]{0,160}\b(?:gain|gains|have|has)\b[^.]{0,120}\b(?:flying|haste|double strike|first strike|menace|trample|lifelink|vigilance|deathtouch|indestructible|ward)\b/.test(text) ||
@@ -1325,6 +1388,7 @@ function detectAdvancedPurposeRoles(
     combatKeywordSupport ||
     /\bgets? (?:\+\d+\/\+\d+|\+x\/\+x) for each\b/.test(text) ||
     /\bpower and toughness (?:are )?each equal to\b/.test(text) ||
+    /\bhas power and toughness equal to\b/.test(text) ||
     /\bswitch (?:target creature'?s|the) power and toughness\b/.test(text) ||
     /\bdistribute x \+\d+\/\+\d+ counters?\b/.test(text) ||
     /\bhave base power and toughness x\/x\b/.test(text) ||
@@ -1334,11 +1398,11 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "combat_support", permanent ? 0.64 : 0.52, "Advanced scan recognized combat support.");
   }
 
-  if (hasCardType(card, "Creature") && hasCombatKeyword(card)) {
+  if (isCreatureCard(card) && hasCombatKeyword(card)) {
     addRole(profile, "combat_threat", 0.44, "Advanced scan recognized a combat-relevant body.");
   }
 
-  if (hasCardType(card, "Creature") && !hasCardType(card, "Land")) {
+  if (isCreatureCard(card) && !hasCardType(card, "Land")) {
     addRole(profile, "combat_body", 0.12, "Advanced scan recognized a creature body.");
   }
 
@@ -1369,6 +1433,7 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\b\+\d+\/\+\d+ counters?\b|\bcounters? on\b|\bproliferate\b|\bmove (?:a|any number of) counters?\b/.test(text) ||
+    /\bdistribute\b[^.]{0,120}[+-]\d+\/[+-]\d+ counters? among\b/.test(text) ||
     hasAnyKeyword(keywords, ["proliferate", "support", "backup", "adapt", "monstrosity", "level up"]) ||
     /\bcounters? would be (?:put|placed)\b[\s\S]{0,180}\b(?:that many plus|additional|twice that many)\b/.test(text)
   ) {
@@ -1401,7 +1466,8 @@ function detectAdvancedPurposeRoles(
     /\bgains? control of target\b[^.]{0,140}\byou control\b/.test(text) ||
     /\bexchange control of\b[^.]{0,220}\b(?:target|two|creature|artifact|enchantment|permanent|spell)\b/.test(text) ||
     /\byou own\b[^.]{0,180}\b(?:an opponent controls|opponent controls)\b/.test(text) ||
-    /\bpermanents? you own but don'?t control\b/.test(text)
+    /\bpermanents? you own but don'?t control\b/.test(text) ||
+    /\btarget opponent (?:creates?|gains?|may draw)\b/.test(text)
   ) {
     addRole(profile, "donation_support", permanent ? 0.64 : 0.56, "Advanced scan recognized donation, exchange, or political control-transfer support.");
   }
@@ -1699,6 +1765,7 @@ function hasXCounterOrPumpText(text: string) {
   return (
     /\b\+x\/\+x\b/.test(text) ||
     /\b-x\/-x\b/.test(text) ||
+    /\b\+x\/\+0\b/.test(text) ||
     /\bx \+\d+\/\+\d+ counters?\b/.test(text) ||
     /\bput x \+\d+\/\+\d+ counters?\b/.test(text) ||
     /\bdistribute x \+\d+\/\+\d+ counters?\b/.test(text) ||
@@ -1730,11 +1797,17 @@ function hasFlashEnablerText(text: string) {
 
 function isPermanentCard(card: ScryfallCard) {
   return hasCardType(card, "Artifact") ||
-    hasCardType(card, "Creature") ||
+    isCreatureCard(card) ||
     hasCardType(card, "Enchantment") ||
     hasCardType(card, "Planeswalker") ||
     hasCardType(card, "Battle") ||
     hasCardType(card, "Land");
+}
+
+function isCreatureCard(card: ScryfallCard) {
+  return hasCardType(card, "Creature") ||
+    card.type_line.startsWith("Summon ") ||
+    (card.card_faces?.some((face) => face.type_line?.startsWith("Summon ")) ?? false);
 }
 
 function isRepeatableText(text: string, permanent: boolean) {
