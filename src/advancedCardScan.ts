@@ -747,6 +747,7 @@ function detectAdvancedProtectionRoles(
     /\byour permanents have\b[^.]{0,120}\b(?:hexproof|ward)\b/.test(text) ||
     /\bphase out\b[^.]{0,80}\beach\b[^.]{0,80}\b(?:creature|permanent) you control\b/.test(text) ||
     /\btarget opponent skips? (?:their|his or her) next combat phase\b/.test(text) ||
+    /\bplayers and permanents can'?t be the targets of spells or activated abilities\b/.test(text) ||
     /\ball damage that would be dealt to you\b[^.]{0,120}\bis dealt to\b/.test(text) ||
     /\bprevent all (?:combat )?damage\b[^.]{0,180}\b(?:this turn|that would be dealt this turn|that would be dealt to you|dealt by creatures)\b/.test(text) ||
     /\bcreatures deal no combat damage\b/.test(text) ||
@@ -1301,7 +1302,7 @@ function detectAdvancedPurposeRoles(
     /\btokens? would be created\b[\s\S]{0,180}\b(?:twice that many|that many plus|additional)\b/.test(text) ||
     /\bcreate\b[\s\S]{0,120}\b(?:twice that many|that many plus|additional)\b[\s\S]{0,80}\btokens?\b/.test(text)
   ) {
-    if (!/\b(?:target opponent|an opponent|its controller|that player) creates?\b/.test(text)) {
+    if (!/\b(?:target opponent|an opponent|its controller|that player|that creature'?s controller) creates?\b/.test(text)) {
       addRole(profile, "token_support", permanent ? 0.68 : 0.58, "Advanced scan recognized token support.");
     }
   }
@@ -1457,8 +1458,15 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "hate_piece", 0.24, "Advanced scan recognized poison-counter removal as narrow hate.");
   }
 
+  const sacrificeOnlyAsEtbDrawback =
+    /\bwhen this creature enters, sacrifice it unless\b/.test(text) &&
+    !/\bsacrifice\b[^.]{0,100}:/.test(text) &&
+    !/\bas an additional cost\b[^.]{0,120}\bsacrifice\b/.test(text) &&
+    !/\b(?:whenever|when)\b[^.]{0,120}\bdies\b/.test(text);
+
   if (
-    /\bsacrifice\b|\bwhenever\b[^.]{0,120}\bdies\b|\bwhen\b[^.]{0,120}\bdies\b/.test(text) ||
+    (/\bsacrifice\b/.test(text) && !sacrificeOnlyAsEtbDrawback) ||
+    /\bwhenever\b[^.]{0,120}\bdies\b|\bwhen\b[^.]{0,120}\bdies\b/.test(text) ||
     /\b(?:creature|artifact|permanent)s? dying causes a triggered ability\b[^.]{0,180}\btriggers? an additional time\b/.test(text) ||
     /\b(?:creature|artifact|permanent)s? dying\b[^.]{0,160}\btriggered ability\b[^.]{0,160}\badditional time\b/.test(text)
   ) {

@@ -2292,6 +2292,39 @@ test("inferAdvancedRoleProfile recognizes Mirage utility wording and avoids comp
   assert.equal(getRoleWeight(lifeCompensationProfile, "lifegain"), 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Multiverse Gift Box wording without drawback overtags", () => {
+  const peaceTalksProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Peace Talks",
+      "Sorcery",
+      2,
+      "This turn and next turn, creatures can't attack, and players and permanents can't be the targets of spells or activated abilities.",
+    ),
+  );
+  const ovinomancerProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Ovinomancer",
+      "Creature - Human Wizard",
+      3,
+      "When this creature enters, sacrifice it unless you return three basic lands you control to their owner's hand. {T}, Return this creature to its owner's hand: Destroy target creature. It can't be regenerated. That creature's controller creates a 0/1 green Sheep creature token.",
+    ),
+  );
+  const drawbackProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Bull Elephant",
+      "Creature - Elephant",
+      4,
+      "When this creature enters, sacrifice it unless you return two Forests you control to their owner's hand.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(peaceTalksProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(ovinomancerProfile, "targeted_removal") > 0);
+  assert.equal(getRoleWeight(ovinomancerProfile, "token_support"), 0);
+  assert.equal(getRoleWeight(ovinomancerProfile, "sacrifice_support"), 0);
+  assert.equal(getRoleWeight(drawbackProfile, "sacrifice_support"), 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

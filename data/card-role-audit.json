@@ -39266,6 +39266,208 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Mirage role audit."
+    },
+    {
+      "oracleId": "4ed04ece-64d2-41a4-bf36-b993cbbf2aac",
+      "name": "Bull Elephant",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "29f4c69a-ca59-4e9f-a808-87ba85b34f2f",
+      "name": "Dark Privilege",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "f9ca35e1-24c5-46f4-a666-0dfe2c920e8b",
+      "name": "King Cheetah",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "combat_body"
+      ],
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "6732a587-e3cc-4c30-9267-f8949dd8724a",
+      "name": "Necrosavant",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "98026d30-a29f-4590-968f-b1b36926a275",
+      "name": "Ovinomancer",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "b0f87e25-6604-4723-9467-1e4fedc1157a",
+      "name": "Peace Talks",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "19d11ca8-a95b-4e6e-a71f-8f9d06c580fd",
+      "name": "Urborg Mindsucker",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "combat_body",
+        "hand_attack",
+        "removal",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "hand_attack",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "14df239a-c7cc-492a-94f5-2971f6efe17b",
+      "name": "Vampirism",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "cbfccfc0-3117-4ca0-b7ce-8e2d67ec49ab",
+      "name": "Viashino Sandstalker",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
+    },
+    {
+      "oracleId": "7aad0a80-cf7b-4224-8e72-d611e0be3383",
+      "name": "Wicked Reward",
+      "firstSet": "mgb",
+      "releasedAt": "1996-11-01",
+      "reviewedAt": "2026-06-25T13:37:43.882Z",
+      "expectedRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Multiverse Gift Box role audit."
     }
   ]
 }
