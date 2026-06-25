@@ -2414,6 +2414,78 @@ test("inferAdvancedRoleProfile recognizes Visions utility wording and avoids dra
   assert.equal(getRoleWeight(landDrawbackProfile, "sacrifice_support"), 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Astral Cards old random wording", () => {
+  const aswanProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Aswan Jaguar",
+      "Creature - Cat",
+      2,
+      "When Aswan Jaguar comes into play, choose a random creature type from those in target opponent's deck. {G}{G}, {T}: Bury target creature of the chosen type.",
+    ),
+  );
+  const graveProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Call from the Grave",
+      "Sorcery",
+      3,
+      "Put a random creature from a random graveyard into play under your control. Call from the Grave deals to you an amount of damage equal to that creature's casting cost.",
+    ),
+  );
+  const polkaProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Goblin Polka Band",
+      "Creature - Goblin",
+      3,
+      "{2}, {T}, Pay {R} for each target: Tap any number of random target creatures. Goblins tapped in this way do not untap during their controllers' next untap phases.",
+    ),
+  );
+  const azarProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Necropolis of Azar",
+      "Land",
+      0,
+      "Whenever a non-black creature is put into any graveyard from play, put a husk counter on Necropolis of Azar. {5}, Remove a husk counter from Necropolis of Azar: Put a Spawn of Azar token into play. Treat this token as a black creature with a random power and toughness, each no less than 1 and no greater than 3, that has swampwalk.",
+    ),
+  );
+  const struggleProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Power Struggle",
+      "Enchantment",
+      4,
+      "During each player's upkeep, that player exchanges control of random target artifact, creature or land he or she controls, for control of random target permanent of the same type that a random opponent controls.",
+    ),
+  );
+  const dragonProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Prismatic Dragon",
+      "Creature - Dragon",
+      6,
+      "Flying During your upkeep, Prismatic Dragon becomes a random color permanently. {2}: Prismatic Dragon becomes a random color permanently.",
+    ),
+  );
+  const whimsyProfile = inferAdvancedRoleProfile(createCard("Whimsy", "Sorcery", 2, "Play X random fast effects."));
+  const boxProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Pandora's Box",
+      "Artifact",
+      5,
+      "{3}, {T}: Choose a random summon card from all players' decks. For each player, flip a coin. If the flip ends up heads, put a token creature into play and treat it as though an exact copy of the chosen summon card were just played.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(aswanProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(graveProfile, "battlefield_recursion") > 0);
+  assert.ok(getRoleWeight(graveProfile, "theft_support") > 0);
+  assert.ok(getRoleWeight(polkaProfile, "tap_untap") > 0);
+  assert.ok(getRoleWeight(azarProfile, "token_support") > 0);
+  assert.ok(getRoleWeight(struggleProfile, "theft_support") > 0);
+  assert.ok(getRoleWeight(struggleProfile, "donation_support") > 0);
+  assert.ok(getRoleWeight(dragonProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(whimsyProfile, "random_effect") > 0);
+  assert.ok(getRoleWeight(boxProfile, "token_support") > 0);
+  assert.ok(getRoleWeight(boxProfile, "copy_support") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

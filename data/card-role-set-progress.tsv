@@ -36,7 +36,7 @@ mgb	Multiverse Gift Box	1996-11-01	box	10	false	done	10	10	0	true	data/card-role
 itp	Introductory Two-Player Set	1996-12-31	starter	67	false	pending	0			false	
 vis	Visions	1997-02-03	expansion	167	false	done	167	167	0	true	data/card-role-worksheets/vis-role-review.tsv
 5ed	Fifth Edition	1997-03-24	core	460	false	pending	0			false	
-past	Astral Cards	1997-04-01	box	12	true	pending	0			false	
+past	Astral Cards	1997-04-01	box	12	true	done	12	12	0	true	data/card-role-worksheets/past-role-review.tsv
 pmic	MicroProse Promos	1997-04-01	memorabilia	1	false	pending	0			false	
 por	Portal	1997-05-01	starter	257	false	pending	0			false	
 pvan	Vanguard Series	1997-05-01	vanguard	32	false	pending	0			false	

@@ -529,6 +529,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bwhen enchanted creature leaves the battlefield\b[^.]{0,140}\bits controller sacrifices a creature\b/.test(text);
   const targetedRemoval =
     /\b(?:destroy|exile)\b[^.]{0,120}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
+    /\bbury target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\btap target creature\b[\s\S]{0,140}\bexile that creature\b/.test(text) ||
     /\bturn target creature face down\b/.test(text) ||
     /\btarget permanent\b[^.]{0,120}\bshuffles? (?:it|itself) into (?:their|its) owner's library\b/.test(text) ||
@@ -588,6 +589,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\btarget spell, nonland permanent, or card in a graveyard\b[^.]{0,160}\btop or bottom of (?:their|its) library\b/.test(text);
   const temporaryTheft =
     exchangeControl ||
+    /\bexchanges? control of\b[^.]{0,260}\brandom target\b[^.]{0,160}\b(?:artifact|creature|land|permanent)\b/.test(text) ||
     /\bgain control of\b[^.]{0,120}\b(?:target|enchanted)\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,160}\buntil end of turn\b/.test(
       text,
     ) ||
@@ -846,6 +848,7 @@ function detectAdvancedRecursionRoles(profile: CardRoleProfile, text: string, pe
   const battlefield =
     /\breturn\b[^.]{0,140}\b(?:target|up to .*?)\b[^.]{0,140}\bfrom your graveyard\b[^.]{0,120}\bto the battlefield\b/.test(text) ||
     /\breturn\b[^.]{0,140}\b(?:artifact|creature|enchantment|planeswalker|permanent) card\b[^.]{0,140}\bfrom your graveyard\b[^.]{0,120}\bto the battlefield\b/.test(text) ||
+    /\bput\b[^.]{0,80}\brandom creature from (?:a|any) random graveyard into play under your control\b/.test(text) ||
     /\b(?:target|up to .*?)\b[^.]{0,140}\bcreature cards? in your graveyard\b[^.]{0,180}\breturn (?:it|them|those cards?) to the battlefield\b/.test(text) ||
     /\btarget creature cards? in your graveyard\b[\s\S]{0,180}\breturn them to the battlefield\b/.test(text) ||
     /\breturn a card exiled with this enchantment to the battlefield\b/.test(text) ||
@@ -1046,6 +1049,7 @@ function detectAdvancedPurposeRoles(
     /\bone or more target creatures become (?:white|blue|black|red|green)\b/.test(text) ||
     /\benchanted creature becomes the colors? or colors? of your choice\b/.test(text) ||
     /\btarget permanent you control becomes the color of your choice\b/.test(text) ||
+    /\bbecomes a random color permanently\b/.test(text) ||
     /\b(?:black|red|white|blue|green)(?: and\/or (?:black|red|white|blue|green))? permanents and spells are colorless sources of damage\b/.test(text)
   ) {
     addRole(profile, "color_change", 0.3, "Advanced scan recognized color-changing utility.");
@@ -1126,6 +1130,7 @@ function detectAdvancedPurposeRoles(
     /\byou may tap or untap target artifact, creature, or land\b/.test(text) ||
     /\buntap target (?:nonattacking |attacking |blocking |tapped |untapped )?(?:artifact|creature|land|permanent)\b/.test(text) ||
     /\btarget player untaps all basic lands they control\b/.test(text) ||
+    /\btap any number of random target creatures\b/.test(text) ||
     /\btap (?:x|one|two|three|four|five|six|\d+) target lands?\b/.test(text)
   ) {
     addRole(profile, "tap_untap", 0.48, "Advanced scan recognized tap-or-untap utility.");
@@ -1326,6 +1331,8 @@ function detectAdvancedPurposeRoles(
     /\bcreates?\b[^.]{0,140}\btokens?\b|\bpopulate\b|\btokens you control\b/.test(text) ||
     tokenKeyword ||
     /\bput\b[^.]{0,140}\b(?:creature|artifact creature|egg artifact creature)\s+token\b[^.]{0,120}\bonto the battlefield\b/.test(text) ||
+    /\bput a token creature into play\b/.test(text) ||
+    /\bput\b[^.]{0,160}\b(?:spawn of azar|token creature|creature)\s+token\b[^.]{0,160}\binto play\b/.test(text) ||
     /\btokens? would be created\b[\s\S]{0,180}\b(?:twice that many|that many plus|additional)\b/.test(text) ||
     /\bcreate\b[\s\S]{0,120}\b(?:twice that many|that many plus|additional)\b[\s\S]{0,80}\btokens?\b/.test(text)
   ) {
@@ -1524,11 +1531,18 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "mill_support", 0.52, "Advanced scan recognized mill or graveyard-filling support.");
   }
 
+  if (/\bplay (?:x|\d+) random fast effects\b|\bplay a random effect\b/.test(text)) {
+    addRole(profile, "random_effect", 0.22, "Advanced scan recognized random-effect text.");
+    addRole(profile, "alternate_play", 0.18, "Advanced scan recognized alternate gameplay text.");
+  }
+
   if (
     /\bgain control of\b|\byou control enchanted (?:creature|artifact|permanent)\b|\bput that card onto the battlefield under your control\b/.test(text) ||
+    /\bput\b[^.]{0,80}\brandom creature from (?:a|any) random graveyard into play under your control\b/.test(text) ||
     /\bput target creature card from an opponent'?s graveyard onto the battlefield under your control\b/.test(text) ||
     /\byou control enchanted land\b/.test(text) ||
     /\bexchange control of\b[^.]{0,220}\b(?:target|two|creature|artifact|enchantment|permanent|spell)\b/.test(text) ||
+    /\bexchanges? control of\b[^.]{0,260}\brandom target\b[^.]{0,160}\b(?:artifact|creature|land|permanent)\b/.test(text) ||
     /\bexile\b[^.]{0,180}\b(?:target|an opponent'?s|opponent'?s)\b[^.]{0,180}\byou may (?:cast|play)\b/.test(text) ||
     /\byou may (?:cast|play)\b[^.]{0,180}\bfrom (?:an|your) opponents?'? (?:graveyard|library|hand|exile)\b/.test(text) ||
     /\byou may (?:cast|play) spells? from (?:an opponent'?s|opponents?'?) (?:graveyard|library|hand|exile)\b/.test(text) ||
@@ -1542,6 +1556,7 @@ function detectAdvancedPurposeRoles(
     /\b(?:target|an|each) opponent gains? control of\b/.test(text) ||
     /\bgains? control of target\b[^.]{0,140}\byou control\b/.test(text) ||
     /\bexchange control of\b[^.]{0,220}\b(?:target|two|creature|artifact|enchantment|permanent|spell)\b/.test(text) ||
+    /\bexchanges? control of\b[^.]{0,260}\brandom target\b[^.]{0,160}\b(?:artifact|creature|land|permanent)\b/.test(text) ||
     /\byou own\b[^.]{0,180}\b(?:an opponent controls|opponent controls)\b/.test(text) ||
     /\bpermanents? you own but don'?t control\b/.test(text) ||
     /\btarget opponent (?:creates?|gains?|may draw)\b/.test(text)

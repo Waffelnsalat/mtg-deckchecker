@@ -42498,6 +42498,258 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Visions role audit."
+    },
+    {
+      "oracleId": "9ab97610-76ad-4631-825e-8596dc9cfd4c",
+      "name": "Aswan Jaguar",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "252ff28e-3ea7-4e2c-a30c-3cb80aa278d0",
+      "name": "Call from the Grave",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "battlefield_recursion",
+        "recursion",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "battlefield_recursion",
+        "recursion",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "412da1dc-83dc-4cf7-8135-98f729f67ef1",
+      "name": "Faerie Dragon",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "alternate_play",
+        "combat_body",
+        "combat_threat",
+        "random_effect"
+      ],
+      "actualRoles": [
+        "alternate_play",
+        "combat_body",
+        "combat_threat",
+        "random_effect"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "cef33af2-b40d-4c65-9b6b-59c5175ea516",
+      "name": "Gem Bazaar",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "ca1bc31a-2cb1-4630-8513-a68816938c8a",
+      "name": "Goblin Polka Band",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "combat_body",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "1c67d3cd-59db-422b-a242-2a6ca51d543d",
+      "name": "Necropolis of Azar",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "combat_support",
+        "counter_support",
+        "landwalk_support",
+        "token_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "counter_support",
+        "landwalk_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "a2f3a8c4-0eca-47ae-b463-20f831b11486",
+      "name": "Orcish Catapult",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "counter_support",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "counter_support",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "943b0fee-21af-4ef3-9cb5-c061a45e0256",
+      "name": "Pandora's Box",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "coin_support",
+        "copy_support",
+        "replacement_engine",
+        "token_support"
+      ],
+      "actualRoles": [
+        "coin_support",
+        "copy_support",
+        "replacement_engine",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "159789a3-cef3-4260-9ea4-65856df5c523",
+      "name": "Power Struggle",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "donation_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "actualRoles": [
+        "donation_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "0499a59d-5bb1-4907-874e-e89ee5e4b992",
+      "name": "Prismatic Dragon",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "color_change",
+        "combat_body",
+        "combat_threat"
+      ],
+      "actualRoles": [
+        "color_change",
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "5ae62bf3-ab1e-4968-ad7d-6f06a7254cfa",
+      "name": "Rainbow Knights",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
+    },
+    {
+      "oracleId": "e7922402-e759-4607-a11e-284d737baa53",
+      "name": "Whimsy",
+      "firstSet": "past",
+      "releasedAt": "1997-04-01",
+      "reviewedAt": "2026-06-25T14:58:57.045Z",
+      "expectedRoles": [
+        "alternate_play",
+        "mana_sink",
+        "random_effect",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "alternate_play",
+        "mana_sink",
+        "random_effect",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Astral Cards role audit."
     }
   ]
 }
