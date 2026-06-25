@@ -20156,6 +20156,24 @@
       "notes": "Covered by Media and Collaboration Promos role audit."
     },
     {
+      "oracleId": "c2b082b4-5d9c-4125-b353-d1cf4f334720",
+      "name": "Sazh's Chocobo",
+      "firstSet": "pmei",
+      "releasedAt": "1995-01-01",
+      "reviewedAt": "2026-06-25T08:43:17.751Z",
+      "expectedRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Media and Collaboration Promos role audit; Landfall self-counter growth is represented by counter_support plus combat_body."
+    },
+    {
       "oracleId": "ff50d002-834e-4b5e-8db0-b0c8b4efb21f",
       "name": "Scent of Cinder",
       "firstSet": "pmei",
@@ -29840,6 +29858,44 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Homelands role audit."
+    },
+    {
+      "oracleId": "35caa378-440d-41a1-8ce4-174bfb7c16ac",
+      "name": "Incoming!",
+      "firstSet": "o90p",
+      "releasedAt": "1996-04-01",
+      "reviewedAt": "2026-06-25T08:50:29.741Z",
+      "expectedRoles": [
+        "cheat_into_play",
+        "cost_reduction",
+        "land_acceleration",
+        "mana_fixing",
+        "ramp",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "actualRoles": [
+        "cheat_into_play",
+        "cost_reduction",
+        "land_acceleration",
+        "mana_fixing",
+        "ramp",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Symmetric library search now correctly reads as restricted tutor, battlefield cheat, and unrestricted land acceleration/fixing."
+    },
+    {
+      "oracleId": "d3e7bc24-c2b0-4be3-b9d9-8a8d23b93bc7",
+      "name": "Blank Card",
+      "firstSet": "ptc",
+      "releasedAt": "1996-05-01",
+      "reviewedAt": "2026-06-25T08:53:56.874Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Blank non-gameplay memorabilia card; intentionally has no strategic role."
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-22T21:59:26.559Z",
+  "generatedAt": "2026-06-25T08:54:59.635Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 12,
+    "done": 14,
     "inProgress": 0,
-    "pending": 1031
+    "pending": 1029
   },
   "sets": [
     {
@@ -341,11 +341,12 @@
       "setType": "memorabilia",
       "cardCount": 10,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 9,
+      "totalUniqueOracleIds": 9,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/o90p-role-review.tsv"
     },
     {
       "code": "ptc",
@@ -354,11 +355,12 @@
       "setType": "memorabilia",
       "cardCount": 308,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 117,
+      "totalUniqueOracleIds": 117,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/ptc-role-review.tsv"
     },
     {
       "code": "all",

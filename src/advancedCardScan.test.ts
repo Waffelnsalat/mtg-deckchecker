@@ -456,6 +456,23 @@ test("inferAdvancedRoleProfile recognizes library dig into hand or battlefield",
   assert.ok(getRoleWeight(battlefieldProfile, "restricted_tutor") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes symmetric library searches that put nonland cards onto the battlefield", () => {
+  const profile = inferAdvancedRoleProfile(
+    createCard(
+      "Incoming!",
+      "Sorcery",
+      8,
+      "Each player searches their library for any number of artifact, creature, enchantment, and/or land cards, puts them onto the battlefield, then shuffles.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(profile, "tutor") > 0);
+  assert.ok(getRoleWeight(profile, "restricted_tutor") > 0);
+  assert.ok(getRoleWeight(profile, "cheat_into_play") > 0);
+  assert.ok(getRoleWeight(profile, "land_acceleration") > 0);
+  assert.ok(getRoleWeight(profile, "mana_fixing") > 0);
+});
+
 test("inferAdvancedRoleProfile recognizes scalable bodies and targeted pump as combat roles", () => {
   const pumpProfile = inferAdvancedRoleProfile(
     createCard(

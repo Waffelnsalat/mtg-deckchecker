@@ -293,8 +293,12 @@ function detectAdvancedRampRoles(
     !sacrificeMana &&
     !handExileMana;
   const landSearchToBattlefield =
-    /\bsearch(?:es)?\b[^.]{0,220}\byour library\b[^.]{0,220}\bfor\b[^.]{0,160}\bland card\b[^.]{0,120}\bonto the battlefield\b/.test(text) ||
+    /\bsearch(?:es)?\b[^.]{0,220}\b(?:your|their|his or her) library\b[^.]{0,220}\bfor\b[^.]{0,160}\bland cards?\b[^.]{0,120}\bonto the battlefield\b/.test(text) ||
     /\bsearch(?:es)?\b[^.]{0,220}\byour library\b[^.]{0,220}\bfor\b[^.]{0,160}\b(?:forest|plains|island|swamp|mountain)\b[^.]{0,120}\bonto the battlefield\b/.test(text);
+  const unrestrictedLandSearchToBattlefield =
+    landSearchToBattlefield &&
+    /\bfor\b[^.]{0,180}\b(?:any number of\b[^.]{0,120})?land cards?\b/.test(text) &&
+    !/\bbasic land cards?\b/.test(text);
   const landSearchToHand =
     /\bsearch(?:es)?\b[^.]{0,220}\byour library\b[^.]{0,220}\bfor\b[^.]{0,160}\bland card\b[^.]{0,120}\binto your hand\b/.test(text) ||
     /\bsearch(?:es)?\b[^.]{0,220}\byour library\b[^.]{0,220}\bfor\b[^.]{0,160}\b(?:forest|plains|island|swamp|mountain)\b[^.]{0,120}\binto your hand\b/.test(text);
@@ -338,6 +342,9 @@ function detectAdvancedRampRoles(
   if (landSearchToBattlefield) {
     addRole(profile, "ramp", 0.9, "Advanced scan recognized land ramp to the battlefield.");
     addRole(profile, "land_acceleration", 0.9, "Advanced scan recognized land acceleration.");
+    if (unrestrictedLandSearchToBattlefield) {
+      addRole(profile, "mana_fixing", 0.72, "Advanced scan recognized unrestricted land search as fixing.");
+    }
   }
 
   if (landSearchToHand || extraLandPlays || handLandAcceleration) {
@@ -394,6 +401,8 @@ function detectAdvancedRampRoles(
 }
 
 function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, permanent: boolean) {
+  const librarySearch =
+    /\bsearch(?:es)?\b[^.]{0,220}\b(?:your|their|his or her) library\b/.test(text);
   const libraryDig =
     /\b(?:look at|reveal|mill)\b[\s\S]{0,180}\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
@@ -404,7 +413,7 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
       text,
     );
 
-  if (!/\bsearch(?:es)?\b[^.]{0,220}\byour library\b/.test(text) && !libraryDig && !symmetricTopdeckTutor) {
+  if (!librarySearch && !libraryDig && !symmetricTopdeckTutor) {
     return;
   }
 
@@ -413,12 +422,17 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
     (/\{[^}]+\}:\s*search(?:es)?\b[^.]{0,180}\byour library\b/.test(text) ||
       /\b(?:whenever|at the beginning of|during each of your turns|whenever .* attacks)\b[^.]{0,220}\bsearch(?:es)?\b[^.]{0,180}\byour library\b/.test(text));
   const landTutor =
-    /\bfor\b[^.]{0,160}\bland card\b/.test(text) ||
+    /\bfor\b[^.]{0,160}\bland cards?\b/.test(text) ||
     /\bfor\b[^.]{0,160}\b(?:forest|plains|island|swamp|mountain|desert|gate|cave|locus)\b/.test(text);
   const restrictedTutor =
     /\bfor\b[^.]{0,170}\b(?:artifact|creature|enchantment|instant|sorcery|planeswalker|battle|equipment|aura|permanent|legendary|historic|dragon|wizard|elf|goblin|vampire|zombie|sliver)\s+card\b/.test(text) ||
+    /\bfor\b[^.]{0,220}\b(?:artifact|creature|enchantment|instant|sorcery|planeswalker|battle|equipment|aura|permanent|legendary|historic|dragon|wizard|elf|goblin|vampire|zombie|sliver)\b[^.]{0,120}\bcards?\b/.test(text) ||
     /\bfor\b[^.]{0,170}\bcard with\b/.test(text) ||
     /\bfor\b[^.]{0,170}\bcard named\b/.test(text);
+  const librarySearchToBattlefield =
+    librarySearch &&
+    restrictedTutor &&
+    /\bsearch(?:es)?\b[\s\S]{0,300}\blibrary\b[\s\S]{0,300}\bfor\b[\s\S]{0,300}\bputs? (?:it|them|that card|those cards?|the cards?)\b[\s\S]{0,120}\bonto the battlefield\b/.test(text);
 
   if (symmetricTopdeckTutor) {
     addRole(profile, "tutor", 0.62, "Advanced scan recognized a symmetric top-of-library tutor.");
@@ -426,15 +440,20 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
   } else if (libraryDig) {
     addRole(profile, "tutor", 0.56, "Advanced scan recognized library dig as restricted card access.");
     addRole(profile, "restricted_tutor", 0.58, "Advanced scan recognized library dig as restricted card access.");
-  } else if (landTutor) {
-    addRole(profile, "tutor", 0.72, "Advanced scan recognized a land tutor.");
-    addRole(profile, "land_tutor", 0.76, "Advanced scan recognized a land tutor.");
   } else if (restrictedTutor) {
     addRole(profile, "tutor", 0.86, "Advanced scan recognized a restricted tutor.");
     addRole(profile, "restricted_tutor", 0.84, "Advanced scan recognized a restricted tutor.");
+  } else if (landTutor) {
+    addRole(profile, "tutor", 0.72, "Advanced scan recognized a land tutor.");
+    addRole(profile, "land_tutor", 0.76, "Advanced scan recognized a land tutor.");
   } else {
     addRole(profile, "tutor", 1, "Advanced scan recognized a broad tutor.");
     addRole(profile, "direct_tutor", 1, "Advanced scan recognized a broad tutor.");
+  }
+
+  if (librarySearchToBattlefield) {
+    addRole(profile, "cheat_into_play", 0.72, "Advanced scan recognized searched nonland cards entering the battlefield.");
+    addRole(profile, "cost_reduction", 0.52, "Advanced scan recognized searched cards entering the battlefield as mana-equivalent setup.");
   }
 
   if (repeatable) {
