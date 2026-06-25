@@ -2325,6 +2325,95 @@ test("inferAdvancedRoleProfile recognizes Multiverse Gift Box wording without dr
   assert.equal(getRoleWeight(drawbackProfile, "sacrifice_support"), 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Visions utility wording and avoids draw/drawback overtags", () => {
+  const passageProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Honorable Passage",
+      "Instant",
+      2,
+      "The next time a source of your choice would deal damage to any target this turn, prevent that damage. If damage from a red source is prevented this way, Honorable Passage deals that much damage to the source's controller.",
+    ),
+  );
+  const remedyProfile = inferAdvancedRoleProfile(
+    createCard("Remedy", "Instant", 2, "Prevent the next 5 damage that would be dealt this turn to any number of targets, divided as you choose."),
+  );
+  const tidesProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Dream Tides",
+      "Enchantment",
+      4,
+      "Creatures don't untap during their controllers' untap steps. At the beginning of each player's upkeep, that player may choose any number of tapped nongreen creatures they control and pay {2} for each creature chosen this way. If the player does, untap those creatures.",
+    ),
+  );
+  const phaseProfile = inferAdvancedRoleProfile(
+    createCard("Time and Tide", "Instant", 2, "Simultaneously, all phased-out creatures phase in and all creatures with phasing phase out."),
+  );
+  const landTypeProfile = inferAdvancedRoleProfile(
+    createCard("Blanket of Night", "Enchantment", 3, "Each land is a Swamp in addition to its other land types."),
+  );
+  const lairProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Elkin Lair",
+      "World Enchantment",
+      4,
+      "At the beginning of each player's upkeep, that player exiles a card at random from their hand. The player may play that card this turn. At the beginning of the next end step, if the player hasn't played the card, they put it into their graveyard.",
+    ),
+  );
+  const mortalWoundProfile = inferAdvancedRoleProfile(
+    createCard("Mortal Wound", "Enchantment - Aura", 1, "Enchant creature. When enchanted creature is dealt damage, destroy it."),
+  );
+  const summerBloomProfile = inferAdvancedRoleProfile(
+    createCard("Summer Bloom", "Sorcery", 2, "You may play up to three additional lands this turn."),
+  );
+  const legacyProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Suleiman's Legacy",
+      "Enchantment",
+      2,
+      "When this enchantment enters, destroy all Djinns and Efreets. They can't be regenerated. Whenever a Djinn or Efreet enters, destroy it. It can't be regenerated.",
+    ),
+  );
+  const denialProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Wand of Denial",
+      "Artifact",
+      2,
+      "{T}: Look at the top card of target player's library. If it's a nonland card, you may pay 2 life. If you do, put it into that player's graveyard.",
+    ),
+  );
+  const replacementDrawProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Breathstealer's Crypt",
+      "Enchantment",
+      4,
+      "If a player would draw a card, instead they draw a card and reveal it. If it's a creature card, that player discards it unless they pay 3 life.",
+    ),
+  );
+  const landDrawbackProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Dormant Volcano",
+      "Land",
+      0,
+      "This land enters tapped. When this land enters, sacrifice it unless you return an untapped Mountain you control to its owner's hand. {T}: Add {C}{R}.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(passageProfile, "damage_reflection") > 0);
+  assert.ok(getRoleWeight(remedyProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(tidesProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(phaseProfile, "phase_support") > 0);
+  assert.ok(getRoleWeight(landTypeProfile, "land_type_change") > 0);
+  assert.ok(getRoleWeight(lairProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(mortalWoundProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(summerBloomProfile, "land_acceleration") > 0);
+  assert.equal(getRoleWeight(summerBloomProfile, "stax_piece"), 0);
+  assert.ok(getRoleWeight(legacyProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(denialProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(denialProfile, "mill_support") > 0);
+  assert.equal(getRoleWeight(replacementDrawProfile, "draw"), 0);
+  assert.equal(getRoleWeight(landDrawbackProfile, "sacrifice_support"), 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

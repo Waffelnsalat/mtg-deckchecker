@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-25T13:37:55.191Z",
+  "generatedAt": "2026-06-25T14:49:07.830Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 18,
+    "done": 19,
     "inProgress": 0,
-    "pending": 1025
+    "pending": 1024
   },
   "sets": [
     {
@@ -490,11 +490,12 @@
       "setType": "expansion",
       "cardCount": 167,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 167,
+      "totalUniqueOracleIds": 167,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/vis-role-review.tsv"
     },
     {
       "code": "5ed",

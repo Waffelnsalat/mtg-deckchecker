@@ -232,7 +232,7 @@ function detectAdvancedDrawRoles(profile: CardRoleProfile, text: string, permane
         /\b(?:you|each player) draws? up to (?:one|two|three|four|five|six|seven|eight|nine|ten|\d+) cards?\b/.test(text)
       ) &&
       !opponentOnlyDraw &&
-      !/\bif you would draw\b/.test(text) &&
+      !/\bif (?:you|a player|that player) would draw\b/.test(text) &&
       !/\bwhenever (?:you|a player|an opponent|one or more players) draw\b/.test(text) &&
       !hasSelfReplacingTopDraw
     ) {
@@ -494,6 +494,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\btarget (?:(?:attacking )?creature(?: other than this creature)?|creature with flying)\b[^.]{0,120}\bhas base power (?:and toughness )?0(?:\/\d+)?\b/.test(text);
   const combatTriggeredRemoval =
     /\bwhenever this creature blocks or becomes blocked\b[^.]{0,180}\bdestroy that creature\b/.test(text) ||
+    /\bwhen enchanted creature is dealt damage\b[^.]{0,80}\bdestroy it\b/.test(text) ||
     /\bwhenever enchanted creature blocks or becomes blocked\b[^.]{0,180}\bdestroy the other creature\b/.test(text);
   const phaseOutRemoval = /\btarget creature phases out until\b[^.]{0,120}\bleaves the battlefield\b/.test(text);
   const lockdownAura =
@@ -571,6 +572,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bcreatures your opponents control get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
     /\bcreatures your opponents control have base power and toughness 0\/1\b/.test(text) ||
     /\bdestroy all auras\b/.test(text) ||
+    /\bdestroy all (?:djinns and efreets|efreets and djinns)\b/.test(text) ||
     /\bdeals? \d+ damage to each non(?:white|blue|black|red|green) creature\b/.test(text) ||
     /\bdeals? \d+ damage to each (?:white|blue|black|red|green)(?: and\/or (?:white|blue|black|red|green))? creature\b/.test(text) ||
     /\b(?:deals? (?:x|\d+) damage|deals? damage equal to [^.]{0,80}) to each (?:attacking )?creature\b/.test(text) ||
@@ -750,6 +752,7 @@ function detectAdvancedProtectionRoles(
     /\bplayers and permanents can'?t be the targets of spells or activated abilities\b/.test(text) ||
     /\ball damage that would be dealt to you\b[^.]{0,120}\bis dealt to\b/.test(text) ||
     /\bprevent all (?:combat )?damage\b[^.]{0,180}\b(?:this turn|that would be dealt this turn|that would be dealt to you|dealt by creatures)\b/.test(text) ||
+    /\bprevent the next \d+ damage that would be dealt this turn to any number of targets\b/.test(text) ||
     /\bcreatures deal no combat damage\b/.test(text) ||
     /\bthe next time\b[^.]{0,100}\bsource of your choice would deal damage to you\b[^.]{0,80}\bprevent that damage\b/.test(text) ||
     /\bprevent the next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to you\b/.test(text);
@@ -1076,6 +1079,12 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "land_denial", 0.32, "Advanced scan recognized land type changes as possible mana disruption.");
   }
 
+  if (/\beach land is (?:a |an )?(?:plains|island|swamp|mountain|forest)\b/.test(text)) {
+    addRole(profile, "land_type_change", 0.48, "Advanced scan recognized global land type-changing utility.");
+    addRole(profile, "land_denial", 0.36, "Advanced scan recognized global land type changes as possible mana disruption.");
+    addRole(profile, "mana_fixing", 0.28, "Advanced scan recognized global land type changes as possible mana fixing.");
+  }
+
   if (
     /\bwhenever a player taps a snow land for mana\b[^.]{0,180}\badds? one mana\b/.test(text) ||
     /\bthat land doesn't untap during its controller'?s next untap step\b/.test(text)
@@ -1088,10 +1097,15 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\beach player may play an additional land\b/.test(text) ||
-    /\bwhenever a land is tapped for mana\b[^.]{0,120}\breturn it to its owner'?s hand\b/.test(text)
+    /\byou may play up to (?:one|two|three|four|five|six|\d+) additional lands?\b/.test(text)
   ) {
-    addRole(profile, "land_synergy", 0.58, "Advanced scan recognized extra land-play and land-bounce utility.");
-    addRole(profile, "land_acceleration", 0.42, "Advanced scan recognized additional land plays.");
+    addRole(profile, "land_synergy", 0.58, "Advanced scan recognized extra land-play utility.");
+    addRole(profile, "land_acceleration", 0.56, "Advanced scan recognized additional land plays.");
+    addRole(profile, "ramp", 0.36, "Advanced scan recognized additional land plays as ramp material.");
+  }
+
+  if (/\bwhenever a land is tapped for mana\b[^.]{0,120}\breturn it to its owner'?s hand\b/.test(text)) {
+    addRole(profile, "land_synergy", 0.58, "Advanced scan recognized land-bounce utility.");
     addRole(profile, "mana_denial", 0.44, "Advanced scan recognized land-bounce mana pressure.");
     addRole(profile, "stax_piece", 0.4, "Advanced scan recognized symmetrical land-bounce pressure.");
   }
@@ -1130,6 +1144,7 @@ function detectAdvancedPurposeRoles(
   if (
     /\bsource of your choice would deal damage to you\b[^.]{0,180}\bdeals that much damage to that source'?s controller\b/.test(text) ||
     /\bsource of your choice would deal damage this turn\b[^.]{0,180}\bthat damage is dealt to that source'?s controller instead\b/.test(text) ||
+    /\bsource of your choice would deal damage to any target this turn\b[\s\S]{0,260}\bprevent that damage\b[\s\S]{0,260}\bdeals? that much damage to the source'?s controller\b/.test(text) ||
     /\ball damage that would be dealt\b[^.]{0,180}\bby target sorcery spell\b[^.]{0,120}\bis dealt to that spell'?s controller instead\b/.test(text) ||
     /\bdeals damage to that player equal to half the damage dealt by one of those sorcery spells\b/.test(text) ||
     /\bwhenever enchanted creature is dealt damage\b[^.]{0,140}\bdeals? that much damage to that creature'?s controller\b/.test(text) ||
@@ -1153,12 +1168,18 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "land_protection", 0.46, "Advanced scan recognized land-protection text.");
   }
 
+  if (/\ball phased-out creatures phase in\b[^.]{0,120}\ball creatures with phasing phase out\b/.test(text)) {
+    addRole(profile, "phase_support", 0.4, "Advanced scan recognized phasing-state utility.");
+    addRole(profile, "tempo_support", 0.34, "Advanced scan recognized phasing-state utility as tempo material.");
+  }
+
   if (
     /\btarget creature defending player controls can block any number of creatures\b/.test(text) ||
     /\bremove target creature defending player controls from combat\b/.test(text) ||
     /\ball creatures able to block enchanted creature do so\b/.test(text) ||
     /\bcreatures with flying can block only creatures with flying\b/.test(text) ||
-    /\bcreatures without flying have reach\b/.test(text)
+    /\bcreatures without flying have reach\b/.test(text) ||
+    /\bcreatures don'?t untap during their controllers'? untap steps\b/.test(text)
   ) {
     addRole(profile, "combat_support", 0.48, "Advanced scan recognized a combat-manipulation effect.");
     addRole(profile, "tempo_support", 0.36, "Advanced scan recognized combat manipulation as tempo utility.");
@@ -1174,6 +1195,7 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\blook at the top (?:three|five|\d+) cards of target player'?s library\b/.test(text) ||
+    /\blook at the top card of target player'?s library\b/.test(text) ||
     /\btarget player looks at the top (?:three|five|\d+) cards of their library\b/.test(text) ||
     /\btarget player chooses a card name\b[^.]{0,140}\breveals? the top card of their library\b/.test(text)
   ) {
@@ -1188,6 +1210,11 @@ function detectAdvancedPurposeRoles(
 
   if (/\bput any number of target\b[^.]{0,160}\bfrom target player's graveyard on top of their library\b/.test(text)) {
     addRole(profile, "topdeck_control", 0.42, "Advanced scan recognized graveyard-to-library ordering utility.");
+  }
+
+  if (/\blook at the top card of target player'?s library\b[\s\S]{0,220}\bput it into that player'?s graveyard\b/.test(text)) {
+    addRole(profile, "topdeck_control", 0.42, "Advanced scan recognized top-of-library denial.");
+    addRole(profile, "mill_support", 0.34, "Advanced scan recognized top-of-library milling.");
   }
 
   if (/\bput up to\b[^.]{0,80}\btarget cards? from an opponent'?s graveyard on top of their library\b/.test(text)) {
@@ -1307,6 +1334,12 @@ function detectAdvancedPurposeRoles(
     }
   }
 
+  if (/\bthat player exiles a card at random from their hand\b[\s\S]{0,220}\b(?:that|the) player may play that card this turn\b/.test(text)) {
+    addRole(profile, "selection", 0.36, "Advanced scan recognized forced temporary card access.");
+    addRole(profile, "hand_attack", 0.36, "Advanced scan recognized random hand exile pressure.");
+    addRole(profile, "replacement_engine", 0.28, "Advanced scan recognized a temporary play-or-lose replacement pattern.");
+  }
+
   const opponentOrCompensationLifegain =
     /\b(?:target opponent|its controller|that player|that spell'?s controller) gains?\b[^.]{0,40}\blife\b/.test(text) &&
     !/\byou gain\b[^.]{0,40}\blife\b/.test(text);
@@ -1345,6 +1378,7 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\bwhenever a player casts\b[^.]{0,80}\b(?:spell|enchantment spell)\b[^.]{0,80}\bcounter it\b/.test(text) ||
+    /\bcreatures don'?t untap during their controllers'? untap steps\b/.test(text) ||
     /\blegendary creatures don'?t untap during their controllers'? untap steps\b/.test(text) ||
     /\bcreatures without flying don't untap during their controllers'? untap steps\b/.test(text) ||
     /\bcreatures of the chosen type don't untap during their controllers'? untap steps\b/.test(text) ||
@@ -1459,7 +1493,7 @@ function detectAdvancedPurposeRoles(
   }
 
   const sacrificeOnlyAsEtbDrawback =
-    /\bwhen this creature enters, sacrifice it unless\b/.test(text) &&
+    /\bwhen this (?:creature|land) enters, sacrifice it unless\b/.test(text) &&
     !/\bsacrifice\b[^.]{0,100}:/.test(text) &&
     !/\bas an additional cost\b[^.]{0,120}\bsacrifice\b/.test(text) &&
     !/\b(?:whenever|when)\b[^.]{0,120}\bdies\b/.test(text);

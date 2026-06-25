@@ -34,7 +34,7 @@ pred	Redemption Program	1996-10-01	promo	1	false	pending	0			false
 mir	Mirage	1996-10-08	expansion	353	false	done	335	335	0	true	data/card-role-worksheets/mir-role-review.tsv
 mgb	Multiverse Gift Box	1996-11-01	box	10	false	done	10	10	0	true	data/card-role-worksheets/mgb-role-review.tsv
 itp	Introductory Two-Player Set	1996-12-31	starter	67	false	pending	0			false	
-vis	Visions	1997-02-03	expansion	167	false	pending	0			false	
+vis	Visions	1997-02-03	expansion	167	false	done	167	167	0	true	data/card-role-worksheets/vis-role-review.tsv
 5ed	Fifth Edition	1997-03-24	core	460	false	pending	0			false	
 past	Astral Cards	1997-04-01	box	12	true	pending	0			false	
 pmic	MicroProse Promos	1997-04-01	memorabilia	1	false	pending	0			false	
