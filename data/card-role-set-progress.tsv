@@ -38,7 +38,7 @@ vis	Visions	1997-02-03	expansion	167	false	done	167	167	0	true	data/card-role-wo
 5ed	Fifth Edition	1997-03-24	core	460	false	pending	0			false	
 past	Astral Cards	1997-04-01	box	12	true	done	12	12	0	true	data/card-role-worksheets/past-role-review.tsv
 pmic	MicroProse Promos	1997-04-01	memorabilia	1	false	pending	0			false	
-por	Portal	1997-05-01	starter	257	false	pending	0			false	
+por	Portal	1997-05-01	starter	257	false	done	200	200	0	true	data/card-role-worksheets/por-role-review.tsv
 pvan	Vanguard Series	1997-05-01	vanguard	32	false	pending	0			false	
 olep	Oversized League Prizes	1997-05-30	memorabilia	83	false	pending	0			false	
 wth	Weatherlight	1997-06-09	expansion	167	false	pending	0			false	

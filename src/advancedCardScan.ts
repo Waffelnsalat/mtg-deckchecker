@@ -483,6 +483,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bexchange control of\b[^.]{0,220}\b(?:target|two|creature|artifact|enchantment|permanent|spell)\b/.test(text);
   const targetedLandRemoval =
     /\bdestroy target (?:nonbasic |basic |non[- ]?(?:plains|island|swamp|mountain|forest) )?(?:land|plains|island|swamp|mountain|forest)\b/.test(text) ||
+    /\bdestroy (?:one|two|three|four|five|six|\d+) target lands?\b/.test(text) ||
     /\bput target land on top of its owner'?s library\b/.test(text) ||
     /\benchanted land\b[^.]{0,160}\bdestroy it\b/.test(text) ||
     /\benchanted land'?s controller\b[^.]{0,160}\bdestroy that land unless that player pays\b/.test(text);
@@ -529,6 +530,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bwhen enchanted creature leaves the battlefield\b[^.]{0,140}\bits controller sacrifices a creature\b/.test(text);
   const targetedRemoval =
     /\b(?:destroy|exile)\b[^.]{0,120}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
+    /\b(?:destroy|exile)\b[^.]{0,40}(?:one|two|three|four|five|six|\d+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|battles?|permanents?|nonland permanents?)\b/.test(text) ||
     /\bbury target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\btap target creature\b[\s\S]{0,140}\bexile that creature\b/.test(text) ||
     /\bturn target creature face down\b/.test(text) ||
@@ -551,6 +553,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
     /\bdeals? (?:x|\d+|that much) damage to target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b/.test(text) ||
     /\bdeals? (?:x|\d+|that much) damage to each of up to\b/.test(text) ||
+    /\bdeals? \d+ damage divided as you choose among one, two, or three target creatures\b/.test(text) ||
     /\bdeals? (?:\w+\s+times\s+)?x damage to each of up to x targets?\b/.test(text) ||
     /\bdeals? damage equal to (?:its|that creature'?s|their) power to any target\b/.test(text) ||
     /\bdeals? damage to target\b[^.]{0,100}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b[^.]{0,120}\bequal to\b/.test(text) ||
@@ -587,6 +590,8 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\btap (?:up to )?(?:(?:one|two|three|four|five|six|\d+)\s+)?target\b[^.]{0,120}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?|lands?)\b/.test(text) ||
     phaseOutRemoval ||
     /\btarget spell, nonland permanent, or card in a graveyard\b[^.]{0,160}\btop or bottom of (?:their|its) library\b/.test(text);
+  const massTapLock =
+    /\bcreatures and lands target opponent controls don'?t untap during their next untap step\b/.test(text);
   const temporaryTheft =
     exchangeControl ||
     /\bexchanges? control of\b[^.]{0,260}\brandom target\b[^.]{0,160}\b(?:artifact|creature|land|permanent)\b/.test(text) ||
@@ -651,12 +656,12 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     addRole(profile, "mass_removal", 1.02, "Advanced scan recognized a sweeper effect.");
   }
 
-  if (tempoRemoval || lockdownAura || temporaryTheft || permanentTheft) {
+  if (tempoRemoval || lockdownAura || temporaryTheft || permanentTheft || massTapLock) {
     addRole(profile, "removal", 0.58, "Advanced scan recognized tempo-based battlefield interaction.");
     addRole(
       profile,
       "tempo_removal",
-      permanentTheft ? 0.72 : lockdownAura ? 0.76 : temporaryTheft ? 0.58 : 0.68,
+      permanentTheft ? 0.72 : lockdownAura || massTapLock ? 0.76 : temporaryTheft ? 0.58 : 0.68,
       "Advanced scan recognized bounce, theft, or tuck interaction.",
     );
   }
@@ -750,7 +755,7 @@ function detectAdvancedProtectionRoles(
     /\b(?:permanents|creatures) you control\b[^.]{0,120}\bgain\b[^.]{0,120}\b(?:hexproof|indestructible|ward|protection from)\b/.test(text) ||
     /\byour permanents have\b[^.]{0,120}\b(?:hexproof|ward)\b/.test(text) ||
     /\bphase out\b[^.]{0,80}\beach\b[^.]{0,80}\b(?:creature|permanent) you control\b/.test(text) ||
-    /\btarget opponent skips? (?:their|his or her) next combat phase\b/.test(text) ||
+    /\btarget (?:opponent|player) skips? (?:all combat phases of )?(?:their|his or her) next (?:turn|combat phase)\b/.test(text) ||
     /\bplayers and permanents can'?t be the targets of spells or activated abilities\b/.test(text) ||
     /\ball damage that would be dealt to you\b[^.]{0,120}\bis dealt to\b/.test(text) ||
     /\bprevent all (?:combat )?damage\b[^.]{0,180}\b(?:this turn|that would be dealt this turn|that would be dealt to you|dealt by creatures)\b/.test(text) ||
@@ -1130,6 +1135,7 @@ function detectAdvancedPurposeRoles(
     /\byou may tap or untap target artifact, creature, or land\b/.test(text) ||
     /\buntap target (?:nonattacking |attacking |blocking |tapped |untapped )?(?:artifact|creature|land|permanent)\b/.test(text) ||
     /\btarget player untaps all basic lands they control\b/.test(text) ||
+    /\buntap all creatures you control\b/.test(text) ||
     /\btap any number of random target creatures\b/.test(text) ||
     /\btap (?:x|one|two|three|four|five|six|\d+) target lands?\b/.test(text)
   ) {
@@ -1181,8 +1187,10 @@ function detectAdvancedPurposeRoles(
   if (
     /\btarget creature defending player controls can block any number of creatures\b/.test(text) ||
     /\bremove target creature defending player controls from combat\b/.test(text) ||
+    /\ball creatures able to block target creature this turn do so\b/.test(text) ||
     /\ball creatures able to block enchanted creature do so\b/.test(text) ||
     /\bcreatures with flying can block only creatures with flying\b/.test(text) ||
+    /\bcreatures you control gain reach until end of turn\b/.test(text) ||
     /\bcreatures without flying have reach\b/.test(text) ||
     /\bcreatures don'?t untap during their controllers'? untap steps\b/.test(text)
   ) {
@@ -1206,6 +1214,12 @@ function detectAdvancedPurposeRoles(
   ) {
     addRole(profile, "selection", 0.36, "Advanced scan recognized top-of-library ordering utility.");
     addRole(profile, "topdeck_control", 0.34, "Advanced scan recognized top-of-library ordering utility.");
+  }
+
+  if (/\blook at the top (?:three|five|\d+) cards of target opponent'?s library\b[\s\S]{0,220}\bput one of those cards into that player'?s graveyard\b/.test(text)) {
+    addRole(profile, "selection", 0.36, "Advanced scan recognized top-of-library denial.");
+    addRole(profile, "topdeck_control", 0.46, "Advanced scan recognized top-of-library denial.");
+    addRole(profile, "mill_support", 0.3, "Advanced scan recognized selective top-of-library milling.");
   }
 
   if (/\bplayers play with the top card of their libraries revealed\b/.test(text)) {
@@ -1504,10 +1518,13 @@ function detectAdvancedPurposeRoles(
     !/\bsacrifice\b[^.]{0,100}:/.test(text) &&
     !/\bas an additional cost\b[^.]{0,120}\bsacrifice\b/.test(text) &&
     !/\b(?:whenever|when)\b[^.]{0,120}\bdies\b/.test(text);
+  const deathOnlySelfReplacement =
+    /\bwhen this creature dies\b[^.]{0,120}\b(?:shuffle it into its owner'?s library|return it to its owner'?s hand|put it on top of its owner'?s library)\b/.test(text) &&
+    !/\b(?:each opponent|target|destroy|discard|draw|gain|lose|create|token|return target)\b/.test(text);
 
   if (
     (/\bsacrifice\b/.test(text) && !sacrificeOnlyAsEtbDrawback) ||
-    /\bwhenever\b[^.]{0,120}\bdies\b|\bwhen\b[^.]{0,120}\bdies\b/.test(text) ||
+    (!deathOnlySelfReplacement && /\bwhenever\b[^.]{0,120}\bdies\b|\bwhen\b[^.]{0,120}\bdies\b/.test(text)) ||
     /\b(?:creature|artifact|permanent)s? dying causes a triggered ability\b[^.]{0,180}\btriggers? an additional time\b/.test(text) ||
     /\b(?:creature|artifact|permanent)s? dying\b[^.]{0,160}\btriggered ability\b[^.]{0,160}\badditional time\b/.test(text)
   ) {
@@ -1529,6 +1546,15 @@ function detectAdvancedPurposeRoles(
 
   if (/\bmills?\b|\bmill\b|\bputs? the rest of the revealed cards into their graveyard\b/.test(text)) {
     addRole(profile, "mill_support", 0.52, "Advanced scan recognized mill or graveyard-filling support.");
+  }
+
+  if (/\beach player may draw up to (?:one|two|three|\d+) cards?\b/.test(text)) {
+    addRole(profile, "draw", 0.34, "Advanced scan recognized symmetrical optional card draw.");
+    addRole(profile, "card_draw", 0.34, "Advanced scan recognized symmetrical optional card draw.");
+    addRole(profile, "group_hug", 0.3, "Advanced scan recognized symmetrical table resource support.");
+    if (/\bthat player gains? \d+ life\b/.test(text)) {
+      addRole(profile, "lifegain", 0.24, "Advanced scan recognized symmetrical life gain.");
+    }
   }
 
   if (/\bplay (?:x|\d+) random fast effects\b|\bplay a random effect\b/.test(text)) {

@@ -2486,6 +2486,78 @@ test("inferAdvancedRoleProfile recognizes Astral Cards old random wording", () =
   assert.ok(getRoleWeight(boxProfile, "copy_support") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Portal starter wording and avoids self-replacement death overtags", () => {
+  const falsePeaceProfile = inferAdvancedRoleProfile(
+    createCard("False Peace", "Sorcery", 1, "Target player skips all combat phases of their next turn."),
+  );
+  const truceProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Temporary Truce",
+      "Sorcery",
+      2,
+      "Each player may draw up to two cards. For each card less than two a player draws this way, that player gains 2 life.",
+    ),
+  );
+  const cruelFateProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Cruel Fate",
+      "Sorcery",
+      5,
+      "Look at the top five cards of target opponent's library. Put one of those cards into that player's graveyard and the rest on top of their library in any order.",
+    ),
+  );
+  const exhaustionProfile = inferAdvancedRoleProfile(
+    createCard("Exhaustion", "Sorcery", 3, "Creatures and lands target opponent controls don't untap during their next untap step."),
+  );
+  const forkedLightningProfile = inferAdvancedRoleProfile(
+    createCard("Forked Lightning", "Sorcery", 4, "Forked Lightning deals 4 damage divided as you choose among one, two, or three target creatures."),
+  );
+  const wickedPactProfile = inferAdvancedRoleProfile(
+    createCard("Wicked Pact", "Sorcery", 3, "Destroy two target nonblack creatures. You lose 5 life."),
+  );
+  const rainProfile = inferAdvancedRoleProfile(createCard("Rain of Salt", "Sorcery", 6, "Destroy two target lands."));
+  const alluringProfile = inferAdvancedRoleProfile(
+    createCard("Alluring Scent", "Sorcery", 3, "All creatures able to block target creature this turn do so."),
+  );
+  const mobilizeProfile = inferAdvancedRoleProfile(createCard("Mobilize", "Sorcery", 1, "Untap all creatures you control."));
+  const treetopProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Treetop Defense",
+      "Instant",
+      2,
+      "Cast this spell only during the declare attackers step and only if you've been attacked this step. Creatures you control gain reach until end of turn. (They can block creatures with flying.)",
+    ),
+  );
+  const selfShuffleProfile = inferAdvancedRoleProfile(
+    createCard("Alabaster Dragon", "Creature - Dragon", 6, "Flying When this creature dies, shuffle it into its owner's library.", {
+      keywords: ["Flying"],
+    }),
+  );
+  const selfReturnProfile = inferAdvancedRoleProfile(
+    createCard("Endless Cockroaches", "Creature - Insect", 3, "When this creature dies, return it to its owner's hand."),
+  );
+  const selfTopProfile = inferAdvancedRoleProfile(
+    createCard("Undying Beast", "Creature - Beast", 4, "When this creature dies, put it on top of its owner's library."),
+  );
+
+  assert.ok(getRoleWeight(falsePeaceProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(truceProfile, "card_draw") > 0);
+  assert.ok(getRoleWeight(truceProfile, "group_hug") > 0);
+  assert.ok(getRoleWeight(cruelFateProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(cruelFateProfile, "mill_support") > 0);
+  assert.ok(getRoleWeight(exhaustionProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(forkedLightningProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(wickedPactProfile, "removal") > 0);
+  assert.ok(getRoleWeight(wickedPactProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(rainProfile, "targeted_land_removal") > 0);
+  assert.ok(getRoleWeight(alluringProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(mobilizeProfile, "tap_untap") > 0);
+  assert.ok(getRoleWeight(treetopProfile, "combat_support") > 0);
+  assert.equal(getRoleWeight(selfShuffleProfile, "sacrifice_support"), 0);
+  assert.equal(getRoleWeight(selfReturnProfile, "sacrifice_support"), 0);
+  assert.equal(getRoleWeight(selfTopProfile, "sacrifice_support"), 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
