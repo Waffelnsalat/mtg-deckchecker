@@ -40,8 +40,8 @@ past	Astral Cards	1997-04-01	box	12	true	done	12	12	0	true	data/card-role-worksh
 pmic	MicroProse Promos	1997-04-01	memorabilia	1	false	done	1	1	0	true	data/card-role-worksheets/pmic-role-review.tsv
 por	Portal	1997-05-01	starter	257	false	done	200	200	0	true	data/card-role-worksheets/por-role-review.tsv
 pvan	Vanguard Series	1997-05-01	vanguard	32	false	done	32	32	0	true	data/card-role-worksheets/pvan-role-review.tsv
-olep	Oversized League Prizes	1997-05-30	memorabilia	83	false	pending	0			false	
-wth	Weatherlight	1997-06-09	expansion	167	false	pending	0			false	
+olep	Oversized League Prizes	1997-05-30	memorabilia	83	false	done	68	68	0	true	data/card-role-worksheets/olep-role-review.tsv
+wth	Weatherlight	1997-06-09	expansion	167	false	done	167	167	0	true	data/card-role-worksheets/wth-role-review.tsv
 wc97	World Championship Decks 1997	1997-08-13	memorabilia	131	false	pending	0			false	
 ptmp	Tempest Promos	1997-10-14	promo	1	false	pending	0			false	
 tmp	Tempest	1997-10-14	expansion	350	false	pending	0			false	

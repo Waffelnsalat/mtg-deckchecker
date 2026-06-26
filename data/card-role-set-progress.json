@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-26T05:54:43.015Z",
+  "generatedAt": "2026-06-26T06:43:25.030Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 41,
+    "done": 43,
     "inProgress": 0,
-    "pending": 1002
+    "pending": 1000
   },
   "sets": [
     {
@@ -591,11 +591,12 @@
       "setType": "memorabilia",
       "cardCount": 83,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 68,
+      "totalUniqueOracleIds": 68,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/olep-role-review.tsv"
     },
     {
       "code": "wth",
@@ -604,11 +605,12 @@
       "setType": "expansion",
       "cardCount": 167,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 167,
+      "totalUniqueOracleIds": 167,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/wth-role-review.tsv"
     },
     {
       "code": "wc97",

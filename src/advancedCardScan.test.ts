@@ -1474,6 +1474,14 @@ test("inferAdvancedRoleProfile recognizes political control-exchange cards", () 
       "Spree. Exchange control of two target creatures. Exchange control of two target artifacts. Exchange control of two target enchantments.",
     ),
   );
+  const mirrorProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Mirror Mirror",
+      "Artifact",
+      7,
+      "This artifact enters tapped. {7}, {T}, Sacrifice this artifact: Choose target player. At the beginning of the next end step, exchange life totals with that player, exchange control of all permanents you and that player control, and exchange cards in your hands, cards in your libraries, and cards in your graveyards.",
+    ),
+  );
 
   assert.ok(getRoleWeight(chimeraProfile, "broad_stack") > 0);
   assert.ok(getRoleWeight(chimeraProfile, "donation_support") > 0);
@@ -1481,6 +1489,8 @@ test("inferAdvancedRoleProfile recognizes political control-exchange cards", () 
   assert.ok(getRoleWeight(roleReversalProfile, "donation_support") > 0);
   assert.ok(getRoleWeight(shiftingGriftProfile, "tempo_removal") > 0);
   assert.ok(getRoleWeight(shiftingGriftProfile, "donation_support") > 0);
+  assert.ok(getRoleWeight(mirrorProfile, "theft_support") > 0);
+  assert.ok(getRoleWeight(mirrorProfile, "donation_support") > 0);
 });
 
 test("inferAdvancedRoleProfile recognizes Antiquities utility and hate wording", () => {
@@ -2596,6 +2606,88 @@ test("inferAdvancedRoleProfile recognizes Vanguard global emblem-style text", ()
   assert.ok(getRoleWeight(eladamriProfile, "targeted_protection") > 0);
   assert.ok(getRoleWeight(lynaProfile, "combat_support") > 0);
   assert.ok(getRoleWeight(ashnodProfile, "targeted_removal") > 0);
+});
+
+test("inferAdvancedRoleProfile recognizes Weatherlight enchantment and artifact utility gaps", () => {
+  const aetherFlashProfile = inferAdvancedRoleProfile(
+    createCard("Aether Flash", "Enchantment", 4, "Whenever a creature enters, this enchantment deals 2 damage to it."),
+  );
+  const heatStrokeProfile = inferAdvancedRoleProfile(
+    createCard("Heat Stroke", "Enchantment", 3, "At end of combat, destroy each creature that blocked or was blocked this turn."),
+  );
+  const callProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Call of the Wild",
+      "Enchantment",
+      4,
+      "{2}{G}{G}: Reveal the top card of your library. If it's a creature card, put it onto the battlefield. Otherwise, put it into your graveyard.",
+    ),
+  );
+  const denseProfile = inferAdvancedRoleProfile(createCard("Dense Foliage", "Enchantment", 3, "Creatures can't be the targets of spells."));
+  const matrixProfile = inferAdvancedRoleProfile(createCard("Bubble Matrix", "Artifact", 4, "Prevent all damage that would be dealt to creatures."));
+  const bannerProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Jabari's Banner",
+      "Artifact",
+      2,
+      "{1}, {T}: Target creature gains flanking until end of turn. (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)",
+    ),
+  );
+  const webProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Mana Web",
+      "Artifact",
+      3,
+      "Whenever a land an opponent controls is tapped for mana, tap all lands that player controls that could produce any type of mana that land could produce.",
+    ),
+  );
+  const renewalProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Angelic Renewal",
+      "Enchantment",
+      2,
+      "Whenever a creature is put into your graveyard from the battlefield, you may sacrifice this enchantment. If you do, return that card to the battlefield.",
+    ),
+  );
+  const ancestralProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Ancestral Knowledge",
+      "Enchantment",
+      2,
+      "Cumulative upkeep {1}. When this enchantment enters, look at the top ten cards of your library, then exile any number of them and put the rest back on top of your library in any order. When this enchantment leaves the battlefield, shuffle your library.",
+    ),
+  );
+  const waveProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Wave of Terror",
+      "Enchantment",
+      3,
+      "Cumulative upkeep {1}. At the beginning of your draw step, destroy each creature with mana value equal to the number of age counters on this enchantment. They can't be regenerated.",
+    ),
+  );
+  const firestormProfile = inferAdvancedRoleProfile(
+    createCard("Firestorm", "Instant", 1, "As an additional cost to cast this spell, discard X cards. This spell deals X damage to each of X targets."),
+  );
+  const dingusProfile = inferAdvancedRoleProfile(
+    createCard("Dingus Staff", "Artifact", 4, "Whenever a creature dies, this artifact deals 2 damage to that creature's controller."),
+  );
+  const nullRodProfile = inferAdvancedRoleProfile(createCard("Null Rod", "Artifact", 2, "Activated abilities of artifacts can't be activated."));
+
+  assert.ok(getRoleWeight(aetherFlashProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(heatStrokeProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(callProfile, "cheat_into_play") > 0);
+  assert.ok(getRoleWeight(denseProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(matrixProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(bannerProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(webProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(renewalProfile, "battlefield_recursion") > 0);
+  assert.ok(getRoleWeight(ancestralProfile, "card_selection") > 0);
+  assert.equal(getRoleWeight(ancestralProfile, "sacrifice_support"), 0);
+  assert.ok(getRoleWeight(waveProfile, "mass_removal") > 0);
+  assert.equal(getRoleWeight(waveProfile, "sacrifice_support"), 0);
+  assert.ok(getRoleWeight(firestormProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(dingusProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(nullRodProfile, "hate_piece") > 0);
 });
 
 function createCard(
