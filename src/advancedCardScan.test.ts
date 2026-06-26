@@ -2769,6 +2769,77 @@ test("inferAdvancedRoleProfile recognizes Tempest utility wording gaps", () => {
   assert.ok(getRoleWeight(rackProfile, "card_selection") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Stronghold utility wording gaps", () => {
+  const sacredGroundProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Sacred Ground",
+      "Enchantment",
+      2,
+      "Whenever a spell or ability an opponent controls causes a land to be put into your graveyard from the battlefield, return that card to the battlefield.",
+    ),
+  );
+  const blessingProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Samite Blessing",
+      "Enchantment - Aura",
+      2,
+      "Enchant creature Enchanted creature has \"{T}: The next time a source of your choice would deal damage to target creature this turn, prevent that damage.\"",
+    ),
+  );
+  const dreamProfile = inferAdvancedRoleProfile(
+    createCard("Dream Halls", "Enchantment", 5, "Rather than pay the mana cost for a spell, its controller may discard a card that shares a color with that spell."),
+  );
+  const pitProfile = inferAdvancedRoleProfile(createCard("Bottomless Pit", "Enchantment", 3, "At the beginning of each player's upkeep, that player discards a card at random."));
+  const megrimProfile = inferAdvancedRoleProfile(createCard("Megrim", "Enchantment", 3, "Whenever an opponent discards a card, this enchantment deals 2 damage to that player."));
+  const mortuaryProfile = inferAdvancedRoleProfile(
+    createCard("Mortuary", "Enchantment", 4, "Whenever a creature is put into your graveyard from the battlefield, put that card on top of your library."),
+  );
+  const heatProfile = inferAdvancedRoleProfile(createCard("Heat of Battle", "Enchantment", 2, "Whenever a creature blocks, this enchantment deals 1 damage to that creature's controller."));
+  const plansProfile = inferAdvancedRoleProfile(createCard("Invasion Plans", "Enchantment", 3, "All creatures block each combat if able. The attacking player chooses how each creature blocks each combat."));
+  const awakeningProfile = inferAdvancedRoleProfile(createCard("Awakening", "Enchantment", 4, "At the beginning of each upkeep, untap all creatures and lands."));
+  const touchProfile = inferAdvancedRoleProfile(
+    createCard("Verdant Touch", "Sorcery", 2, "Buyback {3}. Target land becomes a 2/2 creature that's still a land. This effect lasts indefinitely."),
+  );
+  const portcullisProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Portcullis",
+      "Artifact",
+      4,
+      "Whenever a creature enters, if there are two or more other creatures on the battlefield, exile that creature. Return that card to the battlefield under its owner's control when this artifact leaves the battlefield.",
+    ),
+  );
+  const nomadsProfile = inferAdvancedRoleProfile(
+    createCard("Nomads en-Kor", "Creature - Kor Nomad Soldier", 1, "{0}: The next 1 damage that would be dealt to this creature this turn is dealt to target creature you control instead."),
+  );
+  const scapegoatProfile = inferAdvancedRoleProfile(
+    createCard("Scapegoat", "Instant", 1, "As an additional cost to cast this spell, sacrifice a creature. Return any number of target creatures you control to their owner's hand."),
+  );
+  const hesitationProfile = inferAdvancedRoleProfile(createCard("Hesitation", "Enchantment", 2, "When a player casts a spell, sacrifice this enchantment and counter that spell."));
+  const basiliskProfile = inferAdvancedRoleProfile(
+    createCard("Lowland Basilisk", "Creature - Basilisk", 3, "Whenever this creature deals damage to a creature, destroy that creature at end of combat."),
+  );
+  const hibernationProfile = inferAdvancedRoleProfile(
+    createCard("Hibernation Sliver", "Creature - Sliver", 2, "All Slivers have \"Pay 2 life: Return this permanent to its owner's hand.\""),
+  );
+
+  assert.ok(getRoleWeight(sacredGroundProfile, "battlefield_recursion") > 0);
+  assert.ok(getRoleWeight(blessingProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(dreamProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(pitProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(megrimProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(mortuaryProfile, "library_recursion") > 0);
+  assert.ok(getRoleWeight(heatProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(plansProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(awakeningProfile, "stable_ramp") > 0);
+  assert.ok(getRoleWeight(touchProfile, "land_animation") > 0);
+  assert.ok(getRoleWeight(portcullisProfile, "hate_piece") > 0);
+  assert.ok(getRoleWeight(nomadsProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(scapegoatProfile, "rescue_protection") > 0);
+  assert.ok(getRoleWeight(hesitationProfile, "hard_stack") > 0);
+  assert.ok(getRoleWeight(basiliskProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(hibernationProfile, "rescue_protection") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

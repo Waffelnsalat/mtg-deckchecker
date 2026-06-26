@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-26T06:56:24.168Z",
+  "generatedAt": "2026-06-26T07:05:57.506Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 46,
+    "done": 49,
     "inProgress": 0,
-    "pending": 997
+    "pending": 994
   },
   "sets": [
     {
@@ -661,11 +661,12 @@
       "setType": "promo",
       "cardCount": 3,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 3,
+      "totalUniqueOracleIds": 3,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/jgp-role-review.tsv"
     },
     {
       "code": "psth",
@@ -674,11 +675,12 @@
       "setType": "promo",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/psth-role-review.tsv"
     },
     {
       "code": "sth",
@@ -687,11 +689,12 @@
       "setType": "expansion",
       "cardCount": 143,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 143,
+      "totalUniqueOracleIds": 143,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/sth-role-review.tsv"
     },
     {
       "code": "exo",
