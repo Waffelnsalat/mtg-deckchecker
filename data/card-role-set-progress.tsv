@@ -2,7 +2,7 @@ code	name	releasedAt	setType	cardCount	digital	auditStatus	reviewedOracleIds	tot
 lea	Limited Edition Alpha	1993-08-05	core	295	false	done	290	290	0	true	data/card-role-worksheets/lea-role-review.tsv
 leb	Limited Edition Beta	1993-10-04	core	302	false	done	292	292	0	true	data/card-role-worksheets/leb-role-review.tsv
 2ed	Unlimited Edition	1993-12-01	core	302	false	done	292	292	0	true	data/card-role-worksheets/2ed-role-review.tsv
-ced	Collectors' Edition	1993-12-10	memorabilia	302	false	pending	0			false	
+ced	Collectors' Edition	1993-12-10	memorabilia	302	false	done	292	292	0	true	data/card-role-worksheets/ced-role-review.tsv
 cei	Intl. Collectors' Edition	1993-12-10	memorabilia	302	false	pending	0			false	
 arn	Arabian Nights	1993-12-17	expansion	92	false	done	78	78	0	true	data/card-role-worksheets/arn-role-review.tsv
 atq	Antiquities	1994-03-04	expansion	102	false	done	85	85	0	true	data/card-role-worksheets/atq-role-review.tsv
