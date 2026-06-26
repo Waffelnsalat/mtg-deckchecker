@@ -3,31 +3,31 @@ lea	Limited Edition Alpha	1993-08-05	core	295	false	done	290	290	0	true	data/car
 leb	Limited Edition Beta	1993-10-04	core	302	false	done	292	292	0	true	data/card-role-worksheets/leb-role-review.tsv
 2ed	Unlimited Edition	1993-12-01	core	302	false	done	292	292	0	true	data/card-role-worksheets/2ed-role-review.tsv
 ced	Collectors' Edition	1993-12-10	memorabilia	302	false	done	292	292	0	true	data/card-role-worksheets/ced-role-review.tsv
-cei	Intl. Collectors' Edition	1993-12-10	memorabilia	302	false	pending	0			false	
+cei	Intl. Collectors' Edition	1993-12-10	memorabilia	302	false	done	292	292	0	true	data/card-role-worksheets/cei-role-review.tsv
 arn	Arabian Nights	1993-12-17	expansion	92	false	done	78	78	0	true	data/card-role-worksheets/arn-role-review.tsv
 atq	Antiquities	1994-03-04	expansion	102	false	done	85	85	0	true	data/card-role-worksheets/atq-role-review.tsv
-3ed	Revised Edition	1994-04-11	core	306	false	pending	0			false	
-fbb	Foreign Black Border	1994-04-11	core	307	false	pending	0			false	
+3ed	Revised Edition	1994-04-11	core	306	false	done	296	296	0	true	data/card-role-worksheets/3ed-role-review.tsv
+fbb	Foreign Black Border	1994-04-11	core	307	false	done	296	296	0	true	data/card-role-worksheets/fbb-role-review.tsv
 leg	Legends	1994-06-01	expansion	310	false	done	310	310	0	true	data/card-role-worksheets/leg-role-review.tsv
-sum	Summer Magic / Edgar	1994-06-21	core	306	false	pending	0			false	
+sum	Summer Magic / Edgar	1994-06-21	core	306	false	done	296	296	0	true	data/card-role-worksheets/sum-role-review.tsv
 pdrc	Dragon Con	1994-07-15	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pdrc-role-review.tsv
 drk	The Dark	1994-08-01	expansion	122	false	done	119	119	0	true	data/card-role-worksheets/drk-role-review.tsv
 phpr	HarperPrism Book Promos	1994-09-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/phpr-role-review.tsv
 fem	Fallen Empires	1994-11-01	expansion	187	false	done	102	102	0	true	data/card-role-worksheets/fem-role-review.tsv
 pmei	Media and Collaboration Promos	1995-01-01	promo	98	false	done	90	90	0	true	data/card-role-worksheets/pmei-role-review.tsv
-4bb	Fourth Edition Foreign Black Border	1995-04-01	core	378	false	pending	0			false	
-4ed	Fourth Edition	1995-04-01	core	380	false	pending	0			false	
+4bb	Fourth Edition Foreign Black Border	1995-04-01	core	378	false	done	368	368	0	true	data/card-role-worksheets/4bb-role-review.tsv
+4ed	Fourth Edition	1995-04-01	core	380	false	done	368	368	0	true	data/card-role-worksheets/4ed-role-review.tsv
 ice	Ice Age	1995-06-03	expansion	383	false	done	373	373	0	true	data/card-role-worksheets/ice-role-review.tsv
-bchr	Chronicles Foreign Black Border	1995-07-01	masters	125	false	pending	0			false	
-chr	Chronicles	1995-07-01	masters	125	false	pending	0			false	
-ren	Renaissance	1995-08-01	masters	122	false	pending	0			false	
-rin	Rinascimento	1995-08-01	masters	69	false	pending	0			false	
+bchr	Chronicles Foreign Black Border	1995-07-01	masters	125	false	done	116	116	0	true	data/card-role-worksheets/bchr-role-review.tsv
+chr	Chronicles	1995-07-01	masters	125	false	done	116	116	0	true	data/card-role-worksheets/chr-role-review.tsv
+ren	Renaissance	1995-08-01	masters	122	false	done	122	122	0	true	data/card-role-worksheets/ren-role-review.tsv
+rin	Rinascimento	1995-08-01	masters	69	false	done	60	60	0	true	data/card-role-worksheets/rin-role-review.tsv
 hml	Homelands	1995-10-01	expansion	140	false	done	115	115	0	true	data/card-role-worksheets/hml-role-review.tsv
 o90p	Oversized 90's Promos	1996-04-01	memorabilia	10	false	done	9	9	0	true	data/card-role-worksheets/o90p-role-review.tsv
 ptc	Pro Tour Collector Set	1996-05-01	memorabilia	308	false	done	117	117	0	true	data/card-role-worksheets/ptc-role-review.tsv
 all	Alliances	1996-06-10	expansion	199	false	done	144	144	0	true	data/card-role-worksheets/all-role-review.tsv
-plgm	DCI Legend Membership	1996-07-01	promo	2	false	pending	0			false	
-rqs	Rivals Quick Start Set	1996-07-01	box	65	false	pending	0			false	
+plgm	DCI Legend Membership	1996-07-01	promo	2	false	done	2	2	0	true	data/card-role-worksheets/plgm-role-review.tsv
+rqs	Rivals Quick Start Set	1996-07-01	box	65	false	done	56	56	0	true	data/card-role-worksheets/rqs-role-review.tsv
 parl	Arena League 1996	1996-08-02	promo	7	false	pending	0			false	
 pcel	Celebration Cards	1996-08-14	memorabilia	9	false	done	9	9	0	true	data/card-role-worksheets/pcel-role-review.tsv
 pred	Redemption Program	1996-10-01	promo	1	false	pending	0			false	

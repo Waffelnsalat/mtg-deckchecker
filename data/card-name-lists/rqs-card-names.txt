@@ -1,0 +1,56 @@
+Alabaster Potion
+Circle of Protection: Black
+Circle of Protection: Red
+Healing Salve
+Mesa Pegasus
+Pearled Unicorn
+Reverse Damage
+Energy Flux
+Feedback
+Merfolk of the Pearl Trident
+Power Sink
+Twiddle
+Unsummon
+Zephyr Falcon
+Bog Imp
+Bog Wraith
+Cursed Land
+Dark Ritual
+Lost Soul
+Murk Dwellers
+Raise Dead
+Scathe Zombies
+Sorceress Queen
+Terror
+Vampire Bats
+Wall of Bone
+Warp Artifact
+Weakness
+Detonate
+Disintegrate
+Fireball
+Hill Giant
+Ironclaw Orcs
+Mons's Goblin Raiders
+Orcish Artillery
+Orcish Oriflamme
+Pyrotechnics
+Durkwood Boars
+Elven Riders
+Elvish Archers
+Grizzly Bears
+Scryb Sprites
+Untamed Wilds
+War Mammoth
+Whirling Dervish
+Winter Blast
+Battering Ram
+Clockwork Beast
+Glasses of Urza
+Jayemdae Tome
+Rod of Ruin
+Plains
+Island
+Swamp
+Mountain
+Forest

@@ -1,0 +1,296 @@
+Animate Wall
+Armageddon
+Balance
+Benalish Hero
+Black Ward
+Blessing
+Blue Ward
+Castle
+Circle of Protection: Black
+Circle of Protection: Blue
+Circle of Protection: Green
+Circle of Protection: Red
+Circle of Protection: White
+Conversion
+Crusade
+Death Ward
+Disenchant
+Eye for an Eye
+Farmstead
+Green Ward
+Guardian Angel
+Healing Salve
+Holy Armor
+Holy Strength
+Island Sanctuary
+Karma
+Lance
+Mesa Pegasus
+Northern Paladin
+Pearled Unicorn
+Personal Incarnation
+Purelace
+Red Ward
+Resurrection
+Reverse Damage
+Reverse Polarity
+Righteousness
+Samite Healer
+Savannah Lions
+Serra Angel
+Swords to Plowshares
+Veteran Bodyguard
+Wall of Swords
+White Knight
+White Ward
+Wrath of God
+Air Elemental
+Animate Artifact
+Blue Elemental Blast
+Braingeyser
+Clone
+Control Magic
+Copy Artifact
+Counterspell
+Creature Bond
+Drain Power
+Energy Flux
+Feedback
+Flight
+Hurkyl's Recall
+Island Fish Jasconius
+Jump
+Lifetap
+Lord of Atlantis
+Magical Hack
+Mahamoti Djinn
+Mana Short
+Merfolk of the Pearl Trident
+Phantasmal Forces
+Phantasmal Terrain
+Phantom Monster
+Pirate Ship
+Power Leak
+Power Sink
+Prodigal Sorcerer
+Psychic Venom
+Reconstruction
+Sea Serpent
+Serendib Efreet
+Siren's Call
+Sleight of Mind
+Spell Blast
+Stasis
+Steal Artifact
+Thoughtlace
+Unstable Mutation
+Unsummon
+Vesuvan Doppelganger
+Volcanic Eruption
+Wall of Air
+Wall of Water
+Water Elemental
+Animate Dead
+Bad Moon
+Black Knight
+Bog Wraith
+Contract from Below
+Cursed Land
+Dark Ritual
+Darkpact
+Deathgrip
+Deathlace
+Demonic Attorney
+Demonic Hordes
+Demonic Tutor
+Drain Life
+Drudge Skeletons
+El-Hajjâj
+Erg Raiders
+Evil Presence
+Fear
+Frozen Shade
+Gloom
+Howl from Beyond
+Hypnotic Specter
+Lord of the Pit
+Mind Twist
+Nether Shadow
+Nettling Imp
+Nightmare
+Paralyze
+Pestilence
+Plague Rats
+Raise Dead
+Royal Assassin
+Sacrifice
+Scathe Zombies
+Scavenging Ghoul
+Sengir Vampire
+Simulacrum
+Sorceress Queen
+Terror
+Unholy Strength
+Wall of Bone
+Warp Artifact
+Weakness
+Will-o'-the-Wisp
+Zombie Master
+Atog
+Burrowing
+Chaoslace
+Disintegrate
+Dragon Whelp
+Dwarven Warriors
+Dwarven Weaponsmith
+Earth Elemental
+Earthbind
+Earthquake
+Fire Elemental
+Fireball
+Firebreathing
+Flashfires
+Fork
+Goblin Balloon Brigade
+Goblin King
+Granite Gargoyle
+Gray Ogre
+Hill Giant
+Hurloon Minotaur
+Keldon Warlord
+Kird Ape
+Lightning Bolt
+Magnetic Mountain
+Mana Flare
+Manabarbs
+Mijae Djinn
+Mons's Goblin Raiders
+Orcish Artillery
+Orcish Oriflamme
+Power Surge
+Red Elemental Blast
+Roc of Kher Ridges
+Rock Hydra
+Sedge Troll
+Shatter
+Shatterstorm
+Shivan Dragon
+Smoke
+Stone Giant
+Stone Rain
+Tunnel
+Uthden Troll
+Wall of Fire
+Wall of Stone
+Wheel of Fortune
+Aspect of Wolf
+Birds of Paradise
+Channel
+Cockatrice
+Craw Wurm
+Crumble
+Desert Twister
+Elvish Archers
+Fastbond
+Fog
+Force of Nature
+Fungusaur
+Gaea's Liege
+Giant Growth
+Giant Spider
+Grizzly Bears
+Hurricane
+Instill Energy
+Ironroot Treefolk
+Kudzu
+Ley Druid
+Lifeforce
+Lifelace
+Living Artifact
+Living Lands
+Llanowar Elves
+Lure
+Regeneration
+Regrowth
+Scryb Sprites
+Shanodin Dryads
+Stream of Life
+Thicket Basilisk
+Timber Wolves
+Titania's Song
+Tranquility
+Tsunami
+Verduran Enchantress
+Wall of Brambles
+Wall of Ice
+Wall of Wood
+Wanderlust
+War Mammoth
+Web
+Wild Growth
+Aladdin's Lamp
+Aladdin's Ring
+Ankh of Mishra
+Armageddon Clock
+Basalt Monolith
+Black Vise
+Bottle of Suleiman
+Brass Man
+Celestial Prism
+Clockwork Beast
+Conservator
+Crystal Rod
+Dancing Scimitar
+Dingus Egg
+Disrupting Scepter
+Dragon Engine
+Ebony Horse
+Flying Carpet
+Glasses of Urza
+Helm of Chatzuk
+Howling Mine
+Iron Star
+Ivory Cup
+Ivory Tower
+Jade Monolith
+Jandor's Ring
+Jandor's Saddlebags
+Jayemdae Tome
+Juggernaut
+Kormus Bell
+Library of Leng
+Living Wall
+Mana Vault
+Meekstone
+Millstone
+Mishra's War Machine
+Nevinyrral's Disk
+Obsianus Golem
+Onulet
+Ornithopter
+Primal Clay
+Rocket Launcher
+Rod of Ruin
+Sol Ring
+Soul Net
+Sunglasses of Urza
+The Hive
+The Rack
+Throne of Bone
+Winter Orb
+Wooden Sphere
+Badlands
+Bayou
+Plateau
+Savannah
+Scrubland
+Taiga
+Tropical Island
+Tundra
+Underground Sea
+Volcanic Island
+Plains
+Island
+Swamp
+Mountain
+Forest
