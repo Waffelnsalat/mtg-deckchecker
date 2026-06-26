@@ -284,6 +284,12 @@ function detectAdvancedDrawRoles(profile: CardRoleProfile, text: string, permane
   if (hasTopLibraryFiltering) {
     addRole(
       profile,
+      "card_selection",
+      permanent ? 0.54 : 0.46,
+      "Advanced scan recognized top-of-library filtering.",
+    );
+    addRole(
+      profile,
       "selection",
       permanent ? 0.62 : 0.54,
       "Advanced scan recognized top-of-library filtering.",
@@ -550,6 +556,10 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     combatTriggeredRemoval ||
     phaseOutRemoval ||
     leastPowerRemoval ||
+    /\btarget creature deals damage to itself equal to its power\b/.test(text) ||
+    /\btarget creature with\b[^.]{0,120}\bloses it and another target creature gains it\b/.test(text) ||
+    /\bput a -\d+\/-\d+ counter on target creature\b/.test(text) ||
+    /\bwhenever a creature (?:becomes blocked by|blocks) a creature with lesser power\b[^.]{0,160}\bdestroy the\b/.test(text) ||
     /\bdestroy each permanent chosen this way\b/.test(text);
   const targetedDamageRemoval =
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
@@ -581,6 +591,9 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bnonwhite creatures get -\d+\/-\d+\b/.test(text) ||
     /\bcreatures your opponents control get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
     /\bcreatures your opponents control have base power and toughness 0\/1\b/.test(text) ||
+    /\ball creatures lose all abilities and have base power and toughness \d+\/\d+\b/.test(text) ||
+    /\bwhenever a creature is dealt damage\b[^.]{0,120}\bdestroy it\b/.test(text) ||
+    /\bwhite creatures get -\d+\/-\d+\b/.test(text) ||
     /\bdestroy all auras\b/.test(text) ||
     /\bdestroy all (?:djinns and efreets|efreets and djinns)\b/.test(text) ||
     /\bdeals? \d+ damage to each non(?:white|blue|black|red|green) creature\b/.test(text) ||
@@ -764,6 +777,7 @@ function detectAdvancedProtectionRoles(
     /\btarget (?:opponent|player) skips? (?:all combat phases of )?(?:their|his or her) next (?:turn|combat phase)\b/.test(text) ||
     /\bplayers and permanents can'?t be the targets of spells or activated abilities\b/.test(text) ||
     /\bcreatures can'?t be the targets of spells\b/.test(text) ||
+    /\bthe next time a creature of your choice\b[^.]{0,160}\bwould deal damage to you\b[^.]{0,120}\bprevent that damage\b/.test(text) ||
     /\ball damage that would be dealt to you\b[^.]{0,120}\bis dealt to\b/.test(text) ||
     /\bprevent all (?:combat )?damage\b[^.]{0,180}\b(?:this turn|that would be dealt this turn|that would be dealt to you|dealt by creatures)\b/.test(text) ||
     /\bprevent all damage that would be dealt to creatures\b/.test(text) ||
@@ -867,10 +881,12 @@ function detectAdvancedRecursionRoles(profile: CardRoleProfile, text: string, pe
     /\btarget creature cards? in your graveyard\b[\s\S]{0,180}\breturn them to the battlefield\b/.test(text) ||
     /\bwhenever a creature is put into your graveyard from the battlefield\b[\s\S]{0,180}\breturn that card to the battlefield\b/.test(text) ||
     /\breturn a card exiled with this enchantment to the battlefield\b/.test(text) ||
-    /\breturn enchanted creature card to the battlefield\b/.test(text);
+    /\breturn enchanted creature card to the battlefield\b/.test(text) ||
+    /\breturn each creature card exiled with this artifact to the battlefield under your control\b/.test(text);
   const hand =
     /\breturn\b[^.]{0,140}\b(?:target|up to .*?)\b[^.]{0,140}\bfrom your graveyard\b[^.]{0,120}\bto your hand\b/.test(text) ||
     /\breturn\b[^.]{0,140}\b(?:artifact|creature|enchantment|planeswalker|instant|sorcery|permanent) card\b[^.]{0,140}\bfrom your graveyard\b[^.]{0,120}\bto your hand\b/.test(text) ||
+    /\btarget opponent chooses one of the top two cards of your graveyard\b[\s\S]{0,160}\bput the other one into your hand\b/.test(text) ||
     /\bchooses? a card in your graveyard\b[\s\S]{0,220}\bput the last chosen card into your hand\b/.test(text);
   const replay =
     !hasSelfContainedGraveyardCastText(text) &&
@@ -1253,6 +1269,11 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "mill_support", 0.34, "Advanced scan recognized top-of-library milling.");
   }
 
+  if (/\blook at the top card of target opponent'?s library\b[\s\S]{0,180}\bput that card on the bottom of that player'?s library\b/.test(text)) {
+    addRole(profile, "selection", 0.36, "Advanced scan recognized top-of-library denial.");
+    addRole(profile, "topdeck_control", 0.46, "Advanced scan recognized top-of-library denial.");
+  }
+
   if (/\bput up to\b[^.]{0,80}\btarget cards? from an opponent'?s graveyard on top of their library\b/.test(text)) {
     addRole(profile, "topdeck_control", 0.42, "Advanced scan recognized graveyard-to-library ordering utility.");
     addRole(profile, "graveyard_hate", 0.34, "Advanced scan recognized opposing graveyard disruption.");
@@ -1261,6 +1282,12 @@ function detectAdvancedPurposeRoles(
   if (/\byou control that player\b/.test(text)) {
     addRole(profile, "player_control", 0.46, "Advanced scan recognized player-control utility.");
     addRole(profile, "theft_support", 0.34, "Advanced scan recognized control of another player's choices.");
+  }
+
+  if (/\byou control enchanted enchantment\b/.test(text)) {
+    addRole(profile, "theft_support", 0.5, "Advanced scan recognized enchantment theft.");
+    addRole(profile, "tempo_removal", 0.58, "Advanced scan recognized enchantment theft as battlefield interaction.");
+    addRole(profile, "removal", 0.48, "Advanced scan recognized enchantment theft as battlefield interaction.");
   }
 
   if (/\byou have no maximum hand size\b|\bmaximum hand size is (?:four|three|two|one|\d+)\b/.test(text)) {
@@ -1454,12 +1481,14 @@ function detectAdvancedPurposeRoles(
     /\btarget player chooses a card name\b[\s\S]{0,220}\bdeals? \d+ damage to them\b/.test(text) ||
     /\bwhenever enchanted creature deals damage to you\b[^.]{0,160}\bdeals? that much damage to that creature'?s controller\b/.test(text) ||
     /\bwhenever an opponent draws a card\b[^.]{0,140}\bdeals? \d+ damage to that player\b/.test(text) ||
+    /\bwhenever an opponent casts a white spell\b[^.]{0,120}\bthey lose \d+ life\b/.test(text) ||
     /\bwhenever a player taps a land for mana\b[^.]{0,160}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever an artifact becomes tapped\b[^.]{0,220}\bdeals? \d+ damage to that artifact's controller\b/.test(text) ||
     /\bwhenever enchanted (?:land|artifact) becomes tapped\b[^.]{0,160}\bdeals? \d+ damage to that (?:land|artifact)'?s controller\b/.test(text) ||
     /\bwhenever a land enters\b[^.]{0,160}\bdeals? \d+ damage to that land'?s controller\b/.test(text) ||
     /\bwhenever a land is put into a graveyard\b[^.]{0,180}\bdeals? \d+ damage to that land'?s controller\b/.test(text) ||
     /\bwhenever a creature dies\b[^.]{0,160}\bdeals? \d+ damage to that creature'?s controller\b/.test(text) ||
+    /\bwhen the chosen player draws a card with the chosen name\b[\s\S]{0,180}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\beach player may discard\b[\s\S]{0,160}\bdeals damage to each player\b/.test(text) ||
     /\b(?:deals? (?:x|\d+) damage|deals? damage equal to [^.]{0,80}) to each creature\b[^.]{0,80}\band each player\b/.test(text)
   ) {
@@ -1470,6 +1499,7 @@ function detectAdvancedPurposeRoles(
   if (
     /\bdeals damage to target player equal to the number of cards in that player'?s hand\b/.test(text) ||
     /\bdeals damage to that player equal to the number of white cards in their hand\b/.test(text) ||
+    /\bdeals? 10 damage to that player\b/.test(text) ||
     /\bdeals damage to each opponent equal to the number of islands that player controls\b/.test(text)
   ) {
     addRole(profile, "direct_finisher", 0.54, "Advanced scan recognized scalable direct player damage.");
@@ -1492,6 +1522,8 @@ function detectAdvancedPurposeRoles(
     /\ball (?:zombies|skeletons|elves|goblins|dragons|vampires|soldiers|warriors|slivers|eldrazi|angels|humans|wizards|rogues|knights|merfolk|pirates|cats|beasts)\b[^.]{0,120}\bgain\b/.test(text) ||
     /\b(?:all |other |face-down |attacking |blocking |tapped |untapped )?(?:creatures?|creature tokens?|sliver creatures|knight creatures|zombies|skeletons|elves|goblins|dragons|vampires|soldiers|warriors|slivers|eldrazi|angels|humans|wizards|rogues|knights|merfolk|pirates|cats|beasts)(?: you control)?\b[^.]{0,160}\b(?:gain|gains|have|has)\b[^.]{0,120}\b(?:flying|haste|double strike|first strike|menace|trample|lifelink|vigilance|deathtouch|indestructible|ward)\b/.test(text) ||
     /\btarget creature gains\b[^.]{0,120}\bflanking\b/.test(text) ||
+    /\btarget creature gains shadow\b/.test(text) ||
+    /\btarget creature with\b[^.]{0,120}\bloses it and another target creature gains it\b/.test(text) ||
     /\bcreatures you control gain haste\b/.test(text) ||
     /\bcreatures your opponents control\b[^.]{0,120}\bcan'?t block\b/.test(text) ||
     /\ball creatures lose flying\b/.test(text) ||
@@ -1532,6 +1564,8 @@ function detectAdvancedPurposeRoles(
     /\bplayers can't search libraries\b|\bopponents can't search libraries\b|\byour opponents can'?t search\b|\bcan'?t cast\b|\bskip\b|\bspells cost\b[^.]{0,80}\bmore\b|\btarget enchantment\b[^.]{0,160}\bdamage\b|\bgain control of target artifact\b/.test(
       text,
     ) ||
+    /\ball creatures lose all abilities and have base power and toughness \d+\/\d+\b/.test(text) ||
+    /\ball lands are \d+\/\d+ creatures\b/.test(text) ||
     /\beach nontoken permanent\b[^.]{0,120}\bis sacrificed by its controller\b/.test(text) ||
     /\b(?:blue creatures|creatures with power \d+ or greater|creatures of the chosen type) don't untap during (?:their|their controllers'?) untap steps\b/.test(text) ||
     /\bactivated abilities of artifacts can'?t be activated\b/.test(text) ||
@@ -1573,6 +1607,7 @@ function detectAdvancedPurposeRoles(
   if (
     /\b\+\d+\/\+\d+ counters?\b|\bcounters? on\b|\bproliferate\b|\bmove (?:a|any number of) counters?\b/.test(text) ||
     /\bdistribute\b[^.]{0,120}[+-]\d+\/[+-]\d+ counters? among\b/.test(text) ||
+    /\bput a -\d+\/-\d+ counter on target creature\b/.test(text) ||
     hasAnyKeyword(keywords, ["proliferate", "support", "backup", "adapt", "monstrosity", "level up"]) ||
     /\bcounters? would be (?:put|placed)\b[\s\S]{0,180}\b(?:that many plus|additional|twice that many)\b/.test(text)
   ) {
@@ -1607,6 +1642,7 @@ function detectAdvancedPurposeRoles(
     /\bput target creature card from an opponent'?s graveyard onto the battlefield under your control\b/.test(text) ||
     /\byou control enchanted land\b/.test(text) ||
     /\bexchange control of\b[^.]{0,220}\b(?:target|two|all|creature|artifact|enchantment|permanent|permanents|spell)\b/.test(text) ||
+    /\byou control enchanted enchantment\b/.test(text) ||
     /\bexchanges? control of\b[^.]{0,260}\brandom target\b[^.]{0,160}\b(?:artifact|creature|land|permanent)\b/.test(text) ||
     /\bexile\b[^.]{0,180}\b(?:target|an opponent'?s|opponent'?s)\b[^.]{0,180}\byou may (?:cast|play)\b/.test(text) ||
     /\byou may (?:cast|play)\b[^.]{0,180}\bfrom (?:an|your) opponents?'? (?:graveyard|library|hand|exile)\b/.test(text) ||
@@ -1627,6 +1663,11 @@ function detectAdvancedPurposeRoles(
     /\btarget opponent (?:creates?|gains?|may draw)\b/.test(text)
   ) {
     addRole(profile, "donation_support", permanent ? 0.64 : 0.56, "Advanced scan recognized donation, exchange, or political control-transfer support.");
+  }
+
+  if (/\ball lands are \d+\/\d+ creatures\b/.test(text)) {
+    addRole(profile, "land_animation", 0.46, "Advanced scan recognized land animation.");
+    addRole(profile, "combat_support", 0.28, "Advanced scan recognized land animation as combat material.");
   }
 
   if (
@@ -1807,6 +1848,9 @@ function hasXInManaCost(card: ScryfallCard) {
 function hasTopLibraryFilteringText(text: string) {
   return (
     /\blook at the top (?:x|\d+|one|two|three|four|five|six|seven|a|an) cards? of your library\b[\s\S]{0,180}\bput (?:them|those cards|the rest|any number of them|that card|it)\b[\s\S]{0,120}\b(?:back|on top|on the bottom|into your graveyard)\b/.test(
+      text,
+    ) ||
+    /\bexile any number of cards from your hand face down\b[\s\S]{0,220}\bput that many cards from the top of your library into your hand\b[\s\S]{0,220}\bput (?:them|the exiled cards) on top of your library in any order\b/.test(
       text,
     ) ||
     /\brearrange\b[\s\S]{0,120}\btop (?:x|\d+|one|two|three|four|five|six|seven|a|an) cards? of your library\b/.test(

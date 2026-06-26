@@ -2690,6 +2690,85 @@ test("inferAdvancedRoleProfile recognizes Weatherlight enchantment and artifact 
   assert.ok(getRoleWeight(nullRodProfile, "hate_piece") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Tempest utility wording gaps", () => {
+  const circleProfile = inferAdvancedRoleProfile(
+    createCard("Circle of Protection: Shadow", "Enchantment", 2, "{1}: The next time a creature of your choice with shadow would deal damage to you this turn, prevent that damage."),
+  );
+  const humilityProfile = inferAdvancedRoleProfile(createCard("Humility", "Enchantment", 4, "All creatures lose all abilities and have base power and toughness 1/1."));
+  const repentanceProfile = inferAdvancedRoleProfile(createCard("Repentance", "Sorcery", 3, "Target creature deals damage to itself equal to its power."));
+  const precognitionProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Precognition",
+      "Enchantment",
+      5,
+      "At the beginning of your upkeep, you may look at the top card of target opponent's library. If you do, you may put that card on the bottom of that player's library.",
+    ),
+  );
+  const stealProfile = inferAdvancedRoleProfile(createCard("Steal Enchantment", "Enchantment - Aura", 2, "Enchant enchantment You control enchanted enchantment."));
+  const dauthiProfile = inferAdvancedRoleProfile(createCard("Dauthi Embrace", "Enchantment", 3, "{B}{B}: Target creature gains shadow until end of turn."));
+  const pitsProfile = inferAdvancedRoleProfile(createCard("Death Pits of Rath", "Enchantment", 5, "Whenever a creature is dealt damage, destroy it. It can't be regenerated."));
+  const nightProfile = inferAdvancedRoleProfile(createCard("Dread of Night", "Enchantment", 1, "White creatures get -1/-1."));
+  const havocProfile = inferAdvancedRoleProfile(createCard("Havoc", "Enchantment", 2, "Whenever an opponent casts a white spell, they lose 2 life."));
+  const noQuarterProfile = inferAdvancedRoleProfile(
+    createCard(
+      "No Quarter",
+      "Enchantment",
+      4,
+      "Whenever a creature becomes blocked by a creature with lesser power, destroy the blocking creature. Whenever a creature blocks a creature with lesser power, destroy the attacking creature.",
+    ),
+  );
+  const revoltProfile = inferAdvancedRoleProfile(createCard("Nature's Revolt", "Enchantment", 5, "All lands are 2/2 creatures that are still lands."));
+  const grimoireProfile = inferAdvancedRoleProfile(
+    createCard("Phyrexian Grimoire", "Artifact - Book", 3, "{4}, {T}: Target opponent chooses one of the top two cards of your graveyard. Exile that card and put the other one into your hand."),
+  );
+  const splicerProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Phyrexian Splicer",
+      "Artifact",
+      2,
+      "{2}, {T}, Choose flying, first strike, trample, or shadow: Until end of turn, target creature with the chosen ability loses it and another target creature gains it.",
+    ),
+  );
+  const convulsionsProfile = inferAdvancedRoleProfile(createCard("Fevered Convulsions", "Enchantment", 4, "{2}{B}{B}: Put a -1/-1 counter on target creature."));
+  const trapProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Booby Trap",
+      "Artifact",
+      6,
+      "As this artifact enters, choose an opponent and a card name other than a basic land card name. The chosen player reveals each card they draw. When the chosen player draws a card with the chosen name, sacrifice this artifact. If you do, this artifact deals 10 damage to that player.",
+    ),
+  );
+  const storageProfile = inferAdvancedRoleProfile(
+    createCard("Cold Storage", "Artifact", 4, "{3}: Exile target creature you control. Sacrifice this artifact: Return each creature card exiled with this artifact to the battlefield under your control."),
+  );
+  const rackProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Scroll Rack",
+      "Artifact",
+      2,
+      "{1}, {T}: Exile any number of cards from your hand face down. Put that many cards from the top of your library into your hand. Then look at the exiled cards and put them on top of your library in any order.",
+    ),
+  );
+
+  assert.ok(getRoleWeight(circleProfile, "protection") > 0);
+  assert.ok(getRoleWeight(humilityProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(repentanceProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(precognitionProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(stealProfile, "theft_support") > 0);
+  assert.ok(getRoleWeight(dauthiProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(pitsProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(nightProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(havocProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(noQuarterProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(revoltProfile, "land_animation") > 0);
+  assert.ok(getRoleWeight(grimoireProfile, "hand_recursion") > 0);
+  assert.ok(getRoleWeight(splicerProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(convulsionsProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(trapProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(storageProfile, "battlefield_recursion") > 0);
+  assert.ok(getRoleWeight(rackProfile, "card_selection") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

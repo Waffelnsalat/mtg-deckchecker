@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-26T06:43:25.030Z",
+  "generatedAt": "2026-06-26T06:56:24.168Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 43,
+    "done": 46,
     "inProgress": 0,
-    "pending": 1000
+    "pending": 997
   },
   "sets": [
     {
@@ -619,11 +619,12 @@
       "setType": "memorabilia",
       "cardCount": 131,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 84,
+      "totalUniqueOracleIds": 84,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/wc97-role-review.tsv"
     },
     {
       "code": "ptmp",
@@ -632,11 +633,12 @@
       "setType": "promo",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/ptmp-role-review.tsv"
     },
     {
       "code": "tmp",
@@ -645,11 +647,12 @@
       "setType": "expansion",
       "cardCount": 350,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 335,
+      "totalUniqueOracleIds": 335,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/tmp-role-review.tsv"
     },
     {
       "code": "jgp",
