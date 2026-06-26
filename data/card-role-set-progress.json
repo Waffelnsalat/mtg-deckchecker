@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-26T05:50:16.983Z",
+  "generatedAt": "2026-06-26T05:54:43.015Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 35,
+    "done": 41,
     "inProgress": 0,
-    "pending": 1008
+    "pending": 1002
   },
   "sets": [
     {
@@ -423,11 +423,12 @@
       "setType": "promo",
       "cardCount": 7,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 7,
+      "totalUniqueOracleIds": 7,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/parl-role-review.tsv"
     },
     {
       "code": "pcel",
@@ -450,11 +451,12 @@
       "setType": "promo",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pred-role-review.tsv"
     },
     {
       "code": "mir",
@@ -491,11 +493,12 @@
       "setType": "starter",
       "cardCount": 67,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 57,
+      "totalUniqueOracleIds": 57,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/itp-role-review.tsv"
     },
     {
       "code": "vis",
@@ -518,11 +521,12 @@
       "setType": "core",
       "cardCount": 460,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 434,
+      "totalUniqueOracleIds": 434,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/5ed-role-review.tsv"
     },
     {
       "code": "past",
@@ -545,11 +549,12 @@
       "setType": "memorabilia",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pmic-role-review.tsv"
     },
     {
       "code": "por",
@@ -572,11 +577,12 @@
       "setType": "vanguard",
       "cardCount": 32,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 32,
+      "totalUniqueOracleIds": 32,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pvan-role-review.tsv"
     },
     {
       "code": "olep",

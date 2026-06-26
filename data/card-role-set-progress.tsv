@@ -28,18 +28,18 @@ ptc	Pro Tour Collector Set	1996-05-01	memorabilia	308	false	done	117	117	0	true	
 all	Alliances	1996-06-10	expansion	199	false	done	144	144	0	true	data/card-role-worksheets/all-role-review.tsv
 plgm	DCI Legend Membership	1996-07-01	promo	2	false	done	2	2	0	true	data/card-role-worksheets/plgm-role-review.tsv
 rqs	Rivals Quick Start Set	1996-07-01	box	65	false	done	56	56	0	true	data/card-role-worksheets/rqs-role-review.tsv
-parl	Arena League 1996	1996-08-02	promo	7	false	pending	0			false	
+parl	Arena League 1996	1996-08-02	promo	7	false	done	7	7	0	true	data/card-role-worksheets/parl-role-review.tsv
 pcel	Celebration Cards	1996-08-14	memorabilia	9	false	done	9	9	0	true	data/card-role-worksheets/pcel-role-review.tsv
-pred	Redemption Program	1996-10-01	promo	1	false	pending	0			false	
+pred	Redemption Program	1996-10-01	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pred-role-review.tsv
 mir	Mirage	1996-10-08	expansion	353	false	done	335	335	0	true	data/card-role-worksheets/mir-role-review.tsv
 mgb	Multiverse Gift Box	1996-11-01	box	10	false	done	10	10	0	true	data/card-role-worksheets/mgb-role-review.tsv
-itp	Introductory Two-Player Set	1996-12-31	starter	67	false	pending	0			false	
+itp	Introductory Two-Player Set	1996-12-31	starter	67	false	done	57	57	0	true	data/card-role-worksheets/itp-role-review.tsv
 vis	Visions	1997-02-03	expansion	167	false	done	167	167	0	true	data/card-role-worksheets/vis-role-review.tsv
-5ed	Fifth Edition	1997-03-24	core	460	false	pending	0			false	
+5ed	Fifth Edition	1997-03-24	core	460	false	done	434	434	0	true	data/card-role-worksheets/5ed-role-review.tsv
 past	Astral Cards	1997-04-01	box	12	true	done	12	12	0	true	data/card-role-worksheets/past-role-review.tsv
-pmic	MicroProse Promos	1997-04-01	memorabilia	1	false	pending	0			false	
+pmic	MicroProse Promos	1997-04-01	memorabilia	1	false	done	1	1	0	true	data/card-role-worksheets/pmic-role-review.tsv
 por	Portal	1997-05-01	starter	257	false	done	200	200	0	true	data/card-role-worksheets/por-role-review.tsv
-pvan	Vanguard Series	1997-05-01	vanguard	32	false	pending	0			false	
+pvan	Vanguard Series	1997-05-01	vanguard	32	false	done	32	32	0	true	data/card-role-worksheets/pvan-role-review.tsv
 olep	Oversized League Prizes	1997-05-30	memorabilia	83	false	pending	0			false	
 wth	Weatherlight	1997-06-09	expansion	167	false	pending	0			false	
 wc97	World Championship Decks 1997	1997-08-13	memorabilia	131	false	pending	0			false	

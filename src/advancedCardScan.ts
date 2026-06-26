@@ -495,6 +495,8 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\btarget (?:(?:attacking )?creature(?: other than this creature)?|creature with flying)\b[^.]{0,120}\bhas base power (?:and toughness )?0(?:\/\d+)?\b/.test(text);
   const combatTriggeredRemoval =
     /\bwhenever this creature blocks or becomes blocked\b[^.]{0,180}\bdestroy that creature\b/.test(text) ||
+    /\bwhenever a creature you control deals damage to a creature\b[^.]{0,120}\bdestroy the other creature\b/.test(text) ||
+    /\bwhenever a creature deals damage to you\b[^.]{0,80}\bdestroy it\b/.test(text) ||
     /\bwhen enchanted creature is dealt damage\b[^.]{0,80}\bdestroy it\b/.test(text) ||
     /\bwhenever enchanted creature blocks or becomes blocked\b[^.]{0,180}\bdestroy the other creature\b/.test(text);
   const phaseOutRemoval = /\btarget creature phases out until\b[^.]{0,120}\bleaves the battlefield\b/.test(text);
@@ -779,6 +781,7 @@ function detectAdvancedProtectionRoles(
     regenerationProtection ||
     /\bthe next time target land would be destroyed this turn\b/.test(text) ||
     /\bprevent the next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to (?:any target|target (?:creature|permanent|artifact|enchantment|planeswalker|player)|that (?:permanent|creature|player))\b/.test(text) ||
+    /\bthe next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to target creature you control\b[^.]{0,120}\bis dealt to you instead\b/.test(text) ||
     /\bthe next time\b[^.]{0,100}\bsource of your choice would deal damage to target creature\b[^.]{0,120}\bdeals that damage to you instead\b/.test(text);
   const redirectedDamageProtection =
     /\bgains?\b[^.]{0,120}\bthe next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to target\b[^.]{0,180}\bis dealt to (?:this|that) creature instead\b/.test(text);
@@ -876,6 +879,7 @@ function detectAdvancedRecursionRoles(profile: CardRoleProfile, text: string, pe
     /\bshuffle your graveyard into your library\b/.test(text) ||
     /\bshuffle\b[^.]{0,120}\bfrom your graveyard\b[^.]{0,120}\binto your library\b/.test(text) ||
     /\bput\b[^.]{0,120}\bfrom your graveyard\b[^.]{0,120}\bon top of your library\b/.test(text) ||
+    /\bwhenever a creature you control is put into your graveyard from the battlefield\b[^.]{0,160}\bput it on top of your library\b/.test(text) ||
     /\bput the top card of your graveyard on the bottom of your library\b/.test(text) ||
     /\bput any number of target\b[^.]{0,160}\bfrom target player's graveyard on top of their library\b/.test(text);
 
@@ -1104,6 +1108,11 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "mana_denial", 0.3, "Advanced scan recognized delayed snow-land untap pressure.");
   }
 
+  if (/\bif a basic land you control is tapped for mana\b[^.]{0,120}\bproduces mana of a color of your choice\b/.test(text)) {
+    addRole(profile, "mana_fixing", 0.52, "Advanced scan recognized basic-land color fixing.");
+    addRole(profile, "land_synergy", 0.34, "Advanced scan recognized land mana conversion.");
+  }
+
   if (
     /\beach player may play an additional land\b/.test(text) ||
     /\byou may play up to (?:one|two|three|four|five|six|\d+) additional lands?\b/.test(text)
@@ -1189,6 +1198,7 @@ function detectAdvancedPurposeRoles(
     /\bremove target creature defending player controls from combat\b/.test(text) ||
     /\ball creatures able to block target creature this turn do so\b/.test(text) ||
     /\ball creatures able to block enchanted creature do so\b/.test(text) ||
+    /\bcreatures you control have (?:reach|shadow)\b/.test(text) ||
     /\bcreatures with flying can block only creatures with flying\b/.test(text) ||
     /\bcreatures you control gain reach until end of turn\b/.test(text) ||
     /\bcreatures without flying have reach\b/.test(text) ||
@@ -1199,7 +1209,7 @@ function detectAdvancedPurposeRoles(
   }
 
   if (
-    /\blook at target (?:player|opponent)'?s hand\b|\bplayers play with their hands revealed\b/.test(text) ||
+    /\blook at target (?:player|opponent)'?s hand\b|\bplayers play with their hands revealed\b|\byour opponents play with their hands revealed\b/.test(text) ||
     /\btarget player reveals their hand\b/.test(text) ||
     /\btarget player reveals a card at random from their hand\b/.test(text)
   ) {

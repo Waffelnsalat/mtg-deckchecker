@@ -1,0 +1,7 @@
+Plains
+Island
+Swamp
+Mountain
+Forest
+Disenchant
+Fireball

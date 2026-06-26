@@ -45664,6 +45664,584 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Portal role audit."
+    },
+    {
+      "oracleId": "094f6b9c-a3f0-4bb4-9973-b234143f449d",
+      "name": "Ashnod",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "3ff4189b-e9c2-4139-b9ab-4cdbaa1ba886",
+      "name": "Barrin",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "removal",
+        "sacrifice_support",
+        "tempo_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "f9831319-0f61-4b10-b5fb-163e6d5b54c6",
+      "name": "Crovax",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "lifegain"
+      ],
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "d66efdde-c3e1-4195-85cb-2facf58b33f7",
+      "name": "Eladamri",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "51bee98e-b321-48cb-b8a2-c4ac7077b572",
+      "name": "Ertai",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "broad_protection",
+        "self_protection"
+      ],
+      "actualRoles": [
+        "broad_protection",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "ca9c2d92-5629-449c-9ff8-ff3df8de7275",
+      "name": "Gerrard",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "2bf0d278-4678-4c6b-b447-d4b025f9b27a",
+      "name": "Gix",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "e4d9c50e-d248-43df-bdc3-665cbe5085ea",
+      "name": "Greven il-Vec",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "7a416a25-56a6-4ab7-9832-4c3f2ceacc73",
+      "name": "Hanna",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "1cd1c251-a813-49d9-a8f7-5e6c977902e6",
+      "name": "Karn",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "artifact_support",
+        "combat_support"
+      ],
+      "actualRoles": [
+        "artifact_support",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "b193d5df-f649-46db-ab3f-d3a16c60ca21",
+      "name": "Lyna",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "9d00fef4-d417-4c6d-87a0-88765c3d1e97",
+      "name": "Maraxus",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "e758193b-9162-44d5-a624-74ba6f266af3",
+      "name": "Mirri",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "land_synergy",
+        "mana_fixing"
+      ],
+      "actualRoles": [
+        "land_synergy",
+        "mana_fixing"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "5ad380b9-18e0-4613-859d-8a378c4dfebd",
+      "name": "Mishra",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "actualRoles": [
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "7892f444-3c37-4258-b0ce-66e8337066c7",
+      "name": "Multani",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "combat_support",
+        "scalable_spell"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "cfb8a8cc-293a-4b78-8ae8-5bdbfb61f5a6",
+      "name": "Oracle",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "tap_untap",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "15cdb923-a838-40ff-b2f8-bb00f62bf63d",
+      "name": "Orim",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "combat_support",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "b4856455-f979-4b08-afff-1c421d803211",
+      "name": "Rofellos",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "927aeb03-6491-4c3f-b01b-2a96b0ce6707",
+      "name": "Selenia",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "afb96e29-17e2-4621-b563-8d06cb137e11",
+      "name": "Serra",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "3aac9724-241f-4a54-806c-a6d3e8cf24ea",
+      "name": "Sidar Kondo",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "63ddd795-b876-4546-a405-7154625d4b4c",
+      "name": "Sisay",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "burst_ramp",
+        "mana_fixing"
+      ],
+      "actualRoles": [
+        "burst_ramp",
+        "mana_fixing"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "2c3b4dfb-8e5d-497f-b681-a86192314edc",
+      "name": "Sliver Queen, Brood Mother",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "token_support"
+      ],
+      "actualRoles": [
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "57bb0d6f-0b3b-4745-b430-7472ca36adf3",
+      "name": "Squee",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "hand_info"
+      ],
+      "actualRoles": [
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "0c668c8f-4eaf-46d1-97d5-3b91040ef9bd",
+      "name": "Starke",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "9abcb851-e4ca-4e7e-8e42-b50ff3c49aa5",
+      "name": "Tahngarth",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "combat_support"
+      ],
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "426832e8-c95a-4666-91e8-9df8dc2ef1b9",
+      "name": "Takara",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "4fea0034-ff61-4afd-bf54-b02821efdc86",
+      "name": "Tawnos",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "actualRoles": [
+        "replacement_engine",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "024cfe2e-d3c0-4341-bb70-67664ed1595d",
+      "name": "Titania",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "land_acceleration",
+        "ramp"
+      ],
+      "actualRoles": [
+        "land_acceleration",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "ed580415-6957-4f29-87d3-7adcabefecb6",
+      "name": "Urza",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "d44cecaf-3b28-4f5c-9bb8-39b218b70a33",
+      "name": "Volrath",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "library_recursion",
+        "recursion"
+      ],
+      "actualRoles": [
+        "library_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
+    },
+    {
+      "oracleId": "a6ef1dd1-2b90-486d-a83b-5a0633b73395",
+      "name": "Xantcha",
+      "firstSet": "pvan",
+      "releasedAt": "1997-05-01",
+      "reviewedAt": "2026-06-26T05:54:42.995Z",
+      "expectedRoles": [
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "actualRoles": [
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by Vanguard Series role audit."
     }
   ]
 }

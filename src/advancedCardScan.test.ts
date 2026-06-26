@@ -2558,6 +2558,46 @@ test("inferAdvancedRoleProfile recognizes Portal starter wording and avoids self
   assert.equal(getRoleWeight(selfTopProfile, "sacrifice_support"), 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Vanguard global emblem-style text", () => {
+  const mirriProfile = inferAdvancedRoleProfile(
+    createCard("Mirri", "Vanguard", 0, "If a basic land you control is tapped for mana, it produces mana of a color of your choice instead of any other type."),
+  );
+  const squeeProfile = inferAdvancedRoleProfile(createCard("Squee", "Vanguard", 0, "Your opponents play with their hands revealed."));
+  const grevenProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Greven il-Vec",
+      "Vanguard",
+      0,
+      "Whenever a creature you control deals damage to a creature, destroy the other creature. It can't be regenerated.",
+    ),
+  );
+  const orimProfile = inferAdvancedRoleProfile(createCard("Orim", "Vanguard", 0, "Creatures you control have reach."));
+  const volrathProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Volrath",
+      "Vanguard",
+      0,
+      "Whenever a creature you control is put into your graveyard from the battlefield, you may put it on top of your library.",
+    ),
+  );
+  const eladamriProfile = inferAdvancedRoleProfile(
+    createCard("Eladamri", "Vanguard", 0, "{0}: The next 1 damage that would be dealt to target creature you control is dealt to you instead."),
+  );
+  const lynaProfile = inferAdvancedRoleProfile(
+    createCard("Lyna", "Vanguard", 0, "Creatures you control have shadow. (They can block and be blocked only by creatures with shadow.)"),
+  );
+  const ashnodProfile = inferAdvancedRoleProfile(createCard("Ashnod", "Vanguard", 0, "Whenever a creature deals damage to you, destroy it."));
+
+  assert.ok(getRoleWeight(mirriProfile, "mana_fixing") > 0);
+  assert.ok(getRoleWeight(squeeProfile, "hand_info") > 0);
+  assert.ok(getRoleWeight(grevenProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(orimProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(volrathProfile, "library_recursion") > 0);
+  assert.ok(getRoleWeight(eladamriProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(lynaProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(ashnodProfile, "targeted_removal") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

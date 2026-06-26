@@ -1,0 +1,434 @@
+Abbey Gargoyles
+Akron Legionnaire
+Alabaster Potion
+Angry Mob
+Animate Wall
+Arenson's Aura
+Armageddon
+Armor of Faith
+Aysen Bureaucrats
+Benalish Hero
+Blessed Wine
+Blinking Spirit
+Brainwash
+Caribou Range
+Castle
+Circle of Protection: Artifacts
+Circle of Protection: Black
+Circle of Protection: Blue
+Circle of Protection: Green
+Circle of Protection: Red
+Circle of Protection: White
+Crusade
+D'Avenant Archer
+Death Speakers
+Death Ward
+Disenchant
+Divine Offering
+Divine Transformation
+Dust to Dust
+Eye for an Eye
+Greater Realm of Preservation
+Heal
+Healing Salve
+Hipparion
+Holy Strength
+Icatian Phalanx
+Icatian Scout
+Icatian Town
+Island Sanctuary
+Ivory Guardians
+Justice
+Karma
+Kismet
+Kjeldoran Royal Guard
+Kjeldoran Skycaptain
+Mesa Falcon
+Mesa Pegasus
+Order of the Sacred Torch
+Order of the White Shield
+Pearled Unicorn
+Personal Incarnation
+Pikemen
+Prismatic Ward
+Repentant Blacksmith
+Reverse Damage
+Righteousness
+Sacred Boon
+Samite Healer
+Seraph
+Serra Bestiary
+Serra Paladin
+Shield Bearer
+Shield Wall
+Spirit Link
+Truce
+Tundra Wolves
+Wall of Swords
+White Knight
+Wrath of God
+Aether Storm
+Air Elemental
+Anti-Magic Aura
+Azure Drake
+Binding Grasp
+Boomerang
+Brainstorm
+Counterspell
+Dance of Many
+Dandân
+Dark Maze
+Deflection
+Drain Power
+Energy Flux
+Enervate
+Feedback
+Flight
+Flood
+Force Spike
+Forget
+Gaseous Form
+Glacial Wall
+Homarid Warrior
+Hurkyl's Recall
+Hydroblast
+Juxtapose
+Krovikan Sorcerer
+Labyrinth Minotaur
+Leviathan
+Lifetap
+Lord of Atlantis
+Magical Hack
+Magus of the Unseen
+Memory Lapse
+Merfolk of the Pearl Trident
+Mind Bomb
+Phantasmal Forces
+Phantasmal Terrain
+Phantom Monster
+Pirate Ship
+Portent
+Power Sink
+Prodigal Sorcerer
+Psychic Venom
+Ray of Command
+Recall
+Reef Pirates
+Remove Soul
+Sea Serpent
+Sea Spirit
+Sea Sprite
+Seasinger
+Segovian Leviathan
+Sibilant Spirit
+Sleight of Mind
+Soul Barrier
+Spell Blast
+Stasis
+Steal Artifact
+Time Elemental
+Twiddle
+Unstable Mutation
+Unsummon
+Updraft
+Vodalian Soldiers
+Wall of Air
+Wind Spirit
+Zephyr Falcon
+Zur's Weirding
+Abyssal Specter
+Animate Dead
+Ashes to Ashes
+Bad Moon
+Black Knight
+Blight
+Bog Imp
+Bog Rats
+Bog Wraith
+Breeding Pit
+Broken Visage
+Carrion Ants
+Cloak of Confusion
+Cursed Land
+Dark Ritual
+Deathgrip
+Derelor
+Drain Life
+Drudge Skeletons
+Erg Raiders
+Evil Eye of Orms-by-Gore
+Evil Presence
+Fallen Angel
+Fear
+Frozen Shade
+Funeral March
+Gloom
+Greater Werewolf
+Hecatomb
+Howl from Beyond
+Initiates of the Ebon Hand
+Kjeldoran Dead
+Knight of Stromgald
+Krovikan Fetish
+Leshrac's Rite
+Lord of the Pit
+Lost Soul
+Mind Ravel
+Mind Warp
+Mindstab Thrull
+Mole Worms
+Murk Dwellers
+Necrite
+Necropotence
+Nether Shadow
+Nightmare
+Paralyze
+Pestilence
+Pit Scorpion
+Plague Rats
+Pox
+Rag Man
+Raise Dead
+Scathe Zombies
+Sengir Autocrat
+Sorceress Queen
+Stromgald Cabal
+Terror
+The Wretched
+Thrull Retainer
+Torture
+Touch of Death
+Unholy Strength
+Vampire Bats
+Wall of Bone
+Warp Artifact
+Weakness
+Xenic Poltergeist
+Zombie Master
+Ambush Party
+Atog
+Ball Lightning
+Bird Maiden
+Blood Lust
+Brassclaw Orcs
+Brothers of Fire
+Cave People
+Conquer
+Crimson Manticore
+Detonate
+Disintegrate
+Dwarven Catapult
+Dwarven Soldier
+Dwarven Warriors
+Earthquake
+Errantry
+Eternal Warrior
+Fire Drake
+Fireball
+Firebreathing
+Flame Spirit
+Flare
+Flashfires
+Game of Chaos
+Giant Strength
+Goblin Digging Team
+Goblin Hero
+Goblin King
+Goblin War Drums
+Goblin Warrens
+Hill Giant
+Hurloon Minotaur
+Imposing Visage
+Incinerate
+Inferno
+Ironclaw Curse
+Ironclaw Orcs
+Jokulhaups
+Keldon Warlord
+Mana Clash
+Mana Flare
+Manabarbs
+Mons's Goblin Raiders
+Mountain Goat
+Orcish Artillery
+Orcish Captain
+Orcish Conscripts
+Orcish Farmer
+Orcish Oriflamme
+Orcish Squatters
+Orgg
+Panic
+Primordial Ooze
+Pyroblast
+Pyrotechnics
+Sabretooth Tiger
+Shatter
+Shatterstorm
+Shivan Dragon
+Smoke
+Stone Giant
+Stone Rain
+Stone Spirit
+The Brute
+Wall of Fire
+Wall of Stone
+Winds of Change
+Word of Blasting
+An-Havva Constable
+Aspect of Wolf
+Aurochs
+Birds of Paradise
+Carapace
+Cat Warriors
+Chub Toad
+Cockatrice
+Craw Giant
+Craw Wurm
+Crumble
+Desert Twister
+Durkwood Boars
+Elder Druid
+Elven Riders
+Elvish Archers
+Fog
+Force of Nature
+Foxfire
+Fungusaur
+Fyndhorn Elder
+Ghazbán Ogre
+Giant Growth
+Giant Spider
+Grizzly Bears
+Hungry Mist
+Hurricane
+Instill Energy
+Ironroot Treefolk
+Johtull Wurm
+Killer Bees
+Ley Druid
+Lhurgoyf
+Lifeforce
+Living Artifact
+Living Lands
+Llanowar Elves
+Lure
+Marsh Viper
+Nature's Lore
+Pradesh Gypsies
+Primal Order
+Rabid Wombat
+Radjan Spirit
+Regeneration
+Scaled Wurm
+Scavenger Folk
+Scryb Sprites
+Shanodin Dryads
+Shrink
+Stampede
+Stream of Life
+Sylvan Library
+Tarpan
+Thicket Basilisk
+Titania's Song
+Tranquility
+Tsunami
+Untamed Wilds
+Venom
+Verduran Enchantress
+Wall of Brambles
+Wanderlust
+War Mammoth
+Whirling Dervish
+Wild Growth
+Winter Blast
+Wolverine Pack
+Wyluli Wolf
+Aladdin's Ring
+Amulet of Kroog
+Ankh of Mishra
+Ashnod's Altar
+Ashnod's Transmogrant
+Barbed Sextant
+Barl's Cage
+Battering Ram
+Bottle of Suleiman
+Clay Statue
+Clockwork Beast
+Clockwork Steed
+Colossus of Sardia
+Coral Helm
+Crown of the Ages
+Crystal Rod
+Dancing Scimitar
+Diabolic Machine
+Dingus Egg
+Disrupting Scepter
+Dragon Engine
+Elkin Bottle
+Feldon's Cane
+Fellwar Stone
+Feroz's Ban
+Flying Carpet
+Fountain of Youth
+Gauntlets of Chaos
+Glasses of Urza
+Grapeshot Catapult
+Helm of Chatzuk
+Howling Mine
+Infinite Hourglass
+Iron Star
+Ivory Cup
+Jade Monolith
+Jalum Tome
+Jandor's Saddlebags
+Jayemdae Tome
+Jester's Cap
+Joven's Tools
+Library of Leng
+Mana Vault
+Meekstone
+Millstone
+Nevinyrral's Disk
+Obelisk of Undoing
+Ornithopter
+Pentagram of the Ages
+Primal Clay
+Rod of Ruin
+Serpent Generator
+Shapeshifter
+Skull Catapult
+Soul Net
+Tawnos's Weaponry
+The Hive
+Throne of Bone
+Time Bomb
+Urza's Avenger
+Urza's Bauble
+Wall of Spears
+Winter Orb
+Wooden Sphere
+Adarkar Wastes
+Bottomless Vault
+Brushland
+City of Brass
+Dwarven Hold
+Dwarven Ruins
+Ebon Stronghold
+Havenwood Battleground
+Hollow Trees
+Icatian Store
+Ice Floe
+Karplusan Forest
+Ruins of Trokair
+Sand Silos
+Sulfurous Springs
+Svyelunite Temple
+Underground River
+Urza's Mine
+Urza's Power Plant
+Urza's Tower
+Plains
+Island
+Swamp
+Mountain
+Forest
