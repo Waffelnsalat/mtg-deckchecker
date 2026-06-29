@@ -2992,6 +2992,52 @@ test("inferAdvancedRoleProfile recognizes Unglued utility wording gaps", () => {
   assert.ok(getRoleWeight(confettiProfile, "removal") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Urza's Saga utility wording gaps", () => {
+  const opalProfile = inferAdvancedRoleProfile(
+    createCard("Opal Archangel", "Enchantment", 5, "When an opponent casts a creature spell, if this permanent is an enchantment, it becomes a 5/5 Angel creature with flying and vigilance."),
+  );
+  const curfewProfile = inferAdvancedRoleProfile(createCard("Curfew", "Instant", 1, "Each player returns a creature they control to its owner's hand."));
+  const showProfile = inferAdvancedRoleProfile(createCard("Show and Tell", "Sorcery", 3, "Each player may put an artifact, creature, enchantment, or land card from their hand onto the battlefield."));
+  const turnaboutProfile = inferAdvancedRoleProfile(
+    createCard("Turnabout", "Instant", 4, "Choose artifact, creature, or land. Tap all untapped permanents of the chosen type target player controls, or untap all tapped permanents of that type that player controls."),
+  );
+  const darkestProfile = inferAdvancedRoleProfile(createCard("Darkest Hour", "Enchantment", 1, "All creatures are black."));
+  const oppressionProfile = inferAdvancedRoleProfile(createCard("Oppression", "Enchantment", 3, "Whenever a player casts a spell, that player discards a card."));
+  const voidProfile = inferAdvancedRoleProfile(createCard("Planar Void", "Enchantment", 1, "Whenever another card is put into a graveyard from anywhere, exile that card."));
+  const aetherProfile = inferAdvancedRoleProfile(createCard("Tainted Aether", "Enchantment", 4, "Whenever a creature enters, its controller sacrifices a creature or land of their choice."));
+  const soilProfile = inferAdvancedRoleProfile(createCard("Acidic Soil", "Sorcery", 3, "Acidic Soil deals damage to each player equal to the number of lands they control."));
+  const lightningProfile = inferAdvancedRoleProfile(createCard("Arc Lightning", "Sorcery", 3, "Arc Lightning deals 3 damage divided as you choose among one, two, or three targets."));
+  const falterProfile = inferAdvancedRoleProfile(createCard("Falter", "Instant", 2, "Creatures without flying can't block this turn."));
+  const scaldProfile = inferAdvancedRoleProfile(createCard("Scald", "Enchantment", 2, "Whenever a player taps an Island for mana, this enchantment deals 1 damage to that player."));
+  const crosswindsProfile = inferAdvancedRoleProfile(createCard("Crosswinds", "Enchantment", 2, "Creatures with flying get -2/-0."));
+  const fangsProfile = inferAdvancedRoleProfile(createCard("Venomous Fangs", "Enchantment — Aura", 3, "Enchant creature Whenever enchanted creature deals damage to a creature, destroy the other creature."));
+  const scalesProfile = inferAdvancedRoleProfile(
+    createCard("Noetic Scales", "Artifact", 4, "At the beginning of each player's upkeep, return to its owner's hand each creature that player controls with power greater than the number of cards in their hand."),
+  );
+  const scytheProfile = inferAdvancedRoleProfile(
+    createCard("Purging Scythe", "Artifact", 5, "At the beginning of your upkeep, this artifact deals 2 damage to the creature with the least toughness."),
+  );
+  const armorProfile = inferAdvancedRoleProfile(createCard("Urza's Armor", "Artifact", 6, "If a source would deal damage to you, prevent 1 of that damage."));
+
+  assert.ok(getRoleWeight(opalProfile, "animation_effect") > 0);
+  assert.ok(getRoleWeight(curfewProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(showProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(turnaboutProfile, "tap_untap") > 0);
+  assert.ok(getRoleWeight(darkestProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(oppressionProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(voidProfile, "graveyard_hate") > 0);
+  assert.ok(getRoleWeight(aetherProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(soilProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(lightningProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(falterProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(scaldProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(crosswindsProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(fangsProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(scalesProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(scytheProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(armorProfile, "protection") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
