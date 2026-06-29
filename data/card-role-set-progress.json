@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T11:01:26.510Z",
+  "generatedAt": "2026-06-29T11:05:57.257Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 52,
+    "done": 54,
     "inProgress": 0,
-    "pending": 991
+    "pending": 989
   },
   "sets": [
     {
@@ -745,11 +745,12 @@
       "setType": "token",
       "cardCount": 6,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 6,
+      "totalUniqueOracleIds": 6,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/tugl-role-review.tsv"
     },
     {
       "code": "ugl",
@@ -758,11 +759,12 @@
       "setType": "funny",
       "cardCount": 88,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 88,
+      "totalUniqueOracleIds": 88,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/ugl-role-review.tsv"
     },
     {
       "code": "wc98",

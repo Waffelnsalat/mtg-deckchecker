@@ -1716,7 +1716,7 @@
       "name": "Forest",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -2326,7 +2326,7 @@
       "name": "Island",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -3412,7 +3412,7 @@
       "name": "Plains",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -4359,7 +4359,7 @@
       "name": "Swamp",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -6456,7 +6456,7 @@
       "name": "Mountain",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -29867,7 +29867,7 @@
       "name": "Incoming!",
       "firstSet": "o90p",
       "releasedAt": "1996-04-01",
-      "reviewedAt": "2026-06-25T08:50:29.741Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "cheat_into_play",
         "cost_reduction",
@@ -46269,7 +46269,7 @@
       "name": "Blacker Lotus",
       "firstSet": "olep",
       "releasedAt": "1997-05-30",
-      "reviewedAt": "2026-06-26T06:42:54.451Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "stable_ramp"
       ],
@@ -46303,7 +46303,7 @@
       "name": "Infernal Spawn of Evil",
       "firstSet": "olep",
       "releasedAt": "1997-05-30",
-      "reviewedAt": "2026-06-26T06:42:54.451Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -46349,7 +46349,7 @@
       "name": "Mirror Mirror",
       "firstSet": "olep",
       "releasedAt": "1997-05-30",
-      "reviewedAt": "2026-06-26T06:42:54.451Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "donation_support",
         "life_pressure",
@@ -46377,7 +46377,7 @@
       "name": "Squirrel Farm",
       "firstSet": "olep",
       "releasedAt": "1997-05-30",
-      "reviewedAt": "2026-06-26T06:42:54.451Z",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
       "expectedRoles": [
         "token_support"
       ],
@@ -61559,6 +61559,1151 @@
       "reviewedAt": "2026-06-29T11:01:25.356Z",
       "actualRoles": [
         "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4465eff4-5851-4721-a248-866c686c2ab8",
+      "name": "Goblin",
+      "firstSet": "tugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "251085b8-4bca-4fcd-92a0-006541be827e",
+      "name": "Pegasus",
+      "firstSet": "tugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "267c50b6-8fe7-4340-b38a-d9d916b032ce",
+      "name": "Sheep",
+      "firstSet": "tugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+      "name": "Soldier",
+      "firstSet": "tugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "67f21c0c-2083-4eda-9dc3-cc8aee42289f",
+      "name": "Squirrel",
+      "firstSet": "tugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ddc8c973-c31e-463f-be45-f3fa7d632362",
+      "name": "Zombie",
+      "firstSet": "tugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4d4b7108-5287-4d52-94a1-a0f99c14c969",
+      "name": "Ashnod's Coupon",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8fd7503b-e722-49a7-a8ac-786e7354bc95",
+      "name": "B.F.M. (Big Furry Monster)",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d0bd00f2-91bb-4c9c-a8e7-f8aeadc0bbb9",
+      "name": "B.F.M. (Big Furry Monster)",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b201b2ce-f939-4a2d-ad59-181c64f5a562",
+      "name": "Bronze Calendar",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "22826477-c096-4b28-aa58-8368525209eb",
+      "name": "Bureaucracy",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "sacrifice_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9716976e-1b52-4351-932e-b99fe206afbd",
+      "name": "Burning Cinder Fury of Crimson Chaos Fire",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "044c3f16-f27d-4f36-a996-eb0aca1cff6c",
+      "name": "Cardboard Carapace",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "53d0720d-a2dc-418f-94cc-f150fa47d23f",
+      "name": "Censorship",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5a4142df-7e24-43a2-a1e5-7a2d2bf70408",
+      "name": "Chaos Confetti",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8d2f2b5b-2e71-425e-a049-34a81d416c66",
+      "name": "Charm School",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "broad_protection",
+        "protection",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7b1aadc2-58fc-4a21-a294-b7a64236d75b",
+      "name": "Checks and Balances",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e4424b0a-3174-495a-8d0a-da1285d21996",
+      "name": "Chicken à la King",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "dice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3593754d-df62-4ee0-80df-0c3fb057816a",
+      "name": "Chicken Egg",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "dice_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d0db0ada-b81f-4a34-814f-165ec6e57f5b",
+      "name": "Clam Session",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cd60e1c7-7fb0-4331-ad59-1fa4a0ebb786",
+      "name": "Clam-I-Am",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "dice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0b1fc8da-5fff-40a1-924e-5875c7b948a1",
+      "name": "Clambassadors",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f6c81c1f-b07e-4be0-ac3c-100ce6cabe28",
+      "name": "Clay Pigeon",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a8f0974a-8706-476f-82ee-72485b6b558e",
+      "name": "Common Courtesy",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "sacrifice_support",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d824ed83-af76-4e67-8e9d-0969e5534072",
+      "name": "Deadhead",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4c39b74c-db93-4dba-8ce3-3683b8cfaac5",
+      "name": "Denied!",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "34b44f16-f17d-47f5-aeaa-56bc7f13250e",
+      "name": "Double Cross",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "55bc3a55-1458-46fa-8623-29317e4a0ecd",
+      "name": "Double Deal",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "479edfad-7147-495b-8167-783d928c5be4",
+      "name": "Double Dip",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2cf90fda-c273-40cc-abeb-1502781ee3e1",
+      "name": "Double Play",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8f3a2b00-9f63-4178-ade4-8eb0c808bec3",
+      "name": "Double Take",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ed416b99-681a-4c83-8c4c-335766766d16",
+      "name": "Elvish Impersonators",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "dice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d3bb9cfe-08ec-4c32-846a-2c16b9675e97",
+      "name": "Flock of Rabid Sheep",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "coin_support",
+        "mana_sink",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2ef4dfcf-7a53-49bc-aa19-f2796ebac3ae",
+      "name": "Fowl Play",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ee0f8b3d-5c40-43e0-9ed7-9963831a1013",
+      "name": "Free-for-All",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "face_down_support",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e2177cdd-da89-4f7d-a161-788fa33451f9",
+      "name": "Free-Range Chicken",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "dice_support",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "15232fee-094f-4a6b-9511-c8e2e7a8c520",
+      "name": "Gerrymandering",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2698465c-5171-4710-acb0-4aaceccfcc18",
+      "name": "Get a Life",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "life_pressure",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6eb03f6c-9293-4403-8bd1-5e32629fc791",
+      "name": "Ghazbán Ogress",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5e91120b-3375-44bb-8e6b-6dc05082eb41",
+      "name": "Giant Fan",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5160e929-48ea-4620-be54-20ea7b6fc964",
+      "name": "Goblin Bookie",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "29d6b745-97be-4f38-88f7-9408302aae74",
+      "name": "Goblin Bowling Team",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b026a2da-59e9-4b26-9094-a1cc2a5b95ff",
+      "name": "Goblin Tutor",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "dice_support",
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3ed835f6-fb5c-45b6-906b-a5d36bcc3742",
+      "name": "Growth Spurt",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_support",
+        "dice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e5629564-fc52-4723-bf65-262f30354288",
+      "name": "Gus",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "53a78dde-dfd9-4d36-bb69-0dd6eedd1250",
+      "name": "Handcuffs",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7ccaf9cc-84c3-4617-ae8a-236c5fe5d2dc",
+      "name": "Hungry Hungry Heifer",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "93b1efd1-5297-4c47-995a-b6912a8fdba7",
+      "name": "Hurloon Wrangler",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "78abf265-7448-4896-b3b5-5654263e5686",
+      "name": "I'm Rubber, You're Glue",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "broad_stack",
+        "sacrifice_support",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "86c3c5b5-fdc0-4562-ba7b-be84f6b027b6",
+      "name": "Jack-in-the-Mox",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "dice_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fc127648-0f52-4219-990e-39abd7004bf2",
+      "name": "Jalum Grifter",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9d4a60f8-cb0d-4423-a666-219c33c0a450",
+      "name": "Jester's Sombrero",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d27845b2-8bd3-4d29-bbe2-f2b2091d1b61",
+      "name": "Jumbo Imp",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "dice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "93a1513d-f9d1-41cf-9b44-0c103fd9c22c",
+      "name": "Knight of the Hokey Pokey",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_threat",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8b0ae835-df89-4b02-9fe6-0ae2f66405bd",
+      "name": "Krazy Kow",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "damage_engine",
+        "dice_support",
+        "group_slug",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c5905f06-49cb-4be2-a3c6-a3c3e49031ae",
+      "name": "Landfill",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1ffd1f01-bec4-48a7-b2ef-c53af0efb450",
+      "name": "Lexivore",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4f2a420c-6ba6-4611-aa71-1b61e877da61",
+      "name": "Look at Me, I'm the DCI",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "hate_piece",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "afe04e75-ebfd-448a-96de-699b3f5a4ed8",
+      "name": "Mesa Chicken",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "dc9da00f-7624-4926-8d75-fd945f1b8a29",
+      "name": "Mine, Mine, Mine!",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5c0a33bd-119d-40d1-99c0-02701b5ba9e8",
+      "name": "Miss Demeanor",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "da286f5d-6fc9-498f-9629-b4dcb02d1a01",
+      "name": "Once More with Feeling",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "card_draw",
+        "graveyard_hate",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d0180a42-b7eb-4ea2-9f13-e6cf573f8004",
+      "name": "Organ Harvest",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "burst_ramp",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4c716cff-1f9c-4e34-8e56-e6de61b3f645",
+      "name": "Ow",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8e409d83-b63d-48e8-b55a-2a2d364a7a0f",
+      "name": "Paper Tiger",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "76407853-7103-4010-b198-33a04ece7b23",
+      "name": "Poultrygeist",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "dice_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8eb737d7-0be2-4e80-801f-0562d41e8b67",
+      "name": "Prismatic Wardrobe",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c07da3e3-8a24-442a-bae0-f128531ff305",
+      "name": "Psychic Network",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "card_selection",
+        "selection",
+        "topdeck_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6fef4204-8fa8-4225-96c7-2394ed3a9ed5",
+      "name": "Ricochet",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "dice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ebed673b-c332-4afa-b9ad-31ff9da5839b",
+      "name": "Rock Lobster",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c0bb1f84-41b6-4465-93aa-089fc1645527",
+      "name": "Scissors Lizard",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "36cc06c3-d295-46e1-851b-f8f099f44dd0",
+      "name": "Sex Appeal",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "91758c4c-5f8c-41c9-84bf-dbac6b6bc8da",
+      "name": "Sorry",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "97e2f8a3-dec4-4a45-a463-78d23fc03f0d",
+      "name": "Spark Fiend",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "dice_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6cb8a17e-3707-48ec-ae0c-d66cf912b9cd",
+      "name": "Spatula of the Ages",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9b02fc38-d155-4bde-b8c3-e3b92975cfc5",
+      "name": "Strategy, Schmategy",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "card_draw",
+        "damage_engine",
+        "dice_support",
+        "group_slug",
+        "hand_attack",
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "28a2976b-11ba-4e7d-9411-8ba968125203",
+      "name": "Team Spirit",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f7461c8f-eec1-4335-813e-1a6d25976137",
+      "name": "Temp of the Damned",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "dice_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f38b9fbc-1cb9-450a-93e8-a6b8139956ae",
+      "name": "The Cheese Stands Alone",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "alternate_finisher",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9adc9df1-bab0-4458-9453-7028f23693b8",
+      "name": "The Ultimate Nightmare of Wizards of the Coast® Customer Service",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c32f282f-c9c6-48f2-b226-f0f9e851c69c",
+      "name": "Timmy, Power Gamer",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "combat_body",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "696cce0c-677c-41f3-aa84-fa6c105462b2",
+      "name": "Urza's Contact Lenses",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d071d5ca-64a4-47bc-aeb1-dd2dbc46a6a3",
+      "name": "Urza's Science Fair Project",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "dice_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1759f6c0-3ad5-4d15-b841-14ef00114994",
+      "name": "Volrath's Motion Sensor",
+      "firstSet": "ugl",
+      "releasedAt": "1998-08-11",
+      "reviewedAt": "2026-06-29T11:05:55.519Z",
+      "actualRoles": [
+        "sacrifice_support"
       ],
       "status": "covered",
       "needsCodeChange": false

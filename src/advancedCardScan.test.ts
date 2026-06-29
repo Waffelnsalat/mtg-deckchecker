@@ -2930,6 +2930,68 @@ test("inferAdvancedRoleProfile recognizes Portal Second Age utility wording gaps
   assert.ok(getRoleWeight(lightningProfile, "targeted_removal") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Unglued utility wording gaps", () => {
+  const getALifeProfile = inferAdvancedRoleProfile(createCard("Get a Life", "Instant", 1, "Target player and each of that player's teammates exchange life totals."));
+  const dciProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Look at Me, I'm the DCI",
+      "Sorcery",
+      7,
+      "Ban a card other than a basic land card for the rest of the match. (All cards with that name in any zone or sideboard are removed from the match.)",
+    ),
+  );
+  const censorshipProfile = inferAdvancedRoleProfile(
+    createCard("Censorship", "Enchantment", 1, "As this enchantment enters, choose a word. Whenever a player says the chosen word, this enchantment deals 2 damage to that player."),
+  );
+  const checksProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Checks and Balances",
+      "Enchantment",
+      3,
+      "Cast this spell only if there are three or more players in the game. Whenever a player casts a spell, each of that player's opponents may discard a card. If they do, counter that spell.",
+    ),
+  );
+  const deniedProfile = inferAdvancedRoleProfile(
+    createCard("Denied!", "Instant", 1, "Choose a card name, then target spell's controller reveals their hand. If a card with the chosen name is revealed this way, counter that spell."),
+  );
+  const networkProfile = inferAdvancedRoleProfile(
+    createCard("Psychic Network", "Enchantment", 1, "Each player plays with the top card of their library held against their forehead, revealed to each other player."),
+  );
+  const sorryProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Sorry",
+      "Enchantment",
+      2,
+      "Before any player casts a spell with the same name as a card in any graveyard, that player may say \"sorry.\" If they don't, any other player may say \"sorry\" as the spell is being cast. When another player says \"sorry\" this way, counter the spell. Whenever a player says \"sorry\" at any other time, Sorry deals 2 damage to that player.",
+    ),
+  );
+  const doubleCrossProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Double Cross",
+      "Sorcery",
+      5,
+      "Choose another player. Look at that player's hand and choose a card other than a basic land card from it. They discard that card.",
+    ),
+  );
+  const owProfile = inferAdvancedRoleProfile(
+    createCard("Ow", "Enchantment", 1, "Whenever a creature deals damage to a player, that player may say \"Ow\". If the player doesn't, this enchantment deals 1 damage to them."),
+  );
+  const confettiProfile = inferAdvancedRoleProfile(
+    createCard("Chaos Confetti", "Artifact", 4, "{4}, {T}: Tear this artifact into pieces. Destroy each permanent that a piece touches."),
+  );
+
+  assert.ok(getRoleWeight(getALifeProfile, "life_pressure") > 0);
+  assert.ok(getRoleWeight(dciProfile, "removal") > 0);
+  assert.ok(getRoleWeight(censorshipProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(checksProfile, "soft_stack") > 0);
+  assert.ok(getRoleWeight(deniedProfile, "soft_stack") > 0);
+  assert.ok(getRoleWeight(networkProfile, "topdeck_info") > 0);
+  assert.ok(getRoleWeight(sorryProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(doubleCrossProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(owProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(confettiProfile, "removal") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

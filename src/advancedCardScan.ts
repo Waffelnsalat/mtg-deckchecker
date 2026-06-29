@@ -567,6 +567,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\btarget creature with\b[^.]{0,120}\bloses it and another target creature gains it\b/.test(text) ||
     /\bput a -\d+\/-\d+ counter on target creature\b/.test(text) ||
     /\bwhenever a creature (?:becomes blocked by|blocks) a creature with lesser power\b[^.]{0,160}\bdestroy the\b/.test(text) ||
+    /\bdestroy each permanent that a piece touches\b/.test(text) ||
     /\bdestroy each permanent chosen this way\b/.test(text);
   const targetedDamageRemoval =
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
@@ -645,7 +646,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bdiscard a card:\s*target player puts a card from their hand on top of their library\b/.test(text) ||
     /\beach opponent discards?\b/.test(text) ||
     /\bexile\b[^.]{0,140}\bfrom (?:target|that) (?:player|opponent)'s hand\b/.test(text) ||
-    /\blook at that player'?s hand\b[\s\S]{0,180}\bchoose a card from it\b[\s\S]{0,140}\b(?:discards? that card|player discards that card)\b/.test(text) ||
+    /\blook at that player'?s hand\b[\s\S]{0,180}\bchoose a card(?: other than a basic land card)? from it\b[\s\S]{0,140}\b(?:discards? that card|player discards that card|they discard that card)\b/.test(text) ||
     /\btarget player chooses\b[^.]{0,80}\bcards? from their hand\b[^.]{0,120}\bputs? them on top of their library\b/.test(text);
 
   const selfProtectionFlicker =
@@ -706,6 +707,11 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     addRole(profile, "removal", 0.44, "Advanced scan recognized hand pressure as resource interaction.");
     addRole(profile, "hand_attack", 0.62, "Advanced scan recognized hand attack.");
   }
+
+  if (/\bban a card other than a basic land card\b[\s\S]{0,180}\bremoved from the match\b/.test(text)) {
+    addRole(profile, "removal", 0.5, "Advanced scan recognized match-level removal.");
+    addRole(profile, "hate_piece", 0.42, "Advanced scan recognized card-name denial.");
+  }
 }
 
 function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
@@ -721,6 +727,8 @@ function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
   const softCounter =
     /\bcounter (?:up to one )?target\b[^.]{0,60}\bspell\b[^.]{0,120}\bunless\b/.test(text) ||
     /\bcounter target spell if\b/.test(text) ||
+    /\btarget spell'?s controller reveals their hand\b[\s\S]{0,180}\bcounter that spell\b/.test(text) ||
+    /\bwhenever a player casts a spell\b[\s\S]{0,220}\bif they do, counter that spell\b/.test(text) ||
     /\bwhenever a player casts\b[^.]{0,80}\b(?:spell|enchantment spell|instant spell|sorcery spell)\b[^.]{0,80}\bcounter it unless\b/.test(text);
   const spellTempo =
     /\breturn target spell\b[^.]{0,120}\bto (?:its|their) owner's hand\b/.test(text) ||
@@ -1279,7 +1287,7 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "mill_support", 0.3, "Advanced scan recognized selective top-of-library milling.");
   }
 
-  if (/\bplayers play with the top card of their libraries revealed\b/.test(text)) {
+  if (/\bplayers play with the top card of their libraries revealed\b/.test(text) || /\beach player plays with the top card of their library\b[^.]{0,140}\brevealed to each other player\b/.test(text)) {
     addRole(profile, "topdeck_info", 0.3, "Advanced scan recognized top-of-library information.");
     addRole(profile, "selection", 0.22, "Advanced scan recognized revealed-library information as planning utility.");
   }
@@ -1517,6 +1525,10 @@ function detectAdvancedPurposeRoles(
     /\bat the beginning of (?:each opponent'?s upkeep|each player'?s end step)\b[^.]{0,220}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever an opponent casts a creature spell\b[^.]{0,160}\bdeals? \d+ damage to that player unless they pay\b/.test(text) ||
     /\bwhenever an opponent discards a card\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
+    /\bwhenever a player says the chosen word\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
+    /\bwhenever a player says\b[^.]{0,80}\bat any other time\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
+    /\bwhenever a creature deals damage to a player\b[^.]{0,180}\bdeals? \d+ damage to them\b/.test(text) ||
+    /\bif the player doesn'?t\b[^.]{0,120}\bdeals? \d+ damage to them\b/.test(text) ||
     /\bat the beginning of your upkeep\b[^.]{0,80}\bfor each player\b[^.]{0,120}\bdeals? \d+ damage to that player unless they pay\b/.test(text) ||
     /\bat the beginning of the upkeep of enchanted creature'?s controller\b[\s\S]{0,220}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever enchanted creature becomes tapped\b[^.]{0,120}\bdeals? \d+ damage to that creature'?s controller\b/.test(text) ||
@@ -1551,7 +1563,7 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "finisher", 0.42, "Advanced scan recognized scalable player damage as closing pressure.");
   }
 
-  if (/\bexchange life totals with (?:target|that) player\b/.test(text)) {
+  if (/\bexchange life totals with (?:target|that) player\b/.test(text) || /\btarget player\b[^.]{0,80}\bexchange life totals\b/.test(text)) {
     addRole(profile, "lifegain", 0.34, "Advanced scan recognized life-total exchange utility.");
     addRole(profile, "life_pressure", 0.3, "Advanced scan recognized life-total exchange pressure.");
   }

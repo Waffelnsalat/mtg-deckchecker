@@ -1,0 +1,7 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+tugl	Unglued Tokens	1998-08-11	89	Pegasus	251085b8-4bca-4fcd-92a0-006541be827e	covered		combat_body, combat_threat				Token Creature — Pegasus		0	W	W	Flying		verify analyzer roles	https://scryfall.com/card/tugl/89/pegasus?utm_source=api	Flying
+tugl	Unglued Tokens	1998-08-11	90	Soldier	eac25f12-6459-438c-a09e-93e23d2cf80d	covered		combat_body				Token Creature — Soldier		0	W	W			verify analyzer roles	https://scryfall.com/card/tugl/90/soldier?utm_source=api	
+tugl	Unglued Tokens	1998-08-11	91	Zombie	ddc8c973-c31e-463f-be45-f3fa7d632362	covered		combat_body				Token Creature — Zombie		0	B	B			verify analyzer roles	https://scryfall.com/card/tugl/91/zombie?utm_source=api	
+tugl	Unglued Tokens	1998-08-11	92	Goblin	4465eff4-5851-4721-a248-866c686c2ab8	covered		combat_body				Token Creature — Goblin		0	R	R			verify analyzer roles	https://scryfall.com/card/tugl/92/goblin?utm_source=api	
+tugl	Unglued Tokens	1998-08-11	93	Sheep	267c50b6-8fe7-4340-b38a-d9d916b032ce	covered		combat_body				Token Creature — Sheep		0	G	G			verify analyzer roles	https://scryfall.com/card/tugl/93/sheep?utm_source=api	
+tugl	Unglued Tokens	1998-08-11	94	Squirrel	67f21c0c-2083-4eda-9dc3-cc8aee42289f	covered		combat_body				Token Creature — Squirrel		0	G	G			verify analyzer roles	https://scryfall.com/card/tugl/94/squirrel?utm_source=api
