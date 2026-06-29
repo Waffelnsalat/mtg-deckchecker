@@ -3330,6 +3330,38 @@ test("inferAdvancedRoleProfile recognizes Sega Dreamcast random damage wording",
   assert.ok(getRoleWeight(breathProfile, "mass_removal") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Odyssey utility wording gaps", () => {
+  const aegisProfile = inferAdvancedRoleProfile(createCard("Aegis of Honor", "Enchantment", 1, "{1}: The next time an instant or sorcery spell would deal damage to you this turn, that spell deals that damage to its controller instead."));
+  const sphereProfile = inferAdvancedRoleProfile(createCard("Sphere of Law", "Enchantment", 4, "If a red source would deal damage to you, prevent 2 of that damage."));
+  const testamentProfile = inferAdvancedRoleProfile(createCard("Testament of Faith", "Enchantment", 1, "{X}: This enchantment becomes an X/X Wall creature with defender in addition to its other types until end of turn."));
+  const bamboozleProfile = inferAdvancedRoleProfile(createCard("Bamboozle", "Sorcery", 3, "Target player reveals the top four cards of their library. You choose two of those cards and put them into that player's graveyard. Put the rest on top of their library in any order."));
+  const exchangeProfile = inferAdvancedRoleProfile(createCard("Cultural Exchange", "Sorcery", 6, "Choose any number of creatures target player controls. Choose the same number of creatures another target player controls. Those players exchange control of those creatures."));
+  const extractProfile = inferAdvancedRoleProfile(createCard("Extract", "Sorcery", 1, "Search target player's library for a card and exile it. Then that player shuffles."));
+  const tarProfile = inferAdvancedRoleProfile(createCard("Caustic Tar", "Enchantment — Aura", 6, 'Enchant land Enchanted land has "{T}: Target player loses 3 life."'));
+  const soilProfile = inferAdvancedRoleProfile(createCard("Decaying Soil", "Enchantment", 3, "Whenever a nontoken creature is put into your graveyard from the battlefield, you may pay {1}. If you do, return that card to your hand."));
+  const decomposeProfile = inferAdvancedRoleProfile(createCard("Decompose", "Sorcery", 2, "Exile up to three target cards from a single graveyard."));
+  const pactProfile = inferAdvancedRoleProfile(createCard("Tainted Pact", "Instant", 2, "Exile the top card of your library. You may put that card into your hand unless it has the same name as another card exiled this way. Repeat this process until you put a card into your hand or you exile two cards with the same name."));
+  const gloryProfile = inferAdvancedRoleProfile(createCard("Price of Glory", "Enchantment", 3, "Whenever a player taps a land for mana, if it's not that player's turn, destroy that land."));
+  const trembleProfile = inferAdvancedRoleProfile(createCard("Tremble", "Sorcery", 2, "Each player sacrifices a land of their choice."));
+  const callProfile = inferAdvancedRoleProfile(createCard("Druid's Call", "Enchantment — Aura", 2, "Enchant creature Whenever enchanted creature is dealt damage, its controller creates that many 1/1 green Squirrel creature tokens."));
+  const stoneProfile = inferAdvancedRoleProfile(createCard("Catalyst Stone", "Artifact", 2, "Flashback costs you pay cost {2} less. Flashback costs your opponents pay cost {2} more."));
+
+  assert.ok(getRoleWeight(aegisProfile, "protection") > 0);
+  assert.ok(getRoleWeight(sphereProfile, "protection") > 0);
+  assert.ok(getRoleWeight(testamentProfile, "animation_effect") > 0);
+  assert.ok(getRoleWeight(bamboozleProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(exchangeProfile, "theft_support") > 0);
+  assert.ok(getRoleWeight(extractProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(tarProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(soilProfile, "hand_recursion") > 0);
+  assert.ok(getRoleWeight(decomposeProfile, "graveyard_hate") > 0);
+  assert.ok(getRoleWeight(pactProfile, "restricted_tutor") > 0);
+  assert.ok(getRoleWeight(gloryProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(trembleProfile, "land_denial") > 0);
+  assert.ok(getRoleWeight(callProfile, "token_support") > 0);
+  assert.ok(getRoleWeight(stoneProfile, "cost_reduction") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

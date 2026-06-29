@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T11:59:03.836Z",
+  "generatedAt": "2026-06-29T12:12:31.403Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 100,
+    "done": 102,
     "inProgress": 0,
-    "pending": 943
+    "pending": 941
   },
   "sets": [
     {
@@ -1417,11 +1417,12 @@
       "setType": "memorabilia",
       "cardCount": 138,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 84,
+      "totalUniqueOracleIds": 84,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/wc01-role-review.tsv"
     },
     {
       "code": "ody",
@@ -1430,11 +1431,12 @@
       "setType": "expansion",
       "cardCount": 353,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 335,
+      "totalUniqueOracleIds": 335,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/ody-role-review.tsv"
     },
     {
       "code": "pody",
