@@ -635,6 +635,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     massLandDenial;
   const tempoRemoval =
     /\beach player returns a creature they control to its owner'?s hand\b/.test(text) ||
+    /\bat the beginning of each player'?s upkeep\b[^.]{0,140}\bthat player returns a creature they control to its owner'?s hand\b/.test(text) ||
     /\breturn to its owner'?s hand each creature\b[^.]{0,180}\bwith power greater than\b/.test(text) ||
     /\bif they don'?t\b[^.]{0,140}\bthey return a permanent they control to its owner'?s hand\b/.test(text) ||
     /\breturn\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent)\b[^.]{0,140}\bto (?:(?:its|their) owner's|their owners') hands?\b/.test(text) ||
@@ -673,6 +674,8 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\beach player may discard\b[\s\S]{0,160}\bdeals damage to each player\b/.test(text) ||
     /\bat the beginning of each player'?s upkeep\b[^.]{0,120}\bthat player discards a card at random\b/.test(text) ||
     /\bwhenever a player casts a spell\b[^.]{0,120}\bthat player discards a card\b/.test(text) ||
+    /\beach player reveals their hand\b[\s\S]{0,180}\bdiscards all other nonland cards\b/.test(text) ||
+    /\bwhenever a permanent is returned to a player'?s hand\b[^.]{0,120}\bthat player discards a card\b/.test(text) ||
     /\bdiscard a card:\s*target player puts a card from their hand on top of their library\b/.test(text) ||
     /\beach opponent discards?\b/.test(text) ||
     /\bwhenever a player casts a (?:green|white|blue|black|red)(?: or (?:green|white|blue|black|red))? spell\b[^.]{0,120}\bthat player discards a card\b/.test(text) ||
@@ -872,6 +875,7 @@ function detectAdvancedProtectionRoles(
   const selfBounce =
     /\breturn target\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent|land)\b[^.]{0,120}\byou control\b[^.]{0,120}\bto (?:its|their) owner's hand\b/.test(text) ||
     /\breturn any number of target creatures you control to their owner'?s hand\b/.test(text) ||
+    /\bwhenever another permanent you control becomes the target of a spell or ability an opponent controls\b[^.]{0,140}\byou may return that permanent to its owner'?s hand\b/.test(text) ||
     /\breturn this permanent to its owner'?s hand\b/.test(text) ||
     /\breturn this aura to its owner'?s hand\b/.test(text) ||
     /\breturn target permanent you both own and control to your hand\b/.test(text) ||
@@ -1152,6 +1156,7 @@ function detectAdvancedPurposeRoles(
   if (
     /\btarget spell or permanent becomes\b[^.]{0,40}\b(?:white|blue|black|red|green)\b/.test(text) ||
     /\ball permanents are colorless\b/.test(text) ||
+    /\ball nonland permanents are the chosen color\b/.test(text) ||
     /\btarget permanent becomes the colors? or colors? of your choice\b/.test(text) ||
     /\btarget permanent becomes the color of your choice until end of turn\b/.test(text) ||
     /\bone or more target creatures become (?:white|blue|black|red|green)\b/.test(text) ||
@@ -1178,6 +1183,7 @@ function detectAdvancedPurposeRoles(
     /\bif this permanent is an enchantment\b[^.]{0,120}\bbecomes? a \d+\/\d+\b[^.]{0,120}\bcreature\b/.test(text) ||
     /\bthis enchantment becomes a \d+\/\d+\b[^.]{0,120}\bcreature\b/.test(text) ||
     /\benchanted land is a \d+\/\d+\b[^.]{0,120}\bcreature that'?s still a land\b/.test(text) ||
+    /\blands you control are \d+\/\d+ creatures\b[\s\S]{0,160}\bthey'?re still lands\b/.test(text) ||
     /\beach other non-aura enchantment is a creature\b/.test(text) ||
     /\ball lands become \d+\/\d+ creatures until end of turn\b/.test(text) ||
     /\ball lands are 1\/1 creatures\b/.test(text) ||
@@ -1562,7 +1568,9 @@ function detectAdvancedPurposeRoles(
     /\blands target player controls don'?t untap during their next untap step\b/.test(text) ||
     /\bwhenever a player puts a nontoken creature onto the battlefield\b[^.]{0,160}\bthat player returns a land they control to its owner'?s hand\b/.test(text) ||
     /\beach player chooses from the lands they control a land of each basic land type\b[\s\S]{0,160}\bsacrifices the rest\b/.test(text) ||
+    /\beach player chooses a land they control of each basic land type\b[\s\S]{0,140}\breturn those lands to their owners'? hands\b/.test(text) ||
     /\bwhenever a land enters\b[^.]{0,120}\btap all lands its controller controls\b/.test(text) ||
+    /\bat the beginning of each player'?s upkeep\b[^.]{0,140}\bthat player sacrifices a nonbasic land\b/.test(text) ||
     /\bwhenever a land an opponent controls is tapped for mana\b[^.]{0,180}\btap all lands that player controls\b/.test(text) ||
     /\bwhenever a player casts a spell\b[^.]{0,160}\bthat player returns a land they control to its owner'?s hand\b/.test(text) ||
     /\btap (?:x|one|two|three|four|five|six|\d+) target lands?\b/.test(text) ||
@@ -1625,6 +1633,7 @@ function detectAdvancedPurposeRoles(
     /\bwhenever an opponent draws a card\b[^.]{0,140}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever an opponent casts a white spell\b[^.]{0,120}\bthey lose \d+ life\b/.test(text) ||
     /\bwhenever a player casts a spell\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
+    /\bwhenever a player draws a card\b[^.]{0,160}\bthat player loses \d+ life unless they pay\b/.test(text) ||
     /\bmay have this enchantment deal \d+ damage to the second player\b/.test(text) ||
     /\bat the beginning of the end step of enchanted creature'?s controller\b[^.]{0,180}\bdeals? \d+ damage to that player unless that creature attacked this turn\b/.test(text) ||
     /\bwhenever a nontoken permanent is put into a player'?s graveyard from the battlefield\b[^.]{0,120}\bthat player loses \d+ life\b/.test(text) ||
@@ -1639,6 +1648,7 @@ function detectAdvancedPurposeRoles(
     /\bwhenever a creature blocks\b[^.]{0,120}\bdeals? \d+ damage to that creature'?s controller\b/.test(text) ||
     /\bwhen the chosen player draws a card with the chosen name\b[\s\S]{0,180}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\beach player may discard\b[\s\S]{0,160}\bdeals damage to each player\b/.test(text) ||
+    /\beach player loses life equal to the number of items they revealed\b[\s\S]{0,180}\bloses half their life\b/.test(text) ||
     /\b(?:deals? (?:x|\d+) damage|deals? damage equal to [^.]{0,80}) to each creature\b[^.]{0,80}\band each player\b/.test(text)
   ) {
     addRole(profile, "group_slug", 0.62, "Advanced scan recognized repeatable table damage.");
@@ -1651,6 +1661,8 @@ function detectAdvancedPurposeRoles(
     /\bdeals damage to each player equal to the number of lands they control\b/.test(text) ||
     /\beach player loses \d+ life for each creature they control\b/.test(text) ||
     /\bdeals damage to each player equal to the number of creatures of that color that player controls\b/.test(text) ||
+    /\bdeals damage equal to that card'?s mana value to that player\b/.test(text) ||
+    /\beach player loses life equal to the number of items they revealed\b[\s\S]{0,180}\bloses half their life\b/.test(text) ||
     /\bdeals? \d+ damage to each player\b/.test(text) ||
     /\bdeals? \d+ damage to that player for each card of the chosen type revealed this way\b/.test(text) ||
     /\bdeals? 10 damage to that player\b/.test(text) ||
@@ -1690,6 +1702,7 @@ function detectAdvancedPurposeRoles(
     /\bother creatures they control can'?t block this turn\b/.test(text) ||
     /\benchanted creature can block any number of creatures\b/.test(text) ||
     /\benchanted creature has reach\b/.test(text) ||
+    /\blands you control are \d+\/\d+ creatures\b[^.]{0,120}\bwith first strike\b/.test(text) ||
     /\ball creatures lose flying\b/.test(text) ||
     /\btap all (?:non(?:blue|white|black|red|green)|blue|white|black|red|green)? ?creatures\b/.test(text) ||
     /\btarget creature doesn't untap during its controller'?s next untap step\b/.test(text) ||

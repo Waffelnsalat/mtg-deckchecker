@@ -1,0 +1,2 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+pinv	Invasion Promos	2000-10-02	262	Raging Kavu	d126bb08-be60-4046-91f1-65672ef42c63	covered		combat_body, combat_threat	false		Covered by INV role audit.	Creature — Kavu	{1}{R}{G}	3	GR	GR	Haste, Flash		already reviewed	https://scryfall.com/card/pinv/262/kavu-furens-(raging-kavu)?utm_source=api	Flash Haste

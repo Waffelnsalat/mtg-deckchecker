@@ -3260,6 +3260,46 @@ test("inferAdvancedRoleProfile recognizes Invasion utility wording gaps", () => 
   assert.ok(getRoleWeight(stakesProfile, "hate_piece") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Planeshift utility wording gaps", () => {
+  const overlayProfile = inferAdvancedRoleProfile(
+    createCard("Planar Overlay", "Sorcery", 3, "Each player chooses a land they control of each basic land type. Return those lands to their owners' hands."),
+  );
+  const skyProfile = inferAdvancedRoleProfile(createCard("Shifting Sky", "Enchantment", 3, "As this enchantment enters, choose a color. All nonland permanents are the chosen color."));
+  const hopeProfile = inferAdvancedRoleProfile(
+    createCard("Sunken Hope", "Enchantment", 5, "At the beginning of each player's upkeep, that player returns a creature they control to its owner's hand."),
+  );
+  const vaporsProfile = inferAdvancedRoleProfile(
+    createCard("Noxious Vapors", "Sorcery", 3, "Each player reveals their hand, chooses one card of each color from it, then discards all other nonland cards."),
+  );
+  const devotionProfile = inferAdvancedRoleProfile(createCard("Warped Devotion", "Enchantment", 3, "Whenever a permanent is returned to a player's hand, that player discards a card."));
+  const gameProfile = inferAdvancedRoleProfile(
+    createCard("Goblin Game", "Sorcery", 7, "Each player hides at least one item, then all players reveal them simultaneously. Each player loses life equal to the number of items they revealed. The player who revealed the fewest items then loses half their life, rounded up."),
+  );
+  const furyProfile = inferAdvancedRoleProfile(
+    createCard("Planeswalker's Fury", "Enchantment", 3, "{3}{R}: Target opponent reveals a card at random from their hand. This enchantment deals damage equal to that card's mana value to that player. Activate only as a sorcery."),
+  );
+  const coverProfile = inferAdvancedRoleProfile(
+    createCard("Cloud Cover", "Enchantment", 4, "Whenever another permanent you control becomes the target of a spell or ability an opponent controls, you may return that permanent to its owner's hand."),
+  );
+  const flowProfile = inferAdvancedRoleProfile(createCard("Destructive Flow", "Enchantment", 3, "At the beginning of each player's upkeep, that player sacrifices a nonbasic land of their choice."));
+  const emergenceProfile = inferAdvancedRoleProfile(
+    createCard("Natural Emergence", "Enchantment", 4, "When this enchantment enters, return a red or green enchantment you control to its owner's hand. Lands you control are 2/2 creatures with first strike. They're still lands."),
+  );
+  const tyrannyProfile = inferAdvancedRoleProfile(createCard("Phyrexian Tyranny", "Enchantment", 3, "Whenever a player draws a card, that player loses 2 life unless they pay {2}."));
+
+  assert.ok(getRoleWeight(overlayProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(skyProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(hopeProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(vaporsProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(devotionProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(gameProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(furyProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(coverProfile, "self_bounce") > 0);
+  assert.ok(getRoleWeight(flowProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(emergenceProfile, "animation_effect") > 0);
+  assert.ok(getRoleWeight(tyrannyProfile, "group_slug") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
