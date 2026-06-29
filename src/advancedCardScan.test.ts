@@ -3362,6 +3362,16 @@ test("inferAdvancedRoleProfile recognizes Odyssey utility wording gaps", () => {
   assert.ok(getRoleWeight(stoneProfile, "cost_reduction") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Torment utility wording gaps", () => {
+  const imageProfile = inferAdvancedRoleProfile(createCard("Retraced Image", "Sorcery", 1, "Reveal a card in your hand, then put that card onto the battlefield if it has the same name as a permanent."));
+  const dreamsProfile = inferAdvancedRoleProfile(createCard("Turbulent Dreams", "Sorcery", 2, "As an additional cost to cast this spell, discard X cards. Return X target nonland permanents to their owners' hands."));
+  const dwellProfile = inferAdvancedRoleProfile(createCard("Dwell on the Past", "Sorcery", 1, "Target player shuffles up to four target cards from their graveyard into their library."));
+
+  assert.ok(getRoleWeight(imageProfile, "cheat_into_play") > 0);
+  assert.ok(getRoleWeight(dreamsProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(dwellProfile, "graveyard_hate") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

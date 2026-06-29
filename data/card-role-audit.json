@@ -371,7 +371,7 @@
       "name": "Black Knight",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -1055,7 +1055,7 @@
       "name": "Dark Ritual",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "burst_ramp",
         "ramp"
@@ -1299,7 +1299,7 @@
       "name": "Drain Life",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:49:42.700Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
@@ -1737,7 +1737,7 @@
       "name": "Forest",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -1842,7 +1842,7 @@
       "name": "Giant Growth",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -2166,7 +2166,7 @@
       "name": "Hurricane",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "damage_engine",
         "direct_finisher",
@@ -2236,7 +2236,7 @@
       "name": "Icy Manipulator",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-26T06:42:54.451Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "removal",
         "tempo_removal"
@@ -2360,7 +2360,7 @@
       "name": "Island",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:14:30.464Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -4073,7 +4073,7 @@
       "name": "Sengir Vampire",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:49:42.700Z",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -4134,7 +4134,7 @@
       "name": "Shatter",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -4431,7 +4431,7 @@
       "name": "Swamp",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -5267,7 +5267,7 @@
       "name": "White Knight",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -6551,7 +6551,7 @@
       "name": "Mountain",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -20886,7 +20886,7 @@
       "name": "Abyssal Specter",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -21268,7 +21268,7 @@
       "name": "Balduvian Bears",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -21364,7 +21364,7 @@
       "name": "Barbed Sextant",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "burst_ramp",
         "card_draw",
@@ -21382,7 +21382,6 @@
         "draw",
         "mana_fixing",
         "repeatable_advantage",
-        "repeatable_draw",
         "sacrifice_support"
       ],
       "status": "covered",
@@ -22034,7 +22033,7 @@
       "name": "Dark Banishing",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -22320,7 +22319,7 @@
       "name": "Elkin Bottle",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "card_selection",
         "direct_draw",
@@ -22652,7 +22651,7 @@
       "name": "Folk of the Pines",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -22750,7 +22749,7 @@
       "name": "Foul Familiar",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -22944,7 +22943,7 @@
       "name": "Fyndhorn Elves",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-26T06:56:08.423Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "ramp",
@@ -23084,7 +23083,7 @@
       "name": "Giant Trap Door Spider",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -23206,7 +23205,7 @@
       "name": "Goblin Mutant",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -23812,7 +23811,7 @@
       "name": "Incinerate",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -23982,7 +23981,7 @@
       "name": "Jokulhaups",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -24040,7 +24039,7 @@
       "name": "Karplusan Forest",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -24468,7 +24467,7 @@
       "name": "Lava Burst",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
@@ -24574,7 +24573,7 @@
       "name": "Lhurgoyf",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:33:31.950Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -25234,7 +25233,7 @@
       "name": "Necropotence",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-26T06:42:54.451Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "face_down_support",
         "hate_piece",
@@ -25320,7 +25319,7 @@
       "name": "Orcish Cannoneers",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -25768,7 +25767,7 @@
       "name": "Pyroclasm",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -26543,7 +26542,7 @@
       "name": "Soul Burn",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:49:43.425Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
@@ -26823,7 +26822,7 @@
       "name": "Sulfurous Springs",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -27121,7 +27120,7 @@
       "name": "Underground River",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -27289,7 +27288,7 @@
       "name": "Walking Wall",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-22T21:03:05.751Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -27577,7 +27576,7 @@
       "name": "Woolly Spider",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:49:42.700Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -30147,7 +30146,7 @@
       "name": "Balduvian Horde",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-29T11:49:42.700Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "sacrifice_support"
@@ -30256,7 +30255,7 @@
       "name": "Bounty of the Hunt",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-26T06:56:08.423Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "counter_support"
       ],
@@ -30382,7 +30381,7 @@
       "name": "Contagion",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-26T06:56:08.423Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "counter_support",
         "removal",
@@ -30420,7 +30419,7 @@
       "name": "Death Spark",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-25T09:22:42.541Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -30509,7 +30508,7 @@
       "name": "Elvish Bard",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-25T09:22:42.541Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -30929,7 +30928,7 @@
       "name": "Guerrilla Tactics",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-25T09:22:42.541Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -31359,7 +31358,7 @@
       "name": "Lim-Dûl's High Guard",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-25T09:22:42.541Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -31649,7 +31648,7 @@
       "name": "Phantasmal Fiend",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-25T09:22:42.541Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -31769,7 +31768,7 @@
       "name": "Phyrexian War Beast",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-25T09:22:42.541Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "sacrifice_support"
@@ -31787,7 +31786,7 @@
       "name": "Pillage",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -32438,7 +32437,7 @@
       "name": "Storm Shaman",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -32950,7 +32949,7 @@
       "name": "Yavimaya Ancients",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-25T09:22:42.541Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -32966,7 +32965,7 @@
       "name": "Yavimaya Ants",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-25T09:22:42.541Z",
+      "reviewedAt": "2026-06-29T12:14:28.290Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -32976,8 +32975,7 @@
       "actualRoles": [
         "combat_body",
         "combat_threat",
-        "counter_support",
-        "sacrifice_support"
+        "counter_support"
       ],
       "status": "covered",
       "needsCodeChange": false,
@@ -34508,7 +34506,7 @@
       "name": "Dissipate",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "hard_stack",
         "stack"
@@ -35558,7 +35556,7 @@
       "name": "Hammer of Bogardan",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T12:14:29.740Z",
       "expectedRoles": [
         "card_selection",
         "hand_recursion",
@@ -41092,7 +41090,7 @@
       "name": "Man-o'-War",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:33:31.950Z",
+      "reviewedAt": "2026-06-29T12:14:30.464Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -46752,7 +46750,7 @@
       "name": "Aura of Silence",
       "firstSet": "wth",
       "releasedAt": "1997-06-09",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "removal",
         "sacrifice_support",
@@ -50855,7 +50853,7 @@
       "name": "Dauthi Slayer",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T12:14:30.464Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -51461,7 +51459,7 @@
       "name": "Fireslinger",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -52877,7 +52875,7 @@
       "name": "Mogg Fanatic",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -54622,7 +54620,7 @@
       "name": "Soltari Priest",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:33:34.157Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -55168,7 +55166,7 @@
       "name": "Tradewind Rider",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T12:14:29.740Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -56768,7 +56766,7 @@
       "name": "Mana Leak",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-29T11:33:31.950Z",
+      "reviewedAt": "2026-06-29T12:14:30.464Z",
       "expectedRoles": [
         "soft_stack",
         "stack"
@@ -57672,7 +57670,7 @@
       "name": "Spike Feeder",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-29T11:33:31.950Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "combat_body",
         "counter_support",
@@ -58128,7 +58126,7 @@
       "name": "Wall of Blossoms",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "expectedRoles": [
         "card_draw",
         "combat_body",
@@ -58777,7 +58775,7 @@
       "name": "Forbid",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "actualRoles": [
         "hard_stack",
         "stack"
@@ -61796,36 +61794,39 @@
       "name": "Soldier",
       "firstSet": "tugl",
       "releasedAt": "1998-08-11",
-      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "reviewedAt": "2026-06-29T12:14:31.143Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by PR2 role audit."
     },
     {
       "oracleId": "67f21c0c-2083-4eda-9dc3-cc8aee42289f",
       "name": "Squirrel",
       "firstSet": "tugl",
       "releasedAt": "1998-08-11",
-      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "reviewedAt": "2026-06-29T12:14:31.143Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by PR2 role audit."
     },
     {
       "oracleId": "ddc8c973-c31e-463f-be45-f3fa7d632362",
       "name": "Zombie",
       "firstSet": "tugl",
       "releasedAt": "1998-08-11",
-      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "reviewedAt": "2026-06-29T12:14:31.143Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by PR2 role audit."
     },
     {
       "oracleId": "4d4b7108-5287-4d52-94a1-a0f99c14c969",
@@ -63112,7 +63113,7 @@
       "name": "Albino Troll",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T12:14:29.028Z",
       "actualRoles": [
         "combat_body",
         "protection",
@@ -63185,7 +63186,7 @@
       "name": "Arc Lightning",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:46:07.436Z",
+      "reviewedAt": "2026-06-29T12:14:30.464Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -88101,7 +88102,7 @@
       "name": "Elephant",
       "firstSet": "mpr",
       "releasedAt": "2001-01-01",
-      "reviewedAt": "2026-06-29T11:53:44.145Z",
+      "reviewedAt": "2026-06-29T12:14:31.143Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -96893,7 +96894,7 @@
       "name": "Stone-Tongue Basilisk",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:14:27.573Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
@@ -97571,6 +97572,2169 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by ODY role audit."
+    },
+    {
+      "oracleId": "60fe4897-6760-4c5a-8074-c92bd64df52b",
+      "name": "Dragon",
+      "firstSet": "pr2",
+      "releasedAt": "2002-01-01",
+      "reviewedAt": "2026-06-29T12:14:31.143Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PR2 role audit."
+    },
+    {
+      "oracleId": "46a55586-cc9a-443c-b458-e628afc3c587",
+      "name": "Wurm",
+      "firstSet": "pr2",
+      "releasedAt": "2002-01-01",
+      "reviewedAt": "2026-06-29T12:14:31.143Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PR2 role audit."
+    },
+    {
+      "oracleId": "693ddb18-00d2-4784-90a0-701a64195034",
+      "name": "Laquatus's Champion",
+      "firstSet": "ptor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "79189464-9645-4411-8886-68fd40a588ed",
+      "name": "Accelerate",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "6aeba615-2d37-4eb8-a377-41a517e95aa3",
+      "name": "Acorn Harvest",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "graveyard_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "054c00b4-c940-455a-ad88-b8aa35931ecf",
+      "name": "Alter Reality",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "graveyard_support",
+        "text_change"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "2df8f253-1d3c-4b1f-8549-93fb90623474",
+      "name": "Ambassador Laquatus",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "248dcf69-b99e-4a71-b9b3-7fd865f873ab",
+      "name": "Angel of Retribution",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "8d4d70c4-0490-4239-ac8f-dd1d1a008f08",
+      "name": "Anurid Scavenger",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "55de434c-0fb9-4127-81b6-47c1c0b088fe",
+      "name": "Aquamoeba",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "dc7f0c33-80ea-453e-a237-473f077f038e",
+      "name": "Arrogant Wurm",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "258073aa-6500-46a2-a5e5-22378b14260b",
+      "name": "Aven Trooper",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "7cdbc115-cb15-4ada-8229-d40f0b22dd27",
+      "name": "Balshan Collaborator",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "23669721-fe9e-49d7-9504-ae6164de723a",
+      "name": "Balthor the Stout",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "49d44e89-b94e-43f7-a996-f50651df9264",
+      "name": "Barbarian Outcast",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b2ec080f-ad5d-4274-91e3-bc6ac89fc3e4",
+      "name": "Basking Rootwalla",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "1098ff82-8cad-4283-8493-5492f12ea200",
+      "name": "Boneshard Slasher",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "c6b26c1f-121f-4b7c-921e-429b623ca934",
+      "name": "Breakthrough",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "mana_sink",
+        "scalable_spell",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "7358e164-5704-4e78-9b21-6a9bf2a968ce",
+      "name": "Cabal Coffers",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "5b5bf1fa-6502-4790-b66b-f0f8504ebc7c",
+      "name": "Cabal Ritual",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "5528d0f1-4774-419f-ba1e-b2abdbce8735",
+      "name": "Cabal Surgeon",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "hand_recursion",
+        "recursion",
+        "removal",
+        "repeatable_advantage",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "fbd295ee-545a-4eab-b000-c0b228dd412d",
+      "name": "Cabal Torturer",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "1aa6b31b-cd30-4741-abc6-2ef72e445630",
+      "name": "Carrion Rats",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "ed0cf504-c365-4486-92bc-c329b83b99d0",
+      "name": "Carrion Wurm",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "3010ff0c-8ee6-4df3-96c1-a58096586469",
+      "name": "Centaur Chieftain",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_finisher",
+        "combat_support",
+        "combat_threat",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "bd4c9726-c7bb-4da4-99e5-e98d174d6a52",
+      "name": "Centaur Veteran",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "7a0514d0-db8f-402d-abf1-cddda87405cf",
+      "name": "Cephalid Aristocrat",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "3c3067c4-0ae0-4c6a-9174-e3c981a20235",
+      "name": "Cephalid Illusionist",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "mill_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "29182a24-3bdb-4fd0-8a1d-a196340c0858",
+      "name": "Cephalid Sage",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "15093579-8258-41d2-9738-aaa7e3824c40",
+      "name": "Cephalid Snitch",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "f48dae33-ebf9-41ee-a61e-7573a2733db2",
+      "name": "Cephalid Vandal",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "cb905eb0-bb20-41c0-9695-0f5c71972561",
+      "name": "Chainer, Dementia Master",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "7975cb9d-d37e-44f8-9614-86d2ad453c35",
+      "name": "Chainer's Edict",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "graveyard_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "774e53b2-5aec-43e1-b4fe-8812b8430401",
+      "name": "Churning Eddy",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b071bbaf-79fa-413b-807b-2cc86c8a8125",
+      "name": "Circular Logic",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "658bccf8-fe73-4d6a-b37b-7a58034e5e5d",
+      "name": "Cleansing Meditation",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "mass_recursion",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "3fafb6b2-5cae-45b6-8550-3ff8daa02802",
+      "name": "Compulsion",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "20b8911e-6701-485c-ac62-2b3cc79ec288",
+      "name": "Coral Net",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "876affb5-155d-4268-9e46-4437a9fbccc7",
+      "name": "Crackling Club",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "ba7cc6be-e575-4592-ada7-bbad3ae2225b",
+      "name": "Crazed Firecat",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "coin_support",
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "d87190d0-bda3-4ad9-84b2-019f751999ce",
+      "name": "Crippling Fatigue",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "graveyard_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "309e61f5-1fc7-4481-8d3a-9b35d335c99f",
+      "name": "Dawn of the Dead",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_support",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "579cbd92-797f-4cdf-91ed-fca7a523eae5",
+      "name": "Deep Analysis",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "graveyard_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "18994c4c-9b5d-4b58-a5c3-646fbc92f9c7",
+      "name": "Devastating Dreams",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "08f361c5-bcb5-4a9b-9610-70609cdc047f",
+      "name": "Dwell on the Past",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "graveyard_hate",
+        "topdeck_control"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "ff052137-2ffd-4399-8fdd-906f8e2041f8",
+      "name": "Enslaved Dwarf",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "beef71f4-f607-4718-9fde-98e8d7871ce9",
+      "name": "Equal Treatment",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "5237a105-60c4-4597-b24e-84c12ce7b01f",
+      "name": "Faceless Butcher",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "d95dd8cc-ce7d-4d43-afbd-efaa2d3c7a35",
+      "name": "False Memories",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "2ef797ef-c05f-4309-85c7-1bd151dac3fa",
+      "name": "Far Wanderings",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "f07bd49d-8e71-4d56-be2a-638514011318",
+      "name": "Fiery Temper",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "fab8c985-d7a9-41eb-9884-01128b97af5c",
+      "name": "Flaming Gambit",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "graveyard_support",
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "9f66855d-3ae8-4163-a5f1-aa23a9cd06a5",
+      "name": "Flash of Defiance",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support",
+        "graveyard_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "332716fb-cc1c-4a6f-b7d4-bd7f13cfa438",
+      "name": "Floating Shield",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b4025136-3146-499a-8c17-ed9de548ab8d",
+      "name": "Frantic Purification",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b07d8095-c5e2-4bf8-b055-af97ce5df4a4",
+      "name": "Ghostly Wings",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "cfc1156c-b787-4212-96e0-a8e3609069b7",
+      "name": "Gloomdrifter",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "2677c0d9-1251-478e-b157-072859c593a9",
+      "name": "Gravegouger",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "graveyard_hate",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "37445e06-88a1-4e2e-a432-383736c9b977",
+      "name": "Grim Lavamancer",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "c37e69a7-5596-4dce-a3c9-41f899e05f24",
+      "name": "Grotesque Hybrid",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "835733a2-3738-4fc0-97d5-33156b711ba4",
+      "name": "Gurzigost",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "ee8ab29b-0749-463a-abbd-eb0b9013aec8",
+      "name": "Hell-Bent Raider",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "c426c2b0-82fa-4ea0-bbdb-3a40e60c495e",
+      "name": "Hydromorph Guardian",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "hard_stack",
+        "sacrifice_support",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "124fea1b-c0e9-4e56-b026-82dddee0d36e",
+      "name": "Hydromorph Gull",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "hard_stack",
+        "sacrifice_support",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b850015f-527f-4e5a-87a6-46a0814bdb70",
+      "name": "Hypnox",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "74c90ddc-4c6e-479d-ad68-b444d3109258",
+      "name": "Hypochondria",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "5261ba70-b641-461d-9d9f-fce17764ad67",
+      "name": "Ichorid",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "4badd4e0-e5d7-4516-b220-cea2b02c79aa",
+      "name": "Insidious Dreams",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "518684d9-467a-4936-a3d9-17d23db4622c",
+      "name": "Insist",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "c5c98759-e009-4340-9326-9f5ff70a86bc",
+      "name": "Invigorating Falls",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "defa9b92-4b54-4b00-852e-6c5ec4015643",
+      "name": "Kamahl's Sledge",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "c9747b5d-0f6d-4a9a-8921-1d5c0be3bd60",
+      "name": "Krosan Constrictor",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "ea845951-0158-4646-acd9-3b0b28da40b1",
+      "name": "Krosan Restorer",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "5facb256-b993-43f8-b971-b3a59a7434bf",
+      "name": "Last Laugh",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "dc9ae094-139f-4f28-9d4e-4d6def765744",
+      "name": "Liquify",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "55f9a9a2-2842-4555-8b54-03aebc8d6fb8",
+      "name": "Llawan, Cephalid Empress",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "hate_piece",
+        "mass_removal",
+        "removal",
+        "soft_stack",
+        "stack",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "c6ca1f21-3aaf-4a5e-938e-7daed67a9d6e",
+      "name": "Longhorn Firebeast",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "fb52dbf1-0cbc-4e1d-8ded-0498b529b4b8",
+      "name": "Major Teroh",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "fb46b300-8a39-40d2-8bc7-31b90c822e22",
+      "name": "Mesmeric Fiend",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "29c0a904-43e3-44c3-8e00-deea523de8eb",
+      "name": "Militant Monk",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "86e64a29-6ed1-451b-a114-f74341322eeb",
+      "name": "Mind Sludge",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "a8432372-672b-4bf7-9000-17e43356f149",
+      "name": "Morningtide",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "graveyard_hate"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "dc9d1d0c-5310-460a-a3cd-1ff1f4f83c8f",
+      "name": "Mortal Combat",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "alternate_finisher",
+        "finisher",
+        "repeatable_finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "4fb8312c-058a-415c-93ab-59d37ebad270",
+      "name": "Mortiphobia",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "graveyard_hate",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "698e79ec-c2bc-4973-a095-f3c57b50e39c",
+      "name": "Mutilate",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "9d3931a2-baba-4e6e-b923-44df00900e51",
+      "name": "Mystic Familiar",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "c40bd057-d1be-45e2-9ebf-4ab176195f17",
+      "name": "Nantuko Blightcutter",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "d4409b15-b9f8-4bdb-9857-5cd70a0d3193",
+      "name": "Nantuko Calmer",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b8dab16c-681c-4abe-b164-fcfb5dc66678",
+      "name": "Nantuko Cultivator",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "40d02b8c-fb0e-4607-855f-49fbcec2e209",
+      "name": "Nantuko Shade",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "59cd56d2-42f3-44de-b1b8-a5f9105dcaa8",
+      "name": "Narcissism",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "fabbc474-682c-4565-861c-d41de05abb8f",
+      "name": "Nostalgic Dreams",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "116ee88e-9e13-4f21-bc6a-efa994b5bf75",
+      "name": "Obsessive Search",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "a9f279a5-c35f-4703-a583-050f2dffb28e",
+      "name": "Organ Grinder",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "acc842a4-26e8-435a-b717-c1043b581ff8",
+      "name": "Overmaster",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "963cfdbe-775c-4267-a617-66f10e9d7f4f",
+      "name": "Parallel Evolution",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "copy_support",
+        "graveyard_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "9ece4b78-9554-4e4e-8491-68a6091f9c6a",
+      "name": "Pardic Arsonist",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "9b06cfae-1655-4b0e-a160-9b32f27c7c9a",
+      "name": "Pardic Collaborator",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "1bb2b090-19a4-40d9-823a-671f6eaca9f9",
+      "name": "Pardic Lancer",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "71da5acb-78bc-453a-ae28-d22faa5a4e43",
+      "name": "Pay No Heed",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "ef2e711f-7362-4eed-8f91-f3d653e7f434",
+      "name": "Petradon",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "aedf022c-6065-42cb-85bb-225ae1650a5c",
+      "name": "Petravark",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "da6a9a2e-7bed-46d7-b7dc-18d4a220b81e",
+      "name": "Pitchstone Wall",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "ba4f9450-d468-4686-9f48-00fa08c6ac52",
+      "name": "Plagiarize",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "1a5f1670-3e71-4379-90ee-a883c8dc6070",
+      "name": "Possessed Aven",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "ee51365b-9f36-44a7-8706-ae5b2f86bd29",
+      "name": "Possessed Barbarian",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "2fd1707b-917c-4842-a5c6-dfffbedcf918",
+      "name": "Possessed Centaur",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "9bf9870e-32a3-494c-bd42-f9f013463619",
+      "name": "Possessed Nomad",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "4b6aa5e2-b539-46cd-804b-cd9e996a9456",
+      "name": "Psychotic Haze",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "7192ff07-9a84-49ad-a40c-ce255ce21544",
+      "name": "Putrid Imp",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "2c89cf19-8dc6-422e-bbf8-4dd5a399c630",
+      "name": "Pyromania",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "2e5163bd-9b8a-4d1e-9ba9-8666c7348dfd",
+      "name": "Radiate",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "copy_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "c1972a20-5308-4ee4-b234-751b805d30e4",
+      "name": "Rancid Earth",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "land_denial",
+        "mass_removal",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "5562b4bd-1485-47d4-a087-d93dafc37272",
+      "name": "Reborn Hero",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "65f1dd09-0640-47f8-8bfd-7aceaa5646a6",
+      "name": "Restless Dreams",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "a97f2f2a-5a8c-4f8a-99d1-83ebc4b0bdba",
+      "name": "Retraced Image",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "7b2a32ca-ef5b-40a5-acf7-aefac1d09e5b",
+      "name": "Seton's Scout",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "682a6d77-e8cd-4bf2-b777-7793101e0fd3",
+      "name": "Shade's Form",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "7807122e-917f-4a79-876e-d1c10f7a38ed",
+      "name": "Shambling Swarm",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "728d2e30-2f36-4054-81db-29b01e376a82",
+      "name": "Sickening Dreams",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "damage_engine",
+        "direct_finisher",
+        "finisher",
+        "group_slug",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b52788ff-9956-400a-bf26-17e58f673af0",
+      "name": "Skullscorch",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "afc3a65e-7a7a-4bd9-bca4-aa762b9bbbcb",
+      "name": "Skywing Aven",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "0c31edd0-a471-4994-8209-b0a7370fc27b",
+      "name": "Slithery Stalker",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "f43c68f1-97ac-47a4-82d3-a41277259388",
+      "name": "Sonic Seizure",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "d66e89a3-d582-4867-899c-f560b8a5b973",
+      "name": "Soul Scourge",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "d19a2c28-8d09-40bf-aeb1-e699672b009f",
+      "name": "Spirit Flare",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "graveyard_support",
+        "removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b4fbf91c-8eed-49d5-91fa-9ae1c03966b7",
+      "name": "Stern Judge",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "87aad9fb-e234-4171-a4ae-c686f613d37e",
+      "name": "Strength of Isolation",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "02a95ea7-cfb9-497c-a004-3e783856d79c",
+      "name": "Strength of Lunacy",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "566eafea-c8c2-43d6-b491-f20de276cdb6",
+      "name": "Stupefying Touch",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "439de49b-1091-4688-9ffb-80a025df31c2",
+      "name": "Tainted Field",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "0222414f-98b5-458a-a0fd-831a66cd8b07",
+      "name": "Tainted Isle",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "b2bae7fc-0668-4b34-9cd6-0d80aea52275",
+      "name": "Tainted Peak",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "fa6d05a1-3df4-4751-b1a0-8d9693faec73",
+      "name": "Tainted Wood",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "4f9c66f9-f5d4-499d-9325-e779e6612bca",
+      "name": "Temporary Insanity",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support",
+        "tap_untap",
+        "tempo_support",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "875c96ce-f6e4-438b-929d-de53afdd99a1",
+      "name": "Teroh's Faithful",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "32b0fc43-b5ce-4869-a780-946289305e5a",
+      "name": "Teroh's Vanguard",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "protection",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "f9279f8f-3d19-4f5b-b194-cb8c65313b7e",
+      "name": "Transcendence",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "83134570-debe-4bc0-9656-2a16801a3592",
+      "name": "Turbulent Dreams",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "cb1ae4f2-4fec-4cac-8992-616af82e0ade",
+      "name": "Unhinge",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "55d01851-2669-4552-b580-088e445ac30c",
+      "name": "Vengeful Dreams",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "842578ca-0a86-4e96-bfd5-45931488f7c1",
+      "name": "Violent Eruption",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "d7f25f7f-3fa2-47ba-be33-ba0b08f26c94",
+      "name": "Waste Away",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "5cd96cf2-c1c6-4982-8cf8-70c16704e387",
+      "name": "Zombie Trailblazer",
+      "firstSet": "tor",
+      "releasedAt": "2002-02-04",
+      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by TOR role audit."
     }
   ]
 }

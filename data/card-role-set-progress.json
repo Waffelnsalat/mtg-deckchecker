@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T12:12:31.403Z",
+  "generatedAt": "2026-06-29T12:14:33.406Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 102,
+    "done": 110,
     "inProgress": 0,
-    "pending": 941
+    "pending": 933
   },
   "sets": [
     {
@@ -1445,11 +1445,12 @@
       "setType": "promo",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pody-role-review.tsv"
     },
     {
       "code": "dkm",
@@ -1458,11 +1459,12 @@
       "setType": "box",
       "cardCount": 58,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 44,
+      "totalUniqueOracleIds": 44,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/dkm-role-review.tsv"
     },
     {
       "code": "f02",
@@ -1471,11 +1473,12 @@
       "setType": "promo",
       "cardCount": 12,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 12,
+      "totalUniqueOracleIds": 12,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/f02-role-review.tsv"
     },
     {
       "code": "g02",
@@ -1484,11 +1487,12 @@
       "setType": "promo",
       "cardCount": 2,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 2,
+      "totalUniqueOracleIds": 2,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/g02-role-review.tsv"
     },
     {
       "code": "pal02",
@@ -1497,11 +1501,12 @@
       "setType": "promo",
       "cardCount": 5,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 5,
+      "totalUniqueOracleIds": 5,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pal02-role-review.tsv"
     },
     {
       "code": "pr2",
@@ -1510,11 +1515,12 @@
       "setType": "promo",
       "cardCount": 6,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 6,
+      "totalUniqueOracleIds": 6,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pr2-role-review.tsv"
     },
     {
       "code": "ptor",
@@ -1523,11 +1529,12 @@
       "setType": "promo",
       "cardCount": 3,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/ptor-role-review.tsv"
     },
     {
       "code": "tor",
@@ -1536,11 +1543,12 @@
       "setType": "expansion",
       "cardCount": 143,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 143,
+      "totalUniqueOracleIds": 143,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/tor-role-review.tsv"
     },
     {
       "code": "jud",

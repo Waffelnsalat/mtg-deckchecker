@@ -348,6 +348,7 @@ function detectAdvancedRampRoles(
   const handCheatMana =
     /\bput\b[^.]{0,140}\b(?:artifact|creature|enchantment|permanent) card from your hand\b[^.]{0,100}\bonto the battlefield\b/.test(text) ||
     /\bput\b[^.]{0,140}\b(?:a|an|target|that|the)?\s*(?:artifact|creature|enchantment|permanent|nonland permanent) card\b[^.]{0,180}\bfrom (?:your hand|among them|among those cards|the top .*? of your library)\b[^.]{0,120}\bonto the battlefield\b/.test(text) ||
+    /\breveal a card in your hand\b[\s\S]{0,140}\bput that card onto the battlefield\b/.test(text) ||
     /\beach player may put\b[^.]{0,140}\b(?:artifact|creature|enchantment|land) card from their hand onto the battlefield\b/.test(text) ||
     /\bif all cards revealed this way are creature cards\b[^.]{0,120}\bput those cards onto the battlefield\b/.test(text) ||
     /\bowner of each creature card revealed this way\b[^.]{0,120}\bputs? it onto the battlefield\b/.test(text) ||
@@ -646,6 +647,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\breturn enchanted creature and this aura to their owners'? hands\b/.test(text) ||
     /\bwhenever a creature becomes the target of a spell or ability\b[^.]{0,120}\breturn that creature to its owner'?s hand\b/.test(text) ||
     /\breturn\b[^.]{0,80}\b(?:one|two|three|four|five|six|\d+|up to \d+|up to [a-z]+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?)\b[^.]{0,120}\bto (?:their|its) owners'? hands?\b/.test(text) ||
+    /\breturn x target nonland permanents to their owners'? hands\b/.test(text) ||
     /\bput two target lands on top of their owners'? libraries\b/.test(text) ||
     (/\b(?:put|puts)\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent|land)\b[^.]{0,120}\blibrary\b/.test(text) &&
       !/\bgraveyard\b/.test(text)) ||
@@ -1411,6 +1413,11 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "graveyard_hate", 0.44, "Advanced scan recognized graveyard reset utility.");
   }
 
+  if (/\btarget player shuffles up to (?:four|three|two|\d+) target cards from their graveyard into their library\b/.test(text)) {
+    addRole(profile, "graveyard_hate", 0.4, "Advanced scan recognized targeted graveyard reset utility.");
+    addRole(profile, "topdeck_control", 0.28, "Advanced scan recognized graveyard-to-library reset utility.");
+  }
+
   if (/\bsearch target player'?s library for up to seven cards and exile them\b/.test(text)) {
     addRole(profile, "mill_support", 0.46, "Advanced scan recognized targeted library exile.");
     addRole(profile, "topdeck_control", 0.36, "Advanced scan recognized targeted library exile.");
@@ -1508,6 +1515,11 @@ function detectAdvancedPurposeRoles(
   if (/\beach player may put a permanent card from their hand onto the battlefield\b/.test(text)) {
     addRole(profile, "cheat_into_play", 0.54, "Advanced scan recognized permanent cheat-into-play text.");
     addRole(profile, "cost_reduction", 0.42, "Advanced scan recognized putting permanents from hand onto the battlefield as mana-equivalent setup.");
+  }
+
+  if (/\breveal a card in your hand\b[\s\S]{0,140}\bput that card onto the battlefield\b/.test(text)) {
+    addRole(profile, "cheat_into_play", 0.48, "Advanced scan recognized conditional hand-to-battlefield setup.");
+    addRole(profile, "cost_reduction", 0.36, "Advanced scan recognized hand-to-battlefield setup as mana-equivalent acceleration.");
   }
 
   if (/\breveal cards from the top of their library until they reveal a creature card\b[\s\S]{0,180}\bputs? that card onto the battlefield\b/.test(text)) {
