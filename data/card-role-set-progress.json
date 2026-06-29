@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T11:05:57.257Z",
+  "generatedAt": "2026-06-29T11:08:31.008Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 54,
+    "done": 55,
     "inProgress": 0,
-    "pending": 989
+    "pending": 988
   },
   "sets": [
     {
@@ -773,11 +773,12 @@
       "setType": "memorabilia",
       "cardCount": 117,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 99,
+      "totalUniqueOracleIds": 99,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/wc98-role-review.tsv"
     },
     {
       "code": "palp",

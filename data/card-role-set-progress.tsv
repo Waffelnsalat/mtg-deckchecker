@@ -53,7 +53,7 @@ pexo	Exodus Promos	1998-06-15	promo	1	false	done	1	1	0	true	data/card-role-works
 p02	Portal Second Age	1998-06-24	starter	165	false	done	155	155	0	true	data/card-role-worksheets/p02-role-review.tsv
 tugl	Unglued Tokens	1998-08-11	token	6	false	done	6	6	0	true	data/card-role-worksheets/tugl-role-review.tsv
 ugl	Unglued	1998-08-11	funny	88	false	done	88	88	0	true	data/card-role-worksheets/ugl-role-review.tsv
-wc98	World Championship Decks 1998	1998-08-12	memorabilia	117	false	pending	0			false	
+wc98	World Championship Decks 1998	1998-08-12	memorabilia	117	false	done	99	99	0	true	data/card-role-worksheets/wc98-role-review.tsv
 palp	Asia Pacific Land Program	1998-09-01	promo	15	false	pending	0			false	
 pusg	Urza's Saga Promos	1998-10-12	promo	1	false	pending	0			false	
 usg	Urza's Saga	1998-10-12	expansion	357	false	pending	0			false	
