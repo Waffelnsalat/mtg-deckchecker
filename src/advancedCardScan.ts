@@ -633,6 +633,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bdeals? \d+ damage to each (?:white|blue|black|red|green)(?: and\/or (?:white|blue|black|red|green))? creature\b/.test(text) ||
     /\b(?:deals? (?:x|\d+) damage|deals? damage equal to [^.]{0,80}) to each (?:attacking )?creature\b/.test(text) ||
     /\bdeals? \d+ damage to each blocking creature and each blocked creature\b/.test(text) ||
+    /\bfor each creature\b[^.]{0,120}\bchoose a number from \d+ to \d+ at random\b[\s\S]{0,120}\bdeals that much damage to that creature\b/.test(text) ||
     massLandDenial;
   const tempoRemoval =
     /\beach player returns a creature they control to its owner'?s hand\b/.test(text) ||

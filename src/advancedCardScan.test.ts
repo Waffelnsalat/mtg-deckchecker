@@ -3322,6 +3322,14 @@ test("inferAdvancedRoleProfile recognizes Apocalypse utility wording gaps", () =
   assert.ok(getRoleWeight(passageProfile, "restricted_tutor") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Sega Dreamcast random damage wording", () => {
+  const breathProfile = inferAdvancedRoleProfile(
+    createCard("Ashuza's Breath", "Sorcery", 3, "For each creature, choose a number from 0 to 2 at random. Ashuza's Breath deals that much damage to that creature."),
+  );
+
+  assert.ok(getRoleWeight(breathProfile, "mass_removal") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

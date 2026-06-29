@@ -97,8 +97,8 @@ pls	Planeshift	2001-02-05	expansion	146	false	done	143	143	0	true	data/card-role
 ppls	Planeshift Promos	2001-02-05	promo	1	false	done	1	1	0	true	data/card-role-worksheets/ppls-role-review.tsv
 7ed	Seventh Edition	2001-04-11	core	708	false	done	335	335	0	true	data/card-role-worksheets/7ed-role-review.tsv
 apc	Apocalypse	2001-06-04	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/apc-role-review.tsv
-papc	Apocalypse Promos	2001-06-04	promo	1	false	pending	0			false	
-psdg	Sega Dreamcast Cards	2001-06-28	box	10	true	pending	0			false	
+papc	Apocalypse Promos	2001-06-04	promo	1	false	done	1	1	0	true	data/card-role-worksheets/papc-role-review.tsv
+psdg	Sega Dreamcast Cards	2001-06-28	box	10	true	done	10	10	0	true	data/card-role-worksheets/psdg-role-review.tsv
 wc01	World Championship Decks 2001	2001-08-08	memorabilia	138	false	pending	0			false	
 ody	Odyssey	2001-10-01	expansion	353	false	pending	0			false	
 pody	Odyssey Promos	2001-10-01	promo	1	false	pending	0			false	
