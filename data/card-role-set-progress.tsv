@@ -115,7 +115,7 @@ prm	Magic Online Promos	2002-06-24	promo	3110	true	done	2695	2695	0	true	data/ca
 jp1	Hobby Japan Promos	2002-07-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/jp1-role-review.tsv
 pons	Onslaught Promos	2002-09-28	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pons-role-review.tsv
 ons	Onslaught	2002-10-07	expansion	351	false	done	335	335	0	true	data/card-role-worksheets/ons-role-review.tsv
-wc02	World Championship Decks 2002	2002-12-01	memorabilia	153	false	pending	0			false	
+wc02	World Championship Decks 2002	2002-12-01	memorabilia	153	false	done	80	80	0	true	data/card-role-worksheets/wc02-role-review.tsv
 f03	Friday Night Magic 2003	2003-01-01	promo	13	false	pending	0			false	
 g03	Judge Gift Cards 2003	2003-01-01	promo	3	false	pending	0			false	
 ovnt	Vintage Championship	2003-01-01	memorabilia	35	false	pending	0			false	

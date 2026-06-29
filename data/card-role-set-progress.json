@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T12:46:03.981Z",
+  "generatedAt": "2026-06-29T12:46:54.352Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 116,
+    "done": 117,
     "inProgress": 0,
-    "pending": 927
+    "pending": 926
   },
   "sets": [
     {
@@ -1641,11 +1641,12 @@
       "setType": "memorabilia",
       "cardCount": 153,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 80,
+      "totalUniqueOracleIds": 80,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/wc02-role-review.tsv"
     },
     {
       "code": "f03",

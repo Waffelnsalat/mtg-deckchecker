@@ -352,7 +352,7 @@
       "name": "Birds of Paradise",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -953,7 +953,7 @@
       "name": "Counterspell",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "hard_stack",
         "stack"
@@ -1749,7 +1749,7 @@
       "name": "Forest",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -2374,7 +2374,7 @@
       "name": "Island",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -2792,7 +2792,7 @@
       "name": "Llanowar Elves",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "combat_body",
         "ramp",
@@ -2921,7 +2921,7 @@
       "name": "Mana Short",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -3491,7 +3491,7 @@
       "name": "Plains",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -4464,7 +4464,7 @@
       "name": "Swamp",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -5749,7 +5749,7 @@
       "name": "City of Brass",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -6593,7 +6593,7 @@
       "name": "Mountain",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -19640,7 +19640,7 @@
       "name": "Duress",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "hand_attack"
       ],
@@ -21715,7 +21715,7 @@
       "name": "Brushland",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -24081,7 +24081,7 @@
       "name": "Karplusan Forest",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -27162,7 +27162,7 @@
       "name": "Underground River",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -29220,7 +29220,7 @@
       "name": "Memory Lapse",
       "firstSet": "hml",
       "releasedAt": "1995-10-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "hard_stack",
         "stack"
@@ -30032,7 +30032,7 @@
       "name": "Blank Card",
       "firstSet": "ptc",
       "releasedAt": "1996-05-01",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Blank non-gameplay memorabilia card; intentionally has no strategic role."
@@ -31902,7 +31902,7 @@
       "name": "Reprisal",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -41877,7 +41877,7 @@
       "name": "Simoon",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:49:43.425Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -47383,7 +47383,7 @@
       "name": "Disrupt",
       "firstSet": "wth",
       "releasedAt": "1997-06-09",
-      "reviewedAt": "2026-06-29T11:49:43.425Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "expectedRoles": [
         "card_draw",
         "direct_draw",
@@ -59105,7 +59105,7 @@
       "name": "Merfolk Looter",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "card_selection",
@@ -64869,7 +64869,7 @@
       "name": "Hibernation",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "mass_removal",
         "removal"
@@ -65067,7 +65067,7 @@
       "name": "Intrepid Hero",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "removal",
@@ -72308,7 +72308,7 @@
       "name": "Compost",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:57:29.977Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -73186,7 +73186,7 @@
       "name": "Opposition",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "removal",
         "tempo_removal"
@@ -84665,7 +84665,7 @@
       "name": "Fact or Fiction",
       "firstSet": "inv",
       "releasedAt": "2000-10-02",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_selection"
       ],
@@ -84834,7 +84834,7 @@
       "name": "Global Ruin",
       "firstSet": "inv",
       "releasedAt": "2000-10-02",
-      "reviewedAt": "2026-06-29T11:49:43.425Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "hate_piece",
         "land_denial",
@@ -86115,7 +86115,7 @@
       "name": "Recoil",
       "firstSet": "inv",
       "releasedAt": "2000-10-02",
-      "reviewedAt": "2026-06-29T11:49:43.425Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "removal",
         "tempo_removal"
@@ -86147,7 +86147,7 @@
       "name": "Repulse",
       "firstSet": "inv",
       "releasedAt": "2000-10-02",
-      "reviewedAt": "2026-06-29T11:49:43.425Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -86398,7 +86398,7 @@
       "name": "Salt Marsh",
       "firstSet": "inv",
       "releasedAt": "2000-10-02",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "land_base",
         "land_slot",
@@ -87148,7 +87148,7 @@
       "name": "Teferi's Response",
       "firstSet": "inv",
       "releasedAt": "2000-10-02",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "broad_stack",
         "card_draw",
@@ -87928,7 +87928,7 @@
       "name": "Wax // Wane",
       "firstSet": "inv",
       "releasedAt": "2000-10-02",
-      "reviewedAt": "2026-06-29T11:49:43.425Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_support",
         "removal",
@@ -88743,7 +88743,7 @@
       "name": "Flametongue Kavu",
       "firstSet": "pls",
       "releasedAt": "2001-02-05",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "removal",
@@ -88812,7 +88812,7 @@
       "name": "Gainsay",
       "firstSet": "pls",
       "releasedAt": "2001-02-05",
-      "reviewedAt": "2026-06-29T11:53:45.583Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "hard_stack",
         "stack"
@@ -89345,7 +89345,7 @@
       "name": "Nightscape Familiar",
       "firstSet": "pls",
       "releasedAt": "2001-02-05",
-      "reviewedAt": "2026-06-29T11:53:45.583Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "cost_reduction",
@@ -89700,7 +89700,7 @@
       "name": "Rushing River",
       "firstSet": "pls",
       "releasedAt": "2001-02-05",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "removal",
         "sacrifice_support",
@@ -89891,7 +89891,7 @@
       "name": "Slay",
       "firstSet": "pls",
       "releasedAt": "2001-02-05",
-      "reviewedAt": "2026-06-29T11:53:45.583Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -90169,7 +90169,7 @@
       "name": "Thornscape Battlemage",
       "firstSet": "pls",
       "releasedAt": "2001-02-05",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "removal",
@@ -90199,7 +90199,7 @@
       "name": "Thunderscape Battlemage",
       "firstSet": "pls",
       "releasedAt": "2001-02-05",
-      "reviewedAt": "2026-06-29T12:06:20.515Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "hand_attack",
@@ -90981,7 +90981,7 @@
       "name": "Fire // Ice",
       "firstSet": "apc",
       "releasedAt": "2001-06-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -92064,7 +92064,7 @@
       "name": "Shivan Reef",
       "firstSet": "apc",
       "releasedAt": "2001-06-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "land_base",
         "land_slot",
@@ -92471,7 +92471,7 @@
       "name": "Yavimaya Coast",
       "firstSet": "apc",
       "releasedAt": "2001-06-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "land_base",
         "land_slot",
@@ -93411,7 +93411,7 @@
       "name": "Call of the Herd",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "graveyard_support",
         "token_support"
@@ -93440,7 +93440,7 @@
       "name": "Careful Study",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "card_selection",
@@ -93540,7 +93540,7 @@
       "name": "Cephalid Coliseum",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "hand_attack",
@@ -93730,7 +93730,7 @@
       "name": "Coffin Purge",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "graveyard_hate",
         "graveyard_support"
@@ -93865,7 +93865,7 @@
       "name": "Darkwater Catacombs",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "land_base",
         "land_slot",
@@ -94591,7 +94591,7 @@
       "name": "Ghastly Demise",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -95628,7 +95628,7 @@
       "name": "Nimble Mongoose",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -96053,7 +96053,7 @@
       "name": "Psychatog",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
@@ -96279,7 +96279,7 @@
       "name": "Roar of the Wurm",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "graveyard_support",
         "token_support"
@@ -96855,7 +96855,7 @@
       "name": "Squirrel Nest",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "token_support"
       ],
@@ -97349,7 +97349,7 @@
       "name": "Upheaval",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "mass_removal",
         "removal"
@@ -97463,7 +97463,7 @@
       "name": "Werebear",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:12:30.585Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -97509,7 +97509,7 @@
       "name": "Wild Mongrel",
       "firstSet": "ody",
       "releasedAt": "2001-10-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
@@ -97870,7 +97870,7 @@
       "name": "Breakthrough",
       "firstSet": "tor",
       "releasedAt": "2002-02-04",
-      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -98105,7 +98105,7 @@
       "name": "Chainer's Edict",
       "firstSet": "tor",
       "releasedAt": "2002-02-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "graveyard_support",
         "removal",
@@ -98134,7 +98134,7 @@
       "name": "Circular Logic",
       "firstSet": "tor",
       "releasedAt": "2002-02-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "soft_stack",
         "stack"
@@ -98256,7 +98256,7 @@
       "name": "Deep Analysis",
       "firstSet": "tor",
       "releasedAt": "2002-02-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "graveyard_support"
@@ -99375,7 +99375,7 @@
       "name": "Seton's Scout",
       "firstSet": "tor",
       "releasedAt": "2002-02-04",
-      "reviewedAt": "2026-06-29T12:14:32.558Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -99833,7 +99833,7 @@
       "name": "Anurid Brushhopper",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -100229,7 +100229,7 @@
       "name": "Cunning Wish",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "restricted_tutor",
         "tutor"
@@ -100530,7 +100530,7 @@
       "name": "Genesis",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_selection",
         "combat_body",
@@ -100561,7 +100561,7 @@
       "name": "Glory",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "broad_protection",
         "combat_body",
@@ -100904,7 +100904,7 @@
       "name": "Living Wish",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "restricted_tutor",
         "tutor"
@@ -100947,7 +100947,7 @@
       "name": "Mental Note",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -101081,7 +101081,7 @@
       "name": "Phantom Centaur",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "counter_support",
@@ -101126,7 +101126,7 @@
       "name": "Phantom Nishoba",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "combat_threat",
@@ -101216,7 +101216,7 @@
       "name": "Quiet Speculation",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "graveyard_support",
         "mill_support"
@@ -101244,7 +101244,7 @@
       "name": "Ray of Revelation",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "graveyard_support",
         "removal",
@@ -101578,7 +101578,7 @@
       "name": "Sylvan Safekeeper",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "sacrifice_support",
@@ -101784,7 +101784,7 @@
       "name": "Wonder",
       "firstSet": "jud",
       "releasedAt": "2002-05-27",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -144605,6 +144605,96 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by ONS role audit."
+    },
+    {
+      "oracleId": "d0b3f7c1-ee16-4bed-af8a-96201168ec81",
+      "name": "2002 World Championships Ad",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "ae55f60e-c0d1-4a95-aa95-7f19f279c326",
+      "name": "Brian Kibler Bio",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "ee248b65-6a38-4a50-a277-3a3e3798c551",
+      "name": "Brian Kibler Decklist",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "6d2632ab-69b3-4d6b-895f-e34984008eab",
+      "name": "Carlos Romão Bio",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "0d0cfaf3-95e5-499d-a94e-c21e96c3bf08",
+      "name": "Carlos Romão Decklist",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "633b73de-cf85-41f0-acae-d8f67718a447",
+      "name": "Raphael Levy Bio",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "d3797259-8c37-4818-9a99-07dda4f5a5ed",
+      "name": "Raphael Levy Decklist",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "27414d58-0d34-40be-a3ac-eb04d32a92e0",
+      "name": "Sim Han How Bio",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "60054968-0052-4f54-9ccd-dece48a853b4",
+      "name": "Sim Han How Decklist",
+      "firstSet": "wc02",
+      "releasedAt": "2002-12-01",
+      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
     }
   ]
 }
