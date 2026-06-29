@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T11:53:46.406Z",
+  "generatedAt": "2026-06-29T11:57:31.495Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 95,
+    "done": 98,
     "inProgress": 0,
-    "pending": 948
+    "pending": 945
   },
   "sets": [
     {
@@ -1347,11 +1347,12 @@
       "setType": "promo",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/ppls-role-review.tsv"
     },
     {
       "code": "7ed",
@@ -1360,11 +1361,12 @@
       "setType": "core",
       "cardCount": 708,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 335,
+      "totalUniqueOracleIds": 335,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/7ed-role-review.tsv"
     },
     {
       "code": "apc",
@@ -1373,11 +1375,12 @@
       "setType": "expansion",
       "cardCount": 143,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 143,
+      "totalUniqueOracleIds": 143,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/apc-role-review.tsv"
     },
     {
       "code": "papc",

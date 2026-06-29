@@ -441,6 +441,7 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
   const libraryDig =
     /\b(?:look at|reveal|mill)\b[\s\S]{0,180}\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
+    /\breveal the cards in your library\b[\s\S]{0,260}\bopponent chooses\b[\s\S]{0,220}\byou put the chosen cards into your hand\b/.test(text) ||
     /\breveal cards? from the top of your library until\b[\s\S]{0,220}\bput (?:that card|it|one of them)\b[\s\S]{0,120}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\bexile cards? from the top of your library until\b[\s\S]{0,260}\bput (?:that card|it|one of them|those cards?|those [a-z]+ cards?|the exiled cards?)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text);
   const symmetricTopdeckTutor =
@@ -764,6 +765,7 @@ function detectAdvancedStackRoles(profile: CardRoleProfile, text: string) {
     /\btarget spell'?s controller reveals their hand\b[\s\S]{0,180}\bcounter that spell\b/.test(text) ||
     /\byou and target spell'?s controller bid life\b[\s\S]{0,260}\bif you win the bidding, counter that spell\b/.test(text) ||
     /\bwhenever a player casts a spell\b[\s\S]{0,220}\bif they do, counter that spell\b/.test(text) ||
+    /\bwhenever a player casts a spell\b[\s\S]{0,180}\bany other player may pay that spell'?s mana cost\b[\s\S]{0,120}\bcounter the spell\b/.test(text) ||
     /\bwhenever a player casts\b[^.]{0,80}\b(?:spell|enchantment spell|instant spell|sorcery spell)\b[^.]{0,80}\bcounter it unless\b/.test(text);
   const spellTempo =
     /\breturn target spell\b[^.]{0,120}\bto (?:its|their) owner's hand\b/.test(text) ||
@@ -1334,6 +1336,7 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\blook at the top (?:three|five|\d+) cards of target player'?s library\b/.test(text) ||
+    /\blook at the top (?:three|five|\d+) cards of target opponent'?s library\b/.test(text) ||
     /\blook at the top card of target player'?s library\b/.test(text) ||
     /\btarget player looks at the top (?:three|five|\d+) cards of their library\b/.test(text) ||
     /\btarget player chooses a card name\b[^.]{0,140}\breveals? the top card of their library\b/.test(text)
@@ -1633,6 +1636,7 @@ function detectAdvancedPurposeRoles(
     /\bwhenever an opponent draws a card\b[^.]{0,140}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever an opponent casts a white spell\b[^.]{0,120}\bthey lose \d+ life\b/.test(text) ||
     /\bwhenever a player casts a spell\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
+    /\bat the beginning of your upkeep\b[^.]{0,180}\btarget player loses \d+ life\b/.test(text) ||
     /\bwhenever a player draws a card\b[^.]{0,160}\bthat player loses \d+ life unless they pay\b/.test(text) ||
     /\bmay have this enchantment deal \d+ damage to the second player\b/.test(text) ||
     /\bat the beginning of the end step of enchanted creature'?s controller\b[^.]{0,180}\bdeals? \d+ damage to that player unless that creature attacked this turn\b/.test(text) ||
@@ -1879,6 +1883,7 @@ function detectAdvancedPurposeRoles(
     /\bgains? all creature types\b/.test(text) ||
     /\bloses? all creature types\b/.test(text) ||
     /\bcreatures you control are the chosen type\b/.test(text) ||
+    /\bchoose a creature type\b[\s\S]{0,160}\btarget creature becomes that type until end of turn\b/.test(text) ||
     /\bcreature spells you control\b[^.]{0,160}\bchosen type\b/.test(text)
   ) {
     addRole(profile, "kindred_support", permanent ? 0.58 : 0.48, "Advanced scan recognized kindred or creature-type support.");

@@ -3300,6 +3300,28 @@ test("inferAdvancedRoleProfile recognizes Planeshift utility wording gaps", () =
   assert.ok(getRoleWeight(tyrannyProfile, "group_slug") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Apocalypse utility wording gaps", () => {
+  const caveProfile = inferAdvancedRoleProfile(
+    createCard("Ice Cave", "Enchantment", 5, "Whenever a player casts a spell, any other player may pay that spell's mana cost. If a player does, counter the spell."),
+  );
+  const selectionProfile = inferAdvancedRoleProfile(createCard("Unnatural Selection", "Enchantment", 2, "{1}: Choose a creature type other than Wall. Target creature becomes that type until end of turn."));
+  const sanctuaryProfile = inferAdvancedRoleProfile(
+    createCard("Necra Sanctuary", "Enchantment", 3, "At the beginning of your upkeep, if you control a green or white permanent, target player loses 1 life. If you control a green permanent and a white permanent, that player loses 3 life instead."),
+  );
+  const glareProfile = inferAdvancedRoleProfile(
+    createCard("Tahngarth's Glare", "Sorcery", 1, "Look at the top three cards of target opponent's library, then put them back in any order. That player looks at the top three cards of your library, then puts them back in any order."),
+  );
+  const passageProfile = inferAdvancedRoleProfile(
+    createCard("Guided Passage", "Sorcery", 3, "Reveal the cards in your library. An opponent chooses from among them a creature card, a land card, and a noncreature, nonland card. You put the chosen cards into your hand. Then shuffle."),
+  );
+
+  assert.ok(getRoleWeight(caveProfile, "soft_stack") > 0);
+  assert.ok(getRoleWeight(selectionProfile, "kindred_support") > 0);
+  assert.ok(getRoleWeight(sanctuaryProfile, "group_slug") > 0);
+  assert.ok(getRoleWeight(glareProfile, "topdeck_control") > 0);
+  assert.ok(getRoleWeight(passageProfile, "restricted_tutor") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
