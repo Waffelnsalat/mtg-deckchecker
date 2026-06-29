@@ -49,8 +49,8 @@ jgp	Judge Gift Cards 1998	1998-01-01	promo	3	false	done	3	3	0	true	data/card-rol
 psth	Stronghold Promos	1998-03-02	promo	1	false	done	1	1	0	true	data/card-role-worksheets/psth-role-review.tsv
 sth	Stronghold	1998-03-02	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/sth-role-review.tsv
 exo	Exodus	1998-06-15	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/exo-role-review.tsv
-pexo	Exodus Promos	1998-06-15	promo	1	false	pending	0			false	
-p02	Portal Second Age	1998-06-24	starter	165	false	pending	0			false	
+pexo	Exodus Promos	1998-06-15	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pexo-role-review.tsv
+p02	Portal Second Age	1998-06-24	starter	165	false	done	155	155	0	true	data/card-role-worksheets/p02-role-review.tsv
 tugl	Unglued Tokens	1998-08-11	token	6	false	pending	0			false	
 ugl	Unglued	1998-08-11	funny	88	false	pending	0			false	
 wc98	World Championship Decks 1998	1998-08-12	memorabilia	117	false	pending	0			false	

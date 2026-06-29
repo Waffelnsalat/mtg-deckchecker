@@ -356,6 +356,8 @@ function detectAdvancedRampRoles(
   const manaToken =
     /\bcreate\b[^.]{0,80}\b(?:treasure|lotus|gold)\b[^.]{0,80}\btoken/.test(text) ||
     /\bcreate\b[^.]{0,80}\btoken\b[^.]{0,120}\badd one mana\b/.test(text);
+  const temporaryLandAccess =
+    /\buntil end of turn\b[^.]{0,120}\byou may tap lands you don'?t control for mana\b/.test(text);
   const burstMana =
     /\badd\b[^.]{0,40}\{[wubrgc]/.test(text) &&
     (!permanent || sacrificeMana || handExileMana || /\buntil end of turn\b/.test(text));
@@ -388,7 +390,7 @@ function detectAdvancedRampRoles(
     addRole(profile, "mana_fixing", 0.5, "Advanced scan recognized land mana conversion.");
   }
 
-  if (burstMana || handExileMana || manaToken) {
+  if (burstMana || handExileMana || manaToken || temporaryLandAccess) {
     addRole(profile, "ramp", 0.72, "Advanced scan recognized temporary mana acceleration.");
     addRole(profile, "burst_ramp", handExileMana ? 0.82 : 0.74, "Advanced scan recognized burst mana.");
   }
@@ -569,6 +571,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
   const targetedDamageRemoval =
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
     /\bdeals? (?:x|\d+|that much) damage to target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b/.test(text) ||
+    /\bdeals? \d+ damage to each of two target creatures\b/.test(text) ||
     /\bwhenever a creature enters\b[^.]{0,120}\bdeals? \d+ damage to it\b/.test(text) ||
     /\bdeals? (?:x|\d+|that much) damage to each of up to\b/.test(text) ||
     /\bdeals? x damage to each of x targets?\b/.test(text) ||
@@ -1570,6 +1573,7 @@ function detectAdvancedPurposeRoles(
     /\btarget creature with\b[^.]{0,120}\bloses it and another target creature gains it\b/.test(text) ||
     /\bcreatures you control gain haste\b/.test(text) ||
     /\bcreatures your opponents control\b[^.]{0,120}\bcan'?t block\b/.test(text) ||
+    /\bother creatures they control can'?t block this turn\b/.test(text) ||
     /\ball creatures lose flying\b/.test(text) ||
     /\btap all (?:non(?:blue|white|black|red|green)|blue|white|black|red|green)? ?creatures\b/.test(text) ||
     /\btarget creature doesn't untap during its controller'?s next untap step\b/.test(text) ||

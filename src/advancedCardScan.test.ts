@@ -2916,6 +2916,20 @@ test("inferAdvancedRoleProfile recognizes Exodus utility wording gaps", () => {
   assert.ok(getRoleWeight(crystalProfile, "cost_reduction") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Portal Second Age utility wording gaps", () => {
+  const piracyProfile = inferAdvancedRoleProfile(
+    createCard("Piracy", "Sorcery", 2, "Until end of turn, you may tap lands you don't control for mana. Spend this mana only to cast spells."),
+  );
+  const warCryProfile = inferAdvancedRoleProfile(
+    createCard("Goblin War Cry", "Sorcery", 3, "Target opponent chooses a creature they control. Other creatures they control can't block this turn."),
+  );
+  const lightningProfile = inferAdvancedRoleProfile(createCard("Jagged Lightning", "Sorcery", 5, "Jagged Lightning deals 3 damage to each of two target creatures."));
+
+  assert.ok(getRoleWeight(piracyProfile, "burst_ramp") > 0);
+  assert.ok(getRoleWeight(warCryProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(lightningProfile, "targeted_removal") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
