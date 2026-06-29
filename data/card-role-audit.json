@@ -20262,7 +20262,7 @@
       "name": "Scent of Cinder",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
@@ -20572,7 +20572,7 @@
       "name": "Thorn Elemental",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -61182,14 +61182,15 @@
       "name": "Ravenous Rats",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
       "actualRoles": [
         "combat_body",
         "hand_attack",
         "removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
     },
     {
       "oracleId": "3ee07899-e6d6-4dcf-8596-4d2420690d7c",
@@ -71770,6 +71771,2147 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by PTK role audit."
+    },
+    {
+      "oracleId": "87c44c23-f209-494a-ab66-c9f5cf7bb4ea",
+      "name": "False Prophet",
+      "firstSet": "puds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PUDS role audit."
+    },
+    {
+      "oracleId": "e3c85068-b4b6-40b9-a16c-5c3b2d059ec4",
+      "name": "Academy Rector",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "restricted_tutor",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "61105cb5-d7a1-4021-a006-dd1b947dfa68",
+      "name": "Aether Sting",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "5f12134c-d626-4a5e-8653-700681a491fc",
+      "name": "Ancient Silverback",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "d1a6aa5f-2ad6-4bc7-82f0-4262f66af730",
+      "name": "Apprentice Necromancer",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "recursion",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "acab4fa9-d9ab-4a89-a50f-0cee9d7ca0c3",
+      "name": "Archery Training",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "counter_support",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "a85ee0cf-39ce-49f2-874a-f6f54ca1775f",
+      "name": "Attrition",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "cf0936ea-2741-43a4-ad6a-a1258b54945b",
+      "name": "Aura Thief",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "dd489f30-d1cf-4236-8390-9c21cd8659e0",
+      "name": "Blizzard Elemental",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "84d47913-53ac-4d4d-bac3-bc0306d43e12",
+      "name": "Bloodshot Cyclops",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "e04688e0-672b-407f-a2c9-fd7292926483",
+      "name": "Body Snatcher",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "recursion",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "d52b72ff-a82d-430e-94c7-675c83b43e50",
+      "name": "Braidwood Cup",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b44816b4-44ef-446d-a254-b4b7bc015a42",
+      "name": "Braidwood Sextant",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "repeatable_tutor",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "0d8c2d7b-7cce-4115-a3f8-18c23731544e",
+      "name": "Brass Secretary",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "64c88c94-3a9d-4fd4-b58c-4d2167c2b8d5",
+      "name": "Brine Seer",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "75903c3b-2dbe-4662-b6a8-39599e49adde",
+      "name": "Bubbling Beebles",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "3c7f2b29-9f42-41ab-a2d4-7a450fb0242d",
+      "name": "Bubbling Muck",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "burst_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b13f97b3-56ae-4131-a93b-b162c8ff7cca",
+      "name": "Caltrops",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "e295d207-128f-419a-866a-c9ac6248c199",
+      "name": "Capashen Knight",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "75510429-41bb-409e-b6fe-04a8bb174c6b",
+      "name": "Capashen Standard",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "ab9ad5e2-2bf3-450d-9d5c-c7280d368e10",
+      "name": "Capashen Templar",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "95b10ca7-7360-4da5-bd93-686ae3051833",
+      "name": "Carnival of Souls",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "09b41783-0583-4486-99e8-3f8a11ae37fd",
+      "name": "Chime of Night",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "64b63797-9db0-41fa-b2eb-fbf51de0e337",
+      "name": "Cinder Seer",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "50cf702b-5647-415e-b9a8-56fa0e50da6d",
+      "name": "Colos Yearling",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "4681bcc2-8a46-44cd-8b04-6ab140904dea",
+      "name": "Compost",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "bf7710cb-70cb-42fb-b840-cc4f385daa7a",
+      "name": "Covetous Dragon",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "039e2e39-8f7f-43f2-8448-de35ef7b8dc1",
+      "name": "Disappear",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "ccdd6376-9b74-4d13-9f80-87d0bd3d4a2a",
+      "name": "Disease Carriers",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "049d1fb2-cce7-40e7-a633-e84cf9782d89",
+      "name": "Donate",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "donation_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "78a9cb8d-52bb-4182-ad7d-e4f8f0bb9797",
+      "name": "Dying Wail",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "9e9aea99-1eee-4bb6-9043-a1ac2884d071",
+      "name": "Elvish Lookout",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "872ef617-7cdb-4a7a-85f5-efc9e12bece5",
+      "name": "Elvish Piper",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "26eb7ee3-c0b6-4be0-bc80-92952f55a6f9",
+      "name": "Emperor Crocodile",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b9959d63-5489-4ed1-a04e-9d6ba4a5f68e",
+      "name": "Encroach",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "hand_attack",
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "782ff740-ff43-4c07-af0b-433cb9770661",
+      "name": "Eradicate",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "93cc6425-a13b-4b32-bb8f-fdc9bfa0ef9b",
+      "name": "Extruder",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "0a88dcb6-a391-408f-8bfc-7b5b2cc34267",
+      "name": "Fatigue",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "hand_denial",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "fa8f3827-8cd9-4896-ab0c-26fecacceb40",
+      "name": "Fend Off",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "broad_protection",
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "protection",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "32638d03-c101-42f0-8a4b-8c6290257a28",
+      "name": "Festering Wound",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "counter_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "730809d7-cb8c-495c-8972-7e85b967358e",
+      "name": "Field Surgeon",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "8a9d6a30-e2c2-4da5-ad3b-d64fb2b5543c",
+      "name": "Flame Jet",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "selection",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "d5482ccf-7c3f-45b8-aaa8-8f6686fe584d",
+      "name": "Fledgling Osprey",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "19ea326f-45ff-4bc0-a957-7d3f22dd8c6f",
+      "name": "Flicker",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "flicker"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "aaf171bd-a4bb-4ce4-836a-da193c94f42e",
+      "name": "Fodder Cannon",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "c6921cfe-48f9-4378-b145-d9b430c2aaf6",
+      "name": "Gamekeeper",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "combat_body",
+        "draw",
+        "restricted_tutor",
+        "sacrifice_support",
+        "selection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "5f71f205-9551-416a-bba6-55bc65d11c85",
+      "name": "Goblin Berserker",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "de21b90f-a268-46d6-b977-d5b0856176f3",
+      "name": "Goblin Festival",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "coin_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "29781b19-0917-4d8f-abe3-df0b7e96d8a6",
+      "name": "Goblin Gardener",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "4bc91d7d-37aa-475c-8fe9-763975d51add",
+      "name": "Goblin Marshal",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "cfec9d17-2d11-4b89-8b30-84bd25a38466",
+      "name": "Goblin Masons",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "86ab4400-fbdd-4c18-a893-441286a9d7d0",
+      "name": "Goliath Beetle",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "babcc551-39bb-4b1c-92a0-e60b236a59b2",
+      "name": "Heart Warden",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "ramp",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "sacrifice_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "a95aa9ba-fa61-4a3d-a493-1ea790bd20ad",
+      "name": "Hulking Ogre",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "102d73bc-94ed-4a57-9872-6f7b9bf282f9",
+      "name": "Hunting Moa",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "7a22389a-34e7-4726-a551-f6fbc225cefe",
+      "name": "Illuminated Wings",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "97c8f5e1-9fc1-4a62-a757-1c0454754cd3",
+      "name": "Impatience",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "a893bee3-ea5c-4619-a875-e4af6d4396fe",
+      "name": "Incendiary",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "counter_support",
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "sacrifice_support",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f8cf31db-6c33-4bfb-a24c-f22644ccd377",
+      "name": "Iridescent Drake",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f61591d5-0f2a-48cd-a091-863d2e93e019",
+      "name": "Ivy Seer",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "d934a7f0-eb46-4a2c-b0fd-e3071e23da4a",
+      "name": "Jasmine Seer",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "08c595da-9305-42a9-b72f-5ccc546edc01",
+      "name": "Junk Diver",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "hand_recursion",
+        "recursion",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "1600b361-9298-49f0-8925-4c1aad363e1b",
+      "name": "Keldon Champion",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "0aa7bd6a-0a8d-4413-a9e8-b7a459300841",
+      "name": "Keldon Vandals",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "2a70f3d7-9b5c-455e-8c4b-55870d77bd7d",
+      "name": "Kingfisher",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f15761cf-2ac5-4458-957c-15badb1dda50",
+      "name": "Landslide",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "e9e5e17a-95fc-41b7-af4f-aec4802960a0",
+      "name": "Lurking Jackals",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "421c661a-24d9-4797-b538-2a4243825628",
+      "name": "Magnify",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "57bea272-5b38-444e-acc2-6104af2ece22",
+      "name": "Mantis Engine",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "1c350891-8810-4c14-b8ea-84486864637b",
+      "name": "Mark of Fury",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "4b1614fd-2810-4d4d-a0d6-934f27adbe65",
+      "name": "Marker Beetles",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "21474195-5d91-466d-8874-4818c900dea7",
+      "name": "Mask of Law and Grace",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "7695b61a-8d44-44b1-9783-ea3114111c3e",
+      "name": "Master Healer",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "621476a4-44bf-4f55-adb1-880cdd213f38",
+      "name": "Masticore",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "removal",
+        "sacrifice_support",
+        "targeted_protection",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b22080d6-a9ed-4bdd-a604-058e0e3e9463",
+      "name": "Mental Discipline",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "9ed9accb-9f0c-40fa-aeea-2d1e1c9d1bd1",
+      "name": "Metalworker",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "c8a1b3dd-bc36-4d97-8f93-1151446f04e2",
+      "name": "Metathran Elite",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b723fcec-f208-4397-a178-e1e47b729cf1",
+      "name": "Metathran Soldier",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "80875914-df4c-4b05-8c4d-658ff477c956",
+      "name": "Momentum",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_support",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b233473d-d22b-45e4-9fe7-55d1170a788b",
+      "name": "Multani's Decree",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "lifegain",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "9bcf66d0-8a4d-4c57-b4de-4cc35399465e",
+      "name": "Nightshade Seer",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "59489b46-9d02-4f3c-bcd0-884e7605e9a5",
+      "name": "Opalescence",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "bf0b252d-1295-44e4-bac3-113b5732a2a9",
+      "name": "Opposition",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "4b8856f8-3cd1-450c-a71b-eb0026e8e179",
+      "name": "Pattern of Rebirth",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "cost_reduction",
+        "restricted_tutor",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "1eb6c28d-ebac-4016-ad07-c90081ee4983",
+      "name": "Phyrexian Monitor",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f22fcd17-bc24-41df-81ce-6d11208861b9",
+      "name": "Phyrexian Negator",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "a7cc69fd-0c67-44fc-be9d-d8f5b1bd54f5",
+      "name": "Plague Dogs",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "15163c99-9388-4225-b707-4e057b2adfbc",
+      "name": "Plated Spider",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "23b36aef-961f-4a78-9652-8594ad73102e",
+      "name": "Plow Under",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "ca1144c2-49a3-49b4-9085-3094141769ea",
+      "name": "Powder Keg",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "e8578152-ee97-4471-bf32-77abe5ab80f1",
+      "name": "Private Research",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "counter_support",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "255131a2-616c-4c8d-a36a-14e5b5ab345e",
+      "name": "Quash",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "2c769dfc-79be-4fcb-840c-b72cafdd0a23",
+      "name": "Rapid Decay",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "6933a7bf-10ed-46c8-a49c-ce200bce3eea",
+      "name": "Rayne, Academy Chancellor",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f24d5187-0f80-4528-bf44-03ae146f3551",
+      "name": "Reckless Abandon",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "a149ac31-b792-4fbe-903a-788bbdfd5e97",
+      "name": "Reliquary Monk",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f6069a4f-744e-43e8-9f8b-7c13b8b0187f",
+      "name": "Repercussion",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "523ae937-5535-490d-96ea-07f331b5e5ad",
+      "name": "Replenish",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_selection",
+        "mass_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f0ae687a-7222-4521-a514-ba10373fed7e",
+      "name": "Rescue",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "protection",
+        "removal",
+        "rescue_protection",
+        "self_bounce",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "3015882b-4897-4d2c-8e33-6731c85a0d03",
+      "name": "Rofellos, Llanowar Emissary",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "7c309759-e607-4bad-b615-f7c673e508ac",
+      "name": "Rofellos's Gift",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "2fc7740a-dfa4-4279-8822-3f7c93e6b685",
+      "name": "Sanctimony",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "c22b5968-adea-4f74-877d-8ac2ee452769",
+      "name": "Scent of Brine",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b6db81e5-b7ca-45dc-a72d-1ff12935a3e4",
+      "name": "Scent of Ivy",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "3a532c2b-a08c-46ab-86f7-c6dee0d6985f",
+      "name": "Scent of Jasmine",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "2e88f39d-6177-42d9-b756-144219dc0961",
+      "name": "Scent of Nightshade",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f18622da-81f3-4854-a1bb-8d658751d8db",
+      "name": "Scour",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "ca16b32c-3f1e-4f8d-821a-064f922c45d8",
+      "name": "Scrying Glass",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "4c67292a-7fcc-4646-8a06-99a7b4b3e005",
+      "name": "Serra Advocate",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "51b47053-d169-4627-982f-f29b8630d75f",
+      "name": "Sigil of Sleep",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "4344abeb-47ab-4638-b50f-dd502f14c1af",
+      "name": "Skittering Horror",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "82875793-b264-4ceb-8525-ef3b6d086072",
+      "name": "Slinking Skirge",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "7b094a2b-2b69-4a9b-9829-c1aabc53f75e",
+      "name": "Solidarity",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "8186fd80-015f-470c-9e1c-cbf45764a057",
+      "name": "Soul Feast",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "131d2b70-959d-4814-b0c8-38031f141718",
+      "name": "Sowing Salt",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "90f01e9f-68f1-4e41-97dc-8de990a91504",
+      "name": "Splinter",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "2c526c61-6cdb-440c-b4c8-b6d1503cef73",
+      "name": "Squirming Mass",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "03136fe1-17e2-4b1c-860a-dc6373c8fdb5",
+      "name": "Storage Matrix",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "aef07e62-ac7f-4a5b-9732-136052d88a06",
+      "name": "Taunting Elf",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "8162730e-2573-4bc0-827f-5b7b3dbf3bff",
+      "name": "Telepathic Spies",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "fd9b5462-6578-4bf6-8026-23eaf5af3eee",
+      "name": "Temporal Adept",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "909e1bff-237a-4259-9c0f-419185681782",
+      "name": "Tethered Griffin",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "2f074636-6a36-46a3-b872-add79e19aa8b",
+      "name": "Thieving Magpie",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "a699c663-8131-4045-9265-a83e86609374",
+      "name": "Thran Dynamo",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "88079144-8d8e-4f98-9bee-3762540c94ca",
+      "name": "Thran Foundry",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "graveyard_hate"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "fe55f366-2996-4a4f-9b30-fc494cc80f87",
+      "name": "Thran Golem",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "176eeafd-0482-4fa4-9174-10f8b9494d9b",
+      "name": "Tormented Angel",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "8ed57194-7508-4aef-9373-64f7e80612d8",
+      "name": "Treachery",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "d3b408e7-4d39-47a3-b00c-846903f8ae77",
+      "name": "Trumpet Blast",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "4066d4df-d98f-44cd-bf25-ebb5e9d9ddeb",
+      "name": "Twisted Experiment",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b380c04b-0bce-4328-8f0a-1425e48bee72",
+      "name": "Urza's Incubator",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "cost_reduction"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "b5d5b9c9-accc-4dbe-aaf4-c806f3e1c61c",
+      "name": "Voice of Duty",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "372e2d6e-427c-4152-b936-27dcf536ca84",
+      "name": "Voice of Reason",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "562f7f99-ee67-4a14-b5e2-1a4ae710726d",
+      "name": "Wake of Destruction",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "a59897cb-7ead-494a-a1d0-c9baf79bf18b",
+      "name": "Wall of Glare",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "cb6b8ce3-9f9d-418c-94b0-c4469a254938",
+      "name": "Wild Colos",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "7fd4c452-07f2-492c-9c78-d1c6362d9eec",
+      "name": "Yavimaya Elder",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "495fc654-7986-4d76-9d5c-bc1484e98de2",
+      "name": "Yavimaya Enchantress",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "53d6113d-acdb-4754-9641-f7991a96c7b9",
+      "name": "Yavimaya Hollow",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "f7f76f39-a0de-4bda-86b6-0f291892fcec",
+      "name": "Yawgmoth's Bargain",
+      "firstSet": "uds",
+      "releasedAt": "1999-06-07",
+      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "hate_piece",
+        "repeatable_advantage",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by UDS role audit."
     }
   ]
 }

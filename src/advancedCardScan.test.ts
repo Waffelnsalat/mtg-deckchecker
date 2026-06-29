@@ -3073,6 +3073,41 @@ test("inferAdvancedRoleProfile recognizes Portal Three Kingdoms utility wording 
   assert.ok(getRoleWeight(edictProfile, "targeted_removal") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Urza's Destiny utility wording gaps", () => {
+  const opalescenceProfile = inferAdvancedRoleProfile(
+    createCard("Opalescence", "Enchantment", 4, "Each other non-Aura enchantment is a creature in addition to its other types and has base power and base toughness each equal to its mana value."),
+  );
+  const disappearProfile = inferAdvancedRoleProfile(createCard("Disappear", "Enchantment — Aura", 4, "Enchant creature {U}: Return enchanted creature and this Aura to their owners' hands."));
+  const fatigueProfile = inferAdvancedRoleProfile(createCard("Fatigue", "Sorcery", 2, "Target player skips their next draw step."));
+  const carnivalProfile = inferAdvancedRoleProfile(createCard("Carnival of Souls", "Enchantment", 2, "Whenever a creature enters, you lose 1 life and add {B}."));
+  const stingProfile = inferAdvancedRoleProfile(createCard("Aether Sting", "Enchantment", 4, "Whenever an opponent casts a creature spell, this enchantment deals 1 damage to that player."));
+  const repercussionProfile = inferAdvancedRoleProfile(createCard("Repercussion", "Enchantment", 3, "Whenever a creature is dealt damage, this enchantment deals that much damage to that creature's controller."));
+  const saltProfile = inferAdvancedRoleProfile(
+    createCard("Sowing Salt", "Sorcery", 4, "Exile target nonbasic land. Search its controller's graveyard, hand, and library for all cards with the same name as that land and exile them. Then that player shuffles."),
+  );
+  const plowProfile = inferAdvancedRoleProfile(createCard("Plow Under", "Sorcery", 5, "Put two target lands on top of their owners' libraries."));
+  const matrixProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Storage Matrix",
+      "Artifact",
+      3,
+      "As long as this artifact is untapped, each player chooses artifact, creature, or land during their untap step. That player can untap only permanents of the chosen type this step.",
+    ),
+  );
+  const foundryProfile = inferAdvancedRoleProfile(createCard("Thran Foundry", "Artifact", 1, "{1}, {T}, Exile this artifact: Target player shuffles their graveyard into their library."));
+
+  assert.ok(getRoleWeight(opalescenceProfile, "animation_effect") > 0);
+  assert.ok(getRoleWeight(disappearProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(fatigueProfile, "hand_denial") > 0);
+  assert.ok(getRoleWeight(carnivalProfile, "burst_ramp") > 0);
+  assert.ok(getRoleWeight(stingProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(repercussionProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(saltProfile, "land_denial") > 0);
+  assert.ok(getRoleWeight(plowProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(matrixProfile, "hate_piece") > 0);
+  assert.ok(getRoleWeight(foundryProfile, "graveyard_hate") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

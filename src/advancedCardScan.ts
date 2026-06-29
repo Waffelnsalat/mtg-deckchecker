@@ -357,6 +357,8 @@ function detectAdvancedRampRoles(
   const manaToken =
     /\bcreate\b[^.]{0,80}\b(?:treasure|lotus|gold)\b[^.]{0,80}\btoken/.test(text) ||
     /\bcreate\b[^.]{0,80}\btoken\b[^.]{0,120}\badd one mana\b/.test(text);
+  const triggerMana =
+    /\bwhenever a creature enters\b[^.]{0,120}\byou lose \d+ life and add \{[wubrgc]\}/.test(text);
   const temporaryLandAccess =
     /\buntil end of turn\b[^.]{0,120}\byou may tap lands you don'?t control for mana\b/.test(text);
   const burstMana =
@@ -391,7 +393,7 @@ function detectAdvancedRampRoles(
     addRole(profile, "mana_fixing", 0.5, "Advanced scan recognized land mana conversion.");
   }
 
-  if (burstMana || handExileMana || manaToken || temporaryLandAccess) {
+  if (burstMana || handExileMana || manaToken || temporaryLandAccess || triggerMana) {
     addRole(profile, "ramp", 0.72, "Advanced scan recognized temporary mana acceleration.");
     addRole(profile, "burst_ramp", handExileMana ? 0.82 : 0.74, "Advanced scan recognized burst mana.");
   }
@@ -495,6 +497,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bexchange control of\b[^.]{0,220}\b(?:target|two|all|creature|artifact|enchantment|permanent|permanents|spell)\b/.test(text);
   const targetedLandRemoval =
     /\bdestroy target (?:nonbasic |basic |non[- ]?(?:plains|island|swamp|mountain|forest) )?(?:land|plains|island|swamp|mountain|forest)\b/.test(text) ||
+    /\bexile target nonbasic land\b[\s\S]{0,180}\bsame name as that land and exile them\b/.test(text) ||
     /\bdestroy (?:one|two|three|four|five|six|\d+) target lands?\b/.test(text) ||
     /\bput target land on top of its owner'?s library\b/.test(text) ||
     /\benchanted land\b[^.]{0,160}\bdestroy it\b/.test(text) ||
@@ -627,7 +630,9 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bif they don'?t\b[^.]{0,140}\bthey return a permanent they control to its owner'?s hand\b/.test(text) ||
     /\breturn\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent)\b[^.]{0,140}\bto (?:(?:its|their) owner's|their owners') hands?\b/.test(text) ||
     /\breturn target creature you control and target creature you don'?t control to their owners'? hands\b/.test(text) ||
+    /\breturn enchanted creature and this aura to their owners'? hands\b/.test(text) ||
     /\breturn\b[^.]{0,80}\b(?:one|two|three|four|five|six|\d+|up to \d+|up to [a-z]+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?)\b[^.]{0,120}\bto (?:their|its) owners'? hands?\b/.test(text) ||
+    /\bput two target lands on top of their owners'? libraries\b/.test(text) ||
     (/\b(?:put|puts)\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent|land)\b[^.]{0,120}\blibrary\b/.test(text) &&
       !/\bgraveyard\b/.test(text)) ||
     /\btap one or two target creatures\b/.test(text) ||
@@ -1149,6 +1154,7 @@ function detectAdvancedPurposeRoles(
     /\bthis artifact becomes\b[^.]{0,80}\bartifact creature\b/.test(text) ||
     /\bif this permanent is an enchantment\b[^.]{0,120}\bbecomes? a \d+\/\d+\b[^.]{0,120}\bcreature\b/.test(text) ||
     /\bthis enchantment becomes a \d+\/\d+\b[^.]{0,120}\bcreature\b/.test(text) ||
+    /\beach other non-aura enchantment is a creature\b/.test(text) ||
     /\ball lands are 1\/1 creatures\b/.test(text) ||
     /\ball (?:forests|swamps)\b[^.]{0,120}\bare 1\/1\b[^.]{0,80}\bcreatures\b/.test(text)
   ) {
@@ -1345,6 +1351,10 @@ function detectAdvancedPurposeRoles(
     addRole(profile, "hate_piece", 0.46, "Advanced scan recognized graveyard hate.");
   }
 
+  if (/\btarget player shuffles their graveyard into their library\b/.test(text)) {
+    addRole(profile, "graveyard_hate", 0.44, "Advanced scan recognized graveyard reset utility.");
+  }
+
   if (/\byou control that player\b/.test(text)) {
     addRole(profile, "player_control", 0.46, "Advanced scan recognized player-control utility.");
     addRole(profile, "theft_support", 0.34, "Advanced scan recognized control of another player's choices.");
@@ -1358,6 +1368,11 @@ function detectAdvancedPurposeRoles(
 
   if (/\byou have no maximum hand size\b|\bmaximum hand size is (?:four|three|two|one|\d+)\b/.test(text)) {
     addRole(profile, "hand_size", 0.34, "Advanced scan recognized maximum-hand-size utility.");
+  }
+
+  if (/\btarget player skips their next draw step\b/.test(text)) {
+    addRole(profile, "hand_denial", 0.48, "Advanced scan recognized draw-step denial.");
+    addRole(profile, "tempo_support", 0.34, "Advanced scan recognized draw-step denial as tempo utility.");
   }
 
   if (/\bif a source would deal damage to you\b[^.]{0,120}\bprevent \d+ of that damage\b/.test(text)) {
@@ -1558,6 +1573,7 @@ function detectAdvancedPurposeRoles(
     /\bat the beginning of (?:each player's upkeep|the upkeep of enchanted [^.]{0,80} controller)\b[^.]{0,180}\bdeals? (?:\d+ damage|damage to that player equal to|damage [^.]{0,80} equal to) (?:to )?(?:that player|enchanted .* controller|enchanted .*'s controller)?\b/.test(text) ||
     /\bat the beginning of (?:each opponent'?s upkeep|each player'?s end step)\b[^.]{0,220}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever an opponent casts a creature spell\b[^.]{0,160}\bdeals? \d+ damage to that player unless they pay\b/.test(text) ||
+    /\bwhenever an opponent casts a creature spell\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever an opponent discards a card\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever a player says the chosen word\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever a player says\b[^.]{0,80}\bat any other time\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
@@ -1568,6 +1584,7 @@ function detectAdvancedPurposeRoles(
     /\bwhenever enchanted creature becomes tapped\b[^.]{0,120}\bdeals? \d+ damage to that creature'?s controller\b/.test(text) ||
     /\btarget player chooses a card name\b[\s\S]{0,220}\bdeals? \d+ damage to them\b/.test(text) ||
     /\bwhenever enchanted creature deals damage to you\b[^.]{0,160}\bdeals? that much damage to that creature'?s controller\b/.test(text) ||
+    /\bwhenever a creature is dealt damage\b[^.]{0,160}\bdeals? that much damage to that creature'?s controller\b/.test(text) ||
     /\bwhenever an opponent draws a card\b[^.]{0,140}\bdeals? \d+ damage to that player\b/.test(text) ||
     /\bwhenever an opponent casts a white spell\b[^.]{0,120}\bthey lose \d+ life\b/.test(text) ||
     /\bwhenever a player casts a spell\b[^.]{0,120}\bdeals? \d+ damage to that player\b/.test(text) ||
@@ -1664,6 +1681,7 @@ function detectAdvancedPurposeRoles(
     /\ball creatures lose all abilities and have base power and toughness \d+\/\d+\b/.test(text) ||
     /\ball lands are \d+\/\d+ creatures\b/.test(text) ||
     /\bwhenever a player casts a spell\b[^.]{0,160}\bthat player returns a land they control to its owner'?s hand\b/.test(text) ||
+    /\bthat player can untap only permanents of the chosen type this step\b/.test(text) ||
     /\bwhenever a creature enters\b[^.]{0,120}\bexile that creature\b/.test(text) ||
     /\beach nontoken permanent\b[^.]{0,120}\bis sacrificed by its controller\b/.test(text) ||
     /\b(?:blue creatures|creatures with power \d+ or greater|creatures of the chosen type) don't untap during (?:their|their controllers'?) untap steps\b/.test(text) ||
