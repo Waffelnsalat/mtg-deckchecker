@@ -116,13 +116,13 @@ jp1	Hobby Japan Promos	2002-07-01	promo	5	false	done	5	5	0	true	data/card-role-w
 pons	Onslaught Promos	2002-09-28	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pons-role-review.tsv
 ons	Onslaught	2002-10-07	expansion	351	false	done	335	335	0	true	data/card-role-worksheets/ons-role-review.tsv
 wc02	World Championship Decks 2002	2002-12-01	memorabilia	153	false	done	80	80	0	true	data/card-role-worksheets/wc02-role-review.tsv
-f03	Friday Night Magic 2003	2003-01-01	promo	13	false	pending	0			false	
-g03	Judge Gift Cards 2003	2003-01-01	promo	3	false	pending	0			false	
-ovnt	Vintage Championship	2003-01-01	memorabilia	35	false	pending	0			false	
-p03	Magic Player Rewards 2003	2003-01-01	promo	7	false	pending	0			false	
-pal03	Arena League 2003	2003-01-01	promo	8	false	pending	0			false	
-pjjt	Japan Junior Tournament	2003-01-01	promo	12	false	pending	0			false	
-pmoa	Magic Online Avatars	2003-01-01	vanguard	85	true	pending	0			false	
+f03	Friday Night Magic 2003	2003-01-01	promo	13	false	done	13	13	0	true	data/card-role-worksheets/f03-role-review.tsv
+g03	Judge Gift Cards 2003	2003-01-01	promo	3	false	done	3	3	0	true	data/card-role-worksheets/g03-role-review.tsv
+ovnt	Vintage Championship	2003-01-01	memorabilia	35	false	done	13	13	0	true	data/card-role-worksheets/ovnt-role-review.tsv
+p03	Magic Player Rewards 2003	2003-01-01	promo	7	false	done	7	7	0	true	data/card-role-worksheets/p03-role-review.tsv
+pal03	Arena League 2003	2003-01-01	promo	8	false	done	8	8	0	true	data/card-role-worksheets/pal03-role-review.tsv
+pjjt	Japan Junior Tournament	2003-01-01	promo	12	false	done	12	12	0	true	data/card-role-worksheets/pjjt-role-review.tsv
+pmoa	Magic Online Avatars	2003-01-01	vanguard	85	true	done	74	74	0	true	data/card-role-worksheets/pmoa-role-review.tsv
 lgn	Legions	2003-02-03	expansion	145	false	pending	0			false	
 plgn	Legions Promos	2003-02-03	promo	1	false	pending	0			false	
 pscg	Scourge Promos	2003-05-26	promo	1	false	pending	0			false	

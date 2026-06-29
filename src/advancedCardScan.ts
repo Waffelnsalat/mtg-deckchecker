@@ -367,7 +367,8 @@ function detectAdvancedRampRoles(
     /\bcreate\b[^.]{0,80}\btoken\b[^.]{0,120}\badd one mana\b/.test(text);
   const triggerMana =
     /\bwhenever a creature enters\b[^.]{0,120}\byou lose \d+ life and add \{[wubrgc]\}/.test(text) ||
-    /\bwhenever a creature enters\b[^.]{0,160}\byou may add an amount of \{[wubrgc]\}/.test(text);
+    /\bwhenever a creature enters\b[^.]{0,160}\byou may add an amount of \{[wubrgc]\}/.test(text) ||
+    /\bat the beginning of each player'?s first main phase\b[^.]{0,80}\bthat player adds \{[wubrgc]\}/.test(text);
   const temporaryLandAccess =
     /\buntil end of turn\b[^.]{0,120}\byou may tap lands you don'?t control for mana\b/.test(text);
   const burstMana =
@@ -580,6 +581,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bchoose two target creatures controlled by the same player\b[\s\S]{0,180}\bsacrifices one of them\b[\s\S]{0,120}\breturn the other to its owner'?s hand\b/.test(text) ||
     /\bbury target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\btap target creature\b[\s\S]{0,140}\bexile that creature\b/.test(text) ||
+    /\bexile target creature\b[^.]{0,60}\bblocking a creature you control\b/.test(text) ||
     /\bturn target creature face down\b/.test(text) ||
     /\btarget permanent\b[^.]{0,120}\bshuffles? (?:it|itself) into (?:their|its) owner's library\b/.test(text) ||
     /\bthe owner of target permanent\b[^.]{0,120}\bshuffles? it into (?:their|its) library\b/.test(text) ||
@@ -607,6 +609,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bdestroy each permanent chosen this way\b/.test(text);
   const targetedDamageRemoval =
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
+    /\bdeals? an amount of damage chosen at random from 0 to x to any target\b/.test(text) ||
     /\bdeals? damage to any target equal to the mana value of the discarded card\b/.test(text) ||
     /\bdeals? (?:x|\d+|that much) damage to target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b/.test(text) ||
     /\bdeals? \d+ damage to each of two target creatures\b/.test(text) ||
@@ -662,6 +665,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     massLandDenial;
   const tempoRemoval =
     /\beach player returns a creature they control to its owner'?s hand\b/.test(text) ||
+    /\beach player returns a permanent they control to its owner'?s hand unless they pay \d+ life\b/.test(text) ||
     /\bat the beginning of each player'?s upkeep\b[^.]{0,140}\bthat player returns a creature they control to its owner'?s hand\b/.test(text) ||
     /\breturn to its owner'?s hand each creature\b[^.]{0,180}\bwith power greater than\b/.test(text) ||
     /\bif they don'?t\b[^.]{0,140}\bthey return a permanent they control to its owner'?s hand\b/.test(text) ||
@@ -747,6 +751,11 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
               : 0.82,
       "Advanced scan recognized targeted or chosen removal.",
     );
+  }
+
+  if (/\bexile target creature\b[^.]{0,60}\bblocking a creature you control\b/.test(text)) {
+    addRole(profile, "removal", 0.78, "Advanced scan recognized blocking-creature removal.");
+    addRole(profile, "targeted_removal", 0.78, "Advanced scan recognized blocking-creature removal.");
   }
 
   if (targetedLandRemoval) {
@@ -912,6 +921,7 @@ function detectAdvancedProtectionRoles(
   const playerProtection =
     /\byou (?:gain|have) protection from everything\b/.test(text) ||
     /\byou (?:gain|have) hexproof\b/.test(text) ||
+    /\byou can'?t lose the game and your opponents can'?t win the game\b/.test(text) ||
     /\bdamage that would reduce your life total to less than 1 reduces it to 1 instead\b/.test(text);
   const regenerationProtection =
     /\bregenerate (?:this creature|enchanted creature|target creature|that creature)\b/.test(text);
@@ -933,7 +943,8 @@ function detectAdvancedProtectionRoles(
     /\bthe next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to target creature you control\b[^.]{0,120}\bis dealt to you instead\b/.test(text) ||
     /\bthe next time\b[^.]{0,100}\bsource of your choice would deal damage to target creature\b[^.]{0,120}\bdeals that damage to you instead\b/.test(text);
   const redirectedDamageProtection =
-    /\bgains?\b[^.]{0,120}\bthe next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to target\b[^.]{0,180}\bis dealt to (?:this|that) creature instead\b/.test(text);
+    /\bgains?\b[^.]{0,120}\bthe next (?:x|\d+|one|two|three|four|five|six|seven|eight|nine|ten) damage that would be dealt to target\b[^.]{0,180}\bis dealt to (?:this|that) creature instead\b/.test(text) ||
+    /\bif damage would be dealt to you this turn by a source of your choice\b[\s\S]{0,160}\bprevent that damage\b/.test(text);
   const selfBounce =
     /\breturn target\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent|land)\b[^.]{0,120}\byou control\b[^.]{0,120}\bto (?:its|their) owner's hand\b/.test(text) ||
     /\breturn any number of target creatures you control to their owner'?s hand\b/.test(text) ||
@@ -1432,6 +1443,11 @@ function detectAdvancedPurposeRoles(
   if (/\blook at the top card of target player'?s library\b[\s\S]{0,220}\bput it into that player'?s graveyard\b/.test(text)) {
     addRole(profile, "topdeck_control", 0.42, "Advanced scan recognized top-of-library denial.");
     addRole(profile, "mill_support", 0.34, "Advanced scan recognized top-of-library milling.");
+  }
+
+  if (/\blook at the top card of your library\b[\s\S]{0,120}\byou may put that card into your graveyard\b/.test(text)) {
+    addRole(profile, "selection", 0.34, "Advanced scan recognized self top-of-library filtering.");
+    addRole(profile, "graveyard_support", 0.3, "Advanced scan recognized optional self-mill setup.");
   }
 
   if (/\btarget player reveals the top (?:four|three|two|\d+) cards of their library\b[\s\S]{0,180}\bput them into that player'?s graveyard\b/.test(text)) {
@@ -1989,6 +2005,7 @@ function detectAdvancedPurposeRoles(
     /\bcopy of\b|\bbecomes a copy\b|\bcopy that spell or ability\b/.test(text) ||
     /\bcopy (?:target|that|the)\b[^.]{0,120}\b(?:spell|instant|sorcery|ability)\b/.test(text) ||
     /\bcopy (?:those cards|each card exiled with this enchantment)\b/.test(text) ||
+    /\bcopy three (?:instant|sorcery) cards chosen at random\b/.test(text) ||
     /\bcopy it for each other instant and sorcery spell\b/.test(text) ||
     /\btriggered ability\b[\s\S]{0,120}\btriggers? an additional time\b/.test(text)
   ) {
@@ -1998,6 +2015,11 @@ function detectAdvancedPurposeRoles(
   if (/\bwhenever you cast (?:your first )?instant or sorcery spell\b/.test(text) || /\bwhenever you cast an instant or sorcery spell\b/.test(text)) {
     addRole(profile, "spellslinger", permanent ? 0.62 : 0.5, "Advanced scan recognized instant/sorcery cast payoff.");
     addRole(profile, "copy_support", permanent ? 0.48 : 0.36, "Advanced scan recognized instant/sorcery cast payoff.");
+  }
+
+  if (/\bcopy three (?:instant|sorcery) cards chosen at random\b[\s\S]{0,120}\byou may cast one of the copies without paying its mana cost\b/.test(text)) {
+    addRole(profile, "spellslinger", 0.5, "Advanced scan recognized random spell-copy access.");
+    addRole(profile, "cost_reduction", 0.42, "Advanced scan recognized free spell-copy access.");
   }
 
   if (/\beach opponent exiles cards from the top of their library until\b[\s\S]{0,140}\btotal mana value\b/.test(text)) {

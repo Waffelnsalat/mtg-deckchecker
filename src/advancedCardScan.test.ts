@@ -3472,6 +3472,42 @@ test("inferAdvancedRoleProfile recognizes Onslaught utility wording gaps", () =>
   assert.ok(getRoleWeight(biorhythmProfile, "direct_finisher") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Magic Online Avatar utility wording gaps", () => {
+  const prodigalProfile = inferAdvancedRoleProfile(
+    createCard("Prodigal Sorcerer Avatar", "Vanguard", 0, "At the beginning of your upkeep, look at the top card of your library. You may put that card into your graveyard."),
+  );
+  const angelProfile = inferAdvancedRoleProfile(
+    createCard("Platinum Angel Avatar", "Vanguard", 0, "If you control an artifact, a creature, an enchantment, and a land, you can't lose the game and your opponents can't win the game."),
+  );
+  const sistersProfile = inferAdvancedRoleProfile(
+    createCard("Sisters of Stone Death Avatar", "Vanguard", 0, "Each creature you control must be blocked if able. {4}: Exile target creature that's blocking a creature you control."),
+  );
+  const jayaProfile = inferAdvancedRoleProfile(
+    createCard("Jaya Ballard Avatar", "Vanguard", 0, "{X}: Jaya Ballard Avatar deals an amount of damage chosen at random from 0 to X to any target. Activate only once each turn."),
+  );
+  const stuffyProfile = inferAdvancedRoleProfile(
+    createCard("Stuffy Doll Avatar", "Vanguard", 0, "{0}: If damage would be dealt to you this turn by a source of your choice, prevent that damage. Stuffy Doll Avatar deals damage to you and target opponent or planeswalker equal to half the damage prevented this way, rounded up. Activate only once each turn."),
+  );
+  const jhoiraProfile = inferAdvancedRoleProfile(
+    createCard("Jhoira of the Ghitu Avatar", "Vanguard", 0, "{3}, Discard a card: Copy three instant cards chosen at random. You may cast one of the copies without paying its mana cost. {3}, Discard a card: Copy three sorcery cards chosen at random. You may cast one of the copies without paying its mana cost. Activate only as a sorcery."),
+  );
+  const eladamriProfile = inferAdvancedRoleProfile(
+    createCard("Eladamri, Lord of Leaves Avatar", "Vanguard", 0, "At the beginning of each player's first main phase, that player adds {G}{G}."),
+  );
+  const tradewindProfile = inferAdvancedRoleProfile(
+    createCard("Tradewind Rider Avatar", "Vanguard", 0, "{3}: Each player returns a permanent they control to its owner's hand unless they pay 2 life."),
+  );
+
+  assert.ok(getRoleWeight(prodigalProfile, "graveyard_support") > 0);
+  assert.ok(getRoleWeight(angelProfile, "protection") > 0);
+  assert.ok(getRoleWeight(sistersProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(jayaProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(stuffyProfile, "protection") > 0);
+  assert.ok(getRoleWeight(jhoiraProfile, "copy_support") > 0);
+  assert.ok(getRoleWeight(eladamriProfile, "ramp") > 0);
+  assert.ok(getRoleWeight(tradewindProfile, "tempo_removal") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

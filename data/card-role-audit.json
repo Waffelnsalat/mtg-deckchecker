@@ -94,7 +94,7 @@
       "name": "Ancestral Recall",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "card_draw"
       ],
@@ -397,7 +397,7 @@
       "name": "Black Lotus",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "burst_ramp",
         "sacrifice_support"
@@ -1226,7 +1226,7 @@
       "name": "Disenchant",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -1749,7 +1749,7 @@
       "name": "Forest",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "reviewedAt": "2026-06-29T12:50:27.981Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -1856,7 +1856,7 @@
       "name": "Giant Growth",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -2374,7 +2374,7 @@
       "name": "Island",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "reviewedAt": "2026-06-29T12:50:27.981Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -3070,7 +3070,7 @@
       "name": "Mox Emerald",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "ramp",
         "stable_ramp"
@@ -3088,7 +3088,7 @@
       "name": "Mox Jet",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "ramp",
         "stable_ramp"
@@ -3106,7 +3106,7 @@
       "name": "Mox Pearl",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "ramp",
         "stable_ramp"
@@ -3124,7 +3124,7 @@
       "name": "Mox Ruby",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "ramp",
         "stable_ramp"
@@ -3142,7 +3142,7 @@
       "name": "Mox Sapphire",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "ramp",
         "stable_ramp"
@@ -3491,7 +3491,7 @@
       "name": "Plains",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "reviewedAt": "2026-06-29T12:50:27.981Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -3887,7 +3887,7 @@
       "name": "Royal Assassin",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -4464,7 +4464,7 @@
       "name": "Swamp",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "reviewedAt": "2026-06-29T12:50:27.981Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -4656,7 +4656,7 @@
       "name": "Time Walk",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "extra_turn",
         "finisher"
@@ -4674,7 +4674,7 @@
       "name": "Timetwister",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "card_draw"
       ],
@@ -5619,7 +5619,7 @@
       "name": "Bazaar of Baghdad",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-21T13:08:13.420Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "card_draw",
         "card_selection",
@@ -6465,7 +6465,7 @@
       "name": "Library of Alexandria",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "card_draw",
         "direct_draw",
@@ -6593,7 +6593,7 @@
       "name": "Mountain",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T12:46:53.475Z",
+      "reviewedAt": "2026-06-29T12:50:27.981Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -7935,7 +7935,7 @@
       "name": "Mishra's Workshop",
       "firstSet": "atq",
       "releasedAt": "1994-03-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -14448,7 +14448,7 @@
       "name": "Whirling Dervish",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "expectedRoles": [
         "combat_body",
         "counter_support",
@@ -45607,7 +45607,7 @@
       "name": "Volcanic Hammer",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -50285,7 +50285,7 @@
       "name": "Bottle Gnomes",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "expectedRoles": [
         "combat_body",
         "lifegain",
@@ -50425,7 +50425,7 @@
       "name": "Capsize",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "expectedRoles": [
         "removal",
         "tempo_removal"
@@ -51816,7 +51816,7 @@
       "name": "Goblin Bombardment",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "expectedRoles": [
         "removal",
         "sacrifice_support",
@@ -52152,7 +52152,7 @@
       "name": "Intuition",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:25.615Z",
       "expectedRoles": [
         "direct_tutor",
         "tutor"
@@ -52472,7 +52472,7 @@
       "name": "Living Death",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:25.615Z",
       "expectedRoles": [
         "battlefield_recursion",
         "mass_recursion",
@@ -53034,7 +53034,7 @@
       "name": "Muscle Sliver",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -54138,7 +54138,7 @@
       "name": "Scragnoth",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "expectedRoles": [
         "combat_body",
         "self_protection"
@@ -54663,7 +54663,7 @@
       "name": "Soltari Priest",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -56073,7 +56073,7 @@
       "name": "Crystalline Sliver",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "expectedRoles": [
         "combat_body",
         "self_protection"
@@ -57437,7 +57437,7 @@
       "name": "Shard Phoenix",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "expectedRoles": [
         "card_selection",
         "combat_body",
@@ -61804,12 +61804,13 @@
       "name": "Goblin",
       "firstSet": "tugl",
       "releasedAt": "1998-08-11",
-      "reviewedAt": "2026-06-29T11:02:03.045Z",
+      "reviewedAt": "2026-06-29T12:50:27.172Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by P03 role audit."
     },
     {
       "oracleId": "251085b8-4bca-4fcd-92a0-006541be827e",
@@ -63275,7 +63276,7 @@
       "name": "Argothian Enchantress",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:25.615Z",
       "actualRoles": [
         "card_draw",
         "combat_body",
@@ -64619,7 +64620,7 @@
       "name": "Glorious Anthem",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "actualRoles": [
         "combat_support"
       ],
@@ -65803,7 +65804,7 @@
       "name": "Priest of Titania",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "actualRoles": [
         "combat_body",
         "ramp",
@@ -67012,7 +67013,7 @@
       "name": "Tolarian Academy",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T12:50:26.384Z",
       "actualRoles": [
         "artifact_support",
         "land_base",
@@ -78768,7 +78769,7 @@
       "name": "Two-Headed Dragon",
       "firstSet": "mmq",
       "releasedAt": "1999-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -79058,7 +79059,7 @@
       "name": "Elvish Champion",
       "firstSet": "psus",
       "releasedAt": "1999-12-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -79073,7 +79074,7 @@
       "name": "Mad Auntie",
       "firstSet": "psus",
       "releasedAt": "1999-12-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
@@ -79087,7 +79088,7 @@
       "name": "Sakura-Tribe Elder",
       "firstSet": "psus",
       "releasedAt": "1999-12-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "actualRoles": [
         "combat_body",
         "land_acceleration",
@@ -79106,7 +79107,7 @@
       "name": "Slith Firewalker",
       "firstSet": "psus",
       "releasedAt": "1999-12-01",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:28.769Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -88109,7 +88110,7 @@
       "name": "Bear",
       "firstSet": "mpr",
       "releasedAt": "2001-01-01",
-      "reviewedAt": "2026-06-29T11:53:44.145Z",
+      "reviewedAt": "2026-06-29T12:50:27.172Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -105655,7 +105656,7 @@
       "name": "Bonesplitter",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:27.981Z",
       "actualRoles": [
         "artifact_support",
         "combat_support"
@@ -111495,7 +111496,7 @@
       "name": "Elvish Aberration",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:27.981Z",
       "actualRoles": [
         "card_selection",
         "combat_body",
@@ -120030,7 +120031,7 @@
       "name": "Krosan Tusker",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "actualRoles": [
         "card_draw",
         "combat_body",
@@ -131343,7 +131344,7 @@
       "name": "Skirk Marauder",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:27.981Z",
       "actualRoles": [
         "combat_body",
         "face_down_support",
@@ -131768,7 +131769,7 @@
       "name": "Smother",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -132178,7 +132179,7 @@
       "name": "Sparksmith",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "actualRoles": [
         "combat_body",
         "mass_removal",
@@ -138237,7 +138238,7 @@
       "name": "Voidmage Prodigy",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:50:27.172Z",
       "actualRoles": [
         "combat_body",
         "face_down_support",
@@ -138804,7 +138805,7 @@
       "name": "Whipcorder",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:46:03.018Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "actualRoles": [
         "combat_body",
         "face_down_support",
@@ -139188,7 +139189,7 @@
       "name": "Withered Wretch",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:50:24.821Z",
       "actualRoles": [
         "combat_body",
         "graveyard_hate"
@@ -144695,6 +144696,1122 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "0f6d78a4-f330-47b5-9c30-51324a1e7fb9",
+      "name": "Demon",
+      "firstSet": "p03",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:27.172Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by P03 role audit."
+    },
+    {
+      "oracleId": "c39cd31f-c4a2-4ca8-b4f9-b2e6289743bc",
+      "name": "Insect",
+      "firstSet": "p03",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:27.172Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by P03 role audit."
+    },
+    {
+      "oracleId": "b8df27be-118b-4a76-95ec-9d6220314533",
+      "name": "Rukh",
+      "firstSet": "p03",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:27.172Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by P03 role audit."
+    },
+    {
+      "oracleId": "9ac81d75-2bec-46ab-84e1-2fc893d45219",
+      "name": "Sliver",
+      "firstSet": "p03",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:27.172Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by P03 role audit."
+    },
+    {
+      "oracleId": "eaa10dee-89da-43eb-b339-1cf59e488344",
+      "name": "Akroma, Angel of Wrath Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "bdbe0932-3152-414d-b378-a10e766788d1",
+      "name": "Arcanis, the Omnipotent Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "362b3052-8893-41ff-9c5f-d6602177691a",
+      "name": "Arcbound Overseer Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "f6c3facb-84ac-4dd9-bce9-6d2779c7f14e",
+      "name": "Ashling the Pilgrim Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "c9c4dc2a-6696-4349-837f-8d17f2d5cf84",
+      "name": "Ashling, the Extinguisher Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "3a51a1e3-bb9f-4464-8878-22c1698b8db3",
+      "name": "Birds of Paradise Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "mana_fixing"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "311ed4d8-1713-4a77-a9a7-b9dad7c10b1f",
+      "name": "Bosh, Iron Golem Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "sacrifice_support",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "f8a02f35-7846-40bc-960e-11198b314fb8",
+      "name": "Braids, Conjurer Adept Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "cost_reduction",
+        "land_acceleration",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "e106a9f6-8df7-429e-a1ae-e3f3ae1520a3",
+      "name": "Chronatog Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "hand_size",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "43e77b55-b1bf-414e-aee9-bbff7377c13e",
+      "name": "Dakkon Blackblade Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "copy_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "6df0021c-4ba3-47fd-bf5f-c0c9c393e49f",
+      "name": "Dauntless Escort Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "ccec9306-f1c0-4c24-89c0-40163ba22e66",
+      "name": "Diamond Faerie Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "108669ed-bc2e-4147-9d74-f4ae52e35091",
+      "name": "Eight-and-a-Half-Tails Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "protection",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "dcd8b9d4-c76a-4cad-8d43-13e42fb65bd6",
+      "name": "Eladamri, Lord of Leaves Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "1560bee0-7e44-47c2-85f3-4b5457cfc668",
+      "name": "Elvish Champion Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "139efb5c-55a1-4890-9212-ac2e8ea4ee7d",
+      "name": "Enigma Sphinx Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "5bb2e22d-4d7f-40d7-acc4-8b7e6326549a",
+      "name": "Erhnam Djinn Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "731113a2-1366-41a4-9a34-61400ab3aa92",
+      "name": "Etched Oracle Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "3c06f0f8-c069-4354-bf7e-031c9e50b224",
+      "name": "Fallen Angel Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "4920fd37-35d5-4e31-a6b8-3fb7492aaa38",
+      "name": "Figure of Destiny Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support",
+        "counter_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "c69c410e-dabc-422c-9b3e-8efeec6daa7a",
+      "name": "Flametongue Kavu Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "df33f381-ff74-4ef2-8396-443019590006",
+      "name": "Frenetic Efreet Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "coin_support",
+        "extra_turn",
+        "finisher",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "94701ec4-4cd3-46cc-a2fc-7ab3642ed247",
+      "name": "Goblin Warchief Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "bf896f7e-2708-4276-a845-c61d84bc5f1e",
+      "name": "Grinning Demon Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "3f8db031-27c8-4051-a221-3c7d20695ce6",
+      "name": "Haakon, Stromgald Scourge Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "96a78b38-114e-4048-943a-a8173d5cb214",
+      "name": "Heartwood Storyteller Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "1b035589-31eb-49a8-9677-692547091ba7",
+      "name": "Hell's Caretaker Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "recursion",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "e09485a8-fbdc-4acf-a0c8-43963bd2819f",
+      "name": "Hermit Druid Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "land_acceleration"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "9e3e8fdf-7c88-4080-861a-0e87cbc7d068",
+      "name": "Higure, the Still Wind Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "ea8a4fe4-d595-4d82-acb9-17f8734f3fe2",
+      "name": "Ink-Eyes, Servant of Oni Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "cda2022b-900e-4273-8aed-0951ec2155fb",
+      "name": "Jaya Ballard Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "5dba9290-d617-4b93-b5b5-f45d801a5b7b",
+      "name": "Jhoira of the Ghitu Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "copy_support",
+        "cost_reduction",
+        "spellslinger"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "83f800e5-c168-4fb5-b03d-5bef5d0d0ee6",
+      "name": "Karona, False God Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "donation_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "545661d2-e2bd-4823-9cd3-90a8821cde51",
+      "name": "Kresh the Bloodbraided Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "53d302d0-92b4-408f-a22a-6a17116e441b",
+      "name": "Loxodon Hierarch Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "c5f82905-ffdf-4eb3-85b4-e54789364dd7",
+      "name": "Lyzolda, the Blood Witch Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "92350bb2-0ea2-43cf-bb74-08f2f8e28c13",
+      "name": "Maelstrom Archangel Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_support",
+        "copy_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "a7c26c12-ea89-4938-ad15-9f7b817ac518",
+      "name": "Malfegor Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "c1b6a621-acce-4789-87eb-d3ec932d3608",
+      "name": "Maralen of the Mornsong Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_selection",
+        "restricted_tutor",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "116ef292-7d5e-4b67-b8a2-fcec92d3d4e3",
+      "name": "Maro Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "f6e87b33-499a-4396-9935-6a9fc94dcb45",
+      "name": "Master of the Wild Hunt Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support",
+        "landwalk_support",
+        "self_protection",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "9d16007e-c119-43f9-bdb8-4ea3adf7b135",
+      "name": "Mayael the Anima Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "85c35371-a607-47fb-be61-446fb497dc88",
+      "name": "Mirri the Cursed Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "counter_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "a3b19bb9-57a4-4e5f-84b6-0d4d4707871e",
+      "name": "Mirror Entity Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_finisher",
+        "combat_support",
+        "counter_support",
+        "finisher",
+        "kindred_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "2057571e-3ee0-4100-8fd9-00dedb8a0b2f",
+      "name": "Momir Vig, Simic Visionary Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "copy_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "a3406efc-9926-44df-ac29-e91f1ff42e90",
+      "name": "Morinfen Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Pure drawback avatar text; no analyzer role needed."
+    },
+    {
+      "oracleId": "7e93a3f3-ee5e-4ff0-bd52-90639d8e2811",
+      "name": "Murderous Redcap Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "counter_support",
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "635a872f-50ca-4e9b-841d-21d844058270",
+      "name": "Necropotence Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_draw",
+        "counter_support",
+        "direct_draw",
+        "draw",
+        "hate_piece",
+        "scalable_spell",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "61ec9b93-8c0c-4d8b-9fc1-f5205965a3b7",
+      "name": "Nekrataal Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "e5d807cd-25a0-4ee9-8016-d0e1e2cfb011",
+      "name": "Oni of Wild Places Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "092c3426-57dd-4c65-8579-89d9de76b5a2",
+      "name": "Orcish Squatters Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "burst_ramp",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "3253876a-58e9-413a-83fb-4fd6b9185b8b",
+      "name": "Peacekeeper Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "copy_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "6569e4d8-067b-4639-8388-cd9dc11be857",
+      "name": "Phage the Untouchable Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "a7e888e1-24d8-45bf-8ceb-4a3c3f989376",
+      "name": "Platinum Angel Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "0923e9cb-eb00-493f-8d96-3e8cbfcb92b0",
+      "name": "Prodigal Sorcerer Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_selection",
+        "graveyard_support",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "245aed94-d7d3-4de6-967e-0deab7afc3a4",
+      "name": "Raksha Golden Cub Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "7642a5d4-3889-42bc-87cc-0240ee9b3df6",
+      "name": "Reaper King Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "151190db-f481-419f-92ed-f8820c6e63a4",
+      "name": "Rith, the Awakener Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "4696b1ff-b094-4d6a-8eda-ce8406c7e7df",
+      "name": "Royal Assassin Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "7a56659d-51ad-4f01-a4f9-1bd5f76f364c",
+      "name": "Rumbling Slum Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "direct_finisher",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "513a27a0-1fcf-4c39-b2a9-587afd2e6cba",
+      "name": "Sakashima the Impostor Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "copy_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "4d9defdb-0a88-4dbb-ba3b-f5e05966ac62",
+      "name": "Serra Angel Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "f516b9cc-3e9f-4ddf-a139-f9fdf4eef722",
+      "name": "Seshiro the Anointed Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "kindred_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "0415bb62-819c-4c42-bc76-b9cfa9f5bb51",
+      "name": "Sisters of Stone Death Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "fa019b10-ccbd-45d5-9dcf-b2cf5cdee928",
+      "name": "Sliver Queen Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "copy_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "78225f7c-c56b-464a-9e91-e1d798e3e678",
+      "name": "Squee, Goblin Nabob Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "a22d88eb-4d2f-4515-91d4-6195723c57a2",
+      "name": "Stalking Tiger Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "c11d27dc-ce50-450d-8632-6c3665be2577",
+      "name": "Stonehewer Giant Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "copy_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "0560653f-b78e-48b3-b166-9106a0b8e57d",
+      "name": "Stuffy Doll Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "0c1892ca-ca9c-4c5a-9db1-c100a7b67ea4",
+      "name": "Teysa, Orzhov Scion Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "25973db8-2056-4fe8-9aba-e35c942786f1",
+      "name": "Tradewind Rider Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "6b4e6e53-d998-480e-bd2b-e0b89a6a5711",
+      "name": "Two-Headed Giant of Foriys Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "9427c8eb-0312-49f3-b351-5396b4e0dc0c",
+      "name": "Vampire Nocturnus Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_support",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "37cfa6a7-a695-42d0-b2b0-27c6d6790460",
+      "name": "Viridian Zealot Avatar",
+      "firstSet": "pmoa",
+      "releasedAt": "2003-01-01",
+      "reviewedAt": "2026-06-29T12:50:29.549Z",
+      "actualRoles": [
+        "removal",
+        "restricted_tutor",
+        "sacrifice_support",
+        "targeted_removal",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PMOA role audit."
     }
   ]
 }
