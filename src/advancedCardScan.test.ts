@@ -3210,6 +3210,56 @@ test("inferAdvancedRoleProfile recognizes Prophecy utility wording gaps", () => 
   assert.ok(getRoleWeight(cageProfile, "hate_piece") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Invasion utility wording gaps", () => {
+  const deathProfile = inferAdvancedRoleProfile(
+    createCard("Death or Glory", "Sorcery", 5, "Separate all creature cards in your graveyard into two piles. Exile the pile of an opponent's choice and return the other to the battlefield."),
+  );
+  const ruinProfile = inferAdvancedRoleProfile(
+    createCard("Global Ruin", "Sorcery", 5, "Each player chooses from the lands they control a land of each basic land type, then sacrifices the rest."),
+  );
+  const liberateProfile = inferAdvancedRoleProfile(
+    createCard("Liberate", "Instant", 2, "Exile target creature you control. Return that card to the battlefield under its owner's control at the beginning of the next end step."),
+  );
+  const battleProfile = inferAdvancedRoleProfile(
+    createCard("Psychic Battle", "Enchantment", 5, "Whenever a player chooses one or more targets, each player reveals the top card of their library. The player who reveals the card with the greatest mana value may change the target or targets."),
+  );
+  const plansProfile = inferAdvancedRoleProfile(
+    createCard("Well-Laid Plans", "Enchantment", 3, "Prevent all damage that would be dealt to a creature by another creature if they share a color."),
+  );
+  const bordersProfile = inferAdvancedRoleProfile(
+    createCard("Collapsing Borders", "Enchantment", 4, "Domain - At the beginning of each player's upkeep, that player gains 1 life for each basic land type among lands they control. Then this enchantment deals 3 damage to that player."),
+  );
+  const contestProfile = inferAdvancedRoleProfile(
+    createCard("Mages' Contest", "Instant", 3, "You and target spell's controller bid life. You start the bidding with a bid of 1. The high bidder loses life equal to the high bid. If you win the bidding, counter that spell."),
+  );
+  const raysProfile = inferAdvancedRoleProfile(
+    createCard("Searing Rays", "Sorcery", 3, "Choose a color. Searing Rays deals damage to each player equal to the number of creatures of that color that player controls."),
+  );
+  const fallProfile = inferAdvancedRoleProfile(
+    createCard("Stand or Fall", "Enchantment", 4, "At the beginning of combat on your turn, for each defending player, separate all creatures that player controls into two piles and that player chooses one. Only creatures in the chosen piles can block this turn."),
+  );
+  const instabilityProfile = inferAdvancedRoleProfile(createCard("Tectonic Instability", "Enchantment", 3, "Whenever a land enters, tap all lands its controller controls."));
+  const silkProfile = inferAdvancedRoleProfile(createCard("Whip Silk", "Enchantment — Aura", 1, "Enchant creature Enchanted creature has reach. {G}: Return this Aura to its owner's hand."));
+  const spiteProfile = inferAdvancedRoleProfile(
+    createCard("Barrin's Spite", "Sorcery", 4, "Choose two target creatures controlled by the same player. Their controller chooses and sacrifices one of them. Return the other to its owner's hand."),
+  );
+  const stakesProfile = inferAdvancedRoleProfile(createCard("Juntu Stakes", "Artifact", 2, "Creatures with power 1 or less don't untap during their controllers' untap steps."));
+
+  assert.ok(getRoleWeight(deathProfile, "battlefield_recursion") > 0);
+  assert.ok(getRoleWeight(ruinProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(liberateProfile, "flicker") > 0);
+  assert.ok(getRoleWeight(battleProfile, "broad_stack") > 0);
+  assert.ok(getRoleWeight(plansProfile, "broad_protection") > 0);
+  assert.ok(getRoleWeight(bordersProfile, "group_slug") > 0);
+  assert.ok(getRoleWeight(contestProfile, "soft_stack") > 0);
+  assert.ok(getRoleWeight(raysProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(fallProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(instabilityProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(silkProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(spiteProfile, "removal") > 0);
+  assert.ok(getRoleWeight(stakesProfile, "hate_piece") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

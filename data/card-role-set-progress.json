@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T11:44:00.050Z",
+  "generatedAt": "2026-06-29T11:49:44.221Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 85,
+    "done": 89,
     "inProgress": 0,
-    "pending": 958
+    "pending": 954
   },
   "sets": [
     {
@@ -1207,11 +1207,12 @@
       "setType": "promo",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/ppcy-role-review.tsv"
     },
     {
       "code": "wc00",
@@ -1220,11 +1221,12 @@
       "setType": "memorabilia",
       "cardCount": 117,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 97,
+      "totalUniqueOracleIds": 97,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/wc00-role-review.tsv"
     },
     {
       "code": "btd",
@@ -1233,11 +1235,12 @@
       "setType": "box",
       "cardCount": 90,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 82,
+      "totalUniqueOracleIds": 82,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/btd-role-review.tsv"
     },
     {
       "code": "inv",
@@ -1246,11 +1249,12 @@
       "setType": "expansion",
       "cardCount": 354,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 335,
+      "totalUniqueOracleIds": 335,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/inv-role-review.tsv"
     },
     {
       "code": "pinv",

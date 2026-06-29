@@ -84,10 +84,10 @@ nem	Nemesis	2000-02-14	expansion	143	false	done	143	143	0	true	data/card-role-wo
 pnem	Nemesis Promos	2000-02-14	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pnem-role-review.tsv
 s00	Starter 2000	2000-04-01	starter	20	false	done	20	20	0	true	data/card-role-worksheets/s00-role-review.tsv
 pcy	Prophecy	2000-06-05	expansion	144	false	done	143	143	0	true	data/card-role-worksheets/pcy-role-review.tsv
-ppcy	Prophecy Promos	2000-06-05	promo	1	false	pending	0			false	
-wc00	World Championship Decks 2000	2000-08-02	memorabilia	117	false	pending	0			false	
-btd	Beatdown Box Set	2000-10-01	box	90	false	pending	0			false	
-inv	Invasion	2000-10-02	expansion	354	false	pending	0			false	
+ppcy	Prophecy Promos	2000-06-05	promo	1	false	done	1	1	0	true	data/card-role-worksheets/ppcy-role-review.tsv
+wc00	World Championship Decks 2000	2000-08-02	memorabilia	117	false	done	97	97	0	true	data/card-role-worksheets/wc00-role-review.tsv
+btd	Beatdown Box Set	2000-10-01	box	90	false	done	82	82	0	true	data/card-role-worksheets/btd-role-review.tsv
+inv	Invasion	2000-10-02	expansion	354	false	done	335	335	0	true	data/card-role-worksheets/inv-role-review.tsv
 pinv	Invasion Promos	2000-10-02	promo	1	false	pending	0			false	
 f01	Friday Night Magic 2001	2001-01-01	promo	7	false	pending	0			false	
 g01	Judge Gift Cards 2001	2001-01-01	promo	2	false	pending	0			false	
