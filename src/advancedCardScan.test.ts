@@ -3182,6 +3182,34 @@ test("inferAdvancedRoleProfile recognizes Nemesis utility wording gaps", () => {
   assert.ok(getRoleWeight(switchProfile, "hate_piece") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Prophecy utility wording gaps", () => {
+  const blessedProfile = inferAdvancedRoleProfile(createCard("Blessed Wind", "Sorcery", 9, "Target player's life total becomes 20."));
+  const entanglerProfile = inferAdvancedRoleProfile(createCard("Entangler", "Enchantment — Aura", 4, "Enchant creature Enchanted creature can block any number of creatures."));
+  const denyingProfile = inferAdvancedRoleProfile(createCard("Denying Wind", "Sorcery", 9, "Search target player's library for up to seven cards and exile them. Then that player shuffles."));
+  const vaporsProfile = inferAdvancedRoleProfile(createCard("Mana Vapors", "Sorcery", 2, "Lands target player controls don't untap during their next untap step."));
+  const overburdenProfile = inferAdvancedRoleProfile(
+    createCard("Overburden", "Enchantment", 2, "Whenever a player puts a nontoken creature onto the battlefield, that player returns a land they control to its owner's hand."),
+  );
+  const outbreakProfile = inferAdvancedRoleProfile(
+    createCard("Outbreak", "Sorcery", 4, "You may discard a Swamp card rather than pay this spell's mana cost. Choose a creature type. All creatures of that type get -1/-1 until end of turn."),
+  );
+  const survivorsProfile = inferAdvancedRoleProfile(
+    createCard("Search for Survivors", "Sorcery", 3, "Reorder your graveyard at random. An opponent chooses a card at random in your graveyard. If it's a creature card, put it onto the battlefield. Otherwise, exile it."),
+  );
+  const terrainProfile = inferAdvancedRoleProfile(createCard("Living Terrain", "Enchantment — Aura", 4, "Enchant land Enchanted land is a 5/6 green Treefolk creature that's still a land."));
+  const cageProfile = inferAdvancedRoleProfile(createCard("Root Cage", "Enchantment", 2, "Mercenaries don't untap during their controllers' untap steps."));
+
+  assert.ok(getRoleWeight(blessedProfile, "life_pressure") > 0);
+  assert.ok(getRoleWeight(entanglerProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(denyingProfile, "mill_support") > 0);
+  assert.ok(getRoleWeight(vaporsProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(overburdenProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(outbreakProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(survivorsProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(terrainProfile, "animation_effect") > 0);
+  assert.ok(getRoleWeight(cageProfile, "hate_piece") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

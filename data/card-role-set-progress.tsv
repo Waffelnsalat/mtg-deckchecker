@@ -81,9 +81,9 @@ g00	Judge Gift Cards 2000	2000-01-01	promo	2	false	done	2	2	0	true	data/card-rol
 pal00	Arena League 2000	2000-01-01	promo	11	false	done	11	11	0	true	data/card-role-worksheets/pal00-role-review.tsv
 pelp	European Land Program	2000-02-05	promo	15	false	done	5	5	0	true	data/card-role-worksheets/pelp-role-review.tsv
 nem	Nemesis	2000-02-14	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/nem-role-review.tsv
-pnem	Nemesis Promos	2000-02-14	promo	1	false	pending	0			false	
-s00	Starter 2000	2000-04-01	starter	20	false	pending	0			false	
-pcy	Prophecy	2000-06-05	expansion	144	false	pending	0			false	
+pnem	Nemesis Promos	2000-02-14	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pnem-role-review.tsv
+s00	Starter 2000	2000-04-01	starter	20	false	done	20	20	0	true	data/card-role-worksheets/s00-role-review.tsv
+pcy	Prophecy	2000-06-05	expansion	144	false	done	143	143	0	true	data/card-role-worksheets/pcy-role-review.tsv
 ppcy	Prophecy Promos	2000-06-05	promo	1	false	pending	0			false	
 wc00	World Championship Decks 2000	2000-08-02	memorabilia	117	false	pending	0			false	
 btd	Beatdown Box Set	2000-10-01	box	90	false	pending	0			false	

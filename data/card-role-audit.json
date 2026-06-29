@@ -3031,7 +3031,7 @@
       "name": "Mons's Goblin Raiders",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -9939,7 +9939,7 @@
       "name": "Durkwood Boars",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -42894,7 +42894,7 @@
       "name": "Angelic Blessing",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -43144,7 +43144,7 @@
       "name": "Breath of Life",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "battlefield_recursion",
         "card_selection",
@@ -43952,7 +43952,7 @@
       "name": "Giant Octopus",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -44046,7 +44046,7 @@
       "name": "Hand of Death",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -44222,7 +44222,7 @@
       "name": "Knight Errant",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -44256,7 +44256,7 @@
       "name": "Lava Axe",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -44394,7 +44394,7 @@
       "name": "Monstrous Growth",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -44410,7 +44410,7 @@
       "name": "Moon Sprite",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -45374,7 +45374,7 @@
       "name": "Time Ebb",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "expectedRoles": [
         "removal",
         "tempo_removal"
@@ -61112,7 +61112,7 @@
       "name": "Ogre Warrior",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -61658,7 +61658,7 @@
       "name": "Wild Griffin",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body",
         "combat_threat"
@@ -74049,7 +74049,7 @@
       "name": "Eager Cadet",
       "firstSet": "s99",
       "releasedAt": "1999-07-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -74151,7 +74151,7 @@
       "name": "Royal Falcon",
       "firstSet": "s99",
       "releasedAt": "1999-07-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body",
         "combat_threat"
@@ -74179,7 +74179,7 @@
       "name": "Sea Eagle",
       "firstSet": "s99",
       "releasedAt": "1999-07-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body",
         "combat_threat"
@@ -74282,7 +74282,7 @@
       "name": "Trained Orgg",
       "firstSet": "s99",
       "releasedAt": "1999-07-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -74309,7 +74309,7 @@
       "name": "Vizzerdrix",
       "firstSet": "s99",
       "releasedAt": "1999-07-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -74322,7 +74322,7 @@
       "name": "Willow Elf",
       "firstSet": "s99",
       "releasedAt": "1999-07-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -80297,7 +80297,7 @@
       "name": "Rathi Assassin",
       "firstSet": "nem",
       "releasedAt": "2000-02-14",
-      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "reviewedAt": "2026-06-29T11:43:57.838Z",
       "actualRoles": [
         "cheat_into_play",
         "combat_body",
@@ -80397,7 +80397,7 @@
       "name": "Rhox",
       "firstSet": "nem",
       "releasedAt": "2000-02-14",
-      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "reviewedAt": "2026-06-29T11:43:58.546Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -81122,6 +81122,2116 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d6d7faa8-ecc9-408b-9c46-a0f62c74f567",
+      "name": "Abolish",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "d2e0d739-b441-4173-a8f1-b831a19ea98e",
+      "name": "Agent of Shauku",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "3f60de36-ed63-4d08-a012-fc16e91da46d",
+      "name": "Alexi, Zephyr Mage",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e52eb1a6-fff1-4a47-b434-31a74d76231c",
+      "name": "Alexi's Cloak",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "3495d83a-b103-42be-8708-9ce971b352bd",
+      "name": "Aura Fracture",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4854f836-2247-43c3-adbc-1d1ee5eaf120",
+      "name": "Avatar of Fury",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e2f22cef-9494-4356-aa5c-619aecd7e74d",
+      "name": "Avatar of Hope",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "68d84ffa-5bd0-4ed9-a987-6cef13095438",
+      "name": "Avatar of Might",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "13aa88a0-4b47-4012-ba50-002e51e637cf",
+      "name": "Avatar of Will",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "2da5aa33-3794-4f83-936c-9d8640833d86",
+      "name": "Avatar of Woe",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "45222123-f5e0-48ff-b80c-858727d155d7",
+      "name": "Barbed Field",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "93da4a35-d2d8-476c-ad03-318101c0118b",
+      "name": "Blessed Wind",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "life_pressure",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "82344b5b-7cd9-460d-9966-f09432ed8e59",
+      "name": "Bog Elemental",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "6bff9d3a-a98d-4060-8409-4b81ce5aab15",
+      "name": "Bog Glider",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "combat_threat",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e975a8b3-f817-42f3-84da-b03ebf95cf25",
+      "name": "Branded Brawlers",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "b4971aa3-32d1-4bc7-8133-ed67763d2dc6",
+      "name": "Brutal Suppression",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "c70ae479-0bd1-481c-885f-16bfa096cf58",
+      "name": "Calming Verse",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "92f0677f-64d8-4c83-abad-ffa2a37f88c1",
+      "name": "Celestial Convergence",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "13cfc92c-142a-4016-b86f-ace6bda1a69c",
+      "name": "Chilling Apparition",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "78b364b7-d180-484c-a1d9-9d7a4e8abb57",
+      "name": "Chimeric Idol",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "2233c079-5ca6-4992-8bd2-84dbf9ed53a9",
+      "name": "Citadel of Pain",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "27d672a7-f73b-483d-80a3-a4cd2a9855f2",
+      "name": "Coastal Hornclaw",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e49771ab-cabb-4a5f-aef3-a0ac8147e6bf",
+      "name": "Coffin Puppets",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "efab5a30-74ee-4959-b7cd-2a5d25d18327",
+      "name": "Copper-Leaf Angel",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "c64c0cb5-5a8c-4a2f-a0fc-8b080aaf90bb",
+      "name": "Darba",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "491606d8-e9c1-4f89-bbef-b7590d310097",
+      "name": "Death Charmer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "8daed4d8-1a43-4452-85dd-51b320714489",
+      "name": "Denying Wind",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "mill_support",
+        "topdeck_control"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "77fa18fa-5dba-4e4c-9b24-9bfa9b68779f",
+      "name": "Despoil",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "90b3e2df-182d-4dad-9934-597a048fefc6",
+      "name": "Devastate",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "land_denial",
+        "mass_removal",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "8785f9b4-eea2-4b45-9ae4-194b9a715702",
+      "name": "Diving Griffin",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "7a8fcf6f-3bda-485c-b960-62a37112f0eb",
+      "name": "Dual Nature",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "copy_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e2d54c59-7722-4520-adca-cd02a0871ab2",
+      "name": "Elephant Resurgence",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4ca2511d-76f0-470c-b522-b75fb08932d9",
+      "name": "Endbringer's Revel",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "285cf707-df0c-4eb9-8f60-5d052ee8eb8c",
+      "name": "Entangler",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "9f7b2ec6-a828-499b-a2ac-766bdaaf30c1",
+      "name": "Excavation",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "28e1a613-30ad-4013-be0b-b0365f627201",
+      "name": "Excise",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "df516046-7f83-4d64-aa0d-d687631d919a",
+      "name": "Fault Riders",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "cfd00c0e-d034-4b39-a3d3-f8b8842045dd",
+      "name": "Fen Stalker",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e5cd1024-ec1a-4df9-8bc6-ad2f3f443d06",
+      "name": "Fickle Efreet",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "coin_support",
+        "combat_body",
+        "combat_support",
+        "donation_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "26640648-6400-4b80-a78b-f519ab9cd09e",
+      "name": "Flameshot",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "987b74f4-02cb-4d47-94e5-d58a3c8e92e4",
+      "name": "Flay",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "40155cfb-078a-4359-9551-9c71266d8a1c",
+      "name": "Flowering Field",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "7dde4eb6-e9d7-4259-abc2-3af738e0f00f",
+      "name": "Foil",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "9e5de2ed-e8a1-4d52-832f-c4a1bfdf2ae5",
+      "name": "Forgotten Harvest",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "549e6de7-56e9-4f5c-8c88-30e446bc53bb",
+      "name": "Glittering Lion",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "890ffe31-642f-46e3-9f09-c744351653b5",
+      "name": "Glittering Lynx",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "2b84a10e-4c5c-407f-8b5b-a23d402f0529",
+      "name": "Greel, Mind Raker",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e9e0b78e-07d5-4603-8e3b-27274148d1a1",
+      "name": "Greel's Caress",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "98a60a97-3a43-4544-8ea3-40d0bad79caf",
+      "name": "Gulf Squid",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "1af26f29-627c-48e5-a19d-deb43a11a846",
+      "name": "Hazy Homunculus",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "a69a0720-35fb-450d-8d48-8e51a14ffa49",
+      "name": "Heightened Awareness",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "18ca77d9-4740-4be4-913a-e21c9ed9e43f",
+      "name": "Hollow Warrior",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "c3ce3473-e3bc-4b7c-ae57-957e6c40dc7a",
+      "name": "Infernal Genesis",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support",
+        "mill_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "8426bdb6-b002-4d27-9eaf-d7f8353aa7e8",
+      "name": "Inflame",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "cddf2e46-79dc-4d6f-bb67-db55d966e8e2",
+      "name": "Jeweled Spirit",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "7972d118-c105-4b33-8c3b-ec85da538471",
+      "name": "Jolrael, Empress of Beasts",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "bf71cca7-be71-4429-9cb6-1eb34ff847eb",
+      "name": "Jolrael's Favor",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "d32f973e-38db-4f74-aec6-258d25c1fb7d",
+      "name": "Keldon Arsonist",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4a2df44b-5d36-4c4e-b982-836d9d7e0505",
+      "name": "Keldon Battlewagon",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "7e0b9e67-3103-4299-934b-46d8fe96f553",
+      "name": "Keldon Berserker",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "d5e02fa5-827e-414b-acb5-932de4bb3ee3",
+      "name": "Keldon Firebombers",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "86b2879b-6c54-4d96-ab81-a3f2c87d42d9",
+      "name": "Latulla, Keldon Overseer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "2f3c66db-efc1-4571-a4db-371a3d532615",
+      "name": "Latulla's Orders",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "7e162cc1-9482-4812-8897-209ec2927ec0",
+      "name": "Lesser Gargadon",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "ffa40f10-4efb-48d8-b16e-8a5711fcfad1",
+      "name": "Living Terrain",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "animation_effect",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "cd170b1c-879b-414e-9f0e-5e7fb099e7bb",
+      "name": "Mageta the Lion",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e3e5b12c-2103-4b40-83d8-6d5449179b6f",
+      "name": "Mageta's Boon",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "8e082c95-cdc4-4f29-9915-05f83298f14d",
+      "name": "Mana Vapors",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "246f7446-036d-469c-9583-5699ebdcec6d",
+      "name": "Marsh Boa",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "245e26ec-39eb-4af8-99af-8cc22edbc261",
+      "name": "Mercenary Informer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "19fba3c8-3363-4f2f-a2fb-01e59a77447c",
+      "name": "Mine Bearer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "184fdd23-8235-4500-b2f5-d3b0b93a8f35",
+      "name": "Mirror Strike",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "fe6ff20b-5e4d-44d5-b011-c6e512169294",
+      "name": "Mungha Wurm",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "ce969713-fdaa-4c31-b164-76a9b0b9ff81",
+      "name": "Nakaya Shade",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "c75ec3c6-2786-4386-b758-ac03610f2a99",
+      "name": "Noxious Field",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "05079cee-b190-42d7-b59f-130cb545cab7",
+      "name": "Outbreak",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "8104e454-77f5-4d38-894e-41ed0d74c17c",
+      "name": "Overburden",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "c1346677-d89e-49d0-9819-08805f00bb64",
+      "name": "Panic Attack",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "92cdcafc-ffeb-436d-b2bd-d6ad895d0e08",
+      "name": "Pit Raptor",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "d287c11e-0684-42ed-abdb-758852ed0502",
+      "name": "Plague Fiend",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "18ec721f-c1ac-4581-a61d-2f0b09d6bf92",
+      "name": "Plague Wind",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "66953dfd-d908-41d3-abb4-309c6a165dc3",
+      "name": "Psychic Theft",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "card_selection",
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "2bdd82e7-cbbf-4f12-bcb7-b276df021351",
+      "name": "Pygmy Razorback",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "82372776-bedd-4893-92ad-f1272f9c3250",
+      "name": "Quicksilver Wall",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "85ef10fd-4a48-4a37-baad-f663fb5439e0",
+      "name": "Rebel Informer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "ede61683-fa78-4103-8248-e0e64162ed49",
+      "name": "Rethink",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "scalable_spell",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "2531eb1a-ae24-450a-b8e8-dbbd65eaad64",
+      "name": "Reveille Squad",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "609fbc2c-514a-4feb-aaad-b9e6dcfd335c",
+      "name": "Rhystic Cave",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "bffb7d30-b9a4-4529-a3fc-c82d6cd4b599",
+      "name": "Rhystic Circle",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "d59cfff9-2bce-439a-9456-ae68eabbf67d",
+      "name": "Rhystic Deluge",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "f6d371e6-e25e-4820-8cf7-f692a4d9be11",
+      "name": "Rhystic Lightning",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "7a07971a-bfc3-4d36-ad8a-b9d395cbd6e9",
+      "name": "Rhystic Scrying",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "a905dafa-1818-471a-a485-d84be447263b",
+      "name": "Rhystic Shield",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "53236dd7-845a-444c-96d5-f41ed7325d8f",
+      "name": "Rhystic Study",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "b1eea34a-74ef-4d7c-bf70-c64b3487f296",
+      "name": "Rhystic Syphon",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "1c6da9a9-6395-460b-8150-ea46d7299dc2",
+      "name": "Rhystic Tutor",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "906cba93-3dac-4720-a482-987cf1b4e786",
+      "name": "Rib Cage Spider",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "98b53af9-af1b-4d5d-ae5a-bd444c1339d2",
+      "name": "Ribbon Snake",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "54e7a6d4-d405-4627-93ab-8d8bd945fe02",
+      "name": "Ridgeline Rager",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "14c3a43c-cdb1-45d1-8eba-8e6d16bd7643",
+      "name": "Root Cage",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "9e6e1ea6-4682-4056-b70e-fe45d0c9fdee",
+      "name": "Samite Sanctuary",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "88ef3413-21bc-428a-9803-d275e437c4bd",
+      "name": "Scoria Cat",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "02fd4da6-6c6e-4143-a915-495c668de148",
+      "name": "Search for Survivors",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "b196045d-ece1-46ac-a647-b65f04225c10",
+      "name": "Searing Wind",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "44075eea-ab9d-4252-b77c-597d19a10fc4",
+      "name": "Sheltering Prayers",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "0ca9c400-c62a-49d8-8dce-5caca7f92ed9",
+      "name": "Shield Dancer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "6e0deb42-f876-4fb8-9536-6d9a42bd6e5e",
+      "name": "Shrouded Serpent",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "5ba1595a-6578-459d-96fe-fdfb84ac34d5",
+      "name": "Silt Crawler",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "feb5e9a9-500a-4f20-881d-c97d052953ce",
+      "name": "Snag",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "de56a8d9-faeb-4e73-bdc1-cc81a6b6d05c",
+      "name": "Soul Charmer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "fac310c7-c1e5-42f9-8140-17472be21d0d",
+      "name": "Soul Strings",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "mana_sink",
+        "recursion",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "6568859d-b96d-4015-84da-1a8960752737",
+      "name": "Spiketail Drake",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "8109aeff-1ba7-46c2-89ab-450d6ff99c28",
+      "name": "Spiketail Hatchling",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "24ddcf3c-a4f3-4373-9483-5ce6e50d6150",
+      "name": "Spitting Spider",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "97db6c39-e690-49b6-93a6-e51b8dfad10b",
+      "name": "Spore Frog",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "protection",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "42784364-719a-49ca-b515-64146a8f82e8",
+      "name": "Spur Grappler",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4021b6b4-9b87-4dd5-a5df-79540bedbe87",
+      "name": "Squirrel Wrangler",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e67434e6-5408-416a-be19-64291fca8e3e",
+      "name": "Steal Strength",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "640b67d8-75a4-44d4-a2f5-7323bad4e1a8",
+      "name": "Stormwatch Eagle",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "46569712-1f28-41cb-81be-fd938408c71f",
+      "name": "Sunken Field",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "9ae49b45-a38f-4bd6-aa08-b5a5da6e75a1",
+      "name": "Sword Dancer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "dfbbfbe1-d6c1-4b5b-8d09-949d70b9ff42",
+      "name": "Task Mage Assembly",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "e88915fd-7867-45e6-b4b9-ca0af1823c0d",
+      "name": "Thresher Beast",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "fe3c524e-10b7-485a-9285-973092eeb214",
+      "name": "Thrive",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "counter_support",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "31136103-535a-4d11-819a-1cbd57ad48a4",
+      "name": "Trenching Steed",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4377cc84-19d3-48e0-9588-d18b4fbf4e6d",
+      "name": "Troubled Healer",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "601d9bc3-ca75-43de-beea-ab3f0a49f543",
+      "name": "Troublesome Spirit",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4d59fd2b-7fc6-49a7-8938-d3f08902a5a8",
+      "name": "Verdant Field",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "77a963a3-473a-4c34-bc46-8ef016a92c0c",
+      "name": "Veteran Brawlers",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "0a73b4da-9b5c-480e-b58b-6a82a52ea71e",
+      "name": "Vintara Elephant",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "57c5cbd6-432d-4d48-9fc6-5b8a6eb223f1",
+      "name": "Vintara Snapper",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "98b802f3-4785-41af-adfe-e77d0ae4648c",
+      "name": "Vitalizing Wind",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4fcfe370-ba33-438f-bd96-2ae560f59df9",
+      "name": "Wall of Vipers",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "d63185ac-c7cd-4501-9248-54d6caf7d091",
+      "name": "Well of Discovery",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4e05d1a2-ad53-4f2e-aaea-7ec464b07c04",
+      "name": "Well of Life",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "1e25c9bd-2a6a-4856-80e6-775847a2c89f",
+      "name": "Whip Sergeant",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "c498f0ff-812a-4106-834b-f43a0a7e0bac",
+      "name": "Whipstitched Zombie",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "3f8fa982-73ee-410a-8873-0afc8a6f11fc",
+      "name": "Wild Might",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "58232c49-f880-41ef-b808-62a6e804c715",
+      "name": "Windscouter",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "c593f66d-0e9a-4d46-a9c6-ac7a70bf17ea",
+      "name": "Wing Storm",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "a4a6f95e-856c-4eb5-82ba-b2406be22b23",
+      "name": "Wintermoon Mesa",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_base",
+        "land_denial",
+        "land_slot",
+        "mana_denial",
+        "mana_source",
+        "ramp",
+        "removal",
+        "sacrifice_support",
+        "stax_piece",
+        "tap_untap",
+        "tempo_removal",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "626882c5-15a8-43ea-ab08-33a7e949c88c",
+      "name": "Withdraw",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
+    },
+    {
+      "oracleId": "4520c630-3650-462f-ab01-215eb2bdbbf5",
+      "name": "Zerapa Minotaur",
+      "firstSet": "pcy",
+      "releasedAt": "2000-06-05",
+      "reviewedAt": "2026-06-29T11:43:59.261Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PCY role audit."
     }
   ]
 }
