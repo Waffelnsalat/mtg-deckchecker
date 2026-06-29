@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T11:32:55.799Z",
+  "generatedAt": "2026-06-29T11:36:04.175Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 74,
+    "done": 82,
     "inProgress": 0,
-    "pending": 969
+    "pending": 961
   },
   "sets": [
     {
@@ -1053,11 +1053,12 @@
       "setType": "promo",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pmmq-role-review.tsv"
     },
     {
       "code": "brb",
@@ -1066,11 +1067,12 @@
       "setType": "box",
       "cardCount": 136,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 105,
+      "totalUniqueOracleIds": 105,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/brb-role-review.tsv"
     },
     {
       "code": "psus",
@@ -1079,11 +1081,12 @@
       "setType": "promo",
       "cardCount": 18,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 18,
+      "totalUniqueOracleIds": 18,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/psus-role-review.tsv"
     },
     {
       "code": "fnm",
@@ -1092,11 +1095,12 @@
       "setType": "promo",
       "cardCount": 11,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 11,
+      "totalUniqueOracleIds": 11,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/fnm-role-review.tsv"
     },
     {
       "code": "g00",
@@ -1105,11 +1109,12 @@
       "setType": "promo",
       "cardCount": 2,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 2,
+      "totalUniqueOracleIds": 2,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/g00-role-review.tsv"
     },
     {
       "code": "pal00",
@@ -1118,11 +1123,12 @@
       "setType": "promo",
       "cardCount": 11,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 11,
+      "totalUniqueOracleIds": 11,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pal00-role-review.tsv"
     },
     {
       "code": "pelp",
@@ -1131,11 +1137,12 @@
       "setType": "promo",
       "cardCount": 15,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 5,
+      "totalUniqueOracleIds": 5,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pelp-role-review.tsv"
     },
     {
       "code": "nem",
@@ -1144,11 +1151,12 @@
       "setType": "expansion",
       "cardCount": 143,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 143,
+      "totalUniqueOracleIds": 143,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/nem-role-review.tsv"
     },
     {
       "code": "pnem",

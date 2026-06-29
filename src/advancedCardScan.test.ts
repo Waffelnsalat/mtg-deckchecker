@@ -3160,6 +3160,28 @@ test("inferAdvancedRoleProfile recognizes Mercadian Masques utility wording gaps
   assert.ok(getRoleWeight(pawnshopProfile, "self_bounce") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Nemesis utility wording gaps", () => {
+  const barrierProfile = inferAdvancedRoleProfile(createCard("Aether Barrier", "Enchantment", 3, "Whenever a player casts a creature spell, that player sacrifices a permanent of their choice unless they pay {1}."));
+  const moonProfile = inferAdvancedRoleProfile(createCard("Pale Moon", "Instant", 2, "Until end of turn, if a player taps a nonbasic land for mana, it produces colorless mana instead of any other type."));
+  const disciplineProfile = inferAdvancedRoleProfile(createCard("Stronghold Discipline", "Sorcery", 4, "Each player loses 1 life for each creature they control."));
+  const riftProfile = inferAdvancedRoleProfile(createCard("Flame Rift", "Sorcery", 2, "Flame Rift deals 4 damage to each player."));
+  const gambitProfile = inferAdvancedRoleProfile(
+    createCard("Stronghold Gambit", "Sorcery", 2, "Each player chooses a card in their hand. Then each player reveals their chosen card. The owner of each creature card revealed this way with the lowest mana value puts it onto the battlefield."),
+  );
+  const armorProfile = inferAdvancedRoleProfile(createCard("Belbe's Armor", "Artifact", 3, "{X}, {T}: Target creature gets -X/+X until end of turn."));
+  const switchProfile = inferAdvancedRoleProfile(
+    createCard("Kill Switch", "Artifact", 3, "{2}, {T}: Tap all other artifacts. They don't untap during their controllers' untap steps for as long as this artifact remains tapped."),
+  );
+
+  assert.ok(getRoleWeight(barrierProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(moonProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(disciplineProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(riftProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(gambitProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(armorProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(switchProfile, "hate_piece") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

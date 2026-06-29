@@ -73,14 +73,14 @@ pwor	World Championship Promos	1999-08-04	promo	2	false	done	2	2	0	true	data/car
 wc99	World Championship Decks 1999	1999-08-04	memorabilia	111	false	done	86	86	0	true	data/card-role-worksheets/wc99-role-review.tsv
 pwos	Wizards of the Coast Online Store	1999-09-04	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pwos-role-review.tsv
 mmq	Mercadian Masques	1999-10-04	expansion	350	false	done	335	335	0	true	data/card-role-worksheets/mmq-role-review.tsv
-pmmq	Mercadian Masques Promos	1999-10-04	promo	1	false	pending	0			false	
-brb	Battle Royale Box Set	1999-11-12	box	136	false	pending	0			false	
-psus	Junior Super Series	1999-12-01	promo	18	false	pending	0			false	
-fnm	Friday Night Magic 2000	2000-01-01	promo	11	false	pending	0			false	
-g00	Judge Gift Cards 2000	2000-01-01	promo	2	false	pending	0			false	
-pal00	Arena League 2000	2000-01-01	promo	11	false	pending	0			false	
-pelp	European Land Program	2000-02-05	promo	15	false	pending	0			false	
-nem	Nemesis	2000-02-14	expansion	143	false	pending	0			false	
+pmmq	Mercadian Masques Promos	1999-10-04	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pmmq-role-review.tsv
+brb	Battle Royale Box Set	1999-11-12	box	136	false	done	105	105	0	true	data/card-role-worksheets/brb-role-review.tsv
+psus	Junior Super Series	1999-12-01	promo	18	false	done	18	18	0	true	data/card-role-worksheets/psus-role-review.tsv
+fnm	Friday Night Magic 2000	2000-01-01	promo	11	false	done	11	11	0	true	data/card-role-worksheets/fnm-role-review.tsv
+g00	Judge Gift Cards 2000	2000-01-01	promo	2	false	done	2	2	0	true	data/card-role-worksheets/g00-role-review.tsv
+pal00	Arena League 2000	2000-01-01	promo	11	false	done	11	11	0	true	data/card-role-worksheets/pal00-role-review.tsv
+pelp	European Land Program	2000-02-05	promo	15	false	done	5	5	0	true	data/card-role-worksheets/pelp-role-review.tsv
+nem	Nemesis	2000-02-14	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/nem-role-review.tsv
 pnem	Nemesis Promos	2000-02-14	promo	1	false	pending	0			false	
 s00	Starter 2000	2000-04-01	starter	20	false	pending	0			false	
 pcy	Prophecy	2000-06-05	expansion	144	false	pending	0			false	

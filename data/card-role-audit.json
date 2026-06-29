@@ -76,7 +76,7 @@
       "name": "Air Elemental",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -874,7 +874,7 @@
       "name": "Control Magic",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "removal",
         "tempo_removal",
@@ -886,7 +886,8 @@
         "theft_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by BRB role audit."
     },
     {
       "oracleId": "a24e05fb-dffb-4400-b4ca-22fdde45e7a7",
@@ -941,7 +942,7 @@
       "name": "Counterspell",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:38.421Z",
       "expectedRoles": [
         "hard_stack",
         "stack"
@@ -989,7 +990,7 @@
       "name": "Crusade",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -1053,7 +1054,7 @@
       "name": "Dark Ritual",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "burst_ramp",
         "ramp"
@@ -1213,7 +1214,7 @@
       "name": "Disenchant",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -1734,7 +1735,7 @@
       "name": "Forest",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:45.191Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -1839,7 +1840,7 @@
       "name": "Giant Growth",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -2029,7 +2030,7 @@
       "name": "Healing Salve",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "lifegain",
         "protection",
@@ -2161,7 +2162,7 @@
       "name": "Hurricane",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "damage_engine",
         "direct_finisher",
@@ -2355,7 +2356,7 @@
       "name": "Island",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:45.191Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -2772,7 +2773,7 @@
       "name": "Llanowar Elves",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "combat_body",
         "ramp",
@@ -2792,7 +2793,7 @@
       "name": "Lord of Atlantis",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -3346,7 +3347,7 @@
       "name": "Pestilence",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "mass_removal",
         "sacrifice_support"
@@ -3461,7 +3462,7 @@
       "name": "Plains",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:45.191Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -3560,7 +3561,7 @@
       "name": "Prodigal Sorcerer",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -3852,7 +3853,7 @@
       "name": "Royal Assassin",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -3864,7 +3865,8 @@
         "targeted_removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by PSUS role audit."
     },
     {
       "oracleId": "068b3692-411b-44d4-a7e9-005262760cfc",
@@ -4005,7 +4007,7 @@
       "name": "Scryb Sprites",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -4015,7 +4017,8 @@
         "combat_threat"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by BRB role audit."
     },
     {
       "oracleId": "c16495fc-784d-4bac-9a68-ed437008df73",
@@ -4064,7 +4067,7 @@
       "name": "Sengir Vampire",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -4080,7 +4083,8 @@
         "sacrifice_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by BRB role audit."
     },
     {
       "oracleId": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
@@ -4362,7 +4366,7 @@
       "name": "Stone Rain",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "land_denial",
         "removal",
@@ -4419,7 +4423,7 @@
       "name": "Swamp",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:45.191Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -4441,7 +4445,7 @@
       "name": "Swords to Plowshares",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "lifegain",
         "removal",
@@ -4481,7 +4485,7 @@
       "name": "Terror",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -4643,7 +4647,7 @@
       "name": "Tranquility",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -4838,7 +4842,7 @@
       "name": "Uthden Troll",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "protection",
@@ -5202,17 +5206,19 @@
       "name": "Weakness",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
       ],
       "actualRoles": [
+        "combat_support",
         "removal",
         "targeted_removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by BRB role audit."
     },
     {
       "oracleId": "5aa12aff-db3c-4be5-822b-3afdf536b33e",
@@ -5378,7 +5384,7 @@
       "name": "Wrath of God",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -5691,7 +5697,7 @@
       "name": "City of Brass",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -6535,7 +6541,7 @@
       "name": "Mountain",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:45.191Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -6759,7 +6765,7 @@
       "name": "Sandstorm",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -9091,7 +9097,7 @@
       "name": "Azure Drake",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-21T17:43:18.829Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -11665,7 +11671,7 @@
       "name": "Land Tax",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-21T17:43:18.829Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "direct_tutor",
         "land_acceleration",
@@ -11675,7 +11681,6 @@
         "tutor"
       ],
       "actualRoles": [
-        "direct_tutor",
         "land_acceleration",
         "land_tutor",
         "mana_fixing",
@@ -13487,7 +13492,7 @@
       "name": "Syphon Soul",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "lifegain"
       ],
@@ -14243,7 +14248,7 @@
       "name": "Wall of Heat",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-21T17:43:18.829Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -14393,7 +14398,7 @@
       "name": "Whirling Dervish",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-26T06:56:08.423Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "expectedRoles": [
         "combat_body",
         "counter_support",
@@ -15383,7 +15388,7 @@
       "name": "Flood",
       "firstSet": "drk",
       "releasedAt": "1994-08-01",
-      "reviewedAt": "2026-06-21T18:02:19.356Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "removal",
         "tempo_removal"
@@ -19211,7 +19216,7 @@
       "name": "Ascendant Evincar",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -19581,7 +19586,7 @@
       "name": "Duress",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:43.036Z",
       "expectedRoles": [
         "hand_attack"
       ],
@@ -20091,7 +20096,7 @@
       "name": "Parallax Dementia",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
       "expectedRoles": [
         "combat_support",
         "counter_support",
@@ -20315,7 +20320,7 @@
       "name": "Shock",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -20869,7 +20874,7 @@
       "name": "Abyssal Specter",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -21487,7 +21492,7 @@
       "name": "Blinking Spirit",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-26T06:42:54.451Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -24557,7 +24562,7 @@
       "name": "Lhurgoyf",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-26T06:56:08.423Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -24877,7 +24882,7 @@
       "name": "Mind Warp",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "hand_info",
         "mana_sink",
@@ -25785,7 +25790,7 @@
       "name": "Ray of Command",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_support",
         "tap_untap",
@@ -25995,7 +26000,7 @@
       "name": "Scaled Wurm",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -31770,7 +31775,7 @@
       "name": "Pillage",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:43.036Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -34825,7 +34830,7 @@
       "name": "Enlightened Tutor",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:43.036Z",
       "expectedRoles": [
         "restricted_tutor",
         "tutor"
@@ -36769,7 +36774,7 @@
       "name": "Pacifism",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_support",
         "removal",
@@ -37743,7 +37748,7 @@
       "name": "Sewer Rats",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -38153,7 +38158,7 @@
       "name": "Stupor",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:43.036Z",
       "expectedRoles": [
         "hand_attack",
         "removal"
@@ -38893,7 +38898,7 @@
       "name": "Village Elder",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-25T09:53:41.008Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "protection",
@@ -38955,7 +38960,7 @@
       "name": "Volcanic Geyser",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
@@ -39157,7 +39162,7 @@
       "name": "Wildfire Emissary",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-26T06:56:08.423Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -40705,7 +40710,7 @@
       "name": "Infantry Veteran",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -41039,7 +41044,7 @@
       "name": "Longbow Archer",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -41075,7 +41080,7 @@
       "name": "Man-o'-War",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -41263,7 +41268,7 @@
       "name": "Nekrataal",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -41689,7 +41694,7 @@
       "name": "River Boa",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -42033,7 +42038,7 @@
       "name": "Sun Clasp",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-25T14:48:58.217Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -42313,7 +42318,7 @@
       "name": "Uktabi Orangutan",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:43.036Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -42371,7 +42376,7 @@
       "name": "Vampiric Tutor",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:38.421Z",
       "expectedRoles": [
         "direct_tutor",
         "tutor"
@@ -42923,7 +42928,7 @@
       "name": "Armored Pegasus",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -44003,7 +44008,7 @@
       "name": "Gorilla Warrior",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -44723,7 +44728,7 @@
       "name": "Raging Goblin",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -44939,7 +44944,7 @@
       "name": "Seasoned Marshal",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -45551,7 +45556,7 @@
       "name": "Volcanic Hammer",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -45657,7 +45662,7 @@
       "name": "Wind Drake",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -49781,7 +49786,7 @@
       "name": "Dirtcowl Wurm",
       "firstSet": "ptmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "counter_support"
@@ -49819,7 +49824,7 @@
       "name": "Advance Scout",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -50269,7 +50274,7 @@
       "name": "Broken Fall",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "protection",
         "regeneration_protection",
@@ -50425,7 +50430,7 @@
       "name": "Chill",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:43.036Z",
       "expectedRoles": [
         "hate_piece",
         "stax_piece"
@@ -50471,7 +50476,7 @@
       "name": "Cinder Marsh",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -52391,7 +52396,7 @@
       "name": "Lightning Elemental",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -52411,7 +52416,7 @@
       "name": "Living Death",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "battlefield_recursion",
         "mass_recursion",
@@ -52591,7 +52596,7 @@
       "name": "Manta Riders",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -52649,7 +52654,7 @@
       "name": "Master Decoy",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -52879,7 +52884,7 @@
       "name": "Mogg Hollows",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -53295,7 +53300,7 @@
       "name": "Pincher Beetles",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "self_protection"
@@ -53507,7 +53512,7 @@
       "name": "Reanimate",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "battlefield_recursion"
       ],
@@ -53673,7 +53678,7 @@
       "name": "Rolling Thunder",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
@@ -53909,7 +53914,7 @@
       "name": "Sadistic Glee",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "counter_support",
         "sacrifice_support"
@@ -54175,7 +54180,7 @@
       "name": "Seeker of Skybreak",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "tap_untap",
@@ -54521,7 +54526,7 @@
       "name": "Soltari Foot Soldier",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -54599,7 +54604,7 @@
       "name": "Soltari Priest",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -54801,7 +54806,7 @@
       "name": "Staunch Defenders",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:33:36.336Z",
       "expectedRoles": [
         "combat_body",
         "lifegain"
@@ -54991,7 +54996,7 @@
       "name": "Thalakos Lowlands",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -55183,7 +55188,7 @@
       "name": "Trumpeting Armodon",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -55243,7 +55248,7 @@
       "name": "Vec Townships",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -56745,7 +56750,7 @@
       "name": "Mana Leak",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "soft_stack",
         "stack"
@@ -57373,7 +57378,7 @@
       "name": "Shard Phoenix",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-26T07:05:40.570Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "expectedRoles": [
         "card_selection",
         "combat_body",
@@ -57631,7 +57636,7 @@
       "name": "Spike Colony",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-26T07:05:40.570Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "counter_support"
@@ -57649,7 +57654,7 @@
       "name": "Spike Feeder",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "counter_support",
@@ -57689,7 +57694,7 @@
       "name": "Spike Worker",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-26T07:05:40.570Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "expectedRoles": [
         "combat_body",
         "counter_support"
@@ -58990,12 +58995,13 @@
       "name": "Maniacal Rage",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by BRB role audit."
     },
     {
       "oracleId": "5801f773-e214-413d-968d-b84bf99f0642",
@@ -59398,13 +59404,14 @@
       "name": "Plated Rootwalla",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by BRB role audit."
     },
     {
       "oracleId": "eed2606b-9a27-4af3-8120-c45a1d6b5c00",
@@ -59743,13 +59750,14 @@
       "name": "Skyshroud Elite",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by BRB role audit."
     },
     {
       "oracleId": "c6ad434b-6e34-439b-8046-f0047c06e371",
@@ -59824,7 +59832,7 @@
       "name": "Soul Warden",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "lifegain"
@@ -59920,7 +59928,7 @@
       "name": "Spike Weaver",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "broad_protection",
         "combat_body",
@@ -63090,7 +63098,7 @@
       "name": "Angelic Page",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -63133,7 +63141,7 @@
       "name": "Arc Lightning",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -63161,7 +63169,7 @@
       "name": "Argothian Elder",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "stable_ramp"
@@ -63472,7 +63480,7 @@
       "name": "Cackling Fiend",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "hand_attack",
@@ -63531,7 +63539,7 @@
       "name": "Catastrophe",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "hate_piece",
         "land_denial",
@@ -63813,7 +63821,7 @@
       "name": "Crazed Skirge",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "combat_threat"
@@ -63859,7 +63867,7 @@
       "name": "Curfew",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "removal",
         "tempo_removal"
@@ -64027,7 +64035,7 @@
       "name": "Disruptive Student",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "soft_stack",
@@ -64090,7 +64098,7 @@
       "name": "Drifting Meadow",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -64184,7 +64192,7 @@
       "name": "Elvish Lyrist",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "actualRoles": [
         "combat_body",
         "removal",
@@ -64243,7 +64251,7 @@
       "name": "Exhume",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "mass_recursion"
       ],
@@ -64337,7 +64345,7 @@
       "name": "Fecundity",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -64355,7 +64363,7 @@
       "name": "Fertile Ground",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "mana_fixing",
         "stable_ramp"
@@ -64382,7 +64390,7 @@
       "name": "Fire Ants",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -64519,7 +64527,7 @@
       "name": "Glorious Anthem",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "actualRoles": [
         "combat_support"
       ],
@@ -64723,7 +64731,7 @@
       "name": "Heat Ray",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "mana_sink",
         "mass_removal",
@@ -65559,7 +65567,7 @@
       "name": "Phyrexian Ghoul",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -65636,7 +65644,7 @@
       "name": "Polluted Mire",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -65870,7 +65878,7 @@
       "name": "Remote Isle",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -66122,7 +66130,7 @@
       "name": "Sanctum Custodian",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "protection",
@@ -66137,7 +66145,7 @@
       "name": "Sanctum Guardian",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_body",
         "sacrifice_support"
@@ -66250,7 +66258,7 @@
       "name": "Serra Avatar",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
@@ -66436,7 +66444,7 @@
       "name": "Shower of Sparks",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -66528,7 +66536,7 @@
       "name": "Slippery Karst",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -66617,7 +66625,7 @@
       "name": "Songstitcher",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "broad_protection",
         "combat_body",
@@ -66710,7 +66718,7 @@
       "name": "Steam Blast",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "damage_engine",
         "group_slug",
@@ -66772,7 +66780,7 @@
       "name": "Symbiosis",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "combat_support"
       ],
@@ -66828,7 +66836,7 @@
       "name": "Thran Quarry",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "actualRoles": [
         "land_base",
         "land_slot",
@@ -67019,7 +67027,7 @@
       "name": "Unnerve",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "hand_attack",
         "removal"
@@ -67433,7 +67441,7 @@
       "name": "Windfall",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "card_draw",
         "hand_attack"
@@ -68591,7 +68599,7 @@
       "name": "Opportunity",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "card_draw"
       ],
@@ -69164,7 +69172,7 @@
       "name": "Subversion",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:33:31.950Z",
       "actualRoles": [
         "direct_finisher",
         "finisher",
@@ -77095,7 +77103,7 @@
       "name": "Overtaker",
       "firstSet": "mmq",
       "releasedAt": "1999-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:29.019Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -78668,7 +78676,7 @@
       "name": "Two-Headed Dragon",
       "firstSet": "mmq",
       "releasedAt": "1999-10-04",
-      "reviewedAt": "2026-06-29T11:32:55.008Z",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -78952,6 +78960,2168 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by MMQ role audit."
+    },
+    {
+      "oracleId": "7e40f37c-9a0c-40e0-b195-7ea94b12f798",
+      "name": "Elvish Champion",
+      "firstSet": "psus",
+      "releasedAt": "1999-12-01",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PSUS role audit."
+    },
+    {
+      "oracleId": "b582b696-17fa-4eea-8124-293f9bd3a208",
+      "name": "Mad Auntie",
+      "firstSet": "psus",
+      "releasedAt": "1999-12-01",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PSUS role audit."
+    },
+    {
+      "oracleId": "e3afc704-220f-498f-9eaa-0821b17dc24c",
+      "name": "Sakura-Tribe Elder",
+      "firstSet": "psus",
+      "releasedAt": "1999-12-01",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
+      "actualRoles": [
+        "combat_body",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PSUS role audit."
+    },
+    {
+      "oracleId": "ea1af948-686d-4b40-ad4e-cb48a0258269",
+      "name": "Slith Firewalker",
+      "firstSet": "psus",
+      "releasedAt": "1999-12-01",
+      "reviewedAt": "2026-06-29T11:33:34.157Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PSUS role audit."
+    },
+    {
+      "oracleId": "1ca25379-d194-4670-a7bf-525ad11cf436",
+      "name": "Accumulated Knowledge",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "0fe602b7-9f88-4d3d-af24-7790df867ed5",
+      "name": "Aether Barrier",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "25c8a3b0-c393-4fc6-a373-808cd8e9850c",
+      "name": "Air Bladder",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "8e1d3722-9bd1-4ab7-b4a5-9265fca3aba9",
+      "name": "Ancient Hydra",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "37162c6e-ac31-4386-9d1e-76aa66070b35",
+      "name": "Angelic Favor",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cost_reduction",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "b2bd58ea-b2c6-47f1-b082-7969f093bbc6",
+      "name": "Animate Land",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "land_animation"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "011bb6cc-f1a1-4790-befc-373acabf63b8",
+      "name": "Arc Mage",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "62009b63-ca6c-4fb0-8c9a-eccdec51cb18",
+      "name": "Avenger en-Dal",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "2836c144-7268-411a-b651-351cc4ef8fe9",
+      "name": "Battlefield Percher",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "1650d85f-4c65-429d-8952-f68b62935a55",
+      "name": "Belbe's Armor",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "81b51bb1-89b9-46a0-ad7a-a43c0d214f11",
+      "name": "Belbe's Percher",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "46e50ee9-91f8-416e-82fa-f1a76e61fb73",
+      "name": "Belbe's Portal",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d6ee8bd6-0207-46ee-9892-c1d1b23b934e",
+      "name": "Blastoderm",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "cb479ce1-59e8-4531-9a21-f7c97d334817",
+      "name": "Blinding Angel",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "13f41253-364f-40a5-a7cd-84d8785b2460",
+      "name": "Bola Warrior",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "ce8750d4-1b74-4b02-afd8-6b639c1a9a78",
+      "name": "Carrion Wall",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "8aae3a28-dcf3-460e-89f9-4b0c96d6f55e",
+      "name": "Chieftain en-Dal",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "648e4072-b991-46fd-b057-1e807091dcdf",
+      "name": "Cloudskate",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "75dcdf05-b392-4a96-98ae-5ec4cd425eee",
+      "name": "Coiling Woodworm",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e4951b4e-ba68-495c-8062-e89250d02cf3",
+      "name": "Complex Automaton",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "885630a8-c43b-4804-acd6-14a7c7321d73",
+      "name": "Dark Triumph",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "70486bee-6ee7-41ea-b834-8caf4699302b",
+      "name": "Daze",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d445032b-b243-4203-9c88-a0ac357fb9b5",
+      "name": "Death Pit Offering",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "bb8a55a5-596e-427c-b745-4de8b0dfb095",
+      "name": "Defender en-Vec",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "dc206e6a-e447-48d4-a91a-7c746320e2b4",
+      "name": "Defiant Falcon",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "combat_threat",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "680766e2-637b-40bc-a15f-0b4dc55bd619",
+      "name": "Defiant Vanguard",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "ebd77c52-97ea-421f-99eb-c6e2263cdecf",
+      "name": "Divining Witch",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "combat_body",
+        "draw",
+        "restricted_tutor",
+        "selection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "77db8db4-9fe4-478e-b919-5348b0b87b0d",
+      "name": "Dominate",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "mana_sink",
+        "removal",
+        "scalable_spell",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "8018419c-ea19-499b-a33a-7c20b35bce7b",
+      "name": "Downhill Charge",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "df197279-ddb2-4237-8bb1-8df41d3bed9e",
+      "name": "Ensnare",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e0af613a-05ba-438d-ba74-3f6a9958576c",
+      "name": "Eye of Yawgmoth",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "34e56412-4649-481d-be51-357b331d0b75",
+      "name": "Fanatical Devotion",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "28479aa8-d1cd-421a-8bbb-0594bb4dd410",
+      "name": "Flame Rift",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "direct_finisher",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "0993c5f1-1e8f-4871-9904-6c5a00405f36",
+      "name": "Flint Golem",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "81f44bac-d28c-4dc1-922c-f4ebda817276",
+      "name": "Flowstone Armor",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "cc18fcfc-bfe8-41d8-9037-5ff05b2a9c44",
+      "name": "Flowstone Crusher",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "89a3a6a3-e5f9-4e28-8372-99219db3f976",
+      "name": "Flowstone Overseer",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "ad779760-1197-4248-8e21-7a048122640f",
+      "name": "Flowstone Slide",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d67048eb-eaf1-4b5b-a8e3-a004bab438f3",
+      "name": "Flowstone Strike",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "fb1755a0-3334-419b-8cb5-5a3ac7fa5b13",
+      "name": "Flowstone Surge",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "a3169d1a-fd8d-474e-9e9f-1bd7db510e8b",
+      "name": "Flowstone Thopter",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "5fa86b45-1d5b-42df-8811-6a10903f3039",
+      "name": "Flowstone Wall",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "eb8ff6c1-f9b4-4dae-8f46-0f1ad4c05355",
+      "name": "Fog Patch",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "6f82b01d-8975-42a1-87e2-99782272bbea",
+      "name": "Harvest Mage",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "081764b4-ef96-44aa-836c-05353efd215c",
+      "name": "Infiltrate",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "3b71aeee-a4a8-46d3-9973-06db14d8bf6c",
+      "name": "Jolting Merfolk",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "sacrifice_support",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "0cd5eef6-6830-4c6d-8578-2726900c39a5",
+      "name": "Kill Switch",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "276cece9-f9f2-46e6-ae76-daddaa2fb9ab",
+      "name": "Kor Haven",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "f973daa7-241e-4eb7-9d98-9ea7557caa3a",
+      "name": "Laccolith Grunt",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "0b583980-1508-4247-8a28-7127241d8ec0",
+      "name": "Laccolith Rig",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "0d9ac5e0-2b4e-4e7b-937e-9e9bfce7e96b",
+      "name": "Laccolith Titan",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "bf957e0b-3070-4a85-a63d-3dadd7364d53",
+      "name": "Laccolith Warrior",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "b16b10ec-a6a3-4bda-a561-9b7bb8eee194",
+      "name": "Laccolith Whelp",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "98d790c0-985f-44a4-b247-0951beea7637",
+      "name": "Lashknife",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "cost_reduction"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "15cc92c0-76ce-4b97-b1a2-a7d58bbfe857",
+      "name": "Lawbringer",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "8656d9c1-d890-4473-9da8-7ec339d7d546",
+      "name": "Lightbringer",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "6c3847b6-9bfb-49b5-8f1a-bdb40e6900f1",
+      "name": "Lin Sivvi, Defiant Hero",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "library_recursion",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "scalable_spell",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "1c09f2d1-413b-4a92-aa39-99c1a2106814",
+      "name": "Mana Cache",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "counter_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "ce1866e9-28de-4bcc-9999-11958e6c13a6",
+      "name": "Massacre",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "47e79913-322e-4ba6-9bf8-3b4c1c82a6c4",
+      "name": "Mind Slash",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "hand_attack",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "4af20f8c-2ba0-49d5-a64e-d3668cec30cd",
+      "name": "Mind Swords",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "1c2117d5-4600-489c-be5b-dc0ed69b30ca",
+      "name": "Mogg Alarm",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "0923ad85-2ea4-4463-8f71-b7d0a162b486",
+      "name": "Mogg Salvage",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "77c7ba06-d247-421d-9e0c-54c3000c1b78",
+      "name": "Mogg Toady",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "4845dc21-7534-4896-b298-4d44cd7a3b27",
+      "name": "Moggcatcher",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "95cc3652-b78b-473b-84cf-0dd3a7006219",
+      "name": "Mossdog",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "a2fe1e2b-b621-4406-b5e0-f2eebd12c2ba",
+      "name": "Murderous Betrayal",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "3160dada-d59f-4f23-8420-ba14f9df7514",
+      "name": "Nesting Wurm",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "8cd65dcd-e36d-47b1-b011-961c79004cb0",
+      "name": "Netter en-Dal",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "1aa1e34c-b2ff-4750-9e73-5707a8f49bfb",
+      "name": "Noble Stand",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "38d9401e-2840-455d-8478-8c976588d4ab",
+      "name": "Off Balance",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "f4bc6674-8586-4dd9-ad3a-87ba704fda7a",
+      "name": "Oracle's Attendants",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "7d086ae5-738c-4685-80ae-66bd9379d8f7",
+      "name": "Oraxid",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e5818ab3-8c37-4063-9e9d-cbe4ae0bba14",
+      "name": "Overlaid Terrain",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "ramp",
+        "sacrifice_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "3ee41993-9d14-43a8-bf92-433c4f3aab01",
+      "name": "Pack Hunt",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "78e3a3c3-3091-46ab-a47a-86b7db68ced4",
+      "name": "Pale Moon",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "b8944199-9d33-4126-b529-b52e9f0116ff",
+      "name": "Parallax Inhibitor",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "40fbcf4b-d79e-4e6b-bcec-1d1544b3c4a2",
+      "name": "Parallax Nexus",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e36a92be-537d-4a63-858a-afaab064fbf7",
+      "name": "Parallax Tide",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "0accfb04-bc8b-4cab-997a-2337ac42db8f",
+      "name": "Parallax Wave",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "counter_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e8d12d8e-afd2-438b-b121-5911fca479f9",
+      "name": "Phyrexian Driver",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "128ec451-97f6-4f01-8929-689fd4c45f40",
+      "name": "Phyrexian Prowler",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "532ab335-4873-405b-84b3-c447207172b5",
+      "name": "Plague Witch",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "647c1339-9508-4bb9-8e77-ebc3dfdf4069",
+      "name": "Predator, Flagship",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "41d116d7-3b1e-4777-b3c0-54f8ca6b2785",
+      "name": "Rackling",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e10e84a7-d564-487a-ac64-5a001a45ee90",
+      "name": "Rath's Edge",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "1ea0c775-fde0-4a21-b4c2-8bcec0e4f4f8",
+      "name": "Rathi Assassin",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "removal",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "targeted_removal",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "b336d819-f299-4de3-9b23-51f83da59efb",
+      "name": "Rathi Fiend",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "a24f4198-2412-4b73-8e20-4ced3a826301",
+      "name": "Rathi Intimidator",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "combat_support",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "c6f69168-71c2-41a2-ab95-cfd7baf0ba68",
+      "name": "Refreshing Rain",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "c1ebe189-db71-47cd-a763-8cb8c305383a",
+      "name": "Rejuvenation Chamber",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "counter_support",
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e670d1c9-5e28-4df8-aad9-d08d19dc74e9",
+      "name": "Reverent Silence",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "lifegain",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "f6f4c684-2915-4a58-9c4b-487387f7cf73",
+      "name": "Rhox",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "replacement_engine",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d4cbf380-1a05-48ea-9187-de931b00866d",
+      "name": "Rising Waters",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d62e9510-dc41-493f-8289-6e11303884fc",
+      "name": "Rootwater Commando",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "68abaca6-a86a-46e3-b5b8-9860bb6425d2",
+      "name": "Rootwater Thief",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d2179a54-4b45-4b67-a31c-aa1a7bcfda2c",
+      "name": "Rupture",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "mass_removal",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "688c232f-385b-4bd5-aed0-e55059111fb3",
+      "name": "Rusting Golem",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "7b31ecf8-5266-4376-ace0-8b873706c4ea",
+      "name": "Saproling Burst",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "counter_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "3b64051e-d320-4991-bc9e-6e1435a23c17",
+      "name": "Saproling Cluster",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "59e1899f-a9e8-48aa-b3fb-0b7d9fd6859c",
+      "name": "Seahunter",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "name": "Seal of Cleansing",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "71d54ba3-91fe-4a14-8b99-c284b4c75013",
+      "name": "Seal of Doom",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "348a345e-4639-41ca-b015-a5d43459eb64",
+      "name": "Seal of Fire",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "f0801029-bcf7-4bdb-84bf-e88dcaa9dc03",
+      "name": "Seal of Removal",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e41a68b3-e1cb-4f51-bd54-68882d2cc015",
+      "name": "Seal of Strength",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "088a63d4-22d2-4061-8aef-2aa3fc348639",
+      "name": "Shrieking Mogg",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "bf5ceba2-9def-4ff4-9291-740ca90c1c4d",
+      "name": "Silkenfist Fighter",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "5cca974b-1a6c-485f-adc0-81d2b7dca286",
+      "name": "Silkenfist Order",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "c5edfaae-3ecd-41ad-970f-8cecb09bf1e4",
+      "name": "Sivvi's Ruse",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "e02164ba-34f8-4a5f-a05b-dd3ef3f8ceae",
+      "name": "Sivvi's Valor",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cost_reduction",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "77bee041-6f96-44e3-a18c-b52e508b9bdf",
+      "name": "Skyshroud Behemoth",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "376c9d3f-21d3-4251-bb6a-026fa9e1b0e1",
+      "name": "Skyshroud Claim",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "fbd71691-d0fd-4842-913b-fe6096d509a3",
+      "name": "Skyshroud Cutter",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "4f5921c1-b932-4d6b-bb8e-01992578abdc",
+      "name": "Skyshroud Poacher",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "34a160bc-5d7e-483c-b24c-ab30b7d313b0",
+      "name": "Skyshroud Ridgeback",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "4f437f42-1ac5-4681-9b16-4eae9f49bb22",
+      "name": "Skyshroud Sentinel",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "25ae99c5-83b7-428d-b049-8ad40e250696",
+      "name": "Sliptide Serpent",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "0b76bb3b-1ada-4c78-bd13-3464371d4fa0",
+      "name": "Sneaky Homunculus",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "78bbd213-e8f4-40da-aef5-853244e95756",
+      "name": "Spineless Thug",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "91924536-7a2b-44ec-9835-2efa402c83f9",
+      "name": "Spiritual Asylum",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "410acdbc-3a00-49db-a712-ad970d24b363",
+      "name": "Spiteful Bully",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "3c652a31-3b56-4050-9613-d0481e54dfd7",
+      "name": "Stampede Driver",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_finisher",
+        "combat_support",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "1e2c4508-54ad-45c2-b35f-678f8c376b27",
+      "name": "Stronghold Biologist",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "90e46d04-9d53-4a24-aff0-f8c61e1db97d",
+      "name": "Stronghold Discipline",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "direct_finisher",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "797bb53d-b111-41fe-95d7-64cb0f833b22",
+      "name": "Stronghold Gambit",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "50bbbb39-4709-478f-bb51-716c7e4f8323",
+      "name": "Stronghold Machinist",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "dbd86a37-8ac1-4bdb-9ba1-7caee99ab5f7",
+      "name": "Stronghold Zeppelin",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "99427ebe-c00d-4206-84ca-9764f6e952c6",
+      "name": "Submerge",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "c4ea0931-43e0-4214-9e0b-213eee3a7e69",
+      "name": "Tangle Wire",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "counter_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "a949c96c-362c-45a3-bd5c-ce5ce153ee9e",
+      "name": "Terrain Generator",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "75eb30cc-688d-400a-abe3-5319b79fcbae",
+      "name": "Topple",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "ba71eb8a-f9f8-4608-88d8-963a1770d8d4",
+      "name": "Treetop Bracers",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d5a9fd97-535c-4aa4-9777-6cf8a413b6ec",
+      "name": "Trickster Mage",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "38ea22cd-2c5d-4f66-a111-207aca4c67c3",
+      "name": "Vicious Hunger",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "lifegain",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "05b9dccb-2364-4bca-a12e-8cb54a3f3a0b",
+      "name": "Viseling",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "33435856-ea24-4d10-84d5-6872b35b63a3",
+      "name": "Voice of Truth",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "4e11c838-68a7-4c97-b064-a46833cf1d2f",
+      "name": "Volrath the Fallen",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "59015068-6868-4235-981b-96137123c685",
+      "name": "Wandering Eye",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "hand_info"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "29ef65bf-1066-44a5-a2eb-e3670b076647",
+      "name": "Wild Mammoth",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
+    },
+    {
+      "oracleId": "d0653734-9eb7-48c6-9042-65ffdd50fd2a",
+      "name": "Woodripper",
+      "firstSet": "nem",
+      "releasedAt": "2000-02-14",
+      "reviewedAt": "2026-06-29T11:36:03.364Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by NEM role audit."
     }
   ]
 }

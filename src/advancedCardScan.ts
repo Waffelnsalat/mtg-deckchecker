@@ -349,6 +349,7 @@ function detectAdvancedRampRoles(
     /\bput\b[^.]{0,140}\b(?:a|an|target|that|the)?\s*(?:artifact|creature|enchantment|permanent|nonland permanent) card\b[^.]{0,180}\bfrom (?:your hand|among them|among those cards|the top .*? of your library)\b[^.]{0,120}\bonto the battlefield\b/.test(text) ||
     /\beach player may put\b[^.]{0,140}\b(?:artifact|creature|enchantment|land) card from their hand onto the battlefield\b/.test(text) ||
     /\bif all cards revealed this way are creature cards\b[^.]{0,120}\bput those cards onto the battlefield\b/.test(text) ||
+    /\bowner of each creature card revealed this way\b[^.]{0,120}\bputs? it onto the battlefield\b/.test(text) ||
     /\byou may put\b[^.]{0,180}\b(?:artifact|creature|enchantment|permanent|nonland permanent) card\b[^.]{0,180}\bonto the battlefield\b/.test(text) ||
     /\breveal cards? from the top of your library until\b[\s\S]{0,220}\bput those cards onto the battlefield\b/.test(text);
   const untapManaEngine =
@@ -608,6 +609,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\beach nontoken permanent\b[^.]{0,120}\bis sacrificed by its controller\b/.test(text) ||
     /\bfor each creature\b[^.]{0,120}\bits controller sacrifices a permanent\b[^.]{0,120}\bunless they pay\b/.test(text) ||
     /\bwhenever a creature enters\b[^.]{0,120}\bits controller sacrifices a creature or land\b/.test(text) ||
+    /\bwhenever a player casts a creature spell\b[^.]{0,160}\bthat player sacrifices a permanent\b[^.]{0,120}\bunless they pay\b/.test(text) ||
     /\bfor each attacking creature\b[^.]{0,160}\bputs? it on (?:their|its) choice of the top or bottom of (?:their|its) library\b/.test(text) ||
     /\beach creature deals damage to itself equal to its power\b/.test(text) ||
     /\ball creatures get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
@@ -1539,6 +1541,7 @@ function detectAdvancedPurposeRoles(
     /\btarget player activates a mana ability of each land they control\b/.test(text) ||
     /\btap all lands target player controls\b/.test(text) ||
     /\bwhenever enchanted creature becomes blocked\b[^.]{0,120}\btap all lands defending player controls\b/.test(text) ||
+    /\bif a player taps a nonbasic land for mana\b[^.]{0,120}\bit produces colorless mana instead\b/.test(text) ||
     /\bwhenever a land an opponent controls is tapped for mana\b[^.]{0,180}\btap all lands that player controls\b/.test(text) ||
     /\bwhenever a player casts a spell\b[^.]{0,160}\bthat player returns a land they control to its owner'?s hand\b/.test(text) ||
     /\btap (?:x|one|two|three|four|five|six|\d+) target lands?\b/.test(text) ||
@@ -1623,6 +1626,8 @@ function detectAdvancedPurposeRoles(
     /\bdeals damage to target player equal to the number of cards in that player'?s hand\b/.test(text) ||
     /\bdeals damage to that player equal to the number of white cards in their hand\b/.test(text) ||
     /\bdeals damage to each player equal to the number of lands they control\b/.test(text) ||
+    /\beach player loses \d+ life for each creature they control\b/.test(text) ||
+    /\bdeals? \d+ damage to each player\b/.test(text) ||
     /\bdeals? \d+ damage to that player for each card of the chosen type revealed this way\b/.test(text) ||
     /\bdeals? 10 damage to that player\b/.test(text) ||
     /\bdeals damage to each opponent equal to the number of islands that player controls\b/.test(text)
@@ -1668,6 +1673,7 @@ function detectAdvancedPurposeRoles(
     /\beach of them gets? \+\d+\/\+\d+ until end of turn\b/.test(text) ||
     /\bit gets? \+\d+\/\+\d+ until end of turn\b/.test(text) ||
     /\b(?:target creature|creature you control|equipped creature|enchanted creature)\b[^.]{0,140}\bgets? \+\d+\/-\d+\b/.test(text) ||
+    /\btarget creature gets? -x\/\+x until end of turn\b/.test(text) ||
     /\benchanted creature\b[^.]{0,140}\bgets? -(?:x|\d+)\/-(?:y|\d+)\b/.test(text) ||
     combatKeywordSupport ||
     /\bgets? (?:\+\d+\/\+\d+|\+x\/\+x) for each\b/.test(text) ||
@@ -1696,6 +1702,7 @@ function detectAdvancedPurposeRoles(
     ) ||
     /\bnonland permanents don'?t untap during their controllers'? untap steps\b/.test(text) ||
     /\bcreatures played by your opponents enter tapped\b/.test(text) ||
+    /\btap all other artifacts\b[\s\S]{0,180}\bthey don'?t untap during their controllers'? untap steps\b/.test(text) ||
     /\ball creatures lose all abilities and have base power and toughness \d+\/\d+\b/.test(text) ||
     /\ball lands are \d+\/\d+ creatures\b/.test(text) ||
     /\bwhenever a player casts a spell\b[^.]{0,160}\bthat player returns a land they control to its owner'?s hand\b/.test(text) ||
