@@ -19400,7 +19400,7 @@
       "name": "Culling the Weak",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-22T19:26:22.286Z",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
       "expectedRoles": [
         "burst_ramp",
         "ramp",
@@ -42809,7 +42809,7 @@
       "name": "Angelic Blessing",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -43155,7 +43155,7 @@
       "name": "Charging Paladin",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -44643,7 +44643,7 @@
       "name": "Raging Goblin",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -45195,7 +45195,7 @@
       "name": "Theft of Dreams",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
       "expectedRoles": [
         "card_draw",
         "direct_draw",
@@ -45637,7 +45637,7 @@
       "name": "Wood Elves",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
       "expectedRoles": [
         "combat_body",
         "land_acceleration",
@@ -58183,6 +58183,1896 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by Stronghold role audit."
+    },
+    {
+      "oracleId": "2fbf95b4-bcf4-4b5e-b5dc-0294f2b48d3e",
+      "name": "Aether Tide",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "664d982a-5cd8-4289-afb8-fa2e083042c9",
+      "name": "Allay",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "82b9ad93-df75-4417-9746-798db8fe6ba0",
+      "name": "Anarchist",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1f3fb367-60b5-4b36-9604-3064afdac0d9",
+      "name": "Avenging Druid",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "combat_body",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "selection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2a9054ce-7276-4030-901a-cf6aa18f2b62",
+      "name": "Bequeathal",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9ac77cfd-7d78-4c8a-bffc-17649a852114",
+      "name": "Carnophage",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "50d33663-5d83-4e3c-9ed7-074fe29a9fc8",
+      "name": "Cartographer",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "16aea5b3-9f43-4852-b8b8-80e87909b794",
+      "name": "Cat Burglar",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b0479ca4-e925-4aa7-a4fa-f7e01f899ac5",
+      "name": "Cataclysm",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3850479f-1c1e-4a72-ae47-6da2997202e2",
+      "name": "Cinder Crawler",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f161111d-9747-47b3-bb10-3c8bded32e21",
+      "name": "City of Traitors",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "sacrifice_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
+      "name": "Coat of Arms",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9ad86d0e-3363-4d98-b0bb-dc491be1ddd5",
+      "name": "Convalescence",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a4c59feb-e76a-4e08-b296-21c3e61cfc64",
+      "name": "Crashing Boars",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d5e48041-5f21-48e6-bd0c-000f02dfbe8a",
+      "name": "Cunning",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "223fa044-d387-4884-bf4e-75f1b61c6a46",
+      "name": "Curiosity",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "96e244ef-21b9-4795-a881-c3db23b60cc9",
+      "name": "Cursed Flesh",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5fdde593-54cb-4186-974b-df4383f7efe2",
+      "name": "Dauthi Cutthroat",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8847b057-8896-4c72-a11f-3c183b1cc60e",
+      "name": "Dauthi Jackal",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "42bb6537-fa54-43b7-84f2-dea41adc35fd",
+      "name": "Dauthi Warlord",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "28d24add-da3a-4697-8fd2-5106c9225c0e",
+      "name": "Death's Duet",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e04f46d9-43e7-45ef-b59c-1810f30bec72",
+      "name": "Dizzying Gaze",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ae2804c6-fb38-4845-ae21-7f41a766cbba",
+      "name": "Dominating Licid",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0fb94fa4-2aff-4636-ac1b-ed39dc9451a6",
+      "name": "Elven Palisade",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c9046281-dedb-4246-8e5d-7786fe0c41c7",
+      "name": "Elvish Berserker",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a9c44443-85c7-4d0a-82ab-36137151e4e5",
+      "name": "Entropic Specter",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e4f28144-71c8-4393-b383-047529fe8878",
+      "name": "Ephemeron",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cbc052e7-817f-43b0-b8e3-96b1644d798b",
+      "name": "Equilibrium",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4a85cd7e-625b-4043-b7f1-999def26eb36",
+      "name": "Erratic Portal",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f2902dfd-888f-4b02-b8ad-1056f0059fc3",
+      "name": "Ertai, Wizard Adept",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c901805e-c196-4b9d-8d5a-e17367fb37bc",
+      "name": "Exalted Dragon",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f92c2d47-f2f7-43d9-acf3-0145bad1977d",
+      "name": "Fade Away",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fece632b-d8d5-4d3d-a4a7-643293b67538",
+      "name": "Fighting Chance",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "broad_protection",
+        "coin_support",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7f77de5d-1088-42d0-8f68-5633aeab0d74",
+      "name": "Flowstone Flood",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6e26a525-2584-490d-b106-621c1a30e1fd",
+      "name": "Forbid",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "724c8a20-bfb3-4c63-8cfa-5ad4c72ebe2f",
+      "name": "Fugue",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cc87a268-253b-4377-bdc5-474940de8878",
+      "name": "Furnace Brood",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "22c8c952-2713-418e-8259-aea09b4e740b",
+      "name": "Grollub",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "40601061-1b25-4db8-8b99-33324ce945cf",
+      "name": "Hatred",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b59053d5-b5f2-44aa-a29c-7f3908d86577",
+      "name": "High Ground",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "bcc8ce61-a881-42be-ab2c-64351d17f9f8",
+      "name": "Jackalope Herd",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "86dcdffd-c14f-4e06-a74f-d2c727f55b1c",
+      "name": "Keeper of the Beasts",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "50ddd513-e06e-4728-b6cd-981839d0fba6",
+      "name": "Keeper of the Dead",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8cf12b01-7c0a-488f-9527-404a545c70c4",
+      "name": "Keeper of the Flame",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "62d1300f-2b76-42b9-8e6c-f920712cd547",
+      "name": "Keeper of the Light",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "45393fba-b1cc-4db7-b7e0-3851bf421a65",
+      "name": "Keeper of the Mind",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5ace3817-5a98-4eee-b6b9-8c105cea302f",
+      "name": "Killer Whale",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5b3f6817-5d7a-4d83-ad1d-df75b4e1970b",
+      "name": "Kor Chant",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5b287dcc-f853-4df1-8ddf-5b8b2adc2873",
+      "name": "Limited Resources",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "stax_piece",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "adea7db6-634c-4c5d-be40-264b4acffc53",
+      "name": "Mage il-Vec",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "221d0305-94db-4791-9dc7-89ee96c7fcd6",
+      "name": "Mana Breach",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mana_denial",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "482006a0-bb2a-4533-891b-2195da5e0f01",
+      "name": "Manabond",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "land_acceleration",
+        "mana_fixing"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b5dbb212-0399-475b-a831-921f7c76cdc4",
+      "name": "Maniacal Rage",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "5801f773-e214-413d-968d-b84bf99f0642",
+      "name": "Medicine Bag",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f5fd3141-6fd9-4491-9f29-7fd81209bd57",
+      "name": "Memory Crystal",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "67362406-b1ca-49e2-800d-9050bfe8742a",
+      "name": "Merfolk Looter",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fcaa5a54-eb73-4d78-96a3-826d1902f642",
+      "name": "Mind Maggots",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "656afde2-cdf3-4907-a0fc-7ac93f5d3e03",
+      "name": "Mind Over Matter",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "ramp",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e7441107-57b1-4e88-a9d8-3eb7c338ef07",
+      "name": "Mindless Automaton",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "counter_support",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c35111ce-4325-4547-b954-08275a268060",
+      "name": "Mirozel",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f01efb04-ad2b-46fb-852c-dfb7e523e1b7",
+      "name": "Mirri, Cat Warrior",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "36a6925a-621e-47d6-8cb3-1b2886e1986e",
+      "name": "Mogg Assassin",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "coin_support",
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "97589fbb-3bd9-49c9-b8d8-bdc895a7f1e6",
+      "name": "Monstrous Hound",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2b8abae2-dd15-41ee-81ae-6a463723b43e",
+      "name": "Nausea",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "925f11c3-fd32-4aa7-a130-6554b81ad3eb",
+      "name": "Necrologia",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6f885041-3e57-4a69-84f2-fd207ff9f31b",
+      "name": "Null Brooch",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cf0dcb27-f02e-4065-81dc-75fbbb09ea3f",
+      "name": "Oath of Druids",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_selection",
+        "cheat_into_play",
+        "mill_support",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b9490b52-6c3f-437b-b2c2-9e81c4b43b61",
+      "name": "Oath of Ghouls",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "87038354-6762-4069-be34-7d40ae308a8d",
+      "name": "Oath of Lieges",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2b749918-f425-4243-aabb-7350bb74403c",
+      "name": "Oath of Mages",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "da4a5129-b005-4fc6-b175-0416627881db",
+      "name": "Oath of Scholars",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "04c7bb20-6e40-4e79-a0ec-ced920d3491e",
+      "name": "Ogre Shaman",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ae9ca82c-e07e-4a41-a387-0ef7d6df14b6",
+      "name": "Onslaught",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fd8722e1-9c41-4037-ab7e-47e2aa9858a0",
+      "name": "Paladin en-Vec",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "073551ca-2e84-4d49-8484-9890718cc483",
+      "name": "Pandemonium",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f00dd41d-4b11-491a-9e7b-12245092ab77",
+      "name": "Paroxysm",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4f8c5fd7-f280-4b0c-bb84-6ff9b258c50f",
+      "name": "Peace of Mind",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "16b4a48a-fec2-433c-948d-e0b16c961172",
+      "name": "Pegasus Stampede",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7818d6e0-74d8-46ae-94f6-d2a349c9507b",
+      "name": "Penance",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "broad_protection",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f536acf3-ff8e-48da-8509-00e7ce4a1678",
+      "name": "Pit Spawn",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f8cc1dc4-740d-4c5b-ac51-7355730a6595",
+      "name": "Plaguebearer",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e20b80f2-9913-4886-a61b-04f3fd27c2ad",
+      "name": "Plated Rootwalla",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "eed2606b-9a27-4af3-8120-c45a1d6b5c00",
+      "name": "Predatory Hunger",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "e9da499c-fa43-4e94-8395-5c030ff39502",
+      "name": "Price of Progress",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6f18f41e-df8d-4b59-87cc-ea167823fbda",
+      "name": "Pygmy Troll",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ed076c39-9bfc-424a-8ce8-8572f7c0de73",
+      "name": "Rabid Wolverines",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1d9bd0a5-3ba0-44e5-9cb3-966f6b9dc14a",
+      "name": "Ravenous Baboons",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b4177445-46d8-4427-a345-d786c820c3af",
+      "name": "Reaping the Rewards",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "lifegain",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fe455177-d9e5-4893-ad87-ebbba5e2fa45",
+      "name": "Reckless Ogre",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "797155cd-faf4-4321-8629-c8c352392748",
+      "name": "Reclaim",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "library_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "32599d7c-243b-447b-9d5d-e8e29830ac61",
+      "name": "Reconnaissance",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a6708b11-1bcd-4208-a967-fe91f2e3313c",
+      "name": "Recurring Nightmare",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "recursion",
+        "repeatable_advantage",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4390e251-e154-4ef8-9929-0c78aa2c8f10",
+      "name": "Resuscitate",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "broad_protection",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "093a20e5-ff14-41c7-b16c-1f745ddf6942",
+      "name": "Robe of Mirrors",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "2bf84938-6049-4d03-b09e-85bd0763a187",
+      "name": "Rootwater Alligator",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "32d8f7c8-8680-4901-b31b-e0cb66e37548",
+      "name": "Rootwater Mystic",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "selection",
+        "topdeck_control"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "acaae632-3203-4867-ad03-32619c3fcfe6",
+      "name": "Sabertooth Wyvern",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fcca3c9d-a2b6-4f29-b43c-2f061074a332",
+      "name": "Scalding Salamander",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "d7548770-5c60-4c3f-b1d6-554ab5f931f9",
+      "name": "Scare Tactics",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "fad69c20-d6f4-4cf5-8e4c-bbda8d268edd",
+      "name": "School of Piranha",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "27c37a8d-777a-400d-b096-bde195228ea8",
+      "name": "Scrivener",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "8ad4f2fe-6d98-4279-a331-3817d40ae46d",
+      "name": "Seismic Assault",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "05861ff2-ec85-43d1-b641-c5d2da819c03",
+      "name": "Shackles",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "77953b7a-813e-45f5-ad7f-ab72a79a0112",
+      "name": "Shattering Pulse",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "98e7bfd4-fcb6-47b1-ad0b-c54b85dc2a79",
+      "name": "Shield Mate",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "b5642460-883c-4e38-8552-9bea4e50d8e8",
+      "name": "Skyshaper",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "bd9f2c84-0589-4ffe-9bff-ea74be4f77a4",
+      "name": "Skyshroud Elite",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c6ad434b-6e34-439b-8046-f0047c06e371",
+      "name": "Skyshroud War Beast",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "37de575d-15d4-42a2-a3d2-3855fb6ab110",
+      "name": "Slaughter",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7971f5c2-97b7-441f-ad77-954f43ede0a1",
+      "name": "Soltari Visionary",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4c543799-1b72-4f32-a5be-475c0134ac0f",
+      "name": "Song of Serenity",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "144d42b8-5c44-4a36-9028-75229047e56c",
+      "name": "Sonic Burst",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f3fad295-1af2-4ecc-8546-b121ad6be27b",
+      "name": "Soul Warden",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "83133f51-bfbd-4db5-9be0-f660e3b66435",
+      "name": "Spellbook",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hand_size"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "6579bb00-3886-447b-a265-3e72e98bbe2c",
+      "name": "Spellshock",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "09c96077-3804-4f12-a613-5bebc5e0413f",
+      "name": "Sphere of Resistance",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c175ab0e-7085-41ec-83e4-38fc85c338fa",
+      "name": "Spike Cannibal",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "726fe7a4-49b3-4b67-9d8c-6b334d0fd915",
+      "name": "Spike Hatcher",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "90ec956f-b6de-4214-9b5a-895280e542c1",
+      "name": "Spike Rogue",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "7776b2dd-5795-458d-81da-54fed22d5ee2",
+      "name": "Spike Weaver",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "counter_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "9e9d5242-424d-4f61-b625-806295dbb0c7",
+      "name": "Standing Troops",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "119d719d-e965-45b4-9bc9-ac03211b10c2",
+      "name": "Survival of the Fittest",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "repeatable_tutor",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "1afa006b-1190-4047-a9fe-4215f20df8f2",
+      "name": "Thalakos Drifters",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "c8877da5-7008-4b47-955e-d205220c91e6",
+      "name": "Thalakos Scout",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "f1482ca4-610b-48fe-ac23-4526637bb72a",
+      "name": "Thopter Squadron",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "ead5a2bf-f48a-43a2-89bb-df3cc587c843",
+      "name": "Thrull Surgeon",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "hand_info",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4f484927-0e8e-493d-93bc-ed190965dad9",
+      "name": "Transmogrifying Licid",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "71ae3bc0-28da-4e91-bffd-a49fe545b7a9",
+      "name": "Treasure Hunter",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3c4a6b34-a9bb-426d-908c-7ae0011591df",
+      "name": "Treasure Trove",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "0184d74b-e9aa-4b5a-8db0-b15cecbc17fb",
+      "name": "Vampire Hounds",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "a8b968ea-76f3-4ee7-9d53-d251d8a9faf6",
+      "name": "Volrath's Dungeon",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal",
+        "topdeck_control"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "cd112962-b297-403c-bede-c8b587f379b3",
+      "name": "Wall of Nets",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "319b4715-c3eb-49bf-b8d2-4d41e601ebe4",
+      "name": "Wayward Soul",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "4547625a-0caf-4ecc-a65f-0fd2cad70294",
+      "name": "Welkin Hawk",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "restricted_tutor",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "edc961bd-5ec9-47ed-9d34-e26a48c13702",
+      "name": "Whiptongue Frog",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "bb4ab425-3da7-455d-b217-3d585d476113",
+      "name": "Workhorse",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
+    },
+    {
+      "oracleId": "3fa67c92-6328-4d0a-95e3-656d447ab20e",
+      "name": "Zealots en-Dal",
+      "firstSet": "exo",
+      "releasedAt": "1998-06-15",
+      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false
     }
   ]
 }

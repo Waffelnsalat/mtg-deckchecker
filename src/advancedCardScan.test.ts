@@ -2840,6 +2840,82 @@ test("inferAdvancedRoleProfile recognizes Stronghold utility wording gaps", () =
   assert.ok(getRoleWeight(hibernationProfile, "rescue_protection") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Exodus utility wording gaps", () => {
+  const highGroundProfile = inferAdvancedRoleProfile(createCard("High Ground", "Enchantment", 1, "Each creature you control can block an additional creature each combat."));
+  const chantProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Kor Chant",
+      "Instant",
+      3,
+      "All damage that would be dealt this turn to target creature you control by a source of your choice is dealt to another target creature instead.",
+    ),
+  );
+  const penanceProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Penance",
+      "Enchantment",
+      3,
+      "Put a card from your hand on top of your library: The next time a black or red source of your choice would deal damage this turn, prevent that damage.",
+    ),
+  );
+  const fadeProfile = inferAdvancedRoleProfile(
+    createCard("Fade Away", "Sorcery", 3, "For each creature, its controller sacrifices a permanent of their choice unless they pay {1}."),
+  );
+  const breachProfile = inferAdvancedRoleProfile(
+    createCard("Mana Breach", "Enchantment", 3, "Whenever a player casts a spell, that player returns a land they control to its owner's hand."),
+  );
+  const hatredProfile = inferAdvancedRoleProfile(
+    createCard("Hatred", "Instant", 5, "As an additional cost to cast this spell, pay X life. Target creature gets +X/+0 until end of turn."),
+  );
+  const ghoulsProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Oath of Ghouls",
+      "Enchantment",
+      2,
+      "At the beginning of each player's upkeep, that player chooses target player whose graveyard has fewer creature cards in it than their graveyard does and is their opponent. The first player may return a creature card from their graveyard to their hand.",
+    ),
+  );
+  const dungeonProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Volrath's Dungeon",
+      "Enchantment",
+      4,
+      "Pay 5 life: Destroy this enchantment. Any player may activate this ability but only during their turn. Discard a card: Target player puts a card from their hand on top of their library. Activate only as a sorcery.",
+    ),
+  );
+  const magesProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Oath of Mages",
+      "Enchantment",
+      2,
+      "At the beginning of each player's upkeep, that player chooses target player who has more life than they do and is their opponent. The first player may have this enchantment deal 1 damage to the second player.",
+    ),
+  );
+  const spellshockProfile = inferAdvancedRoleProfile(createCard("Spellshock", "Enchantment", 3, "Whenever a player casts a spell, this enchantment deals 2 damage to that player."));
+  const druidsProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Oath of Druids",
+      "Enchantment",
+      2,
+      "At the beginning of each player's upkeep, that player chooses target player who controls more creatures than they do and is their opponent. The first player may reveal cards from the top of their library until they reveal a creature card. If the first player does, that player puts that card onto the battlefield and all other cards revealed this way into their graveyard.",
+    ),
+  );
+  const crystalProfile = inferAdvancedRoleProfile(createCard("Memory Crystal", "Artifact", 3, "Buyback costs cost {2} less."));
+
+  assert.ok(getRoleWeight(highGroundProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(chantProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(penanceProfile, "protection") > 0);
+  assert.ok(getRoleWeight(fadeProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(breachProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(hatredProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(ghoulsProfile, "hand_recursion") > 0);
+  assert.ok(getRoleWeight(dungeonProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(magesProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(spellshockProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(druidsProfile, "cheat_into_play") > 0);
+  assert.ok(getRoleWeight(crystalProfile, "cost_reduction") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
