@@ -1,0 +1,6 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+fmom	March of the Machine Jumpstart Front Cards	2023-04-21	1	Brood	db5d3b52-2e2a-4fc4-bce3-bff26781eadc							Card		0					manual review	https://scryfall.com/card/fmom/1/brood?utm_source=api	(Theme color: {W})
+fmom	March of the Machine Jumpstart Front Cards	2023-04-21	2	Overachiever	979d5a39-abe2-4a5d-8b2c-18d0f91e1301							Card		0					manual review	https://scryfall.com/card/fmom/2/overachiever?utm_source=api	(Theme color: {U})
+fmom	March of the Machine Jumpstart Front Cards	2023-04-21	3	Expendable	1b64b74a-ed7b-4595-abb7-c3bbc9dbb352							Card		0					manual review	https://scryfall.com/card/fmom/3/expendable?utm_source=api	(Theme color: {B})
+fmom	March of the Machine Jumpstart Front Cards	2023-04-21	4	Reinforcement	edcc3c19-143b-47cc-b4fb-ad9fc9ee34ee							Card		0					manual review	https://scryfall.com/card/fmom/4/reinforcement?utm_source=api	(Theme color: {R})
+fmom	March of the Machine Jumpstart Front Cards	2023-04-21	5	Buff	9cc598ad-8b70-4e0c-a944-7ae8b43ec821							Card		0					manual review	https://scryfall.com/card/fmom/5/buff?utm_source=api	(Theme color: {G})

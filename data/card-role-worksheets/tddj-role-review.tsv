@@ -1,0 +1,2 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+tddj	Duel Decks: Izzet vs. Golgari Tokens	2012-09-07	1	Saproling	2b7dba01-b08c-4218-9fc1-da55559d9155	covered		combat_body	false		Covered by MPR role audit.	Token Creature — Saproling		0	G	G			already reviewed	https://scryfall.com/card/tddj/1/saproling?utm_source=api	

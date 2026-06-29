@@ -1,0 +1,5 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+l13	League Tokens 2013	2013-01-01	1	Soldier	04ba3865-3e4b-4583-b49b-f5433926c29a			combat_body				Token Creature — Soldier		0	RW	RW			verify analyzer roles	https://scryfall.com/card/l13/1/soldier?utm_source=api	
+l13	League Tokens 2013	2013-01-01	2	Bird	b1a2b096-a440-4ef9-ab2a-059c79999297			combat_body, combat_threat				Token Creature — Bird		0	W	W	Flying		verify analyzer roles	https://scryfall.com/card/l13/2/bird?utm_source=api	Flying
+l13	League Tokens 2013	2013-01-01	3	Sliver	9ac81d75-2bec-46ab-84e1-2fc893d45219	covered		combat_body	false		Covered by P03 role audit.	Token Creature — Sliver		0					already reviewed	https://scryfall.com/card/l13/3/sliver?utm_source=api	
+l13	League Tokens 2013	2013-01-01	4	Soldier	eac25f12-6459-438c-a09e-93e23d2cf80d	covered		combat_body	false		Covered by PR2 role audit.	Token Creature — Soldier		0	W	W			already reviewed	https://scryfall.com/card/l13/4/soldier?utm_source=api	

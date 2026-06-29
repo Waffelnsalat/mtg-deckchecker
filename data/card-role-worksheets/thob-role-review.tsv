@@ -1,0 +1,3 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+thob	The Hobbit Tokens	2026-08-14	6	Dwarf Token	c92fc51f-5d4e-4e41-bcbc-4259d36f9f39			combat_body				Token Creature — Dwarf		0					verify analyzer roles	https://scryfall.com/card/thob/6/dwarf-token?utm_source=api	
+thob	The Hobbit Tokens	2026-08-14	12	Treasure	3c549374-6c37-42e0-8d88-a8555d46732d			burst_ramp, mana_fixing, sacrifice_support				Token Artifact — Treasure		0					verify analyzer roles	https://scryfall.com/card/thob/12/treasure?utm_source=api	{T}, Sacrifice this token: Add one mana of any color.

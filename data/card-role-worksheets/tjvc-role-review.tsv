@@ -1,0 +1,2 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+tjvc	Duel Decks Anthology: Jace vs. Chandra Tokens	2014-12-05	4	Elemental Shaman	a44da885-2d0f-4e16-ba68-ec80640e819f			combat_body				Token Creature — Elemental Shaman		0	R	R			verify analyzer roles	https://scryfall.com/card/tjvc/4/elemental-shaman?utm_source=api	

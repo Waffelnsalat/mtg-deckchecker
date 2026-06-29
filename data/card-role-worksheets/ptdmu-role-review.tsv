@@ -1,0 +1,4 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+ptdmu	Dominaria United Southeast Asia Tokens	2022-09-09	1	Soldier	b17979cf-4850-456a-9a3b-7739d50623fe			combat_body				Token Creature — Human		0	W	W			verify analyzer roles	https://scryfall.com/card/ptdmu/1/soldier?utm_source=api	
+ptdmu	Dominaria United Southeast Asia Tokens	2022-09-09	2	Angel	835fdf98-b2ca-4e08-8dc0-4294bc0744ad			combat_body				Token Creature — Angel		0	W	W			verify analyzer roles	https://scryfall.com/card/ptdmu/2/angel?utm_source=api	
+ptdmu	Dominaria United Southeast Asia Tokens	2022-09-09	3	Zombie	ec6e76e8-e80e-4534-990a-03c3bbeda53a			combat_body				Token Creature — Zombie		0	B	B			verify analyzer roles	https://scryfall.com/card/ptdmu/3/zombie?utm_source=api	

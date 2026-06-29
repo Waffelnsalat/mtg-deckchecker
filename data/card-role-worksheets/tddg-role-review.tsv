@@ -1,0 +1,2 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+tddg	Duel Decks: Knights vs. Dragons Tokens	2011-04-01	1	Goblin	4465eff4-5851-4721-a248-866c686c2ab8	covered		combat_body	false		Covered by P03 role audit.	Token Creature — Goblin		0	R	R			already reviewed	https://scryfall.com/card/tddg/1/goblin?utm_source=api	

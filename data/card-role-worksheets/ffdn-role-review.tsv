@@ -1,0 +1,11 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+ffdn	Foundations Front Cards	2024-11-15	1	Cats	9dee8a61-b220-4c46-996b-a3b4ca10a19a							Card		0					manual review	https://scryfall.com/card/ffdn/1/cats?utm_source=api	(Don't shuffle this deck.)
+ffdn	Foundations Front Cards	2024-11-15	2	Vampires	bc49c36d-9891-4173-8944-d86b07809890							Card		0					manual review	https://scryfall.com/card/ffdn/2/vampires?utm_source=api	(Theme color: {B}) (Don't shuffle this deck.)
+ffdn	Foundations Front Cards	2024-11-15	3	Healing	71aa0cc9-c263-454c-90d8-0d6f31d1bffd							Card		0					manual review	https://scryfall.com/card/ffdn/3/healing?utm_source=api	(Theme color: {W})
+ffdn	Foundations Front Cards	2024-11-15	4	Pirates	16e2109f-3d6e-4b42-b37c-f5b4ff70321d							Card		0					manual review	https://scryfall.com/card/ffdn/4/pirates?utm_source=api	(Theme color: {U})
+ffdn	Foundations Front Cards	2024-11-15	5	Wizards	b8156d00-2e67-4363-ad1c-0e2fb16d14fc							Card		0					manual review	https://scryfall.com/card/ffdn/5/wizards?utm_source=api	(Theme color: {U})
+ffdn	Foundations Front Cards	2024-11-15	6	Undead	ea1c2901-bfdd-4dc6-86c9-f2d05577892c							Card		0					manual review	https://scryfall.com/card/ffdn/6/undead?utm_source=api	(Theme color: {B})
+ffdn	Foundations Front Cards	2024-11-15	7	Goblins	c3bb5173-a292-4ca9-86c9-1f7021a7e4d4							Card		0					manual review	https://scryfall.com/card/ffdn/7/goblins?utm_source=api	(Theme color: {R})
+ffdn	Foundations Front Cards	2024-11-15	8	Inferno	11b14eab-5268-485b-ad39-a0c0dfef9f28							Card		0					manual review	https://scryfall.com/card/ffdn/8/inferno?utm_source=api	(Theme color: {R})
+ffdn	Foundations Front Cards	2024-11-15	9	Elves	d60ad13c-07fe-47d5-812e-75e0d32835c3							Card		0					manual review	https://scryfall.com/card/ffdn/9/elves?utm_source=api	(Theme color: {G})
+ffdn	Foundations Front Cards	2024-11-15	10	Primal	de7e814d-c302-44f3-80b2-5f88be187f95							Card		0					manual review	https://scryfall.com/card/ffdn/10/primal?utm_source=api	(Theme color: {G})

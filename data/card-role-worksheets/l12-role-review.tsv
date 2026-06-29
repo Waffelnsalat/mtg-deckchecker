@@ -1,0 +1,3 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+l12	League Tokens 2012	2012-01-01	1	Goblin	4465eff4-5851-4721-a248-866c686c2ab8	covered		combat_body	false		Covered by P03 role audit.	Token Creature — Goblin		0	R	R			already reviewed	https://scryfall.com/card/l12/1/goblin?utm_source=api	
+l12	League Tokens 2012	2012-01-01	2	Knight	340aaeb6-cd18-4908-9729-8c53ab02c6f8			combat_body, combat_threat				Token Creature — Knight		0	W	W	Vigilance		verify analyzer roles	https://scryfall.com/card/l12/2/knight?utm_source=api	Vigilance

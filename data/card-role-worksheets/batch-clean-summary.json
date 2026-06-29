@@ -1,0 +1,12 @@
+{
+    "generatedAt":  "2026-06-29T16:23:27",
+    "doneSets":  255,
+    "autoExcludedThisRunApprox":  128,
+    "problemSets":  787,
+    "totalMissingCards":  3602,
+    "totalAttentionCards":  75366,
+    "unscannedFutureOrUnavailable":  [
+                                         "trk"
+                                     ],
+    "note":  "Clean pending sets were auto-imported. Problem sets have no-role cards and/or attention candidates and remain for code or audit review."
+}

@@ -1,0 +1,3 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+tmul	Multiverse Legends Tokens	2023-04-21	1	Phyrexian Myr	d23c9257-f0fc-40fb-ab35-4be57979568a			combat_body				Token Artifact Creature — Phyrexian Myr		0	U	U			verify analyzer roles	https://scryfall.com/card/tmul/1/phyrexian-myr?utm_source=api	
+tmul	Multiverse Legends Tokens	2023-04-21	2	Elemental	e2931f20-e58a-480d-bc07-4a18030a4f67			combat_body, combat_threat				Token Creature — Elemental		0	R	R	Haste, Trample		verify analyzer roles	https://scryfall.com/card/tmul/2/elemental?utm_source=api	Trample, haste

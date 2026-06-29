@@ -1,0 +1,2 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+smh3	Modern Horizons 3 Substitute Cards	2024-06-14	1	Double-Faced Substitute Card	cb5ca670-a50e-4c73-879a-8dc0aa2cbd9f							Card		0					manual review	https://scryfall.com/card/smh3/1/double-faced-substitute-card?utm_source=api	(You can use this card to represent a double-faced card.)

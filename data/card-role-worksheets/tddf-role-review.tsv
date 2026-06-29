@@ -1,0 +1,2 @@
+setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
+tddf	Duel Decks: Elspeth vs. Tezzeret Tokens	2010-09-03	1	Soldier	eac25f12-6459-438c-a09e-93e23d2cf80d	covered		combat_body	false		Covered by PR2 role audit.	Token Creature — Soldier		0	W	W			already reviewed	https://scryfall.com/card/tddf/1/soldier?utm_source=api	
