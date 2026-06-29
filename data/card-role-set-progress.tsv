@@ -67,10 +67,10 @@ pptk	Portal Three Kingdoms Promos	1999-05-01	promo	2	false	done	1	1	0	true	data/
 ptk	Portal Three Kingdoms	1999-05-01	starter	180	false	done	170	170	0	true	data/card-role-worksheets/ptk-role-review.tsv
 puds	Urza's Destiny Promos	1999-06-07	promo	1	false	done	1	1	0	true	data/card-role-worksheets/puds-role-review.tsv
 uds	Urza's Destiny	1999-06-07	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/uds-role-review.tsv
-s99	Starter 1999	1999-07-01	starter	173	false	pending	0			false	
-pgru	Guru	1999-07-12	promo	5	false	pending	0			false	
-pwor	World Championship Promos	1999-08-04	promo	2	false	pending	0			false	
-wc99	World Championship Decks 1999	1999-08-04	memorabilia	111	false	pending	0			false	
+s99	Starter 1999	1999-07-01	starter	173	false	done	158	158	0	true	data/card-role-worksheets/s99-role-review.tsv
+pgru	Guru	1999-07-12	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pgru-role-review.tsv
+pwor	World Championship Promos	1999-08-04	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pwor-role-review.tsv
+wc99	World Championship Decks 1999	1999-08-04	memorabilia	111	false	done	86	86	0	true	data/card-role-worksheets/wc99-role-review.tsv
 pwos	Wizards of the Coast Online Store	1999-09-04	promo	1	false	pending	0			false	
 mmq	Mercadian Masques	1999-10-04	expansion	350	false	pending	0			false	
 pmmq	Mercadian Masques Promos	1999-10-04	promo	1	false	pending	0			false	

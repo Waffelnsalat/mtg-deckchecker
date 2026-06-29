@@ -76,7 +76,7 @@
       "name": "Air Elemental",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -179,7 +179,7 @@
       "name": "Armageddon",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -511,7 +511,7 @@
       "name": "Bog Wraith",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -941,7 +941,7 @@
       "name": "Counterspell",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "hard_stack",
         "stack"
@@ -1053,7 +1053,7 @@
       "name": "Dark Ritual",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "burst_ramp",
         "ramp"
@@ -1405,7 +1405,7 @@
       "name": "Earth Elemental",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -1413,7 +1413,8 @@
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "e8e35b49-8cfb-4fb5-89aa-8050f15b11bf",
@@ -1435,7 +1436,7 @@
       "name": "Earthquake",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "direct_finisher",
         "finisher",
@@ -1579,7 +1580,7 @@
       "name": "Fire Elemental",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -1733,7 +1734,7 @@
       "name": "Forest",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -1838,7 +1839,7 @@
       "name": "Giant Growth",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -1991,7 +1992,7 @@
       "name": "Grizzly Bears",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -2160,7 +2161,7 @@
       "name": "Hurricane",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "damage_engine",
         "direct_finisher",
@@ -2354,7 +2355,7 @@
       "name": "Island",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:13.475Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -2771,7 +2772,7 @@
       "name": "Llanowar Elves",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body",
         "ramp",
@@ -2973,7 +2974,7 @@
       "name": "Merfolk of the Pearl Trident",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -3029,7 +3030,7 @@
       "name": "Mons's Goblin Raiders",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -3037,7 +3038,8 @@
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "376ee366-e082-402f-b4db-6592fcfcacd2",
@@ -3459,7 +3461,7 @@
       "name": "Plains",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:13.475Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -3643,7 +3645,7 @@
       "name": "Raise Dead",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "card_selection",
         "hand_recursion",
@@ -3943,7 +3945,7 @@
       "name": "Scathe Zombies",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -4360,7 +4362,7 @@
       "name": "Stone Rain",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "land_denial",
         "removal",
@@ -4417,7 +4419,7 @@
       "name": "Swamp",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -5184,7 +5186,7 @@
       "name": "Water Elemental",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-21T12:42:01.623Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -5192,7 +5194,8 @@
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "f07a24c0-bf3c-4733-9473-c6be3b16950e",
@@ -6532,7 +6535,7 @@
       "name": "Mountain",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "basic_land",
         "land_base",
@@ -9930,7 +9933,7 @@
       "name": "Durkwood Boars",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-21T17:43:18.829Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -12810,7 +12813,7 @@
       "name": "Remove Soul",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "hard_stack",
         "stack"
@@ -13988,7 +13991,7 @@
       "name": "Untamed Wilds",
       "firstSet": "leg",
       "releasedAt": "1994-06-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "land_acceleration",
         "land_tutor",
@@ -14748,7 +14751,7 @@
       "name": "Bog Imp",
       "firstSet": "drk",
       "releasedAt": "1994-08-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -15538,7 +15541,7 @@
       "name": "Goblin Hero",
       "firstSet": "drk",
       "releasedAt": "1994-08-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -19190,7 +19193,7 @@
       "name": "Archangel",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -19228,7 +19231,7 @@
       "name": "Avalanche Riders",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -19560,7 +19563,7 @@
       "name": "Diabolic Edict",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -19578,7 +19581,7 @@
       "name": "Duress",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "hand_attack"
       ],
@@ -20312,7 +20315,7 @@
       "name": "Shock",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -20572,7 +20575,7 @@
       "name": "Thorn Elemental",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -20660,7 +20663,7 @@
       "name": "Voltaic Key",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "tap_untap",
         "tempo_support"
@@ -20748,7 +20751,7 @@
       "name": "Worn Powerstone",
       "firstSet": "pmei",
       "releasedAt": "1995-01-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "ramp",
         "stable_ramp"
@@ -25190,7 +25193,7 @@
       "name": "Nature's Lore",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "land_acceleration",
         "land_tutor",
@@ -26761,7 +26764,7 @@
       "name": "Stromgald Cabal",
       "firstSet": "ice",
       "releasedAt": "1995-06-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body",
         "hard_stack",
@@ -29971,7 +29974,7 @@
       "name": "Blank Card",
       "firstSet": "ptc",
       "releasedAt": "1996-05-01",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Blank non-gameplay memorabilia card; intentionally has no strategic role."
@@ -30127,7 +30130,7 @@
       "name": "Balduvian Horde",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:15.531Z",
       "expectedRoles": [
         "combat_body",
         "sacrifice_support"
@@ -31767,7 +31770,7 @@
       "name": "Pillage",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -32372,7 +32375,7 @@
       "name": "Storm Crow",
       "firstSet": "all",
       "releasedAt": "1996-06-10",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -33664,7 +33667,7 @@
       "name": "Blinding Light",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -35008,7 +35011,7 @@
       "name": "Feral Shadow",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -35062,7 +35065,7 @@
       "name": "Fire Diamond",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "ramp",
         "stable_ramp"
@@ -35538,7 +35541,7 @@
       "name": "Hammer of Bogardan",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "card_selection",
         "hand_recursion",
@@ -37050,7 +37053,7 @@
       "name": "Psychic Transfer",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "life_pressure",
         "lifegain"
@@ -38114,7 +38117,7 @@
       "name": "Spitting Earth",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -38150,7 +38153,7 @@
       "name": "Stupor",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "hand_attack",
         "removal"
@@ -38934,7 +38937,7 @@
       "name": "Volcanic Dragon",
       "firstSet": "mir",
       "releasedAt": "1996-10-08",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -39810,7 +39813,7 @@
       "name": "Coercion",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "hand_attack"
       ],
@@ -41072,7 +41075,7 @@
       "name": "Man-o'-War",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -41548,7 +41551,7 @@
       "name": "Relentless Assault",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_finisher",
         "finisher",
@@ -41686,7 +41689,7 @@
       "name": "River Boa",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -42010,7 +42013,7 @@
       "name": "Summer Bloom",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "land_acceleration",
         "land_synergy",
@@ -42276,7 +42279,7 @@
       "name": "Tremor",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -42310,7 +42313,7 @@
       "name": "Uktabi Orangutan",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -42350,7 +42353,7 @@
       "name": "Undo",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "tempo_removal"
@@ -42368,7 +42371,7 @@
       "name": "Vampiric Tutor",
       "firstSet": "vis",
       "releasedAt": "1997-02-03",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "direct_tutor",
         "tutor"
@@ -42848,7 +42851,7 @@
       "name": "Alluring Scent",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_support",
         "tempo_support"
@@ -42886,7 +42889,7 @@
       "name": "Angelic Blessing",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -42902,7 +42905,7 @@
       "name": "Ardent Militia",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -43074,7 +43077,7 @@
       "name": "Bog Raiders",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -43120,7 +43123,7 @@
       "name": "Border Guard",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -43136,7 +43139,7 @@
       "name": "Breath of Life",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "battlefield_recursion",
         "card_selection",
@@ -43156,7 +43159,7 @@
       "name": "Bull Hippo",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -43232,7 +43235,7 @@
       "name": "Charging Paladin",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -43360,7 +43363,7 @@
       "name": "Coral Eel",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -43564,7 +43567,7 @@
       "name": "Devastation",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -43582,7 +43585,7 @@
       "name": "Devoted Hero",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -43632,7 +43635,7 @@
       "name": "Dread Reaper",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -43708,7 +43711,7 @@
       "name": "Exhaustion",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "tempo_removal"
@@ -43726,7 +43729,7 @@
       "name": "False Peace",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "broad_protection",
         "protection"
@@ -43832,7 +43835,7 @@
       "name": "Fire Tempest",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "damage_engine",
         "group_slug",
@@ -43894,7 +43897,7 @@
       "name": "Foot Soldiers",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -43944,7 +43947,7 @@
       "name": "Giant Octopus",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -44000,7 +44003,7 @@
       "name": "Gorilla Warrior",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -44016,7 +44019,7 @@
       "name": "Gravedigger",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "card_selection",
         "combat_body",
@@ -44038,7 +44041,7 @@
       "name": "Hand of Death",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -44104,7 +44107,7 @@
       "name": "Howling Fury",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -44120,7 +44123,7 @@
       "name": "Hulking Goblin",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -44138,7 +44141,7 @@
       "name": "Ingenious Thief",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat",
@@ -44214,7 +44217,7 @@
       "name": "Knight Errant",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -44230,7 +44233,7 @@
       "name": "Last Chance",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "extra_turn",
         "finisher"
@@ -44248,7 +44251,7 @@
       "name": "Lava Axe",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -44334,7 +44337,7 @@
       "name": "Mind Rot",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "hand_attack",
         "removal"
@@ -44386,7 +44389,7 @@
       "name": "Monstrous Growth",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -44402,7 +44405,7 @@
       "name": "Moon Sprite",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -44420,7 +44423,7 @@
       "name": "Muck Rats",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -44454,7 +44457,7 @@
       "name": "Natural Spring",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "lifegain"
       ],
@@ -44470,7 +44473,7 @@
       "name": "Nature's Cloak",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_support",
         "landwalk_support"
@@ -44570,7 +44573,7 @@
       "name": "Owl Familiar",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "card_draw",
         "card_selection",
@@ -44598,7 +44601,7 @@
       "name": "Path of Peace",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "lifegain",
         "removal",
@@ -44636,7 +44639,7 @@
       "name": "Phantom Warrior",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support"
@@ -44720,7 +44723,7 @@
       "name": "Raging Goblin",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -44884,7 +44887,7 @@
       "name": "Sacred Nectar",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "lifegain"
       ],
@@ -44900,7 +44903,7 @@
       "name": "Scorching Spear",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -44978,7 +44981,7 @@
       "name": "Serpent Warrior",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-26T07:05:40.570Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -45026,7 +45029,7 @@
       "name": "Snapping Drake",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -45158,7 +45161,7 @@
       "name": "Steadfastness",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -45366,7 +45369,7 @@
       "name": "Time Ebb",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "tempo_removal"
@@ -45384,7 +45387,7 @@
       "name": "Touch of Brilliance",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "card_draw",
         "direct_draw",
@@ -45494,7 +45497,7 @@
       "name": "Venerable Monk",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "lifegain"
@@ -45512,7 +45515,7 @@
       "name": "Vengeance",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -45548,7 +45551,7 @@
       "name": "Volcanic Hammer",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -45600,7 +45603,7 @@
       "name": "Whiptail Wurm",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -45616,7 +45619,7 @@
       "name": "Wicked Pact",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-25T15:14:43.556Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -45654,7 +45657,7 @@
       "name": "Wind Drake",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "combat_threat"
@@ -45714,7 +45717,7 @@
       "name": "Wood Elves",
       "firstSet": "por",
       "releasedAt": "1997-05-01",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "combat_body",
         "land_acceleration",
@@ -46362,7 +46365,7 @@
       "name": "Cursed Scroll",
       "firstSet": "olep",
       "releasedAt": "1997-05-30",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "removal",
         "targeted_removal"
@@ -47776,7 +47779,7 @@
       "name": "Gerrard's Wisdom",
       "firstSet": "wth",
       "releasedAt": "1997-06-09",
-      "reviewedAt": "2026-06-26T06:43:08.408Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "lifegain"
       ],
@@ -48812,7 +48815,7 @@
       "name": "Relearn",
       "firstSet": "wth",
       "releasedAt": "1997-06-09",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "card_selection",
         "hand_recursion",
@@ -49906,7 +49909,7 @@
       "name": "Ancient Tomb",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -50174,7 +50177,7 @@
       "name": "Boil",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -50224,7 +50227,7 @@
       "name": "Bottle Gnomes",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body",
         "lifegain",
@@ -50440,7 +50443,7 @@
       "name": "Choke",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "hate_piece",
         "land_denial",
@@ -50640,7 +50643,7 @@
       "name": "Corpse Dance",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_support"
       ],
@@ -51304,7 +51307,7 @@
       "name": "Evincar's Justice",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "damage_engine",
         "group_slug",
@@ -51438,7 +51441,7 @@
       "name": "Fireslinger",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -52124,7 +52127,7 @@
       "name": "Jackal Pup",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body"
       ],
@@ -52854,7 +52857,7 @@
       "name": "Mogg Fanatic",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_body",
         "removal",
@@ -53128,7 +53131,7 @@
       "name": "Overrun",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:12:39.375Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "combat_finisher",
         "combat_support",
@@ -53220,7 +53223,7 @@
       "name": "Perish",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:15:00.104Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "mass_removal",
         "removal"
@@ -55086,7 +55089,7 @@
       "name": "Time Warp",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-26T06:56:11.073Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "extra_turn",
         "finisher"
@@ -55370,7 +55373,7 @@
       "name": "Wasteland",
       "firstSet": "tmp",
       "releasedAt": "1997-10-14",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "land_base",
         "land_denial",
@@ -55564,7 +55567,7 @@
       "name": "Gaea's Cradle",
       "firstSet": "jgp",
       "releasedAt": "1998-01-01",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -55862,7 +55865,7 @@
       "name": "Constant Mists",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-26T07:05:40.570Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "broad_protection",
         "combat_support",
@@ -57172,7 +57175,7 @@
       "name": "Ransack",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-26T07:05:40.570Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "expectedRoles": [
         "card_selection",
         "selection",
@@ -58060,7 +58063,7 @@
       "name": "Volrath's Stronghold",
       "firstSet": "sth",
       "releasedAt": "1998-03-02",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "expectedRoles": [
         "land_base",
         "land_slot",
@@ -58409,7 +58412,7 @@
       "name": "City of Traitors",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "land_base",
         "land_slot",
@@ -58418,7 +58421,8 @@
         "stable_ramp"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
     },
     {
       "oracleId": "5f7f133e-58ea-41ab-b1be-be4b400fac4c",
@@ -58727,7 +58731,7 @@
       "name": "Flowstone Flood",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "land_denial",
         "removal",
@@ -58735,7 +58739,8 @@
         "targeted_removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
     },
     {
       "oracleId": "6e26a525-2584-490d-b106-621c1a30e1fd",
@@ -58794,12 +58799,13 @@
       "name": "Hatred",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
     },
     {
       "oracleId": "b59053d5-b5f2-44aa-a29c-7f3908d86577",
@@ -59696,7 +59702,7 @@
       "name": "Shattering Pulse",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T11:08:30.209Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -59844,26 +59850,28 @@
       "name": "Spellshock",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "damage_engine",
         "group_slug"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
     },
     {
       "oracleId": "09c96077-3804-4f12-a613-5bebc5e0413f",
       "name": "Sphere of Resistance",
       "firstSet": "exo",
       "releasedAt": "1998-06-15",
-      "reviewedAt": "2026-06-29T10:58:00.611Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "hate_piece",
         "stax_piece"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
     },
     {
       "oracleId": "c175ab0e-7085-41ec-83e4-38fc85c338fa",
@@ -60260,14 +60268,15 @@
       "name": "Ancient Craving",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
         "draw"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "07eb70cf-e6af-4924-a00d-bdf2c6ba78e1",
@@ -60287,14 +60296,15 @@
       "name": "Angel of Mercy",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_threat",
         "lifegain"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "4502b24f-604b-4e36-9168-31c1a1ab4dab",
@@ -60355,25 +60365,27 @@
       "name": "Barbtooth Wurm",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "a0dd88f6-6e36-40ce-bac2-a0db2b0117b6",
       "name": "Bargain",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "card_draw",
         "lifegain"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "ed206651-3d9b-4546-8d45-0682817192fd",
@@ -60433,12 +60445,13 @@
       "name": "Chorus of Woe",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "d2a29bbf-bfcd-4e4e-8c0b-95a15b58a612",
@@ -60498,7 +60511,7 @@
       "name": "Dakmor Plague",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "damage_engine",
         "group_slug",
@@ -60506,45 +60519,49 @@
         "removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "008290c2-499d-425b-9a6c-c4aeb47c33ff",
       "name": "Dakmor Scorpion",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "be5d9522-40b4-4f45-978b-d78bd00f9491",
       "name": "Dakmor Sorceress",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "102356a9-0de5-4034-b121-034da5deb4f2",
       "name": "Dark Offering",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "lifegain",
         "removal",
         "targeted_removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "48408f60-56bc-402f-ba19-c9dc53836765",
@@ -60565,21 +60582,22 @@
       "name": "Denizen of the Deep",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "removal",
         "tempo_removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "b2c9f074-57ca-4709-976d-f432f632483f",
       "name": "Extinguish",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "hard_stack",
         "stack"
@@ -60593,14 +60611,15 @@
       "name": "Eye Spy",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "card_selection",
         "selection",
         "topdeck_control"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "4f891c68-c959-4210-94e5-94a8e487d5ef",
@@ -60646,12 +60665,13 @@
       "name": "Goblin Cavaliers",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "18279733-5568-427c-b0a2-044bca28f688",
@@ -60673,34 +60693,36 @@
       "name": "Goblin General",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "72bce821-46f0-40eb-abdb-575d4305b8fd",
       "name": "Goblin Glider",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
         "combat_threat"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "d6fe945c-b561-4e35-8c8e-7dcaa2ec45ab",
       "name": "Goblin Lore",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "card_draw",
         "card_selection",
@@ -60709,7 +60731,8 @@
         "selection"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "145737a7-c597-4dec-b752-207c2d0501e3",
@@ -60731,14 +60754,15 @@
       "name": "Goblin Mountaineer",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
         "landwalk_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "50608184-90d3-43d2-a221-deb186c78323",
@@ -60833,7 +60857,7 @@
       "name": "Jagged Lightning",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -60874,7 +60898,7 @@
       "name": "Lone Wolf",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -60902,14 +60926,15 @@
       "name": "Lynx",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
         "landwalk_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "f71d8073-d265-4387-8d08-0b9815fd2242",
@@ -60957,13 +60982,14 @@
       "name": "Norwood Archers",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_threat"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "902a7588-602c-456f-8250-c94f35e56d3a",
@@ -60984,12 +61010,13 @@
       "name": "Norwood Ranger",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "1816b87c-73ba-4bfc-a51e-c982381c067d",
@@ -61076,25 +61103,27 @@
       "name": "Ogre Warrior",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "131acf69-fa5c-4ce7-9e39-2677af4f8907",
       "name": "Piracy",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "burst_ramp",
         "ramp"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "d7316cc6-a2c2-479c-80b5-53c86165e3d1",
@@ -61182,7 +61211,7 @@
       "name": "Ravenous Rats",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "hand_attack",
@@ -61223,13 +61252,14 @@
       "name": "Renewing Touch",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "library_recursion",
         "recursion"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "6082f66e-3641-4b09-bb04-86bf29ee1c6f",
@@ -61256,26 +61286,28 @@
       "name": "Righteous Charge",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "f0ff2c1c-702d-406b-a426-4282117afe8e",
       "name": "Righteous Fury",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "lifegain",
         "mass_removal",
         "removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "568c4d02-501e-44ce-871c-adf9e4b9d8d6",
@@ -61340,13 +61372,14 @@
       "name": "Sleight of Hand",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "card_selection",
         "restricted_tutor"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "b6ea0c70-022a-43e4-aa40-3dc6a8b3b21e",
@@ -61392,24 +61425,26 @@
       "name": "Sylvan Basilisk",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "6493960b-4bbb-4ef0-8efb-abb122b1697d",
       "name": "Sylvan Yeti",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "8cb3f047-bd8b-4a34-8a2b-ced2cc0487eb",
@@ -61614,34 +61649,36 @@
       "name": "Wild Griffin",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_threat"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "a6aa245c-b620-486c-864b-0ea4e9bc4048",
       "name": "Wild Ox",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
         "landwalk_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "0da68ca2-07fd-4359-95a9-fb2f815e6ed0",
       "name": "Wildfire",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "mass_removal",
         "removal",
@@ -61656,12 +61693,13 @@
       "name": "Wind Sail",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_support"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
     },
     {
       "oracleId": "4465eff4-5851-4721-a248-866c686c2ab8",
@@ -62964,7 +63002,7 @@
       "name": "Abyssal Horror",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_threat",
@@ -63021,7 +63059,7 @@
       "name": "Albino Troll",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "protection",
@@ -63094,7 +63132,7 @@
       "name": "Arc Lightning",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -63462,7 +63500,7 @@
       "name": "Carrion Beetles",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -64145,7 +64183,7 @@
       "name": "Elvish Lyrist",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "removal",
@@ -64828,7 +64866,7 @@
       "name": "Hollow Dogs",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
@@ -64943,7 +64981,7 @@
       "name": "Karn, Silver Golem",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:44.494Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
@@ -65164,7 +65202,7 @@
       "name": "Mishra's Helix",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "hate_piece",
         "land_denial",
@@ -65491,7 +65529,7 @@
       "name": "Persecute",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "hand_attack",
         "hand_info",
@@ -65535,7 +65573,7 @@
       "name": "Phyrexian Processor",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_support",
         "scalable_spell",
@@ -65618,7 +65656,7 @@
       "name": "Pouncing Jaguar",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:44.494Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "sacrifice_support"
@@ -66165,7 +66203,7 @@
       "name": "Scald",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "damage_engine",
         "group_slug"
@@ -66773,7 +66811,7 @@
       "name": "Temporal Aperture",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "card_selection",
         "repeatable_advantage",
@@ -67361,7 +67399,7 @@
       "name": "Whirlwind",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "mass_removal",
         "removal"
@@ -67375,7 +67413,7 @@
       "name": "Wild Dogs",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "card_draw",
         "combat_body",
@@ -67499,7 +67537,7 @@
       "name": "Yawgmoth's Will",
       "firstSet": "usg",
       "releasedAt": "1998-10-12",
-      "reviewedAt": "2026-06-29T11:12:05.457Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "card_selection",
         "recursion",
@@ -68027,7 +68065,7 @@
       "name": "Ghitu Encampment",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "burst_ramp",
         "combat_support",
@@ -68146,7 +68184,7 @@
       "name": "Grim Monolith",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "ramp",
         "stable_ramp"
@@ -68681,7 +68719,7 @@
       "name": "Phyrexian Plaguelord",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "sacrifice_support",
@@ -68798,7 +68836,7 @@
       "name": "Rack and Ruin",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -68860,7 +68898,7 @@
       "name": "Rancor",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_support"
       ],
@@ -69104,7 +69142,7 @@
       "name": "Spawning Pool",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "burst_ramp",
         "land_base",
@@ -69246,7 +69284,7 @@
       "name": "Ticking Gnomes",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "removal",
@@ -69326,7 +69364,7 @@
       "name": "Treetop Village",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "burst_ramp",
         "combat_support",
@@ -69496,7 +69534,7 @@
       "name": "Weatherseed Treefolk",
       "firstSet": "ulg",
       "releasedAt": "1999-02-15",
-      "reviewedAt": "2026-06-29T11:14:29.551Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "combat_threat"
@@ -70888,7 +70926,7 @@
       "name": "Southern Elephant",
       "firstSet": "ptk",
       "releasedAt": "1999-05-01",
-      "reviewedAt": "2026-06-29T11:16:13.461Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body"
       ],
@@ -72186,7 +72224,7 @@
       "name": "Covetous Dragon",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "combat_threat",
@@ -72599,7 +72637,7 @@
       "name": "Hulking Ogre",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "combat_body",
         "combat_support"
@@ -72910,7 +72948,7 @@
       "name": "Masticore",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "protection",
@@ -73094,7 +73132,7 @@
       "name": "Phyrexian Negator",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "combat_body",
         "combat_threat",
@@ -73156,7 +73194,7 @@
       "name": "Powder Keg",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "counter_support",
         "sacrifice_support"
@@ -73201,7 +73239,7 @@
       "name": "Rapid Decay",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -73516,7 +73554,7 @@
       "name": "Soul Feast",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
       "actualRoles": [
         "lifegain"
       ],
@@ -73664,7 +73702,7 @@
       "name": "Thran Dynamo",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "ramp",
         "stable_ramp"
@@ -73678,7 +73716,7 @@
       "name": "Thran Foundry",
       "firstSet": "uds",
       "releasedAt": "1999-06-07",
-      "reviewedAt": "2026-06-29T11:20:34.132Z",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
       "actualRoles": [
         "graveyard_hate"
       ],
@@ -73912,6 +73950,483 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by UDS role audit."
+    },
+    {
+      "oracleId": "d12cf640-ff60-4935-a2c7-28ab788de42c",
+      "name": "Angel of Light",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "2681bfb5-127b-4046-85ac-72be584999cb",
+      "name": "Champion Lancer",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "c7971968-c4ee-4437-92ec-1238bce1935f",
+      "name": "Cinder Storm",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "6b25b7d7-ebb1-474c-9898-e027dbf0bbdd",
+      "name": "Dakmor Ghoul",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "00efb113-ba5a-4749-b42b-5693b980f26f",
+      "name": "Dakmor Lancer",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "8a0f4e8e-b541-4327-80fe-4fecc23e0df3",
+      "name": "Devout Monk",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "39780477-01ba-40c6-8fe6-2178efb10b92",
+      "name": "Eager Cadet",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "6ef0dd51-31df-4fd3-8153-49a427a7fdcf",
+      "name": "Goblin Chariot",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "76c02534-35e3-4950-b4b3-90c679cdf6a7",
+      "name": "Goblin Commando",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "04dd449f-ff3a-4ed7-8241-244d58b371dc",
+      "name": "Goblin Settler",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "e62f8d69-a559-4f13-a5c9-5fb750b4af2c",
+      "name": "Grim Tutor",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "54b1a496-1f8e-4581-8260-bad57b25c6e3",
+      "name": "Loyal Sentry",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "5b5e0df8-f8f0-40a1-9814-89d73a026ad0",
+      "name": "Pride of Lions",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "a247a7e7-83bb-46f8-9a31-85b0d8ede919",
+      "name": "Royal Falcon",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "e31510d5-b74e-4a8d-94e8-8bd098cac3c7",
+      "name": "Royal Trooper",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "acb57162-7093-4a3c-9818-d3b61ce757c6",
+      "name": "Sea Eagle",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "f6adfb5f-a21c-4e86-bd16-a9c1e355af34",
+      "name": "Shrieking Specter",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "a72f9437-d652-4a64-99df-a307a6dd9a0d",
+      "name": "Silverback Ape",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "16fe0abe-04fa-4023-8ee0-043a076e78bb",
+      "name": "Squall",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "1b9c9083-62c3-46fd-a2a0-6de7de88a3c3",
+      "name": "Stream of Acid",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "70d9579f-c8a6-4406-afe1-9291fe5ee736",
+      "name": "Thunder Dragon",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "72897780-094d-4a21-8b1c-419a9defd2fb",
+      "name": "Tidings",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "da67de0f-6b0d-4100-9260-334f8c235c59",
+      "name": "Trained Orgg",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "2d02cfce-a142-4b3b-a01f-4e156e75164e",
+      "name": "Veteran Cavalier",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "a6649a99-c9cd-474e-91f2-cc8e75496864",
+      "name": "Vizzerdrix",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "f88db161-3d00-4f45-b2a4-cbdc4f8e5312",
+      "name": "Willow Elf",
+      "firstSet": "s99",
+      "releasedAt": "1999-07-01",
+      "reviewedAt": "2026-06-29T11:21:11.402Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by S99 role audit."
+    },
+    {
+      "oracleId": "33c722cf-b4bf-431f-aefd-ee96241a7fbf",
+      "name": "Crucible of Worlds",
+      "firstSet": "pwor",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:15.531Z",
+      "actualRoles": [
+        "card_selection",
+        "recursion",
+        "repeatable_advantage",
+        "replay_recursion",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by PWOR role audit."
+    },
+    {
+      "oracleId": "635477ae-4a70-4ac5-8e93-1695ffc5e246",
+      "name": "1999 World Championships Ad",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "111ef691-15cc-4297-808a-9cf12afb0dcd",
+      "name": "Jakub Šlemr Bio (1999)",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "25b19bc3-7ca2-41d3-ae93-45905b607087",
+      "name": "Jakub Šlemr Decklist (1999)",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "8c893453-cba9-4191-814d-3bf5e45fb93b",
+      "name": "Kai Budde Bio",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "344a58ab-b2b7-402e-a382-737675609f1b",
+      "name": "Kai Budde Decklist",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "6f0d897b-88ea-4119-909a-8a9564d04c15",
+      "name": "Mark Le Pine Bio",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "3758e5bd-78e5-456b-bbe0-65fe0dec1623",
+      "name": "Mark Le Pine Decklist",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "d3b86164-63a4-4def-85e5-268c68796c38",
+      "name": "Matt Linde Bio",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
+    },
+    {
+      "oracleId": "c3b349dd-9e9c-4af7-ae1f-c9e924dcfa1a",
+      "name": "Matt Linde Decklist",
+      "firstSet": "wc99",
+      "releasedAt": "1999-08-04",
+      "reviewedAt": "2026-06-29T11:21:48.126Z",
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Non-game insert or decklist card; no analyzer role needed."
     }
   ]
 }

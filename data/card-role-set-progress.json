@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T11:20:34.919Z",
+  "generatedAt": "2026-06-29T11:21:48.909Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 68,
+    "done": 72,
     "inProgress": 0,
-    "pending": 975
+    "pending": 971
   },
   "sets": [
     {
@@ -969,11 +969,12 @@
       "setType": "starter",
       "cardCount": 173,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 158,
+      "totalUniqueOracleIds": 158,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/s99-role-review.tsv"
     },
     {
       "code": "pgru",
@@ -982,11 +983,12 @@
       "setType": "promo",
       "cardCount": 5,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 5,
+      "totalUniqueOracleIds": 5,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pgru-role-review.tsv"
     },
     {
       "code": "pwor",
@@ -995,11 +997,12 @@
       "setType": "promo",
       "cardCount": 2,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 2,
+      "totalUniqueOracleIds": 2,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/pwor-role-review.tsv"
     },
     {
       "code": "wc99",
@@ -1008,11 +1011,12 @@
       "setType": "memorabilia",
       "cardCount": 111,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 86,
+      "totalUniqueOracleIds": 86,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/wc99-role-review.tsv"
     },
     {
       "code": "pwos",
