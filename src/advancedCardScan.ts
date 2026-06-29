@@ -212,6 +212,7 @@ function detectAdvancedDrawRoles(profile: CardRoleProfile, text: string, permane
     /\b(?:look at|reveal|mill)\b[\s\S]{0,180}\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\breveal cards? from the top of your library until\b[\s\S]{0,220}\bput (?:that card|it|one of them|those cards)\b[\s\S]{0,120}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
+    /\breveal cards? from the top of your library until\b[\s\S]{0,220}\bput all cards revealed this way into your hand\b/.test(text) ||
     /\bexile cards? from the top of your library until\b[\s\S]{0,260}\bput (?:that card|it|one of them|those cards?|those [a-z]+ cards?|the exiled cards?)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\blook at the top (?:x|\d+|[a-z]+) cards? of your library\b[\s\S]{0,180}\bput one of those cards on top of your library\b/.test(text);
   const hasTopLibraryFiltering = hasTopLibraryFilteringText(text);
@@ -444,12 +445,14 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
     /\byou may (?:reveal |put )?(?:an? )?(?:artifact|creature|enchantment|instant|sorcery|land)?(?: or (?:artifact|creature|enchantment|instant|sorcery|land))? card you own from outside the game\b[\s\S]{0,120}\bput it into your hand\b/.test(
       text,
     ) ||
-    /\byou may put a card you own from outside the game into your hand\b/.test(text);
+    /\byou may put a card you own from outside the game into your hand\b/.test(text) ||
+    /\byou may play a card you own from outside the game this turn\b/.test(text);
   const libraryDig =
     /\b(?:look at|reveal|mill)\b[\s\S]{0,180}\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\breveal the cards in your library\b[\s\S]{0,260}\bopponent chooses\b[\s\S]{0,220}\byou put the chosen cards into your hand\b/.test(text) ||
     /\breveal cards? from the top of your library until\b[\s\S]{0,220}\bput (?:that card|it|one of them)\b[\s\S]{0,120}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
+    /\breveal cards? from the top of your library until\b[\s\S]{0,220}\bput all cards revealed this way into your hand\b/.test(text) ||
     /\bexile cards? from the top of your library until\b[\s\S]{0,260}\bput (?:that card|it|one of them|those cards?|those [a-z]+ cards?|the exiled cards?)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text);
   const symmetricTopdeckTutor =
     /\bchoose\b[^.]{0,80}\btarget players?\b[\s\S]{0,180}\beach of them searches (?:their|his or her) library for a card\b[\s\S]{0,180}\bputs? that card on top\b/.test(
@@ -569,6 +572,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
   const targetedRemoval =
     /\b(?:destroy|exile)\b[^.]{0,120}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\b(?:destroy|exile)\b[^.]{0,40}(?:one|two|three|four|five|six|\d+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|battles?|permanents?|nonland permanents?)\b/.test(text) ||
+    /\btarget creature and all other creatures with the same name as that creature get -\d+\/-\d+ until end of turn\b/.test(text) ||
     /\ball creatures of that type get -\d+\/-\d+ until end of turn\b/.test(text) ||
     /\bchoose two target creatures controlled by the same player\b[\s\S]{0,180}\bsacrifices one of them\b[\s\S]{0,120}\breturn the other to its owner'?s hand\b/.test(text) ||
     /\bbury target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
@@ -623,6 +627,9 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bdestroy all (?:goblins|walls|elves|zombies|skeletons|soldiers|knights|dragons|beasts|merfolk|wizards|clerics|shamans|goblins)\b/.test(text) ||
     /\bexile each permanent\b/.test(text) ||
     /\bdestroy each nonland permanent\b[^.]{0,120}\bmana value (?:x|\d+) or less\b/.test(text) ||
+    /\b(?:destroy|exile) each (?:creature|nonland permanent)\b[^.]{0,120}\bmana value (?:x|\d+) or less\b/.test(text) ||
+    /\bexile each creature with mana value of the chosen quality\b/.test(text) ||
+    /\bcreatures that aren'?t of the chosen type get -\d+\/-\d+ until end of turn\b/.test(text) ||
     /\bat end of combat\b[^.]{0,120}\bdestroy each creature that blocked or was blocked this turn\b/.test(text) ||
     /\bdestroy each creature with mana value equal to the number of\b[^.]{0,120}\bcounters? on\b/.test(text) ||
     /\beach nontoken permanent\b[^.]{0,120}\bis sacrificed by its controller\b/.test(text) ||
@@ -658,6 +665,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\breturn\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent)\b[^.]{0,140}\bto (?:(?:its|their) owner's|their owners') hands?\b/.test(text) ||
     /\breturn target creature you control and target creature you don'?t control to their owners'? hands\b/.test(text) ||
     /\breturn enchanted creature and this aura to their owners'? hands\b/.test(text) ||
+    /\benchanted permanent is a vehicle artifact\b[\s\S]{0,140}\bit loses all other card types\b/.test(text) ||
     /\bwhenever a creature becomes the target of a spell or ability\b[^.]{0,120}\breturn that creature to its owner'?s hand\b/.test(text) ||
     /\breturn\b[^.]{0,80}\b(?:one|two|three|four|five|six|\d+|up to \d+|up to [a-z]+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?)\b[^.]{0,120}\bto (?:their|its) owners'? hands?\b/.test(text) ||
     /\breturn x target nonland permanents to their owners'? hands\b/.test(text) ||
@@ -699,12 +707,19 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\beach opponent discards?\b/.test(text) ||
     /\bwhenever a player casts a (?:green|white|blue|black|red)(?: or (?:green|white|blue|black|red))? spell\b[^.]{0,120}\bthat player discards a card\b/.test(text) ||
     /\bexile\b[^.]{0,140}\bfrom (?:target|that) (?:player|opponent)'s hand\b/.test(text) ||
+    /\btarget opponent reveals their hand\b[\s\S]{0,140}\byou choose a nonland card from it and exile that card\b/.test(text) ||
     /\blook at that player'?s hand\b[\s\S]{0,180}\bchoose a card(?: other than a basic land card)? from it\b[\s\S]{0,140}\b(?:discards? that card|player discards that card|they discard that card)\b/.test(text) ||
     /\btarget player chooses\b[^.]{0,80}\bcards? from their hand\b[^.]{0,120}\bputs? them on top of their library\b/.test(text);
 
   if (/\bexile up to (?:three|two|one|\d+) target cards? from (?:a single |target )?graveyard\b/.test(text)) {
     addRole(profile, "graveyard_hate", 0.44, "Advanced scan recognized targeted graveyard exile.");
     addRole(profile, "hate_piece", 0.28, "Advanced scan recognized graveyard hate.");
+  }
+
+  if (/\bsearch (?:target player'?s|its owner'?s) graveyard, hand, and library for any number of cards\b[\s\S]{0,160}\bexile them\b/.test(text)) {
+    addRole(profile, "graveyard_hate", 0.46, "Advanced scan recognized extraction-style graveyard disruption.");
+    addRole(profile, "hate_piece", 0.5, "Advanced scan recognized card-name denial.");
+    addRole(profile, "hand_attack", 0.34, "Advanced scan recognized extraction-style hand pressure.");
   }
 
   const selfProtectionFlicker =
@@ -759,6 +774,11 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
   if (/\breturn each\b[^.]{0,120}\bcreature\b[^.]{0,180}\bto (?:its|their) owner'?s hand\b/.test(text)) {
     addRole(profile, "removal", 0.72, "Advanced scan recognized mass bounce as battlefield interaction.");
     addRole(profile, "tempo_removal", 0.78, "Advanced scan recognized mass bounce as tempo interaction.");
+  }
+
+  if (/\bend the turn\b/.test(text)) {
+    addRole(profile, "stack", 0.44, "Advanced scan recognized turn-ending interaction.");
+    addRole(profile, "spell_tempo", 0.38, "Advanced scan recognized turn-ending stack cleanup.");
   }
 
   if (handAttack) {
@@ -996,7 +1016,8 @@ function detectAdvancedRecursionRoles(profile: CardRoleProfile, text: string, pe
     /\breturn a creature card from their graveyard to their hand\b/.test(text) ||
     /\btarget opponent chooses one of the top two cards of your graveyard\b[\s\S]{0,160}\bput the other one into your hand\b/.test(text) ||
     /\bwhenever a nontoken creature is put into your graveyard from the battlefield\b[\s\S]{0,180}\breturn that card to your hand\b/.test(text) ||
-    /\bchooses? a card in your graveyard\b[\s\S]{0,220}\bput the last chosen card into your hand\b/.test(text);
+    /\bchooses? a card in your graveyard\b[\s\S]{0,220}\bput the last chosen card into your hand\b/.test(text) ||
+    /\bexchange your hand and graveyard\b/.test(text);
   const replay =
     !hasSelfContainedGraveyardCastText(text) &&
     (/\byou may (?:cast|play)\b[^.]{0,120}\bfrom your graveyard\b/.test(text) ||
@@ -1951,9 +1972,43 @@ function detectAdvancedPurposeRoles(
   if (
     /\bcopy of\b|\bbecomes a copy\b|\bcopy that spell or ability\b/.test(text) ||
     /\bcopy (?:target|that|the)\b[^.]{0,120}\b(?:spell|instant|sorcery|ability)\b/.test(text) ||
+    /\bcopy (?:those cards|each card exiled with this enchantment)\b/.test(text) ||
+    /\bcopy it for each other instant and sorcery spell\b/.test(text) ||
     /\btriggered ability\b[\s\S]{0,120}\btriggers? an additional time\b/.test(text)
   ) {
     addRole(profile, "copy_support", 0.52, "Advanced scan recognized copy-based utility.");
+  }
+
+  if (/\bwhenever you cast (?:your first )?instant or sorcery spell\b/.test(text) || /\bwhenever you cast an instant or sorcery spell\b/.test(text)) {
+    addRole(profile, "spellslinger", permanent ? 0.62 : 0.5, "Advanced scan recognized instant/sorcery cast payoff.");
+    addRole(profile, "copy_support", permanent ? 0.48 : 0.36, "Advanced scan recognized instant/sorcery cast payoff.");
+  }
+
+  if (/\beach opponent exiles cards from the top of their library until\b[\s\S]{0,140}\btotal mana value\b/.test(text)) {
+    addRole(profile, "mill_support", 0.5, "Advanced scan recognized library exile pressure.");
+    addRole(profile, "graveyard_hate", 0.24, "Advanced scan recognized exile-based library pressure.");
+  }
+
+  if (/\bwhenever (?:enchanted player|a player) casts\b[^.]{0,180}\bthis aura deals? \d+ damage\b/.test(text) || /\bwhenever a player casts a spell of the chosen color\b[^.]{0,120}\bthat player loses \d+ life\b/.test(text)) {
+    addRole(profile, "damage_engine", permanent ? 0.48 : 0.34, "Advanced scan recognized spell-punisher damage.");
+    addRole(profile, "group_slug", permanent ? 0.46 : 0.34, "Advanced scan recognized spell-punisher damage.");
+    addRole(profile, "hate_piece", permanent ? 0.36 : 0.28, "Advanced scan recognized spell-punisher pressure.");
+  }
+
+  if (/\bwhenever an opponent casts a spell\b[^.]{0,120}\bthat player loses \d+ life unless they discard a card\b/.test(text)) {
+    addRole(profile, "stax_piece", 0.54, "Advanced scan recognized spell-punisher discard tax.");
+    addRole(profile, "damage_engine", 0.46, "Advanced scan recognized spell-punisher life pressure.");
+    addRole(profile, "group_slug", 0.42, "Advanced scan recognized spell-punisher life pressure.");
+    addRole(profile, "hand_attack", 0.34, "Advanced scan recognized discard-tax pressure.");
+  }
+
+  if (/\bthis aura deals damage to that player equal to the number of curses attached to them\b/.test(text)) {
+    addRole(profile, "damage_engine", 0.58, "Advanced scan recognized Curse damage payoff.");
+    addRole(profile, "group_slug", 0.42, "Advanced scan recognized Curse damage payoff.");
+  }
+
+  if (/\btarget creature you control becomes\b[^.]{0,120}\bbase power and toughness \d+\/\d+\b/.test(text)) {
+    addRole(profile, "combat_support", 0.42, "Advanced scan recognized temporary creature scaling.");
   }
 
   if (

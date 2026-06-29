@@ -3390,6 +3390,54 @@ test("inferAdvancedRoleProfile recognizes Judgment utility wording gaps", () => 
   assert.ok(getRoleWeight(shiftProfile, "graveyard_support") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes promo-era wording gaps", () => {
+  const castigateProfile = inferAdvancedRoleProfile(
+    createCard("Castigate", "Sorcery", 2, "Target opponent reveals their hand. You choose a nonland card from it and exile that card."),
+  );
+  const extractionProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Surgical Extraction",
+      "Instant",
+      1,
+      "Choose target card in a graveyard other than a basic land card. Search its owner's graveyard, hand, and library for any number of cards with the same name as that card and exile them. Then that player shuffles.",
+    ),
+  );
+  const treasureProfile = inferAdvancedRoleProfile(
+    createCard("Treasure Hunt", "Sorcery", 2, "Reveal cards from the top of your library until you reveal a nonland card, then put all cards revealed this way into your hand."),
+  );
+  const sweeperProfile = inferAdvancedRoleProfile(
+    createCard("Extinction Event", "Sorcery", 4, "Choose odd or even. Exile each creature with mana value of the chosen quality. (Zero is even.)"),
+  );
+  const discontinuityProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Discontinuity",
+      "Instant",
+      6,
+      'During your turn, this spell costs {2}{U}{U} less to cast. End the turn. (Exile all spells and abilities from the stack, including this card. The player whose turn it is discards down to their maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)',
+    ),
+  );
+  const harnessProfile = inferAdvancedRoleProfile(createCard("Harness Infinity", "Instant", 7, "Exchange your hand and graveyard. Exile Harness Infinity."));
+  const stormProfile = inferAdvancedRoleProfile(
+    createCard("Thousand-Year Storm", "Enchantment", 6, "Whenever you cast an instant or sorcery spell, copy it for each other instant and sorcery spell you've cast before it this turn. You may choose new targets for the copies."),
+  );
+  const curseProfile = inferAdvancedRoleProfile(
+    createCard("Curse of Thirst", "Enchantment - Aura Curse", 5, "Enchant player At the beginning of enchanted player's upkeep, this Aura deals damage to that player equal to the number of Curses attached to them."),
+  );
+  const quandaryProfile = inferAdvancedRoleProfile(createCard("Painful Quandary", "Enchantment", 5, "Whenever an opponent casts a spell, that player loses 5 life unless they discard a card."));
+  const wishProfile = inferAdvancedRoleProfile(createCard("Wish", "Sorcery", 3, "You may play a card you own from outside the game this turn."));
+
+  assert.ok(getRoleWeight(castigateProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(extractionProfile, "graveyard_hate") > 0);
+  assert.ok(getRoleWeight(treasureProfile, "selection") > 0);
+  assert.ok(getRoleWeight(sweeperProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(discontinuityProfile, "stack") > 0);
+  assert.ok(getRoleWeight(harnessProfile, "hand_recursion") > 0);
+  assert.ok(getRoleWeight(stormProfile, "copy_support") > 0);
+  assert.ok(getRoleWeight(curseProfile, "group_slug") > 0);
+  assert.ok(getRoleWeight(quandaryProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(wishProfile, "restricted_tutor") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

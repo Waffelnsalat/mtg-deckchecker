@@ -110,8 +110,8 @@ pr2	Magic Player Rewards 2002	2002-01-01	promo	6	false	done	6	6	0	true	data/card
 ptor	Torment Promos	2002-02-04	promo	3	false	done	1	1	0	true	data/card-role-worksheets/ptor-role-review.tsv
 tor	Torment	2002-02-04	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/tor-role-review.tsv
 jud	Judgment	2002-05-27	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/jud-role-review.tsv
-pjud	Judgment Promos	2002-05-27	promo	1	false	pending	0			false	
-prm	Magic Online Promos	2002-06-24	promo	3110	true	pending	0			false	
+pjud	Judgment Promos	2002-05-27	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pjud-role-review.tsv
+prm	Magic Online Promos	2002-06-24	promo	3110	true	done	2695	2695	0	true	data/card-role-worksheets/prm-role-review.tsv
 jp1	Hobby Japan Promos	2002-07-01	promo	5	false	pending	0			false	
 pons	Onslaught Promos	2002-09-28	promo	1	false	pending	0			false	
 ons	Onslaught	2002-10-07	expansion	351	false	pending	0			false	
