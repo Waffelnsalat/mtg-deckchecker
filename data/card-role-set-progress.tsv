@@ -62,9 +62,9 @@ g99	Judge Gift Cards 1999	1999-01-01	promo	1	false	done	1	1	0	true	data/card-rol
 pal99	Arena League 1999	1999-01-01	promo	10	false	done	9	9	0	true	data/card-role-worksheets/pal99-role-review.tsv
 pulg	Urza's Legacy Promos	1999-02-15	promo	2	false	done	1	1	0	true	data/card-role-worksheets/pulg-role-review.tsv
 ulg	Urza's Legacy	1999-02-15	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/ulg-role-review.tsv
-6ed	Classic Sixth Edition	1999-04-21	core	351	false	pending	0			false	
-pptk	Portal Three Kingdoms Promos	1999-05-01	promo	2	false	pending	0			false	
-ptk	Portal Three Kingdoms	1999-05-01	starter	180	false	pending	0			false	
+6ed	Classic Sixth Edition	1999-04-21	core	351	false	done	335	335	0	true	data/card-role-worksheets/6ed-role-review.tsv
+pptk	Portal Three Kingdoms Promos	1999-05-01	promo	2	false	done	1	1	0	true	data/card-role-worksheets/pptk-role-review.tsv
+ptk	Portal Three Kingdoms	1999-05-01	starter	180	false	done	170	170	0	true	data/card-role-worksheets/ptk-role-review.tsv
 puds	Urza's Destiny Promos	1999-06-07	promo	1	false	pending	0			false	
 uds	Urza's Destiny	1999-06-07	expansion	143	false	pending	0			false	
 s99	Starter 1999	1999-07-01	starter	173	false	pending	0			false	

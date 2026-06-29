@@ -3065,6 +3065,14 @@ test("inferAdvancedRoleProfile recognizes Urza's Legacy utility wording gaps", (
   assert.ok(getRoleWeight(lensProfile, "color_change") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Portal Three Kingdoms utility wording gaps", () => {
+  const damProfile = inferAdvancedRoleProfile(createCard("Broken Dam", "Sorcery", 1, "Tap one or two target creatures without horsemanship."));
+  const edictProfile = inferAdvancedRoleProfile(createCard("Imperial Edict", "Sorcery", 2, "Target opponent chooses a creature they control. Destroy that creature."));
+
+  assert.ok(getRoleWeight(damProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(edictProfile, "targeted_removal") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

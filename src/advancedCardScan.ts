@@ -526,7 +526,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\b(?:plains|islands|swamps|mountains|forests)\b[^.]{0,120}\bdon't untap during their controllers'? untap steps\b/.test(text);
   const chosenRemoval =
     /\b(?:choose|chooses)\b[^.]{0,160}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b/.test(text) &&
-    /\b(?:destroy|exile)\b[^.]{0,80}\b(?:the chosen|those|them|it)\b/.test(text);
+    /\b(?:destroy|exile)\b[^.]{0,80}\b(?:the chosen|that creature|those|them|it)\b/.test(text);
   const leastPowerRemoval = /\bdestroy the creature with the least power\b/.test(text);
   const auraNeutralization =
     /\benchant (?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent)\b/.test(text) &&
@@ -630,6 +630,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\breturn\b[^.]{0,80}\b(?:one|two|three|four|five|six|\d+|up to \d+|up to [a-z]+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?)\b[^.]{0,120}\bto (?:their|its) owners'? hands?\b/.test(text) ||
     (/\b(?:put|puts)\b[^.]{0,40}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|permanent|nonland permanent|land)\b[^.]{0,120}\blibrary\b/.test(text) &&
       !/\bgraveyard\b/.test(text)) ||
+    /\btap one or two target creatures\b/.test(text) ||
     /\btap (?:up to )?(?:(?:one|two|three|four|five|six|\d+)\s+)?target\b[^.]{0,120}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|permanents?|nonland permanents?|lands?)\b/.test(text) ||
     phaseOutRemoval ||
     /\btarget spell, nonland permanent, or card in a graveyard\b[^.]{0,160}\btop or bottom of (?:their|its) library\b/.test(text);
