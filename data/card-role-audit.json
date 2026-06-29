@@ -5997,7 +5997,7 @@
       "name": "Erhnam Djinn",
       "firstSet": "arn",
       "releasedAt": "1993-12-17",
-      "reviewedAt": "2026-06-29T11:49:42.700Z",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -47880,7 +47880,7 @@
       "name": "Guided Strike",
       "firstSet": "wth",
       "releasedAt": "1997-06-09",
-      "reviewedAt": "2026-06-26T06:43:08.408Z",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
       "expectedRoles": [
         "card_draw",
         "combat_support",
@@ -99735,6 +99735,2118 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by TOR role audit."
+    },
+    {
+      "oracleId": "fc2ccab7-cab1-4463-b73d-898070136d74",
+      "name": "Ancestor's Chosen",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "eaabd151-2160-4bff-82c0-3fa88659be98",
+      "name": "Anger",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "2cdd85c8-fa60-44ca-bc96-d38f029d2184",
+      "name": "Anurid Barkripper",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "bdecf59c-f8bd-4003-9058-685b70c08837",
+      "name": "Anurid Brushhopper",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "fd275ea7-9ccc-4148-9b33-392a612486dd",
+      "name": "Anurid Swarmsnapper",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "0b633017-bfdf-47cd-a60f-c93816b47e9c",
+      "name": "Arcane Teachings",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "3fb3d4b3-1034-449c-864b-633e7f39d73f",
+      "name": "Aven Fogbringer",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "c152f829-0452-407b-8020-023bf3d75c74",
+      "name": "Aven Warcraft",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "protection",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "dfd8e6c2-e425-41fa-af55-985271f771b3",
+      "name": "Balthor the Defiled",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "mass_recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "5a88f616-986d-4e97-9457-26c783489123",
+      "name": "Barbarian Bully",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e73131cd-b454-405b-9539-9d777e232b9e",
+      "name": "Battle Screech",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "92ac7531-10bb-47a2-9dd0-378d547b4ed6",
+      "name": "Battlefield Scrounger",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "f165e482-5b87-4062-87ac-bbe8303f74c9",
+      "name": "Battlewise Aven",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "c8c38570-0b42-4bfc-896f-f57f9a11ba9d",
+      "name": "Benevolent Bodyguard",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "sacrifice_support",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "644a8946-4890-4c2b-978f-02eedc95b5ad",
+      "name": "Book Burning",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "fa5e2575-51bb-448e-9aaf-0e0f5956ac98",
+      "name": "Border Patrol",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "00876e98-d062-4a12-85e6-86a2b20cf867",
+      "name": "Brawn",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "a648b9ed-810a-41db-af40-3b5b4658db90",
+      "name": "Breaking Point",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "11cd0c42-4148-4d82-9172-b1a1967fe319",
+      "name": "Browbeat",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "13a884b5-8970-4d71-9082-a8b6c8db9a01",
+      "name": "Burning Wish",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "018107d1-ebf7-4657-bc91-c8374af55cc5",
+      "name": "Cabal Therapy",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "hand_attack",
+        "hand_info",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "fce68545-c31d-4dc2-9f1b-aadf924a07d1",
+      "name": "Cabal Trainee",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "fe1f40fe-011b-4686-b865-fed00c56d30a",
+      "name": "Cagemail",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "195c6453-e5cc-4b3b-8518-eaccf29bc4a6",
+      "name": "Canopy Claws",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "0aaefa00-86f4-4e12-87ae-3a362d862fa4",
+      "name": "Centaur Rootcaster",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "repeatable_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "a5236bf7-c84f-4c64-bf6b-3a89c05e161a",
+      "name": "Cephalid Constable",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "a3add0d7-2610-4b4e-9d43-3f04a5cd8259",
+      "name": "Cephalid Inkshrouder",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "b7553f3f-5de1-409c-a184-e12e40f017ab",
+      "name": "Chastise",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "lifegain",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "b9b9edb2-62f5-499c-b2fc-359dc673c4b4",
+      "name": "Commander Eesha",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "6c12cd05-b673-453c-9f6b-f3aa022467c1",
+      "name": "Crush of Wurms",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "bdf80a55-b524-4d17-9be8-a0005403a0e7",
+      "name": "Cunning Wish",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "ff0ca1a4-da67-407c-a5c0-998a35eb7d8d",
+      "name": "Death Wish",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "5a295dc1-7f60-4581-b0f9-61e8b14339bf",
+      "name": "Defy Gravity",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "graveyard_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "cbbca098-0b33-4693-8ea7-a2005b79af3d",
+      "name": "Dwarven Bloodboiler",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "5967c3d3-2ef1-4496-b51c-23478fa77f09",
+      "name": "Dwarven Driller",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "a896cedb-f10a-48ac-82e7-6ae1e8b5a439",
+      "name": "Dwarven Scorcher",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "6c14ecbf-0097-4fd8-97a3-a32b532c21e0",
+      "name": "Earsplitting Rats",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "hand_attack",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "c138bd7f-8751-4e96-b54a-d5082e1a491f",
+      "name": "Elephant Guide",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "1f300320-ad98-4812-b34b-54885a86aee9",
+      "name": "Ember Shot",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "30062dd0-c049-4872-8011-8b4810a3fa26",
+      "name": "Envelop",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "6f34ee2c-6e0b-4c71-9bdd-6ac55a323849",
+      "name": "Epic Struggle",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "alternate_finisher",
+        "finisher",
+        "repeatable_finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "29358dcd-b26a-4720-9daa-7baa648e3540",
+      "name": "Exoskeletal Armor",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "411484ac-a87d-49e8-a7ef-0cd055a872b6",
+      "name": "Filth",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "landwalk_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "8f262a8b-2553-45c9-b37f-218a5547fcff",
+      "name": "Firecat Blitz",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "graveyard_support",
+        "mana_sink",
+        "sacrifice_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "cad19ad2-3ea9-43f5-bb5a-b0793402fab0",
+      "name": "Flaring Pain",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "9196c8dc-bca6-4c35-949e-8c14a699a41d",
+      "name": "Flash of Insight",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_selection",
+        "graveyard_support",
+        "mana_sink",
+        "restricted_tutor",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "be007706-3da7-4dd3-84db-dbb5d8831bba",
+      "name": "Fledgling Dragon",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "135eb851-3f2d-45c5-bfb9-49d1e6c98344",
+      "name": "Folk Medicine",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "c8c5cd28-4f27-424d-92bc-e7d6f15a5f9f",
+      "name": "Forcemage Advocate",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "02af53c1-83e6-447f-908b-2757c8aa445c",
+      "name": "Funeral Pyre",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_hate",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "15afdd88-05fc-4335-8a55-c6ee702f3bef",
+      "name": "Genesis",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "hand_recursion",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "0eb41c36-5910-41fd-97fc-1cae2332e5c5",
+      "name": "Giant Warthog",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "3853ef6a-6771-4708-8ed5-d667f646de5a",
+      "name": "Glory",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e5f25cbd-39e4-4806-8dba-9a552356696d",
+      "name": "Golden Wish",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "853ce64f-50b4-49a6-9aa3-f07b11cd8b69",
+      "name": "Goretusk Firebeast",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "435c8d98-9fa3-40d8-9b7c-32474099e08e",
+      "name": "Grave Consequences",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "0144d9bb-d3cb-4c23-b133-6653d7c3a76d",
+      "name": "Grip of Amnesia",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "f3073e4f-ca7e-4fde-88a4-bd7b6ebfbc8c",
+      "name": "Grizzly Fate",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "0285bd20-f49e-48f7-8c8c-960f9fbe4d34",
+      "name": "Guiltfeeder",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "240a349a-79f8-4e11-9a05-a78148e70a62",
+      "name": "Hapless Researcher",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "sacrifice_support",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "c2b4f43a-6609-43ca-ad0d-897b6f8cb22f",
+      "name": "Harvester Druid",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "mana_fixing",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "2f3fec87-3dd2-4e5d-835c-eae535da4ecb",
+      "name": "Hunting Grounds",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "ed0402d7-02cb-4763-a661-82280d6c9af8",
+      "name": "Infectious Rage",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "693ca077-2b91-4de1-8136-8fe45f8ea5a7",
+      "name": "Ironshell Beetle",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "3186fddd-23fd-440c-ad61-b4130e00f765",
+      "name": "Jeska, Warrior Adept",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "847b5be5-cb0c-4857-bcd9-c5cfe55fdaeb",
+      "name": "Keep Watch",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e69252a6-8c27-4af9-8cbe-11eb416a6a46",
+      "name": "Krosan Reclamation",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_hate",
+        "graveyard_support",
+        "topdeck_control"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "d9a10971-f32b-4978-952d-fed0a5bc9e36",
+      "name": "Krosan Verge",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "land_acceleration",
+        "land_base",
+        "land_slot",
+        "land_tutor",
+        "mana_fixing",
+        "mana_source",
+        "ramp",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "1729317d-ccfb-4f27-84c6-20b36b2826c9",
+      "name": "Krosan Wayfarer",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "land_acceleration",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "68f330ca-8279-46c5-900d-a9b443676104",
+      "name": "Laquatus's Disdain",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e48891e3-30a2-4fc8-a858-cec33c6e4ab5",
+      "name": "Lava Dart",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "9e8e5ad4-05a3-4757-8797-c37bf49506d5",
+      "name": "Lead Astray",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "c5081f2d-ebe2-4ff3-a8ef-fe50f8ecde60",
+      "name": "Liberated Dwarf",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "dc55e69e-e1b8-4129-902c-c71bcb952418",
+      "name": "Lightning Surge",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "b9d186f5-1c92-4539-a5b5-e7fbd4b726fe",
+      "name": "Living Wish",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "820ba630-c543-491c-8c77-ada69b01c79d",
+      "name": "Lost in Thought",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "f41b1a5b-bc99-4c51-9665-e251f04ad83f",
+      "name": "Masked Gorgon",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e8d5f31c-7abf-4fbb-977e-8353a97daf7a",
+      "name": "Mental Note",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "852657c0-18a4-4b28-b9ae-7728acdb5044",
+      "name": "Mirari's Wake",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "mana_fixing",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "c4ab446a-97e4-46a5-89a8-180a0bf3447c",
+      "name": "Mirror Wall",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e78673c4-a969-443f-b1a4-0eb37b8111af",
+      "name": "Mist of Stagnation",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "82e36ba9-9652-4594-8660-86c766b47709",
+      "name": "Morality Shift",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "c6de0ee9-785d-4cd8-8a7f-5bb715763131",
+      "name": "Nantuko Monastery",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "burst_ramp",
+        "land_base",
+        "land_slot",
+        "mana_source",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "4fd567cb-0b8e-41dd-a2b7-87a196de294a",
+      "name": "Nantuko Tracer",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "library_recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "591ce7dc-8407-43ed-acfc-e3d8fd547125",
+      "name": "Nomad Mythmaker",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "558568a6-5e22-482f-9096-e76682965c21",
+      "name": "Nullmage Advocate",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "9bb8c54b-1228-4b7c-8651-52cb5b0f6e72",
+      "name": "Phantom Centaur",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "bcded242-6e54-416f-bdc8-093211c50e3f",
+      "name": "Phantom Flock",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "0951b529-646c-4dfd-88ad-84ee117ce722",
+      "name": "Phantom Nantuko",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e43e06fb-52b7-4f38-8fac-f31973b043f7",
+      "name": "Phantom Nishoba",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "bf65a7a7-a590-41eb-9844-184e5d63e32a",
+      "name": "Phantom Nomad",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "1755b3d4-0e40-40c4-b913-0960d55d411b",
+      "name": "Phantom Tiger",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "f0864dbb-4d91-4282-a774-7b225e649ca8",
+      "name": "Planar Chaos",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "coin_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "8e414ad6-ba19-44a1-a291-2e420734a6dd",
+      "name": "Prismatic Strands",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "broad_protection",
+        "graveyard_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "06e4355b-02d4-4238-a6e6-b03a5773346c",
+      "name": "Pulsemage Advocate",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "recursion",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "938f48a9-766e-41d3-a425-9c3a6adf675b",
+      "name": "Quiet Speculation",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "327c5ca2-4eeb-49cb-84fb-f6a4b06b24bc",
+      "name": "Rats' Feast",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "4620bfa8-7198-44ae-a162-51a19ca0f555",
+      "name": "Ray of Revelation",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "graveyard_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "8d7e05ba-5406-4d5e-bb8f-a4a6f3b0eaa7",
+      "name": "Riftstone Portal",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "land_base",
+        "land_slot",
+        "mana_source"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "99eb50ef-352f-47c4-91e3-32813cbe0649",
+      "name": "Scalpelexis",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "3ba50802-57d0-450e-9e2f-a46a09d2f6bb",
+      "name": "Seedtime",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "extra_turn",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "78e875b1-e621-4bf0-ad81-24ed9e2b43f8",
+      "name": "Selfless Exorcist",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "graveyard_hate",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e2ef027d-0ef7-4c8b-a594-3918290b02d9",
+      "name": "Serene Sunset",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_support",
+        "mana_sink",
+        "protection",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "619d8d81-9e10-4353-b30d-a0f9c3451cd2",
+      "name": "Shaman's Trance",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "replacement_engine",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "57188b3d-567c-4dff-8b93-7cc7a47894be",
+      "name": "Shieldmage Advocate",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "bcc7e32a-9cf9-4fdf-a0a4-e90ae42f1353",
+      "name": "Silver Seraph",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "d41ab41d-07c8-4f6d-be5e-7aec9f5f6365",
+      "name": "Solitary Confinement",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "broad_protection",
+        "hate_piece",
+        "protection",
+        "sacrifice_support",
+        "self_protection",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "69565f6e-2e23-4cd8-bd21-1283e06729a3",
+      "name": "Soulcatchers' Aerie",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "cbbcd3a3-6ddd-4511-a352-3055d0102e7c",
+      "name": "Soulgorger Orgg",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "9c0fd5ad-fbba-4598-80cf-6540888378cb",
+      "name": "Spellgorger Barbarian",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "7687b2a7-816d-4416-979b-675e35e235fc",
+      "name": "Spelljack",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_selection",
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "ae896d87-59c7-4d8d-a137-9e471d3e174e",
+      "name": "Spirit Cairn",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "0477b923-9f32-4e7f-ac08-c715cca819a4",
+      "name": "Spurnmage Advocate",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "bc3d5911-3580-4132-9daf-2826495b5739",
+      "name": "Stitch Together",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "8df51012-b334-475f-b70d-af4f2b3840a0",
+      "name": "Sudden Strength",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_support",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "8b4715b0-63d9-4ff8-a667-21a762518687",
+      "name": "Sutured Ghoul",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "e1169108-1bc8-42ca-a056-a9358fba10cb",
+      "name": "Swelter",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "dc5cb229-82c9-4a87-9a10-490350cbdfc0",
+      "name": "Swirling Sandstorm",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "bddf8f4a-3149-4dd6-a9e5-7747e7e45a1c",
+      "name": "Sylvan Safekeeper",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "708a76cc-d4ab-4dfd-98dd-815f5bc99364",
+      "name": "Telekinetic Bonds",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "ffdad8fb-69ee-40d3-b2eb-b0aee0a5becc",
+      "name": "Test of Endurance",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "alternate_finisher",
+        "finisher",
+        "repeatable_finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "19ed8616-5d27-4f21-88a9-2af7cf5034ca",
+      "name": "Thriss, Nantuko Primus",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "9c3be33b-0be9-49ec-8160-898cbcab8814",
+      "name": "Toxic Stench",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "22528380-4f47-4bd9-a1d4-79f700cba4f5",
+      "name": "Trained Pronghorn",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "1d33d49f-ba12-4bf6-878b-04cee5d5b48d",
+      "name": "Treacherous Vampire",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "59681998-c395-4d37-a419-2a78cf894506",
+      "name": "Treacherous Werewolf",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "31370fdf-c666-40d2-a7ff-3ba1dfe350cd",
+      "name": "Tunneler Wurm",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "3d50266f-5a2f-4a48-ab15-87e733624fd4",
+      "name": "Unquestioned Authority",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "b2ac84e3-cc3c-49c6-918b-a407ef1ee06c",
+      "name": "Valor",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "6a3052a1-7a0b-4364-883d-cd2abca39c06",
+      "name": "Venomous Vines",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "9bb66d53-a83c-4313-91c3-4df09c248558",
+      "name": "Vigilant Sentry",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "a96d24f1-7670-4cb2-9971-5dd1b4c67957",
+      "name": "Web of Inertia",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "232284f7-c623-4895-9ab9-8b1a39926830",
+      "name": "Wonder",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "a628186d-b7d9-40a5-9ae2-fbc9d2a14c7c",
+      "name": "Worldgorger Dragon",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "77a000de-76d9-44f8-9789-875aa9f576e7",
+      "name": "Wormfang Behemoth",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "4216f9ce-bdd9-4213-8c3f-e2ef4cd848f9",
+      "name": "Wormfang Crab",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "d37c4e77-5023-4d13-9cfe-a43f513364bf",
+      "name": "Wormfang Drake",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "17abf8c6-70b6-4877-a0f2-a87b22fb2828",
+      "name": "Wormfang Manta",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "extra_turn",
+        "finisher",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "be014a79-5550-4f79-8789-b4d6783d7ec8",
+      "name": "Wormfang Newt",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
+    },
+    {
+      "oracleId": "771f9ba4-6c65-4497-ad48-869994435556",
+      "name": "Wormfang Turtle",
+      "firstSet": "jud",
+      "releasedAt": "2002-05-27",
+      "reviewedAt": "2026-06-29T12:35:45.132Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by JUD role audit."
     }
   ]
 }

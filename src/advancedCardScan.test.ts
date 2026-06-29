@@ -3372,6 +3372,24 @@ test("inferAdvancedRoleProfile recognizes Torment utility wording gaps", () => {
   assert.ok(getRoleWeight(dwellProfile, "graveyard_hate") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Judgment utility wording gaps", () => {
+  const wishProfile = inferAdvancedRoleProfile(createCard("Burning Wish", "Sorcery", 2, "You may reveal a sorcery card you own from outside the game and put it into your hand. Exile Burning Wish."));
+  const deathWishProfile = inferAdvancedRoleProfile(createCard("Death Wish", "Sorcery", 3, "You may put a card you own from outside the game into your hand. You lose half your life, rounded up. Exile Death Wish."));
+  const mistProfile = inferAdvancedRoleProfile(
+    createCard("Mist of Stagnation", "Enchantment", 5, "Permanents don't untap during their controllers' untap steps. At the beginning of each player's upkeep, that player chooses a permanent for each card in their graveyard, then untaps those permanents."),
+  );
+  const speculationProfile = inferAdvancedRoleProfile(
+    createCard("Quiet Speculation", "Sorcery", 2, "Search target player's library for up to three cards with flashback and put them into that player's graveyard. Then the player shuffles."),
+  );
+  const shiftProfile = inferAdvancedRoleProfile(createCard("Morality Shift", "Sorcery", 7, "Exchange your graveyard and library. Then shuffle your library."));
+
+  assert.ok(getRoleWeight(wishProfile, "restricted_tutor") > 0);
+  assert.ok(getRoleWeight(deathWishProfile, "restricted_tutor") > 0);
+  assert.ok(getRoleWeight(mistProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(speculationProfile, "graveyard_support") > 0);
+  assert.ok(getRoleWeight(shiftProfile, "graveyard_support") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,

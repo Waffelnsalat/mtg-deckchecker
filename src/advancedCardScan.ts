@@ -440,6 +440,11 @@ function detectAdvancedRampRoles(
 function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, permanent: boolean) {
   const librarySearch =
     /\bsearch(?:es)?\b[^.]{0,220}\b(?:your|their|his or her) library\b/.test(text);
+  const outsideGameTutor =
+    /\byou may (?:reveal |put )?(?:an? )?(?:artifact|creature|enchantment|instant|sorcery|land)?(?: or (?:artifact|creature|enchantment|instant|sorcery|land))? card you own from outside the game\b[\s\S]{0,120}\bput it into your hand\b/.test(
+      text,
+    ) ||
+    /\byou may put a card you own from outside the game into your hand\b/.test(text);
   const libraryDig =
     /\b(?:look at|reveal|mill)\b[\s\S]{0,180}\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
     /\bput\b[\s\S]{0,160}\b(?:from among them|from among those cards|from among the revealed cards|from among the cards revealed this way|from among the milled cards|from among the cards milled this way|from among cards milled this way)\b[\s\S]{0,160}\b(?:into your hand|onto the battlefield)\b/.test(text) ||
@@ -451,7 +456,7 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
       text,
     );
 
-  if (!librarySearch && !libraryDig && !symmetricTopdeckTutor) {
+  if (!librarySearch && !libraryDig && !symmetricTopdeckTutor && !outsideGameTutor) {
     return;
   }
 
@@ -472,7 +477,10 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
     restrictedTutor &&
     /\bsearch(?:es)?\b[\s\S]{0,300}\blibrary\b[\s\S]{0,300}\bfor\b[\s\S]{0,300}\bputs? (?:it|them|that card|those cards?|the cards?)\b[\s\S]{0,120}\bonto the battlefield\b/.test(text);
 
-  if (symmetricTopdeckTutor) {
+  if (outsideGameTutor) {
+    addRole(profile, "tutor", 0.72, "Advanced scan recognized outside-game card access.");
+    addRole(profile, "restricted_tutor", 0.68, "Advanced scan recognized outside-game card access.");
+  } else if (symmetricTopdeckTutor) {
     addRole(profile, "tutor", 0.62, "Advanced scan recognized a symmetric top-of-library tutor.");
     addRole(profile, "direct_tutor", 0.6, "Advanced scan recognized a symmetric top-of-library tutor.");
   } else if (libraryDig) {
@@ -496,6 +504,11 @@ function detectAdvancedTutorRoles(profile: CardRoleProfile, text: string, perman
 
   if (repeatable) {
     addRole(profile, "repeatable_tutor", 0.82, "Advanced scan recognized repeatable access to searched cards.");
+  }
+
+  if (/\bsearch target player'?s library for up to (?:three|two|\d+) cards with flashback\b[\s\S]{0,120}\bput them into that player'?s graveyard\b/.test(text)) {
+    addRole(profile, "graveyard_support", 0.52, "Advanced scan recognized flashback graveyard setup.");
+    addRole(profile, "mill_support", 0.34, "Advanced scan recognized targeted library-to-graveyard setup.");
   }
 }
 
@@ -1555,6 +1568,11 @@ function detectAdvancedPurposeRoles(
     );
   }
 
+  if (/\bsearch target player'?s library for up to (?:three|two|\d+) cards with flashback\b[\s\S]{0,160}\bput them into that player'?s graveyard\b/.test(text)) {
+    addRole(profile, "graveyard_support", 0.52, "Advanced scan recognized flashback graveyard setup.");
+    addRole(profile, "mill_support", 0.34, "Advanced scan recognized targeted library-to-graveyard setup.");
+  }
+
   if (selectionKeyword || /\bscry \d+\b|\bsurveil \d+\b|\bconnive\b|\bexplores?\b|\blearn\b/.test(text)) {
     addRole(profile, "selection", permanent ? 0.5 : 0.42, "Advanced scan recognized card selection or filtering.");
   }
@@ -1653,6 +1671,7 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\bwhenever a player casts\b[^.]{0,80}\b(?:spell|enchantment spell)\b[^.]{0,80}\bcounter it\b/.test(text) ||
+    /\bpermanents don'?t untap during their controllers'? untap steps\b/.test(text) ||
     /\bcreatures don'?t untap during their controllers'? untap steps\b/.test(text) ||
     /\blegendary creatures don'?t untap during their controllers'? untap steps\b/.test(text) ||
     /\bcreatures without flying don't untap during their controllers'? untap steps\b/.test(text) ||
@@ -1866,6 +1885,11 @@ function detectAdvancedPurposeRoles(
 
   if (/\bmills?\b|\bmill\b|\bputs? the rest of the revealed cards into their graveyard\b/.test(text)) {
     addRole(profile, "mill_support", 0.52, "Advanced scan recognized mill or graveyard-filling support.");
+  }
+
+  if (/\bexchange your graveyard and library\b/.test(text)) {
+    addRole(profile, "graveyard_support", 0.62, "Advanced scan recognized library-graveyard exchange setup.");
+    addRole(profile, "mill_support", 0.48, "Advanced scan recognized library-graveyard exchange as graveyard fill.");
   }
 
   if (/\beach player may draw up to (?:one|two|three|\d+) cards?\b/.test(text)) {
