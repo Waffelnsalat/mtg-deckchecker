@@ -354,6 +354,7 @@ function detectAdvancedRampRoles(
     /\bif all cards revealed this way are creature cards\b[^.]{0,120}\bput those cards onto the battlefield\b/.test(text) ||
     /\bowner of each creature card revealed this way\b[^.]{0,120}\bputs? it onto the battlefield\b/.test(text) ||
     /\bopponent chooses a card at random in your graveyard\b[\s\S]{0,160}\bif it'?s a creature card\b[^.]{0,120}\bput it onto the battlefield\b/.test(text) ||
+    /\breveal the top (?:five|four|three|two|\d+) cards of your library\b[\s\S]{0,160}\bopponent chooses a creature card from among them\b[\s\S]{0,120}\bput that card onto the battlefield\b/.test(text) ||
     /\byou may put\b[^.]{0,180}\b(?:artifact|creature|enchantment|permanent|nonland permanent) card\b[^.]{0,180}\bonto the battlefield\b/.test(text) ||
     /\breveal cards? from the top of your library until\b[\s\S]{0,220}\bput those cards onto the battlefield\b/.test(text);
   const untapManaEngine =
@@ -365,7 +366,8 @@ function detectAdvancedRampRoles(
     /\bcreate\b[^.]{0,80}\b(?:treasure|lotus|gold)\b[^.]{0,80}\btoken/.test(text) ||
     /\bcreate\b[^.]{0,80}\btoken\b[^.]{0,120}\badd one mana\b/.test(text);
   const triggerMana =
-    /\bwhenever a creature enters\b[^.]{0,120}\byou lose \d+ life and add \{[wubrgc]\}/.test(text);
+    /\bwhenever a creature enters\b[^.]{0,120}\byou lose \d+ life and add \{[wubrgc]\}/.test(text) ||
+    /\bwhenever a creature enters\b[^.]{0,160}\byou may add an amount of \{[wubrgc]\}/.test(text);
   const temporaryLandAccess =
     /\buntil end of turn\b[^.]{0,120}\byou may tap lands you don'?t control for mana\b/.test(text);
   const burstMana =
@@ -573,6 +575,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\b(?:destroy|exile)\b[^.]{0,120}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\b(?:destroy|exile)\b[^.]{0,40}(?:one|two|three|four|five|six|\d+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|battles?|permanents?|nonland permanents?)\b/.test(text) ||
     /\btarget creature and all other creatures with the same name as that creature get -\d+\/-\d+ until end of turn\b/.test(text) ||
+    /\btarget creature of their choice get -\d+\/-\d+ until end of turn\b/.test(text) ||
     /\ball creatures of that type get -\d+\/-\d+ until end of turn\b/.test(text) ||
     /\bchoose two target creatures controlled by the same player\b[\s\S]{0,180}\bsacrifices one of them\b[\s\S]{0,120}\breturn the other to its owner'?s hand\b/.test(text) ||
     /\bbury target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
@@ -709,6 +712,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bexile\b[^.]{0,140}\bfrom (?:target|that) (?:player|opponent)'s hand\b/.test(text) ||
     /\btarget opponent reveals their hand\b[\s\S]{0,140}\byou choose a nonland card from it and exile that card\b/.test(text) ||
     /\blook at that player'?s hand\b[\s\S]{0,180}\bchoose a card(?: other than a basic land card)? from it\b[\s\S]{0,140}\b(?:discards? that card|player discards that card|they discard that card)\b/.test(text) ||
+    /\btarget player reveals (?:three|two|\d+) cards from their hand\b[\s\S]{0,120}\byou choose one of them\b[\s\S]{0,80}\bthat player discards that card\b/.test(text) ||
     /\btarget player chooses\b[^.]{0,80}\bcards? from their hand\b[^.]{0,120}\bputs? them on top of their library\b/.test(text);
 
   if (/\bexile up to (?:three|two|one|\d+) target cards? from (?:a single |target )?graveyard\b/.test(text)) {
@@ -784,6 +788,11 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
   if (handAttack) {
     addRole(profile, "removal", 0.44, "Advanced scan recognized hand pressure as resource interaction.");
     addRole(profile, "hand_attack", 0.62, "Advanced scan recognized hand attack.");
+  }
+
+  if (/\btarget opponent puts the cards from their hand on top of their library\b[\s\S]{0,220}\bsearch that player'?s library for that many cards\b/.test(text)) {
+    addRole(profile, "hand_attack", 0.66, "Advanced scan recognized hand replacement disruption.");
+    addRole(profile, "topdeck_control", 0.54, "Advanced scan recognized hand-to-library disruption.");
   }
 
   if (/\beach player sacrifices a land\b/.test(text)) {
@@ -888,6 +897,7 @@ function detectAdvancedProtectionRoles(
     /\bplayers and permanents can'?t be the targets of spells or activated abilities\b/.test(text) ||
     /\bcreatures can'?t be the targets of spells\b/.test(text) ||
     /\bthe next time a creature of your choice\b[^.]{0,160}\bwould deal damage to you\b[^.]{0,120}\bprevent that damage\b/.test(text) ||
+    /\bthe next time a creature of the chosen type would deal damage to you\b[^.]{0,120}\bprevent that damage\b/.test(text) ||
     /\bthe next time\b[^.]{0,120}\bsource of your choice would deal damage this turn\b[^.]{0,80}\bprevent that damage\b/.test(text) ||
     /\bsource of your choice of the chosen color would deal damage to you this turn\b[^.]{0,80}\bprevent that damage\b/.test(text) ||
     /\ball damage that would be dealt to you\b[^.]{0,120}\bis dealt to\b/.test(text) ||
@@ -1015,6 +1025,7 @@ function detectAdvancedRecursionRoles(profile: CardRoleProfile, text: string, pe
     /\breturn\b[^.]{0,140}\b(?:artifact|creature|enchantment|planeswalker|instant|sorcery|permanent) card\b[^.]{0,140}\bfrom your graveyard\b[^.]{0,120}\bto your hand\b/.test(text) ||
     /\breturn a creature card from their graveyard to their hand\b/.test(text) ||
     /\btarget opponent chooses one of the top two cards of your graveyard\b[\s\S]{0,160}\bput the other one into your hand\b/.test(text) ||
+    /\bwhenever a creature is put into your graveyard from the battlefield\b[\s\S]{0,180}\breturn that card to your hand\b/.test(text) ||
     /\bwhenever a nontoken creature is put into your graveyard from the battlefield\b[\s\S]{0,180}\breturn that card to your hand\b/.test(text) ||
     /\bchooses? a card in your graveyard\b[\s\S]{0,220}\bput the last chosen card into your hand\b/.test(text) ||
     /\bexchange your hand and graveyard\b/.test(text);
@@ -1131,6 +1142,11 @@ function detectAdvancedFinisherRoles(
     if (repeatable || attackTableDamage) {
       addRole(profile, "repeatable_finisher", 0.82, "Advanced scan recognized repeatable closing pressure.");
     }
+  }
+
+  if (/\beach player'?s life total becomes the number of creatures they control\b/.test(text)) {
+    addRole(profile, "finisher", 0.78, "Advanced scan recognized a life-total reset finisher.");
+    addRole(profile, "direct_finisher", 0.72, "Advanced scan recognized a life-total reset finisher.");
   }
 
   if (attackTargetedDamage || damageReflection) {
@@ -2017,6 +2033,7 @@ function detectAdvancedPurposeRoles(
     /\bloses? all creature types\b/.test(text) ||
     /\bcreatures you control are the chosen type\b/.test(text) ||
     /\bchoose a creature type\b[\s\S]{0,160}\btarget creature becomes that type until end of turn\b/.test(text) ||
+    /\b(?:enchanted creature|each creature) becomes (?:the creature type of your choice|that type) until end of turn\b/.test(text) ||
     /\bcreature spells you control\b[^.]{0,160}\bchosen type\b/.test(text)
   ) {
     addRole(profile, "kindred_support", permanent ? 0.58 : 0.48, "Advanced scan recognized kindred or creature-type support.");

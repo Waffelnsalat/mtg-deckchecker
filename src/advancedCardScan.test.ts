@@ -3438,6 +3438,40 @@ test("inferAdvancedRoleProfile recognizes promo-era wording gaps", () => {
   assert.ok(getRoleWeight(wishProfile, "restricted_tutor") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Onslaught utility wording gaps", () => {
+  const circleProfile = inferAdvancedRoleProfile(
+    createCard("Circle of Solace", "Enchantment", 4, "As this enchantment enters, choose a creature type. {1}{W}: The next time a creature of the chosen type would deal damage to you this turn, prevent that damage."),
+  );
+  const sigilProfile = inferAdvancedRoleProfile(
+    createCard("Sigil of the New Dawn", "Enchantment", 4, "Whenever a creature is put into your graveyard from the battlefield, you may pay {1}{W}. If you do, return that card to your hand."),
+  );
+  const maskProfile = inferAdvancedRoleProfile(createCard("Mistform Mask", "Enchantment - Aura", 2, "Enchant creature {1}: Enchanted creature becomes the creature type of your choice until end of turn."));
+  const blackmailProfile = inferAdvancedRoleProfile(createCard("Blackmail", "Sorcery", 1, "Target player reveals three cards from their hand and you choose one of them. That player discards that card."));
+  const deathMatchProfile = inferAdvancedRoleProfile(
+    createCard("Death Match", "Enchantment", 4, "Whenever a creature enters, that creature's controller may have target creature of their choice get -3/-3 until end of turn."),
+  );
+  const headGamesProfile = inferAdvancedRoleProfile(
+    createCard("Head Games", "Sorcery", 5, "Target opponent puts the cards from their hand on top of their library. Search that player's library for that many cards. The player puts those cards into their hand, then shuffles."),
+  );
+  const echoesProfile = inferAdvancedRoleProfile(
+    createCard("Mana Echoes", "Enchantment", 4, "Whenever a creature enters, you may add an amount of {C} equal to the number of creatures you control that share a creature type with it."),
+  );
+  const magnetismProfile = inferAdvancedRoleProfile(
+    createCard("Animal Magnetism", "Sorcery", 5, "Reveal the top five cards of your library. An opponent chooses a creature card from among them. Put that card onto the battlefield and the rest into your graveyard."),
+  );
+  const biorhythmProfile = inferAdvancedRoleProfile(createCard("Biorhythm", "Sorcery", 8, "Each player's life total becomes the number of creatures they control."));
+
+  assert.ok(getRoleWeight(circleProfile, "protection") > 0);
+  assert.ok(getRoleWeight(sigilProfile, "hand_recursion") > 0);
+  assert.ok(getRoleWeight(maskProfile, "kindred_support") > 0);
+  assert.ok(getRoleWeight(blackmailProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(deathMatchProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(headGamesProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(echoesProfile, "ramp") > 0);
+  assert.ok(getRoleWeight(magnetismProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(biorhythmProfile, "direct_finisher") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
