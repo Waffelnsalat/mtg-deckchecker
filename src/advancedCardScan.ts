@@ -541,7 +541,8 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     ) &&
     !/\byou sacrifice\b/.test(text);
   const delayedAuraEdict =
-    /\bwhen enchanted creature leaves the battlefield\b[^.]{0,140}\bits controller sacrifices a creature\b/.test(text);
+    /\bwhen enchanted creature leaves the battlefield\b[^.]{0,140}\bits controller sacrifices a creature\b/.test(text) ||
+    /\bat the beginning of the upkeep of enchanted creature'?s controller\b[^.]{0,160}\bthat player sacrifices that creature unless they pay\b/.test(text);
   const targetedRemoval =
     /\b(?:destroy|exile)\b[^.]{0,120}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\b(?:destroy|exile)\b[^.]{0,40}(?:one|two|three|four|five|six|\d+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|battles?|permanents?|nonland permanents?)\b/.test(text) ||
@@ -567,12 +568,14 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\btarget creature deals damage to itself equal to its power\b/.test(text) ||
     /\btarget creature with\b[^.]{0,120}\bloses it and another target creature gains it\b/.test(text) ||
     /\bput a -\d+\/-\d+ counter on target creature\b/.test(text) ||
+    /\btwo target creatures each get -\d+\/-\d+ until end of turn\b/.test(text) ||
     /\bwhenever a creature (?:becomes blocked by|blocks) a creature with lesser power\b[^.]{0,160}\bdestroy the\b/.test(text) ||
     /\bwhenever enchanted creature deals damage to a creature\b[^.]{0,120}\bdestroy the other creature\b/.test(text) ||
     /\bdestroy each permanent that a piece touches\b/.test(text) ||
     /\bdestroy each permanent chosen this way\b/.test(text);
   const targetedDamageRemoval =
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
+    /\bdeals? damage to any target equal to the mana value of the discarded card\b/.test(text) ||
     /\bdeals? (?:x|\d+|that much) damage to target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b/.test(text) ||
     /\bdeals? \d+ damage to each of two target creatures\b/.test(text) ||
     /\bdeals? \d+ damage divided as you choose among one, two, or three targets\b/.test(text) ||
@@ -591,6 +594,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bchoose any target\b[\s\S]{0,180}\bdeals? (?:x|\d+|that much) damage to each of them\b/.test(text);
   const massRemoval =
     /\b(?:destroy|exile|return) all\b[^.]{0,120}\b(?:creatures|artifacts|enchantments|permanents|nonland permanents)\b/.test(text) ||
+    /\bput all enchantments on top of their owners'? libraries\b/.test(text) ||
     /\bdestroy all (?:goblins|walls|elves|zombies|skeletons|soldiers|knights|dragons|beasts|merfolk|wizards|clerics|shamans|goblins)\b/.test(text) ||
     /\bexile each permanent\b/.test(text) ||
     /\bdestroy each nonland permanent\b[^.]{0,120}\bmana value (?:x|\d+) or less\b/.test(text) ||
@@ -602,6 +606,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bfor each attacking creature\b[^.]{0,160}\bputs? it on (?:their|its) choice of the top or bottom of (?:their|its) library\b/.test(text) ||
     /\beach creature deals damage to itself equal to its power\b/.test(text) ||
     /\ball creatures get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
+    /\ball creatures of the chosen type get -\d+\/-\d+\b/.test(text) ||
     /\bnonartifact creatures get -\d+\/-\d+\b/.test(text) ||
     /\bnonwhite creatures get -\d+\/-\d+\b/.test(text) ||
     /\bcreatures your opponents control get -(?:x|\d+)\/-(?:x|\d+)\b/.test(text) ||
@@ -1118,6 +1123,7 @@ function detectAdvancedPurposeRoles(
 
   if (
     /\btarget spell or permanent becomes\b[^.]{0,40}\b(?:white|blue|black|red|green)\b/.test(text) ||
+    /\ball permanents are colorless\b/.test(text) ||
     /\btarget permanent becomes the colors? or colors? of your choice\b/.test(text) ||
     /\bone or more target creatures become (?:white|blue|black|red|green)\b/.test(text) ||
     /\ball creatures are (?:white|blue|black|red|green)\b/.test(text) ||
@@ -1210,6 +1216,7 @@ function detectAdvancedPurposeRoles(
   if (
     /\byou may tap or untap target artifact, creature, or land\b/.test(text) ||
     /\buntap target (?:nonattacking |attacking |blocking |tapped |untapped )?(?:artifact|creature|land|permanent)\b/.test(text) ||
+    /\buntap two target creatures\b/.test(text) ||
     /\btarget player untaps all basic lands they control\b/.test(text) ||
     /\buntap all creatures you control\b/.test(text) ||
     /\b(?:tap all untapped|untap all tapped) permanents of the chosen type target player controls\b/.test(text) ||
@@ -1234,6 +1241,7 @@ function detectAdvancedPurposeRoles(
     /\bsource of your choice would deal damage this turn\b[^.]{0,180}\bthat damage is dealt to that source'?s controller instead\b/.test(text) ||
     /\bsource of your choice would deal damage to any target this turn\b[\s\S]{0,260}\bprevent that damage\b[\s\S]{0,260}\bdeals? that much damage to the source'?s controller\b/.test(text) ||
     /\ball damage that would be dealt\b[^.]{0,180}\bby target sorcery spell\b[^.]{0,120}\bis dealt to that spell'?s controller instead\b/.test(text) ||
+    /\ball damage that would be dealt to enchanted creature\b[^.]{0,120}\bis dealt to its controller instead\b/.test(text) ||
     /\bdeals damage to that player equal to half the damage dealt by one of those sorcery spells\b/.test(text) ||
     /\bwhenever enchanted creature is dealt damage\b[^.]{0,140}\bdeals? that much damage to that creature'?s controller\b/.test(text) ||
     /\bthe next time a source of your choice would deal damage to you\b[^.]{0,180}\bthat damage is dealt to target creature\b/.test(text)
@@ -1623,6 +1631,7 @@ function detectAdvancedPurposeRoles(
     /\ball creatures able to block enchanted creature do so\b/.test(text) ||
     /\btarget creature attacks target opponent this turn if able\b/.test(text) ||
     /\b(?:target creature|creature you control|equipped creature|enchanted creature)\b[^.]{0,140}\bgets? (?:\+\d+\/\+\d+|\+x\/\+(?:x|0))\b/.test(text) ||
+    /\beach of them gets? \+\d+\/\+\d+ until end of turn\b/.test(text) ||
     /\bit gets? \+\d+\/\+\d+ until end of turn\b/.test(text) ||
     /\b(?:target creature|creature you control|equipped creature|enchanted creature)\b[^.]{0,140}\bgets? \+\d+\/-\d+\b/.test(text) ||
     /\benchanted creature\b[^.]{0,140}\bgets? -(?:x|\d+)\/-(?:y|\d+)\b/.test(text) ||

@@ -3038,6 +3038,33 @@ test("inferAdvancedRoleProfile recognizes Urza's Saga utility wording gaps", () 
   assert.ok(getRoleWeight(armorProfile, "protection") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Urza's Legacy utility wording gaps", () => {
+  const hopeProfile = inferAdvancedRoleProfile(createCard("Hope and Glory", "Instant", 2, "Untap two target creatures. Each of them gets +1/+1 until end of turn."));
+  const slowProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Slow Motion",
+      "Enchantment — Aura",
+      3,
+      "Enchant creature At the beginning of the upkeep of enchanted creature's controller, that player sacrifices that creature unless they pay {2}. When this Aura is put into a graveyard from the battlefield, return it to its owner's hand.",
+    ),
+  );
+  const plagueProfile = inferAdvancedRoleProfile(createCard("Engineered Plague", "Enchantment", 3, "As this enchantment enters, choose a creature type. All creatures of the chosen type get -1/-1."));
+  const sickProfile = inferAdvancedRoleProfile(createCard("Sick and Tired", "Instant", 3, "Two target creatures each get -1/-1 until end of turn."));
+  const linkProfile = inferAdvancedRoleProfile(createCard("Treacherous Link", "Enchantment — Aura", 2, "Enchant creature All damage that would be dealt to enchanted creature is dealt to its controller instead."));
+  const pyroProfile = inferAdvancedRoleProfile(createCard("Pyromancy", "Enchantment", 4, "{3}, Discard a card at random: This enchantment deals damage to any target equal to the mana value of the discarded card."));
+  const convergenceProfile = inferAdvancedRoleProfile(createCard("Harmonic Convergence", "Instant", 3, "Put all enchantments on top of their owners' libraries."));
+  const lensProfile = inferAdvancedRoleProfile(createCard("Thran Lens", "Artifact", 2, "All permanents are colorless."));
+
+  assert.ok(getRoleWeight(hopeProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(slowProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(plagueProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(sickProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(linkProfile, "damage_reflection") > 0);
+  assert.ok(getRoleWeight(pyroProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(convergenceProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(lensProfile, "color_change") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
