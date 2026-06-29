@@ -123,10 +123,10 @@ p03	Magic Player Rewards 2003	2003-01-01	promo	7	false	done	7	7	0	true	data/card
 pal03	Arena League 2003	2003-01-01	promo	8	false	done	8	8	0	true	data/card-role-worksheets/pal03-role-review.tsv
 pjjt	Japan Junior Tournament	2003-01-01	promo	12	false	done	12	12	0	true	data/card-role-worksheets/pjjt-role-review.tsv
 pmoa	Magic Online Avatars	2003-01-01	vanguard	85	true	done	74	74	0	true	data/card-role-worksheets/pmoa-role-review.tsv
-lgn	Legions	2003-02-03	expansion	145	false	pending	0			false	
-plgn	Legions Promos	2003-02-03	promo	1	false	pending	0			false	
+lgn	Legions	2003-02-03	expansion	145	false	done	145	145	0	true	data/card-role-worksheets/lgn-role-review.tsv
+plgn	Legions Promos	2003-02-03	promo	1	false	done	1	1	0	true	data/card-role-worksheets/plgn-role-review.tsv
 pscg	Scourge Promos	2003-05-26	promo	1	false	pending	0			false	
-scg	Scourge	2003-05-26	expansion	143	false	pending	0			false	
+scg	Scourge	2003-05-26	expansion	143	false	done	143	143	0	true	data/card-role-worksheets/scg-role-review.tsv
 8ed	Eighth Edition	2003-07-28	core	711	false	pending	0			false	
 p8ed	Eighth Edition Promos	2003-07-28	promo	1	false	pending	0			false	
 wc03	World Championship Decks 2003	2003-08-06	memorabilia	142	false	pending	0			false	

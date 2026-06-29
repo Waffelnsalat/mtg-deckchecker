@@ -5308,7 +5308,7 @@
       "name": "White Knight",
       "firstSet": "leb",
       "releasedAt": "1993-10-04",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
       "expectedRoles": [
         "combat_body",
         "combat_support",
@@ -60903,13 +60903,14 @@
       "name": "Goblin War Strike",
       "firstSet": "p02",
       "releasedAt": "1998-06-24",
-      "reviewedAt": "2026-06-29T11:01:25.356Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
       ],
       "status": "covered",
-      "needsCodeChange": false
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
     },
     {
       "oracleId": "6ba7ab42-918e-472a-b364-06073cc354d2",
@@ -106715,7 +106716,7 @@
       "name": "Carrion Feeder",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -109378,7 +109379,7 @@
       "name": "Decree of Justice",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "card_draw",
         "combat_support",
@@ -109398,7 +109399,7 @@
       "name": "Decree of Pain",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "card_draw",
         "direct_draw",
@@ -111496,7 +111497,7 @@
       "name": "Elvish Aberration",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:50:27.981Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "card_selection",
         "combat_body",
@@ -112084,7 +112085,7 @@
       "name": "Eternal Dragon",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "card_selection",
         "combat_body",
@@ -113004,7 +113005,7 @@
       "name": "Feral Throwback",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.178Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -115112,7 +115113,7 @@
       "name": "Goblin Warchief",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "combat_body",
         "combat_support",
@@ -120054,7 +120055,7 @@
       "name": "Krosan Warchief",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "combat_body",
         "cost_reduction",
@@ -122589,7 +122590,7 @@
       "name": "Mind's Desire",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "card_selection",
         "direct_draw",
@@ -131038,7 +131039,7 @@
       "name": "Silver Knight",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "combat_body",
         "combat_threat",
@@ -131344,7 +131345,7 @@
       "name": "Skirk Marauder",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:50:27.981Z",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
       "actualRoles": [
         "combat_body",
         "face_down_support",
@@ -131984,7 +131985,7 @@
       "name": "Soul Collector",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "combat_body",
         "combat_threat",
@@ -132831,7 +132832,7 @@
       "name": "Stifle",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "broad_stack",
         "stack"
@@ -134642,7 +134643,7 @@
       "name": "Temple of the False God",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "land_base",
         "land_slot",
@@ -134763,7 +134764,7 @@
       "name": "Tendrils of Agony",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "lifegain"
       ],
@@ -138954,7 +138955,7 @@
       "name": "Willbender",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
       "actualRoles": [
         "broad_stack",
         "combat_body",
@@ -139055,7 +139056,7 @@
       "name": "Wing Shards",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:41:00.445Z",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
       "actualRoles": [
         "removal",
         "targeted_removal"
@@ -139189,7 +139190,7 @@
       "name": "Withered Wretch",
       "firstSet": "prm",
       "releasedAt": "2002-06-24",
-      "reviewedAt": "2026-06-29T12:50:24.821Z",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
       "actualRoles": [
         "combat_body",
         "graveyard_hate"
@@ -145812,6 +145813,4167 @@
       "status": "covered",
       "needsCodeChange": false,
       "notes": "Covered by PMOA role audit."
+    },
+    {
+      "oracleId": "107f204c-9fd3-490d-8887-be63d14fc6a4",
+      "name": "Akroma, Angel of Wrath",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "d264903b-d23e-48c8-95f1-cb1606a705a2",
+      "name": "Akroma's Devoted",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "a3bf5d18-77d5-4881-916c-cc125e621b6e",
+      "name": "Aphetto Exterminator",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "73cd8461-7930-4e2d-9a14-4d10db91e93e",
+      "name": "Aven Envoy",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "faac29f5-10ad-4800-a9d3-2259c4800352",
+      "name": "Aven Redeemer",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "7d3e5d95-2658-4c1a-9ed3-df1f554d87ea",
+      "name": "Aven Warhawk",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "c99e4768-192c-49bf-8f51-c204a2248326",
+      "name": "Bane of the Living",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "mass_removal",
+        "removal",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "a1ed2274-7774-4c65-a95b-28ae5e225994",
+      "name": "Beacon of Destiny",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "a762e8cb-9d33-41fc-b2e8-0c5ad4d7268e",
+      "name": "Berserk Murlodont",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "110e5695-a9df-4201-9230-99f6abe9978f",
+      "name": "Blade Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "695ce90b-a5a2-4d8c-ac05-07f04010603e",
+      "name": "Blood Celebrant",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "41fa3954-119b-4ff2-ad56-9105482f6b7c",
+      "name": "Bloodstoke Howler",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "e09b24a0-675b-4c64-ac44-74ddf109598a",
+      "name": "Branchsnap Lorian",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "6e3301a5-a99b-4b17-aa40-34ccc5904977",
+      "name": "Brontotherium",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "6b1d178f-9713-4dcf-920b-ddf2c94cc427",
+      "name": "Brood Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "ec79255f-4b4d-4a0a-89d8-c59ba640275b",
+      "name": "Caller of the Claw",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "7fc60ae2-75fc-49e1-9d56-aa5a43844210",
+      "name": "Canopy Crawler",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "a7726d8c-7539-43bc-9614-418fa12c0912",
+      "name": "Celestial Gatekeeper",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "mass_recursion",
+        "recursion",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "c5c5f3f4-42e3-4d60-b6b1-8411ac51ce4e",
+      "name": "Cephalid Pathmage",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "8cbac2e8-5755-433b-9f42-7fd5c214aab3",
+      "name": "Chromeshell Crab",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "donation_support",
+        "face_down_support",
+        "removal",
+        "tempo_removal",
+        "theft_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "436f9a5d-ec26-4c88-9851-b88fe742fa67",
+      "name": "Clickslither",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "fe4af83a-3554-44cd-94ed-18b773cf6d60",
+      "name": "Cloudreach Cavalry",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "f02ad6fa-7a82-471a-979e-0bb9ba866ef6",
+      "name": "Corpse Harvester",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "c1f33eac-0f85-4f0f-8562-1737b5f6b23a",
+      "name": "Covert Operative",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "597c390e-deeb-4452-aeda-7cf9312a8b01",
+      "name": "Crested Craghorn",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "9b851461-d258-41c4-bd0a-d24d5f1be6b2",
+      "name": "Crookclaw Elder",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "b0bc2d60-20d0-4ca2-be86-65b297226ac7",
+      "name": "Crypt Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "dc7929cb-50a9-4662-a106-c415fc03a1a9",
+      "name": "Dark Supplicant",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "combat_body",
+        "cost_reduction",
+        "restricted_tutor",
+        "sacrifice_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "6072c129-9525-4630-b31a-d5d61a944d02",
+      "name": "Daru Mender",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "protection",
+        "regeneration_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "7e81539e-b790-41eb-bd5e-d1de130b46a1",
+      "name": "Daru Sanctifier",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "696bff10-4e46-48a7-b2af-13387b9d9da0",
+      "name": "Daru Stinger",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "3162e0b4-1348-4c86-8da7-ae23ff968c57",
+      "name": "Deathmark Prelate",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "f9f4c574-ddbe-4ebc-bfda-29cf3e4b7c44",
+      "name": "Defender of the Order",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "6faa29c4-582a-42d5-b80c-4dc0bd738493",
+      "name": "Defiant Elf",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "9a3e3a8f-7c19-4b52-a1b4-08eb09f6127a",
+      "name": "Deftblade Elite",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "963d4712-51b2-4102-9626-d810e4696b70",
+      "name": "Dermoplasm",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "cost_reduction",
+        "face_down_support",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "68d7f338-c6e7-4372-b41c-901e39e08bde",
+      "name": "Dreamborn Muse",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "alternate_finisher",
+        "combat_body",
+        "mill_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "6208534d-e7c7-43ef-b8b2-fea1d82459e8",
+      "name": "Drinker of Sorrow",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "bf0c85d7-16a0-46a5-a3a6-5591849bef60",
+      "name": "Dripping Dead",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "86b8fdad-0025-4b6f-8527-23686820a5cd",
+      "name": "Earthblighter",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "land_denial",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "34efa2fe-95ef-4a06-9a84-97f03ec68908",
+      "name": "Echo Tracer",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "10b0b60f-9976-41f9-855b-1786b6f86f55",
+      "name": "Elvish Soultiller",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "library_recursion",
+        "recursion",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "42e95ad5-c10a-46fe-ab97-c7a734138586",
+      "name": "Embalmed Brawler",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "6189cd17-61aa-420a-ba53-5ddaf2bbc2ba",
+      "name": "Enormous Baloth",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "1f35f5e3-ddd1-4293-96f8-1181bbda77eb",
+      "name": "Essence Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "ee17706a-edc0-4301-8330-1da539679c7a",
+      "name": "Flamewave Invoker",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "4b875669-f5c4-4f52-95be-ac52b0e33ce1",
+      "name": "Frenetic Raptor",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "381fa2a9-69fc-4558-a0ac-fb99c6f8d77f",
+      "name": "Fugitive Wizard",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "cb9e6860-591f-4758-aaa3-14efa0a775f5",
+      "name": "Gempalm Avenger",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "467ea3e3-7767-405a-9d1a-8fa5de696376",
+      "name": "Gempalm Incinerator",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "mass_removal",
+        "removal",
+        "repeatable_advantage",
+        "scalable_spell",
+        "selection",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "bd532f8d-789f-4ee1-a2f3-ae30e8282c76",
+      "name": "Gempalm Polluter",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "c3162232-b713-44be-b2af-29d801279ab2",
+      "name": "Gempalm Sorcerer",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "48792146-e20c-4d93-83af-f746069fc6f1",
+      "name": "Gempalm Strider",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "0eafe734-19f2-492d-bfc2-d0c75ece45b2",
+      "name": "Ghastly Remains",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "c8a9bdaa-55ef-4baa-9dfa-9068583360f6",
+      "name": "Glintwing Invoker",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "e9ed7322-53d4-419a-809f-78824aeaf99e",
+      "name": "Glowering Rogon",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "aaf825b0-af0f-47a0-8b00-85f0614cef5d",
+      "name": "Glowrider",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "faf9bb36-e537-42a8-b9ee-bf2c50b0e5bd",
+      "name": "Goblin Assassin",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "coin_support",
+        "combat_body",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "08a01139-1b1e-4a32-bb00-3a9660cce1ef",
+      "name": "Goblin Clearcutter",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "burst_ramp",
+        "combat_body",
+        "mana_fixing",
+        "ramp",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "381fdb36-2467-421c-8b89-419d14955175",
+      "name": "Goblin Dynamo",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "sacrifice_support",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "ee337677-d898-40a5-9453-405d07ec12b1",
+      "name": "Goblin Firebug",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "e91bcf01-113b-4532-9f78-2a155b17be4f",
+      "name": "Goblin Goon",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "48c1c84c-f690-42ce-9c5a-dd09b1e4197c",
+      "name": "Goblin Grappler",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "e4ac0c25-cdfa-49a4-9b2c-b848f50c604d",
+      "name": "Goblin Lookout",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "297c2ddf-6d2d-4ed4-ab37-716514d5e3b6",
+      "name": "Goblin Turncoat",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "protection",
+        "regeneration_protection",
+        "sacrifice_support",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "d2a65ff4-ab82-42f7-9d90-feb29132121e",
+      "name": "Graveborn Muse",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "246d7f6b-7ffa-46dc-b5cb-6959f47a7dc3",
+      "name": "Havoc Demon",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "797aed94-c409-4441-88c1-baba7e212696",
+      "name": "Hollow Specter",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "ade82acb-80c0-4033-aa02-4fa3d69aad69",
+      "name": "Hundroog",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "f28b2ebe-49ef-4585-9bf2-7340abf3f0d3",
+      "name": "Hunter Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "99642419-ab24-4770-9f1c-84d2806441b5",
+      "name": "Imperial Hellkite",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "face_down_support",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "bd310727-1091-4474-8d9e-ce56f7dac7c1",
+      "name": "Infernal Caretaker",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "86b7ff68-0bd9-4fc9-9803-fde2d4a2f59b",
+      "name": "Keeneye Aven",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "39c4357b-6093-486b-8131-041a3f89af75",
+      "name": "Keeper of the Nine Gales",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "5cb73cd3-2cd2-45e2-a593-a498a73b2cf5",
+      "name": "Kilnmouth Dragon",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "a0ff742b-f709-43ac-84d2-dc00c723bad6",
+      "name": "Krosan Cloudscraper",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "ddb95c3a-b383-4987-ba24-72e95f8e33bf",
+      "name": "Krosan Vorine",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "2825ff5a-5340-4494-bfde-80f6f5bce5a2",
+      "name": "Lavaborn Muse",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "d838969a-b219-4964-bc7e-df0348392bbe",
+      "name": "Liege of the Axe",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "de06b33f-0793-419a-bf65-1961634af8e7",
+      "name": "Lowland Tracker",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "2f1e2742-d7df-4893-abc8-cb927c500569",
+      "name": "Macetail Hystrodon",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "008ac258-763c-4379-bfcd-b9cc4d7296dd",
+      "name": "Magma Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "ee9104d5-3583-4549-8dd0-5b69274f4b4f",
+      "name": "Master of the Veil",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "f6aebd42-0150-4741-84c2-4c85893640e9",
+      "name": "Merchant of Secrets",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "268f423e-b368-4561-ae24-db0f7ca775f4",
+      "name": "Mistform Seaswift",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "d29f59a4-b956-40e0-acd4-c2560e538baf",
+      "name": "Mistform Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "7bf0e628-06b5-4e12-a526-a2bce08844f2",
+      "name": "Mistform Ultimus",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "7108f2a2-1541-4bbf-aeb8-2a892a6dc337",
+      "name": "Mistform Wakecaster",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "28ea78dc-7ad6-4006-aaf8-4b25057ec019",
+      "name": "Nantuko Vigilante",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "8a04fd45-6526-4c73-8b38-5e40a2380451",
+      "name": "Needleshot Gourna",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "602e421e-afab-4488-8a52-af66b4fdce4b",
+      "name": "Noxious Ghoul",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "7ba8ae5b-8025-40eb-969d-38a85eefe7d6",
+      "name": "Patron of the Wild",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "09d01406-b529-4c3b-900e-d8c889a4c400",
+      "name": "Phage the Untouchable",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "75701981-b9fc-471f-a97f-e897bb3dfb77",
+      "name": "Planar Guide",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "89d9641c-84a4-41df-af1f-5b552305e895",
+      "name": "Plated Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "dfe51046-12db-4be8-a4b4-ffa6359cac15",
+      "name": "Primal Whisperer",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "28a1e053-eb14-4fbf-afd1-bfb6117a839a",
+      "name": "Primoc Escapee",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_threat",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "530a5740-041c-42df-8fe0-fcea87258038",
+      "name": "Quick Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "600a8c9e-e158-4fff-8c4d-c3a1bfd006e8",
+      "name": "Ridgetop Raptor",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "f7ae67c7-9005-4806-8130-5895dcd9879a",
+      "name": "Riptide Director",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "d5a4edda-fb04-43fa-8e0e-cc9f19b0776b",
+      "name": "Riptide Mangler",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "82cfba28-283f-44f6-8478-fd39ea5a1a29",
+      "name": "Rockshard Elemental",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "face_down_support",
+        "multiplier_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "cb752313-dc7f-47fc-9077-9e3298e8f5fb",
+      "name": "Root Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "bd940cab-d23a-44bf-ab96-8aa1dcd3f0ff",
+      "name": "Scion of Darkness",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "cost_reduction",
+        "direct_draw",
+        "draw",
+        "ramp",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "463865bc-087e-477b-9e86-84e77f1ad931",
+      "name": "Seedborn Muse",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "859502df-127f-4577-88c0-923119d37b9d",
+      "name": "Shaleskin Plower",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "6a262f53-2eea-45d0-8189-9222d66f1b52",
+      "name": "Shifting Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "c4dee5fe-36f0-4155-9437-2c0504feba2c",
+      "name": "Skinthinner",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "a7d20fb0-005b-4bcc-9592-cdbd3fbdd43a",
+      "name": "Skirk Alarmist",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "face_down_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "eb0d97a3-6494-4011-9f60-1b12b165a995",
+      "name": "Skirk Drill Sergeant",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "40e52554-74e9-4d15-9a38-fc945f7d7ab8",
+      "name": "Skirk Outrider",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "a6df9679-1e4c-4791-855b-28bc2fa35b49",
+      "name": "Smokespew Invoker",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "54a4bde3-c61f-44ea-bd2f-cdbf6a76eefa",
+      "name": "Sootfeather Flock",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "b08d4381-1a75-4c59-9551-b3133f7495a3",
+      "name": "Spectral Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "4d27a90b-dae4-48a0-9eb2-e199ff548867",
+      "name": "Starlight Invoker",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "1203a80f-11ac-46ed-aa2a-5a6782b6303d",
+      "name": "Stoic Champion",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "9d277206-9156-4dc9-bdd2-9d9219787735",
+      "name": "Stonewood Invoker",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "e554646f-27c0-49b3-a92c-2191e87d87b7",
+      "name": "Sunstrike Legionnaire",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "c292d5cc-b6f4-4bb5-bc74-ff67e0643293",
+      "name": "Swooping Talon",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "b76f123d-7b78-42a1-a66e-0dee6f773687",
+      "name": "Synapse Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "50cee3ac-cba0-4abb-babf-de1928b1590e",
+      "name": "Timberwatch Elf",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "61aa0e56-e8d9-4223-895f-e54cdc5a3f0f",
+      "name": "Totem Speaker",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "96ccad44-7912-4fdb-bb2d-9d16cc3cd68a",
+      "name": "Toxin Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "245934d9-c7b7-4a97-9c56-7760d934ef27",
+      "name": "Tribal Forcemage",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "8d01c85c-5f83-4514-b81c-4165051d5722",
+      "name": "Unstable Hulk",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "30d3645f-307d-4164-a8f0-336d484b5020",
+      "name": "Vexing Beetle",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "123147b4-57d0-44cd-bdd5-a449ac86c1cb",
+      "name": "Vile Deacon",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "980939db-d867-4c16-a288-52f6528f2376",
+      "name": "Voidmage Apprentice",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "hard_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "73714a40-5e8d-4aea-87fe-5aa0db53d6ff",
+      "name": "Wall of Deceit",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "e43055c7-2245-4544-b0b4-ee30dc1ebf14",
+      "name": "Wall of Hope",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "40e5c7fe-4d7a-41c0-8b90-ea0b46a01c9d",
+      "name": "Warbreak Trumpeter",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support",
+        "scalable_spell",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "7c259e83-1d85-4267-a2e6-1a0fbacae3fe",
+      "name": "Ward Sliver",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "069862f9-f051-40cc-84f2-c0208873a34c",
+      "name": "Warped Researcher",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "bb2fca84-fc19-4c04-b146-1059aa975535",
+      "name": "Weaver of Lies",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "098bbee7-df65-4167-9c65-ffa14fc0c6cc",
+      "name": "Whipgrass Entangler",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "75e09ac6-d789-4c4d-9aca-845d68f3899f",
+      "name": "Windborn Muse",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "857392fe-1ce6-4d53-b039-98339d292ebb",
+      "name": "Wingbeat Warrior",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "8badfd34-9b63-4ada-8012-b8cddaf5b492",
+      "name": "Wirewood Channeler",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "ramp",
+        "scalable_spell",
+        "stable_ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "20339b68-b617-45a6-b569-cc6231641e88",
+      "name": "Wirewood Hivemaster",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "377177f3-65e5-4909-bf12-48a473b1861d",
+      "name": "Zombie Brute",
+      "firstSet": "lgn",
+      "releasedAt": "2003-02-03",
+      "reviewedAt": "2026-06-29T12:52:45.379Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by LGN role audit."
+    },
+    {
+      "oracleId": "f8a9c279-0f11-4a22-8651-f9caf013ca3c",
+      "name": "Accelerated Mutation",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "9023c530-f329-4301-8b24-4cf676194265",
+      "name": "Ageless Sentinels",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "839fb071-6585-4f3e-a13e-1c14779b401a",
+      "name": "Alpha Status",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "e75b2a97-b28d-43fe-8b1e-ba87a09f339c",
+      "name": "Ambush Commander",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "2076b2a7-6e07-4b6d-ae17-c1cfd0961022",
+      "name": "Ancient Ooze",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "949eb86a-94b2-4c9f-8040-f4ad8e1a7e33",
+      "name": "Aphetto Runecaster",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "face_down_support",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "b4505b07-ac99-4706-88b2-6164389e447c",
+      "name": "Ark of Blight",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "sacrifice_support",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "ef8ac291-3789-4147-a11f-c62fd8566dbe",
+      "name": "Astral Steel",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "4591e1e5-5cac-4812-80e0-67c1237862d3",
+      "name": "Aven Farseer",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "counter_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "0f3fff7a-cc46-4c72-9edc-fdbddd3b51b5",
+      "name": "Aven Liberator",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "face_down_support",
+        "protection",
+        "self_protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "c22cc70a-9533-4bfc-b3ce-b2d43a73f0c1",
+      "name": "Bladewing the Risen",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "f068a0f3-48bc-4d5d-be79-c23c0be11c27",
+      "name": "Bladewing's Thrall",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "32bb6d53-3b9e-4f13-a17e-46b564afd366",
+      "name": "Bonethorn Valesk",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "464c0150-3dbc-403b-9ada-fef25ab1f29d",
+      "name": "Brain Freeze",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "mill_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "d2c53737-c265-46e3-a779-52c6b4f82d7d",
+      "name": "Break Asunder",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "selection",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "37a04d5a-9272-42bd-b448-c658375bbbc3",
+      "name": "Cabal Conditioning",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "hand_attack",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "769ae101-73cc-4ac5-8f46-8af8e7de6581",
+      "name": "Cabal Interrogator",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "db5a4c25-5ae5-4a04-be79-bdee39b9152c",
+      "name": "Call to the Grave",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "a32795a2-a965-4a85-9944-fd9eed464e65",
+      "name": "Carbonize",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "replacement_engine",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "717152c3-2082-49aa-9274-a1a6abe54b65",
+      "name": "Chartooth Cougar",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_support",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "repeatable_tutor",
+        "selection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "ebe61471-e236-4ff8-9416-151970b5efd6",
+      "name": "Chill Haunting",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "scalable_spell",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "4ef6ec4a-bbd2-487f-98c2-c0e78aebb550",
+      "name": "Claws of Wirewood",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "damage_engine",
+        "direct_draw",
+        "draw",
+        "group_slug",
+        "mass_removal",
+        "removal",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "5a68c925-db79-44f2-a5c1-5a607298f6cf",
+      "name": "Clutch of Undeath",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "02eef375-5166-4b6b-bb17-b38074a6ba53",
+      "name": "Coast Watcher",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "4bbfa49e-4460-439e-8f31-2e54316fbb5f",
+      "name": "Consumptive Goo",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "e58a5631-dd00-4b1b-a2aa-2558bb0ff62f",
+      "name": "Daru Spiritualist",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "3fce53fb-6914-4f43-b46b-18ca32ab21b2",
+      "name": "Daru Warchief",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "307421ed-aa59-4518-a0eb-689c60d7b709",
+      "name": "Dawn Elemental",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "c4df259a-cdd4-420a-8e3d-7b69da5c9f6f",
+      "name": "Day of the Dragons",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal",
+        "sacrifice_support",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "0dd73855-6a7a-4eb4-80e0-1509f9397e5a",
+      "name": "Death's-Head Buzzard",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "mass_removal",
+        "removal",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "6679b462-3c90-418c-8727-acd1a61d988b",
+      "name": "Decree of Annihilation",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "graveyard_hate",
+        "hate_piece",
+        "land_denial",
+        "mass_land_denial",
+        "mass_removal",
+        "removal",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "96a6a8d4-6077-470f-984e-b576a24557a2",
+      "name": "Decree of Savagery",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "counter_support",
+        "direct_draw",
+        "draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "920684d0-aef3-4408-a66b-a0c9394c58f4",
+      "name": "Decree of Silence",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "counter_support",
+        "direct_draw",
+        "draw",
+        "hard_stack",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "sacrifice_support",
+        "selection",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "70d4f764-fca1-477a-9b0f-bbfcc1f7dfb1",
+      "name": "Dimensional Breach",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "aefb1463-76fb-419e-8cda-8c5bfb88a3d2",
+      "name": "Dispersal Shield",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "hard_stack",
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "0123b162-0413-4022-acc0-e5bd061d3fb4",
+      "name": "Divergent Growth",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "burst_ramp",
+        "mana_fixing"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "3535daf2-7dce-4fda-92ce-ad2a1ee95197",
+      "name": "Dragon Breath",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "0131d2ac-d677-45fd-9729-a5428139cb5b",
+      "name": "Dragon Fangs",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "eab71e4e-27c3-4c41-b95f-259c1d14b97a",
+      "name": "Dragon Mage",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "hand_attack",
+        "repeatable_advantage"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "04628d92-bd5e-4aff-830d-7b302bd6459e",
+      "name": "Dragon Scales",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "c9708a12-96b5-43c1-ac2d-d6dc6b03beb7",
+      "name": "Dragon Shadow",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_selection",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "6288865d-7f64-411f-a044-ca350cf6fb8d",
+      "name": "Dragon Tyrant",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "multiplier_support",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "85271333-af96-447a-8a16-9fadf0eaedb2",
+      "name": "Dragon Wings",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "battlefield_recursion",
+        "card_draw",
+        "card_selection",
+        "combat_support",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "6a29f36b-7911-4d84-a3ae-546b131d5159",
+      "name": "Dragonspeaker Shaman",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "d9410a82-1b7f-4f3a-a0fd-53099d7594ec",
+      "name": "Dragonstalker",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "d74c3871-018a-4450-a613-f67703bb0d72",
+      "name": "Dragonstorm",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "cheat_into_play",
+        "cost_reduction",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "71a7f695-06b9-461d-9646-ffb975b375fc",
+      "name": "Edgewalker",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "0f6e66d5-4f27-485b-999d-ee55c1e218b9",
+      "name": "Enrage",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support",
+        "mana_sink",
+        "scalable_spell"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "7a4c2d47-3489-4e56-b38b-de2dddd942ad",
+      "name": "Exiled Doomsayer",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "1470f614-88eb-4d3c-bc4f-270dfb512b6c",
+      "name": "Extra Arms",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support",
+        "direct_finisher",
+        "finisher",
+        "removal",
+        "repeatable_finisher",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "c8cd2b52-6d32-413f-9b26-2f9d436dbeae",
+      "name": "Faces of the Past",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "26d3077f-ad1f-47fb-a96d-8aac4bdef8a3",
+      "name": "Fatal Mutation",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "5104053a-d394-4b00-82a4-60fd9f051a6e",
+      "name": "Fierce Empath",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "restricted_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "74344ca9-b057-4864-a374-3b399389765f",
+      "name": "Final Punishment",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "direct_finisher",
+        "finisher"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "655ae8e7-372b-4d8d-b33f-4aca46831abb",
+      "name": "Force Bubble",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "counter_support",
+        "replacement_engine",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "2ef75cf3-30dc-4852-a6d1-1d6391fad022",
+      "name": "Forgotten Ancient",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "7b389f2b-fddc-46fb-85d5-4470565323f3",
+      "name": "Form of the Dragon",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support",
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "6e202114-48f3-46d2-bc54-df766d149d9d",
+      "name": "Frontline Strategist",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "broad_protection",
+        "combat_body",
+        "combat_support",
+        "face_down_support",
+        "protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "7101f0ab-89ce-4b13-a5a8-4cabd6c8670d",
+      "name": "Frozen Solid",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "name": "Gilded Light",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "selection",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "22134489-efce-4903-9f14-37a2248e8546",
+      "name": "Goblin Brigand",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "9369f131-3356-4926-9a9f-88a636305bd0",
+      "name": "Goblin Psychopath",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "coin_support",
+        "combat_body",
+        "combat_support",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "ca2e0c8f-7ece-465f-9103-ba60712eacf7",
+      "name": "Grip of Chaos",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "random_effect",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "a1439ace-5880-4fb8-a321-ec8063e7ed0e",
+      "name": "Guilty Conscience",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "90c6f338-fc41-4499-8f39-1cd202a2cd31",
+      "name": "Hindering Touch",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "soft_stack",
+        "stack"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "d3e1848a-c236-4352-a7be-b0b4699af968",
+      "name": "Hunting Pack",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "9ea1f10c-5ceb-4ac0-84c6-29046dea649a",
+      "name": "Karona, False God",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "dff66bcf-e126-49d2-b67e-ea3b0a38d390",
+      "name": "Karona's Zealot",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "cd8ae400-4f40-42aa-a905-2787de443471",
+      "name": "Krosan Drover",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "6ce6aed2-b959-4572-96fd-fee340d5a5ee",
+      "name": "Kurgadon",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "9fe9650d-6c9b-4988-9ea4-79ba0d55a77b",
+      "name": "Lethal Vapors",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "53463d3d-fa97-46fb-a73b-35bb0e0dac72",
+      "name": "Lingering Death",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "d1dfb359-d8f9-491e-88f7-95193b220200",
+      "name": "Long-Term Plans",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "direct_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "92f2a27d-3ec6-445c-9962-96b099f793ee",
+      "name": "Mercurial Kite",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "77d6c141-5670-4120-9346-dc2fdcb66e50",
+      "name": "Metamorphose",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "30e3e48c-98dc-4d27-b7ea-e81d39f7d24e",
+      "name": "Mischievous Quanar",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "copy_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "f5c77355-96dc-46af-a7de-f547a1368ff1",
+      "name": "Misguided Rage",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "97f1ac0d-a3a6-46d8-ae99-b17b636fe47c",
+      "name": "Mistform Warchief",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "9391f8ee-3435-400c-8a50-79a75de18a90",
+      "name": "Nefashu",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "e7079969-8d88-4f18-a872-2661bed6ff74",
+      "name": "Noble Templar",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "repeatable_tutor",
+        "selection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "e48d3de9-a5e0-4a69-8377-9e3ad5fc5b77",
+      "name": "One with Nature",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "repeatable_tutor",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "2daee7cb-6736-4aa6-9921-0371c1abe69f",
+      "name": "Parallel Thoughts",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "direct_tutor",
+        "face_down_support",
+        "replacement_engine",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "ada2f380-bca7-4d64-9587-bab11c776ba8",
+      "name": "Pemmin's Aura",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_support",
+        "self_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "dddda9a2-dc59-446d-bfc4-3240d12a3654",
+      "name": "Primitive Etchings",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "repeatable_advantage",
+        "repeatable_draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "c3acf94e-3adc-4397-a736-3f6072a5967d",
+      "name": "Proteus Machine",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "31b43ad8-a20b-4948-bfd2-56d7fe1a78f0",
+      "name": "Putrid Raptor",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "3b5b87da-5a00-449a-97ef-fa1e2c1c4b4b",
+      "name": "Pyrostatic Pillar",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "c7d398a4-0eb3-43cc-9952-35f3b791aa7a",
+      "name": "Rain of Blades",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "mass_removal",
+        "removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "67a1529f-aa37-4df8-97e3-5b1d8c03a76f",
+      "name": "Raven Guild Initiate",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "1dfaa773-7cd5-4489-9790-661cef4ed6f3",
+      "name": "Raven Guild Master",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "80c663a5-2794-4748-b47a-34352fb2112f",
+      "name": "Reaping the Graves",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_selection",
+        "hand_recursion",
+        "recursion"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "07d7f9d2-5414-4aaf-b6f2-1fedf16c3af7",
+      "name": "Recuperate",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "lifegain",
+        "protection",
+        "targeted_protection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "7fb7c848-377c-4476-9b3f-d95d145137f1",
+      "name": "Reward the Faithful",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "lifegain"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "10a64ae9-919f-4c04-8c8a-cce12554502c",
+      "name": "Riptide Survivor",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "card_selection",
+        "combat_body",
+        "direct_draw",
+        "draw",
+        "face_down_support",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "09fff6a3-6a54-4101-a587-55d7113b9639",
+      "name": "Rock Jockey",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "182d38b4-48bb-4050-a19a-c0a6bb241bbd",
+      "name": "Root Elemental",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "cost_reduction",
+        "face_down_support",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "34282c99-68ef-4855-b683-7bb205fa6374",
+      "name": "Rush of Knowledge",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "ed3652da-0127-4c9e-9913-f20becdd0ba9",
+      "name": "Scattershot",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "455cbf35-f340-4f1f-a331-5b082c9034ec",
+      "name": "Scornful Egotist",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "606fbf99-d3e3-4131-b991-3cb71c003834",
+      "name": "Shoreline Ranger",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "combat_threat",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "repeatable_tutor",
+        "selection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "ddc7f59a-bbb1-4ba1-82c8-6813fd191940",
+      "name": "Siege-Gang Commander",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal",
+        "token_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "cbcf6924-3e97-4940-867a-3cedd4052c9f",
+      "name": "Skirk Volcanist",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "17c7878f-891f-40a6-80a7-47fcc7b8e29b",
+      "name": "Skulltap",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "762d864b-69bc-43ac-af2f-e18186010169",
+      "name": "Sliver Overlord",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "repeatable_tutor",
+        "restricted_tutor",
+        "theft_support",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "c37f1921-7ac3-4185-8579-1dfdfe647ea2",
+      "name": "Spark Spray",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "selection",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "a38ad1aa-fc12-49be-b9f7-fe287597a5ca",
+      "name": "Sprouting Vines",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "856c79ae-feab-4df9-8269-fffee7a44193",
+      "name": "Stabilizer",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "7652f328-e142-494b-a869-772ced10c26a",
+      "name": "Sulfuric Vortex",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "damage_engine",
+        "group_slug",
+        "replacement_engine"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "8a9525f4-74a6-44f0-a1b1-d57937d7783b",
+      "name": "Temporal Fissure",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "tempo_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "24b44a35-496a-48e9-91ee-98b327d867e4",
+      "name": "Thundercloud Elemental",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "2cc63297-7eb9-422e-838c-a9260756d689",
+      "name": "Titanic Bulvox",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_threat",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "00181784-9213-492a-ba8c-2028969b049e",
+      "name": "Torrent of Fire",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "91857f68-4b0e-4fdf-8782-74324b496648",
+      "name": "Trap Digger",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "counter_support",
+        "removal",
+        "sacrifice_support",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "f62d4910-4547-43f6-909c-fc6a86ecc922",
+      "name": "Treetop Scout",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "139af10d-a3e5-4ade-b876-87324e6c8017",
+      "name": "Twisted Abomination",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "protection",
+        "ramp",
+        "regeneration_protection",
+        "repeatable_tutor",
+        "selection",
+        "targeted_protection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "97acd3aa-ae4a-4e9d-a5b9-36eaba158735",
+      "name": "Unburden",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "hand_attack",
+        "removal",
+        "selection"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "1de91c79-e9e6-4e37-98ff-ed92fc89d4bc",
+      "name": "Uncontrolled Infestation",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "land_denial",
+        "removal",
+        "targeted_land_removal",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "e6af56bf-bd78-4801-8f6e-033cdd68de3d",
+      "name": "Undead Warchief",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "cost_reduction",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "a5690d5f-633c-4a1e-afba-5fd79dcbf20e",
+      "name": "Unspeakable Symbol",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "counter_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "420ff0f4-6056-4b40-9a28-fd4c23d6b81c",
+      "name": "Upwelling",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "group_hug",
+        "ramp"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "277c8ee9-0157-4e45-96ad-1b67716955ee",
+      "name": "Vengeful Dead",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "direct_finisher",
+        "finisher",
+        "repeatable_finisher",
+        "sacrifice_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "f5cbc4f3-4e73-405f-9daf-e5b7c73fa6ee",
+      "name": "Wipe Clean",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_draw",
+        "direct_draw",
+        "draw",
+        "removal",
+        "selection",
+        "targeted_removal"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "61ade140-5b11-4882-82e5-a075fc80b260",
+      "name": "Wirewood Guardian",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "card_selection",
+        "combat_body",
+        "land_acceleration",
+        "land_tutor",
+        "mana_fixing",
+        "ramp",
+        "repeatable_tutor",
+        "selection",
+        "tutor"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "67a52a74-9474-4f4e-8785-6ff54078a8ca",
+      "name": "Wirewood Symbiote",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "tap_untap",
+        "tempo_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "92d17a26-bf73-4b62-b826-4cbe913d5c5e",
+      "name": "Woodcloaker",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "13ba9ef8-2010-4d3f-8c62-85b7c5620031",
+      "name": "Xantid Swarm",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "combat_support",
+        "combat_threat",
+        "hate_piece",
+        "stax_piece"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "e85f6251-8801-414b-adc9-5488794e7456",
+      "name": "Zealous Inquisitor",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
+    },
+    {
+      "oracleId": "a0b6aa7d-a8cd-4af7-8fb2-d2fa0861e123",
+      "name": "Zombie Cutthroat",
+      "firstSet": "scg",
+      "releasedAt": "2003-05-26",
+      "reviewedAt": "2026-06-29T12:52:46.962Z",
+      "actualRoles": [
+        "combat_body",
+        "face_down_support"
+      ],
+      "status": "covered",
+      "needsCodeChange": false,
+      "notes": "Covered by SCG role audit."
     }
   ]
 }

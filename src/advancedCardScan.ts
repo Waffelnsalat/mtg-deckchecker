@@ -571,7 +571,8 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     !/\byou sacrifice\b/.test(text);
   const delayedAuraEdict =
     /\bwhen enchanted creature leaves the battlefield\b[^.]{0,140}\bits controller sacrifices a creature\b/.test(text) ||
-    /\bat the beginning of the upkeep of enchanted creature'?s controller\b[^.]{0,160}\bthat player sacrifices that creature unless they pay\b/.test(text);
+    /\bat the beginning of the upkeep of enchanted creature'?s controller\b[^.]{0,160}\bthat player sacrifices that creature unless they pay\b/.test(text) ||
+    /\bat the beginning of the end step of enchanted creature'?s controller\b[^.]{0,120}\bthat player sacrifices that creature\b/.test(text);
   const targetedRemoval =
     /\b(?:destroy|exile)\b[^.]{0,120}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\b(?:destroy|exile)\b[^.]{0,40}(?:one|two|three|four|five|six|\d+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|battles?|permanents?|nonland permanents?)\b/.test(text) ||
@@ -597,6 +598,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\bwhenever a creature enters\b[^.]{0,120}\bexile that creature\b/.test(text) ||
     combatTriggeredRemoval ||
     /\bwhenever this creature deals damage to a creature\b[^.]{0,120}\bdestroy that creature\b/.test(text) ||
+    /\bwhenever enchanted creature deals damage\b[^.]{0,120}\bthis aura deals that much damage to that creature\b/.test(text) ||
     phaseOutRemoval ||
     leastPowerRemoval ||
     /\btarget creature deals damage to itself equal to its power\b/.test(text) ||
@@ -610,6 +612,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
   const targetedDamageRemoval =
     /\bdeals? (?:x|\d+|that much) damage to any (?:other )?target\b/.test(text) ||
     /\bdeals? an amount of damage chosen at random from 0 to x to any target\b/.test(text) ||
+    /\bdeals? damage to any target equal to the greatest mana value among permanents you control\b/.test(text) ||
     /\bdeals? damage to any target equal to the mana value of the discarded card\b/.test(text) ||
     /\bdeals? (?:x|\d+|that much) damage to target\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent)\b/.test(text) ||
     /\bdeals? \d+ damage to each of two target creatures\b/.test(text) ||
@@ -704,6 +707,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     !/\buntil end of turn\b/.test(text);
   const handAttack =
     /\btarget (?:player|opponent)\b[^.]{0,140}\bdiscards?\b/.test(text) ||
+    /\bany number of target players each discard a number of cards equal to\b/.test(text) ||
     /\btarget player reveals a card at random from their hand\b[\s\S]{0,220}\bdiscards? it unless\b/.test(text) ||
     /\beach player may discard\b[\s\S]{0,160}\bdeals damage to each player\b/.test(text) ||
     /\bat the beginning of each player'?s upkeep\b[^.]{0,120}\bthat player discards a card at random\b/.test(text) ||
@@ -813,6 +817,11 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
   if (/\bban a card other than a basic land card\b[\s\S]{0,180}\bremoved from the match\b/.test(text)) {
     addRole(profile, "removal", 0.5, "Advanced scan recognized match-level removal.");
     addRole(profile, "hate_piece", 0.42, "Advanced scan recognized card-name denial.");
+  }
+
+  if (/\bplayers can'?t cycle cards\b/.test(text)) {
+    addRole(profile, "stax_piece", 0.48, "Advanced scan recognized cycling restriction.");
+    addRole(profile, "hate_piece", 0.42, "Advanced scan recognized cycling hate.");
   }
 }
 
@@ -1179,6 +1188,11 @@ function detectAdvancedFinisherRoles(
   if (scalableTargetDamage) {
     addRole(profile, "finisher", /\bx\b/.test(text) ? 0.72 : 0.56, "Advanced scan recognized scalable direct damage as closing pressure.");
     addRole(profile, "direct_finisher", /\bx\b/.test(text) ? 0.72 : 0.56, "Advanced scan recognized scalable direct damage as closing pressure.");
+  }
+
+  if (/\btarget player loses life equal to the damage already dealt to that player this turn\b/.test(text)) {
+    addRole(profile, "finisher", 0.62, "Advanced scan recognized damage-amplifying life loss.");
+    addRole(profile, "direct_finisher", 0.62, "Advanced scan recognized damage-amplifying life loss.");
   }
 
   if (extraCombat || overrun) {
@@ -1957,6 +1971,16 @@ function detectAdvancedPurposeRoles(
   if (/\bplay (?:x|\d+) random fast effects\b|\bplay a random effect\b/.test(text)) {
     addRole(profile, "random_effect", 0.22, "Advanced scan recognized random-effect text.");
     addRole(profile, "alternate_play", 0.18, "Advanced scan recognized alternate gameplay text.");
+  }
+
+  if (/\bwhenever a spell or ability is put onto the stack\b[\s\S]{0,160}\breselect its target at random\b/.test(text)) {
+    addRole(profile, "random_effect", 0.44, "Advanced scan recognized random retargeting.");
+    addRole(profile, "stax_piece", 0.34, "Advanced scan recognized target disruption.");
+  }
+
+  if (/\bplayers don'?t lose unspent mana as steps and phases end\b/.test(text)) {
+    addRole(profile, "ramp", 0.34, "Advanced scan recognized mana retention.");
+    addRole(profile, "group_hug", 0.28, "Advanced scan recognized symmetrical mana retention.");
   }
 
   if (

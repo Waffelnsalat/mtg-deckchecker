@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-29T12:50:30.488Z",
+  "generatedAt": "2026-06-29T12:52:47.991Z",
   "sourceSets": "data/scryfall-sets.json",
   "sourceLedger": "data/card-role-audit.json",
   "note": "Set progress is exact when a worksheet exists. Sets without worksheets are marked from ledger firstSet counts only.",
   "summary": {
-    "done": 124,
+    "done": 127,
     "inProgress": 0,
-    "pending": 919
+    "pending": 916
   },
   "sets": [
     {
@@ -1753,11 +1753,12 @@
       "setType": "expansion",
       "cardCount": 145,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 145,
+      "totalUniqueOracleIds": 145,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/lgn-role-review.tsv"
     },
     {
       "code": "plgn",
@@ -1766,11 +1767,12 @@
       "setType": "promo",
       "cardCount": 1,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 1,
+      "totalUniqueOracleIds": 1,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/plgn-role-review.tsv"
     },
     {
       "code": "pscg",
@@ -1792,11 +1794,12 @@
       "setType": "expansion",
       "cardCount": 143,
       "digital": false,
-      "auditStatus": "pending",
-      "reviewedOracleIds": 0,
-      "totalUniqueOracleIds": null,
-      "openOracleIds": null,
-      "progressKnown": false
+      "auditStatus": "done",
+      "reviewedOracleIds": 143,
+      "totalUniqueOracleIds": 143,
+      "openOracleIds": 0,
+      "progressKnown": true,
+      "worksheetPath": "data/card-role-worksheets/scg-role-review.tsv"
     },
     {
       "code": "8ed",

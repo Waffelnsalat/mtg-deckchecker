@@ -3508,6 +3508,38 @@ test("inferAdvancedRoleProfile recognizes Magic Online Avatar utility wording ga
   assert.ok(getRoleWeight(tradewindProfile, "tempo_removal") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Scourge utility wording gaps", () => {
+  const conscienceProfile = inferAdvancedRoleProfile(
+    createCard("Guilty Conscience", "Enchantment - Aura", 1, "Enchant creature Whenever enchanted creature deals damage, this Aura deals that much damage to that creature."),
+  );
+  const conditioningProfile = inferAdvancedRoleProfile(
+    createCard("Cabal Conditioning", "Sorcery", 7, "Any number of target players each discard a number of cards equal to the greatest mana value among permanents you control."),
+  );
+  const punishmentProfile = inferAdvancedRoleProfile(
+    createCard("Final Punishment", "Sorcery", 5, "Target player loses life equal to the damage already dealt to that player this turn."),
+  );
+  const lingeringProfile = inferAdvancedRoleProfile(
+    createCard("Lingering Death", "Enchantment - Aura", 2, "Enchant creature At the beginning of the end step of enchanted creature's controller, that player sacrifices that creature."),
+  );
+  const chaosProfile = inferAdvancedRoleProfile(
+    createCard("Grip of Chaos", "Enchantment", 6, "Whenever a spell or ability is put onto the stack, if it has a single target, reselect its target at random. (Select from among all legal targets.)"),
+  );
+  const torrentProfile = inferAdvancedRoleProfile(
+    createCard("Torrent of Fire", "Sorcery", 5, "Torrent of Fire deals damage to any target equal to the greatest mana value among permanents you control."),
+  );
+  const upwellingProfile = inferAdvancedRoleProfile(createCard("Upwelling", "Enchantment", 4, "Players don't lose unspent mana as steps and phases end."));
+  const stabilizerProfile = inferAdvancedRoleProfile(createCard("Stabilizer", "Artifact", 2, "Players can't cycle cards."));
+
+  assert.ok(getRoleWeight(conscienceProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(conditioningProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(punishmentProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(lingeringProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(chaosProfile, "random_effect") > 0);
+  assert.ok(getRoleWeight(torrentProfile, "targeted_removal") > 0);
+  assert.ok(getRoleWeight(upwellingProfile, "ramp") > 0);
+  assert.ok(getRoleWeight(stabilizerProfile, "hate_piece") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
