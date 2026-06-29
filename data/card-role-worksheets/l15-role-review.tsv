@@ -1,2 +1,2 @@
 setCode	setName	releasedAt	collectorNumber	name	oracleId	auditStatus	expectedRoles	actualAnalyzerRoles	needsCodeChange	tagDecision	manualNotes	typeLine	manaCost	manaValue	colors	colorIdentity	keywords	scryfallOracleTags	attentionHint	scryfallUrl	oracleText
-l15	League Tokens 2015	2015-01-01	1	Monk	bfa57f61-3811-43da-b73e-90e3e5b0b2c2			combat_body				Token Creature — Monk		0	W	W	Prowess		verify analyzer roles	https://scryfall.com/card/l15/1/monk?utm_source=api	Prowess
+l15	League Tokens 2015	2015-01-01	1	Monk	bfa57f61-3811-43da-b73e-90e3e5b0b2c2	covered	combat_body	combat_body	false		Analyzer roles accepted during batch clean pass.	Token Creature — Monk		0	W	W	Prowess		verify analyzer roles	https://scryfall.com/card/l15/1/monk?utm_source=api	Prowess
