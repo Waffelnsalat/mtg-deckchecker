@@ -3108,6 +3108,58 @@ test("inferAdvancedRoleProfile recognizes Urza's Destiny utility wording gaps", 
   assert.ok(getRoleWeight(foundryProfile, "graveyard_hate") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Mercadian Masques utility wording gaps", () => {
+  const inviolabilityProfile = inferAdvancedRoleProfile(createCard("Inviolability", "Enchantment — Aura", 2, "Enchant creature Prevent all damage that would be dealt to enchanted creature."));
+  const muzzleProfile = inferAdvancedRoleProfile(createCard("Muzzle", "Enchantment — Aura", 2, "Enchant creature Prevent all damage that would be dealt by enchanted creature."));
+  const storyProfile = inferAdvancedRoleProfile(
+    createCard("Story Circle", "Enchantment", 3, "As this enchantment enters, choose a color. {W}: The next time a source of your choice of the chosen color would deal damage to you this turn, prevent that damage."),
+  );
+  const cowardiceProfile = inferAdvancedRoleProfile(
+    createCard("Cowardice", "Enchantment", 5, "Whenever a creature becomes the target of a spell or ability, return that creature to its owner's hand."),
+  );
+  const embargoProfile = inferAdvancedRoleProfile(createCard("Embargo", "Enchantment", 4, "Nonland permanents don't untap during their controllers' untap steps. At the beginning of your upkeep, you lose 2 life."));
+  const misstepProfile = inferAdvancedRoleProfile(createCard("Misstep", "Sorcery", 2, "Creatures target player controls don't untap during that player's next untap step."));
+  const insubordinationProfile = inferAdvancedRoleProfile(
+    createCard("Insubordination", "Enchantment — Aura", 2, "Enchant creature At the beginning of the end step of enchanted creature's controller, this Aura deals 2 damage to that player unless that creature attacked this turn."),
+  );
+  const liabilityProfile = inferAdvancedRoleProfile(createCard("Liability", "Enchantment", 3, "Whenever a nontoken permanent is put into a player's graveyard from the battlefield, that player loses 1 life."));
+  const claimProfile = inferAdvancedRoleProfile(createCard("Pretender's Claim", "Enchantment — Aura", 2, "Enchant creature Whenever enchanted creature becomes blocked, tap all lands defending player controls."));
+  const putrefactionProfile = inferAdvancedRoleProfile(createCard("Putrefaction", "Enchantment", 5, "Whenever a player casts a green or white spell, that player discards a card."));
+  const oathProfile = inferAdvancedRoleProfile(
+    createCard("Blood Oath", "Instant", 4, "Choose a card type. Target opponent reveals their hand. Blood Oath deals 3 damage to that player for each card of the chosen type revealed this way."),
+  );
+  const uphillProfile = inferAdvancedRoleProfile(createCard("Uphill Battle", "Enchantment", 3, "Creatures played by your opponents enter tapped."));
+  const warpathProfile = inferAdvancedRoleProfile(createCard("Warpath", "Instant", 4, "Warpath deals 3 damage to each blocking creature and each blocked creature."));
+  const clearProfile = inferAdvancedRoleProfile(
+    createCard("Clear the Land", "Sorcery", 3, "Each player reveals the top five cards of their library, puts all land cards revealed this way onto the battlefield tapped, and exiles the rest."),
+  );
+  const preserveProfile = inferAdvancedRoleProfile(
+    createCard("Game Preserve", "Enchantment", 3, "At the beginning of your upkeep, each player reveals the top card of their library. If all cards revealed this way are creature cards, put those cards onto the battlefield under their owners' control."),
+  );
+  const affinityProfile = inferAdvancedRoleProfile(createCard("Natural Affinity", "Instant", 3, "All lands become 2/2 creatures until end of turn. They're still lands."));
+  const lensProfile = inferAdvancedRoleProfile(createCard("Distorting Lens", "Artifact", 2, "{T}: Target permanent becomes the color of your choice until end of turn."));
+  const pawnshopProfile = inferAdvancedRoleProfile(createCard("Rishadan Pawnshop", "Artifact", 2, "{2}, {T}: Shuffle target nontoken permanent you control into its owner's library."));
+
+  assert.ok(getRoleWeight(inviolabilityProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(muzzleProfile, "targeted_protection") > 0);
+  assert.ok(getRoleWeight(storyProfile, "protection") > 0);
+  assert.ok(getRoleWeight(cowardiceProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(embargoProfile, "hate_piece") > 0);
+  assert.ok(getRoleWeight(misstepProfile, "combat_support") > 0);
+  assert.ok(getRoleWeight(insubordinationProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(liabilityProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(claimProfile, "mana_denial") > 0);
+  assert.ok(getRoleWeight(putrefactionProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(oathProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(uphillProfile, "hate_piece") > 0);
+  assert.ok(getRoleWeight(warpathProfile, "mass_removal") > 0);
+  assert.ok(getRoleWeight(clearProfile, "land_acceleration") > 0);
+  assert.ok(getRoleWeight(preserveProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(affinityProfile, "animation_effect") > 0);
+  assert.ok(getRoleWeight(lensProfile, "color_change") > 0);
+  assert.ok(getRoleWeight(pawnshopProfile, "self_bounce") > 0);
+});
+
 function createCard(
   name: string,
   typeLine: string,
