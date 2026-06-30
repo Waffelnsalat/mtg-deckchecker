@@ -590,6 +590,26 @@ function detectAdvancedDrawRoles(profile: CardRoleProfile, text: string, permane
       addRole(profile, "group_hug", 0.46, "Advanced scan recognized symmetrical table draw.");
     }
 
+    if (
+      /\bat the beginning of each player'?s draw step\b[^.]{0,180}\bthat player draws? an additional card\b/.test(text) ||
+      /\bat the beginning of each player'?s end step\b[^.]{0,180}\bthat player draws? a card\b/.test(text)
+    ) {
+      addRole(profile, "draw", 0.56, "Advanced scan recognized symmetrical recurring draw.");
+      addRole(profile, "card_draw", 0.52, "Advanced scan recognized symmetrical recurring draw.");
+      addRole(profile, "group_hug", 0.42, "Advanced scan recognized symmetrical table draw.");
+      if (permanent) {
+        addRole(profile, "repeatable_draw", 0.48, "Advanced scan recognized a recurring table draw engine.");
+      }
+    }
+
+    if (
+      /\beach player discards? (?:their|his or her) hand\b[^.]{0,160}\bthen draws? (?:seven|one|two|three|four|five|six|\d+|x)? ?cards?(?: equal to)?\b/.test(text)
+    ) {
+      addRole(profile, "draw", 0.74, "Advanced scan recognized wheel-style card flow.");
+      addRole(profile, "selection", 0.64, "Advanced scan recognized wheel-style hand reset.");
+      addRole(profile, "hand_denial", 0.46, "Advanced scan recognized symmetrical hand disruption.");
+    }
+
     if (/\binvestigate\b|\bcreate (?:a|one|two|three|x|\d+) clue token/.test(text)) {
       addRole(profile, "draw", 0.72, "Advanced scan recognized Clue-based delayed card draw.");
       addRole(profile, "selection", 0.42, "Advanced scan recognized Clue-based card access.");
@@ -692,6 +712,9 @@ function detectAdvancedRampRoles(
     /\bflashback costs you pay cost \{[^}]+\} less\b/.test(text) ||
     /\byou may pay\b[^.]{0,80}\brather than pay (?:the )?mana cost\b/.test(text) ||
     /\brather than pay the mana cost for a spell\b[^.]{0,120}\bdiscard a card\b/.test(text);
+  const artifactImprovise =
+    /\bnonartifact spells? you cast have improvise\b/.test(text) ||
+    /\bspells? you cast have improvise\b/.test(text);
   const handCheatMana =
     /\bput\b[^.]{0,140}\b(?:artifact|creature|enchantment|permanent) card from your hand\b[^.]{0,100}\bonto the battlefield\b/.test(text) ||
     /\bput\b[^.]{0,140}\b(?:a|an|target|that|the)?\s*(?:artifact|creature|enchantment|permanent|nonland permanent) card\b[^.]{0,180}\bfrom (?:your hand|among them|among those cards|the top .*? of your library)\b[^.]{0,120}\bonto the battlefield\b/.test(text) ||
@@ -768,16 +791,21 @@ function detectAdvancedRampRoles(
     addRole(profile, "burst_ramp", handExileMana ? 0.82 : 0.74, "Advanced scan recognized burst mana.");
   }
 
-  if (costReduction || handCheatMana) {
+  if (costReduction || handCheatMana || artifactImprovise) {
     addRole(profile, "ramp", 0.62, "Advanced scan recognized mana-equivalent cost reduction.");
     addRole(
       profile,
       "cost_reduction",
-      handCheatMana ? 0.64 : 0.72,
+      handCheatMana ? 0.64 : artifactImprovise ? 0.62 : 0.72,
       handCheatMana
         ? "Advanced scan recognized cheating cards from hand as mana-equivalent acceleration."
+        : artifactImprovise
+          ? "Advanced scan recognized improvise as artifact-backed cost reduction."
         : "Advanced scan recognized cost reduction.",
     );
+    if (artifactImprovise) {
+      addRole(profile, "artifact_support", 0.54, "Advanced scan recognized artifact-backed improvise support.");
+    }
   }
 
   if (untapManaEngine) {
@@ -948,6 +976,7 @@ function detectAdvancedRemovalRoles(profile: CardRoleProfile, text: string) {
     /\b(?:destroy|exile)\b[^.]{0,120}\btarget\b[^.]{0,140}\b(?:creature|artifact|enchantment|planeswalker|battle|permanent|nonland permanent)\b/.test(text) ||
     /\b(?:destroy|exile)\b[^.]{0,40}(?:one|two|three|four|five|six|\d+)\s+target\b[^.]{0,140}\b(?:creatures?|artifacts?|enchantments?|planeswalkers?|battles?|permanents?|nonland permanents?)\b/.test(text) ||
     /\btarget creature and all other creatures with the same name as that creature get -\d+\/-\d+ until end of turn\b/.test(text) ||
+    /\btarget creature gets? -(?:x|\d+)\/-(?:x|\d+) until end of turn\b/.test(text) ||
     /\btarget creature of their choice get -\d+\/-\d+ until end of turn\b/.test(text) ||
     /\ball creatures of that type get -\d+\/-\d+ until end of turn\b/.test(text) ||
     /\bwhen enchanted permanent becomes tapped\b[^.]{0,80}\bdestroy it\b/.test(text) ||
@@ -1445,6 +1474,7 @@ function detectAdvancedProtectionRoles(
     /\bshuffle target nontoken permanent you control into its owner'?s library\b/.test(text);
   const flicker =
     /\bexile\b[^.]{0,120}\btarget\b[^.]{0,120}\b(?:creature|artifact|enchantment|planeswalker|permanent)\b[^.]{0,120}\byou control\b[^.]{0,160}\breturn\b[^.]{0,120}\bto the battlefield\b/.test(text) ||
+    /\bexile target (?:creature|enchantment|creature or enchantment)\b[^.]{0,120}\bthen return (?:it|that card)\b[^.]{0,120}\bto the battlefield\b/.test(text) ||
     /\bexile another target permanent you control\b[\s\S]{0,160}\breturn it to the battlefield\b/.test(text) ||
     /\bexile target creature you control\b[\s\S]{0,160}\breturn that card to the battlefield\b/.test(text) ||
     /\bexile (?:up to two|two|any number of) target\b[^.]{0,120}\byou control\b[\s\S]{0,180}\breturn those cards to the battlefield\b/.test(text) ||

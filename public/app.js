@@ -446,6 +446,7 @@ const quickReadController = window.MtgDeckcheckerQuickRead.create({
     risksList: quickReadRisksList,
   },
 });
+const synergyNetworkController = window.MtgDeckcheckerSynergyNetwork.create();
 const themeMediaController = window.MtgDeckcheckerThemeMedia.create({
   elements: {
     ambientBackground: ambientCardBackground,
@@ -1399,6 +1400,7 @@ function renderAnalyzedDeck(result) {
   metricDetailsController.render(analysis);
   strategyRendererController.render(strategy, winStrategy);
   quickReadController.render(analysis);
+  synergyNetworkController.render(analysis);
   recommendationVisualRenderToken += 1;
   const recommendationRenderToken = recommendationVisualRenderToken;
   renderRecommendations(recommendations, recommendationRenderToken);

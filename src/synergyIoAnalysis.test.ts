@@ -234,6 +234,43 @@ test("analyzeDeckSynergyIo compares commander asks against main-deck support", (
   assert.ok(unsupported.commanderSynergy.gaps.some((gap) => gap.includes("Combat")));
 });
 
+test("inferSynergyIoAtoms reads single-target copy commanders and Saga commanders", () => {
+  const ivyAtoms = inferSynergyIoAtoms(createCard(
+    "Ivy, Gleeful Spellthief",
+    "Legendary Creature - Faerie Rogue",
+    2,
+    "Flying. Whenever a player casts a spell that targets only a single creature other than Ivy, Gleeful Spellthief, you may copy that spell. The copy targets Ivy.",
+  ));
+  const tomAtoms = inferSynergyIoAtoms(createCard(
+    "Tom Bombadil",
+    "Legendary Creature - God Bard",
+    5,
+    "As long as there are four or more lore counters among Sagas you control, Tom Bombadil has hexproof and indestructible. Whenever the final chapter ability of a Saga you control resolves, reveal cards from the top of your library until you reveal a Saga card. Put that card onto the battlefield.",
+  ));
+
+  assertAtom(ivyAtoms, "spells", "input", "single_target_spell_trigger");
+  assertAtom(ivyAtoms, "spells", "payoff", "single_target_spell_copy_payoff");
+  assertAtom(ivyAtoms, "protection", "payoff", "single_target_copy_setup");
+  assertAtom(tomAtoms, "enchantments", "input", "saga_chapter_trigger");
+  assertAtom(tomAtoms, "enchantments", "payoff", "saga_chapter_payoff");
+  assertAtom(tomAtoms, "counters", "input", "lore_counter_chapter_input");
+});
+
+test("analyzeDeckSynergyIo does not treat basic lands as resource key cards", () => {
+  const analysis = analyzeDeckSynergyIo(createDeckDocument([
+    {
+      card: createCard("Land Commander", "Legendary Creature - Druid", 3, "Whenever you create a Treasure token, draw a card."),
+      section: "commander",
+    },
+    { card: createCard("Forest", "Basic Land - Forest", 0, "({T}: Add {G}.)"), quantity: 12 },
+    { card: createCard("Treasure Maker", "Sorcery", 2, "Create two Treasure tokens.") },
+  ]));
+  const resources = analysis.packages.find((entry) => entry.domain === "resources");
+
+  assert.ok(resources);
+  assert.ok(!(resources?.keyCards ?? []).includes("Forest"));
+});
+
 function assertAtom(
   atoms: ReturnType<typeof inferSynergyIoAtoms>,
   domain: string,

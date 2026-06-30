@@ -555,6 +555,15 @@
                   <button
                     class="advanced-tab-button"
                     type="button"
+                    data-advanced-tab="synergy"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Synergy
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
                     data-advanced-tab="interaction"
                     role="tab"
                     aria-selected="false"
@@ -1107,9 +1116,55 @@
 
               </div>
 
-              <div class="analysis-tab-panel" data-analysis-tab-panel="interaction">
+              <div class="analysis-tab-panel" data-analysis-tab-panel="synergy">
               <section class="dashboard-section">
                 <p class="panel-kicker">Stage 4</p>
+                <h3>Synergy Network</h3>
+                <p>Read the deck as connected synergy packages, based only on synergy input, output, payoff, and friction tags.</p>
+              </section>
+
+              <div class="result-columns-wide">
+                <section class="note-box synergy-network-box">
+                  <div class="synergy-network-head">
+                    <div>
+                      <p class="panel-kicker">Input / Output Map</p>
+                      <h3>Package Network</h3>
+                    </div>
+                    <span id="synergy-network-count" class="soft-pill">0 packages</span>
+                  </div>
+                  <p id="synergy-network-summary" class="strategy-summary">
+                    Synergy packages appear here after analysis.
+                  </p>
+                  <div class="synergy-network-layout">
+                    <div
+                      id="synergy-network-graph"
+                      class="synergy-network-graph"
+                      aria-label="Synergy package network diagram"
+                    ></div>
+                    <aside class="synergy-network-side">
+                      <div class="tagged-card-block">
+                        <span class="meta-label">Commander Fit</span>
+                        <strong id="synergy-commander-score" class="synergy-focus-score">0 / 10</strong>
+                        <p id="synergy-commander-summary" class="strategy-summary">
+                          Commander synergy appears here after analysis.
+                        </p>
+                      </div>
+                      <div class="tagged-card-block">
+                        <span class="meta-label">Selected Package</span>
+                        <div id="synergy-selected-package" class="synergy-selected-package">
+                          Select a node to inspect its cards and gaps.
+                        </div>
+                      </div>
+                    </aside>
+                  </div>
+                  <div id="synergy-package-list" class="synergy-package-list"></div>
+                </section>
+              </div>
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="interaction">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Stage 5</p>
                 <h3>Interaction &amp; Resilience</h3>
                 <p>Measure how the deck answers opponents, protects its engine, and recovers after disruption.</p>
               </section>
@@ -1338,7 +1393,7 @@
 
               <div class="analysis-tab-panel" data-analysis-tab-panel="closing">
               <section class="dashboard-section">
-                <p class="panel-kicker">Stage 5</p>
+                <p class="panel-kicker">Stage 6</p>
                 <h3>Closing</h3>
                 <p>Only after the shell is healthy do the dedicated finishers and combo lines really matter.</p>
               </section>
@@ -1422,7 +1477,7 @@
 
               <div class="analysis-tab-panel" data-analysis-tab-panel="recommendations">
               <section class="dashboard-section">
-                <p class="panel-kicker">Stage 6</p>
+                <p class="panel-kicker">Stage 7</p>
                 <h3>Suggestions</h3>
                 <p>Use bracket-directed add suggestions to push the shell up or pull it down toward the bracket target you picked before the scan.</p>
               </section>
@@ -1439,7 +1494,7 @@
 
               <div class="analysis-tab-panel" data-analysis-tab-panel="cards">
               <section class="dashboard-section">
-                <p class="panel-kicker">Stage 7</p>
+                <p class="panel-kicker">Stage 8</p>
                 <h3>Card Breakdown</h3>
                 <p>Every resolved card with broad roles and visible analyzer detail tags.</p>
               </section>
@@ -1731,6 +1786,7 @@
     <script src="/decklist-intake.js" defer></script>
     <script src="/tagged-card-sections.js" defer></script>
     <script src="/quick-read.js" defer></script>
+    <script src="/synergy-network.js" defer></script>
     <script src="/theme-media.js" defer></script>
     <script src="/strategy-renderer.js" defer></script>
     <script src="/deck-identity.js" defer></script>

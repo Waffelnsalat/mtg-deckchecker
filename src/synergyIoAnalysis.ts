@@ -94,7 +94,7 @@ export function inferSynergyIoAtoms(card: ScryfallCard): SynergyIoAtom[] {
   detectDiscardAtoms(atoms, text);
   detectCombatAtoms(atoms, text, card);
   detectTimingAtoms(atoms, text);
-  detectResourceAtoms(atoms, text);
+  detectResourceAtoms(atoms, text, card);
   detectProtectionAtoms(atoms, text);
 
   if (/\bflashback\b|\bjump-start\b|\bretrace\b|\bescape\b|\bdisturb\b|\bunearth\b|\bembalm\b|\beternalize\b|\bencore\b/.test(text)) {
@@ -196,6 +196,11 @@ function detectSpellAtoms(atoms: SynergyIoAtom[], text: string, card: ScryfallCa
   if (/\bcopy\b[^.]{0,120}\b(?:instant|sorcery|spell)\b|\bstorm\b|\breplicate\b|\bcopy that spell\b/.test(text)) {
     addAtom(atoms, "spells", "payoff", "spell_copy_payoff", 0.62, "Copies or multiplies spells.");
   }
+
+  if (/\bspells? that targets? only a single creature\b|\bspell that targets only\b[^.]{0,80}\bcreature\b/.test(text)) {
+    addAtom(atoms, "spells", "input", "single_target_spell_trigger", 0.72, "Triggers from single-target spell play.");
+    addAtom(atoms, "spells", "payoff", "single_target_spell_copy_payoff", 0.78, "Turns single-target spells into copied spell value.");
+  }
 }
 
 function detectTokenAtoms(atoms: SynergyIoAtom[], text: string) {
@@ -225,6 +230,10 @@ function detectCounterAtoms(atoms: SynergyIoAtom[], text: string) {
 
   if (/\bput (?:a|an|one|two|three|four|five|six|\d+|x)\s+\+1\/\+1 counters?\b|\bput\b[^.]{0,80}\bcounters?\b[^.]{0,80}\bon\b|\bproliferate\b/.test(text)) {
     addAtom(atoms, "counters", "output", "counter_placement_output", 0.66, "Places or grows counters.");
+  }
+
+  if (/\blore counters?\b|\bchapter abilities?\b|\bfinal chapter ability\b/.test(text)) {
+    addAtom(atoms, "counters", "input", "lore_counter_chapter_input", 0.54, "Cares about Saga lore counters or chapter timing.");
   }
 
   if (/\b(?:creatures?|permanents?) you control with counters? on them\b[^.]{0,140}\b(?:get|gain|have|can'?t|draw|create)\b/.test(text)) {
@@ -308,6 +317,11 @@ function detectEnchantmentAtoms(atoms: SynergyIoAtom[], text: string, card: Scry
     }
   }
 
+  if (/\bwhenever\b[^.]{0,180}\b(?:chapter ability|final chapter ability|saga you control)\b|\bfinal chapter ability of a saga\b/.test(text)) {
+    addAtom(atoms, "enchantments", "input", "saga_chapter_trigger", 0.74, "Triggers from Saga chapter progression.");
+    addAtom(atoms, "enchantments", "payoff", "saga_chapter_payoff", 0.74, "Turns Saga chapter progression into value.");
+  }
+
   if (/\benchant\b|\baura\b|\bbestow\b|\bsaga\b|\brole token\b/.test(text)) {
     addAtom(atoms, "enchantments", "output", "enchantment_subtype_output", 0.42, "Provides Aura, Saga, Role, or enchantment material.");
   }
@@ -381,7 +395,11 @@ function detectTimingAtoms(atoms: SynergyIoAtom[], text: string) {
   }
 }
 
-function detectResourceAtoms(atoms: SynergyIoAtom[], text: string) {
+function detectResourceAtoms(atoms: SynergyIoAtom[], text: string, card: ScryfallCard) {
+  if (hasCardType(card, "Land") && !/\b(?:treasure|clue|food|blood|map|token|draw|copy|artifact|sacrifice a creature)\b/.test(text)) {
+    return;
+  }
+
   if (/\bwhenever\b[^.]{0,180}\b(?:you sacrifice|you discard|you create|treasure|clue|food|blood|tap an untapped)\b/.test(text)) {
     addAtom(atoms, "resources", "input", "resource_event_trigger", 0.54, "Triggers from resource conversion events.");
   }
@@ -402,6 +420,11 @@ function detectResourceAtoms(atoms: SynergyIoAtom[], text: string) {
 function detectProtectionAtoms(atoms: SynergyIoAtom[], text: string) {
   if (/\bwhenever\b[^.]{0,180}\bbecomes the target\b|\bward\b/.test(text)) {
     addAtom(atoms, "protection", "input", "targeting_trigger", 0.52, "Cares about targeting or removal pressure.");
+  }
+
+  if (/\bspells? that targets? only a single creature\b|\bspell that targets only\b[^.]{0,80}\bcreature\b/.test(text)) {
+    addAtom(atoms, "protection", "input", "single_target_spell_setup", 0.48, "Cares about protected single-target setup play.");
+    addAtom(atoms, "protection", "payoff", "single_target_copy_setup", 0.46, "Rewards targeting protected material.");
   }
 
   if (/\b(?:hexproof|indestructible|protection from|phase out|phases out|prevent all damage|regenerate|shield counter|can't be countered)\b|\breturn\b[^.]{0,120}\byou control\b[^.]{0,120}\bto its owner's hand\b/.test(text)) {

@@ -3713,6 +3713,52 @@ test("analyzeDeckAdvancedRoles rewards repeated deck context without overpowerin
   assert.ok((values.get("Cheap Selection") ?? 0) >= 0.8);
 });
 
+test("inferAdvancedRoleProfile covers wheel, shrink removal, flicker, and improvise utility", () => {
+  const dismember = inferAdvancedRoleProfile(createCard(
+    "Dismember",
+    "Instant",
+    3,
+    "Target creature gets -5/-5 until end of turn.",
+  ));
+  const wheel = inferAdvancedRoleProfile(createCard(
+    "Wheel of Fortune",
+    "Sorcery",
+    3,
+    "Each player discards their hand, then draws seven cards.",
+  ));
+  const howlingMine = inferAdvancedRoleProfile(createCard(
+    "Howling Mine",
+    "Artifact",
+    2,
+    "At the beginning of each player's draw step, if Howling Mine is untapped, that player draws an additional card.",
+  ));
+  const flicker = inferAdvancedRoleProfile(createCard(
+    "Flicker of Fate",
+    "Instant",
+    2,
+    "Exile target creature or enchantment, then return it to the battlefield under its owner's control.",
+  ));
+  const statuary = inferAdvancedRoleProfile(createCard(
+    "Inspiring Statuary",
+    "Artifact",
+    3,
+    "Nonartifact spells you cast have improvise.",
+  ));
+
+  assert.ok(dismember);
+  assert.ok(wheel);
+  assert.ok(howlingMine);
+  assert.ok(flicker);
+  assert.ok(statuary);
+  assert.ok(dismember.weights.has("removal"));
+  assert.ok(wheel.weights.has("draw"));
+  assert.ok(wheel.weights.has("hand_denial"));
+  assert.ok(howlingMine.weights.has("group_hug"));
+  assert.ok(flicker.weights.has("flicker"));
+  assert.ok(statuary.weights.has("cost_reduction"));
+  assert.ok(statuary.weights.has("artifact_support"));
+});
+
 function createCard(
   name: string,
   typeLine: string,
