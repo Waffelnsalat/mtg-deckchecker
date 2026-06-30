@@ -16,6 +16,7 @@ import { analyzeDeckProtection } from "./protectionAnalysis";
 import { analyzeDeckRecommendations } from "./recommendationAnalysis";
 import { analyzeDeckRecursion } from "./recursionAnalysis";
 import { analyzeDeckRamp } from "./rampAnalysis";
+import { analyzeDeckSynergyIo } from "./synergyIoAnalysis";
 import { analyzeDeckStrategy } from "./strategyAnalysis";
 import { analyzeDeckWinConditions } from "./winConditionAnalysis";
 import { analyzeDeckWinStrategy } from "./winStrategyAnalysis";
@@ -181,6 +182,7 @@ export function createApp() {
       const recursion = analyzeDeckRecursion(document);
       const removal = analyzeDeckRemoval(document);
       const spellInteraction = analyzeDeckSpellInteraction(document);
+      const synergyIo = analyzeDeckSynergyIo(document);
       const advancedRoles = analyzeDeckAdvancedRoles(document);
       const power = analyzeDeckPower({
         commander,
@@ -197,6 +199,7 @@ export function createApp() {
         spellInteraction,
         strategy,
         winStrategy,
+        synergyIo,
       });
       const bracket = analyzeDeckBracket({
         document,
@@ -255,6 +258,7 @@ export function createApp() {
           winConditions,
           removal,
           spellInteraction,
+          synergyIo,
           advancedRoles,
         },
       });

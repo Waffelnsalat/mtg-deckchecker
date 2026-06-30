@@ -130,18 +130,18 @@ scg	Scourge	2003-05-26	expansion	143	false	done	143	143	0	true	data/card-role-wo
 8ed	Eighth Edition	2003-07-28	core	711	false	done	342	342	0	true	data/card-role-worksheets/8ed-role-review.tsv
 p8ed	Eighth Edition Promos	2003-07-28	promo	1	false	done	1	1	0	true	data/card-role-worksheets/p8ed-role-review.tsv
 wc03	World Championship Decks 2003	2003-08-06	memorabilia	142	false	done	96	96	0	true	data/card-role-worksheets/wc03-role-review.tsv
-mrd	Mirrodin	2003-10-02	expansion	306	false	in_progress	280	291	11	true	data/card-role-worksheets/mrd-role-review.tsv
+mrd	Mirrodin	2003-10-02	expansion	306	false	done	291	291	0	true	data/card-role-worksheets/mrd-role-review.tsv
 f04	Friday Night Magic 2004	2004-01-01	promo	12	false	done	12	12	0	true	data/card-role-worksheets/f04-role-review.tsv
 g04	Judge Gift Cards 2004	2004-01-01	promo	6	false	done	6	6	0	true	data/card-role-worksheets/g04-role-review.tsv
 p04	Magic Player Rewards 2004	2004-01-01	promo	6	false	done	6	6	0	true	data/card-role-worksheets/p04-role-review.tsv
-pal04	Arena League 2004	2004-01-01	promo	14	false	in_progress	12	14	2	true	data/card-role-worksheets/pal04-role-review.tsv
-dst	Darksteel	2004-02-06	expansion	165	false	in_progress	157	165	8	true	data/card-role-worksheets/dst-role-review.tsv
+pal04	Arena League 2004	2004-01-01	promo	14	false	done	14	14	0	true	data/card-role-worksheets/pal04-role-review.tsv
+dst	Darksteel	2004-02-06	expansion	165	false	done	165	165	0	true	data/card-role-worksheets/dst-role-review.tsv
 pdst	Darksteel Promos	2004-02-06	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pdst-role-review.tsv
-5dn	Fifth Dawn	2004-06-04	expansion	165	false	in_progress	163	165	2	true	data/card-role-worksheets/5dn-role-review.tsv
+5dn	Fifth Dawn	2004-06-04	expansion	165	false	done	165	165	0	true	data/card-role-worksheets/5dn-role-review.tsv
 p5dn	Fifth Dawn Promos	2004-06-04	promo	1	false	done	1	1	0	true	data/card-role-worksheets/p5dn-role-review.tsv
 pmrd	Mirrodin Promos	2004-06-04	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pmrd-role-review.tsv
 wc04	World Championship Decks 2004	2004-09-01	memorabilia	103	false	done	76	76	0	true	data/card-role-worksheets/wc04-role-review.tsv
-chk	Champions of Kamigawa	2004-10-01	expansion	307	false	in_progress	279	291	12	true	data/card-role-worksheets/chk-role-review.tsv
+chk	Champions of Kamigawa	2004-10-01	expansion	307	false	done	291	291	0	true	data/card-role-worksheets/chk-role-review.tsv
 pchk	Champions of Kamigawa Promos	2004-10-01	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pchk-role-review.tsv
 punh	Unhinged Promos	2004-11-19	promo	1	false	done	1	1	0	true	data/card-role-worksheets/punh-role-review.tsv
 unh	Unhinged	2004-11-19	funny	168	false	done	141	141	0	true	data/card-role-worksheets/unh-role-review.tsv
@@ -150,18 +150,18 @@ g05	Judge Gift Cards 2005	2005-01-01	promo	4	false	done	4	4	0	true	data/card-rol
 p05	Magic Player Rewards 2005	2005-01-01	promo	6	false	done	6	6	0	true	data/card-role-worksheets/p05-role-review.tsv
 pal05	Arena League 2005	2005-01-01	promo	8	false	done	8	8	0	true	data/card-role-worksheets/pal05-role-review.tsv
 pjse	Junior Series Europe	2005-01-01	promo	8	false	done	8	8	0	true	data/card-role-worksheets/pjse-role-review.tsv
-bok	Betrayers of Kamigawa	2005-02-04	expansion	165	false	in_progress	160	165	5	true	data/card-role-worksheets/bok-role-review.tsv
+bok	Betrayers of Kamigawa	2005-02-04	expansion	165	false	done	165	165	0	true	data/card-role-worksheets/bok-role-review.tsv
 pbok	Betrayers of Kamigawa Promos	2005-02-04	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pbok-role-review.tsv
 psok	Saviors of Kamigawa Promos	2005-06-03	promo	2	false	done	2	2	0	true	data/card-role-worksheets/psok-role-review.tsv
-sok	Saviors of Kamigawa	2005-06-03	expansion	165	false	in_progress	158	165	7	true	data/card-role-worksheets/sok-role-review.tsv
+sok	Saviors of Kamigawa	2005-06-03	expansion	165	false	done	165	165	0	true	data/card-role-worksheets/sok-role-review.tsv
 9ed	Ninth Edition	2005-07-29	core	710	false	done	344	344	0	true	data/card-role-worksheets/9ed-role-review.tsv
 p9ed	Ninth Edition Promos	2005-07-29	promo	2	false	done	2	2	0	true	data/card-role-worksheets/p9ed-role-review.tsv
-psal	Salvat 2005	2005-08-22	box	720	false	in_progress	282	285	3	true	data/card-role-worksheets/psal-role-review.tsv
+psal	Salvat 2005	2005-08-22	box	720	false	done	285	285	0	true	data/card-role-worksheets/psal-role-review.tsv
 pmps	Magic Premiere Shop 2005	2005-10-07	promo	20	false	done	5	5	0	true	data/card-role-worksheets/pmps-role-review.tsv
 prav	Ravnica: City of Guilds Promos	2005-10-07	promo	2	false	done	2	2	0	true	data/card-role-worksheets/prav-role-review.tsv
-rav	Ravnica: City of Guilds	2005-10-07	expansion	306	false	in_progress	284	291	7	true	data/card-role-worksheets/rav-role-review.tsv
+rav	Ravnica: City of Guilds	2005-10-07	expansion	306	false	done	291	291	0	true	data/card-role-worksheets/rav-role-review.tsv
 p2hg	Two-Headed Giant Tournament	2005-12-09	promo	1	false	done	1	1	0	true	data/card-role-worksheets/p2hg-role-review.tsv
-dci	DCI Promos	2006-01-01	promo	80	false	in_progress	76	77	1	true	data/card-role-worksheets/dci-role-review.tsv
+dci	DCI Promos	2006-01-01	promo	80	false	done	77	77	0	true	data/card-role-worksheets/dci-role-review.tsv
 f06	Friday Night Magic 2006	2006-01-01	promo	12	false	done	12	12	0	true	data/card-role-worksheets/f06-role-review.tsv
 g06	Judge Gift Cards 2006	2006-01-01	promo	4	false	done	4	4	0	true	data/card-role-worksheets/g06-role-review.tsv
 p06	Magic Player Rewards 2006	2006-01-01	promo	7	false	done	7	7	0	true	data/card-role-worksheets/p06-role-review.tsv
@@ -169,17 +169,17 @@ pal06	Arena League 2006	2006-01-01	promo	9	false	done	9	9	0	true	data/card-role-
 phuk	Hachette UK	2006-01-01	box	60	false	done	23	23	0	true	data/card-role-worksheets/phuk-role-review.tsv
 pjas	Junior APAC Series	2006-01-01	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pjas-role-review.tsv
 pmps06	Magic Premiere Shop 2006	2006-01-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pmps06-role-review.tsv
-gpt	Guildpact	2006-02-03	expansion	167	false	in_progress	157	165	8	true	data/card-role-worksheets/gpt-role-review.tsv
+gpt	Guildpact	2006-02-03	expansion	167	false	done	165	165	0	true	data/card-role-worksheets/gpt-role-review.tsv
 pgpt	Guildpact Promos	2006-02-03	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pgpt-role-review.tsv
 pcmp	Champs and States	2006-03-18	promo	12	false	done	12	12	0	true	data/card-role-worksheets/pcmp-role-review.tsv
-dis	Dissension	2006-05-05	expansion	180	false	in_progress	177	180	3	true	data/card-role-worksheets/dis-role-review.tsv
+dis	Dissension	2006-05-05	expansion	180	false	done	180	180	0	true	data/card-role-worksheets/dis-role-review.tsv
 pdis	Dissension Promos	2006-05-05	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pdis-role-review.tsv
-csp	Coldsnap	2006-07-21	expansion	155	false	in_progress	153	155	2	true	data/card-role-worksheets/csp-role-review.tsv
+csp	Coldsnap	2006-07-21	expansion	155	false	done	155	155	0	true	data/card-role-worksheets/csp-role-review.tsv
 cst	Coldsnap Theme Decks	2006-07-21	box	62	false	done	52	52	0	true	data/card-role-worksheets/cst-role-review.tsv
 pcsp	Coldsnap Promos	2006-07-21	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pcsp-role-review.tsv
 ptsp	Time Spiral Promos	2006-10-06	promo	3	false	done	3	3	0	true	data/card-role-worksheets/ptsp-role-review.tsv
 tsb	Time Spiral Timeshifted	2006-10-06	expansion	121	false	done	121	121	0	true	data/card-role-worksheets/tsb-role-review.tsv
-tsp	Time Spiral	2006-10-06	expansion	301	false	in_progress	281	286	5	true	data/card-role-worksheets/tsp-role-review.tsv
+tsp	Time Spiral	2006-10-06	expansion	301	false	done	286	286	0	true	data/card-role-worksheets/tsp-role-review.tsv
 hho	Happy Holidays	2006-12-31	funny	23	false	done	21	21	0	true	data/card-role-worksheets/hho-role-review.tsv
 f07	Friday Night Magic 2007	2007-01-01	promo	12	false	done	12	12	0	true	data/card-role-worksheets/f07-role-review.tsv
 g07	Judge Gift Cards 2007	2007-01-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/g07-role-review.tsv
@@ -189,13 +189,13 @@ plc	Planar Chaos	2007-02-02	expansion	165	false	done	165	165	0	true	data/card-ro
 pplc	Planar Chaos Promos	2007-02-02	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pplc-role-review.tsv
 ppro	Pro Tour Promos	2007-02-09	promo	18	false	done	18	18	0	true	data/card-role-worksheets/ppro-role-review.tsv
 pgpx	Grand Prix Promos	2007-02-24	promo	20	false	done	20	20	0	true	data/card-role-worksheets/pgpx-role-review.tsv
-fut	Future Sight	2007-05-04	expansion	180	false	in_progress	175	180	5	true	data/card-role-worksheets/fut-role-review.tsv
+fut	Future Sight	2007-05-04	expansion	180	false	done	180	180	0	true	data/card-role-worksheets/fut-role-review.tsv
 pfut	Future Sight Promos	2007-05-04	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pfut-role-review.tsv
-10e	Tenth Edition	2007-07-13	core	510	false	in_progress	366	368	2	true	data/card-role-worksheets/10e-role-review.tsv
+10e	Tenth Edition	2007-07-13	core	510	false	done	368	368	0	true	data/card-role-worksheets/10e-role-review.tsv
 p10e	Tenth Edition Promos	2007-07-13	promo	3	false	done	3	3	0	true	data/card-role-worksheets/p10e-role-review.tsv
 t10e	Tenth Edition Tokens	2007-07-13	token	6	false	done	6	6	0	true	data/card-role-worksheets/t10e-role-review.tsv
 me1	Masters Edition	2007-09-10	masters	195	true	done	185	185	0	true	data/card-role-worksheets/me1-role-review.tsv
-lrw	Lorwyn	2007-10-12	expansion	301	false	in_progress	281	286	5	true	data/card-role-worksheets/lrw-role-review.tsv
+lrw	Lorwyn	2007-10-12	expansion	301	false	done	286	286	0	true	data/card-role-worksheets/lrw-role-review.tsv
 plrw	Lorwyn Promos	2007-10-12	promo	3	false	done	3	3	0	true	data/card-role-worksheets/plrw-role-review.tsv
 tlrw	Lorwyn Tokens	2007-10-12	token	11	false	done	11	11	0	true	data/card-role-worksheets/tlrw-role-review.tsv
 dd1	Duel Decks: Elves vs. Goblins	2007-11-16	duel_deck	62	false	done	56	56	0	true	data/card-role-worksheets/dd1-role-review.tsv
@@ -204,19 +204,19 @@ f08	Friday Night Magic 2008	2008-01-01	promo	12	false	done	12	12	0	true	data/car
 g08	Judge Gift Cards 2008	2008-01-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/g08-role-review.tsv
 p08	Magic Player Rewards 2008	2008-01-01	promo	7	false	done	7	7	0	true	data/card-role-worksheets/p08-role-review.tsv
 pmps08	Magic Premiere Shop 2008	2008-01-01	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pmps08-role-review.tsv
-mor	Morningtide	2008-02-01	expansion	150	false	in_progress	147	150	3	true	data/card-role-worksheets/mor-role-review.tsv
+mor	Morningtide	2008-02-01	expansion	150	false	done	150	150	0	true	data/card-role-worksheets/mor-role-review.tsv
 pmor	Morningtide Promos	2008-02-01	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pmor-role-review.tsv
 tmor	Morningtide Tokens	2008-02-01	token	3	false	done	3	3	0	true	data/card-role-worksheets/tmor-role-review.tsv
 p15a	15th Anniversary Cards	2008-04-01	promo	2	false	done	2	2	0	true	data/card-role-worksheets/p15a-role-review.tsv
 pshm	Shadowmoor Promos	2008-05-02	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pshm-role-review.tsv
-shm	Shadowmoor	2008-05-02	expansion	302	false	in_progress	282	286	4	true	data/card-role-worksheets/shm-role-review.tsv
+shm	Shadowmoor	2008-05-02	expansion	302	false	done	286	286	0	true	data/card-role-worksheets/shm-role-review.tsv
 tshm	Shadowmoor Tokens	2008-05-02	token	12	false	done	12	12	0	true	data/card-role-worksheets/tshm-role-review.tsv
-eve	Eventide	2008-07-25	expansion	180	false	in_progress	178	180	2	true	data/card-role-worksheets/eve-role-review.tsv
+eve	Eventide	2008-07-25	expansion	180	false	done	180	180	0	true	data/card-role-worksheets/eve-role-review.tsv
 peve	Eventide Promos	2008-07-25	promo	2	false	done	2	2	0	true	data/card-role-worksheets/peve-role-review.tsv
 teve	Eventide Tokens	2008-07-25	token	7	false	done	7	7	0	true	data/card-role-worksheets/teve-role-review.tsv
 drb	From the Vault: Dragons	2008-08-29	from_the_vault	15	false	done	15	15	0	true	data/card-role-worksheets/drb-role-review.tsv
 me2	Masters Edition II	2008-09-22	masters	245	true	done	245	245	0	true	data/card-role-worksheets/me2-role-review.tsv
-ala	Shards of Alara	2008-10-03	expansion	250	false	in_progress	231	234	3	true	data/card-role-worksheets/ala-role-review.tsv
+ala	Shards of Alara	2008-10-03	expansion	250	false	done	234	234	0	true	data/card-role-worksheets/ala-role-review.tsv
 pala	Shards of Alara Promos	2008-10-03	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pala-role-review.tsv
 tala	Shards of Alara Tokens	2008-10-03	token	10	false	done	10	10	0	true	data/card-role-worksheets/tala-role-review.tsv
 dd2	Duel Decks: Jace vs. Chandra	2008-11-07	duel_deck	64	false	done	56	56	0	true	data/card-role-worksheets/dd2-role-review.tsv
@@ -226,17 +226,17 @@ g09	Judge Gift Cards 2009	2009-01-01	promo	10	false	done	10	10	0	true	data/card-
 p09	Magic Player Rewards 2009	2009-01-01	promo	13	false	done	13	13	0	true	data/card-role-worksheets/p09-role-review.tsv
 pdtp	Duels of the Planeswalkers 2009 Promos	2009-01-01	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pdtp-role-review.tsv
 pmps09	Magic Premiere Shop 2009	2009-01-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pmps09-role-review.tsv
-con	Conflux	2009-02-06	expansion	145	false	in_progress	140	145	5	true	data/card-role-worksheets/con-role-review.tsv
+con	Conflux	2009-02-06	expansion	145	false	done	145	145	0	true	data/card-role-worksheets/con-role-review.tsv
 pcon	Conflux Promos	2009-02-06	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pcon-role-review.tsv
 tcon	Conflux Tokens	2009-02-06	token	2	false	done	2	2	0	true	data/card-role-worksheets/tcon-role-review.tsv
 purl	URL/Convention Promos	2009-02-08	promo	16	false	done	16	16	0	true	data/card-role-worksheets/purl-role-review.tsv
 ddc	Duel Decks: Divine vs. Demonic	2009-04-10	duel_deck	62	false	done	56	56	0	true	data/card-role-worksheets/ddc-role-review.tsv
 tddc	Duel Decks: Divine vs. Demonic Tokens	2009-04-10	token	3	false	done	3	3	0	true	data/card-role-worksheets/tddc-role-review.tsv
-arb	Alara Reborn	2009-04-30	expansion	145	false	in_progress	143	145	2	true	data/card-role-worksheets/arb-role-review.tsv
+arb	Alara Reborn	2009-04-30	expansion	145	false	done	145	145	0	true	data/card-role-worksheets/arb-role-review.tsv
 parb	Alara Reborn Promos	2009-04-30	promo	3	false	done	3	3	0	true	data/card-role-worksheets/parb-role-review.tsv
 tarb	Alara Reborn Tokens	2009-04-30	token	4	false	done	4	4	0	true	data/card-role-worksheets/tarb-role-review.tsv
 pm10	Magic 2010 Promos	2009-07-16	promo	3	false	done	3	3	0	true	data/card-role-worksheets/pm10-role-review.tsv
-m10	Magic 2010	2009-07-17	core	249	false	in_progress	228	234	6	true	data/card-role-worksheets/m10-role-review.tsv
+m10	Magic 2010	2009-07-17	core	249	false	done	234	234	0	true	data/card-role-worksheets/m10-role-review.tsv
 tm10	Magic 2010 Tokens	2009-07-17	token	8	false	done	8	8	0	true	data/card-role-worksheets/tm10-role-review.tsv
 v09	From the Vault: Exiled	2009-08-28	from_the_vault	15	false	done	15	15	0	true	data/card-role-worksheets/v09-role-review.tsv
 hop	Planechase	2009-09-04	planechase	169	false	done	146	146	0	true	data/card-role-worksheets/hop-role-review.tsv
@@ -245,7 +245,7 @@ phop	Planechase Promos	2009-09-04	promo	1	false	done	1	1	0	true	data/card-role-w
 me3	Masters Edition III	2009-09-07	masters	230	true	done	220	220	0	true	data/card-role-worksheets/me3-role-review.tsv
 pzen	Zendikar Promos	2009-10-02	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pzen-role-review.tsv
 tzen	Zendikar Tokens	2009-10-02	token	11	false	done	11	11	0	true	data/card-role-worksheets/tzen-role-review.tsv
-zen	Zendikar	2009-10-02	expansion	269	false	in_progress	231	234	3	true	data/card-role-worksheets/zen-role-review.tsv
+zen	Zendikar	2009-10-02	expansion	269	false	done	234	234	0	true	data/card-role-worksheets/zen-role-review.tsv
 ddd	Duel Decks: Garruk vs. Liliana	2009-10-30	duel_deck	63	false	done	57	57	0	true	data/card-role-worksheets/ddd-role-review.tsv
 tddd	Duel Decks: Garruk vs. Liliana Tokens	2009-10-30	token	3	false	done	3	3	0	true	data/card-role-worksheets/tddd-role-review.tsv
 h09	Premium Deck Series: Slivers	2009-11-20	premium_deck	41	false	done	41	41	0	true	data/card-role-worksheets/h09-role-review.tsv
@@ -256,23 +256,23 @@ pdp10	Duels of the Planeswalkers 2010 Promos	2010-01-01	promo	2	false	done	2	2	0
 pmps10	Magic Premiere Shop 2010	2010-01-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pmps10-role-review.tsv
 pwwk	Worldwake Promos	2010-02-05	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pwwk-role-review.tsv
 twwk	Worldwake Tokens	2010-02-05	token	6	false	done	6	6	0	true	data/card-role-worksheets/twwk-role-review.tsv
-wwk	Worldwake	2010-02-05	expansion	145	false	in_progress	140	145	5	true	data/card-role-worksheets/wwk-role-review.tsv
+wwk	Worldwake	2010-02-05	expansion	145	false	done	145	145	0	true	data/card-role-worksheets/wwk-role-review.tsv
 dde	Duel Decks: Phyrexia vs. the Coalition	2010-03-19	duel_deck	71	false	done	67	67	0	true	data/card-role-worksheets/dde-role-review.tsv
 tdde	Duel Decks: Phyrexia vs. the Coalition Tokens	2010-03-19	token	3	false	done	3	3	0	true	data/card-role-worksheets/tdde-role-review.tsv
 proe	Rise of the Eldrazi Promos	2010-04-23	promo	4	false	done	4	4	0	true	data/card-role-worksheets/proe-role-review.tsv
-roe	Rise of the Eldrazi	2010-04-23	expansion	248	false	in_progress	228	233	5	true	data/card-role-worksheets/roe-role-review.tsv
+roe	Rise of the Eldrazi	2010-04-23	expansion	248	false	done	233	233	0	true	data/card-role-worksheets/roe-role-review.tsv
 troe	Rise of the Eldrazi Tokens	2010-04-23	token	7	false	done	5	5	0	true	data/card-role-worksheets/troe-role-review.tsv
 dpa	Duels of the Planeswalkers	2010-06-04	box	113	false	done	101	101	0	true	data/card-role-worksheets/dpa-role-review.tsv
 arc	Archenemy	2010-06-18	archenemy	150	false	done	141	141	0	true	data/card-role-worksheets/arc-role-review.tsv
 oarc	Archenemy Schemes	2010-06-18	archenemy	45	false	done	45	45	0	true	data/card-role-worksheets/oarc-role-review.tsv
 pm11	Magic 2011 Promos	2010-07-15	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pm11-role-review.tsv
-m11	Magic 2011	2010-07-16	core	249	false	in_progress	230	234	4	true	data/card-role-worksheets/m11-role-review.tsv
+m11	Magic 2011	2010-07-16	core	249	false	done	234	234	0	true	data/card-role-worksheets/m11-role-review.tsv
 tm11	Magic 2011 Tokens	2010-07-16	token	6	false	done	6	6	0	true	data/card-role-worksheets/tm11-role-review.tsv
 v10	From the Vault: Relics	2010-08-27	from_the_vault	15	false	done	15	15	0	true	data/card-role-worksheets/v10-role-review.tsv
 ddf	Duel Decks: Elspeth vs. Tezzeret	2010-09-03	duel_deck	79	false	done	73	73	0	true	data/card-role-worksheets/ddf-role-review.tsv
 tddf	Duel Decks: Elspeth vs. Tezzeret Tokens	2010-09-03	token	1	false	done	1	1	0	true	data/card-role-worksheets/tddf-role-review.tsv
 psom	Scars of Mirrodin Promos	2010-09-30	promo	4	false	done	4	4	0	true	data/card-role-worksheets/psom-role-review.tsv
-som	Scars of Mirrodin	2010-10-01	expansion	249	false	in_progress	229	234	5	true	data/card-role-worksheets/som-role-review.tsv
+som	Scars of Mirrodin	2010-10-01	expansion	249	false	done	234	234	0	true	data/card-role-worksheets/som-role-review.tsv
 tsom	Scars of Mirrodin Tokens	2010-10-01	token	10	false	done	10	10	0	true	data/card-role-worksheets/tsom-role-review.tsv
 td0	Magic Online Theme Decks	2010-11-08	box	197	true	done	174	174	0	true	data/card-role-worksheets/td0-role-review.tsv
 pd2	Premium Deck Series: Fire and Lightning	2010-11-19	premium_deck	34	false	done	31	31	0	true	data/card-role-worksheets/pd2-role-review.tsv
@@ -282,29 +282,29 @@ olgc	Legacy Championship	2011-01-01	memorabilia	27	false	done	21	21	0	true	data/
 p11	Magic Player Rewards 2011	2011-01-01	promo	7	false	done	7	7	0	true	data/card-role-worksheets/p11-role-review.tsv
 pdp12	Duels of the Planeswalkers 2012 Promos	2011-01-01	promo	3	false	done	3	3	0	true	data/card-role-worksheets/pdp12-role-review.tsv
 pmps11	Magic Premiere Shop 2011	2011-01-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pmps11-role-review.tsv
-ps11	Salvat 2011	2011-01-01	box	224	false	in_progress	207	209	2	true	data/card-role-worksheets/ps11-role-review.tsv
+ps11	Salvat 2011	2011-01-01	box	224	false	done	209	209	0	true	data/card-role-worksheets/ps11-role-review.tsv
 pw11	Wizards Play Network 2011	2011-01-01	promo	3	false	done	3	3	0	true	data/card-role-worksheets/pw11-role-review.tsv
 me4	Masters Edition IV	2011-01-10	masters	269	true	done	260	260	0	true	data/card-role-worksheets/me4-role-review.tsv
 pmbs	Mirrodin Besieged Promos	2011-02-03	promo	4	false	done	4	4	0	true	data/card-role-worksheets/pmbs-role-review.tsv
-mbs	Mirrodin Besieged	2011-02-04	expansion	155	false	in_progress	147	150	3	true	data/card-role-worksheets/mbs-role-review.tsv
+mbs	Mirrodin Besieged	2011-02-04	expansion	155	false	done	150	150	0	true	data/card-role-worksheets/mbs-role-review.tsv
 tmbs	Mirrodin Besieged Tokens	2011-02-04	token	6	false	done	6	6	0	true	data/card-role-worksheets/tmbs-role-review.tsv
-ddg	Duel Decks: Knights vs. Dragons	2011-04-01	duel_deck	81	false	in_progress	71	72	1	true	data/card-role-worksheets/ddg-role-review.tsv
+ddg	Duel Decks: Knights vs. Dragons	2011-04-01	duel_deck	81	false	done	72	72	0	true	data/card-role-worksheets/ddg-role-review.tsv
 tddg	Duel Decks: Knights vs. Dragons Tokens	2011-04-01	token	1	false	done	1	1	0	true	data/card-role-worksheets/tddg-role-review.tsv
 pnph	New Phyrexia Promos	2011-05-12	promo	4	false	done	4	4	0	true	data/card-role-worksheets/pnph-role-review.tsv
-nph	New Phyrexia	2011-05-13	expansion	175	false	in_progress	162	170	8	true	data/card-role-worksheets/nph-role-review.tsv
+nph	New Phyrexia	2011-05-13	expansion	175	false	done	170	170	0	true	data/card-role-worksheets/nph-role-review.tsv
 tnph	New Phyrexia Tokens	2011-05-13	token	5	false	done	5	5	0	true	data/card-role-worksheets/tnph-role-review.tsv
 td2	Duel Decks: Mirrodin Pure vs. New Phyrexia	2011-05-14	duel_deck	88	true	done	80	80	0	true	data/card-role-worksheets/td2-role-review.tsv
 cmd	Commander 2011	2011-06-17	commander	318	false	done	303	303	0	true	data/card-role-worksheets/cmd-role-review.tsv
 ocmd	Commander 2011 Oversized	2011-06-17	memorabilia	15	false	done	15	15	0	true	data/card-role-worksheets/ocmd-role-review.tsv
 pcmd	Commander 2011 Launch Party	2011-06-17	memorabilia	5	false	done	5	5	0	true	data/card-role-worksheets/pcmd-role-review.tsv
 pm12	Magic 2012 Promos	2011-07-14	promo	3	false	done	3	3	0	true	data/card-role-worksheets/pm12-role-review.tsv
-m12	Magic 2012	2011-07-15	core	249	false	in_progress	230	234	4	true	data/card-role-worksheets/m12-role-review.tsv
+m12	Magic 2012	2011-07-15	core	249	false	done	234	234	0	true	data/card-role-worksheets/m12-role-review.tsv
 tm12	Magic 2012 Tokens	2011-07-15	token	7	false	done	7	7	0	true	data/card-role-worksheets/tm12-role-review.tsv
 v11	From the Vault: Legends	2011-08-26	from_the_vault	15	false	done	15	15	0	true	data/card-role-worksheets/v11-role-review.tsv
 ddh	Duel Decks: Ajani vs. Nicol Bolas	2011-09-02	duel_deck	80	false	done	77	77	0	true	data/card-role-worksheets/ddh-role-review.tsv
 tddh	Duel Decks: Ajani vs. Nicol Bolas Tokens	2011-09-02	token	2	false	done	2	2	0	true	data/card-role-worksheets/tddh-role-review.tsv
 pisd	Innistrad Promos	2011-09-24	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pisd-role-review.tsv
-isd	Innistrad	2011-09-30	expansion	264	false	in_progress	248	254	6	true	data/card-role-worksheets/isd-role-review.tsv
+isd	Innistrad	2011-09-30	expansion	264	false	done	254	254	0	true	data/card-role-worksheets/isd-role-review.tsv
 tisd	Innistrad Tokens	2011-09-30	token	13	false	done	11	11	0	true	data/card-role-worksheets/tisd-role-review.tsv
 pd3	Premium Deck Series: Graveborn	2011-11-18	premium_deck	30	false	done	27	27	0	true	data/card-role-worksheets/pd3-role-review.tsv
 f12	Friday Night Magic 2012	2012-01-01	promo	13	false	done	13	13	0	true	data/card-role-worksheets/f12-role-review.tsv
@@ -314,24 +314,24 @@ pdp13	Duels of the Planeswalkers 2013 Promos	2012-01-01	promo	3	false	done	3	3	0
 pidw	IDW Comics Inserts	2012-01-01	promo	17	false	done	17	17	0	true	data/card-role-worksheets/pidw-role-review.tsv
 pw12	Wizards Play Network 2012	2012-01-01	promo	3	false	done	3	3	0	true	data/card-role-worksheets/pw12-role-review.tsv
 pdka	Dark Ascension Promos	2012-01-28	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pdka-role-review.tsv
-dka	Dark Ascension	2012-02-03	expansion	158	false	in_progress	155	158	3	true	data/card-role-worksheets/dka-role-review.tsv
+dka	Dark Ascension	2012-02-03	expansion	158	false	done	158	158	0	true	data/card-role-worksheets/dka-role-review.tsv
 tdka	Dark Ascension Tokens	2012-02-03	token	4	false	done	4	4	0	true	data/card-role-worksheets/tdka-role-review.tsv
-ddi	Duel Decks: Venser vs. Koth	2012-03-30	duel_deck	77	false	in_progress	69	70	1	true	data/card-role-worksheets/ddi-role-review.tsv
+ddi	Duel Decks: Venser vs. Koth	2012-03-30	duel_deck	77	false	done	70	70	0	true	data/card-role-worksheets/ddi-role-review.tsv
 tddi	Duel Decks: Venser vs. Koth Tokens	2012-03-30	token	2	false	done	2	2	0	true	data/card-role-worksheets/tddi-role-review.tsv
 pavr	Avacyn Restored Promos	2012-04-28	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pavr-role-review.tsv
 phel	Open the Helvault	2012-04-28	memorabilia	6	false	done	6	6	0	true	data/card-role-worksheets/phel-role-review.tsv
-avr	Avacyn Restored	2012-05-04	expansion	244	false	in_progress	227	234	7	true	data/card-role-worksheets/avr-role-review.tsv
+avr	Avacyn Restored	2012-05-04	expansion	244	false	done	234	234	0	true	data/card-role-worksheets/avr-role-review.tsv
 tavr	Avacyn Restored Tokens	2012-05-04	token	8	false	done	8	8	0	true	data/card-role-worksheets/tavr-role-review.tsv
 opc2	Planechase 2012 Planes	2012-06-01	planechase	40	false	done	40	40	0	true	data/card-role-worksheets/opc2-role-review.tsv
 pc2	Planechase 2012	2012-06-01	planechase	156	false	done	136	136	0	true	data/card-role-worksheets/pc2-role-review.tsv
 pm13	Magic 2013 Promos	2012-07-12	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pm13-role-review.tsv
-m13	Magic 2013	2012-07-13	core	249	false	in_progress	229	234	5	true	data/card-role-worksheets/m13-role-review.tsv
+m13	Magic 2013	2012-07-13	core	249	false	done	234	234	0	true	data/card-role-worksheets/m13-role-review.tsv
 tm13	Magic 2013 Tokens	2012-07-13	token	11	false	done	11	11	0	true	data/card-role-worksheets/tm13-role-review.tsv
 v12	From the Vault: Realms	2012-08-31	from_the_vault	15	false	done	15	15	0	true	data/card-role-worksheets/v12-role-review.tsv
 ddj	Duel Decks: Izzet vs. Golgari	2012-09-07	duel_deck	90	false	done	78	78	0	true	data/card-role-worksheets/ddj-role-review.tsv
 tddj	Duel Decks: Izzet vs. Golgari Tokens	2012-09-07	token	1	false	done	1	1	0	true	data/card-role-worksheets/tddj-role-review.tsv
 prtr	Return to Ravnica Promos	2012-10-05	promo	10	false	done	10	10	0	true	data/card-role-worksheets/prtr-role-review.tsv
-rtr	Return to Ravnica	2012-10-05	expansion	274	false	in_progress	251	254	3	true	data/card-role-worksheets/rtr-role-review.tsv
+rtr	Return to Ravnica	2012-10-05	expansion	274	false	done	254	254	0	true	data/card-role-worksheets/rtr-role-review.tsv
 trtr	Return to Ravnica Tokens	2012-10-05	token	12	false	done	12	12	0	true	data/card-role-worksheets/trtr-role-review.tsv
 cm1	Commander's Arsenal	2012-11-02	arsenal	18	false	done	18	18	0	true	data/card-role-worksheets/cm1-role-review.tsv
 ocm1	Commander's Arsenal Oversized	2012-11-02	memorabilia	10	false	done	10	10	0	true	data/card-role-worksheets/ocm1-role-review.tsv
@@ -340,48 +340,48 @@ j13	Judge Gift Cards 2013	2013-01-01	promo	9	false	done	9	9	0	true	data/card-rol
 l13	League Tokens 2013	2013-01-01	token	4	false	done	4	4	0	true	data/card-role-worksheets/l13-role-review.tsv
 pdp14	Duels of the Planeswalkers 2014 Promos	2013-01-01	promo	3	false	done	3	3	0	true	data/card-role-worksheets/pdp14-role-review.tsv
 pgtc	Gatecrash Promos	2013-01-26	promo	10	false	done	10	10	0	true	data/card-role-worksheets/pgtc-role-review.tsv
-gtc	Gatecrash	2013-02-01	expansion	249	false	in_progress	242	249	7	true	data/card-role-worksheets/gtc-role-review.tsv
+gtc	Gatecrash	2013-02-01	expansion	249	false	done	249	249	0	true	data/card-role-worksheets/gtc-role-review.tsv
 tgtc	Gatecrash Tokens	2013-02-01	token	8	false	done	8	8	0	true	data/card-role-worksheets/tgtc-role-review.tsv
 ddk	Duel Decks: Sorin vs. Tibalt	2013-03-15	duel_deck	80	false	done	71	71	0	true	data/card-role-worksheets/ddk-role-review.tsv
 tddk	Duel Decks: Sorin vs. Tibalt Tokens	2013-03-15	token	1	false	done	1	1	0	true	data/card-role-worksheets/tddk-role-review.tsv
 wmc	World Magic Cup Qualifiers	2013-04-06	promo	5	false	done	5	5	0	true	data/card-role-worksheets/wmc-role-review.tsv
 pdgm	Dragon's Maze Promos	2013-04-27	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pdgm-role-review.tsv
-dgm	Dragon's Maze	2013-05-03	expansion	156	false	in_progress	155	156	1	true	data/card-role-worksheets/dgm-role-review.tsv
+dgm	Dragon's Maze	2013-05-03	expansion	156	false	done	156	156	0	true	data/card-role-worksheets/dgm-role-review.tsv
 tdgm	Dragon's Maze Tokens	2013-05-03	token	1	false	done	1	1	0	true	data/card-role-worksheets/tdgm-role-review.tsv
-mma	Modern Masters	2013-06-07	masters	229	false	in_progress	228	229	1	true	data/card-role-worksheets/mma-role-review.tsv
+mma	Modern Masters	2013-06-07	masters	229	false	done	229	229	0	true	data/card-role-worksheets/mma-role-review.tsv
 tmma	Modern Masters Tokens	2013-06-07	token	16	false	done	16	16	0	true	data/card-role-worksheets/tmma-role-review.tsv
 pm14	Magic 2014 Promos	2013-07-18	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pm14-role-review.tsv
 psdc	San Diego Comic-Con 2013	2013-07-18	promo	5	false	done	5	5	0	true	data/card-role-worksheets/psdc-role-review.tsv
-m14	Magic 2014	2013-07-19	core	249	false	in_progress	230	234	4	true	data/card-role-worksheets/m14-role-review.tsv
+m14	Magic 2014	2013-07-19	core	249	false	done	234	234	0	true	data/card-role-worksheets/m14-role-review.tsv
 tm14	Magic 2014 Tokens	2013-07-19	token	13	false	done	12	12	0	true	data/card-role-worksheets/tm14-role-review.tsv
 v13	From the Vault: Twenty	2013-08-23	from_the_vault	20	false	done	20	20	0	true	data/card-role-worksheets/v13-role-review.tsv
-ddl	Duel Decks: Heroes vs. Monsters	2013-09-06	duel_deck	81	false	in_progress	67	68	1	true	data/card-role-worksheets/ddl-role-review.tsv
+ddl	Duel Decks: Heroes vs. Monsters	2013-09-06	duel_deck	81	false	done	68	68	0	true	data/card-role-worksheets/ddl-role-review.tsv
 tddl	Duel Decks: Heroes vs. Monsters Tokens	2013-09-06	token	2	false	done	2	2	0	true	data/card-role-worksheets/tddl-role-review.tsv
 pths	Theros Promos	2013-09-21	promo	10	false	done	10	10	0	true	data/card-role-worksheets/pths-role-review.tsv
 thp1	Theros Hero's Path	2013-09-27	memorabilia	7	false	done	7	7	0	true	data/card-role-worksheets/thp1-role-review.tsv
-ths	Theros	2013-09-27	expansion	249	false	in_progress	233	234	1	true	data/card-role-worksheets/ths-role-review.tsv
+ths	Theros	2013-09-27	expansion	249	false	done	234	234	0	true	data/card-role-worksheets/ths-role-review.tsv
 tths	Theros Tokens	2013-09-27	token	11	false	done	10	10	0	true	data/card-role-worksheets/tths-role-review.tsv
 tfth	Face the Hydra	2013-10-19	memorabilia	15	false	done	15	15	0	true	data/card-role-worksheets/tfth-role-review.tsv
-c13	Commander 2013	2013-11-01	commander	356	false	in_progress	338	341	3	true	data/card-role-worksheets/c13-role-review.tsv
+c13	Commander 2013	2013-11-01	commander	356	false	done	341	341	0	true	data/card-role-worksheets/c13-role-review.tsv
 oc13	Commander 2013 Oversized	2013-11-01	memorabilia	15	false	done	15	15	0	true	data/card-role-worksheets/oc13-role-review.tsv
 f14	Friday Night Magic 2014	2014-01-01	promo	12	false	done	12	12	0	true	data/card-role-worksheets/f14-role-review.tsv
 j14	Judge Gift Cards 2014	2014-01-01	promo	14	false	done	14	14	0	true	data/card-role-worksheets/j14-role-review.tsv
 l14	League Tokens 2014	2014-01-01	token	4	false	done	4	4	0	true	data/card-role-worksheets/l14-role-review.tsv
 pbng	Born of the Gods Promos	2014-02-01	promo	9	false	done	9	9	0	true	data/card-role-worksheets/pbng-role-review.tsv
-bng	Born of the Gods	2014-02-07	expansion	165	false	in_progress	161	165	4	true	data/card-role-worksheets/bng-role-review.tsv
+bng	Born of the Gods	2014-02-07	expansion	165	false	done	165	165	0	true	data/card-role-worksheets/bng-role-review.tsv
 tbng	Born of the Gods Tokens	2014-02-07	token	11	false	done	11	11	0	true	data/card-role-worksheets/tbng-role-review.tsv
 thp2	Born of the Gods Hero's Path	2014-02-07	memorabilia	7	false	done	7	7	0	true	data/card-role-worksheets/thp2-role-review.tsv
 tbth	Battle the Horde	2014-03-01	memorabilia	15	false	done	15	15	0	true	data/card-role-worksheets/tbth-role-review.tsv
-ddm	Duel Decks: Jace vs. Vraska	2014-03-14	duel_deck	88	false	in_progress	75	76	1	true	data/card-role-worksheets/ddm-role-review.tsv
+ddm	Duel Decks: Jace vs. Vraska	2014-03-14	duel_deck	88	false	done	76	76	0	true	data/card-role-worksheets/ddm-role-review.tsv
 tddm	Duel Decks: Jace vs. Vraska Tokens	2014-03-14	token	1	false	done	1	1	0	true	data/card-role-worksheets/tddm-role-review.tsv
 pjou	Journey into Nyx Promos	2014-04-26	promo	10	false	done	10	10	0	true	data/card-role-worksheets/pjou-role-review.tsv
-jou	Journey into Nyx	2014-05-02	expansion	165	false	in_progress	162	165	3	true	data/card-role-worksheets/jou-role-review.tsv
+jou	Journey into Nyx	2014-05-02	expansion	165	false	done	165	165	0	true	data/card-role-worksheets/jou-role-review.tsv
 thp3	Journey into Nyx Hero's Path	2014-05-02	memorabilia	8	false	done	8	8	0	true	data/card-role-worksheets/thp3-role-review.tsv
 tjou	Journey into Nyx Tokens	2014-05-02	token	6	false	done	6	6	0	true	data/card-role-worksheets/tjou-role-review.tsv
 tdag	Defeat a God	2014-05-25	memorabilia	15	false	done	15	15	0	true	data/card-role-worksheets/tdag-role-review.tsv
 md1	Modern Event Deck 2014	2014-05-30	box	26	false	done	26	26	0	true	data/card-role-worksheets/md1-role-review.tsv
 tmd1	Modern Event Deck 2014 Tokens	2014-05-30	token	4	false	done	4	4	0	true	data/card-role-worksheets/tmd1-role-review.tsv
-cns	Conspiracy	2014-06-06	draft_innovation	210	false	in_progress	209	210	1	true	data/card-role-worksheets/cns-role-review.tsv
+cns	Conspiracy	2014-06-06	draft_innovation	210	false	done	210	210	0	true	data/card-role-worksheets/cns-role-review.tsv
 pcns	Conspiracy Promos	2014-06-06	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pcns-role-review.tsv
 tcns	Conspiracy Tokens	2014-06-06	token	9	false	done	9	9	0	true	data/card-role-worksheets/tcns-role-review.tsv
 vma	Vintage Masters	2014-06-16	masters	325	true	done	325	325	0	true	data/card-role-worksheets/vma-role-review.tsv
@@ -390,14 +390,14 @@ pdp15	Duels of the Planeswalkers 2015 Promos	2014-07-09	promo	2	false	done	2	2	0
 ppc1	M15 Prerelease Challenge	2014-07-12	memorabilia	2	false	done	2	2	0	true	data/card-role-worksheets/ppc1-role-review.tsv
 pm15	Magic 2015 Promos	2014-07-17	promo	14	false	done	13	13	0	true	data/card-role-worksheets/pm15-role-review.tsv
 cp1	Magic 2015 Clash Pack	2014-07-18	starter	6	false	done	6	6	0	true	data/card-role-worksheets/cp1-role-review.tsv
-m15	Magic 2015	2014-07-18	core	284	false	in_progress	264	269	5	true	data/card-role-worksheets/m15-role-review.tsv
+m15	Magic 2015	2014-07-18	core	284	false	done	269	269	0	true	data/card-role-worksheets/m15-role-review.tsv
 tm15	Magic 2015 Tokens	2014-07-18	token	14	false	done	14	14	0	true	data/card-role-worksheets/tm15-role-review.tsv
-v14	From the Vault: Annihilation	2014-08-22	from_the_vault	15	false	in_progress	14	15	1	true	data/card-role-worksheets/v14-role-review.tsv
+v14	From the Vault: Annihilation	2014-08-22	from_the_vault	15	false	done	15	15	0	true	data/card-role-worksheets/v14-role-review.tsv
 ddn	Duel Decks: Speed vs. Cunning	2014-09-05	duel_deck	82	false	done	72	72	0	true	data/card-role-worksheets/ddn-role-review.tsv
-ktk	Khans of Tarkir	2014-09-26	expansion	293	false	in_progress	253	254	1	true	data/card-role-worksheets/ktk-role-review.tsv
-pktk	Khans of Tarkir Promos	2014-09-26	promo	56	false	in_progress	43	44	1	true	data/card-role-worksheets/pktk-role-review.tsv
+ktk	Khans of Tarkir	2014-09-26	expansion	293	false	done	254	254	0	true	data/card-role-worksheets/ktk-role-review.tsv
+pktk	Khans of Tarkir Promos	2014-09-26	promo	56	false	done	44	44	0	true	data/card-role-worksheets/pktk-role-review.tsv
 tktk	Khans of Tarkir Tokens	2014-09-26	token	13	false	done	12	12	0	true	data/card-role-worksheets/tktk-role-review.tsv
-c14	Commander 2014	2014-11-07	commander	337	false	in_progress	316	322	6	true	data/card-role-worksheets/c14-role-review.tsv
+c14	Commander 2014	2014-11-07	commander	337	false	done	322	322	0	true	data/card-role-worksheets/c14-role-review.tsv
 oc14	Commander 2014 Oversized	2014-11-07	memorabilia	5	false	done	5	5	0	true	data/card-role-worksheets/oc14-role-review.tsv
 tc14	Commander 2014 Tokens	2014-11-07	token	36	false	done	36	36	0	true	data/card-role-worksheets/tc14-role-review.tsv
 dvd	Duel Decks Anthology: Divine vs. Demonic	2014-12-05	duel_deck	62	false	done	56	56	0	true	data/card-role-worksheets/dvd-role-review.tsv
@@ -413,24 +413,24 @@ j15	Judge Gift Cards 2015	2015-01-01	promo	8	false	done	8	8	0	true	data/card-rol
 l15	League Tokens 2015	2015-01-01	token	1	false	done	1	1	0	true	data/card-role-worksheets/l15-role-review.tsv
 ugin	Ugin's Fate	2015-01-17	promo	26	false	done	26	26	0	true	data/card-role-worksheets/ugin-role-review.tsv
 cp2	Fate Reforged Clash Pack	2015-01-23	starter	6	false	done	6	6	0	true	data/card-role-worksheets/cp2-role-review.tsv
-frf	Fate Reforged	2015-01-23	expansion	191	false	in_progress	177	180	3	true	data/card-role-worksheets/frf-role-review.tsv
-pfrf	Fate Reforged Promos	2015-01-23	promo	43	false	in_progress	32	33	1	true	data/card-role-worksheets/pfrf-role-review.tsv
+frf	Fate Reforged	2015-01-23	expansion	191	false	done	180	180	0	true	data/card-role-worksheets/frf-role-review.tsv
+pfrf	Fate Reforged Promos	2015-01-23	promo	43	false	done	33	33	0	true	data/card-role-worksheets/pfrf-role-review.tsv
 tfrf	Fate Reforged Tokens	2015-01-23	token	4	false	done	4	4	0	true	data/card-role-worksheets/tfrf-role-review.tsv
 ddo	Duel Decks: Elspeth vs. Kiora	2015-02-27	duel_deck	67	false	done	60	60	0	true	data/card-role-worksheets/ddo-role-review.tsv
-dtk	Dragons of Tarkir	2015-03-27	expansion	264	false	in_progress	251	254	3	true	data/card-role-worksheets/dtk-role-review.tsv
+dtk	Dragons of Tarkir	2015-03-27	expansion	264	false	done	254	254	0	true	data/card-role-worksheets/dtk-role-review.tsv
 pdtk	Dragons of Tarkir Promos	2015-03-27	promo	51	false	done	42	42	0	true	data/card-role-worksheets/pdtk-role-review.tsv
 tdtk	Dragons of Tarkir Tokens	2015-03-27	token	8	false	done	8	8	0	true	data/card-role-worksheets/tdtk-role-review.tsv
 ptkdf	Tarkir Dragonfury	2015-04-03	promo	4	false	done	4	4	0	true	data/card-role-worksheets/ptkdf-role-review.tsv
 tpr	Tempest Remastered	2015-05-06	masters	269	true	done	254	254	0	true	data/card-role-worksheets/tpr-role-review.tsv
-mm2	Modern Masters 2015	2015-05-22	masters	249	false	in_progress	247	249	2	true	data/card-role-worksheets/mm2-role-review.tsv
+mm2	Modern Masters 2015	2015-05-22	masters	249	false	done	249	249	0	true	data/card-role-worksheets/mm2-role-review.tsv
 tmm2	Modern Masters 2015 Tokens	2015-05-22	token	16	false	done	14	14	0	true	data/card-role-worksheets/tmm2-role-review.tsv
 ps15	San Diego Comic-Con 2015	2015-07-09	promo	5	false	done	5	5	0	true	data/card-role-worksheets/ps15-role-review.tsv
 cp3	Magic Origins Clash Pack	2015-07-17	starter	6	false	done	6	6	0	true	data/card-role-worksheets/cp3-role-review.tsv
-ori	Magic Origins	2015-07-17	core	288	false	in_progress	270	273	3	true	data/card-role-worksheets/ori-role-review.tsv
+ori	Magic Origins	2015-07-17	core	288	false	done	273	273	0	true	data/card-role-worksheets/ori-role-review.tsv
 pori	Magic Origins Promos	2015-07-17	promo	54	false	done	43	43	0	true	data/card-role-worksheets/pori-role-review.tsv
 tori	Magic Origins Tokens	2015-07-17	token	15	false	done	14	14	0	true	data/card-role-worksheets/tori-role-review.tsv
 v15	From the Vault: Angels	2015-08-21	from_the_vault	15	false	done	15	15	0	true	data/card-role-worksheets/v15-role-review.tsv
-ddp	Duel Decks: Zendikar vs. Eldrazi	2015-08-28	duel_deck	80	false	in_progress	68	70	2	true	data/card-role-worksheets/ddp-role-review.tsv
+ddp	Duel Decks: Zendikar vs. Eldrazi	2015-08-28	duel_deck	80	false	done	70	70	0	true	data/card-role-worksheets/ddp-role-review.tsv
 bfz	Battle for Zendikar	2015-10-02	expansion	299	false	done	254	254	0	true	data/card-role-worksheets/bfz-role-review.tsv
 exp	Zendikar Expeditions	2015-10-02	masterpiece	45	false	done	45	45	0	true	data/card-role-worksheets/exp-role-review.tsv
 pbfz	Battle for Zendikar Promos	2015-10-02	promo	90	false	done	70	70	0	true	data/card-role-worksheets/pbfz-role-review.tsv
@@ -443,29 +443,29 @@ pz1	Legendary Cube Prize Pack	2015-11-18	treasure_chest	149	true	done	149	149	0	
 f16	Friday Night Magic 2016	2016-01-01	promo	12	false	done	12	12	0	true	data/card-role-worksheets/f16-role-review.tsv
 j16	Judge Gift Cards 2016	2016-01-01	promo	8	false	done	8	8	0	true	data/card-role-worksheets/j16-role-review.tsv
 l16	League Tokens 2016	2016-01-01	token	1	false	done	1	1	0	true	data/card-role-worksheets/l16-role-review.tsv
-ogw	Oath of the Gatewatch	2016-01-22	expansion	187	false	in_progress	180	183	3	true	data/card-role-worksheets/ogw-role-review.tsv
+ogw	Oath of the Gatewatch	2016-01-22	expansion	187	false	done	183	183	0	true	data/card-role-worksheets/ogw-role-review.tsv
 pogw	Oath of the Gatewatch Promos	2016-01-22	promo	65	false	done	55	55	0	true	data/card-role-worksheets/pogw-role-review.tsv
 togw	Oath of the Gatewatch Tokens	2016-01-22	token	11	false	done	6	6	0	true	data/card-role-worksheets/togw-role-review.tsv
-ddq	Duel Decks: Blessed vs. Cursed	2016-02-26	duel_deck	80	false	in_progress	69	71	2	true	data/card-role-worksheets/ddq-role-review.tsv
-psoi	Shadows over Innistrad Promos	2016-04-08	promo	90	false	in_progress	77	79	2	true	data/card-role-worksheets/psoi-role-review.tsv
-soi	Shadows over Innistrad	2016-04-08	expansion	302	false	in_progress	284	287	3	true	data/card-role-worksheets/soi-role-review.tsv
+ddq	Duel Decks: Blessed vs. Cursed	2016-02-26	duel_deck	80	false	done	71	71	0	true	data/card-role-worksheets/ddq-role-review.tsv
+psoi	Shadows over Innistrad Promos	2016-04-08	promo	90	false	done	79	79	0	true	data/card-role-worksheets/psoi-role-review.tsv
+soi	Shadows over Innistrad	2016-04-08	expansion	302	false	done	287	287	0	true	data/card-role-worksheets/soi-role-review.tsv
 tsoi	Shadows over Innistrad Tokens	2016-04-08	token	20	false	done	15	15	0	true	data/card-role-worksheets/tsoi-role-review.tsv
 w16	Welcome Deck 2016	2016-04-08	starter	16	false	done	16	16	0	true	data/card-role-worksheets/w16-role-review.tsv
-ema	Eternal Masters	2016-06-10	masters	249	false	in_progress	248	249	1	true	data/card-role-worksheets/ema-role-review.tsv
+ema	Eternal Masters	2016-06-10	masters	249	false	done	249	249	0	true	data/card-role-worksheets/ema-role-review.tsv
 tema	Eternal Masters Tokens	2016-06-10	token	16	false	done	16	16	0	true	data/card-role-worksheets/tema-role-review.tsv
-emn	Eldritch Moon	2016-07-22	expansion	208	false	in_progress	203	208	5	true	data/card-role-worksheets/emn-role-review.tsv
-pemn	Eldritch Moon Promos	2016-07-22	promo	77	false	in_progress	63	65	2	true	data/card-role-worksheets/pemn-role-review.tsv
+emn	Eldritch Moon	2016-07-22	expansion	208	false	done	208	208	0	true	data/card-role-worksheets/emn-role-review.tsv
+pemn	Eldritch Moon Promos	2016-07-22	promo	77	false	done	65	65	0	true	data/card-role-worksheets/pemn-role-review.tsv
 temn	Eldritch Moon Tokens	2016-07-22	token	11	false	done	9	9	0	true	data/card-role-worksheets/temn-role-review.tsv
 v16	From the Vault: Lore	2016-08-19	from_the_vault	16	false	done	16	16	0	true	data/card-role-worksheets/v16-role-review.tsv
-cn2	Conspiracy: Take the Crown	2016-08-26	draft_innovation	222	false	in_progress	217	221	4	true	data/card-role-worksheets/cn2-role-review.tsv
+cn2	Conspiracy: Take the Crown	2016-08-26	draft_innovation	222	false	done	221	221	0	true	data/card-role-worksheets/cn2-role-review.tsv
 tcn2	Conspiracy: Take the Crown Tokens	2016-08-26	token	12	false	done	12	12	0	true	data/card-role-worksheets/tcn2-role-review.tsv
-ddr	Duel Decks: Nissa vs. Ob Nixilis	2016-09-02	duel_deck	76	false	in_progress	66	68	2	true	data/card-role-worksheets/ddr-role-review.tsv
-kld	Kaladesh	2016-09-30	expansion	278	false	in_progress	256	264	8	true	data/card-role-worksheets/kld-role-review.tsv
-mps	Kaladesh Inventions	2016-09-30	masterpiece	54	false	in_progress	53	54	1	true	data/card-role-worksheets/mps-role-review.tsv
-pkld	Kaladesh Promos	2016-09-30	promo	83	false	in_progress	68	70	2	true	data/card-role-worksheets/pkld-role-review.tsv
+ddr	Duel Decks: Nissa vs. Ob Nixilis	2016-09-02	duel_deck	76	false	done	68	68	0	true	data/card-role-worksheets/ddr-role-review.tsv
+kld	Kaladesh	2016-09-30	expansion	278	false	done	264	264	0	true	data/card-role-worksheets/kld-role-review.tsv
+mps	Kaladesh Inventions	2016-09-30	masterpiece	54	false	done	54	54	0	true	data/card-role-worksheets/mps-role-review.tsv
+pkld	Kaladesh Promos	2016-09-30	promo	83	false	done	70	70	0	true	data/card-role-worksheets/pkld-role-review.tsv
 tkld	Kaladesh Tokens	2016-09-30	token	13	false	done	8	8	0	true	data/card-role-worksheets/tkld-role-review.tsv
 ps16	San Diego Comic-Con 2016	2016-10-01	promo	5	false	done	5	5	0	true	data/card-role-worksheets/ps16-role-review.tsv
-c16	Commander 2016	2016-11-11	commander	351	false	in_progress	337	341	4	true	data/card-role-worksheets/c16-role-review.tsv
+c16	Commander 2016	2016-11-11	commander	351	false	done	341	341	0	true	data/card-role-worksheets/c16-role-review.tsv
 oc16	Commander 2016 Oversized	2016-11-11	memorabilia	5	false	done	5	5	0	true	data/card-role-worksheets/oc16-role-review.tsv
 tc16	Commander 2016 Tokens	2016-11-11	token	21	false	done	20	20	0	true	data/card-role-worksheets/tc16-role-review.tsv
 pz2	Treasure Chest	2016-11-16	treasure_chest	282	true	done	282	282	0	true	data/card-role-worksheets/pz2-role-review.tsv
@@ -475,41 +475,41 @@ tpca	Planechase Anthology Tokens	2016-11-25	token	19	false	done	17	17	0	true	dat
 f17	Friday Night Magic 2017	2017-01-01	promo	12	false	done	12	12	0	true	data/card-role-worksheets/f17-role-review.tsv
 j17	Judge Gift Cards 2017	2017-01-01	promo	9	false	done	9	9	0	true	data/card-role-worksheets/j17-role-review.tsv
 l17	League Tokens 2017	2017-01-01	token	1	false	done	1	1	0	true	data/card-role-worksheets/l17-role-review.tsv
-aer	Aether Revolt	2017-01-20	expansion	197	false	in_progress	184	194	10	true	data/card-role-worksheets/aer-role-review.tsv
-paer	Aether Revolt Promos	2017-01-20	promo	65	false	in_progress	51	55	4	true	data/card-role-worksheets/paer-role-review.tsv
+aer	Aether Revolt	2017-01-20	expansion	197	false	done	194	194	0	true	data/card-role-worksheets/aer-role-review.tsv
+paer	Aether Revolt Promos	2017-01-20	promo	65	false	done	55	55	0	true	data/card-role-worksheets/paer-role-review.tsv
 taer	Aether Revolt Tokens	2017-01-20	token	4	false	done	4	4	0	true	data/card-role-worksheets/taer-role-review.tsv
-mm3	Modern Masters 2017	2017-03-17	masters	249	false	in_progress	246	249	3	true	data/card-role-worksheets/mm3-role-review.tsv
+mm3	Modern Masters 2017	2017-03-17	masters	249	false	done	249	249	0	true	data/card-role-worksheets/mm3-role-review.tsv
 tmm3	Modern Masters 2017 Tokens	2017-03-17	token	21	false	done	21	21	0	true	data/card-role-worksheets/tmm3-role-review.tsv
 dds	Duel Decks: Mind vs. Might	2017-03-31	duel_deck	65	false	done	56	56	0	true	data/card-role-worksheets/dds-role-review.tsv
 tdds	Duel Decks: Mind vs. Might Tokens	2017-03-31	token	7	false	done	7	7	0	true	data/card-role-worksheets/tdds-role-review.tsv
 w17	Welcome Deck 2017	2017-04-15	starter	30	false	done	30	30	0	true	data/card-role-worksheets/w17-role-review.tsv
-akh	Amonkhet	2017-04-28	expansion	287	false	in_progress	268	272	4	true	data/card-role-worksheets/akh-role-review.tsv
-mp2	Amonkhet Invocations	2017-04-28	masterpiece	54	false	in_progress	52	54	2	true	data/card-role-worksheets/mp2-role-review.tsv
-pakh	Amonkhet Promos	2017-04-28	promo	77	false	in_progress	68	69	1	true	data/card-role-worksheets/pakh-role-review.tsv
+akh	Amonkhet	2017-04-28	expansion	287	false	done	272	272	0	true	data/card-role-worksheets/akh-role-review.tsv
+mp2	Amonkhet Invocations	2017-04-28	masterpiece	54	false	done	54	54	0	true	data/card-role-worksheets/mp2-role-review.tsv
+pakh	Amonkhet Promos	2017-04-28	promo	77	false	done	69	69	0	true	data/card-role-worksheets/pakh-role-review.tsv
 takh	Amonkhet Tokens	2017-04-28	token	26	false	done	26	26	0	true	data/card-role-worksheets/takh-role-review.tsv
-cma	Commander Anthology	2017-06-09	commander	320	false	in_progress	288	289	1	true	data/card-role-worksheets/cma-role-review.tsv
+cma	Commander Anthology	2017-06-09	commander	320	false	done	289	289	0	true	data/card-role-worksheets/cma-role-review.tsv
 tcma	Commander Anthology Tokens	2017-06-09	token	20	false	done	19	19	0	true	data/card-role-worksheets/tcma-role-review.tsv
 e01	Archenemy: Nicol Bolas	2017-06-16	archenemy	106	false	done	101	101	0	true	data/card-role-worksheets/e01-role-review.tsv
 oe01	Archenemy: Nicol Bolas Schemes	2017-06-16	archenemy	20	false	done	20	20	0	true	data/card-role-worksheets/oe01-role-review.tsv
-hou	Hour of Devastation	2017-07-14	expansion	209	false	in_progress	195	199	4	true	data/card-role-worksheets/hou-role-review.tsv
-phou	Hour of Devastation Promos	2017-07-14	promo	62	false	in_progress	52	55	3	true	data/card-role-worksheets/phou-role-review.tsv
+hou	Hour of Devastation	2017-07-14	expansion	209	false	done	199	199	0	true	data/card-role-worksheets/hou-role-review.tsv
+phou	Hour of Devastation Promos	2017-07-14	promo	62	false	done	55	55	0	true	data/card-role-worksheets/phou-role-review.tsv
 thou	Hour of Devastation Tokens	2017-07-14	token	13	false	done	13	13	0	true	data/card-role-worksheets/thou-role-review.tsv
 ps17	San Diego Comic-Con 2017	2017-07-20	promo	6	false	done	6	6	0	true	data/card-role-worksheets/ps17-role-review.tsv
-c17	Commander 2017	2017-08-25	commander	309	false	in_progress	298	299	1	true	data/card-role-worksheets/c17-role-review.tsv
+c17	Commander 2017	2017-08-25	commander	309	false	done	299	299	0	true	data/card-role-worksheets/c17-role-review.tsv
 oc17	Commander 2017 Oversized	2017-08-25	memorabilia	4	false	done	4	4	0	true	data/card-role-worksheets/oc17-role-review.tsv
 tc17	Commander 2017 Tokens	2017-08-25	token	11	false	done	11	11	0	true	data/card-role-worksheets/tc17-role-review.tsv
 te01	Archenemy: Nicol Bolas Tokens	2017-09-08	token	5	false	done	5	5	0	true	data/card-role-worksheets/te01-role-review.tsv
 h17	HasCon 2017	2017-09-20	funny	4	false	done	4	4	0	true	data/card-role-worksheets/h17-role-review.tsv
 phtr	2016 Heroes of the Realm	2017-09-20	funny	3	false	done	3	3	0	true	data/card-role-worksheets/phtr-role-review.tsv
 pss2	XLN Standard Showdown	2017-09-29	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pss2-role-review.tsv
-pxln	Ixalan Promos	2017-09-29	promo	120	false	in_progress	79	80	1	true	data/card-role-worksheets/pxln-role-review.tsv
+pxln	Ixalan Promos	2017-09-29	promo	120	false	done	80	80	0	true	data/card-role-worksheets/pxln-role-review.tsv
 txln	Ixalan Tokens	2017-09-29	token	11	false	done	8	8	0	true	data/card-role-worksheets/txln-role-review.tsv
-xln	Ixalan	2017-09-29	expansion	289	false	in_progress	269	274	5	true	data/card-role-worksheets/xln-role-review.tsv
+xln	Ixalan	2017-09-29	expansion	289	false	done	274	274	0	true	data/card-role-worksheets/xln-role-review.tsv
 g17	2017 Gift Pack	2017-10-20	box	5	false	done	5	5	0	true	data/card-role-worksheets/g17-role-review.tsv
-ddt	Duel Decks: Merfolk vs. Goblins	2017-10-24	duel_deck	63	false	in_progress	56	57	1	true	data/card-role-worksheets/ddt-role-review.tsv
+ddt	Duel Decks: Merfolk vs. Goblins	2017-10-24	duel_deck	63	false	done	57	57	0	true	data/card-role-worksheets/ddt-role-review.tsv
 tddt	Duel Decks: Merfolk vs. Goblins Tokens	2017-10-24	token	3	false	done	3	3	0	true	data/card-role-worksheets/tddt-role-review.tsv
-ima	Iconic Masters	2017-11-17	masters	249	false	in_progress	247	249	2	true	data/card-role-worksheets/ima-role-review.tsv
-e02	Explorers of Ixalan	2017-11-24	box	48	false	in_progress	47	48	1	true	data/card-role-worksheets/e02-role-review.tsv
+ima	Iconic Masters	2017-11-17	masters	249	false	done	249	249	0	true	data/card-role-worksheets/ima-role-review.tsv
+e02	Explorers of Ixalan	2017-11-24	box	48	false	done	48	48	0	true	data/card-role-worksheets/e02-role-review.tsv
 pxtc	XLN Treasure Chest	2017-11-24	promo	10	false	done	10	10	0	true	data/card-role-worksheets/pxtc-role-review.tsv
 v17	From the Vault: Transform	2017-11-24	from_the_vault	16	false	done	16	16	0	true	data/card-role-worksheets/v17-role-review.tsv
 tima	Iconic Masters Tokens	2017-11-29	token	7	false	done	7	7	0	true	data/card-role-worksheets/tima-role-review.tsv
@@ -523,22 +523,22 @@ rix	Rivals of Ixalan	2018-01-19	expansion	205	false	done	205	205	0	true	data/car
 trix	Rivals of Ixalan Tokens	2018-01-19	token	7	false	done	7	7	0	true	data/card-role-worksheets/trix-role-review.tsv
 pnat	Nationals Promos	2018-01-25	promo	1	false	done	1	1	0	true	data/card-role-worksheets/pnat-role-review.tsv
 plny	Lunar New Year 2018	2018-02-16	promo	1	false	done	1	1	0	true	data/card-role-worksheets/plny-role-review.tsv
-a25	Masters 25	2018-03-16	masters	249	false	in_progress	248	249	1	true	data/card-role-worksheets/a25-role-review.tsv
+a25	Masters 25	2018-03-16	masters	249	false	done	249	249	0	true	data/card-role-worksheets/a25-role-review.tsv
 ta25	Masters 25 Tokens	2018-03-16	token	16	false	done	16	16	0	true	data/card-role-worksheets/ta25-role-review.tsv
 ddu	Duel Decks: Elves vs. Inventors	2018-04-06	duel_deck	76	false	done	71	71	0	true	data/card-role-worksheets/ddu-role-review.tsv
 tddu	Duel Decks: Elves vs. Inventors Tokens	2018-04-06	token	4	false	done	3	3	0	true	data/card-role-worksheets/tddu-role-review.tsv
-dom	Dominaria	2018-04-27	expansion	280	false	in_progress	263	265	2	true	data/card-role-worksheets/dom-role-review.tsv
-pdom	Dominaria Promos	2018-04-27	promo	118	false	in_progress	92	93	1	true	data/card-role-worksheets/pdom-role-review.tsv
+dom	Dominaria	2018-04-27	expansion	280	false	done	265	265	0	true	data/card-role-worksheets/dom-role-review.tsv
+pdom	Dominaria Promos	2018-04-27	promo	118	false	done	93	93	0	true	data/card-role-worksheets/pdom-role-review.tsv
 tdom	Dominaria Tokens	2018-04-27	token	16	false	done	13	13	0	true	data/card-role-worksheets/tdom-role-review.tsv
-bbd	Battlebond	2018-06-08	draft_innovation	256	false	in_progress	248	254	6	true	data/card-role-worksheets/bbd-role-review.tsv
-cm2	Commander Anthology Volume II	2018-06-08	commander	312	false	in_progress	275	279	4	true	data/card-role-worksheets/cm2-role-review.tsv
+bbd	Battlebond	2018-06-08	draft_innovation	256	false	done	254	254	0	true	data/card-role-worksheets/bbd-role-review.tsv
+cm2	Commander Anthology Volume II	2018-06-08	commander	312	false	done	279	279	0	true	data/card-role-worksheets/cm2-role-review.tsv
 pbbd	Battlebond Promos	2018-06-08	promo	22	false	done	22	22	0	true	data/card-role-worksheets/pbbd-role-review.tsv
 tbbd	Battlebond Tokens	2018-06-08	token	8	false	done	8	8	0	true	data/card-role-worksheets/tbbd-role-review.tsv
 tcm2	Commander Anthology Volume II Tokens	2018-06-08	token	19	false	done	19	19	0	true	data/card-role-worksheets/tcm2-role-review.tsv
 ss1	Signature Spellbook: Jace	2018-06-15	spellbook	8	false	done	8	8	0	true	data/card-role-worksheets/ss1-role-review.tsv
 gs1	Global Series Jiang Yanggu & Mu Yanling	2018-06-22	duel_deck	41	false	done	41	41	0	true	data/card-role-worksheets/gs1-role-review.tsv
-m19	Core Set 2019	2018-07-13	core	314	false	in_progress	297	299	2	true	data/card-role-worksheets/m19-role-review.tsv
-pm19	Core Set 2019 Promos	2018-07-13	promo	95	false	in_progress	72	74	2	true	data/card-role-worksheets/pm19-role-review.tsv
+m19	Core Set 2019	2018-07-13	core	314	false	done	299	299	0	true	data/card-role-worksheets/m19-role-review.tsv
+pm19	Core Set 2019 Promos	2018-07-13	promo	95	false	done	74	74	0	true	data/card-role-worksheets/pm19-role-review.tsv
 pss3	M19 Standard Showdown	2018-07-13	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pss3-role-review.tsv
 tm19	Core Set 2019 Tokens	2018-07-13	token	18	false	done	18	18	0	true	data/card-role-worksheets/tm19-role-review.tsv
 ana	Arena New Player Experience	2018-07-14	starter	46	true	done	11	11	0	true	data/card-role-worksheets/ana-role-review.tsv
@@ -549,10 +549,10 @@ ps18	San Diego Comic-Con 2018	2018-07-19	promo	5	false	done	5	5	0	true	data/card
 ph17	2017 Heroes of the Realm	2018-08-01	funny	3	false	done	3	3	0	true	data/card-role-worksheets/ph17-role-review.tsv
 oc18	Commander 2018 Oversized	2018-08-09	memorabilia	4	false	done	4	4	0	true	data/card-role-worksheets/oc18-role-review.tsv
 tc18	Commander 2018 Tokens	2018-08-09	token	26	false	done	25	25	0	true	data/card-role-worksheets/tc18-role-review.tsv
-c18	Commander 2018	2018-08-10	commander	307	false	in_progress	296	297	1	true	data/card-role-worksheets/c18-role-review.tsv
-grn	Guilds of Ravnica	2018-10-05	expansion	273	false	in_progress	265	268	3	true	data/card-role-worksheets/grn-role-review.tsv
+c18	Commander 2018	2018-08-10	commander	307	false	done	297	297	0	true	data/card-role-worksheets/c18-role-review.tsv
+grn	Guilds of Ravnica	2018-10-05	expansion	273	false	done	268	268	0	true	data/card-role-worksheets/grn-role-review.tsv
 med	Mythic Edition	2018-10-05	masterpiece	24	false	done	24	24	0	true	data/card-role-worksheets/med-role-review.tsv
-pgrn	Guilds of Ravnica Promos	2018-10-05	promo	84	false	in_progress	59	60	1	true	data/card-role-worksheets/pgrn-role-review.tsv
+pgrn	Guilds of Ravnica Promos	2018-10-05	promo	84	false	done	60	60	0	true	data/card-role-worksheets/pgrn-role-review.tsv
 tgrn	Guilds of Ravnica Tokens	2018-10-05	token	8	false	done	8	8	0	true	data/card-role-worksheets/tgrn-role-review.tsv
 tmed	Mythic Edition Tokens	2018-10-05	token	16	false	done	16	16	0	true	data/card-role-worksheets/tmed-role-review.tsv
 gk1	GRN Guild Kit	2018-11-02	box	127	false	done	122	122	0	true	data/card-role-worksheets/gk1-role-review.tsv
@@ -562,70 +562,70 @@ g18	M19 Gift Pack	2018-11-16	box	5	false	done	5	5	0	true	data/card-role-workshee
 gnt	Game Night	2018-11-16	box	68	false	done	63	63	0	true	data/card-role-worksheets/gnt-role-review.tsv
 puma	Ultimate Box Topper	2018-12-07	masterpiece	40	false	done	40	40	0	true	data/card-role-worksheets/puma-role-review.tsv
 tuma	Ultimate Masters Tokens	2018-12-07	token	16	false	done	15	15	0	true	data/card-role-worksheets/tuma-role-review.tsv
-uma	Ultimate Masters	2018-12-07	masters	254	false	in_progress	252	254	2	true	data/card-role-worksheets/uma-role-review.tsv
+uma	Ultimate Masters	2018-12-07	masters	254	false	done	254	254	0	true	data/card-role-worksheets/uma-role-review.tsv
 pf19	MagicFest 2019	2019-01-01	promo	7	false	done	7	7	0	true	data/card-role-worksheets/pf19-role-review.tsv
 prna	Ravnica Allegiance Promos	2019-01-25	promo	81	false	done	59	59	0	true	data/card-role-worksheets/prna-role-review.tsv
 rna	Ravnica Allegiance	2019-01-25	expansion	273	false	done	268	268	0	true	data/card-role-worksheets/rna-role-review.tsv
 trna	Ravnica Allegiance Tokens	2019-01-25	token	13	false	done	13	13	0	true	data/card-role-worksheets/trna-role-review.tsv
-gk2	RNA Guild Kit	2019-02-15	box	133	false	in_progress	127	128	1	true	data/card-role-worksheets/gk2-role-review.tsv
+gk2	RNA Guild Kit	2019-02-15	box	133	false	done	128	128	0	true	data/card-role-worksheets/gk2-role-review.tsv
 tgk2	RNA Guild Kit Tokens	2019-02-15	token	9	false	done	9	9	0	true	data/card-role-worksheets/tgk2-role-review.tsv
 prw2	RNA Ravnica Weekend	2019-02-16	promo	10	false	done	5	5	0	true	data/card-role-worksheets/prw2-role-review.tsv
 j19	Judge Gift Cards 2019	2019-04-10	promo	8	false	done	8	8	0	true	data/card-role-worksheets/j19-role-review.tsv
-pwar	War of the Spark Promos	2019-05-03	promo	176	false	in_progress	90	92	2	true	data/card-role-worksheets/pwar-role-review.tsv
+pwar	War of the Spark Promos	2019-05-03	promo	176	false	done	92	92	0	true	data/card-role-worksheets/pwar-role-review.tsv
 twar	War of the Spark Tokens	2019-05-03	token	19	false	done	17	17	0	true	data/card-role-worksheets/twar-role-review.tsv
-war	War of the Spark	2019-05-03	expansion	312	false	in_progress	261	266	5	true	data/card-role-worksheets/war-role-review.tsv
+war	War of the Spark	2019-05-03	expansion	312	false	done	266	266	0	true	data/card-role-worksheets/war-role-review.tsv
 tmh1	Modern Horizons Tokens	2019-05-30	token	21	false	done	21	21	0	true	data/card-role-worksheets/tmh1-role-review.tsv
 amh1	Modern Horizons Art Series	2019-06-05	memorabilia	54	false	done	54	54	0	true	data/card-role-worksheets/amh1-role-review.tsv
-mh1	Modern Horizons	2019-06-14	draft_innovation	255	false	in_progress	254	255	1	true	data/card-role-worksheets/mh1-role-review.tsv
+mh1	Modern Horizons	2019-06-14	draft_innovation	255	false	done	255	255	0	true	data/card-role-worksheets/mh1-role-review.tsv
 pmh1	Modern Horizons Promos	2019-06-14	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pmh1-role-review.tsv
 ss2	Signature Spellbook: Gideon	2019-06-28	spellbook	8	false	done	8	8	0	true	data/card-role-worksheets/ss2-role-review.tsv
-m20	Core Set 2020	2019-07-12	core	346	false	in_progress	327	330	3	true	data/card-role-worksheets/m20-role-review.tsv
-pm20	Core Set 2020 Promos	2019-07-12	promo	144	false	in_progress	71	73	2	true	data/card-role-worksheets/pm20-role-review.tsv
+m20	Core Set 2020	2019-07-12	core	346	false	done	330	330	0	true	data/card-role-worksheets/m20-role-review.tsv
+pm20	Core Set 2020 Promos	2019-07-12	promo	144	false	done	73	73	0	true	data/card-role-worksheets/pm20-role-review.tsv
 ppp1	M20 Promo Packs	2019-07-12	promo	5	false	done	5	5	0	true	data/card-role-worksheets/ppp1-role-review.tsv
 tm20	Core Set 2020 Tokens	2019-07-12	token	12	false	done	12	12	0	true	data/card-role-worksheets/tm20-role-review.tsv
 ps19	San Diego Comic-Con 2019	2019-07-18	promo	5	false	done	5	5	0	true	data/card-role-worksheets/ps19-role-review.tsv
 ph18	2018 Heroes of the Realm	2019-08-01	funny	5	false	done	4	4	0	true	data/card-role-worksheets/ph18-role-review.tsv
 tc19	Commander 2019 Tokens	2019-08-01	token	29	false	done	28	28	0	true	data/card-role-worksheets/tc19-role-review.tsv
-c19	Commander 2019	2019-08-23	commander	302	false	in_progress	289	292	3	true	data/card-role-worksheets/c19-role-review.tsv
+c19	Commander 2019	2019-08-23	commander	302	false	done	292	292	0	true	data/card-role-worksheets/c19-role-review.tsv
 oc19	Commander 2019 Oversized	2019-08-31	memorabilia	4	false	done	4	4	0	true	data/card-role-worksheets/oc19-role-review.tsv
-pwcs	Planeswalker Championship Promos	2019-10-01	promo	46	false	in_progress	45	46	1	true	data/card-role-worksheets/pwcs-role-review.tsv
-eld	Throne of Eldraine	2019-10-04	expansion	398	false	in_progress	281	286	5	true	data/card-role-worksheets/eld-role-review.tsv
-peld	Throne of Eldraine Promos	2019-10-04	promo	138	false	in_progress	66	68	2	true	data/card-role-worksheets/peld-role-review.tsv
+pwcs	Planeswalker Championship Promos	2019-10-01	promo	46	false	done	46	46	0	true	data/card-role-worksheets/pwcs-role-review.tsv
+eld	Throne of Eldraine	2019-10-04	expansion	398	false	done	286	286	0	true	data/card-role-worksheets/eld-role-review.tsv
+peld	Throne of Eldraine Promos	2019-10-04	promo	138	false	done	68	68	0	true	data/card-role-worksheets/peld-role-review.tsv
 teld	Throne of Eldraine Tokens	2019-10-04	token	20	false	done	17	17	0	true	data/card-role-worksheets/teld-role-review.tsv
 ptg	Ponies: The Galloping	2019-10-22	funny	3	false	done	3	3	0	true	data/card-role-worksheets/ptg-role-review.tsv
 cmb1	Mystery Booster Playtest Cards 2019	2019-11-07	funny	121	false	done	121	121	0	true	data/card-role-worksheets/cmb1-role-review.tsv
-gn2	Game Night 2019	2019-11-15	box	64	false	in_progress	58	59	1	true	data/card-role-worksheets/gn2-role-review.tsv
+gn2	Game Night 2019	2019-11-15	box	64	false	done	59	59	0	true	data/card-role-worksheets/gn2-role-review.tsv
 tgn2	Game Night 2019 Tokens	2019-11-15	token	3	false	done	3	3	0	true	data/card-role-worksheets/tgn2-role-review.tsv
 ha1	Historic Anthology 1	2019-11-21	box	20	true	done	20	20	0	true	data/card-role-worksheets/ha1-role-review.tsv
-sld	Secret Lair Drop	2019-12-02	box	2581	false	in_progress	1683	1702	19	true	data/card-role-worksheets/sld-role-review.tsv
+sld	Secret Lair Drop	2019-12-02	box	2581	false	done	1702	1702	0	true	data/card-role-worksheets/sld-role-review.tsv
 j20	Judge Gift Cards 2020	2020-01-01	promo	10	false	done	10	10	0	true	data/card-role-worksheets/j20-role-review.tsv
 pf20	MagicFest 2020	2020-01-01	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pf20-role-review.tsv
 pthb	Theros Beyond Death Promos	2020-01-24	promo	137	false	done	68	68	0	true	data/card-role-worksheets/pthb-role-review.tsv
-thb	Theros Beyond Death	2020-01-24	expansion	358	false	in_progress	269	273	4	true	data/card-role-worksheets/thb-role-review.tsv
+thb	Theros Beyond Death	2020-01-24	expansion	358	false	done	273	273	0	true	data/card-role-worksheets/thb-role-review.tsv
 tthb	Theros Beyond Death Tokens	2020-01-24	token	14	false	done	14	14	0	true	data/card-role-worksheets/tthb-role-review.tsv
 tund	Unsanctioned Tokens	2020-02-29	token	6	false	done	6	6	0	true	data/card-role-worksheets/tund-role-review.tsv
 und	Unsanctioned	2020-02-29	funny	96	false	done	91	91	0	true	data/card-role-worksheets/und-role-review.tsv
-ha2	Historic Anthology 2	2020-03-12	box	25	true	in_progress	24	25	1	true	data/card-role-worksheets/ha2-role-review.tsv
-c20	Commander 2020	2020-04-17	commander	322	false	in_progress	319	322	3	true	data/card-role-worksheets/c20-role-review.tsv
+ha2	Historic Anthology 2	2020-03-12	box	25	true	done	25	25	0	true	data/card-role-worksheets/ha2-role-review.tsv
+c20	Commander 2020	2020-04-17	commander	322	false	done	322	322	0	true	data/card-role-worksheets/c20-role-review.tsv
 oc20	Commander 2020 Oversized	2020-04-17	memorabilia	5	false	done	5	5	0	true	data/card-role-worksheets/oc20-role-review.tsv
 tc20	Commander 2020 Tokens	2020-04-17	token	20	false	done	20	20	0	true	data/card-role-worksheets/tc20-role-review.tsv
-iko	Ikoria: Lair of Behemoths	2020-04-24	expansion	390	false	in_progress	264	266	2	true	data/card-role-worksheets/iko-role-review.tsv
+iko	Ikoria: Lair of Behemoths	2020-04-24	expansion	390	false	done	266	266	0	true	data/card-role-worksheets/iko-role-review.tsv
 piko	Ikoria: Lair of Behemoths Promos	2020-04-24	promo	137	false	done	68	68	0	true	data/card-role-worksheets/piko-role-review.tsv
 tiko	Ikoria: Lair of Behemoths Tokens	2020-04-24	token	14	false	done	12	12	0	true	data/card-role-worksheets/tiko-role-review.tsv
 plg20	Love Your LGS 2020	2020-05-18	promo	2	false	done	2	2	0	true	data/card-role-worksheets/plg20-role-review.tsv
-ha3	Historic Anthology 3	2020-05-21	box	27	true	in_progress	26	27	1	true	data/card-role-worksheets/ha3-role-review.tsv
+ha3	Historic Anthology 3	2020-05-21	box	27	true	done	27	27	0	true	data/card-role-worksheets/ha3-role-review.tsv
 slu	Secret Lair: Ultimate Edition	2020-05-29	box	16	false	done	16	16	0	true	data/card-role-worksheets/slu-role-review.tsv
 fjmp	Jumpstart Front Cards	2020-06-18	memorabilia	46	false	done	46	46	0	true	data/card-role-worksheets/fjmp-role-review.tsv
 ss3	Signature Spellbook: Chandra	2020-06-26	spellbook	8	false	done	8	8	0	true	data/card-role-worksheets/ss3-role-review.tsv
 m21	Core Set 2021	2020-07-03	core	397	false	done	285	285	0	true	data/card-role-worksheets/m21-role-review.tsv
 pm21	Core Set 2021 Promos	2020-07-03	promo	137	false	done	68	68	0	true	data/card-role-worksheets/pm21-role-review.tsv
 tm21	Core Set 2021 Tokens	2020-07-03	token	20	false	done	20	20	0	true	data/card-role-worksheets/tm21-role-review.tsv
-ajmp	Jumpstart Arena Exclusives	2020-07-17	starter	18	true	in_progress	17	18	1	true	data/card-role-worksheets/ajmp-role-review.tsv
-jmp	Jumpstart	2020-07-17	draft_innovation	497	false	in_progress	459	461	2	true	data/card-role-worksheets/jmp-role-review.tsv
+ajmp	Jumpstart Arena Exclusives	2020-07-17	starter	18	true	done	18	18	0	true	data/card-role-worksheets/ajmp-role-review.tsv
+jmp	Jumpstart	2020-07-17	draft_innovation	497	false	done	461	461	0	true	data/card-role-worksheets/jmp-role-review.tsv
 ph19	2019 Heroes of the Realm	2020-08-01	funny	7	false	done	7	7	0	true	data/card-role-worksheets/ph19-role-review.tsv
 2xm	Double Masters	2020-08-07	masters	384	false	done	337	337	0	true	data/card-role-worksheets/2xm-role-review.tsv
 t2xm	Double Masters Tokens	2020-08-07	token	31	false	done	31	31	0	true	data/card-role-worksheets/t2xm-role-review.tsv
-akr	Amonkhet Remastered	2020-08-13	masters	339	true	in_progress	303	309	6	true	data/card-role-worksheets/akr-role-review.tsv
+akr	Amonkhet Remastered	2020-08-13	masters	339	true	done	309	309	0	true	data/card-role-worksheets/akr-role-review.tsv
 anb	Arena Beginner Set	2020-08-13	starter	120	true	done	120	120	0	true	data/card-role-worksheets/anb-role-review.tsv
 aznr	Zendikar Rising Art Series	2020-09-25	memorabilia	81	false	done	68	68	0	true	data/card-role-worksheets/aznr-role-review.tsv
 mznr	Zendikar Rising Minigames	2020-09-25	minigame	5	false	done	5	5	0	true	data/card-role-worksheets/mznr-role-review.tsv
@@ -636,24 +636,24 @@ tznr	Zendikar Rising Tokens	2020-09-25	token	12	false	done	12	12	0	true	data/car
 znc	Zendikar Rising Commander	2020-09-25	commander	142	false	done	140	140	0	true	data/card-role-worksheets/znc-role-review.tsv
 zne	Zendikar Rising Expeditions	2020-09-25	masterpiece	30	false	done	30	30	0	true	data/card-role-worksheets/zne-role-review.tsv
 znr	Zendikar Rising	2020-09-25	expansion	407	false	done	285	285	0	true	data/card-role-worksheets/znr-role-review.tsv
-plst	The List	2020-09-26	masters	5120	false	in_progress	4804	4855	51	true	data/card-role-worksheets/plst-role-review.tsv
-klr	Kaladesh Remastered	2020-11-12	masters	302	true	in_progress	282	292	10	true	data/card-role-worksheets/klr-role-review.tsv
-cmr	Commander Legends	2020-11-20	draft_innovation	718	false	in_progress	528	531	3	true	data/card-role-worksheets/cmr-role-review.tsv
+plst	The List	2020-09-26	masters	5120	false	done	4855	4855	0	true	data/card-role-worksheets/plst-role-review.tsv
+klr	Kaladesh Remastered	2020-11-12	masters	302	true	done	292	292	0	true	data/card-role-worksheets/klr-role-review.tsv
+cmr	Commander Legends	2020-11-20	draft_innovation	718	false	done	531	531	0	true	data/card-role-worksheets/cmr-role-review.tsv
 pcmr	Commander Legends Promos	2020-11-20	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pcmr-role-review.tsv
 tcmr	Commander Legends Tokens	2020-11-20	token	23	false	done	21	21	0	true	data/card-role-worksheets/tcmr-role-review.tsv
 cc1	Commander Collection: Green	2020-12-04	arsenal	8	false	done	8	8	0	true	data/card-role-worksheets/cc1-role-review.tsv
 pj21	Judge Gift Cards 2021	2021-01-01	promo	10	false	done	10	10	0	true	data/card-role-worksheets/pj21-role-review.tsv
 pl21	Year of the Ox 2021	2021-01-25	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pl21-role-review.tsv
 akhm	Kaldheim Art Series	2021-02-05	memorabilia	81	false	done	79	79	0	true	data/card-role-worksheets/akhm-role-review.tsv
-khc	Kaldheim Commander	2021-02-05	commander	119	false	in_progress	116	119	3	true	data/card-role-worksheets/khc-role-review.tsv
-khm	Kaldheim	2021-02-05	expansion	425	false	in_progress	321	323	2	true	data/card-role-worksheets/khm-role-review.tsv
+khc	Kaldheim Commander	2021-02-05	commander	119	false	done	119	119	0	true	data/card-role-worksheets/khc-role-review.tsv
+khm	Kaldheim	2021-02-05	expansion	425	false	done	323	323	0	true	data/card-role-worksheets/khm-role-review.tsv
 mkhm	Kaldheim Minigames	2021-02-05	minigame	5	false	done	5	5	0	true	data/card-role-worksheets/mkhm-role-review.tsv
 pkhm	Kaldheim Promos	2021-02-05	promo	158	false	done	88	88	0	true	data/card-role-worksheets/pkhm-role-review.tsv
 skhm	Kaldheim Substitute Cards	2021-02-05	token	9	false	done	1	1	0	true	data/card-role-worksheets/skhm-role-review.tsv
 tkhc	Kaldheim Commander Tokens	2021-02-05	token	8	false	done	8	8	0	true	data/card-role-worksheets/tkhc-role-review.tsv
 tkhm	Kaldheim Tokens	2021-02-05	token	23	false	done	23	23	0	true	data/card-role-worksheets/tkhm-role-review.tsv
 ha4	Historic Anthology 4	2021-03-11	box	25	true	done	25	25	0	true	data/card-role-worksheets/ha4-role-review.tsv
-tsr	Time Spiral Remastered	2021-03-19	masters	411	false	in_progress	408	410	2	true	data/card-role-worksheets/tsr-role-review.tsv
+tsr	Time Spiral Remastered	2021-03-19	masters	411	false	done	410	410	0	true	data/card-role-worksheets/tsr-role-review.tsv
 ttsr	Time Spiral Remastered Tokens	2021-03-19	token	15	false	done	15	15	0	true	data/card-role-worksheets/ttsr-role-review.tsv
 astx	Strixhaven Art Series	2021-04-23	memorabilia	162	false	done	80	80	0	true	data/card-role-worksheets/astx-role-review.tsv
 c21	Commander 2021	2021-04-23	commander	409	false	done	329	329	0	true	data/card-role-worksheets/c21-role-review.tsv
@@ -661,8 +661,8 @@ mstx	Strixhaven: School of Mages Minigames	2021-04-23	minigame	5	false	done	5	5	
 oc21	Commander 2021 Display Commanders	2021-04-23	memorabilia	5	false	done	5	5	0	true	data/card-role-worksheets/oc21-role-review.tsv
 pstx	Strixhaven: School of Mages Promos	2021-04-23	promo	164	false	done	90	90	0	true	data/card-role-worksheets/pstx-role-review.tsv
 sstx	Strixhaven: School of Mages Substitute Cards	2021-04-23	token	9	false	done	1	1	0	true	data/card-role-worksheets/sstx-role-review.tsv
-sta	Strixhaven Mystical Archive	2021-04-23	masterpiece	126	false	in_progress	61	63	2	true	data/card-role-worksheets/sta-role-review.tsv
-stx	Strixhaven: School of Mages	2021-04-23	expansion	393	false	in_progress	288	290	2	true	data/card-role-worksheets/stx-role-review.tsv
+sta	Strixhaven Mystical Archive	2021-04-23	masterpiece	126	false	done	63	63	0	true	data/card-role-worksheets/sta-role-review.tsv
+stx	Strixhaven: School of Mages	2021-04-23	expansion	393	false	done	290	290	0	true	data/card-role-worksheets/stx-role-review.tsv
 tc21	Commander 2021 Tokens	2021-04-23	token	30	false	done	30	30	0	true	data/card-role-worksheets/tc21-role-review.tsv
 tstx	Strixhaven: School of Mages Tokens	2021-04-23	token	9	false	done	9	9	0	true	data/card-role-worksheets/tstx-role-review.tsv
 ha5	Historic Anthology 5	2021-05-27	box	25	true	done	25	25	0	true	data/card-role-worksheets/ha5-role-review.tsv
@@ -676,7 +676,7 @@ tmh2	Modern Horizons 2 Tokens	2021-06-18	token	21	false	done	18	18	0	true	data/c
 plg21	Love Your LGS 2021	2021-06-22	promo	11	false	done	9	9	0	true	data/card-role-worksheets/plg21-role-review.tsv
 aafr	Adventures in the Forgotten Realms Art Series	2021-07-23	memorabilia	81	false	done	76	76	0	true	data/card-role-worksheets/aafr-role-review.tsv
 afc	Forgotten Realms Commander	2021-07-23	commander	331	false	done	275	275	0	true	data/card-role-worksheets/afc-role-review.tsv
-afr	Adventures in the Forgotten Realms	2021-07-23	expansion	424	false	in_progress	286	288	2	true	data/card-role-worksheets/afr-role-review.tsv
+afr	Adventures in the Forgotten Realms	2021-07-23	expansion	424	false	done	288	288	0	true	data/card-role-worksheets/afr-role-review.tsv
 mafr	Adventures in the Forgotten Realms Minigames	2021-07-23	minigame	5	false	done	5	5	0	true	data/card-role-worksheets/mafr-role-review.tsv
 oafc	Forgotten Realms Commander Display Commanders	2021-07-23	memorabilia	4	false	done	4	4	0	true	data/card-role-worksheets/oafc-role-review.tsv
 oafr	Forgotten Realms Oversized Cards	2021-07-23	memorabilia	3	false	done	3	3	0	true	data/card-role-worksheets/oafr-role-review.tsv
@@ -685,9 +685,9 @@ tafc	Forgotten Realms Commander Tokens	2021-07-23	token	13	false	done	13	13	0	tr
 tafr	Adventures in the Forgotten Realms Tokens	2021-07-23	token	22	false	done	22	22	0	true	data/card-role-worksheets/tafr-role-review.tsv
 ph20	2020 Heroes of the Realm	2021-08-01	funny	3	false	done	3	3	0	true	data/card-role-worksheets/ph20-role-review.tsv
 cmb2	Mystery Booster Playtest Cards 2021	2021-08-20	funny	121	false	done	121	121	0	true	data/card-role-worksheets/cmb2-role-review.tsv
-j21	Jumpstart: Historic Horizons	2021-08-26	draft_innovation	389	true	in_progress	386	389	3	true	data/card-role-worksheets/j21-role-review.tsv
+j21	Jumpstart: Historic Horizons	2021-08-26	draft_innovation	389	true	done	389	389	0	true	data/card-role-worksheets/j21-role-review.tsv
 amid	Midnight Hunt Art Series	2021-09-24	memorabilia	81	false	done	75	75	0	true	data/card-role-worksheets/amid-role-review.tsv
-mic	Midnight Hunt Commander	2021-09-24	commander	187	false	in_progress	147	149	2	true	data/card-role-worksheets/mic-role-review.tsv
+mic	Midnight Hunt Commander	2021-09-24	commander	187	false	done	149	149	0	true	data/card-role-worksheets/mic-role-review.tsv
 mid	Innistrad: Midnight Hunt	2021-09-24	expansion	399	false	done	279	279	0	true	data/card-role-worksheets/mid-role-review.tsv
 mmid	Innistrad: Midnight Hunt Minigames	2021-09-24	minigame	3	false	done	3	3	0	true	data/card-role-worksheets/mmid-role-review.tsv
 omic	Midnight Hunt Commander Display Commanders	2021-09-24	memorabilia	2	false	done	2	2	0	true	data/card-role-worksheets/omic-role-review.tsv
@@ -703,16 +703,16 @@ pvow	Innistrad: Crimson Vow Promos	2021-11-19	promo	121	false	done	84	84	0	true	
 svow	Innistrad: Crimson Vow Substitute Cards	2021-11-19	token	9	false	done	1	1	0	true	data/card-role-worksheets/svow-role-review.tsv
 tvoc	Crimson Vow Commander Tokens	2021-11-19	token	6	false	done	6	6	0	true	data/card-role-worksheets/tvoc-role-review.tsv
 tvow	Innistrad: Crimson Vow Tokens	2021-11-19	token	21	false	done	21	21	0	true	data/card-role-worksheets/tvow-role-review.tsv
-voc	Crimson Vow Commander	2021-11-19	commander	188	false	in_progress	149	150	1	true	data/card-role-worksheets/voc-role-review.tsv
-vow	Innistrad: Crimson Vow	2021-11-19	expansion	423	false	in_progress	279	283	4	true	data/card-role-worksheets/vow-role-review.tsv
+voc	Crimson Vow Commander	2021-11-19	commander	188	false	done	150	150	0	true	data/card-role-worksheets/voc-role-review.tsv
+vow	Innistrad: Crimson Vow	2021-11-19	expansion	423	false	done	283	283	0	true	data/card-role-worksheets/vow-role-review.tsv
 ymid	Alchemy: Innistrad	2021-12-09	alchemy	63	true	done	63	63	0	true	data/card-role-worksheets/ymid-role-review.tsv
-p22	Judge Gift Cards 2022	2022-01-01	promo	10	false	in_progress	9	10	1	true	data/card-role-worksheets/p22-role-review.tsv
+p22	Judge Gift Cards 2022	2022-01-01	promo	10	false	done	10	10	0	true	data/card-role-worksheets/p22-role-review.tsv
 cc2	Commander Collection: Black	2022-01-28	arsenal	9	false	done	9	9	0	true	data/card-role-worksheets/cc2-role-review.tsv
-dbl	Innistrad: Double Feature	2022-01-28	draft_innovation	535	false	in_progress	528	532	4	true	data/card-role-worksheets/dbl-role-review.tsv
+dbl	Innistrad: Double Feature	2022-01-28	draft_innovation	535	false	done	532	532	0	true	data/card-role-worksheets/dbl-role-review.tsv
 aneo	Neon Dynasty Art Series	2022-02-18	memorabilia	81	false	done	72	72	0	true	data/card-role-worksheets/aneo-role-review.tsv
 mneo	Kamigawa: Neon Dynasty Minigames	2022-02-18	minigame	3	false	done	3	3	0	true	data/card-role-worksheets/mneo-role-review.tsv
-nec	Neon Dynasty Commander	2022-02-18	commander	179	false	in_progress	136	139	3	true	data/card-role-worksheets/nec-role-review.tsv
-neo	Kamigawa: Neon Dynasty	2022-02-18	expansion	531	false	in_progress	296	304	8	true	data/card-role-worksheets/neo-role-review.tsv
+nec	Neon Dynasty Commander	2022-02-18	commander	179	false	done	139	139	0	true	data/card-role-worksheets/nec-role-review.tsv
+neo	Kamigawa: Neon Dynasty	2022-02-18	expansion	531	false	done	304	304	0	true	data/card-role-worksheets/neo-role-review.tsv
 pneo	Kamigawa: Neon Dynasty Promos	2022-02-18	promo	148	false	done	77	77	0	true	data/card-role-worksheets/pneo-role-review.tsv
 sneo	Kamigawa: Neon Dynasty Substitute Cards	2022-02-18	token	9	false	done	1	1	0	true	data/card-role-worksheets/sneo-role-review.tsv
 tnec	Neon Dynasty Commander Tokens	2022-02-18	token	12	false	done	12	12	0	true	data/card-role-worksheets/tnec-role-review.tsv
@@ -725,34 +725,34 @@ q07	Challenger Decks 2022	2022-04-01	box	1	false	done	1	1	0	true	data/card-role-
 gdy	Game Day Promos	2022-04-08	promo	9	false	done	9	9	0	true	data/card-role-worksheets/gdy-role-review.tsv
 asnc	New Capenna Art Series	2022-04-29	memorabilia	81	false	done	75	75	0	true	data/card-role-worksheets/asnc-role-review.tsv
 msnc	Streets of New Capenna Minigames	2022-04-29	minigame	3	false	done	3	3	0	true	data/card-role-worksheets/msnc-role-review.tsv
-ncc	New Capenna Commander	2022-04-29	commander	447	false	in_progress	347	350	3	true	data/card-role-worksheets/ncc-role-review.tsv
+ncc	New Capenna Commander	2022-04-29	commander	447	false	done	350	350	0	true	data/card-role-worksheets/ncc-role-review.tsv
 pncc	New Capenna Commander Promos	2022-04-29	promo	75	false	done	75	75	0	true	data/card-role-worksheets/pncc-role-review.tsv
-psnc	Streets of New Capenna Promos	2022-04-29	promo	161	false	in_progress	79	80	1	true	data/card-role-worksheets/psnc-role-review.tsv
-snc	Streets of New Capenna	2022-04-29	expansion	513	false	in_progress	306	310	4	true	data/card-role-worksheets/snc-role-review.tsv
+psnc	Streets of New Capenna Promos	2022-04-29	promo	161	false	done	80	80	0	true	data/card-role-worksheets/psnc-role-review.tsv
+snc	Streets of New Capenna	2022-04-29	expansion	513	false	done	310	310	0	true	data/card-role-worksheets/snc-role-review.tsv
 tncc	New Capenna Commander Tokens	2022-04-29	token	36	false	done	36	36	0	true	data/card-role-worksheets/tncc-role-review.tsv
 tsnc	Streets of New Capenna Tokens	2022-04-29	token	19	false	done	14	14	0	true	data/card-role-worksheets/tsnc-role-review.tsv
 ptsnc	Streets of New Capenna Southeast Asia Tokens	2022-04-30	promo	6	false	done	1	1	0	true	data/card-role-worksheets/ptsnc-role-review.tsv
 ysnc	Alchemy: New Capenna	2022-06-02	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/ysnc-role-review.tsv
 aclb	Battle for Baldur's Gate Art Series	2022-06-10	memorabilia	81	false	done	65	65	0	true	data/card-role-worksheets/aclb-role-review.tsv
-clb	Commander Legends: Battle for Baldur's Gate	2022-06-10	draft_innovation	936	false	in_progress	641	651	10	true	data/card-role-worksheets/clb-role-review.tsv
+clb	Commander Legends: Battle for Baldur's Gate	2022-06-10	draft_innovation	936	false	done	651	651	0	true	data/card-role-worksheets/clb-role-review.tsv
 mclb	Commander Legends: Battle for Baldur's Gate Minigames	2022-06-10	minigame	3	false	done	3	3	0	true	data/card-role-worksheets/mclb-role-review.tsv
 oclb	Battle for Baldur's Gate Oversized Cards	2022-06-10	memorabilia	1	false	done	1	1	0	true	data/card-role-worksheets/oclb-role-review.tsv
-pclb	Battle for Baldur's Gate Promos	2022-06-10	promo	104	false	in_progress	94	99	5	true	data/card-role-worksheets/pclb-role-review.tsv
+pclb	Battle for Baldur's Gate Promos	2022-06-10	promo	104	false	done	99	99	0	true	data/card-role-worksheets/pclb-role-review.tsv
 tclb	Battle for Baldur's Gate Tokens	2022-06-10	token	51	false	done	51	51	0	true	data/card-role-worksheets/tclb-role-review.tsv
 plg22	Love Your LGS 2022	2022-07-01	promo	2	false	done	2	2	0	true	data/card-role-worksheets/plg22-role-review.tsv
 hbg	Alchemy Horizons: Baldur's Gate	2022-07-07	alchemy	436	true	done	421	421	0	true	data/card-role-worksheets/hbg-role-review.tsv
-2x2	Double Masters 2022	2022-07-08	masters	579	false	in_progress	331	332	1	true	data/card-role-worksheets/2x2-role-review.tsv
+2x2	Double Masters 2022	2022-07-08	masters	579	false	done	332	332	0	true	data/card-role-worksheets/2x2-role-review.tsv
 t2x2	Double Masters 2022 Tokens	2022-07-08	token	24	false	done	24	24	0	true	data/card-role-worksheets/t2x2-role-review.tsv
 sch	Store Championships	2022-07-09	promo	50	false	done	50	50	0	true	data/card-role-worksheets/sch-role-review.tsv
-ea1	Explorer Anthology 1	2022-07-28	box	20	true	in_progress	18	20	2	true	data/card-role-worksheets/ea1-role-review.tsv
+ea1	Explorer Anthology 1	2022-07-28	box	20	true	done	20	20	0	true	data/card-role-worksheets/ea1-role-review.tsv
 ha6	Historic Anthology 6	2022-07-28	box	20	true	done	20	20	0	true	data/card-role-worksheets/ha6-role-review.tsv
 ph21	2021 Heroes of the Realm	2022-08-01	funny	4	false	done	4	4	0	true	data/card-role-worksheets/ph21-role-review.tsv
 psvc	Summer Vacation Promos 2022	2022-08-01	promo	3	false	done	3	3	0	true	data/card-role-worksheets/psvc-role-review.tsv
 p30a	30th Anniversary Play Promos	2022-09-02	promo	30	false	done	30	30	0	true	data/card-role-worksheets/p30a-role-review.tsv
 p30m	30th Anniversary Misc Promos	2022-09-02	promo	5	false	done	3	3	0	true	data/card-role-worksheets/p30m-role-review.tsv
 admu	Dominaria United Art Series	2022-09-09	memorabilia	81	false	done	73	73	0	true	data/card-role-worksheets/admu-role-review.tsv
-dmc	Dominaria United Commander	2022-09-09	commander	240	false	in_progress	190	192	2	true	data/card-role-worksheets/dmc-role-review.tsv
-dmu	Dominaria United	2022-09-09	expansion	453	false	in_progress	287	288	1	true	data/card-role-worksheets/dmu-role-review.tsv
+dmc	Dominaria United Commander	2022-09-09	commander	240	false	done	192	192	0	true	data/card-role-worksheets/dmc-role-review.tsv
+dmu	Dominaria United	2022-09-09	expansion	453	false	done	288	288	0	true	data/card-role-worksheets/dmu-role-review.tsv
 fdmu	Dominaria United Jumpstart Front Cards	2022-09-09	memorabilia	10	false	done	10	10	0	true	data/card-role-worksheets/fdmu-role-review.tsv
 mdmu	Dominaria United Minigames	2022-09-09	minigame	3	false	done	3	3	0	true	data/card-role-worksheets/mdmu-role-review.tsv
 p30h	30th Anniversary History Promos	2022-09-09	promo	10	false	done	5	5	0	true	data/card-role-worksheets/p30h-role-review.tsv
@@ -763,20 +763,20 @@ tdmu	Dominaria United Tokens	2022-09-09	token	26	false	done	26	26	0	true	data/ca
 wdmu	DMU Japanese Promo Tokens	2022-09-09	token	5	false	done	5	5	0	true	data/card-role-worksheets/wdmu-role-review.tsv
 prcq	Regional Championship Qualifiers 2022	2022-10-01	promo	3	false	done	3	3	0	true	data/card-role-worksheets/prcq-role-review.tsv
 ydmu	Alchemy: Dominaria	2022-10-05	alchemy	39	true	done	39	39	0	true	data/card-role-worksheets/ydmu-role-review.tsv
-40k	Warhammer 40,000 Commander	2022-10-07	commander	617	false	in_progress	284	286	2	true	data/card-role-worksheets/40k-role-review.tsv
+40k	Warhammer 40,000 Commander	2022-10-07	commander	617	false	done	286	286	0	true	data/card-role-worksheets/40k-role-review.tsv
 sunf	Unfinity Sticker Sheets	2022-10-07	funny	48	false	done	48	48	0	true	data/card-role-worksheets/sunf-role-review.tsv
 t40k	Warhammer 40,000 Tokens	2022-10-07	token	31	false	done	21	21	0	true	data/card-role-worksheets/t40k-role-review.tsv
 tunf	Unfinity Tokens	2022-10-07	token	14	false	done	11	11	0	true	data/card-role-worksheets/tunf-role-review.tsv
 ulst	The List (Unfinity Foil Edition)	2022-10-07	funny	62	false	done	62	62	0	true	data/card-role-worksheets/ulst-role-review.tsv
 unf	Unfinity	2022-10-07	funny	639	false	done	266	266	0	true	data/card-role-worksheets/unf-role-review.tsv
-gn3	Game Night: Free-for-All	2022-10-14	box	135	false	in_progress	124	125	1	true	data/card-role-worksheets/gn3-role-review.tsv
+gn3	Game Night: Free-for-All	2022-10-14	box	135	false	done	125	125	0	true	data/card-role-worksheets/gn3-role-review.tsv
 tgn3	Game Night: Free-for-All Tokens	2022-10-14	token	10	false	done	10	10	0	true	data/card-role-worksheets/tgn3-role-review.tsv
 slc	Secret Lair Countdown	2022-11-01	box	84	false	done	58	58	0	true	data/card-role-worksheets/slc-role-review.tsv
 abro	The Brothers' War Art Series	2022-11-18	memorabilia	81	false	done	79	79	0	true	data/card-role-worksheets/abro-role-review.tsv
 bot	Transformers	2022-11-18	eternal	29	false	done	15	15	0	true	data/card-role-worksheets/bot-role-review.tsv
 brc	The Brothers' War Commander	2022-11-18	commander	209	false	done	176	176	0	true	data/card-role-worksheets/brc-role-review.tsv
-bro	The Brothers' War	2022-11-18	expansion	399	false	in_progress	290	292	2	true	data/card-role-worksheets/bro-role-review.tsv
-brr	The Brothers' War Retro Artifacts	2022-11-18	masterpiece	189	false	in_progress	62	63	1	true	data/card-role-worksheets/brr-role-review.tsv
+bro	The Brothers' War	2022-11-18	expansion	399	false	done	292	292	0	true	data/card-role-worksheets/bro-role-review.tsv
+brr	The Brothers' War Retro Artifacts	2022-11-18	masterpiece	189	false	done	63	63	0	true	data/card-role-worksheets/brr-role-review.tsv
 fbro	The Brothers' War Jumpstart Front Cards	2022-11-18	memorabilia	5	false	done	5	5	0	true	data/card-role-worksheets/fbro-role-review.tsv
 mbro	The Brothers' War Minigames	2022-11-18	minigame	3	false	done	3	3	0	true	data/card-role-worksheets/mbro-role-review.tsv
 pbro	The Brothers' War Promos	2022-11-18	promo	171	false	done	90	90	0	true	data/card-role-worksheets/pbro-role-review.tsv
@@ -789,10 +789,10 @@ pewk	Eternal Weekend	2022-11-26	promo	10	false	done	10	10	0	true	data/card-role-
 30a	30th Anniversary Edition	2022-11-28	memorabilia	594	false	done	286	286	0	true	data/card-role-worksheets/30a-role-review.tsv
 t30a	30th Anniversary Tokens	2022-11-28	token	16	false	done	13	13	0	true	data/card-role-worksheets/t30a-role-review.tsv
 fj22	Jumpstart 2022 Front Cards	2022-12-02	memorabilia	46	false	done	46	46	0	true	data/card-role-worksheets/fj22-role-review.tsv
-j22	Jumpstart 2022	2022-12-02	draft_innovation	835	false	in_progress	813	819	6	true	data/card-role-worksheets/j22-role-review.tsv
-scd	Starter Commander Decks	2022-12-02	commander	352	false	in_progress	336	337	1	true	data/card-role-worksheets/scd-role-review.tsv
+j22	Jumpstart 2022	2022-12-02	draft_innovation	835	false	done	819	819	0	true	data/card-role-worksheets/j22-role-review.tsv
+scd	Starter Commander Decks	2022-12-02	commander	352	false	done	337	337	0	true	data/card-role-worksheets/scd-role-review.tsv
 tscd	Starter Commander Deck Tokens	2022-12-02	token	27	false	done	27	27	0	true	data/card-role-worksheets/tscd-role-review.tsv
-ea2	Explorer Anthology 2	2022-12-13	box	25	true	in_progress	24	25	1	true	data/card-role-worksheets/ea2-role-review.tsv
+ea2	Explorer Anthology 2	2022-12-13	box	25	true	done	25	25	0	true	data/card-role-worksheets/ea2-role-review.tsv
 ybro	Alchemy: The Brothers' War	2022-12-13	alchemy	31	true	done	31	31	0	true	data/card-role-worksheets/ybro-role-review.tsv
 p23	Judge Gift Cards 2023	2023-01-01	promo	10	false	done	10	10	0	true	data/card-role-worksheets/p23-role-review.tsv
 pw23	Wizards Play Network 2023	2023-01-01	promo	11	false	done	11	11	0	true	data/card-role-worksheets/pw23-role-review.tsv
@@ -806,18 +806,18 @@ mone	Phyrexia: All Will Be One Minigames	2023-02-03	minigame	5	false	done	5	5	0	
 tonc	Phyrexia: All Will Be One Commander Tokens	2023-02-03	token	23	false	done	23	23	0	true	data/card-role-worksheets/tonc-role-review.tsv
 tone	Phyrexia: All Will Be One Tokens	2023-02-03	token	14	false	done	13	13	0	true	data/card-role-worksheets/tone-role-review.tsv
 onc	Phyrexia: All Will Be One Commander	2023-02-10	commander	174	false	done	144	144	0	true	data/card-role-worksheets/onc-role-review.tsv
-one	Phyrexia: All Will Be One	2023-02-10	expansion	479	false	in_progress	269	271	2	true	data/card-role-worksheets/one-role-review.tsv
+one	Phyrexia: All Will Be One	2023-02-10	expansion	479	false	done	271	271	0	true	data/card-role-worksheets/one-role-review.tsv
 pl23	Year of the Rabbit 2023	2023-02-10	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pl23-role-review.tsv
-pone	Phyrexia: All Will Be One Promos	2023-02-10	promo	160	false	in_progress	78	80	2	true	data/card-role-worksheets/pone-role-review.tsv
+pone	Phyrexia: All Will Be One Promos	2023-02-10	promo	160	false	done	80	80	0	true	data/card-role-worksheets/pone-role-review.tsv
 unk	Unknown Event	2023-02-15	funny	512	false	done	506	506	0	true	data/card-role-worksheets/unk-role-review.tsv
 slp	Secret Lair Promo	2023-02-17	promo	54	false	done	52	52	0	true	data/card-role-worksheets/slp-role-review.tsv
 yone	Alchemy: Phyrexia	2023-02-28	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/yone-role-review.tsv
-sir	Shadows over Innistrad Remastered	2023-03-21	masters	294	true	in_progress	283	284	1	true	data/card-role-worksheets/sir-role-review.tsv
+sir	Shadows over Innistrad Remastered	2023-03-21	masters	294	true	done	284	284	0	true	data/card-role-worksheets/sir-role-review.tsv
 sis	Shadows of the Past	2023-03-21	masters	76	true	done	76	76	0	true	data/card-role-worksheets/sis-role-review.tsv
 amom	March of the Machine Art Series	2023-04-21	memorabilia	81	false	done	78	78	0	true	data/card-role-worksheets/amom-role-review.tsv
 fmom	March of the Machine Jumpstart Front Cards	2023-04-21	memorabilia	5	false	done	5	5	0	true	data/card-role-worksheets/fmom-role-review.tsv
-moc	March of the Machine Commander	2023-04-21	commander	450	false	in_progress	384	388	4	true	data/card-role-worksheets/moc-role-review.tsv
-mom	March of the Machine	2023-04-21	expansion	387	false	in_progress	294	296	2	true	data/card-role-worksheets/mom-role-review.tsv
+moc	March of the Machine Commander	2023-04-21	commander	450	false	done	388	388	0	true	data/card-role-worksheets/moc-role-review.tsv
+mom	March of the Machine	2023-04-21	expansion	387	false	done	296	296	0	true	data/card-role-worksheets/mom-role-review.tsv
 mul	Multiverse Legends	2023-04-21	masterpiece	261	false	done	66	66	0	true	data/card-role-worksheets/mul-role-review.tsv
 pmom	March of the Machine Promos	2023-04-21	promo	134	false	done	80	80	0	true	data/card-role-worksheets/pmom-role-review.tsv
 smom	March of the Machine Substitute Cards	2023-04-21	token	1	false	done	1	1	0	true	data/card-role-worksheets/smom-role-review.tsv
@@ -825,13 +825,13 @@ tmoc	March of the Machine Commander Tokens	2023-04-21	token	46	false	done	46	46	
 tmom	March of the Machine Tokens	2023-04-21	token	23	false	done	20	20	0	true	data/card-role-worksheets/tmom-role-review.tsv
 tmul	Multiverse Legends Tokens	2023-04-21	token	2	false	done	2	2	0	true	data/card-role-worksheets/tmul-role-review.tsv
 wmom	MOM Japanese Promo Tokens	2023-04-21	token	12	false	done	11	11	0	true	data/card-role-worksheets/wmom-role-review.tsv
-mat	March of the Machine: The Aftermath	2023-05-12	expansion	230	false	in_progress	49	50	1	true	data/card-role-worksheets/mat-role-review.tsv
+mat	March of the Machine: The Aftermath	2023-05-12	expansion	230	false	done	50	50	0	true	data/card-role-worksheets/mat-role-review.tsv
 altr	Tales of Middle-earth Art Series	2023-06-23	memorabilia	81	false	done	78	78	0	true	data/card-role-worksheets/altr-role-review.tsv
 fltr	Tales of Middle-earth Front Cards	2023-06-23	memorabilia	10	false	done	10	10	0	true	data/card-role-worksheets/fltr-role-review.tsv
-ltc	Tales of Middle-earth Commander	2023-06-23	commander	591	false	in_progress	339	341	2	true	data/card-role-worksheets/ltc-role-review.tsv
-ltr	The Lord of the Rings: Tales of Middle-earth	2023-06-23	draft_innovation	856	false	in_progress	288	291	3	true	data/card-role-worksheets/ltr-role-review.tsv
+ltc	Tales of Middle-earth Commander	2023-06-23	commander	591	false	done	341	341	0	true	data/card-role-worksheets/ltc-role-review.tsv
+ltr	The Lord of the Rings: Tales of Middle-earth	2023-06-23	draft_innovation	856	false	done	291	291	0	true	data/card-role-worksheets/ltr-role-review.tsv
 mltr	The Lord of the Rings: Tales of Middle-earth Minigames	2023-06-23	minigame	1	false	done	1	1	0	true	data/card-role-worksheets/mltr-role-review.tsv
-pltr	Tales of Middle-earth Promos	2023-06-23	promo	86	false	in_progress	83	84	1	true	data/card-role-worksheets/pltr-role-review.tsv
+pltr	Tales of Middle-earth Promos	2023-06-23	promo	86	false	done	84	84	0	true	data/card-role-worksheets/pltr-role-review.tsv
 tltc	Tales of Middle-earth Commander Tokens	2023-06-23	token	15	false	done	15	15	0	true	data/card-role-worksheets/tltc-role-review.tsv
 tltr	Tales of Middle-earth Tokens	2023-06-23	token	25	false	done	9	9	0	true	data/card-role-worksheets/tltr-role-review.tsv
 pf23	MagicFest 2023	2023-07-01	promo	4	false	done	4	4	0	true	data/card-role-worksheets/pf23-role-review.tsv
@@ -839,7 +839,7 @@ ea3	Explorer Anthology 3	2023-07-18	box	25	true	done	25	25	0	true	data/card-role
 ha7	Historic Anthology 7	2023-07-18	box	25	true	done	25	25	0	true	data/card-role-worksheets/ha7-role-review.tsv
 ph22	2022 Heroes of the Realm	2023-08-01	funny	5	false	done	5	5	0	true	data/card-role-worksheets/ph22-role-review.tsv
 acmm	Commander Masters Art Series	2023-08-04	memorabilia	81	false	done	78	78	0	true	data/card-role-worksheets/acmm-role-review.tsv
-cmm	Commander Masters	2023-08-04	masters	1067	false	in_progress	732	737	5	true	data/card-role-worksheets/cmm-role-review.tsv
+cmm	Commander Masters	2023-08-04	masters	1067	false	done	737	737	0	true	data/card-role-worksheets/cmm-role-review.tsv
 tcmm	Commander Masters Tokens	2023-08-04	token	81	false	done	80	80	0	true	data/card-role-worksheets/tcmm-role-review.tsv
 p30t	30th Anniversary Celebration Tokyo	2023-09-01	promo	2	false	done	2	2	0	true	data/card-role-worksheets/p30t-role-review.tsv
 awoe	Wilds of Eldraine Art Series	2023-09-08	memorabilia	81	false	done	76	76	0	true	data/card-role-worksheets/awoe-role-review.tsv
@@ -848,49 +848,49 @@ ptsr	Time Spiral Remastered Promos	2023-09-08	promo	3	false	done	3	3	0	true	data
 pwoe	Wilds of Eldraine Promos	2023-09-08	promo	160	false	done	80	80	0	true	data/card-role-worksheets/pwoe-role-review.tsv
 twoc	Wilds of Eldraine Commander Tokens	2023-09-08	token	10	false	done	10	10	0	true	data/card-role-worksheets/twoc-role-review.tsv
 twoe	Wilds of Eldraine Tokens	2023-09-08	token	18	false	done	15	15	0	true	data/card-role-worksheets/twoe-role-review.tsv
-woc	Wilds of Eldraine Commander	2023-09-08	commander	173	false	in_progress	140	143	3	true	data/card-role-worksheets/woc-role-review.tsv
-woe	Wilds of Eldraine	2023-09-08	expansion	381	false	in_progress	280	281	1	true	data/card-role-worksheets/woe-role-review.tsv
-wot	Wilds of Eldraine: Enchanting Tales	2023-09-08	masterpiece	103	false	in_progress	61	63	2	true	data/card-role-worksheets/wot-role-review.tsv
+woc	Wilds of Eldraine Commander	2023-09-08	commander	173	false	done	143	143	0	true	data/card-role-worksheets/woc-role-review.tsv
+woe	Wilds of Eldraine	2023-09-08	expansion	381	false	done	281	281	0	true	data/card-role-worksheets/woe-role-review.tsv
+wot	Wilds of Eldraine: Enchanting Tales	2023-09-08	masterpiece	103	false	done	63	63	0	true	data/card-role-worksheets/wot-role-review.tsv
 wwoe	WOE Japanese Promo Tokens	2023-09-08	token	6	false	done	6	6	0	true	data/card-role-worksheets/wwoe-role-review.tsv
 ywoe	Alchemy: Wilds of Eldraine	2023-10-10	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/ywoe-role-review.tsv
 twho	Doctor Who Tokens	2023-10-13	token	64	false	done	25	25	0	true	data/card-role-worksheets/twho-role-review.tsv
-who	Doctor Who	2023-10-13	commander	1178	false	in_progress	356	358	2	true	data/card-role-worksheets/who-role-review.tsv
+who	Doctor Who	2023-10-13	commander	1178	false	done	358	358	0	true	data/card-role-worksheets/who-role-review.tsv
 altc	Tales of Middle-earth Scene Box	2023-11-04	memorabilia	24	false	done	24	24	0	true	data/card-role-worksheets/altc-role-review.tsv
 alci	The Lost Caverns of Ixalan Art Series	2023-11-17	memorabilia	81	false	done	71	71	0	true	data/card-role-worksheets/alci-role-review.tsv
-lcc	The Lost Caverns of Ixalan Commander	2023-11-17	commander	370	false	in_progress	312	313	1	true	data/card-role-worksheets/lcc-role-review.tsv
-lci	The Lost Caverns of Ixalan	2023-11-17	expansion	416	false	in_progress	288	292	4	true	data/card-role-worksheets/lci-role-review.tsv
-plci	The Lost Caverns of Ixalan Promos	2023-11-17	promo	136	false	in_progress	67	68	1	true	data/card-role-worksheets/plci-role-review.tsv
+lcc	The Lost Caverns of Ixalan Commander	2023-11-17	commander	370	false	done	313	313	0	true	data/card-role-worksheets/lcc-role-review.tsv
+lci	The Lost Caverns of Ixalan	2023-11-17	expansion	416	false	done	292	292	0	true	data/card-role-worksheets/lci-role-review.tsv
+plci	The Lost Caverns of Ixalan Promos	2023-11-17	promo	136	false	done	68	68	0	true	data/card-role-worksheets/plci-role-review.tsv
 pmat	March of the Machine: The Aftermath Promos	2023-11-17	promo	8	false	done	8	8	0	true	data/card-role-worksheets/pmat-role-review.tsv
 rex	Jurassic World Collection	2023-11-17	eternal	45	false	done	26	26	0	true	data/card-role-worksheets/rex-role-review.tsv
 slci	The Lost Caverns of Ixalan Substitute Cards	2023-11-17	token	1	false	done	1	1	0	true	data/card-role-worksheets/slci-role-review.tsv
-spg	Special Guests	2023-11-17	masterpiece	165	false	in_progress	138	139	1	true	data/card-role-worksheets/spg-role-review.tsv
+spg	Special Guests	2023-11-17	masterpiece	165	false	done	139	139	0	true	data/card-role-worksheets/spg-role-review.tsv
 tlcc	The Lost Caverns of Ixalan Commander Tokens	2023-11-17	token	18	false	done	18	18	0	true	data/card-role-worksheets/tlcc-role-review.tsv
 tlci	The Lost Caverns of Ixalan Tokens	2023-11-17	token	19	false	done	19	19	0	true	data/card-role-worksheets/tlci-role-review.tsv
 trex	Jurassic World Collection Tokens	2023-11-17	token	2	false	done	2	2	0	true	data/card-role-worksheets/trex-role-review.tsv
 ylci	Alchemy: Ixalan	2023-12-05	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/ylci-role-review.tsv
 pf24	MagicFest 2024	2024-01-01	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pf24-role-review.tsv
 pw24	Wizards Play Network 2024	2024-01-01	promo	18	false	done	18	18	0	true	data/card-role-worksheets/pw24-role-review.tsv
-rvr	Ravnica Remastered	2024-01-12	masters	531	false	in_progress	311	313	2	true	data/card-role-worksheets/rvr-role-review.tsv
+rvr	Ravnica Remastered	2024-01-12	masters	531	false	done	313	313	0	true	data/card-role-worksheets/rvr-role-review.tsv
 trvr	Ravnica Remastered Tokens	2024-01-12	token	20	false	done	20	20	0	true	data/card-role-worksheets/trvr-role-review.tsv
 pl24	Year of the Dragon 2024	2024-02-08	promo	7	false	done	7	7	0	true	data/card-role-worksheets/pl24-role-review.tsv
 amkm	Murders at Karlov Manor Art Series	2024-02-09	memorabilia	49	false	done	43	43	0	true	data/card-role-worksheets/amkm-role-review.tsv
-mkc	Murders at Karlov Manor Commander	2024-02-09	commander	358	false	in_progress	303	304	1	true	data/card-role-worksheets/mkc-role-review.tsv
-mkm	Murders at Karlov Manor	2024-02-09	expansion	451	false	in_progress	275	279	4	true	data/card-role-worksheets/mkm-role-review.tsv
-pmkm	Murders at Karlov Manor Promos	2024-02-09	promo	180	false	in_progress	88	90	2	true	data/card-role-worksheets/pmkm-role-review.tsv
+mkc	Murders at Karlov Manor Commander	2024-02-09	commander	358	false	done	304	304	0	true	data/card-role-worksheets/mkc-role-review.tsv
+mkm	Murders at Karlov Manor	2024-02-09	expansion	451	false	done	279	279	0	true	data/card-role-worksheets/mkm-role-review.tsv
+pmkm	Murders at Karlov Manor Promos	2024-02-09	promo	180	false	done	90	90	0	true	data/card-role-worksheets/pmkm-role-review.tsv
 tmkc	Murders at Karlov Manor Commander Tokens	2024-02-09	token	31	false	done	31	31	0	true	data/card-role-worksheets/tmkc-role-review.tsv
 tmkm	Murders at Karlov Manor Tokens	2024-02-09	token	22	false	done	18	18	0	true	data/card-role-worksheets/tmkm-role-review.tsv
 wmkm	MKM Japanese Promo Tokens	2024-02-09	token	4	false	done	4	4	0	true	data/card-role-worksheets/wmkm-role-review.tsv
 pss4	MKM Standard Showdown	2024-02-10	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pss4-role-review.tsv
-clu	Ravnica: Clue Edition	2024-02-23	draft_innovation	284	false	in_progress	265	268	3	true	data/card-role-worksheets/clu-role-review.tsv
+clu	Ravnica: Clue Edition	2024-02-23	draft_innovation	284	false	done	268	268	0	true	data/card-role-worksheets/clu-role-review.tsv
 fclu	Ravnica: Clue Edition Front Cards	2024-02-23	memorabilia	10	false	done	10	10	0	true	data/card-role-worksheets/fclu-role-review.tsv
 punk	Black Lotus Unknown Planechase	2024-02-24	funny	52	false	done	46	46	0	true	data/card-role-worksheets/punk-role-review.tsv
 ymkm	Alchemy: Murders at Karlov Manor	2024-03-05	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/ymkm-role-review.tsv
 pip	Fallout	2024-03-08	commander	1068	false	done	336	336	0	true	data/card-role-worksheets/pip-role-review.tsv
 tpip	Fallout Tokens	2024-03-08	token	22	false	done	19	19	0	true	data/card-role-worksheets/tpip-role-review.tsv
 aotj	Outlaws of Thunder Junction Art Series	2024-04-19	memorabilia	54	false	done	53	53	0	true	data/card-role-worksheets/aotj-role-review.tsv
-big	The Big Score	2024-04-19	expansion	95	false	in_progress	29	30	1	true	data/card-role-worksheets/big-role-review.tsv
+big	The Big Score	2024-04-19	expansion	95	false	done	30	30	0	true	data/card-role-worksheets/big-role-review.tsv
 otc	Outlaws of Thunder Junction Commander	2024-04-19	commander	342	false	done	306	306	0	true	data/card-role-worksheets/otc-role-review.tsv
-otj	Outlaws of Thunder Junction	2024-04-19	expansion	374	false	in_progress	274	276	2	true	data/card-role-worksheets/otj-role-review.tsv
+otj	Outlaws of Thunder Junction	2024-04-19	expansion	374	false	done	276	276	0	true	data/card-role-worksheets/otj-role-review.tsv
 otp	Breaking News	2024-04-19	masterpiece	80	false	done	65	65	0	true	data/card-role-worksheets/otp-role-review.tsv
 potj	Outlaws of Thunder Junction Promos	2024-04-19	promo	160	false	done	80	80	0	true	data/card-role-worksheets/potj-role-review.tsv
 tbig	The Big Score Tokens	2024-04-19	token	7	false	done	7	7	0	true	data/card-role-worksheets/tbig-role-review.tsv
@@ -901,28 +901,28 @@ yotj	Alchemy: Outlaws of Thunder Junction	2024-05-07	alchemy	30	true	done	30	30	
 h2r	Modern Horizons 2 Timeshifts	2024-06-07	draft_innovation	16	false	done	16	16	0	true	data/card-role-worksheets/h2r-role-review.tsv
 amh3	Modern Horizons 3 Art Series	2024-06-14	memorabilia	54	false	done	54	54	0	true	data/card-role-worksheets/amh3-role-review.tsv
 m3c	Modern Horizons 3 Commander	2024-06-14	commander	398	false	done	320	320	0	true	data/card-role-worksheets/m3c-role-review.tsv
-mh3	Modern Horizons 3	2024-06-14	draft_innovation	528	false	in_progress	310	313	3	true	data/card-role-worksheets/mh3-role-review.tsv
-pmh3	Modern Horizons 3 Promos	2024-06-14	promo	92	false	in_progress	80	81	1	true	data/card-role-worksheets/pmh3-role-review.tsv
+mh3	Modern Horizons 3	2024-06-14	draft_innovation	528	false	done	313	313	0	true	data/card-role-worksheets/mh3-role-review.tsv
+pmh3	Modern Horizons 3 Promos	2024-06-14	promo	92	false	done	81	81	0	true	data/card-role-worksheets/pmh3-role-review.tsv
 smh3	Modern Horizons 3 Substitute Cards	2024-06-14	token	1	false	done	1	1	0	true	data/card-role-worksheets/smh3-role-review.tsv
 tm3c	Modern Horizons 3 Commander Tokens	2024-06-14	token	28	false	done	28	28	0	true	data/card-role-worksheets/tm3c-role-review.tsv
 tmh3	Modern Horizons 3 Tokens	2024-06-14	token	43	false	done	36	36	0	true	data/card-role-worksheets/tmh3-role-review.tsv
 aacr	Assassin's Creed Art Series	2024-07-05	memorabilia	20	false	done	20	20	0	true	data/card-role-worksheets/aacr-role-review.tsv
-acr	Assassin's Creed	2024-07-05	draft_innovation	309	false	in_progress	136	138	2	true	data/card-role-worksheets/acr-role-review.tsv
+acr	Assassin's Creed	2024-07-05	draft_innovation	309	false	done	138	138	0	true	data/card-role-worksheets/acr-role-review.tsv
 macr	Assassin's Creed Minigames	2024-07-05	minigame	3	false	done	3	3	0	true	data/card-role-worksheets/macr-role-review.tsv
 tacr	Assassin's Creed Tokens	2024-07-05	token	8	false	done	8	8	0	true	data/card-role-worksheets/tacr-role-review.tsv
 ablb	Bloomburrow Art Series	2024-08-02	memorabilia	54	false	done	52	52	0	true	data/card-role-worksheets/ablb-role-review.tsv
-blb	Bloomburrow	2024-08-02	expansion	398	false	in_progress	278	280	2	true	data/card-role-worksheets/blb-role-review.tsv
+blb	Bloomburrow	2024-08-02	expansion	398	false	done	280	280	0	true	data/card-role-worksheets/blb-role-review.tsv
 blc	Bloomburrow Commander	2024-08-02	commander	356	false	done	312	312	0	true	data/card-role-worksheets/blc-role-review.tsv
-mb2	Mystery Booster 2	2024-08-02	masters	385	false	in_progress	379	385	6	true	data/card-role-worksheets/mb2-role-review.tsv
+mb2	Mystery Booster 2	2024-08-02	masters	385	false	done	385	385	0	true	data/card-role-worksheets/mb2-role-review.tsv
 pblb	Bloomburrow Promos	2024-08-02	promo	160	false	done	80	80	0	true	data/card-role-worksheets/pblb-role-review.tsv
 pcbb	Cowboy Bebop	2024-08-02	promo	5	false	done	5	5	0	true	data/card-role-worksheets/pcbb-role-review.tsv
 tblb	Bloomburrow Tokens	2024-08-02	token	30	false	done	30	30	0	true	data/card-role-worksheets/tblb-role-review.tsv
 tblc	Bloomburrow Commander Tokens	2024-08-02	token	41	false	done	41	41	0	true	data/card-role-worksheets/tblc-role-review.tsv
-plg24	Love Your LGS 2024	2024-08-06	promo	7	false	in_progress	6	7	1	true	data/card-role-worksheets/plg24-role-review.tsv
+plg24	Love Your LGS 2024	2024-08-06	promo	7	false	done	7	7	0	true	data/card-role-worksheets/plg24-role-review.tsv
 yblb	Alchemy: Bloomburrow	2024-08-20	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/yblb-role-review.tsv
 adsk	Duskmourn: House of Horror Art Series	2024-09-27	memorabilia	54	false	done	51	51	0	true	data/card-role-worksheets/adsk-role-review.tsv
-dsc	Duskmourn: House of Horror Commander	2024-09-27	commander	373	false	in_progress	342	346	4	true	data/card-role-worksheets/dsc-role-review.tsv
-dsk	Duskmourn: House of Horror	2024-09-27	expansion	419	false	in_progress	277	278	1	true	data/card-role-worksheets/dsk-role-review.tsv
+dsc	Duskmourn: House of Horror Commander	2024-09-27	commander	373	false	done	346	346	0	true	data/card-role-worksheets/dsc-role-review.tsv
+dsk	Duskmourn: House of Horror	2024-09-27	expansion	419	false	done	278	278	0	true	data/card-role-worksheets/dsk-role-review.tsv
 pdsk	Duskmourn: House of Horror Promos	2024-09-27	promo	160	false	done	80	80	0	true	data/card-role-worksheets/pdsk-role-review.tsv
 tdsc	Duskmourn Commander Tokens	2024-09-27	token	23	false	done	22	22	0	true	data/card-role-worksheets/tdsc-role-review.tsv
 tdsk	Duskmourn: House of Horror Tokens	2024-09-27	token	19	false	done	19	19	0	true	data/card-role-worksheets/tdsk-role-review.tsv
@@ -930,24 +930,24 @@ ydsk	Alchemy: Duskmourn	2024-10-15	alchemy	30	true	done	30	30	0	true	data/card-r
 pltc	Tales of Middle-earth Deluxe Commander Kit	2024-10-16	promo	4	false	done	4	4	0	true	data/card-role-worksheets/pltc-role-review.tsv
 afdn	Foundations Art Series	2024-11-15	memorabilia	55	false	done	52	52	0	true	data/card-role-worksheets/afdn-role-review.tsv
 fdc	Foundations Commander	2024-11-15	commander	3	false	done	3	3	0	true	data/card-role-worksheets/fdc-role-review.tsv
-fdn	Foundations	2024-11-15	core	771	false	in_progress	515	517	2	true	data/card-role-worksheets/fdn-role-review.tsv
+fdn	Foundations	2024-11-15	core	771	false	done	517	517	0	true	data/card-role-worksheets/fdn-role-review.tsv
 ffdn	Foundations Front Cards	2024-11-15	memorabilia	10	false	done	10	10	0	true	data/card-role-worksheets/ffdn-role-review.tsv
 fj25	Foundations Jumpstart Front Cards	2024-11-15	memorabilia	46	false	done	46	46	0	true	data/card-role-worksheets/fj25-role-review.tsv
-j25	Foundations Jumpstart	2024-11-15	draft_innovation	779	false	in_progress	763	768	5	true	data/card-role-worksheets/j25-role-review.tsv
-pfdn	Foundations Promos	2024-11-15	promo	106	false	in_progress	80	81	1	true	data/card-role-worksheets/pfdn-role-review.tsv
+j25	Foundations Jumpstart	2024-11-15	draft_innovation	779	false	done	768	768	0	true	data/card-role-worksheets/j25-role-review.tsv
+pfdn	Foundations Promos	2024-11-15	promo	106	false	done	81	81	0	true	data/card-role-worksheets/pfdn-role-review.tsv
 tfdn	Foundations Tokens	2024-11-15	token	33	false	done	33	33	0	true	data/card-role-worksheets/tfdn-role-review.tsv
-pio	Pioneer Masters	2024-12-10	masters	398	true	in_progress	393	398	5	true	data/card-role-worksheets/pio-role-review.tsv
+pio	Pioneer Masters	2024-12-10	masters	398	true	done	398	398	0	true	data/card-role-worksheets/pio-role-review.tsv
 pf25	MagicFest 2025	2025-01-01	promo	19	false	done	19	19	0	true	data/card-role-worksheets/pf25-role-review.tsv
 pw25	Wizards Play Network 2025	2025-01-01	promo	16	false	done	16	16	0	true	data/card-role-worksheets/pw25-role-review.tsv
 pspl	Spotlight Series	2025-01-03	promo	12	false	done	12	12	0	true	data/card-role-worksheets/pspl-role-review.tsv
 ainr	Innistrad Remastered Art Series	2025-01-24	memorabilia	25	false	done	25	25	0	true	data/card-role-worksheets/ainr-role-review.tsv
-inr	Innistrad Remastered	2025-01-24	masters	495	false	in_progress	298	300	2	true	data/card-role-worksheets/inr-role-review.tsv
+inr	Innistrad Remastered	2025-01-24	masters	495	false	done	300	300	0	true	data/card-role-worksheets/inr-role-review.tsv
 tinr	Innistrad Remastered Tokens	2025-01-24	token	27	false	done	27	27	0	true	data/card-role-worksheets/tinr-role-review.tsv
 pjsc	Japan Standard Cup	2025-02-09	promo	4	false	done	4	4	0	true	data/card-role-worksheets/pjsc-role-review.tsv
 adft	Aetherdrift Art Series	2025-02-14	memorabilia	54	false	done	48	48	0	true	data/card-role-worksheets/adft-role-review.tsv
-dft	Aetherdrift	2025-02-14	expansion	553	false	in_progress	268	276	8	true	data/card-role-worksheets/dft-role-review.tsv
+dft	Aetherdrift	2025-02-14	expansion	553	false	done	276	276	0	true	data/card-role-worksheets/dft-role-review.tsv
 drc	Aetherdrift Commander	2025-02-14	commander	184	false	done	163	163	0	true	data/card-role-worksheets/drc-role-review.tsv
-pdft	Aetherdrift Promos	2025-02-14	promo	160	false	in_progress	79	80	1	true	data/card-role-worksheets/pdft-role-review.tsv
+pdft	Aetherdrift Promos	2025-02-14	promo	160	false	done	80	80	0	true	data/card-role-worksheets/pdft-role-review.tsv
 pl25	Year of the Snake 2025	2025-02-14	promo	6	false	done	6	6	0	true	data/card-role-worksheets/pl25-role-review.tsv
 tdft	Aetherdrift Tokens	2025-02-14	token	14	false	done	13	13	0	true	data/card-role-worksheets/tdft-role-review.tsv
 tdrc	Aetherdrift Commander Tokens	2025-02-14	token	17	false	done	17	17	0	true	data/card-role-worksheets/tdrc-role-review.tsv
@@ -955,9 +955,9 @@ pssc	Secret Lair Showcase Planes	2025-02-21	memorabilia	10	false	done	10	10	0	tr
 ydft	Alchemy: Aetherdrift	2025-03-04	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/ydft-role-review.tsv
 plg25	Love Your LGS 2025	2025-03-26	promo	2	false	done	2	2	0	true	data/card-role-worksheets/plg25-role-review.tsv
 atdm	Tarkir: Dragonstorm Art Series	2025-04-11	memorabilia	54	false	done	48	48	0	true	data/card-role-worksheets/atdm-role-review.tsv
-ptdm	Tarkir: Dragonstorm Promos	2025-04-11	promo	160	false	in_progress	79	80	1	true	data/card-role-worksheets/ptdm-role-review.tsv
+ptdm	Tarkir: Dragonstorm Promos	2025-04-11	promo	160	false	done	80	80	0	true	data/card-role-worksheets/ptdm-role-review.tsv
 tdc	Tarkir: Dragonstorm Commander	2025-04-11	commander	413	false	done	373	373	0	true	data/card-role-worksheets/tdc-role-review.tsv
-tdm	Tarkir: Dragonstorm	2025-04-11	expansion	427	false	in_progress	280	283	3	true	data/card-role-worksheets/tdm-role-review.tsv
+tdm	Tarkir: Dragonstorm	2025-04-11	expansion	427	false	done	283	283	0	true	data/card-role-worksheets/tdm-role-review.tsv
 ttdc	Tarkir: Dragonstorm Commander Tokens	2025-04-11	token	34	false	done	34	34	0	true	data/card-role-worksheets/ttdc-role-review.tsv
 ttdm	Tarkir: Dragonstorm Tokens	2025-04-11	token	16	false	done	16	16	0	true	data/card-role-worksheets/ttdm-role-review.tsv
 ytdm	Alchemy: Tarkir	2025-04-29	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/ytdm-role-review.tsv
@@ -965,7 +965,7 @@ pa1	Pioneer Anthology 1	2025-05-05	box	11	true	done	11	11	0	true	data/card-role-
 afin	Final Fantasy Art Series	2025-06-13	memorabilia	53	false	done	51	51	0	true	data/card-role-worksheets/afin-role-review.tsv
 fca	Final Fantasy: Through the Ages	2025-06-13	masterpiece	66	false	done	65	65	0	true	data/card-role-worksheets/fca-role-review.tsv
 fic	Final Fantasy Commander	2025-06-13	commander	486	false	done	339	339	0	true	data/card-role-worksheets/fic-role-review.tsv
-fin	Final Fantasy	2025-06-13	expansion	599	false	in_progress	311	313	2	true	data/card-role-worksheets/fin-role-review.tsv
+fin	Final Fantasy	2025-06-13	expansion	599	false	done	313	313	0	true	data/card-role-worksheets/fin-role-review.tsv
 pfin	Final Fantasy Promos	2025-06-13	promo	94	false	done	94	94	0	true	data/card-role-worksheets/pfin-role-review.tsv
 pss5	FIN Standard Showdown	2025-06-13	promo	2	false	done	2	2	0	true	data/card-role-worksheets/pss5-role-review.tsv
 rfin	Final Fantasy Regional Promos	2025-06-13	promo	2	false	done	2	2	0	true	data/card-role-worksheets/rfin-role-review.tsv
@@ -974,7 +974,7 @@ tfin	Final Fantasy Tokens	2025-06-13	token	37	false	done	16	16	0	true	data/card-
 wfin	FIN Asia WPN Promo Tokens	2025-06-13	token	3	false	done	3	3	0	true	data/card-role-worksheets/wfin-role-review.tsv
 aeoe	Edge of Eternities Art Series	2025-08-01	memorabilia	54	false	done	50	50	0	true	data/card-role-worksheets/aeoe-role-review.tsv
 eoc	Edge of Eternities Commander	2025-08-01	commander	191	false	done	171	171	0	true	data/card-role-worksheets/eoc-role-review.tsv
-eoe	Edge of Eternities	2025-08-01	expansion	400	false	in_progress	265	266	1	true	data/card-role-worksheets/eoe-role-review.tsv
+eoe	Edge of Eternities	2025-08-01	expansion	400	false	done	266	266	0	true	data/card-role-worksheets/eoe-role-review.tsv
 eos	Edge of Eternities: Stellar Sights	2025-08-01	masterpiece	180	false	done	45	45	0	true	data/card-role-worksheets/eos-role-review.tsv
 pbig	The Big Score Promos	2025-08-01	promo	14	false	done	14	14	0	true	data/card-role-worksheets/pbig-role-review.tsv
 peoe	Edge of Eternities Promos	2025-08-01	promo	160	false	done	80	80	0	true	data/card-role-worksheets/peoe-role-review.tsv
@@ -986,13 +986,13 @@ yeoe	Alchemy: Edge of Eternities	2025-08-19	alchemy	40	true	done	40	40	0	true	da
 ph23	2023 Heroes of the Realm	2025-08-24	funny	2	false	done	2	2	0	true	data/card-role-worksheets/ph23-role-review.tsv
 aa3	Arena Anthology 3	2025-09-23	box	25	true	done	25	25	0	true	data/card-role-worksheets/aa3-role-review.tsv
 aa4	Arena Anthology 4	2025-09-23	box	28	true	done	28	28	0	true	data/card-role-worksheets/aa4-role-review.tsv
-om1	Through the Omenpaths	2025-09-23	expansion	189	true	in_progress	184	188	4	true	data/card-role-worksheets/om1-role-review.tsv
+om1	Through the Omenpaths	2025-09-23	expansion	189	true	done	188	188	0	true	data/card-role-worksheets/om1-role-review.tsv
 omb	Through the Omenpaths Bonus Sheet	2025-09-23	masterpiece	40	true	done	40	40	0	true	data/card-role-worksheets/omb-role-review.tsv
 aspm	Marvel's Spider-Man Art Series	2025-09-26	memorabilia	54	false	done	47	47	0	true	data/card-role-worksheets/aspm-role-review.tsv
 mar	Marvel Universe	2025-09-26	masterpiece	100	false	done	94	94	0	true	data/card-role-worksheets/mar-role-review.tsv
-pspm	Marvel's Spider-Man Promos	2025-09-26	promo	68	false	in_progress	66	68	2	true	data/card-role-worksheets/pspm-role-review.tsv
+pspm	Marvel's Spider-Man Promos	2025-09-26	promo	68	false	done	68	68	0	true	data/card-role-worksheets/pspm-role-review.tsv
 spe	Marvel's Spider-Man Eternal	2025-09-26	eternal	26	false	done	26	26	0	true	data/card-role-worksheets/spe-role-review.tsv
-spm	Marvel's Spider-Man	2025-09-26	expansion	286	false	in_progress	189	193	4	true	data/card-role-worksheets/spm-role-review.tsv
+spm	Marvel's Spider-Man	2025-09-26	expansion	286	false	done	193	193	0	true	data/card-role-worksheets/spm-role-review.tsv
 tspm	Marvel's Spider-Man Tokens	2025-09-26	token	7	false	done	7	7	0	true	data/card-role-worksheets/tspm-role-review.tsv
 lmar	Marvel Legends Series Inserts	2025-09-30	promo	4	false	done	4	4	0	true	data/card-role-worksheets/lmar-role-review.tsv
 atla	Avatar: the Last Airbender Art Series	2025-11-21	memorabilia	54	false	done	51	51	0	true	data/card-role-worksheets/atla-role-review.tsv
@@ -1000,8 +1000,8 @@ atle	Avatar: the Last Airbender Eternal Art Series	2025-11-21	memorabilia	12	fal
 ftla	Avatar: The Last Airbender Beginner Box Front Cards	2025-11-21	memorabilia	10	false	done	10	10	0	true	data/card-role-worksheets/ftla-role-review.tsv
 jtla	Avatar: The Last Airbender Jumpstart Front Cards	2025-11-21	memorabilia	46	false	done	46	46	0	true	data/card-role-worksheets/jtla-role-review.tsv
 ptla	Avatar: The Last Airbender Promos	2025-11-21	promo	80	false	done	80	80	0	true	data/card-role-worksheets/ptla-role-review.tsv
-tla	Avatar: The Last Airbender	2025-11-21	expansion	394	false	in_progress	285	286	1	true	data/card-role-worksheets/tla-role-review.tsv
-tle	Avatar: The Last Airbender Eternal	2025-11-21	eternal	317	false	in_progress	239	242	3	true	data/card-role-worksheets/tle-role-review.tsv
+tla	Avatar: The Last Airbender	2025-11-21	expansion	394	false	done	286	286	0	true	data/card-role-worksheets/tla-role-review.tsv
+tle	Avatar: The Last Airbender Eternal	2025-11-21	eternal	317	false	done	242	242	0	true	data/card-role-worksheets/tle-role-review.tsv
 ttla	Avatar: The Last Airbender Tokens	2025-11-21	token	22	false	done	11	11	0	true	data/card-role-worksheets/ttla-role-review.tsv
 ttle	Avatar: The Last Airbender Eternal Tokens	2025-11-21	token	2	false	done	2	2	0	true	data/card-role-worksheets/ttle-role-review.tsv
 afic	Final Fantasy Scene Box	2025-12-05	memorabilia	24	false	done	24	24	0	true	data/card-role-worksheets/afic-role-review.tsv
@@ -1009,7 +1009,7 @@ pf26	MagicFest 2026	2026-01-01	promo	7	false	done	7	7	0	true	data/card-role-work
 pw26	Wizards Play Network 2026	2026-01-01	promo	16	false	done	16	16	0	true	data/card-role-worksheets/pw26-role-review.tsv
 aecl	Lorwyn Eclipsed Art Series	2026-01-23	memorabilia	54	false	done	50	50	0	true	data/card-role-worksheets/aecl-role-review.tsv
 ecc	Lorwyn Eclipsed Commander	2026-01-23	commander	176	false	done	153	153	0	true	data/card-role-worksheets/ecc-role-review.tsv
-ecl	Lorwyn Eclipsed	2026-01-23	expansion	408	false	in_progress	275	278	3	true	data/card-role-worksheets/ecl-role-review.tsv
+ecl	Lorwyn Eclipsed	2026-01-23	expansion	408	false	done	278	278	0	true	data/card-role-worksheets/ecl-role-review.tsv
 pecl	Lorwyn Eclipsed Promos	2026-01-23	promo	80	false	done	80	80	0	true	data/card-role-worksheets/pecl-role-review.tsv
 tecc	Lorwyn Eclipsed Commander Tokens	2026-01-23	token	13	false	done	13	13	0	true	data/card-role-worksheets/tecc-role-review.tsv
 tecl	Lorwyn Eclipsed Tokens	2026-01-23	token	13	false	done	13	13	0	true	data/card-role-worksheets/tecl-role-review.tsv
@@ -1018,22 +1018,22 @@ pl26	Year of the Horse 2026	2026-02-17	promo	5	false	done	5	5	0	true	data/card-r
 atmt	Teenage Mutant Ninja Turtles Art Series	2026-03-06	memorabilia	54	false	done	51	51	0	true	data/card-role-worksheets/atmt-role-review.tsv
 ftmc	Teenage Mutant Ninja Turtles Eternal Front Cards	2026-03-06	memorabilia	5	false	done	5	5	0	true	data/card-role-worksheets/ftmc-role-review.tsv
 pza	Teenage Mutant Ninja Turtles Source Material	2026-03-06	masterpiece	20	false	done	20	20	0	true	data/card-role-worksheets/pza-role-review.tsv
-tmc	Teenage Mutant Ninja Turtles Eternal	2026-03-06	eternal	132	false	in_progress	116	117	1	true	data/card-role-worksheets/tmc-role-review.tsv
-tmt	Teenage Mutant Ninja Turtles	2026-03-06	expansion	320	false	in_progress	194	195	1	true	data/card-role-worksheets/tmt-role-review.tsv
+tmc	Teenage Mutant Ninja Turtles Eternal	2026-03-06	eternal	132	false	done	117	117	0	true	data/card-role-worksheets/tmc-role-review.tsv
+tmt	Teenage Mutant Ninja Turtles	2026-03-06	expansion	320	false	done	195	195	0	true	data/card-role-worksheets/tmt-role-review.tsv
 ttmc	Teenage Mutant Ninja Turtles Eternal Tokens	2026-03-06	token	31	false	done	31	31	0	true	data/card-role-worksheets/ttmc-role-review.tsv
 ttmt	Teenage Mutant Ninja Turtles Tokens	2026-03-06	token	10	false	done	10	10	0	true	data/card-role-worksheets/ttmt-role-review.tsv
 asos	Secrets of Strixhaven Art Series	2026-04-24	memorabilia	54	false	done	54	54	0	true	data/card-role-worksheets/asos-role-review.tsv
 psos	Secrets of Strixhaven Promos	2026-04-24	promo	80	false	done	80	80	0	true	data/card-role-worksheets/psos-role-review.tsv
 soa	Secrets of Strixhaven Mystical Archive	2026-04-24	masterpiece	195	false	done	65	65	0	true	data/card-role-worksheets/soa-role-review.tsv
 soc	Secrets of Strixhaven Commander	2026-04-24	commander	426	false	done	375	375	0	true	data/card-role-worksheets/soc-role-review.tsv
-sos	Secrets of Strixhaven	2026-04-24	expansion	368	false	in_progress	269	271	2	true	data/card-role-worksheets/sos-role-review.tsv
+sos	Secrets of Strixhaven	2026-04-24	expansion	368	false	done	271	271	0	true	data/card-role-worksheets/sos-role-review.tsv
 tsoc	Secrets of Strixhaven Commander Tokens	2026-04-24	token	30	false	done	30	30	0	true	data/card-role-worksheets/tsoc-role-review.tsv
 tsos	Secrets of Strixhaven Tokens	2026-04-24	token	14	false	done	9	9	0	true	data/card-role-worksheets/tsos-role-review.tsv
 ysos	Alchemy: Secrets of Strixhaven	2026-05-19	alchemy	30	true	done	30	30	0	true	data/card-role-worksheets/ysos-role-review.tsv
 amsh	Marvel Super Heroes Art Series	2026-06-26	memorabilia	66	false	done	57	57	0	true	data/card-role-worksheets/amsh-role-review.tsv
 fmsc	Marvel Super Heroes Jumpstart Front Cards	2026-06-26	memorabilia	61	false	done	59	59	0	true	data/card-role-worksheets/fmsc-role-review.tsv
-msc	Marvel Super Heroes Commander	2026-06-26	commander	866	false	in_progress	614	616	2	true	data/card-role-worksheets/msc-role-review.tsv
-msh	Marvel Super Heroes	2026-06-26	expansion	453	false	in_progress	279	281	2	true	data/card-role-worksheets/msh-role-review.tsv
+msc	Marvel Super Heroes Commander	2026-06-26	commander	866	false	done	616	616	0	true	data/card-role-worksheets/msc-role-review.tsv
+msh	Marvel Super Heroes	2026-06-26	expansion	453	false	done	281	281	0	true	data/card-role-worksheets/msh-role-review.tsv
 tmsc	Marvel Super Heroes Commander Tokens	2026-06-26	token	32	false	done	17	17	0	true	data/card-role-worksheets/tmsc-role-review.tsv
 tmsh	Marvel Super Heroes Tokens	2026-06-26	token	27	false	done	21	21	0	true	data/card-role-worksheets/tmsh-role-review.tsv
 hob	The Hobbit	2026-08-14	expansion	39	false	done	15	15	0	true	data/card-role-worksheets/hob-role-review.tsv

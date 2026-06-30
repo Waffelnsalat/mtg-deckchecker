@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { getRoleWeight, inferAdvancedRoleProfile } from "./advancedCardScan";
-import { ScryfallCard } from "./types";
+import { analyzeDeckAdvancedRoles, getRoleWeight, inferAdvancedRoleProfile } from "./advancedCardScan";
+import { DeckResolutionDocument, DeckSection, ScryfallCard } from "./types";
 
 test("inferAdvancedRoleProfile recognizes repeatable impulse card flow", () => {
   const profile = inferAdvancedRoleProfile(
@@ -3540,6 +3540,179 @@ test("inferAdvancedRoleProfile recognizes Scourge utility wording gaps", () => {
   assert.ok(getRoleWeight(stabilizerProfile, "hate_piece") > 0);
 });
 
+test("inferAdvancedRoleProfile recognizes Mirrodin through Kamigawa audit leftovers", () => {
+  const bubbleProfile = inferAdvancedRoleProfile(
+    createCard("Inertia Bubble", "Enchantment - Aura", 2, "Enchant artifact Enchanted artifact doesn't untap during its controller's untap step."),
+  );
+  const mistsProfile = inferAdvancedRoleProfile(
+    createCard("Necrogen Mists", "Enchantment", 3, "At the beginning of each player's upkeep, that player discards a card."),
+  );
+  const matrixProfile = inferAdvancedRoleProfile(
+    createCard("Damping Matrix", "Artifact", 3, "Activated abilities of artifacts and creatures can't be activated unless they're mana abilities."),
+  );
+  const humProfile = inferAdvancedRoleProfile(
+    createCard("Hum of the Radix", "Enchantment", 4, "Each artifact spell costs {1} more to cast for each artifact its controller controls."),
+  );
+  const equipmentProfile = inferAdvancedRoleProfile(createCard("Disarm", "Instant", 1, "Unattach all Equipment from target creature."));
+  const extractionProfile = inferAdvancedRoleProfile(
+    createCard(
+      "Counterbore",
+      "Instant",
+      5,
+      "Counter target spell. Search its controller's graveyard, hand, and library for all cards with the same name as that spell and exile them. Then that player shuffles.",
+    ),
+  );
+  const shrineProfile = inferAdvancedRoleProfile(
+    createCard("Honden of Infinite Rage", "Legendary Enchantment - Shrine", 3, "At the beginning of your upkeep, Honden of Infinite Rage deals damage to any target equal to the number of Shrines you control."),
+  );
+  const stormProfile = inferAdvancedRoleProfile(
+    createCard("Ground Rift", "Sorcery", 1, "Target creature without flying can't block this turn. Storm"),
+  );
+
+  assert.ok(getRoleWeight(bubbleProfile, "tempo_removal") > 0);
+  assert.ok(getRoleWeight(mistsProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(matrixProfile, "hate_piece") > 0);
+  assert.ok(getRoleWeight(humProfile, "stax_piece") > 0);
+  assert.ok(getRoleWeight(equipmentProfile, "artifact_support") > 0);
+  assert.ok(getRoleWeight(extractionProfile, "hand_attack") > 0);
+  assert.ok(getRoleWeight(shrineProfile, "shrine_support") > 0);
+  assert.ok(getRoleWeight(shrineProfile, "direct_finisher") > 0);
+  assert.ok(getRoleWeight(stormProfile, "copy_support") > 0);
+});
+
+test("inferAdvancedRoleProfile derives roles from modern keyword data", () => {
+  const shadowProfile = inferAdvancedRoleProfile(createCard("Shadow", "Creature - Shade", 2, "", { keywords: ["Shadow"] }));
+  const impendingProfile = inferAdvancedRoleProfile(createCard("Impending", "Sorcery", 4, "", { keywords: ["Impending"] }));
+  const adventureProfile = inferAdvancedRoleProfile(createCard("Adventure", "Sorcery", 2, "", { keywords: ["Adventure"] }));
+  const stationProfile = inferAdvancedRoleProfile(createCard("Station", "Artifact", 3, "", { keywords: ["Station"] }));
+  const harmonizeProfile = inferAdvancedRoleProfile(createCard("Harmonize", "Enchantment", 3, "", { keywords: ["Harmonize"] }));
+  const mobilizeProfile = inferAdvancedRoleProfile(createCard("Mobilize", "Creature - Soldier", 3, "", { keywords: ["Mobilize"] }));
+  const webProfile = inferAdvancedRoleProfile(createCard("Web-Slinging", "Instant", 2, "", { keywords: ["Web-slinging"] }));
+  const lifelinkProfile = inferAdvancedRoleProfile(createCard("Lifelink", "Creature - Cleric", 2, "", { keywords: ["Lifelink"] }));
+  const transformProfile = inferAdvancedRoleProfile(createCard("Transform", "Sorcery", 2, "", { keywords: ["Transform"] }));
+  const enrageProfile = inferAdvancedRoleProfile(createCard("Enrage", "Creature - Dinosaur", 4, "", { keywords: ["Enrage"] }));
+  const suspendProfile = inferAdvancedRoleProfile(createCard("Suspend", "Sorcery", 2, "", { keywords: ["Suspend"] }));
+
+  assert.ok(getRoleWeight(shadowProfile, "evasion") > 0);
+  assert.ok(getRoleWeight(impendingProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(adventureProfile, "selection") > 0);
+  assert.ok(getRoleWeight(stationProfile, "counter_support") > 0);
+  assert.ok(getRoleWeight(harmonizeProfile, "graveyard_support") > 0);
+  assert.ok(getRoleWeight(mobilizeProfile, "token_support") > 0);
+  assert.ok(getRoleWeight(webProfile, "cost_reduction") > 0);
+  assert.ok(getRoleWeight(lifelinkProfile, "lifegain") > 0);
+  assert.ok(getRoleWeight(transformProfile, "transform_support") > 0);
+  assert.ok(getRoleWeight(enrageProfile, "damage_engine") > 0);
+  assert.ok(getRoleWeight(suspendProfile, "selection") > 0);
+});
+
+test("inferAdvancedRoleProfile tags keyword drawbacks and restrictions", () => {
+  const suspendProfile = inferAdvancedRoleProfile(createCard("Suspend Draw", "Sorcery", 2, "", { keywords: ["Suspend"] }));
+  const impendingProfile = inferAdvancedRoleProfile(createCard("Impending Threat", "Creature - Horror", 5, "", { keywords: ["Impending"] }));
+  const bargainProfile = inferAdvancedRoleProfile(createCard("Bargain Spell", "Sorcery", 2, "", { keywords: ["Bargain"] }));
+  const casualtyProfile = inferAdvancedRoleProfile(createCard("Casualty Spell", "Sorcery", 3, "", { keywords: ["Casualty"] }));
+  const dashProfile = inferAdvancedRoleProfile(createCard("Dash Creature", "Creature - Warrior", 2, "", { keywords: ["Dash"] }));
+  const unearthProfile = inferAdvancedRoleProfile(createCard("Unearth Creature", "Creature - Zombie", 3, "", { keywords: ["Unearth"] }));
+  const defenderProfile = inferAdvancedRoleProfile(createCard("Wall", "Creature - Wall", 2, "", { keywords: ["Defender"] }));
+  const decayedProfile = inferAdvancedRoleProfile(createCard("Decayed Token", "Creature - Zombie", 2, "", { keywords: ["Decayed"] }));
+  const upkeepProfile = inferAdvancedRoleProfile(createCard("Upkeep Beast", "Creature - Beast", 4, "", { keywords: ["Cumulative upkeep"] }));
+  const echoProfile = inferAdvancedRoleProfile(createCard("Echo Beast", "Creature - Beast", 4, "", { keywords: ["Echo"] }));
+  const companionProfile = inferAdvancedRoleProfile(createCard("Companion", "Creature - Cat", 3, "", { keywords: ["Companion"] }));
+  const sorceryProfile = inferAdvancedRoleProfile(createCard("Sorcery Engine", "Artifact", 2, "{2}: Draw a card. Activate only as a sorcery."));
+
+  assert.ok(getRoleWeight(suspendProfile, "timing_delay") > 0);
+  assert.ok(getRoleWeight(impendingProfile, "timing_delay") > 0);
+  assert.ok(getRoleWeight(impendingProfile, "scaled_down_mode") > 0);
+  assert.ok(getRoleWeight(bargainProfile, "resource_payment") > 0);
+  assert.ok(getRoleWeight(casualtyProfile, "resource_payment") > 0);
+  assert.ok(getRoleWeight(dashProfile, "temporary_body") > 0);
+  assert.ok(getRoleWeight(unearthProfile, "temporary_body") > 0);
+  assert.ok(getRoleWeight(defenderProfile, "combat_liability") > 0);
+  assert.ok(getRoleWeight(decayedProfile, "combat_liability") > 0);
+  assert.ok(getRoleWeight(upkeepProfile, "upkeep_cost") > 0);
+  assert.ok(getRoleWeight(echoProfile, "upkeep_cost") > 0);
+  assert.ok(getRoleWeight(companionProfile, "deckbuilding_restriction") > 0);
+  assert.ok(getRoleWeight(sorceryProfile, "timing_restriction") > 0);
+});
+
+test("analyzeDeckAdvancedRoles scores cards from tags, mana value, colors, and drawbacks", () => {
+  const commander = createCard("White Commander", "Legendary Creature - Human", 2, "", {
+    color_identity: ["W"],
+    colors: ["W"],
+  });
+  const efficientRemoval = createCard("Efficient Removal", "Instant", 1, "Exile target creature.", {
+    color_identity: ["W"],
+    colors: ["W"],
+  });
+  const clunkyRemoval = createCard("Clunky Removal", "Instant", 6, "Exile target creature.", {
+    color_identity: ["W"],
+    colors: ["W"],
+  });
+  const costlyRemoval = createCard(
+    "Costly Removal",
+    "Instant",
+    1,
+    "As an additional cost to cast this spell, sacrifice a creature. Exile target creature.",
+    { color_identity: ["W"], colors: ["W"] },
+  );
+  const offColorRemoval = createCard("Off Color Removal", "Instant", 1, "Destroy target creature.", {
+    color_identity: ["B"],
+    colors: ["B"],
+  });
+  const basicLand = createCard("Plains", "Basic Land - Plains", 0, "({T}: Add {W}.)", {
+    color_identity: [],
+  });
+
+  const analysis = analyzeDeckAdvancedRoles(createDeckDocument([
+    { card: commander, section: "commander" },
+    { card: efficientRemoval },
+    { card: clunkyRemoval },
+    { card: costlyRemoval },
+    { card: offColorRemoval },
+    { card: basicLand, quantity: 5 },
+  ]));
+  const values = new Map(analysis.taggedCards.map((card) => [card.name, card.roleValue]));
+  const hits = new Map(analysis.taggedCards.map((card) => [card.name, card.hits]));
+
+  assert.ok((values.get("Efficient Removal") ?? 0) > (values.get("Clunky Removal") ?? 0));
+  assert.ok((values.get("Efficient Removal") ?? 0) > (values.get("Costly Removal") ?? 0));
+  assert.ok((values.get("Off Color Removal") ?? 0) < (values.get("Efficient Removal") ?? 0) * 0.6);
+  assert.ok((values.get("Plains") ?? 1) < 0.2);
+  assert.ok((hits.get("Costly Removal") ?? []).some((hit) => hit.tag === "resource_payment" && hit.weight <= 0.07));
+});
+
+test("analyzeDeckAdvancedRoles rewards repeated deck context without overpowering mana curve", () => {
+  const commander = createCard("Spells Commander", "Legendary Creature - Wizard", 3, "", {
+    color_identity: ["U"],
+    colors: ["U"],
+  });
+  const cheapCantrip = createCard("Cheap Selection", "Sorcery", 1, "Draw a card.", {
+    color_identity: ["U"],
+    colors: ["U"],
+  });
+  const expensiveDraw = createCard("Expensive Selection", "Sorcery", 6, "Draw a card.", {
+    color_identity: ["U"],
+    colors: ["U"],
+  });
+  const supportCards = Array.from({ length: 5 }, (_, index) => ({
+    card: createCard(`Selection Support ${index + 1}`, "Sorcery", 2, "Draw a card.", {
+      color_identity: ["U"],
+      colors: ["U"],
+    }),
+  }));
+
+  const analysis = analyzeDeckAdvancedRoles(createDeckDocument([
+    { card: commander, section: "commander" },
+    { card: cheapCantrip },
+    { card: expensiveDraw },
+    ...supportCards,
+  ]));
+  const values = new Map(analysis.taggedCards.map((card) => [card.name, card.roleValue]));
+
+  assert.ok((values.get("Cheap Selection") ?? 0) > (values.get("Expensive Selection") ?? 0));
+  assert.ok((values.get("Cheap Selection") ?? 0) >= 0.8);
+});
+
 function createCard(
   name: string,
   typeLine: string,
@@ -3558,5 +3731,37 @@ function createCard(
     layout: "normal",
     scryfall_uri: "https://scryfall.com",
     ...overrides,
+  };
+}
+
+function createDeckDocument(
+  cards: Array<{
+    card: ScryfallCard;
+    quantity?: number;
+    section?: DeckSection;
+  }>,
+): DeckResolutionDocument {
+  return {
+    format: "edh",
+    parse: {
+      entries: [],
+      errors: [],
+      warnings: [],
+      totalCards: cards.reduce((sum, entry) => sum + (entry.quantity ?? 1), 0),
+      uniqueCards: cards.length,
+    },
+    result: {
+      resolvedCards: cards.map((entry, index) => ({
+        quantity: entry.quantity ?? 1,
+        section: entry.section ?? "mainboard",
+        requestedName: entry.card.name,
+        originalLine: `${entry.quantity ?? 1} ${entry.card.name}`,
+        lineNumber: index + 1,
+        card: entry.card,
+      })),
+      unresolvedCards: [],
+      resolvedCount: cards.reduce((sum, entry) => sum + (entry.quantity ?? 1), 0),
+      unresolvedCount: 0,
+    },
   };
 }
