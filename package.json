@@ -4,6 +4,9 @@
   "description": "API for parsing EDH decklists and resolving cards via Scryfall.",
   "private": true,
   "main": "dist/server.js",
+  "engines": {
+    "node": ">=22 <25"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
