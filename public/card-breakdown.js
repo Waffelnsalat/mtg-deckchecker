@@ -12,6 +12,10 @@ window.MtgDeckcheckerCardBreakdown = {
 
     const synergyLabels = config.synergyLabels;
     const lowSignalLandTags = config.lowSignalLandTags;
+    const hiddenTagStats = new Set(
+      [...(config.hiddenTagStats ?? [])].map((tag) => helpers.normalizeText(tag)),
+    );
+    const tagStatAliases = buildTagStatAliasMap(config.tagStatAliases ?? {});
     const rolePriority = config.rolePriority;
     const maxRoles = config.maxRoles;
     const maxRoleDetails = config.maxRoleDetails ?? 4;
@@ -69,6 +73,8 @@ window.MtgDeckcheckerCardBreakdown = {
             ? `${roleRows} of ${filteredRows.length} shown entries have meaningful roles. Showing ${filteredRows.length} of ${totalRows} entries and ${totalEntries} of ${totalCards} cards. Baseline mana-source lands are hidden unless they affect speed, fixing, or utility.`
             : "Card-level role detection appears here after analysis.";
       }
+
+      renderTagStats(buildTagStats(analysis));
 
       const renderedRows = filteredRows.map((row) => createRow(row));
       if (renderedRows.length === 0) {
@@ -248,6 +254,142 @@ window.MtgDeckcheckerCardBreakdown = {
       }
 
       return roleIndex;
+    }
+
+    function buildTagStats(analysis) {
+      const assignments = new Map();
+      const addTaggedCards = (taggedCards = []) => {
+        for (const taggedCard of taggedCards ?? []) {
+          if (!taggedCard?.name) {
+            continue;
+          }
+
+          const quantity = Math.max(1, Number(taggedCard.quantity ?? 1) || 1);
+          const section = taggedCard.section ?? "card";
+          const nameKey = helpers.normalizeText(taggedCard.name);
+          const seenTags = new Set();
+
+          for (const hit of taggedCard.hits ?? []) {
+            const rawTag = String(hit?.tag ?? "").trim();
+            if (!rawTag) {
+              continue;
+            }
+
+            const tagKey = helpers.normalizeText(rawTag);
+            if (isHiddenTagStat(rawTag)) {
+              continue;
+            }
+
+            const label = getTagStatLabel(rawTag);
+            const labelKey = helpers.normalizeText(label);
+            const dedupeKey = labelKey || tagKey;
+            if (seenTags.has(dedupeKey)) {
+              continue;
+            }
+            seenTags.add(dedupeKey);
+
+            const assignmentKey = `${section}:${nameKey}:${dedupeKey}`;
+            const existing = assignments.get(assignmentKey);
+            if (!existing || quantity > existing.quantity) {
+              assignments.set(assignmentKey, {
+                rawTag,
+                label,
+                quantity,
+              });
+            }
+          }
+        }
+      };
+
+      addTaggedCards(analysis?.commander?.taggedCommanders);
+      addTaggedCards(analysis?.gameChangers?.taggedCards);
+      addTaggedCards(analysis?.landBase?.taggedCards);
+      addTaggedCards(analysis?.ramp?.taggedCards);
+      addTaggedCards(analysis?.draw?.taggedCards);
+      addTaggedCards(analysis?.consistency?.taggedCards);
+      addTaggedCards(analysis?.removal?.taggedCards);
+      addTaggedCards(analysis?.spellInteraction?.taggedCards);
+      addTaggedCards(analysis?.protection?.taggedCards);
+      addTaggedCards(analysis?.recursion?.taggedCards);
+      addTaggedCards(analysis?.winConditions?.taggedCards);
+      addTaggedCards(analysis?.advancedRoles?.taggedCards);
+
+      const totals = new Map();
+      for (const assignment of assignments.values()) {
+        const key = helpers.normalizeText(assignment.label) || helpers.normalizeText(assignment.rawTag);
+        const current = totals.get(key) ?? {
+          label: assignment.label,
+          count: 0,
+        };
+        current.count += assignment.quantity;
+        totals.set(key, current);
+      }
+
+      return [...totals.values()]
+        .sort((left, right) => right.count - left.count || left.label.localeCompare(right.label));
+    }
+
+    function isHiddenTagStat(rawTag) {
+      const rawKey = helpers.normalizeText(rawTag);
+      const labelKey = helpers.normalizeText(helpers.formatTagLabel(rawTag));
+      return hiddenTagStats.has(rawKey) || hiddenTagStats.has(labelKey);
+    }
+
+    function buildTagStatAliasMap(aliases) {
+      const map = new Map();
+      for (const [rawTag, label] of Object.entries(aliases ?? {})) {
+        map.set(helpers.normalizeText(rawTag), String(label));
+        map.set(helpers.normalizeText(helpers.formatTagLabel(rawTag)), String(label));
+      }
+      return map;
+    }
+
+    function getTagStatLabel(rawTag) {
+      const rawKey = helpers.normalizeText(rawTag);
+      const label = helpers.formatTagLabel(rawTag);
+      const labelKey = helpers.normalizeText(label);
+      return tagStatAliases.get(rawKey) ?? tagStatAliases.get(labelKey) ?? label;
+    }
+
+    function renderTagStats(stats) {
+      if (!elements.tagStats) {
+        return;
+      }
+
+      if (!stats.length) {
+        const empty = document.createElement("p");
+        empty.className = "card-breakdown-tag-empty";
+        empty.textContent = "No analyzer tags detected yet.";
+        elements.tagStats.replaceChildren(empty);
+        return;
+      }
+
+      const maxCount = Math.max(...stats.map((stat) => stat.count), 1);
+      elements.tagStats.replaceChildren(...stats.map((stat) => createTagStatRow(stat, maxCount)));
+    }
+
+    function createTagStatRow(stat, maxCount) {
+      const row = document.createElement("div");
+      row.className = "card-breakdown-tag-stat";
+      row.style.setProperty("--tag-stat-ratio", String(Math.max(0, Math.min(1, stat.count / maxCount))));
+
+      const label = document.createElement("span");
+      label.className = "card-breakdown-tag-stat-label";
+      label.textContent = stat.label;
+
+      const count = document.createElement("strong");
+      count.className = "card-breakdown-tag-stat-count";
+      count.textContent = String(stat.count);
+
+      const track = document.createElement("span");
+      track.className = "card-breakdown-tag-stat-track";
+      const fill = document.createElement("span");
+      fill.className = "card-breakdown-tag-stat-fill";
+      track.append(fill);
+
+      row.title = `${stat.label}: ${stat.count}`;
+      row.append(label, count, track);
+      return row;
     }
 
     function addAdvancedTaggedCards(roleIndex, taggedCards = []) {

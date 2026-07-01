@@ -384,6 +384,7 @@
                       <strong id="average-cmc" class="stat-value">0.00</strong>
                     </article>
                   </div>
+                  <div id="composition-chart" class="composition-chart" aria-label="Deck type distribution"></div>
 
                   <section class="note-box bracket-box">
                     <h3>Bracket Read</h3>
@@ -551,15 +552,6 @@
                     aria-selected="false"
                   >
                     Engine
-                  </button>
-                  <button
-                    class="advanced-tab-button"
-                    type="button"
-                    data-advanced-tab="synergy"
-                    role="tab"
-                    aria-selected="false"
-                  >
-                    Synergy
                   </button>
                   <button
                     class="advanced-tab-button"
@@ -1116,52 +1108,6 @@
 
               </div>
 
-              <div class="analysis-tab-panel" data-analysis-tab-panel="synergy">
-              <section class="dashboard-section">
-                <p class="panel-kicker">Stage 4</p>
-                <h3>Synergy Network</h3>
-                <p>Read the deck as connected synergy packages, based only on synergy input, output, payoff, and friction tags.</p>
-              </section>
-
-              <div class="result-columns-wide">
-                <section class="note-box synergy-network-box">
-                  <div class="synergy-network-head">
-                    <div>
-                      <p class="panel-kicker">Input / Output Map</p>
-                      <h3>Package Network</h3>
-                    </div>
-                    <span id="synergy-network-count" class="soft-pill">0 packages</span>
-                  </div>
-                  <p id="synergy-network-summary" class="strategy-summary">
-                    Synergy packages appear here after analysis.
-                  </p>
-                  <div class="synergy-network-layout">
-                    <div
-                      id="synergy-network-graph"
-                      class="synergy-network-graph"
-                      aria-label="Synergy package network diagram"
-                    ></div>
-                    <aside class="synergy-network-side">
-                      <div class="tagged-card-block">
-                        <span class="meta-label">Commander Fit</span>
-                        <strong id="synergy-commander-score" class="synergy-focus-score">0 / 10</strong>
-                        <p id="synergy-commander-summary" class="strategy-summary">
-                          Commander synergy appears here after analysis.
-                        </p>
-                      </div>
-                      <div class="tagged-card-block">
-                        <span class="meta-label">Selected Package</span>
-                        <div id="synergy-selected-package" class="synergy-selected-package">
-                          Select a node to inspect its cards and gaps.
-                        </div>
-                      </div>
-                    </aside>
-                  </div>
-                  <div id="synergy-package-list" class="synergy-package-list"></div>
-                </section>
-              </div>
-              </div>
-
               <div class="analysis-tab-panel" data-analysis-tab-panel="interaction">
               <section class="dashboard-section">
                 <p class="panel-kicker">Stage 5</p>
@@ -1510,6 +1456,13 @@
                 <p id="card-breakdown-summary" class="strategy-summary">
                   Card-level role detection appears here after analysis.
                 </p>
+                <div class="card-breakdown-tag-stats" aria-label="Tag frequency">
+                  <div class="card-breakdown-tag-stats-head">
+                    <span>Tag Frequency</span>
+                    <small>Low-signal structural tags hidden; counts are weighted by deck copies.</small>
+                  </div>
+                  <div id="card-breakdown-tag-stats" class="card-breakdown-tag-grid"></div>
+                </div>
                 <div class="card-breakdown-legend" aria-label="Card impact legend">
                   <span class="card-breakdown-legend-item is-strong">Core piece</span>
                   <span class="card-breakdown-legend-item is-useful">Useful</span>
@@ -1786,7 +1739,6 @@
     <script src="/decklist-intake.js" defer></script>
     <script src="/tagged-card-sections.js" defer></script>
     <script src="/quick-read.js" defer></script>
-    <script src="/synergy-network.js" defer></script>
     <script src="/theme-media.js" defer></script>
     <script src="/strategy-renderer.js" defer></script>
     <script src="/deck-identity.js" defer></script>

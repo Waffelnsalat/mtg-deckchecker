@@ -29,11 +29,13 @@ window.MtgDeckcheckerStructureOverview = {
       applyScoreTone(elements.structureScore, structure.structureScore);
       renderFindings(structure.findings);
       renderManaCurve(structure.mana.curve);
+      renderCompositionChart(deckDocument.result.resolvedCards);
     }
 
     function reset() {
       elements.findingsList.replaceChildren();
       elements.curveBars.replaceChildren();
+      elements.compositionChart?.replaceChildren();
     }
 
     function renderManaCurve(curve) {
@@ -67,6 +69,91 @@ window.MtgDeckcheckerStructureOverview = {
       });
 
       elements.curveBars.replaceChildren(...bars);
+    }
+
+    function renderCompositionChart(resolvedCards) {
+      if (!elements.compositionChart) {
+        return;
+      }
+
+      const bucketMap = new Map([
+        ["land", { label: "Lands", count: 0, color: "land" }],
+        ["creature", { label: "Creatures", count: 0, color: "creature" }],
+        ["instant", { label: "Instants", count: 0, color: "instant" }],
+        ["sorcery", { label: "Sorceries", count: 0, color: "sorcery" }],
+        ["artifact", { label: "Artifacts", count: 0, color: "artifact" }],
+        ["enchantment", { label: "Enchantments", count: 0, color: "enchantment" }],
+        ["planeswalker", { label: "Planeswalkers", count: 0, color: "planeswalker" }],
+        ["battle", { label: "Battles", count: 0, color: "battle" }],
+        ["other", { label: "Other", count: 0, color: "other" }],
+      ]);
+
+      for (const entry of resolvedCards ?? []) {
+        if (entry.section !== "commander" && entry.section !== "mainboard") {
+          continue;
+        }
+
+        const bucket = bucketMap.get(getPrimaryCardType(entry.card.type_line ?? "")) ?? bucketMap.get("other");
+        bucket.count += entry.quantity;
+      }
+
+      const buckets = [...bucketMap.values()].filter((bucket) => bucket.count > 0);
+      const total = buckets.reduce((sum, bucket) => sum + bucket.count, 0);
+
+      if (total <= 0) {
+        elements.compositionChart.replaceChildren();
+        return;
+      }
+
+      const stackedBar = document.createElement("div");
+      stackedBar.className = "composition-stacked-bar";
+
+      const legend = document.createElement("div");
+      legend.className = "composition-legend";
+
+      for (const bucket of buckets) {
+        const share = bucket.count / total;
+        const segment = document.createElement("span");
+        segment.className = `composition-segment composition-segment-${bucket.color}`;
+        segment.style.flexGrow = String(Math.max(0.02, share));
+        segment.title = `${bucket.label}: ${bucket.count} (${formatPercent(share)})`;
+        stackedBar.append(segment);
+
+        const item = document.createElement("span");
+        item.className = `composition-legend-item composition-legend-${bucket.color}`;
+        item.textContent = `${bucket.label} ${bucket.count}`;
+        legend.append(item);
+      }
+
+      elements.compositionChart.replaceChildren(stackedBar, legend);
+    }
+
+    function getPrimaryCardType(typeLine) {
+      if (/\bland\b/i.test(typeLine)) {
+        return "land";
+      }
+      if (/\bcreature\b/i.test(typeLine)) {
+        return "creature";
+      }
+      if (/\binstant\b/i.test(typeLine)) {
+        return "instant";
+      }
+      if (/\bsorcery\b/i.test(typeLine)) {
+        return "sorcery";
+      }
+      if (/\bartifact\b/i.test(typeLine)) {
+        return "artifact";
+      }
+      if (/\benchantment\b/i.test(typeLine)) {
+        return "enchantment";
+      }
+      if (/\bplaneswalker\b/i.test(typeLine)) {
+        return "planeswalker";
+      }
+      if (/\bbattle\b/i.test(typeLine)) {
+        return "battle";
+      }
+      return "other";
     }
 
     function renderFindings(findings) {
@@ -110,6 +197,7 @@ window.MtgDeckcheckerStructureOverview = {
         "score-card-risk",
       );
       card.classList.add("score-card", `score-card-${getScoreTone(score)}`);
+      card.style.setProperty("--score-ratio", String(Math.max(0, Math.min(1, score / 100))));
     }
 
     function getScoreTone(score) {

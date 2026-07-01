@@ -127,6 +127,7 @@ window.MtgDeckcheckerResultState = {
         elements.cardBreakdownSummary.textContent =
           "Card-level role detection appears here after analysis.";
       }
+      elements.cardBreakdownTagStats?.replaceChildren();
     }
 
     return {

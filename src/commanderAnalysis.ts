@@ -336,8 +336,14 @@ export function analyzeDeckCommander(
       1,
     ),
   };
+  const profileInfluence = getCommanderProfileInfluence(commanderThemeProfiles);
 
-  const impactScore = scoreCommanderImpact(roundedCounts, commanderInvolvedCombos, prior.score);
+  const impactScore = scoreCommanderImpact(
+    roundedCounts,
+    commanderInvolvedCombos,
+    prior.score,
+    profileInfluence.impactBonus,
+  );
   const dependencyScore = scoreCommanderDependency(
     roundedCounts,
     strategy,
@@ -345,6 +351,7 @@ export function analyzeDeckCommander(
     activePlanKey,
     commanderInvolvedCombos,
     impactScore,
+    profileInfluence.dependencyBonus,
   );
   const ceilingScore = scoreCommanderCeiling(
     roundedCounts,
@@ -353,6 +360,7 @@ export function analyzeDeckCommander(
     commanderInvolvedCombos,
     prior.score,
     activePlanKey,
+    profileInfluence.ceilingBonus,
   );
   const keyRoles = getKeyCommanderRoles(roundedCounts);
   const findings = buildCommanderFindings({
@@ -369,6 +377,7 @@ export function analyzeDeckCommander(
     activeStrategyKey,
     activePlanKey,
     profiles: commanderThemeProfiles,
+    profileInfluence,
   });
   const summary = summarizeCommander({
     commanderNames,
@@ -418,6 +427,7 @@ function detectCommanderRoleHits(
     const finisher = getFinisherProfile(segment.text, segment.typeLine);
     const tokens = getTokenProfile(segment.text);
     const costReduction = getCostReductionProfile(segment.text);
+    const combo = getComboProfile(segment.text);
 
     if (mana) {
       addHit(hits, "mana_engine", mana.weight, mana.reason);
@@ -453,6 +463,10 @@ function detectCommanderRoleHits(
 
     if (costReduction) {
       addHit(hits, "cost_reducer", costReduction.weight, costReduction.reason);
+    }
+
+    if (combo) {
+      addHit(hits, "combo_enabler", combo.weight, combo.reason);
     }
   }
 
@@ -552,6 +566,7 @@ function scoreCommanderImpact(
   counts: DeckCommanderAnalysis["counts"],
   commanderInvolvedCombos: number,
   priorScore: number,
+  profileImpactBonus = 0,
 ) {
   let score =
     20 +
@@ -566,7 +581,8 @@ function scoreCommanderImpact(
     counts.tokens * 4 +
     counts.costReduction * 8 +
     commanderInvolvedCombos * 3.5 +
-    priorScore * 0.45;
+    priorScore * 0.45 +
+    profileImpactBonus;
 
   if (counts.mana + counts.cards + counts.combo + counts.finisher >= 6.5) {
     score += 6;
@@ -582,6 +598,7 @@ function scoreCommanderDependency(
   activePlanKey: WinStrategyKey | null,
   commanderInvolvedCombos: number,
   impactScore: number,
+  profileDependencyBonus = 0,
 ) {
   const synergy = strategy.synergy ?? strategy.perspectives[0]?.synergy ?? null;
   const alignedRoleWeight =
@@ -593,7 +610,8 @@ function scoreCommanderDependency(
     impactScore * 0.24 +
     alignedRoleWeight * 9 +
     commanderInvolvedCombos * 10 +
-    (synergy?.commanderAligned ? 18 : 0);
+    (synergy?.commanderAligned ? 18 : 0) +
+    profileDependencyBonus;
 
   if (activePlanKey === "commander_damage") {
     score += 12;
@@ -615,6 +633,7 @@ function scoreCommanderCeiling(
   commanderInvolvedCombos: number,
   priorScore: number,
   activePlanKey: WinStrategyKey | null,
+  profileCeilingBonus = 0,
 ) {
   let score =
     18 +
@@ -627,7 +646,8 @@ function scoreCommanderCeiling(
     counts.finisher * 8 +
     counts.costReduction * 6 +
     commanderInvolvedCombos * 8 +
-    priorScore * 0.65;
+    priorScore * 0.65 +
+    profileCeilingBonus;
 
   if (activePlanKey === "infinite_combo") {
     score += 5;
@@ -681,6 +701,7 @@ function buildCommanderFindings(input: {
   activeStrategyKey: StrategyKey | null;
   activePlanKey: WinStrategyKey | null;
   profiles: DeckCommanderProfile[];
+  profileInfluence: CommanderProfileInfluence;
 }) {
   const findings: DeckStructureFinding[] = [];
   const primaryProfile = input.profiles[0] ?? null;
@@ -697,7 +718,7 @@ function buildCommanderFindings(input: {
       code: "commander_impact_mid",
       title: "Commander impact is meaningful",
       status: "note",
-      message: "The commander contributes real value, but it is not doing all of the heavy lifting by itself.",
+      message: "The commander meaningfully improves the deck's best turns, even if the 99 can still function without it.",
     });
   } else {
     findings.push({
@@ -765,6 +786,16 @@ function buildCommanderFindings(input: {
     });
   }
 
+  if (input.profileInfluence.impactBonus >= 12 && input.profileInfluence.primaryProfile) {
+    const profile = input.profileInfluence.primaryProfile;
+    findings.push({
+      code: "commander_profile_influence_bonus",
+      title: "Commander multiplies a supported package",
+      status: "good",
+      message: `${profile.supportCount} support cards and ${profile.coreCount} core pieces mean ${profile.commanderName} can turn the ${profile.label} package into much stronger peak turns than the shell alone.`,
+    });
+  }
+
   if (input.commanderManaSink.directFinisherCount > 0) {
     findings.push({
       code: "commander_infinite_mana_finisher",
@@ -816,6 +847,48 @@ function buildCommanderFindings(input: {
   }
 
   return findings.slice(0, 5);
+}
+
+interface CommanderProfileInfluence {
+  impactBonus: number;
+  dependencyBonus: number;
+  ceilingBonus: number;
+  primaryProfile: DeckCommanderProfile | null;
+}
+
+function getCommanderProfileInfluence(profiles: DeckCommanderProfile[]): CommanderProfileInfluence {
+  const primaryProfile = profiles[0] ?? null;
+
+  if (!primaryProfile || primaryProfile.confidence < 45 || primaryProfile.supportCount < 3) {
+    return {
+      impactBonus: 0,
+      dependencyBonus: 0,
+      ceilingBonus: 0,
+      primaryProfile,
+    };
+  }
+
+  const supportRatio = primaryProfile.supportCount / Math.max(primaryProfile.supportTarget, 1);
+  const coreTarget = Math.max(Math.ceil(primaryProfile.supportTarget * 0.45), 1);
+  const coreRatio = primaryProfile.coreCount / coreTarget;
+  const confidenceRatio = primaryProfile.confidence / 100;
+  const densitySignal = clampValue(
+    supportRatio * 0.52 +
+      coreRatio * 0.26 +
+      confidenceRatio * 0.22,
+    0,
+    1.35,
+  );
+  const supportDepth = Math.min(7, primaryProfile.supportCount * 0.24);
+  const coreDepth = Math.min(7, primaryProfile.coreCount * 0.34);
+  const overbuiltBonus = Math.min(6, Math.max(0, primaryProfile.supportCount - primaryProfile.supportTarget) * 0.35);
+
+  return {
+    impactBonus: roundTo(Math.min(42, densitySignal * 20 + supportDepth + coreDepth + overbuiltBonus), 1),
+    dependencyBonus: roundTo(Math.min(22, densitySignal * 11 + supportDepth * 0.6 + coreDepth * 0.6), 1),
+    ceilingBonus: roundTo(Math.min(38, densitySignal * 19 + supportDepth + coreDepth + overbuiltBonus), 1),
+    primaryProfile,
+  };
 }
 
 function getKeyCommanderRoles(counts: DeckCommanderAnalysis["counts"]) {
@@ -1345,6 +1418,35 @@ function getCostReductionProfile(text: string): CommanderRoleProfile | null {
     /\bwithout paying (?:its|their) mana cost\b/.test(text)
   ) {
     return { weight: 1.04, reason: "Compresses mana requirements from the command zone." };
+  }
+
+  return null;
+}
+
+function getComboProfile(text: string): CommanderRoleProfile | null {
+  if (
+    /\bcopy\b[^.]{0,180}\b(?:spell|ability)\b/.test(text) ||
+    /\bcopy (?:that|the|next|target)\b[^.]{0,140}\b(?:spell|ability)\b/.test(text)
+  ) {
+    const xMultiplier =
+      /\bwith x in (?:its|their) mana cost\b|\bwith x in (?:its|their) activation cost\b|\bwhere x\b/.test(text)
+        ? 1.2
+        : 1;
+
+    return {
+      weight: roundTo(1.12 * xMultiplier, 2),
+      reason: "Copies scalable spells or abilities from the command zone, multiplying the deck's best payoff turns.",
+    };
+  }
+
+  if (
+    /\bwhenever you cast\b[^.]{0,160}\bwith x in (?:its|their) mana cost\b/.test(text) ||
+    /\bactivate\b[^.]{0,160}\bwith x in (?:its|their) activation cost\b/.test(text)
+  ) {
+    return {
+      weight: 0.92,
+      reason: "Directly rewards scalable X-spell or X-ability turns from the command zone.",
+    };
   }
 
   return null;

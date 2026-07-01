@@ -52,6 +52,7 @@ const recommendationsSummaryAdvanced = document.querySelector("#recommendations-
 const recommendationsListAdvanced = document.querySelector("#recommendations-list-advanced");
 const cardBreakdownCount = document.querySelector("#card-breakdown-count");
 const cardBreakdownSummary = document.querySelector("#card-breakdown-summary");
+const cardBreakdownTagStats = document.querySelector("#card-breakdown-tag-stats");
 const cardBreakdownBody = document.querySelector("#card-breakdown-body");
 const cardBreakdownSearch = document.querySelector("#card-breakdown-search");
 const cardBreakdownSectionFilter = document.querySelector("#card-breakdown-section-filter");
@@ -79,6 +80,7 @@ const enchantmentCount = document.querySelector("#enchantment-count");
 const planeswalkerCount = document.querySelector("#planeswalker-count");
 const battleCount = document.querySelector("#battle-count");
 const averageCmc = document.querySelector("#average-cmc");
+const compositionChart = document.querySelector("#composition-chart");
 const resolvedCount = document.querySelector("#resolved-count");
 const uniqueCount = document.querySelector("#unique-count");
 const totalCount = document.querySelector("#total-count");
@@ -314,6 +316,8 @@ const CARD_BREAKDOWN_SYNERGY_LABELS = new Set(CARD_BREAKDOWN_CONFIG.synergyLabel
 const CARD_BREAKDOWN_LOW_SIGNAL_LAND_TAGS = new Set(
   CARD_BREAKDOWN_CONFIG.lowSignalLandTags ?? ["Land Base", "Land Slot", "Basic Land", "Mana Source"],
 );
+const CARD_BREAKDOWN_HIDDEN_TAG_STATS = new Set(CARD_BREAKDOWN_CONFIG.hiddenTagStats ?? []);
+const CARD_BREAKDOWN_TAG_STAT_ALIASES = CARD_BREAKDOWN_CONFIG.tagStatAliases ?? {};
 const RECOMMENDATION_TOPICS = FRONTEND_CONFIG.recommendationTopics ?? [];
 const SIMPLE_VALUE_DRILLDOWNS = FRONTEND_CONFIG.simpleValueDrilldowns ?? {};
 const TAG_LABELS = FRONTEND_CONFIG.tagLabels ?? {};
@@ -331,6 +335,7 @@ const cardBreakdownController = window.MtgDeckcheckerCardBreakdown.create({
   elements: {
     count: cardBreakdownCount,
     summary: cardBreakdownSummary,
+    tagStats: cardBreakdownTagStats,
     body: cardBreakdownBody,
     search: cardBreakdownSearch,
     sectionFilter: cardBreakdownSectionFilter,
@@ -343,6 +348,8 @@ const cardBreakdownController = window.MtgDeckcheckerCardBreakdown.create({
     rolePriority: CARD_BREAKDOWN_ROLE_PRIORITY,
     synergyLabels: CARD_BREAKDOWN_SYNERGY_LABELS,
     lowSignalLandTags: CARD_BREAKDOWN_LOW_SIGNAL_LAND_TAGS,
+    hiddenTagStats: CARD_BREAKDOWN_HIDDEN_TAG_STATS,
+    tagStatAliases: CARD_BREAKDOWN_TAG_STAT_ALIASES,
   },
   helpers: {
     getCardImageUrl,
@@ -446,7 +453,6 @@ const quickReadController = window.MtgDeckcheckerQuickRead.create({
     risksList: quickReadRisksList,
   },
 });
-const synergyNetworkController = window.MtgDeckcheckerSynergyNetwork.create();
 const themeMediaController = window.MtgDeckcheckerThemeMedia.create({
   elements: {
     ambientBackground: ambientCardBackground,
@@ -515,6 +521,7 @@ const structureOverviewController = window.MtgDeckcheckerStructureOverview.creat
     planeswalkerCount,
     battleCount,
     averageManaValue: averageCmc,
+    compositionChart,
     resolvedCount,
     uniqueCount,
     totalCount,
@@ -708,6 +715,7 @@ const resultStateController = window.MtgDeckcheckerResultState.create({
     recommendationsListAdvanced,
     cardBreakdownCount,
     cardBreakdownSummary,
+    cardBreakdownTagStats,
     cardBreakdownBody,
     taggedLists: {
       landBaseCardsList,
@@ -1400,7 +1408,6 @@ function renderAnalyzedDeck(result) {
   metricDetailsController.render(analysis);
   strategyRendererController.render(strategy, winStrategy);
   quickReadController.render(analysis);
-  synergyNetworkController.render(analysis);
   recommendationVisualRenderToken += 1;
   const recommendationRenderToken = recommendationVisualRenderToken;
   renderRecommendations(recommendations, recommendationRenderToken);

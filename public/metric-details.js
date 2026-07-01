@@ -225,6 +225,7 @@ window.MtgDeckcheckerMetricDetails = {
         "score-card-risk",
       );
       card.classList.add("score-card", `score-card-${getScoreTone(score)}`);
+      card.style.setProperty("--score-ratio", String(Math.max(0, Math.min(1, score / 100))));
     }
 
     function getScoreTone(score) {

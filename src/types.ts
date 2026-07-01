@@ -793,85 +793,6 @@ export interface DeckCommanderAnalysis {
   taggedCommanders: CommanderTaggedCard[];
 }
 
-export type SynergyIoDomain =
-  | "graveyard"
-  | "sacrifice"
-  | "spells"
-  | "tokens"
-  | "counters"
-  | "lifegain"
-  | "kindred"
-  | "artifacts"
-  | "enchantments"
-  | "discard"
-  | "combat"
-  | "timing"
-  | "resources"
-  | "protection";
-
-export type SynergyIoKind = "input" | "output" | "payoff" | "friction";
-
-export interface SynergyIoAtom {
-  domain: SynergyIoDomain;
-  kind: SynergyIoKind;
-  tag: string;
-  weight: number;
-  reason: string;
-}
-
-export interface SynergyIoTaggedCard {
-  name: string;
-  quantity: number;
-  section: DeckSection;
-  synergyValue: number;
-  atoms: SynergyIoAtom[];
-}
-
-export interface SynergyIoPackage {
-  domain: SynergyIoDomain;
-  label: string;
-  score: number;
-  inputs: number;
-  outputs: number;
-  payoffs: number;
-  frictions: number;
-  inputTags: string[];
-  outputTags: string[];
-  payoffTags: string[];
-  frictionTags: string[];
-  keyCards: string[];
-  gaps: string[];
-}
-
-export interface CommanderSynergyIoMatch {
-  domain: SynergyIoDomain;
-  label: string;
-  score: number;
-  commanderInputs: number;
-  commanderOutputs: number;
-  commanderPayoffs: number;
-  supportInputs: number;
-  supportOutputs: number;
-  supportPayoffs: number;
-  keyCommanders: string[];
-  keySupportCards: string[];
-  gaps: string[];
-}
-
-export interface CommanderSynergyIoAnalysis {
-  score: number;
-  summary: string;
-  matches: CommanderSynergyIoMatch[];
-  gaps: string[];
-}
-
-export interface DeckSynergyIoAnalysis {
-  summary: string;
-  packages: SynergyIoPackage[];
-  commanderSynergy: CommanderSynergyIoAnalysis;
-  taggedCards: SynergyIoTaggedCard[];
-}
-
 export type DeckPowerTier =
   | "Casual"
   | "Focused"
@@ -1023,7 +944,6 @@ export interface DeckAnalysisDocument {
     winConditions: DeckWinConditionAnalysis;
     removal: DeckRemovalAnalysis;
     spellInteraction: DeckSpellInteractionAnalysis;
-    synergyIo?: DeckSynergyIoAnalysis;
     advancedRoles?: {
       taggedCards: Array<{
         name: string;

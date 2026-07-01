@@ -15,7 +15,6 @@ import {
   DeckStrategyAnalysis,
   DeckStructureAnalysis,
   DeckStructureFinding,
-  DeckSynergyIoAnalysis,
   DeckWinConditionAnalysis,
   DeckWinStrategyAnalysis,
   WinStrategyKey,
@@ -42,7 +41,6 @@ interface DeckPowerInput {
   spellInteraction: DeckSpellInteractionAnalysis;
   strategy: DeckStrategyAnalysis;
   winStrategy: DeckWinStrategyAnalysis;
-  synergyIo?: DeckSynergyIoAnalysis;
 }
 
 const DIMENSION_LABELS: Record<DeckPowerDimensionKey, string> = {
@@ -93,11 +91,8 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
     input.strategy.synergy?.synergyScore ??
     input.strategy.perspectives[0]?.synergy.synergyScore ??
     0;
-  const synergyIoScore = getSynergyIoScore(input.synergyIo);
-  const commanderSynergyScore = input.synergyIo?.commanderSynergy.score ?? 0;
-  const synergyFrictionPenalty = getSynergyIoFrictionPenalty(input.synergyIo);
   const primaryPlanKey = input.winStrategy.primaryPlan?.key ?? null;
-  const planClarity = getPlanClarityScore(input.strategy, input.winStrategy, input.synergyIo);
+  const planClarity = getPlanClarityScore(input.strategy, input.winStrategy);
   const curveEfficiency = getCurveEfficiencyScore(input.structure);
   const closingTempo = primaryPlanKey === null ? 42 : WIN_PLAN_TEMPO[primaryPlanKey];
   const closingPlanStrength = primaryPlanKey === null ? 44 : WIN_PLAN_CLOSING[primaryPlanKey];
@@ -122,7 +117,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       input.draw.drawScore * 0.24 +
       strategySynergy * 0.16 +
       planClarity * 0.06 +
-      synergyIoScore * 0.02 +
       input.commander.counts.cards * 2.2 +
       input.commander.counts.tutors * 2 +
       getConsistencyBonus(input.consistency, comboPressure),
@@ -140,7 +134,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       input.recursion.recursionScore * 0.35 +
       strategySynergy * 0.12 +
       planClarity * 0.06 +
-      synergyIoScore * 0.02 +
       input.commander.counts.protection * 1.8 +
       input.commander.counts.recursion * 1.6 +
       getResilienceModifier(input.protection, input.recursion),
@@ -151,7 +144,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       strategySynergy * 0.22 +
       closingPlanStrength * 0.16 +
       input.consistency.consistencyScore * 0.09 +
-      synergyIoScore * 0.04 +
       input.commander.counts.combo * 2.6 +
       input.commander.counts.finisher * 2.2 +
       getClosingModifier(comboPressure, primaryPlanKey),
@@ -173,9 +165,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
-      synergyIoScore,
-      commanderSynergyScore,
-      synergyFrictionPenalty,
     }),
     createDimension("consistency", consistency, {
       planClarity,
@@ -183,9 +172,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
-      synergyIoScore,
-      commanderSynergyScore,
-      synergyFrictionPenalty,
     }),
     createDimension("interaction", interaction, {
       planClarity,
@@ -193,9 +179,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
-      synergyIoScore,
-      commanderSynergyScore,
-      synergyFrictionPenalty,
     }),
     createDimension("resilience", resilience, {
       planClarity,
@@ -203,9 +186,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
-      synergyIoScore,
-      commanderSynergyScore,
-      synergyFrictionPenalty,
     }),
     createDimension("closing", closing, {
       planClarity,
@@ -213,9 +193,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
-      synergyIoScore,
-      commanderSynergyScore,
-      synergyFrictionPenalty,
     }),
     createDimension("mana", mana, {
       planClarity,
@@ -223,9 +200,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
-      synergyIoScore,
-      commanderSynergyScore,
-      synergyFrictionPenalty,
     }),
   ];
 
@@ -248,9 +222,6 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
     exactComboCount,
     comboPressure,
     strategySynergy,
-    synergyIoScore,
-    commanderSynergyScore,
-    synergyFrictionPenalty,
   });
   powerIndex = clampScore(powerIndex);
 
@@ -282,9 +253,6 @@ function createDimension(
     exactComboCount: number;
     comboPressure: number;
     strategySynergy: number;
-    synergyIoScore: number;
-    commanderSynergyScore: number;
-    synergyFrictionPenalty: number;
   },
 ): DeckPowerDimension {
   return {
@@ -304,9 +272,6 @@ function summarizeDimension(
     exactComboCount: number;
     comboPressure: number;
     strategySynergy: number;
-    synergyIoScore: number;
-    commanderSynergyScore: number;
-    synergyFrictionPenalty: number;
   },
 ): string {
   switch (key) {
@@ -431,12 +396,6 @@ function buildStrengths(
     );
   }
 
-  if ((input.synergyIo?.commanderSynergy.score ?? 0) >= 5.5) {
-    dimensionNotes.push("The commander's trigger/output pattern is backed by matching cards in the 99.");
-  } else if ((input.synergyIo?.packages[0]?.score ?? 0) >= 5.5) {
-    dimensionNotes.push(`${input.synergyIo?.packages[0]?.label} has a real input/output/payoff loop.`);
-  }
-
   return dedupeStrings(dimensionNotes).slice(0, 3);
 }
 
@@ -461,13 +420,6 @@ function buildWeaknesses(
 
   if (exactComboCount === 0 && input.winConditions.finisherScore < 55) {
     dimensionNotes.push("The deck does not show a very fast or compact fallback kill if the fair plan stalls.");
-  }
-
-  const commanderSynergy = input.synergyIo?.commanderSynergy;
-  if (commanderSynergy && commanderSynergy.score < 2.2 && commanderSynergy.matches.length > 0) {
-    dimensionNotes.unshift("The commander's visible asks do not have much matching input/output support in the 99.");
-  } else if ((input.synergyIo?.packages ?? []).some((entry) => entry.frictions >= 1.2 && entry.score < 3)) {
-    dimensionNotes.unshift("Some synergy packages include friction pieces without enough payoff density to justify them.");
   }
 
   return dedupeStrings(dimensionNotes).slice(0, 3);
@@ -553,48 +505,20 @@ function getCurveEfficiencyScore(structure: DeckStructureAnalysis): number {
 function getPlanClarityScore(
   strategy: DeckStrategyAnalysis,
   winStrategy: DeckWinStrategyAnalysis,
-  synergyIo?: DeckSynergyIoAnalysis,
 ): number {
   const hasMainStrategy = strategy.mainStrategy !== null;
   const hasPrimaryPlan = winStrategy.primaryPlan !== null;
   const synergy = strategy.synergy?.synergyScore ?? strategy.perspectives[0]?.synergy.synergyScore ?? 0;
-  const commanderSynergy = synergyIo?.commanderSynergy.score ?? 0;
-  const synergyBonus = Math.min(7, commanderSynergy * 0.7);
 
   if (hasMainStrategy && hasPrimaryPlan) {
-    return clampScore(60 + synergy * 0.35 + synergyBonus);
+    return clampScore(60 + synergy * 0.35);
   }
 
   if (hasMainStrategy || hasPrimaryPlan) {
-    return clampScore(44 + synergy * 0.28 + synergyBonus * 0.7);
+    return clampScore(44 + synergy * 0.28);
   }
 
-  return clampScore(28 + synergy * 0.18 + synergyBonus * 0.45);
-}
-
-function getSynergyIoScore(synergyIo?: DeckSynergyIoAnalysis) {
-  if (!synergyIo) {
-    return 0;
-  }
-
-  const packageScore = synergyIo.packages
-    .slice(0, 4)
-    .reduce((sum, entry, index) => sum + entry.score * [1, 0.62, 0.38, 0.22][index], 0);
-  const commanderScore = synergyIo.commanderSynergy.score * 0.9;
-  const frictionPenalty = getSynergyIoFrictionPenalty(synergyIo) * 0.08;
-
-  return clampScore(packageScore * 5.2 + commanderScore * 4.2 - frictionPenalty);
-}
-
-function getSynergyIoFrictionPenalty(synergyIo?: DeckSynergyIoAnalysis) {
-  if (!synergyIo) {
-    return 0;
-  }
-
-  const packageFriction = synergyIo.packages.reduce((sum, entry) => sum + entry.frictions, 0);
-  const gapPenalty = Math.min(12, synergyIo.commanderSynergy.gaps.length * 1.6);
-
-  return clampValue(packageFriction * 1.4 + gapPenalty, 0, 24);
+  return clampScore(28 + synergy * 0.18);
 }
 
 function getComboSpeedBonus(comboPressure: number): number {
@@ -749,9 +673,6 @@ function getPowerAdjustment(
     exactComboCount: number;
     comboPressure: number;
     strategySynergy: number;
-    synergyIoScore: number;
-    commanderSynergyScore: number;
-    synergyFrictionPenalty: number;
   },
 ): number {
   let adjustment = 0;
@@ -792,16 +713,6 @@ function getPowerAdjustment(
     (context.consistency >= 68 || context.comboPressure >= 2)
   ) {
     adjustment += 1.5;
-  }
-
-  if (context.synergyIoScore >= 72 && context.commanderSynergyScore >= 4.5) {
-    adjustment += 1.2;
-  } else if (context.synergyIoScore >= 58) {
-    adjustment += 0.5;
-  }
-
-  if (context.synergyFrictionPenalty >= 10 && context.synergyIoScore < 45) {
-    adjustment -= 1.4;
   }
 
   if (input.structure.structureScore < 45) {

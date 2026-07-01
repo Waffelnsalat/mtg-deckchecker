@@ -242,6 +242,113 @@ test("analyzeDeckCommander boosts commanders that turn infinite mana into value"
   );
 });
 
+test("analyzeDeckCommander raises influence for dense commander profile support", () => {
+  const analysis = analyzeDeckCommander(
+    createDocument([
+      createCommanderCard({
+        name: "Aura Commander",
+        cmc: 3,
+        type_line: "Legendary Creature - Human Druid",
+        oracle_text:
+          "Whenever an enchantment enters the battlefield under your control, draw a card.",
+        color_identity: ["G", "W"],
+      }),
+    ]),
+    {
+      mainStrategy: { key: "enchantress", label: "Enchantress" },
+      synergy: {
+        commanderAligned: true,
+      },
+      commanderProfiles: [
+        {
+          commanderName: "Aura Commander",
+          key: "enchantress",
+          label: "Enchantments Package",
+          supportReason: "Commander rewards enchantment density.",
+          supportTarget: 12,
+          supportCount: 16,
+          coreCount: 8,
+          confidence: 88,
+          supportCards: [],
+          missingPieces: [],
+        },
+      ],
+      perspectives: [],
+    } as any,
+    {
+      primaryPlan: {
+        key: "value_attrition",
+        label: "Value Attrition",
+      },
+    } as any,
+    {
+      combos: {
+        lookupStatus: "ok",
+        exact: [],
+      },
+    } as any,
+  );
+
+  assert.ok(analysis.impactScore >= 52);
+  assert.ok(analysis.dependencyScore >= 72);
+  assert.ok(analysis.ceilingScore >= 60);
+  assert.ok(analysis.findings.some((entry) => entry.code === "commander_profile_influence_bonus"));
+});
+
+test("analyzeDeckCommander treats supported X-copy commanders as high peak-turn influence", () => {
+  const analysis = analyzeDeckCommander(
+    createDocument([
+      createCommanderCard({
+        name: "X Copy Commander",
+        cmc: 4,
+        type_line: "Legendary Creature - Human Tyranid Wizard",
+        oracle_text:
+          "{T}: Add {C}{C}. When you next cast a spell with X in its mana cost or activate an ability with X in its activation cost this turn, copy that spell or ability.",
+        color_identity: ["G", "U", "R"],
+      }),
+    ]),
+    {
+      mainStrategy: { key: "counters", label: "Counters" },
+      synergy: {
+        commanderAligned: true,
+      },
+      commanderProfiles: [
+        {
+          commanderName: "X Copy Commander",
+          key: "counters",
+          label: "Counters Package",
+          supportReason: "Commander multiplies scalable X counter payoffs.",
+          supportTarget: 14,
+          supportCount: 29,
+          coreCount: 29,
+          confidence: 100,
+          supportCards: [],
+          missingPieces: [],
+        },
+      ],
+      perspectives: [],
+    } as any,
+    {
+      primaryPlan: {
+        key: "big_mana_haymakers",
+        label: "Big Mana Haymakers",
+      },
+    } as any,
+    {
+      combos: {
+        lookupStatus: "ok",
+        exact: [],
+      },
+    } as any,
+  );
+
+  assert.ok(analysis.counts.mana >= 1);
+  assert.ok(analysis.counts.combo >= 1);
+  assert.ok(analysis.impactScore >= 75);
+  assert.ok(analysis.ceilingScore >= 82);
+  assert.ok(analysis.findings.some((entry) => entry.code === "commander_profile_influence_bonus"));
+});
+
 function createDocument(resolvedCards: any[]) {
   return {
     format: "edh",

@@ -206,43 +206,6 @@ test("analyzeDeckPower keeps baseline fair shells out of the upper sixes by defa
   assert.ok(analysis.powerScore <= 6.1);
 });
 
-test("analyzeDeckPower gives coherent Synergy IO a bounded lift", () => {
-  const baseline = analyzeDeckPower(createInput() as any);
-  const synergistic = analyzeDeckPower(
-    createInput({
-      synergyIo: createSynergyIo({
-        packageScore: 5.8,
-        commanderScore: 5.4,
-        label: "Artifacts",
-      }),
-    }) as any,
-  );
-
-  assert.ok(synergistic.powerIndex > baseline.powerIndex);
-  assert.ok(
-    (synergistic.dimensions.find((entry) => entry.key === "closing")?.score ?? 0) >
-      (baseline.dimensions.find((entry) => entry.key === "closing")?.score ?? 0),
-  );
-  assert.ok(synergistic.powerScore - baseline.powerScore <= 0.6);
-});
-
-test("analyzeDeckPower penalizes Synergy IO friction when the package is not supported", () => {
-  const baseline = analyzeDeckPower(createInput() as any);
-  const friction = analyzeDeckPower(
-    createInput({
-      synergyIo: createSynergyIo({
-        packageScore: 0.6,
-        commanderScore: 1,
-        frictions: 9,
-        gaps: ["Artifacts: Commander listens for this event, but the 99 creates it lightly."],
-      }),
-    }) as any,
-  );
-
-  assert.ok(friction.powerIndex < baseline.powerIndex);
-  assert.ok(friction.weaknesses.some((entry) => entry.includes("commander") || entry.includes("friction")));
-});
-
 test("analyzeDeckPower does not let finishers hide a weak shell", () => {
   const analysis = analyzeDeckPower(
     createInput({
@@ -749,61 +712,6 @@ function createInput(overrides: any = {}) {
     },
     overrides,
   );
-}
-
-function createSynergyIo(input: {
-  packageScore: number;
-  commanderScore: number;
-  label?: string;
-  frictions?: number;
-  gaps?: string[];
-}) {
-  const label = input.label ?? "Artifacts";
-
-  return {
-    summary: `${label} package.`,
-    packages: [
-      {
-        domain: label.toLowerCase(),
-        label,
-        score: input.packageScore,
-        inputs: input.packageScore > 1 ? 1.4 : 0.3,
-        outputs: input.packageScore > 1 ? 2.4 : 0.2,
-        payoffs: input.packageScore > 1 ? 1.2 : 0,
-        frictions: input.frictions ?? 0,
-        inputTags: [],
-        outputTags: [],
-        payoffTags: [],
-        frictionTags: input.frictions ? ["resource_payment_friction"] : [],
-        keyCards: [],
-        gaps: input.gaps ?? [],
-      },
-    ],
-    commanderSynergy: {
-      score: input.commanderScore,
-      summary: "Commander synergy test fixture.",
-      matches: input.commanderScore > 0
-        ? [
-            {
-              domain: label.toLowerCase(),
-              label,
-              score: input.commanderScore,
-              commanderInputs: 1,
-              commanderOutputs: 0,
-              commanderPayoffs: 1,
-              supportInputs: 0,
-              supportOutputs: input.commanderScore > 2 ? 2 : 0,
-              supportPayoffs: 0,
-              keyCommanders: ["Commander"],
-              keySupportCards: ["Support"],
-              gaps: input.gaps ?? [],
-            },
-          ]
-        : [],
-      gaps: input.gaps ?? [],
-    },
-    taggedCards: [],
-  };
 }
 
 function deepMerge(base: any, overrides: any): any {
