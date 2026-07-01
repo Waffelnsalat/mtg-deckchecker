@@ -592,6 +592,15 @@
                   <button
                     class="advanced-tab-button"
                     type="button"
+                    data-advanced-tab="opening-hand"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Opening Hand
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
                     data-advanced-tab="cards"
                     role="tab"
                     aria-selected="false"
@@ -1495,9 +1504,34 @@
               </section>
               </div>
 
-              <div class="analysis-tab-panel" data-analysis-tab-panel="cards">
+              <div class="analysis-tab-panel" data-analysis-tab-panel="opening-hand">
               <section class="dashboard-section">
                 <p class="panel-kicker">Stage 8</p>
+                <h3>Opening Hand</h3>
+                <p>Draw seven random mainboard cards as a quick interactive goldfish check.</p>
+              </section>
+
+              <section class="note-box opening-hand-box">
+                <div class="opening-hand-head">
+                  <div>
+                    <p class="panel-kicker">Sample Hand</p>
+                    <h3>Opening Seven</h3>
+                  </div>
+                  <button id="opening-hand-draw-button" class="secondary-button" type="button">
+                    Draw Again
+                  </button>
+                </div>
+                <p id="opening-hand-summary" class="strategy-summary">
+                  Seven cards are drawn from the resolved mainboard. Commanders and companions stay outside the draw.
+                </p>
+
+                <div id="opening-hand-body" class="opening-hand-card-grid"></div>
+              </section>
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="cards">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Stage 9</p>
                 <h3>Card Breakdown</h3>
                 <p>Every resolved card with broad roles and visible analyzer detail tags.</p>
               </section>

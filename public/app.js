@@ -58,6 +58,9 @@ const cardBreakdownSearch = document.querySelector("#card-breakdown-search");
 const cardBreakdownSectionFilter = document.querySelector("#card-breakdown-section-filter");
 const cardBreakdownRoleFilter = document.querySelector("#card-breakdown-role-filter");
 const cardBreakdownSort = document.querySelector("#card-breakdown-sort");
+const openingHandDrawButton = document.querySelector("#opening-hand-draw-button");
+const openingHandSummary = document.querySelector("#opening-hand-summary");
+const openingHandBody = document.querySelector("#opening-hand-body");
 const resultEmpty = document.querySelector("#result-empty");
 const resultContent = document.querySelector("#result-content");
 const successContent = document.querySelector("#success-content");
@@ -759,6 +762,7 @@ const resultStateController = window.MtgDeckcheckerResultState.create({
     clearAnalysisState: () => {
       currentAnalysisSnapshot = null;
       currentAnalysisDocument = null;
+      resetOpeningHand();
     },
     resetResultsViewMode: () => {
       resultsViewMode = "simple";
@@ -865,6 +869,14 @@ deckInputController.initialize();
 
 quickReadAdvancedButton?.addEventListener("click", () => {
   setResultsViewMode("advanced");
+});
+
+openingHandDrawButton?.addEventListener("click", () => {
+  if (!currentAnalysisDocument) {
+    return;
+  }
+
+  renderOpeningHand(currentAnalysisDocument);
 });
 
 initializeMetricHelp();
@@ -1640,6 +1652,7 @@ function renderAnalyzedDeck(result) {
   renderRecommendations(recommendations, recommendationRenderToken);
   taggedCardSectionsController.render(analysis);
   renderCardBreakdown(document, analysis);
+  renderOpeningHand(document);
 
   resultStateController.showAnalysisResults();
 
@@ -2130,6 +2143,131 @@ function findBestMatchingLineIndex(lines, anchor, usedLineIndexes) {
 
 function renderCardBreakdown(deckDocument, analysis) {
   cardBreakdownController.render(deckDocument, analysis);
+}
+
+function renderOpeningHand(deckDocument) {
+  if (!openingHandBody) {
+    return;
+  }
+
+  const pool = buildOpeningHandPool(deckDocument);
+  if (pool.length < 7) {
+    resetOpeningHand("Not enough resolved mainboard cards are available to draw an opening hand.");
+    return;
+  }
+
+  const hand = drawRandomHand(pool, 7);
+  const displayHand = [...hand].sort(compareOpeningHandCards);
+
+  if (openingHandSummary) {
+    openingHandSummary.textContent = `Showing 7 random cards from ${pool.length} resolved mainboard cards.`;
+  }
+
+  openingHandBody.replaceChildren(
+    ...displayHand.map((entry) => createOpeningHandCard(entry)),
+  );
+}
+
+function resetOpeningHand(message = "Seven cards are drawn from the resolved mainboard. Commanders and companions stay outside the draw.") {
+  if (openingHandSummary) {
+    openingHandSummary.textContent = message;
+  }
+  openingHandBody?.replaceChildren();
+}
+
+function buildOpeningHandPool(deckDocument) {
+  const pool = [];
+  for (const deckCard of deckDocument?.result?.resolvedCards ?? []) {
+    if (deckCard.section !== "mainboard") {
+      continue;
+    }
+
+    const quantity = Math.max(0, Math.floor(Number(deckCard.quantity) || 0));
+    for (let copyIndex = 0; copyIndex < quantity; copyIndex += 1) {
+      pool.push({ deckCard, copyIndex });
+    }
+  }
+
+  return pool;
+}
+
+function drawRandomHand(pool, size) {
+  const workingPool = [...pool];
+  const hand = [];
+  const limit = Math.min(size, workingPool.length);
+
+  for (let index = 0; index < limit; index += 1) {
+    const selectedIndex = index + Math.floor(Math.random() * (workingPool.length - index));
+    [workingPool[index], workingPool[selectedIndex]] = [workingPool[selectedIndex], workingPool[index]];
+    hand.push(workingPool[index]);
+  }
+
+  return hand;
+}
+
+function createOpeningHandCard(entry) {
+  const deckCard = entry.deckCard;
+  const card = deckCard.card;
+  const imageUrl = getCardImageUrl(card);
+  const article = document.createElement("article");
+  article.className = "opening-hand-card";
+
+  const link = document.createElement("a");
+  link.className = "opening-hand-card-visual";
+  link.href = card.scryfall_uri ?? buildScryfallSearchUrl(card.name);
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.setAttribute("aria-label", `Open ${card.name} on Scryfall`);
+
+  if (imageUrl) {
+    const image = document.createElement("img");
+    image.className = "opening-hand-card-image";
+    image.src = imageUrl;
+    image.alt = card.name;
+    image.loading = "lazy";
+    link.append(image);
+  } else {
+    const placeholder = document.createElement("span");
+    placeholder.className = "opening-hand-card-placeholder";
+    placeholder.textContent = card.name;
+    link.append(placeholder);
+  }
+
+  const content = document.createElement("div");
+  content.className = "opening-hand-card-content";
+
+  const name = document.createElement("strong");
+  name.textContent = card.name;
+
+  const meta = document.createElement("span");
+  meta.className = "opening-hand-card-meta";
+  meta.textContent = `${getOpeningHandManaCost(card)} / MV ${formatOneDecimal(card.cmc ?? 0)}`;
+
+  const type = document.createElement("span");
+  type.className = "opening-hand-card-type";
+  type.textContent = card.type_line ?? "-";
+
+  content.append(name, meta, type);
+  article.append(link, content);
+  return article;
+}
+
+function compareOpeningHandCards(left, right) {
+  const leftLand = isOpeningHandLand(left.deckCard.card) ? 0 : 1;
+  const rightLand = isOpeningHandLand(right.deckCard.card) ? 0 : 1;
+
+  return leftLand - rightLand ||
+    (Number(left.deckCard.card.cmc) || 0) - (Number(right.deckCard.card.cmc) || 0) ||
+    left.deckCard.card.name.localeCompare(right.deckCard.card.name);
+}
+
+function isOpeningHandLand(card) {
+  return /\bland\b/i.test(card?.type_line ?? "");
+}
+
+function getOpeningHandManaCost(card) {
+  const manaCost = card?.mana_cost || card?.card_faces?.map((face) => face.mana_cost).filter(Boolean).join(" // ");
+  return manaCost || "No cost";
 }
 
 function formatOneDecimal(value) {
