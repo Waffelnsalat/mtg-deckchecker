@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { buildAnalysisSources } from "./app";
+import { analyzeDeckAdvancedRoles } from "./advancedCardScan";
 
 test("buildAnalysisSources marks unresolved cards and unavailable services as limited", () => {
   const sources = buildAnalysisSources({
@@ -111,6 +113,44 @@ test("buildAnalysisSources reports ready optional sources when data is present",
   assert.equal(sources.recommander.status, "ok");
 });
 
+test("advanced UI smoke anchors and card breakdown data stay wired", () => {
+  const html = readFileSync("public/index.html", "utf8");
+  const frontendConfig = readFileSync("public/frontend-config.js", "utf8");
+
+  assert.match(html, /id="advanced-analysis"/);
+  assert.match(html, /data-advanced-tab="cards"/);
+  assert.match(html, /id="card-breakdown-body"/);
+  assert.match(html, /id="card-breakdown-tag-stats"/);
+  assert.match(html, /id="composition-chart"/);
+  assert.match(frontendConfig, /tagStatAliases/);
+
+  const advancedRoles = analyzeDeckAdvancedRoles({
+    ...createDocument({ unresolvedCount: 0, mainboardCount: 0 }),
+    result: {
+      resolvedCards: [
+        createResolvedCard("Test Commander", "commander"),
+        createResolvedCard(
+          "Smoke Draw",
+          "mainboard",
+          "When Smoke Draw enters the battlefield, draw a card.",
+        ),
+        createResolvedCard(
+          "Smoke Ramp",
+          "mainboard",
+          "{T}: Add one mana of any color.",
+        ),
+      ],
+      unresolvedCards: [],
+      resolvedCount: 3,
+      unresolvedCount: 0,
+    },
+  } as any);
+
+  assert.ok(advancedRoles.taggedCards.length >= 2);
+  assert.ok(advancedRoles.taggedCards.some((card) => card.name === "Smoke Draw"));
+  assert.ok(advancedRoles.taggedCards.some((card) => card.hits.some((hit) => hit.tag === "draw")));
+});
+
 function createDocument(input: { unresolvedCount: number; mainboardCount: number }) {
   return {
     format: "edh",
@@ -142,7 +182,7 @@ function createDocument(input: { unresolvedCount: number; mainboardCount: number
   } as any;
 }
 
-function createResolvedCard(name: string, section: "commander" | "mainboard") {
+function createResolvedCard(name: string, section: "commander" | "mainboard", oracleText = "") {
   return {
     quantity: 1,
     section,
@@ -154,6 +194,7 @@ function createResolvedCard(name: string, section: "commander" | "mainboard") {
       name,
       cmc: 1,
       type_line: section === "commander" ? "Legendary Creature" : "Creature",
+      oracle_text: oracleText,
       color_identity: [],
       keywords: [],
       layout: "normal",

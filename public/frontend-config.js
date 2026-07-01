@@ -44,6 +44,7 @@ window.MtgDeckcheckerFrontendConfig = {
       "color_identity",
       "mana_value",
     ],
+    // Mirrors src/tagAliases.ts so backend and frontend aggregation language stays aligned.
     tagStatAliases: {
       draw: "Draw",
       card_draw: "Draw",

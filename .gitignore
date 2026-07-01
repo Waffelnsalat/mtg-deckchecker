@@ -4,3 +4,4 @@ generated-decks
 output
 user-reports/*.json
 .playwright-cli
+*.log
