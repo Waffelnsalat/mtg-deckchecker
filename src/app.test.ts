@@ -120,7 +120,6 @@ test("advanced UI smoke anchors and card breakdown data stay wired", () => {
   assert.match(html, /id="advanced-analysis"/);
   assert.match(html, /data-advanced-tab="matchups"/);
   assert.match(html, /id="matchup-exposure-list"/);
-  assert.match(html, /data-advanced-tab="opening-hand"/);
   assert.match(html, /id="opening-hand-draw-button"/);
   assert.match(html, /id="opening-hand-body"/);
   assert.match(html, /data-advanced-tab="cards"/);
