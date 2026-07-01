@@ -40,7 +40,7 @@
             </div>
             <h1>Analyze Your EDH Deck.</h1>
             <p class="hero-copy">
-              Paste a decklist, import a Moxfield or Archidekt URL, or upload a `.txt` file to
+              Paste a decklist, import an Archidekt URL, or upload a `.txt` file to
               validate the list, resolve every card, detect the deck's strategy and win plan, and
               generate a full power and bracket read.
             </p>
@@ -183,7 +183,7 @@
                   id="deck-url"
                   name="deckUrl"
                   type="url"
-                  placeholder="https://moxfield.com/decks/... or https://archidekt.com/decks/..."
+                  placeholder="https://archidekt.com/decks/..."
                   autocomplete="off"
                 />
                 <button id="import-url-button" type="button" class="secondary-button">
@@ -191,8 +191,8 @@
                 </button>
               </div>
               <small class="field-hint">
-                Supports public Archidekt and Moxfield deck URLs. The deck is imported into the
-                editor first, then you can analyze it as usual.
+                Supports public Archidekt deck URLs. For Moxfield, export or copy the decklist
+                text there and paste it into the editor.
               </small>
             </div>
 
@@ -538,6 +538,15 @@
                   <button
                     class="advanced-tab-button"
                     type="button"
+                    data-advanced-tab="matchups"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Matchups
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
                     data-advanced-tab="shell"
                     role="tab"
                     aria-selected="false"
@@ -832,6 +841,54 @@
                 </section>
               </div>
 
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="matchups">
+              <section class="dashboard-section">
+                <p class="panel-kicker">Meta Read</p>
+                <h3>Weak Matchups</h3>
+                <p>Shows which opposing archetypes and hate packages attack the detected strategy, based on the deck's own tags and available answers.</p>
+              </section>
+
+              <div class="result-columns result-columns-wide">
+                <section class="note-box matchup-box">
+                  <h3>Strategy Pressure Points</h3>
+                  <p id="matchup-summary" class="strategy-summary">
+                    Matchup weaknesses appear here after analysis.
+                  </p>
+
+                  <div class="future-grid ramp-grid">
+                    <article class="future-stat">
+                      <span>High Risks</span>
+                      <strong id="matchup-high-risk-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Watch Points</span>
+                      <strong id="matchup-watch-count">0</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Top Weakness</span>
+                      <strong id="matchup-top-risk">-</strong>
+                    </article>
+                    <article class="future-stat">
+                      <span>Resistant To</span>
+                      <strong id="matchup-resistant-count">0</strong>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="note-box matchup-resilience-box">
+                  <h3>Resistant Angles</h3>
+                  <ul id="matchup-resilience-list" class="note-list"></ul>
+                </section>
+              </div>
+
+              <div class="result-columns">
+                <section class="note-box matchup-exposure-box">
+                  <h3>Weak Against</h3>
+                  <div id="matchup-exposure-list" class="matchup-exposure-list"></div>
+                </section>
+              </div>
               </div>
 
               <div class="analysis-tab-panel" data-analysis-tab-panel="shell">

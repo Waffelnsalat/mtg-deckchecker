@@ -118,6 +118,8 @@ test("advanced UI smoke anchors and card breakdown data stay wired", () => {
   const frontendConfig = readFileSync("public/frontend-config.js", "utf8");
 
   assert.match(html, /id="advanced-analysis"/);
+  assert.match(html, /data-advanced-tab="matchups"/);
+  assert.match(html, /id="matchup-exposure-list"/);
   assert.match(html, /data-advanced-tab="cards"/);
   assert.match(html, /id="card-breakdown-body"/);
   assert.match(html, /id="card-breakdown-tag-stats"/);

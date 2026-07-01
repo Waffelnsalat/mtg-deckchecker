@@ -41,10 +41,30 @@ test("analyzeDeckBracket keeps fair mid-score precon-like shells in bracket 2", 
   assert.equal(analysis.adjustedByRules, false);
 });
 
-test("analyzeDeckBracket still gives bracket 3 to clearly upgraded fair shells", () => {
+test("analyzeDeckBracket keeps focused six-power shells in bracket 2 until they clear upgraded power", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([]),
     power: createPowerAnalysis(6.4, {
+      speed: 55,
+      consistency: 75,
+      interaction: 76,
+      resilience: 59,
+      closing: 74,
+      mana: 58,
+    }),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+  });
+
+  assert.equal(analysis.recommendedBracket, 2);
+  assert.equal(analysis.recommendedModifier, "+");
+  assert.equal(analysis.adjustedByRules, false);
+});
+
+test("analyzeDeckBracket still gives bracket 3 to clearly upgraded fair shells", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(6.9, {
       speed: 60,
       consistency: 56,
       interaction: 46,
@@ -108,7 +128,7 @@ test("analyzeDeckBracket raises the floor to bracket 4 for exact two-card combos
   assert.equal(analysis.signals.twoCardCombos, 1);
   assert.equal(analysis.recommendedBracket, 4);
   assert.equal(analysis.adjustedByRules, true);
-  assert.match(analysis.summary, /\n- Power read: Bracket 2\+/);
+  assert.match(analysis.summary, /\n- Power read: Bracket 2/);
   assert.match(analysis.summary, /exact two-card combo/);
   assert.match(analysis.summary, /Not Bracket 5/);
   assert.ok(analysis.findings.some((finding: any) => finding.code === "bracket_rules_floor"));
@@ -256,7 +276,7 @@ test("analyzeDeckBracket keeps high-scoring but fair shells in bracket 3 when op
 test("analyzeDeckBracket explains above-target reads without awkward trimming language", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([]),
-    power: createPowerAnalysis(6.4, {
+    power: createPowerAnalysis(6.9, {
       speed: 55,
       consistency: 75,
       interaction: 76,
@@ -274,7 +294,7 @@ test("analyzeDeckBracket explains above-target reads without awkward trimming la
 
   assert.equal(analysis.targetAlignment, "above");
   assert.match(analysis.summary, /Target fit: Not Bracket 2 \(Core\) because to fit Bracket 2/);
-  assert.match(analysis.summary, /power score would need to stay below 6\.2/);
+  assert.match(analysis.summary, /power score would need to stay below 6\.8/);
   assert.match(analysis.summary, /consistency or closing power would need to fall below 60 \/ 64; currently 75 \/ 74/);
   assert.match(analysis.summary, /interaction or consistency would need to fall below 54 \/ 56; currently 76 \/ 75/);
   assert.ok(targetFinding);

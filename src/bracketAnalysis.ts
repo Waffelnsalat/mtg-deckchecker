@@ -33,8 +33,8 @@ const BRACKET_BANDS: Record<
   { min: number; max: number }
 > = {
   1: { min: 1, max: 3.4 },
-  2: { min: 3.4, max: 6.2 },
-  3: { min: 6.2, max: 8.05 },
+  2: { min: 3.4, max: 6.8 },
+  3: { min: 6.8, max: 8.05 },
   4: { min: 8.05, max: 9.25 },
 };
 

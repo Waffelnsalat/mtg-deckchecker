@@ -901,6 +901,27 @@ export interface DeckRecommendationAnalysis {
   topics: DeckRecommendationTopicEntry[];
 }
 
+export type DeckWeaknessSeverity = "high" | "medium" | "low";
+
+export interface DeckWeaknessExposure {
+  key: string;
+  label: string;
+  severity: DeckWeaknessSeverity;
+  vulnerabilityScore: number;
+  weakAgainst: string[];
+  summary: string;
+  evidence: string[];
+  answerGaps: string[];
+  resistantFactors: string[];
+}
+
+export interface DeckWeaknessAnalysis {
+  summary: string;
+  exposures: DeckWeaknessExposure[];
+  resistantTo: string[];
+  watchPoints: string[];
+}
+
 export type DeckAnalysisSourceKey =
   | "scryfall"
   | "edhrec"
@@ -931,6 +952,7 @@ export interface DeckAnalysisDocument {
     power: DeckPowerAnalysis;
     bracket: DeckBracketAnalysis;
     recommendations: DeckRecommendationAnalysis;
+    weaknesses: DeckWeaknessAnalysis;
     strategy: DeckStrategyAnalysis;
     winStrategy: DeckWinStrategyAnalysis;
     structure: DeckStructureAnalysis;

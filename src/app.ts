@@ -20,6 +20,7 @@ import { analyzeDeckStrategy } from "./strategyAnalysis";
 import { analyzeDeckWinConditions } from "./winConditionAnalysis";
 import { analyzeDeckWinStrategy } from "./winStrategyAnalysis";
 import { analyzeDeckAdvancedRoles } from "./advancedCardScan";
+import { analyzeDeckWeaknesses } from "./weaknessAnalysis";
 import { DeckImportError, importDecklistFromUrl } from "./deckImport";
 import { DeckValidationError } from "./deckValidation";
 import { createDeckExport, getGeneratedExportsDir, resolveDecklistForAnalysis, resolveDecklistToDocument } from "./deckExport";
@@ -224,6 +225,21 @@ export function createApp() {
         edhrec,
         recommander,
       });
+      const weaknesses = analyzeDeckWeaknesses({
+        power,
+        strategy,
+        winStrategy,
+        structure,
+        ramp,
+        draw,
+        consistency,
+        protection,
+        recursion,
+        winConditions,
+        removal,
+        spellInteraction,
+        advancedRoles,
+      });
       const sources = buildAnalysisSources({
         document,
         validation,
@@ -242,6 +258,7 @@ export function createApp() {
           power,
           bracket,
           recommendations,
+          weaknesses,
           strategy,
           winStrategy,
           structure,

@@ -116,7 +116,7 @@ window.MtgDeckcheckerDeckInput = {
     async function importFromUrl() {
       const deckUrl = elements.deckUrlField?.value.trim() ?? "";
       if (!deckUrl) {
-        elements.formStatus.textContent = "Paste a Moxfield or Archidekt deck URL first.";
+        elements.formStatus.textContent = "Paste an Archidekt deck URL first.";
         return false;
       }
 
@@ -153,11 +153,20 @@ window.MtgDeckcheckerDeckInput = {
         });
         return true;
       } catch (error) {
-        elements.formStatus.textContent = actions.formatFetchError(error, "Deck URL import failed.");
+        elements.formStatus.textContent = formatImportError(deckUrl, error);
         return false;
       } finally {
         actions.setLoadingState(false);
       }
+    }
+
+    function formatImportError(deckUrl, error) {
+      const message = actions.formatFetchError(error, "Deck URL import failed.");
+      if (/moxfield\.com/i.test(deckUrl) && /moxfield|blocked|automated/i.test(message)) {
+        return "Moxfield is blocking direct URL imports right now. In Moxfield, use Export / Copy decklist, paste the text into the decklist box here, then analyze. Archidekt URLs still import directly.";
+      }
+
+      return message;
     }
 
     function updateFilePickerLabel(fileName = "") {

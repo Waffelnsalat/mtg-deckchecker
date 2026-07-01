@@ -109,6 +109,13 @@ const bracketLandDenial = document.querySelector("#bracket-land-denial");
 const bracketFindingsList = document.querySelector("#bracket-findings-list");
 const powerStrengthsList = document.querySelector("#power-strengths-list");
 const powerWeaknessesList = document.querySelector("#power-weaknesses-list");
+const matchupSummary = document.querySelector("#matchup-summary");
+const matchupHighRiskCount = document.querySelector("#matchup-high-risk-count");
+const matchupWatchCount = document.querySelector("#matchup-watch-count");
+const matchupTopRisk = document.querySelector("#matchup-top-risk");
+const matchupResistantCount = document.querySelector("#matchup-resistant-count");
+const matchupExposureList = document.querySelector("#matchup-exposure-list");
+const matchupResilienceList = document.querySelector("#matchup-resilience-list");
 const commanderSummary = document.querySelector("#commander-summary");
 const commanderImpactScore = document.querySelector("#commander-impact-score");
 const commanderDependencyScore = document.querySelector("#commander-dependency-score");
@@ -307,6 +314,7 @@ let resultsViewMode = "simple";
 let advancedTabKey = "identity";
 let pendingTargetBracketPromptResolve = null;
 let recommendationVisualRenderToken = 0;
+let metricHelpTooltip = null;
 const FRONTEND_CONFIG = window.MtgDeckcheckerFrontendConfig ?? {};
 const CARD_BREAKDOWN_CONFIG = FRONTEND_CONFIG.cardBreakdown ?? {};
 const CARD_BREAKDOWN_MAX_ROLES = CARD_BREAKDOWN_CONFIG.maxRoles ?? 5;
@@ -320,6 +328,7 @@ const CARD_BREAKDOWN_HIDDEN_TAG_STATS = new Set(CARD_BREAKDOWN_CONFIG.hiddenTagS
 const CARD_BREAKDOWN_TAG_STAT_ALIASES = CARD_BREAKDOWN_CONFIG.tagStatAliases ?? {};
 const RECOMMENDATION_TOPICS = FRONTEND_CONFIG.recommendationTopics ?? [];
 const SIMPLE_VALUE_DRILLDOWNS = FRONTEND_CONFIG.simpleValueDrilldowns ?? {};
+const METRIC_HELP = FRONTEND_CONFIG.metricHelp ?? {};
 const TAG_LABELS = FRONTEND_CONFIG.tagLabels ?? {};
 
 if (versionBadge && FRONTEND_CONFIG.appVersion) {
@@ -858,6 +867,7 @@ quickReadAdvancedButton?.addEventListener("click", () => {
   setResultsViewMode("advanced");
 });
 
+initializeMetricHelp();
 initializeSimpleValueDrilldowns();
 initializeCardBreakdownControls();
 
@@ -1041,6 +1051,91 @@ function initializeSimpleValueDrilldowns() {
       openAdvancedDrilldown(drilldown);
     });
   });
+}
+
+function initializeMetricHelp() {
+  Object.entries(METRIC_HELP).forEach(([valueId, helpText]) => {
+    const valueElement = document.querySelector(`#${CSS.escape(valueId)}`);
+    const cardElement = valueElement?.closest(".future-stat, .stat-card");
+
+    if (!cardElement || !helpText) {
+      return;
+    }
+
+    const tooltipId = `${valueId}-metric-help`;
+    cardElement.querySelector(".metric-help-popover")?.remove();
+    cardElement.classList.add("metric-help-card");
+    cardElement.dataset.metricHelp = helpText;
+    cardElement.dataset.metricHelpId = tooltipId;
+    cardElement.setAttribute("aria-describedby", tooltipId);
+
+    if (cardElement.dataset.metricHelpBound === "true") {
+      return;
+    }
+
+    cardElement.dataset.metricHelpBound = "true";
+    cardElement.addEventListener("mouseenter", () => showMetricHelp(cardElement));
+    cardElement.addEventListener("focusin", () => showMetricHelp(cardElement));
+    cardElement.addEventListener("mouseleave", hideMetricHelp);
+    cardElement.addEventListener("focusout", hideMetricHelp);
+  });
+}
+
+function getMetricHelpTooltip() {
+  if (metricHelpTooltip) {
+    return metricHelpTooltip;
+  }
+
+  metricHelpTooltip = document.createElement("div");
+  metricHelpTooltip.className = "metric-help-popover";
+  metricHelpTooltip.setAttribute("role", "tooltip");
+  metricHelpTooltip.hidden = true;
+  document.body.append(metricHelpTooltip);
+  return metricHelpTooltip;
+}
+
+function showMetricHelp(cardElement) {
+  const helpText = cardElement.dataset.metricHelp;
+  if (!helpText) {
+    return;
+  }
+
+  const tooltip = getMetricHelpTooltip();
+  tooltip.id = cardElement.dataset.metricHelpId ?? "metric-help-popover";
+  tooltip.textContent = helpText;
+  tooltip.hidden = false;
+  tooltip.classList.add("is-visible");
+
+  window.requestAnimationFrame(() => positionMetricHelpTooltip(cardElement, tooltip));
+}
+
+function positionMetricHelpTooltip(cardElement, tooltip) {
+  const cardRect = cardElement.getBoundingClientRect();
+  const tooltipRect = tooltip.getBoundingClientRect();
+  const gap = 8;
+  const viewportPadding = 12;
+  const viewportWidth = document.documentElement.clientWidth;
+  const preferredLeft = cardRect.left + cardRect.width / 2 - tooltipRect.width / 2;
+  const left = Math.max(
+    viewportPadding,
+    Math.min(preferredLeft, viewportWidth - tooltipRect.width - viewportPadding),
+  );
+  const top =
+    cardRect.top > tooltipRect.height + gap + viewportPadding
+      ? cardRect.top - tooltipRect.height - gap
+      : cardRect.bottom + gap;
+
+  tooltip.style.left = `${Math.round(left + window.scrollX)}px`;
+  tooltip.style.top = `${Math.round(top + window.scrollY)}px`;
+}
+
+function hideMetricHelp() {
+  if (!metricHelpTooltip) {
+    return;
+  }
+
+  metricHelpTooltip.hidden = true;
+  metricHelpTooltip.classList.remove("is-visible");
 }
 
 function resetDrilldownCardPaint(cardElement) {
@@ -1383,6 +1478,137 @@ function formatFetchError(error, fallbackMessage) {
   return error instanceof Error ? error.message : fallbackMessage;
 }
 
+function renderWeakMatchups(weaknesses) {
+  if (!matchupSummary || !matchupExposureList) {
+    return;
+  }
+
+  const exposures = weaknesses?.exposures ?? [];
+  const highRisks = exposures.filter((entry) => entry.severity === "high");
+  const watchRisks = exposures.filter((entry) => entry.severity !== "high");
+  const resistantTo = weaknesses?.resistantTo ?? [];
+
+  matchupSummary.textContent =
+    weaknesses?.summary ?? "Matchup weaknesses appear here after analysis.";
+  if (matchupHighRiskCount) {
+    matchupHighRiskCount.textContent = String(highRisks.length);
+  }
+  if (matchupWatchCount) {
+    matchupWatchCount.textContent = String(watchRisks.length);
+  }
+  if (matchupTopRisk) {
+    matchupTopRisk.textContent = exposures[0]?.label ?? "-";
+  }
+  if (matchupResistantCount) {
+    matchupResistantCount.textContent = String(resistantTo.length);
+  }
+
+  matchupExposureList.replaceChildren(
+    ...(exposures.length > 0
+      ? exposures.map(createMatchupExposureCard)
+      : [createMatchupEmptyCard()]),
+  );
+
+  if (matchupResilienceList) {
+    matchupResilienceList.replaceChildren(
+      ...(resistantTo.length > 0
+        ? resistantTo.map(createSimpleTextItem)
+        : [createSimpleTextItem("No clear resistant angle stands out yet.")]),
+    );
+  }
+}
+
+function createMatchupExposureCard(exposure) {
+  const article = document.createElement("article");
+  article.className = `matchup-exposure-card matchup-exposure-${exposure.severity}`;
+
+  const header = document.createElement("div");
+  header.className = "matchup-exposure-header";
+
+  const titleWrap = document.createElement("div");
+  titleWrap.className = "matchup-exposure-title-wrap";
+
+  const title = document.createElement("strong");
+  title.className = "matchup-exposure-title";
+  title.textContent = exposure.label;
+
+  const against = document.createElement("p");
+  against.className = "matchup-exposure-against";
+  against.textContent = `Weak against: ${(exposure.weakAgainst ?? []).join(", ")}`;
+
+  titleWrap.append(title, against);
+
+  const badge = document.createElement("span");
+  badge.className = `matchup-exposure-badge matchup-exposure-badge-${exposure.severity}`;
+  badge.textContent = `${Math.round(exposure.vulnerabilityScore)}%`;
+
+  header.append(titleWrap, badge);
+
+  const meter = document.createElement("div");
+  meter.className = "matchup-exposure-meter";
+  meter.style.setProperty(
+    "--matchup-risk",
+    String(Math.max(0, Math.min(1, Number(exposure.vulnerabilityScore) / 100))),
+  );
+  const meterFill = document.createElement("span");
+  meter.append(meterFill);
+
+  const summary = document.createElement("p");
+  summary.className = "matchup-exposure-summary";
+  summary.textContent = exposure.summary;
+
+  const detailGrid = document.createElement("div");
+  detailGrid.className = "matchup-detail-grid";
+  detailGrid.append(
+    createMatchupDetailList("Why", exposure.evidence),
+    createMatchupDetailList("Gaps", exposure.answerGaps),
+    createMatchupDetailList("Counterplay", exposure.resistantFactors),
+  );
+
+  article.append(header, meter, summary, detailGrid);
+  return article;
+}
+
+function createMatchupDetailList(label, values = []) {
+  const wrap = document.createElement("div");
+  wrap.className = "matchup-detail-block";
+
+  const heading = document.createElement("span");
+  heading.className = "meta-label";
+  heading.textContent = label;
+
+  const list = document.createElement("ul");
+  list.className = "note-list";
+  const entries = values.length > 0 ? values : ["No major signal."];
+  list.replaceChildren(...entries.map(createSimpleTextItem));
+
+  wrap.append(heading, list);
+  return wrap;
+}
+
+function createMatchupEmptyCard() {
+  const article = document.createElement("article");
+  article.className = "matchup-exposure-card matchup-exposure-low";
+
+  const title = document.createElement("strong");
+  title.className = "matchup-exposure-title";
+  title.textContent = "No Dominant Weak Matchup";
+
+  const summary = document.createElement("p");
+  summary.className = "matchup-exposure-summary";
+  summary.textContent =
+    "The current tags do not point to a single archetype or hate package that clearly attacks the deck's main plan.";
+
+  article.append(title, summary);
+  return article;
+}
+
+function createSimpleTextItem(text) {
+  const item = document.createElement("li");
+  item.textContent = text;
+  return item;
+}
+
 function renderAnalyzedDeck(result) {
   const { document, analysis, validation, sources } = result;
   const recommendations = analysis.recommendations;
@@ -1405,6 +1631,7 @@ function renderAnalyzedDeck(result) {
     sources,
   });
   summaryPanelsController.render(analysis);
+  renderWeakMatchups(analysis.weaknesses);
   metricDetailsController.render(analysis);
   strategyRendererController.render(strategy, winStrategy);
   quickReadController.render(analysis);

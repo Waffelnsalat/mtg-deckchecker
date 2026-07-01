@@ -345,7 +345,7 @@ function createMoxfieldStatusError(status: number) {
 
   if (status === 403) {
     return new DeckImportError(
-      "Moxfield blocked automated import in this environment. Export the deck as text from Moxfield and paste it into the decklist box.",
+      "Moxfield is currently blocking automated deck imports from this server. Use Moxfield's export/copy decklist option, paste the deck text into the decklist box, then analyze it.",
       502,
     );
   }
