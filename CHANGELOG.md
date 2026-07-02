@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.2.0 - 2026-07-02
+
+### Neu
+
+- Strategieauswahl vor der Analyse ergaenzt, damit der Nutzer den beabsichtigten Spielplan bestaetigen oder eine erkannte Alternative auswaehlen kann.
+- Attraction Decks und Sticker Sheets werden als eigene Zusatzbereiche erkannt, importiert und in der Kartenansicht getrennt angezeigt.
+- Decklisten-Import entfernt mitkopierte Sideboard-/Maybeboard-Bloecke, ohne Commander-, Companion- oder Zusatzdeckbereiche zu verlieren.
+- Strategie-Scores wurden komprimiert, damit kleinere Nebenplaene nicht zu schnell perfekte 100er-Werte bekommen.
+- Fehlende Attraction- oder Sticker-Zusatzdecks erzeugen jetzt allgemeine Warnungen statt irrefuehrender Kartenanker.
+
+### Validierung
+
+- `npm run build`
+- `npm test`
+
 ## 0.4.18 - 2026-06-22
 
 ### Neu
