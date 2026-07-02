@@ -886,7 +886,7 @@ function calculateOverPenalty(actual: number, target: number, grace: number, rat
     return 0;
   }
 
-  return (actual - target - grace) * rate;
+  return Math.sqrt(actual - target - grace) * rate;
 }
 
 function getWinConditionSegments(card: ScryfallCard) {

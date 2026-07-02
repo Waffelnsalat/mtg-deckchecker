@@ -553,7 +553,13 @@ function scoreDraw(input: {
   score -= calculateUnderPenalty(effectiveDraw, input.recommendations.drawTarget, 4.5, 2.6);
   score -= calculateOverPenalty(effectiveDraw, input.recommendations.drawTarget, 3, 1.05);
 
-  score -= calculateUnderPenalty(input.repeatable, input.recommendations.repeatableTarget, 2, 1.5);
+  const repeatablePenaltyScale =
+    effectiveDraw >= input.recommendations.drawTarget + 5 ? 0.35
+    : effectiveDraw >= input.recommendations.drawTarget + 3 ? 0.55
+    : 1;
+  score -=
+    calculateUnderPenalty(input.repeatable, input.recommendations.repeatableTarget, 2, 1.5) *
+    repeatablePenaltyScale;
   score -= Math.min(
     calculateOverPenalty(input.repeatable, input.recommendations.repeatableTarget, 1.5, 1.25),
     4,
@@ -595,6 +601,13 @@ function scoreDraw(input: {
 
   if (coreOnPace && drawOnPace && repeatableOnPace) {
     score += 1;
+  }
+
+  if (
+    effectiveCore >= input.recommendations.coreTarget + 4 &&
+    effectiveDraw >= input.recommendations.drawTarget + 4
+  ) {
+    score = Math.max(score, input.repeatable > 0 ? 70 : 66);
   }
 
   const roundedScore = Math.round(score);
@@ -690,7 +703,7 @@ function calculateTargetBonus(actual: number, target: number, maxBonus: number) 
       return maxBonus * 0.4;
     }
 
-    return 0;
+    return maxBonus * 0.2;
   }
 
   const shortfall = target - actual;
@@ -734,7 +747,8 @@ function calculateOverPenalty(actual: number, target: number, grace: number, rat
     return 0;
   }
 
-  return (actual - target - grace) * rate;
+  const excess = actual - target - grace;
+  return Math.sqrt(excess) * rate;
 }
 
 function recommendDrawTarget(averageManaValue: number, colorProfile: CommanderColorProfile) {

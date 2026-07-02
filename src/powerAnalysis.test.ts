@@ -96,9 +96,130 @@ test("analyzeDeckPower pushes tuned combo shells into the top tier", () => {
   );
 
   assert.equal(analysis.powerTier, "cEDH-Adjacent");
-  assert.ok(analysis.powerScore >= 8.5);
+  assert.ok(analysis.powerScore >= 9.1);
   assert.ok((analysis.dimensions.find((entry) => entry.key === "closing")?.score ?? 0) >= 85);
   assert.ok(analysis.strengths.some((entry) => entry.includes("combo")));
+});
+
+test("analyzeDeckPower credits high-power shells for aggressive mulligan selection", () => {
+  const analysis = analyzeDeckPower(
+    createInput({
+      structure: {
+        structureScore: 88,
+        mana: {
+          averageManaValue: 1.95,
+          shares: {
+            early: 0.54,
+            late: 0.08,
+          },
+        },
+      },
+      ramp: {
+        rampScore: 91,
+      },
+      consistency: {
+        consistencyScore: 93,
+        counts: {
+          direct: 6.8,
+          repeatable: 2.4,
+        },
+        recommendations: {
+          directTarget: 4,
+          repeatableTarget: 1.5,
+        },
+      },
+      winConditions: {
+        finisherScore: 88,
+        combos: {
+          lookupStatus: "ok",
+          exactCount: 2,
+          finisherCount: 1,
+          engineCount: 1,
+          exact: [
+            {
+              id: "combo-0",
+              comboValue: 2.5,
+              lineType: "finisher",
+              cardNames: ["Fast Piece", "Win Piece"],
+              outcomeNames: ["Win the game"],
+              description: "",
+              notablePrerequisites: [],
+              variantCount: 1,
+              commanderInvolved: false,
+            },
+            {
+              id: "combo-1",
+              comboValue: 2.2,
+              lineType: "engine",
+              cardNames: ["Engine Piece", "Mana Piece"],
+              outcomeNames: ["Infinite mana"],
+              description: "",
+              notablePrerequisites: [],
+              variantCount: 1,
+              commanderInvolved: false,
+            },
+          ],
+        },
+      },
+      strategy: {
+        mainStrategy: { label: "Combo" },
+        synergy: {
+          synergyScore: 88,
+          commanderAligned: true,
+        },
+      },
+      winStrategy: {
+        primaryPlan: { key: "infinite_combo", label: "Infinite Combo" },
+      },
+    }) as any,
+  );
+
+  assert.ok(analysis.strengths.some((entry) => entry.includes("Aggressive mulligans")));
+  assert.ok((analysis.dimensions.find((entry) => entry.key === "speed")?.score ?? 0) >= 86);
+  assert.ok((analysis.dimensions.find((entry) => entry.key === "consistency")?.score ?? 0) >= 83);
+});
+
+test("analyzeDeckPower does not give slow shells a mulligan boost just for having access", () => {
+  const analysis = analyzeDeckPower(
+    createInput({
+      structure: {
+        structureScore: 78,
+        mana: {
+          averageManaValue: 3.6,
+          shares: {
+            early: 0.29,
+            late: 0.26,
+          },
+        },
+      },
+      ramp: {
+        rampScore: 76,
+      },
+      consistency: {
+        consistencyScore: 84,
+        counts: {
+          direct: 5,
+          repeatable: 2,
+        },
+        recommendations: {
+          directTarget: 3,
+          repeatableTarget: 1.4,
+        },
+      },
+      strategy: {
+        mainStrategy: { label: "Value" },
+        synergy: {
+          synergyScore: 72,
+          commanderAligned: true,
+        },
+      },
+      winStrategy: {
+        primaryPlan: { key: "value_attrition", label: "Value Attrition" },
+      },
+    }) as any,
+  );
+
+  assert.ok(!analysis.strengths.some((entry) => entry.includes("Aggressive mulligans")));
 });
 
 test("analyzeDeckPower keeps fair, coherent decks in the focused band", () => {
@@ -203,7 +324,7 @@ test("analyzeDeckPower keeps baseline fair shells out of the upper sixes by defa
   const analysis = analyzeDeckPower(createInput() as any);
 
   assert.equal(analysis.powerTier, "Focused");
-  assert.ok(analysis.powerScore <= 6.1);
+  assert.ok(analysis.powerScore <= 5.7);
 });
 
 test("analyzeDeckPower does not let finishers hide a weak shell", () => {

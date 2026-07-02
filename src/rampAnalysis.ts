@@ -740,7 +740,7 @@ function scoreRamp(input: {
   }
 
   if (input.core > input.recommendations.coreTarget + 4 && input.stable > input.recommendations.stableTarget + 3) {
-    score -= 2;
+    score -= 0.75;
   }
 
   const coreOnPace =
@@ -758,6 +758,13 @@ function scoreRamp(input: {
 
   if (coreOnPace && stableOnPace && fixingOnPace) {
     score += 3;
+  }
+
+  if (
+    input.core >= input.recommendations.coreTarget + 4 &&
+    input.stable >= input.recommendations.stableTarget + 4
+  ) {
+    score = Math.max(score, 70);
   }
 
   return clamp(Math.round(score), 0, 100);
@@ -795,7 +802,7 @@ function calculateTargetBonus(actual: number, target: number, maxBonus: number) 
       return maxBonus * 0.4;
     }
 
-    return 0;
+    return maxBonus * 0.2;
   }
 
   const shortfall = target - actual;
@@ -839,7 +846,7 @@ function calculateOverPenalty(actual: number, target: number, grace: number, rat
     return 0;
   }
 
-  return (actual - target - grace) * rate;
+  return Math.sqrt(actual - target - grace) * rate;
 }
 
 function calculatePackageBalanceBonus(input: {

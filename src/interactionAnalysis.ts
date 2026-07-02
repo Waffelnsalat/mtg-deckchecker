@@ -1355,7 +1355,7 @@ function summarizeSpellInteractionScore(score: number, hasBlue: boolean) {
 
 function calculateTargetBonus(actual: number, target: number, maxBonus: number) {
   if (target <= 0) {
-    return 0;
+    return maxBonus * 0.2;
   }
 
   if (actual >= target) {
@@ -1417,7 +1417,7 @@ function calculateOverPenalty(actual: number, target: number, grace: number, rat
     return 0;
   }
 
-  return (actual - target - grace) * rate;
+  return Math.sqrt(actual - target - grace) * rate;
 }
 
 function recommendTargetedRemovalTarget(context: DeckContext) {

@@ -970,6 +970,250 @@ test("analyzeDeckRecommendations respects legends-matter commander shells", asyn
   assert.match(shellTopic?.cards[0]?.reason ?? "", /legendary/i);
 });
 
+test("analyzeDeckRecommendations suggests the topic that blocks the target bracket", async () => {
+  const recommendations = await analyzeDeckRecommendations(
+    createInput({
+      document: createDocument([
+        createResolvedCard("commander", "Kinnan, Bonder Prodigy", "Legendary Creature - Human Druid", 2, [
+          "G",
+          "U",
+        ]),
+        createResolvedCard("mainboard", "Cultivate", "Sorcery", 3, ["G"]),
+        createResolvedCard("mainboard", "Island", "Basic Land - Island", 0, []),
+        createResolvedCard("mainboard", "Forest", "Basic Land - Forest", 0, []),
+      ]),
+      bracket: createBracket(4, "below"),
+      power: createPowerAnalysis({
+        speed: 68,
+        consistency: 78,
+        interaction: 62,
+        resilience: 60,
+        closing: 80,
+        mana: 78,
+      }),
+      ramp: {
+        rampScore: 80,
+        counts: {
+          core: 9,
+          stable: 7,
+          burst: 0,
+        },
+        recommendations: {
+          coreTarget: 8,
+          stableTarget: 7,
+        },
+        taggedCards: [],
+      },
+      landBase: {
+        landBaseScore: 82,
+        counts: {
+          alwaysTapped: 1,
+          colorlessOnly: 0,
+          costly: 0,
+          utility: 2,
+        },
+        recommendations: {
+          alwaysTappedMax: 3,
+          colorlessOnlyMax: 1,
+          costlyMax: 2,
+        },
+        taggedCards: [],
+      },
+      draw: {
+        drawScore: 78,
+        counts: {
+          draw: 8,
+          repeatable: 3,
+        },
+        recommendations: {
+          drawTarget: 7,
+          repeatableTarget: 2,
+        },
+        taggedCards: [],
+      },
+      consistency: {
+        consistencyScore: 78,
+        counts: {
+          direct: 2,
+          restricted: 0,
+          repeatable: 1,
+          selectionSupport: 0,
+        },
+        recommendations: {
+          directTarget: 2,
+          repeatableTarget: 1,
+        },
+        taggedCards: [],
+      },
+      removal: {
+        removalScore: 62,
+        counts: {
+          targeted: 6,
+          mass: 1,
+          tempo: 0,
+          handAttack: 0,
+        },
+        recommendations: {
+          targetedTarget: 5,
+          massTarget: 1,
+        },
+        taggedCards: [],
+      },
+      spellInteraction: {
+        interactionScore: 62,
+        counts: {
+          hard: 2,
+          soft: 1,
+          spellTempo: 0,
+          broad: 0,
+        },
+        recommendations: {
+          hardTarget: 2,
+          softTarget: 1,
+        },
+        taggedCards: [],
+      },
+      winConditions: {
+        finisherScore: 82,
+        counts: {
+          core: 6,
+        },
+        recommendations: {
+          coreTarget: 5,
+        },
+        taggedCards: [],
+        combos: {
+          exact: [],
+          exactCount: 0,
+        },
+      },
+    }) as any,
+  );
+
+  const rampTopic = recommendations.topics.find((topic) => topic.key === "ramp");
+
+  assert.ok(rampTopic);
+  assert.ok(rampTopic.cards.length > 0);
+  assert.equal(rampTopic.cards[0]?.direction, "up");
+  assert.match(rampTopic.summary, /Speed.*below.*74/i);
+});
+
+test("analyzeDeckRecommendations suggests closing help when closing blocks the target bracket", async () => {
+  const recommendations = await analyzeDeckRecommendations(
+    createInput({
+      document: createDocument([
+        createResolvedCard("commander", "Kess, Dissident Mage", "Legendary Creature - Human Wizard", 4, [
+          "U",
+          "B",
+          "R",
+        ]),
+        createResolvedCard("mainboard", "Island", "Basic Land - Island", 0, []),
+        createResolvedCard("mainboard", "Swamp", "Basic Land - Swamp", 0, []),
+        createResolvedCard("mainboard", "Mountain", "Basic Land - Mountain", 0, []),
+      ]),
+      bracket: createBracket(4, "below"),
+      power: createPowerAnalysis({
+        speed: 78,
+        consistency: 72,
+        interaction: 58,
+        resilience: 56,
+        closing: 70,
+        mana: 76,
+      }),
+      strategy: createStrategyStub("spellslinger", "Spellslinger"),
+      winStrategy: createWinStrategyStub("spell_burst"),
+      winConditions: {
+        finisherScore: 80,
+        counts: {
+          core: 6,
+        },
+        recommendations: {
+          coreTarget: 5,
+        },
+        taggedCards: [],
+        combos: {
+          exact: [],
+          exactCount: 0,
+        },
+      },
+      ramp: {
+        rampScore: 82,
+        counts: {
+          core: 8,
+          stable: 7,
+          burst: 0,
+        },
+        recommendations: {
+          coreTarget: 8,
+          stableTarget: 7,
+        },
+        taggedCards: [],
+      },
+      draw: {
+        drawScore: 78,
+        counts: {
+          draw: 8,
+          repeatable: 3,
+        },
+        recommendations: {
+          drawTarget: 7,
+          repeatableTarget: 2,
+        },
+        taggedCards: [],
+      },
+      consistency: {
+        consistencyScore: 72,
+        counts: {
+          direct: 2,
+          restricted: 0,
+          repeatable: 1,
+          selectionSupport: 0,
+        },
+        recommendations: {
+          directTarget: 2,
+          repeatableTarget: 1,
+        },
+        taggedCards: [],
+      },
+      removal: {
+        removalScore: 58,
+        counts: {
+          targeted: 5,
+          mass: 1,
+          tempo: 0,
+          handAttack: 0,
+        },
+        recommendations: {
+          targetedTarget: 5,
+          massTarget: 1,
+        },
+        taggedCards: [],
+      },
+      spellInteraction: {
+        interactionScore: 58,
+        counts: {
+          hard: 2,
+          soft: 1,
+          spellTempo: 0,
+          broad: 0,
+        },
+        recommendations: {
+          hardTarget: 2,
+          softTarget: 1,
+        },
+        taggedCards: [],
+      },
+    }) as any,
+  );
+
+  const closingTopic = recommendations.topics.find((topic) => topic.key === "closing");
+
+  assert.ok(closingTopic);
+  assert.ok(closingTopic.cards.length > 0);
+  assert.equal(closingTopic.cards[0]?.direction, "up");
+  assert.match(closingTopic.summary, /Closing power.*below.*78/i);
+});
+
 function createInput(overrides: Record<string, unknown> = {}) {
   return {
     document: createDocument([
@@ -1224,27 +1468,47 @@ function mockScryfallCards(
   >,
 ) {
   const originalFetch = globalThis.fetch;
-  globalThis.fetch = ((input: string | URL | Request) => {
+  globalThis.fetch = ((input: string | URL | Request, init?: RequestInit) => {
     const url = String(input);
-    const exactName = decodeURIComponent(url.match(/[?&]exact=([^&]+)/)?.[1] ?? "");
-    const card = cards[exactName];
 
-    if (!card) {
+    if (!url.endsWith("/cards/collection")) {
       return Promise.resolve(new Response("{}", { status: 404 }));
     }
 
-    return Promise.resolve(
-      new Response(
-        JSON.stringify({
-          id: `scryfall-${exactName}`,
-          name: exactName,
+    const payload = JSON.parse(String(init?.body ?? "{}")) as {
+      identifiers?: Array<{ name?: string }>;
+    };
+    const identifiers = payload.identifiers ?? [];
+    const foundCards = identifiers
+      .map((identifier) => identifier.name)
+      .filter((name): name is string => Boolean(name))
+      .filter((name) => Boolean(cards[name]))
+      .map((name) => {
+        const card = cards[name];
+
+        return {
+          id: `scryfall-${name}`,
+          name,
           cmc: card.cmc,
           type_line: card.typeLine,
           oracle_text: card.oracleText,
           color_identity: card.colorIdentity,
           keywords: [],
           layout: "normal",
-          scryfall_uri: `https://scryfall.com/card/${encodeURIComponent(exactName)}`,
+          scryfall_uri: `https://scryfall.com/card/${encodeURIComponent(name)}`,
+        };
+      });
+    const notFound = identifiers
+      .map((identifier) => identifier.name)
+      .filter((name): name is string => Boolean(name))
+      .filter((name) => !cards[name])
+      .map((name) => ({ name }));
+
+    return Promise.resolve(
+      new Response(
+        JSON.stringify({
+          data: foundCards,
+          not_found: notFound,
         }),
         {
           status: 200,
@@ -1269,6 +1533,35 @@ function createBracket(targetBracket: number, targetAlignment: "below" | "aligne
     targetAlignment,
     recommendedBracket: targetBracket,
     recommendedLabel: `Bracket ${targetBracket}`,
+  };
+}
+
+function createPowerAnalysis(dimensions: Record<string, number>) {
+  return {
+    powerScore: 7.4,
+    powerIndex: 74,
+    powerTier: "High Power",
+    summary: "",
+    strengths: [],
+    weaknesses: [],
+    findings: [],
+    dimensions: [
+      createPowerDimension("speed", "Speed", dimensions.speed),
+      createPowerDimension("consistency", "Consistency", dimensions.consistency),
+      createPowerDimension("interaction", "Interaction", dimensions.interaction),
+      createPowerDimension("resilience", "Resilience", dimensions.resilience),
+      createPowerDimension("closing", "Closing Power", dimensions.closing),
+      createPowerDimension("mana", "Mana Quality", dimensions.mana),
+    ],
+  };
+}
+
+function createPowerDimension(key: string, label: string, score: number) {
+  return {
+    key,
+    label,
+    score,
+    summary: "",
   };
 }
 

@@ -240,6 +240,43 @@ test("analyzeDeckConsistency uses card-flow access as a small consistency backfi
   assert.ok(withDraw.counts.core > withoutDraw.counts.core);
 });
 
+test("analyzeDeckConsistency does not collapse when access is far above target", () => {
+  const analysis = analyzeDeckConsistency(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Combo Commander",
+        "Legendary Creature - Warlock",
+        3,
+        "",
+        { color_identity: ["B"] },
+      ),
+      createResolvedCard(
+        "mainboard",
+        12,
+        "Direct Tutor",
+        "Sorcery",
+        2,
+        "Search your library for a card, put that card into your hand, then shuffle.",
+        { color_identity: ["B"] },
+      ),
+      createResolvedCard("mainboard", 87, "Filler Spell", "Creature - Human", 2, "", {
+        color_identity: ["B"],
+      }),
+    ]),
+    {
+      draw: createDrawStub(0, 0),
+      strategy: createStrategyStub("combo"),
+      winConditions: createWinConditionStub(1),
+    },
+  );
+
+  assert.ok(analysis.counts.core >= analysis.recommendations.coreTarget + 4);
+  assert.ok(analysis.consistencyScore >= 70);
+  assert.ok(analysis.findings.some((finding) => finding.code === "consistency_core_dense"));
+});
+
 function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocument {
   return {
     format: "edh",

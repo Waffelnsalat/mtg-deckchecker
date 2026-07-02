@@ -7,6 +7,12 @@ const SCRYFALL_BATCH_SIZE = 75;
 const SCRYFALL_TIMEOUT_MS = 15_000;
 const SCRYFALL_RETRY_DELAYS_MS = [0, 700, 1_600];
 const SCRYFALL_FUZZY_CONCURRENCY = 4;
+const SCRYFALL_MIN_REQUEST_INTERVAL_MS = 120;
+
+const cardLookupCache = new Map<string, ScryfallCard>();
+const finalUnmatchedCache = new Set<string>();
+let scryfallRequestQueue = Promise.resolve();
+let nextScryfallRequestAt = 0;
 
 interface ScryfallCollectionResponse {
   data: ScryfallCard[];
@@ -18,21 +24,16 @@ export async function resolveDeckEntries(
 ): Promise<{ cards: ResolvedDeckCard[]; unmatched: UnresolvedDeckCard[] }> {
   const uniqueNames = [...new Set(entries.map((entry) => entry.name))];
   const cardsByRequestedName = new Map<string, ScryfallCard>();
-  const namesToRetry: string[] = [];
+  const collectionMatches = await resolveScryfallCardsByName(uniqueNames);
 
-  for (const batch of chunk(uniqueNames, SCRYFALL_BATCH_SIZE)) {
-    const response = await fetchCollectionBatch(batch);
-
-    for (const card of response.data) {
-      storeCardAliases(cardsByRequestedName, card);
-    }
-
-    for (const missing of response.not_found ?? []) {
-      if (missing.name) {
-        namesToRetry.push(missing.name);
-      }
-    }
+  for (const card of collectionMatches.values()) {
+    storeCardAliases(cardsByRequestedName, card);
   }
+
+  const namesToRetry = uniqueNames.filter((name) => {
+    const cacheKey = normalizeLookupKey(name);
+    return !collectionMatches.has(cacheKey) && !finalUnmatchedCache.has(cacheKey);
+  });
 
   const fuzzyResults = await mapWithConcurrency(
     namesToRetry,
@@ -50,7 +51,10 @@ export async function resolveDeckEntries(
   for (const result of fuzzyResults) {
     if (result.card) {
       storeCardAliases(cardsByRequestedName, result.card);
+      storeGlobalCardAliases(result.card);
       cardsByRequestedName.set(normalizeLookupKey(result.name), result.card);
+    } else {
+      finalUnmatchedCache.add(normalizeLookupKey(result.name));
     }
   }
 
@@ -86,6 +90,101 @@ export async function resolveDeckEntries(
     cards,
     unmatched,
   };
+}
+
+export async function resolveScryfallCardsByName(names: string[]): Promise<Map<string, ScryfallCard>> {
+  const cardsByRequestedName = new Map<string, ScryfallCard>();
+  const namesToFetch: string[] = [];
+  const seenNames = new Set<string>();
+
+  for (const name of names) {
+    const cacheKey = normalizeLookupKey(name);
+
+    if (!cacheKey || seenNames.has(cacheKey)) {
+      continue;
+    }
+
+    seenNames.add(cacheKey);
+
+    const cachedCard = cardLookupCache.get(cacheKey);
+    if (cachedCard) {
+      cardsByRequestedName.set(cacheKey, cachedCard);
+      continue;
+    }
+
+    if (!finalUnmatchedCache.has(cacheKey)) {
+      namesToFetch.push(name);
+    }
+  }
+
+  for (const batch of chunk(namesToFetch, SCRYFALL_BATCH_SIZE)) {
+    const response = await fetchCollectionBatch(batch);
+
+    for (const card of response.data) {
+      storeGlobalCardAliases(card);
+    }
+
+    const notFound = new Set(
+      (response.not_found ?? [])
+        .map((missing) => missing.name)
+        .filter((name): name is string => Boolean(name))
+        .map(normalizeLookupKey),
+    );
+
+    for (const name of batch) {
+      const cacheKey = normalizeLookupKey(name);
+      const cachedCard = cardLookupCache.get(cacheKey);
+
+      if (cachedCard) {
+        cardsByRequestedName.set(cacheKey, cachedCard);
+      } else if (notFound.has(cacheKey)) {
+        continue;
+      }
+    }
+  }
+
+  return cardsByRequestedName;
+}
+
+export async function fetchScryfallCardByExactName(name: string): Promise<ScryfallCard | null> {
+  const cacheKey = normalizeLookupKey(name);
+
+  if (!cacheKey) {
+    return null;
+  }
+
+  const cachedCard = cardLookupCache.get(cacheKey);
+  if (cachedCard) {
+    return cachedCard;
+  }
+
+  if (finalUnmatchedCache.has(cacheKey)) {
+    return null;
+  }
+
+  try {
+    const response = await fetchScryfallWithRetry(
+      `${SCRYFALL_API_BASE}/cards/named?exact=${encodeURIComponent(name)}`,
+      {
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "mtg-deckchecker/0.1",
+        },
+      },
+    );
+
+    if (!response.ok) {
+      finalUnmatchedCache.add(cacheKey);
+      return null;
+    }
+
+    const card = toPublicCardShape((await response.json()) as ScryfallCard);
+    storeGlobalCardAliases(card);
+    cardLookupCache.set(cacheKey, card);
+    return card;
+  } catch {
+    return null;
+  }
 }
 
 async function fetchCollectionBatch(names: string[]): Promise<ScryfallCollectionResponse> {
@@ -135,7 +234,12 @@ async function fetchScryfallWithRetry(url: string, init: RequestInit): Promise<R
   let lastError: unknown = null;
 
   for (let attempt = 0; attempt < SCRYFALL_RETRY_DELAYS_MS.length; attempt += 1) {
-    const delayMs = SCRYFALL_RETRY_DELAYS_MS[attempt];
+    await waitForScryfallTurn();
+
+    const delayMs =
+      attempt > 0 && lastError instanceof Response
+        ? getRetryDelayMs(lastError, attempt)
+        : SCRYFALL_RETRY_DELAYS_MS[attempt];
     if (delayMs > 0) {
       await sleep(delayMs);
     }
@@ -150,7 +254,7 @@ async function fetchScryfallWithRetry(url: string, init: RequestInit): Promise<R
         return response;
       }
 
-      lastError = new Error(`Scryfall request failed with status ${response.status}.`);
+      lastError = response;
     } catch (error) {
       lastError = error;
       if (attempt === SCRYFALL_RETRY_DELAYS_MS.length - 1) {
@@ -159,12 +263,44 @@ async function fetchScryfallWithRetry(url: string, init: RequestInit): Promise<R
     }
   }
 
-  const message = lastError instanceof Error ? lastError.message : "Unknown network error.";
+  const message =
+    lastError instanceof Response
+      ? `Scryfall request failed with status ${lastError.status}.`
+      : lastError instanceof Error
+        ? lastError.message
+        : "Unknown network error.";
   throw new Error(`Scryfall request failed after ${SCRYFALL_RETRY_DELAYS_MS.length} attempts. ${message}`);
 }
 
 function shouldRetryScryfallResponse(response: Response) {
   return response.status === 429 || response.status >= 500;
+}
+
+function getRetryDelayMs(response: Response, attempt: number) {
+  const retryAfter = response.headers?.get?.("retry-after");
+  const retryAfterSeconds = retryAfter ? Number(retryAfter) : Number.NaN;
+
+  if (Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0) {
+    return Math.min(10_000, retryAfterSeconds * 1_000);
+  }
+
+  return SCRYFALL_RETRY_DELAYS_MS[attempt] ?? SCRYFALL_RETRY_DELAYS_MS.at(-1) ?? 1_600;
+}
+
+async function waitForScryfallTurn() {
+  const wait = scryfallRequestQueue.then(async () => {
+    const now = Date.now();
+    const delayMs = Math.max(0, nextScryfallRequestAt - now);
+
+    if (delayMs > 0) {
+      await sleep(delayMs);
+    }
+
+    nextScryfallRequestAt = Date.now() + SCRYFALL_MIN_REQUEST_INTERVAL_MS;
+  });
+
+  scryfallRequestQueue = wait.catch(() => {});
+  await wait;
 }
 
 function sleep(ms: number) {
@@ -227,6 +363,13 @@ function storeCardAliases(cardsByRequestedName: Map<string, ScryfallCard>, card:
     for (const alias of getFaceAliases(face)) {
       cardsByRequestedName.set(alias, card);
     }
+  }
+}
+
+function storeGlobalCardAliases(card: ScryfallCard) {
+  for (const alias of getAllCardAliases(card)) {
+    cardLookupCache.set(alias, card);
+    finalUnmatchedCache.delete(alias);
   }
 }
 

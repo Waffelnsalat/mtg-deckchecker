@@ -946,6 +946,35 @@ test("analyzeDeckRamp lowers impossible ramp expectations outside green", () => 
   );
 });
 
+test("analyzeDeckRamp does not collapse when ramp is far above target", () => {
+  const analysis = analyzeDeckRamp(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Green Commander",
+        "Legendary Creature - Elf",
+        3,
+        "",
+        { color_identity: ["G"] },
+      ),
+      createResolvedCard(
+        "mainboard",
+        18,
+        "Mana Rock",
+        "Artifact",
+        2,
+        "{T}: Add one mana of any color.",
+      ),
+      createResolvedCard("mainboard", 81, "Filler Spell", "Creature - Elf", 2, ""),
+    ]),
+  );
+
+  assert.ok(analysis.counts.core >= analysis.recommendations.coreTarget + 4);
+  assert.ok(analysis.rampScore >= 70);
+  assert.ok(analysis.findings.some((finding) => finding.code === "core_ramp_high"));
+});
+
 function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocument {
   return {
     format: "edh",

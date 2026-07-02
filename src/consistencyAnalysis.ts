@@ -837,7 +837,7 @@ function scoreConsistency(input: ConsistencyScoreInput) {
   }
 
   if (coreRatio > 1.85) {
-    score -= Math.min(8, Math.round((coreRatio - 1.85) * 10));
+    score -= Math.min(4, Math.sqrt(coreRatio - 1.85) * 3);
   }
 
   return clamp(Math.round(score), 0, 100);

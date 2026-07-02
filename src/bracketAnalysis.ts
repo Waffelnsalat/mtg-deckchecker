@@ -38,6 +38,23 @@ const BRACKET_BANDS: Record<
   4: { min: 8.05, max: 9.25 },
 };
 
+const BRACKET_NEAR_SCORE_MARGIN: Partial<Record<DeckBracketNumber, number>> = {
+  3: 0.24,
+  4: 0.36,
+  5: 0.24,
+};
+
+const BRACKET_OVER_SCORE_MARGIN: Partial<Record<DeckBracketNumber, number>> = {
+  2: 0.36,
+  3: 0.36,
+};
+
+const BRACKET_GATE_GAP_BUDGETS: Partial<Record<DeckBracketNumber, number>> = {
+  3: 14,
+  4: 16,
+  5: 12,
+};
+
 export function analyzeDeckBracket(input: DeckBracketInput): DeckBracketAnalysis {
   const signals = {
     gameChangers: input.gameChangers.counts.total,
@@ -47,7 +64,7 @@ export function analyzeDeckBracket(input: DeckBracketInput): DeckBracketAnalysis
     massLandDenial: countMatchingCards(input.document, isMassLandDenialCard),
   };
 
-  const powerBracketInfo = getPowerBracketRead(input.power, signals);
+  const powerBracketInfo = getPowerBracketRead(input.power, signals, input.targetBracket);
   const rulesFloor = getRulesFloor(input.gameChangers, signals);
   const adjustedByRules = rulesFloor > powerBracketInfo.bracket;
   const recommendedBracket = Math.max(powerBracketInfo.bracket, rulesFloor) as DeckBracketNumber;
@@ -118,19 +135,35 @@ export function analyzeDeckBracket(input: DeckBracketInput): DeckBracketAnalysis
 function getPowerBracketRead(
   power: DeckPowerAnalysis,
   signals: DeckBracketAnalysis["signals"],
+  targetBracket?: DeckBracketNumber,
 ): { bracket: DeckBracketNumber; modifier: DeckBracketModifier } {
   const score = power.powerScore;
   const speed = getDimensionScore(power, "speed");
   const consistency = getDimensionScore(power, "consistency");
   const closing = getDimensionScore(power, "closing");
   const interaction = getDimensionScore(power, "interaction");
-  const hasCedhSignals =
-    score >= 9.1 &&
+  const mana = manaQuality(power);
+  const clearsCedhProfile =
     speed >= 78 &&
     consistency >= 78 &&
     closing >= 78 &&
-    interaction >= 60 &&
-    (signals.exactCombos > 0 || signals.gameChangers >= 2);
+    interaction >= 60;
+  const cedhGateGap = getGateGap(
+    [
+      [speed, 78],
+      [consistency, 78],
+      [closing, 78],
+      [interaction, 60],
+    ],
+  );
+  const hasCedhPressureSignal = signals.exactCombos > 0 || signals.gameChangers >= 2;
+  const hasOverwhelmingCedhProfile = score >= 9.6 && clearsCedhProfile;
+  const hasCedhSignals =
+    (score >= 9.1 && clearsCedhProfile && hasCedhPressureSignal) ||
+    hasOverwhelmingCedhProfile ||
+    (score >= 9.1 - (BRACKET_NEAR_SCORE_MARGIN[5] ?? 0) &&
+      cedhGateGap <= (BRACKET_GATE_GAP_BUDGETS[5] ?? 0) &&
+      hasCedhPressureSignal);
 
   if (hasCedhSignals) {
     return {
@@ -146,32 +179,41 @@ function getPowerBracketRead(
     };
   }
 
-  if (score < BRACKET_BANDS[2].max) {
+  const upgradedSignals =
+    (speed >= 60 && consistency >= 56 && mana >= 54) ||
+    (speed >= 58 && closing >= 66 && mana >= 54) ||
+    (consistency >= 60 && closing >= 64) ||
+    (interaction >= 54 && consistency >= 56) ||
+    (signals.exactCombos > 0 &&
+      (speed >= 54 || consistency >= 56 || closing >= 70));
+  const nearUpgradedSignals =
+    score >= BRACKET_BANDS[3].min - (BRACKET_NEAR_SCORE_MARGIN[3] ?? 0) &&
+    (getBestUpgradedGateGap({ speed, consistency, closing, interaction, mana, signals }) <=
+      (BRACKET_GATE_GAP_BUDGETS[3] ?? 0));
+
+  if (score < BRACKET_BANDS[2].max && !nearUpgradedSignals) {
     return {
       bracket: 2,
       modifier: getBandModifier(score, BRACKET_BANDS[2].min, BRACKET_BANDS[2].max),
     };
   }
 
-  const upgradedSignals =
-    (speed >= 60 && consistency >= 56 && manaQuality(power) >= 54) ||
-    (speed >= 58 && closing >= 66 && manaQuality(power) >= 54) ||
-    (consistency >= 60 && closing >= 64) ||
-    (interaction >= 54 && consistency >= 56) ||
-    (signals.exactCombos > 0 &&
-      (speed >= 54 || consistency >= 56 || closing >= 70));
-
-  if (!upgradedSignals) {
+  if (
+    targetBracket === 2 &&
+    score < BRACKET_BANDS[2].max + (BRACKET_OVER_SCORE_MARGIN[2] ?? 0) &&
+    (upgradedSignals || nearUpgradedSignals) &&
+    !hasHardUpgradePressure(signals)
+  ) {
     return {
       bracket: 2,
       modifier: "+",
     };
   }
 
-  if (score < BRACKET_BANDS[3].max) {
+  if (!upgradedSignals && !nearUpgradedSignals) {
     return {
-      bracket: 3,
-      modifier: getBandModifier(score, BRACKET_BANDS[3].min, BRACKET_BANDS[3].max),
+      bracket: 2,
+      modifier: "+",
     };
   }
 
@@ -181,8 +223,31 @@ function getPowerBracketRead(
     consistency >= 66 &&
     closing >= 78 &&
     (interaction >= 46 || signals.exactCombos > 0 || signals.gameChangers > 0);
+  const nearOptimizedSignals =
+    score >= BRACKET_BANDS[4].min - (BRACKET_NEAR_SCORE_MARGIN[4] ?? 0) &&
+    getOptimizedGateGap({ speed, consistency, closing, interaction, signals }) <=
+      (BRACKET_GATE_GAP_BUDGETS[4] ?? 0);
 
-  if (!optimizedSignals) {
+  if (score < BRACKET_BANDS[3].max && !nearOptimizedSignals) {
+    return {
+      bracket: 3,
+      modifier: getBandModifier(score, BRACKET_BANDS[3].min, BRACKET_BANDS[3].max),
+    };
+  }
+
+  if (
+    targetBracket === 3 &&
+    score < BRACKET_BANDS[3].max + (BRACKET_OVER_SCORE_MARGIN[3] ?? 0) &&
+    (optimizedSignals || nearOptimizedSignals) &&
+    !hasHardOptimizedPressure(signals)
+  ) {
+    return {
+      bracket: 3,
+      modifier: "+",
+    };
+  }
+
+  if (!optimizedSignals && !nearOptimizedSignals) {
     return {
       bracket: 3,
       modifier: "+",
@@ -191,8 +256,85 @@ function getPowerBracketRead(
 
   return {
     bracket: 4,
-    modifier: getBandModifier(score, BRACKET_BANDS[4].min, BRACKET_BANDS[4].max),
+    modifier: score < BRACKET_BANDS[4].min
+      ? "-"
+      : getBandModifier(score, BRACKET_BANDS[4].min, BRACKET_BANDS[4].max),
   };
+}
+
+function hasHardUpgradePressure(signals: DeckBracketAnalysis["signals"]) {
+  return signals.gameChangers > 0 || hasHardOptimizedPressure(signals);
+}
+
+function hasHardOptimizedPressure(signals: DeckBracketAnalysis["signals"]) {
+  return signals.twoCardCombos > 0 || signals.extraTurns > 0 || signals.massLandDenial > 0;
+}
+
+function getBestUpgradedGateGap(input: {
+  speed: number;
+  consistency: number;
+  closing: number;
+  interaction: number;
+  mana: number;
+  signals: DeckBracketAnalysis["signals"];
+}) {
+  const gaps = [
+    getGateGap([
+      [input.speed, 60],
+      [input.consistency, 56],
+      [input.mana, 54],
+    ]),
+    getGateGap([
+      [input.speed, 58],
+      [input.closing, 66],
+      [input.mana, 54],
+    ]),
+    getGateGap([
+      [input.consistency, 60],
+      [input.closing, 64],
+    ]),
+    getGateGap([
+      [input.interaction, 54],
+      [input.consistency, 56],
+    ]),
+  ];
+
+  if (input.signals.exactCombos > 0) {
+    gaps.push(
+      Math.min(
+        getGateGap([[input.speed, 54]]),
+        getGateGap([[input.consistency, 56]]),
+        getGateGap([[input.closing, 70]]),
+      ),
+    );
+  }
+
+  return Math.min(...gaps);
+}
+
+function getOptimizedGateGap(input: {
+  speed: number;
+  consistency: number;
+  closing: number;
+  interaction: number;
+  signals: DeckBracketAnalysis["signals"];
+}) {
+  return getGateGap([
+    [input.speed, 74],
+    [input.consistency, 66],
+    [input.closing, 78],
+    [
+      input.signals.exactCombos > 0 || input.signals.gameChangers > 0
+        ? 46
+        : input.interaction,
+      46,
+    ],
+  ]);
+}
+
+function getGateGap(pairs: Array<[actual: number, target: number]>) {
+  const value = pairs.reduce((sum, [actual, target]) => sum + Math.max(0, target - actual), 0);
+  return Math.round(value * 100) / 100;
 }
 
 function getBandModifier(
@@ -456,7 +598,7 @@ function describeWhyNotHigher(input: {
   signals: DeckBracketAnalysis["signals"];
 }) {
   if (input.recommendedBracket >= 5) {
-    return "It is already Bracket 5 because the cEDH gate is met by power score, speed, consistency, closing power, interaction, and fast win pressure.";
+    return "It is already Bracket 5 because the cEDH gate is met by power score, speed, consistency, closing power, interaction, and fast win pressure or an overwhelming power profile.";
   }
 
   const nextBracket = (input.recommendedBracket + 1) as DeckBracketNumber;

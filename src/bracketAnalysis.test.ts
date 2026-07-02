@@ -64,7 +64,7 @@ test("analyzeDeckBracket keeps focused six-power shells in bracket 2 until they 
 test("analyzeDeckBracket still gives bracket 3 to clearly upgraded fair shells", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([]),
-    power: createPowerAnalysis(6.9, {
+    power: createPowerAnalysis(7.05, {
       speed: 60,
       consistency: 56,
       interaction: 46,
@@ -82,6 +82,47 @@ test("analyzeDeckBracket still gives bracket 3 to clearly upgraded fair shells",
   assert.match(analysis.summary, /\n- Main drivers:/);
   assert.match(analysis.summary, /\n- Ceiling: Not Bracket 4/);
   assert.ok(analysis.findings.some((finding: any) => finding.code === "bracket_not_higher"));
+});
+
+test("analyzeDeckBracket keeps barely upgraded fair shells as bracket 2 plus", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(6.9, {
+      speed: 60,
+      consistency: 56,
+      interaction: 46,
+      resilience: 59,
+      closing: 65,
+      mana: 61,
+    }),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+    targetBracket: 2,
+  });
+
+  assert.equal(analysis.recommendedBracket, 2);
+  assert.equal(analysis.recommendedModifier, "+");
+  assert.equal(analysis.adjustedByRules, false);
+});
+
+test("analyzeDeckBracket still raises barely upgraded shells when hard bracket pressure is present", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(6.9, {
+      speed: 60,
+      consistency: 56,
+      interaction: 46,
+      resilience: 59,
+      closing: 65,
+      mana: 61,
+    }),
+    gameChangers: createGameChangerAnalysis(1),
+    winConditions: createWinConditions(),
+    targetBracket: 2,
+  });
+
+  assert.equal(analysis.recommendedBracket, 3);
+  assert.equal(analysis.adjustedByRules, false);
 });
 
 test("analyzeDeckBracket raises the floor to bracket 3 when game changers are present", () => {
@@ -217,6 +258,47 @@ test("analyzeDeckBracket keeps bracket 5 reserved for very high-end cEDH signals
   assert.equal(analysis.powerBracket, 5);
 });
 
+test("analyzeDeckBracket treats overwhelming cEDH power as bracket 5 even without combo lookup hits", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(9.7, {
+      speed: 91,
+      consistency: 93,
+      interaction: 72,
+      resilience: 66,
+      closing: 92,
+      mana: 88,
+    }, "cEDH-Adjacent"),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+  });
+
+  assert.equal(analysis.recommendedBracket, 5);
+  assert.equal(analysis.recommendedModifier, "");
+  assert.equal(analysis.powerBracket, 5);
+  assert.equal(analysis.adjustedByRules, false);
+});
+
+test("analyzeDeckBracket keeps lower cEDH-adjacent reads at bracket 4 without cEDH pressure", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(9.4, {
+      speed: 91,
+      consistency: 93,
+      interaction: 72,
+      resilience: 66,
+      closing: 92,
+      mana: 88,
+    }, "cEDH-Adjacent"),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+  });
+
+  assert.equal(analysis.recommendedBracket, 4);
+  assert.match(analysis.summary, /Not Bracket 5/);
+  assert.match(analysis.summary, /fast combo or Game Changer pressure/);
+});
+
 test("analyzeDeckBracket detects extra turns and mass land denial as higher-bracket barometers", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([
@@ -276,7 +358,7 @@ test("analyzeDeckBracket keeps high-scoring but fair shells in bracket 3 when op
 test("analyzeDeckBracket explains above-target reads without awkward trimming language", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([]),
-    power: createPowerAnalysis(6.9, {
+    power: createPowerAnalysis(7.25, {
       speed: 55,
       consistency: 75,
       interaction: 76,
@@ -329,7 +411,7 @@ test("analyzeDeckBracket explains why below-target decks are not at the selected
   assert.match(targetFinding.message, /Recommendations can focus on those gaps/);
 });
 
-test("analyzeDeckBracket keeps borderline optimized shells in bracket 3 until they clearly clear the higher gate", () => {
+test("analyzeDeckBracket lets near-miss optimized shells read as bracket 4 minus", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([]),
     power: createPowerAnalysis(7.95, {
@@ -350,9 +432,135 @@ test("analyzeDeckBracket keeps borderline optimized shells in bracket 3 until th
     }),
   });
 
+  assert.equal(analysis.recommendedBracket, 4);
+  assert.equal(analysis.recommendedModifier, "-");
+  assert.equal(analysis.adjustedByRules, false);
+});
+
+test("analyzeDeckBracket lets near-miss upgraded shells read as bracket 3 minus", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(6.72, {
+      speed: 57,
+      consistency: 54,
+      interaction: 51,
+      resilience: 52,
+      closing: 63,
+      mana: 52,
+    }, "Focused"),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+  });
+
+  assert.equal(analysis.recommendedBracket, 3);
+  assert.equal(analysis.recommendedModifier, "-");
+  assert.equal(analysis.adjustedByRules, false);
+});
+
+test("analyzeDeckBracket uses a combined dimension-gap budget for near-miss bracket reads", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(7.92, {
+      speed: 72,
+      consistency: 64,
+      interaction: 44,
+      resilience: 61,
+      closing: 76,
+      mana: 75,
+    }, "High Power"),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+  });
+
+  assert.equal(analysis.recommendedBracket, 4);
+  assert.equal(analysis.recommendedModifier, "-");
+});
+
+test("analyzeDeckBracket keeps target bracket when combined over-gap is still small", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(6.9, {
+      speed: 58,
+      consistency: 54,
+      interaction: 52,
+      resilience: 54,
+      closing: 63,
+      mana: 52,
+    }, "Focused"),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+    targetBracket: 2,
+  });
+
+  assert.equal(analysis.recommendedBracket, 2);
+  assert.equal(analysis.recommendedModifier, "+");
+  assert.equal(analysis.targetAlignment, "aligned");
+});
+
+test("analyzeDeckBracket does not promote decks that miss the next bracket by more than a little", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(7.82, {
+      speed: 68,
+      consistency: 62,
+      interaction: 42,
+      resilience: 60,
+      closing: 74,
+      mana: 72,
+    }, "High Power"),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+  });
+
   assert.equal(analysis.recommendedBracket, 3);
   assert.equal(analysis.recommendedModifier, "+");
-  assert.equal(analysis.adjustedByRules, false);
+});
+
+test("analyzeDeckBracket keeps barely optimized fair shells as bracket 3 plus when bracket 3 is targeted", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(8.15, {
+      speed: 76,
+      consistency: 68,
+      interaction: 50,
+      resilience: 63,
+      closing: 80,
+      mana: 78,
+    }, "High Power"),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+    targetBracket: 3,
+  });
+
+  assert.equal(analysis.recommendedBracket, 3);
+  assert.equal(analysis.recommendedModifier, "+");
+  assert.equal(analysis.targetAlignment, "aligned");
+});
+
+test("analyzeDeckBracket keeps barely optimized shells in bracket 4 when hard optimized pressure is present", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(8.15, {
+      speed: 76,
+      consistency: 68,
+      interaction: 50,
+      resilience: 63,
+      closing: 80,
+      mana: 78,
+    }, "High Power"),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions({
+      exact: [
+        {
+          cardNames: ["Thassa's Oracle", "Demonic Consultation"],
+        },
+      ],
+    }),
+    targetBracket: 3,
+  });
+
+  assert.equal(analysis.recommendedBracket, 4);
+  assert.equal(analysis.targetAlignment, "above");
 });
 
 test("analyzeDeckBracket still gives bracket 4 to truly optimized non-cEDH shells", () => {

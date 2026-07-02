@@ -668,6 +668,33 @@ test("analyzeDeckDraw gives fair decks credit for repeatable black draw engines"
   assert.ok(analysis.drawScore > 0);
 });
 
+test("analyzeDeckDraw does not collapse when raw draw is far above target", () => {
+  const analysis = analyzeDeckDraw(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Blue Commander",
+        "Legendary Creature - Wizard",
+        3,
+        "",
+        { color_identity: ["U"] },
+      ),
+      createResolvedCard("mainboard", 18, "Study Spell", "Sorcery", 3, "Draw two cards.", {
+        color_identity: ["U"],
+      }),
+      createResolvedCard("mainboard", 81, "Filler Spell", "Creature - Human", 2, "", {
+        color_identity: ["U"],
+      }),
+    ]),
+  );
+
+  assert.ok(analysis.counts.core >= analysis.recommendations.coreTarget + 4);
+  assert.ok(analysis.counts.draw >= analysis.recommendations.drawTarget + 4);
+  assert.ok(analysis.drawScore >= 66);
+  assert.ok(analysis.findings.some((finding) => finding.code === "draw_core_high"));
+});
+
 function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocument {
   return {
     format: "edh",

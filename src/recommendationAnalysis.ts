@@ -4,6 +4,7 @@ import {
   EdhrecCommanderInsights,
   lookupCommanderEdhrecInsights,
 } from "./edhrec";
+import { normalizeLookupKey } from "./decklist";
 import {
   RecommanderCardRecommendation,
   RecommanderInsights,
@@ -13,7 +14,7 @@ import {
   getRoleWeight,
   inferAdvancedRoleProfile,
 } from "./advancedCardScan";
-import { mapWithConcurrency } from "./asyncUtils";
+import { resolveScryfallCardsByName } from "./scryfall";
 import {
   DeckBracketAnalysis,
   DeckBracketNumber,
@@ -21,6 +22,8 @@ import {
   DeckConsistencyAnalysis,
   DeckDrawAnalysis,
   DeckLandBaseAnalysis,
+  DeckPowerAnalysis,
+  DeckPowerDimensionKey,
   DeckProtectionAnalysis,
   DeckRampAnalysis,
   DeckRecommendationAnalysis,
@@ -47,6 +50,7 @@ interface AnalyzeDeckRecommendationsInput {
   recommander?: RecommanderInsights | null;
   commander: DeckCommanderAnalysis;
   bracket: DeckBracketAnalysis;
+  power?: DeckPowerAnalysis;
   strategy: DeckStrategyAnalysis;
   winStrategy: DeckWinStrategyAnalysis;
   structure: {
@@ -158,12 +162,43 @@ const EFFICIENCY_TARGETS: Record<EfficiencyTopic, Record<DeckBracketNumber, numb
   interaction: { 1: 0.4, 2: 0.54, 3: 0.68, 4: 0.84, 5: 1 },
 };
 
-const SCRYFALL_NAMED_URL = "https://api.scryfall.com/cards/named";
+const BRACKET_GATE_DIMENSION_TARGETS: Partial<
+  Record<DeckBracketNumber, Partial<Record<DeckPowerDimensionKey, number>>>
+> = {
+  3: {
+    speed: 60,
+    consistency: 56,
+    interaction: 54,
+    closing: 64,
+    mana: 54,
+  },
+  4: {
+    speed: 74,
+    consistency: 66,
+    interaction: 46,
+    closing: 78,
+  },
+  5: {
+    speed: 78,
+    consistency: 78,
+    interaction: 60,
+    closing: 78,
+  },
+};
+
+const BRACKET_GATE_TOPIC_DIMENSIONS: Partial<
+  Record<DeckRecommendationTopic, DeckPowerDimensionKey>
+> = {
+  land_base: "mana",
+  ramp: "speed",
+  consistency: "consistency",
+  interaction: "interaction",
+  closing: "closing",
+};
+
 const RECOMMENDER_CLASSIFICATION_LIMIT = 32;
-const RECOMMENDER_CLASSIFICATION_CONCURRENCY = 6;
 const MAX_TOPIC_SUGGESTIONS = 2;
 const MAX_TOTAL_RECOMMENDATION_CARDS = 3;
-const recommendationCardCache = new Map<string, ScryfallCard | null>();
 
 const STAPLE_UP_CANDIDATES: Record<EfficiencyTopic, RecommendationLibraryEntry[]> = {
   ramp: [
@@ -1748,6 +1783,7 @@ function buildLandBaseTopic(context: RecommendationContext): DeckRecommendationT
       readNumber(context.landBase.recommendations.costlyMax),
   );
   const score = readNumber(context.landBase.landBaseScore);
+  const bracketGateGap = getBracketGateTopicGap(context, "land_base");
 
   const needsUpgrade =
     context.bracket.targetAlignment !== "above" &&
@@ -1755,7 +1791,8 @@ function buildLandBaseTopic(context: RecommendationContext): DeckRecommendationT
       alwaysTappedGap > 0 ||
       colorlessGap > 0 ||
       costlyGap > 0 ||
-      score < getTopicFloor("land_base", context.targetBracket));
+      score < getTopicFloor("land_base", context.targetBracket) ||
+      bracketGateGap > 0);
 
   if (needsUpgrade) {
     const cards = chooseLandBaseUpgradeCandidates(
@@ -1765,12 +1802,15 @@ function buildLandBaseTopic(context: RecommendationContext): DeckRecommendationT
         Math.max(0, minLands - currentLands),
         countPositiveGaps(alwaysTappedGap, colorlessGap, costlyGap),
         getScoreDeltaWeight(score, getTopicFloor("land_base", context.targetBracket)),
+        bracketGateGap,
       ),
     );
     const summary =
       currentLands < minLands
         ? `${currentLands} lands is light for a shell that wants roughly ${minLands}-${maxLands} lands.`
-        : buildLandBaseIssueSummary(alwaysTappedGap, colorlessGap, costlyGap);
+        : bracketGateGap > 0
+          ? getBracketGateTopicSummary(context, "land_base") ?? buildLandBaseIssueSummary(alwaysTappedGap, colorlessGap, costlyGap)
+          : buildLandBaseIssueSummary(alwaysTappedGap, colorlessGap, costlyGap);
     return createTopicEntry("land_base", summary, createCards("land_base", cards, "up", context));
   }
 
@@ -1812,6 +1852,7 @@ function buildRampTopic(context: RecommendationContext): DeckRecommendationTopic
   const score = readNumber(context.ramp.rampScore);
   const burst = readNumber(context.ramp.counts.burst);
   const compactnessGap = getEfficiencyUpgradeGap(context, "ramp");
+  const bracketGateGap = getBracketGateTopicGap(context, "ramp");
 
   const rawNeedsUpgrade =
     coreGap >= 0.75 ||
@@ -1823,7 +1864,8 @@ function buildRampTopic(context: RecommendationContext): DeckRecommendationTopic
         readNumber(context.ramp.recommendations.stableTarget) + 1);
   const needsCompactUpgrade = compactnessGap > 0;
   const needsUpgrade =
-    context.bracket.targetAlignment !== "above" && (rawNeedsUpgrade || needsCompactUpgrade);
+    context.bracket.targetAlignment !== "above" &&
+    (rawNeedsUpgrade || needsCompactUpgrade || bracketGateGap > 0);
 
   if (needsUpgrade) {
     const limit = getDesiredSuggestionCount(
@@ -1831,13 +1873,16 @@ function buildRampTopic(context: RecommendationContext): DeckRecommendationTopic
       stableGap,
       compactnessGap,
       getScoreDeltaWeight(score, getTopicFloor("ramp", context.targetBracket)),
+      bracketGateGap,
     );
     const cards = chooseUpgradeCandidates("ramp", RAMP_UP_CANDIDATES, context, limit);
     const summary = rawNeedsUpgrade
       ? `The ramp package is short of the live target (${formatOneDecimal(
           readNumber(context.ramp.recommendations.coreTarget),
         )} core / ${formatOneDecimal(readNumber(context.ramp.recommendations.stableTarget))} stable).`
-      : buildEfficiencySummary(context, "ramp");
+      : bracketGateGap > 0
+        ? getBracketGateTopicSummary(context, "ramp") ?? buildEfficiencySummary(context, "ramp")
+        : buildEfficiencySummary(context, "ramp");
     return createTopicEntry("ramp", summary, createCards("ramp", cards, "up", context));
   }
 
@@ -1942,6 +1987,7 @@ function buildConsistencyTopic(context: RecommendationContext): DeckRecommendati
     readNumber(context.consistency.recommendations.repeatableTarget) - repeatableCount,
   );
   const compactnessGap = getEfficiencyUpgradeGap(context, "consistency");
+  const bracketGateGap = getBracketGateTopicGap(context, "consistency");
 
   const rawNeedsUpgrade =
     directGap >= 0.5 ||
@@ -1951,7 +1997,7 @@ function buildConsistencyTopic(context: RecommendationContext): DeckRecommendati
   const needsUpgrade =
     context.bracket.targetAlignment !== "above" &&
     context.targetBracket >= 3 &&
-    (rawNeedsUpgrade || needsCompactUpgrade);
+    (rawNeedsUpgrade || needsCompactUpgrade || bracketGateGap > 0);
 
   if (needsUpgrade) {
     const limit = getDesiredSuggestionCount(
@@ -1959,6 +2005,7 @@ function buildConsistencyTopic(context: RecommendationContext): DeckRecommendati
       repeatableGap,
       compactnessGap,
       getScoreDeltaWeight(score, getTopicFloor("consistency", context.targetBracket)),
+      bracketGateGap,
     );
     const cards = chooseUpgradeCandidates(
       "consistency",
@@ -1970,7 +2017,9 @@ function buildConsistencyTopic(context: RecommendationContext): DeckRecommendati
       "consistency",
       needsCompactUpgrade && !rawNeedsUpgrade
         ? buildEfficiencySummary(context, "consistency")
-        : "The deck still leans more on natural draws than its chosen bracket usually wants.",
+        : bracketGateGap > 0 && !rawNeedsUpgrade
+          ? getBracketGateTopicSummary(context, "consistency") ?? "The deck still leans more on natural draws than its chosen bracket usually wants."
+          : "The deck still leans more on natural draws than its chosen bracket usually wants.",
       createCards("consistency", cards, "up", context),
     );
   }
@@ -2025,6 +2074,7 @@ function buildInteractionTopic(context: RecommendationContext): DeckRecommendati
       readNumber(context.spellInteraction.counts.hard),
   );
   const compactnessGap = getEfficiencyUpgradeGap(context, "interaction");
+  const bracketGateGap = getBracketGateTopicGap(context, "interaction");
 
   const rawNeedsUpgrade =
     targetedGap >= 0.75 ||
@@ -2032,7 +2082,8 @@ function buildInteractionTopic(context: RecommendationContext): DeckRecommendati
     combinedScore < getTopicFloor("interaction", context.targetBracket);
   const needsCompactUpgrade = compactnessGap > 0;
   const needsUpgrade =
-    context.bracket.targetAlignment !== "above" && (rawNeedsUpgrade || needsCompactUpgrade);
+    context.bracket.targetAlignment !== "above" &&
+    (rawNeedsUpgrade || needsCompactUpgrade || bracketGateGap > 0);
 
   if (needsUpgrade) {
     const preferStack = context.colorProfile.hasBlue && stackScore + 5 < removalScore;
@@ -2041,6 +2092,7 @@ function buildInteractionTopic(context: RecommendationContext): DeckRecommendati
       context.colorProfile.hasBlue ? hardGap : 0,
       compactnessGap,
       getScoreDeltaWeight(combinedScore, getTopicFloor("interaction", context.targetBracket)),
+      bracketGateGap,
     );
     const contextFitLibrary = getRecommanderTopicLibrary(context, "interaction");
     const upgradeLibrary = getUpgradeLibrary("interaction", context);
@@ -2078,6 +2130,9 @@ function buildInteractionTopic(context: RecommendationContext): DeckRecommendati
     const summary =
       needsCompactUpgrade && !rawNeedsUpgrade
         ? buildEfficiencySummary(context, "interaction")
+        : bracketGateGap > 0 && !rawNeedsUpgrade
+          ? getBracketGateTopicSummary(context, "interaction") ??
+            "The shell could answer opposing battlefield pieces more reliably with another efficient interaction slot."
         : preferStack
           ? "The shell would like one more clean stack answer for the turns that matter most."
           : "The shell could answer opposing battlefield pieces more reliably with another efficient interaction slot.";
@@ -2201,16 +2256,19 @@ function buildClosingTopic(context: RecommendationContext): DeckRecommendationTo
       readNumber(context.winConditions.counts?.core),
   );
   const exactCombos = readNumber(context.winConditions.combos.exactCount);
+  const bracketGateGap = getBracketGateTopicGap(context, "closing");
   const needsUpgrade =
     context.bracket.targetAlignment !== "above" &&
     (!context.winStrategy.primaryPlan ||
       coreGap >= 0.75 ||
-      score < getTopicFloor("closing", context.targetBracket));
+      score < getTopicFloor("closing", context.targetBracket) ||
+      bracketGateGap > 0);
 
   if (needsUpgrade) {
     const limit = getDesiredSuggestionCount(
       coreGap,
       getScoreDeltaWeight(score, getTopicFloor("closing", context.targetBracket)),
+      bracketGateGap,
       context.winStrategy.primaryPlan ? 0 : 1,
     );
     const contextFitLibrary = getRecommanderTopicLibrary(context, "closing");
@@ -2224,6 +2282,9 @@ function buildClosingTopic(context: RecommendationContext): DeckRecommendationTo
       : chooseClosingCandidates(context, "up", limit);
     const summary = !context.winStrategy.primaryPlan
       ? `The deck still needs a cleaner win line if it wants to reach ${getTargetLabel(context)} consistently.`
+      : bracketGateGap > 0 && coreGap < 0.75 && score >= getTopicFloor("closing", context.targetBracket)
+        ? getBracketGateTopicSummary(context, "closing") ??
+          `${context.winStrategy.primaryPlan.label} is the current finish, but it still wants a more reliable closer.`
       : `${context.winStrategy.primaryPlan.label} is the current finish, but it still wants a more reliable closer.`;
     return createTopicEntry("closing", summary, createCards("closing", cards, "up", context));
   }
@@ -2447,11 +2508,11 @@ async function buildRecommanderTopicLibraries(
     .filter((card) => !isBasicLandName(card.name))
     .slice(0, RECOMMENDER_CLASSIFICATION_LIMIT);
 
-  const classified = await mapWithConcurrency(
-    candidates,
-    RECOMMENDER_CLASSIFICATION_CONCURRENCY,
-    async (candidate) => {
-      const scryfallCard = await fetchRecommendationCard(candidate.name);
+  const scryfallCardsByName = await resolveRecommendationCardsByName(
+    candidates.map((candidate) => candidate.name),
+  );
+  const classified = candidates.map((candidate) => {
+      const scryfallCard = scryfallCardsByName.get(normalizeLookupKey(candidate.name)) ?? null;
       const topics = scryfallCard ? classifyRecommendationCard(scryfallCard) : new Set<DeckRecommendationTopic>(["shell"]);
 
       if (topics.size === 0) {
@@ -2463,8 +2524,7 @@ async function buildRecommanderTopicLibraries(
         entry: createRecommanderLibraryEntry(candidate, context, [...topics], scryfallCard),
         topics,
       };
-    },
-  );
+    });
 
   for (const item of classified) {
     for (const topic of item.topics) {
@@ -2528,36 +2588,11 @@ function buildRecommanderCandidateReason(
   return `the context model ranks it #${card.rank} for this exact commander and current card package, so it looks like a card that belongs with this shell rather than a generic staple.`;
 }
 
-async function fetchRecommendationCard(name: string): Promise<ScryfallCard | null> {
-  const cacheKey = normalizeText(name);
-  if (!cacheKey) {
-    return null;
-  }
-
-  if (recommendationCardCache.has(cacheKey)) {
-    return recommendationCardCache.get(cacheKey) ?? null;
-  }
-
+async function resolveRecommendationCardsByName(names: string[]) {
   try {
-    const response = await fetch(`${SCRYFALL_NAMED_URL}?exact=${encodeURIComponent(name)}`, {
-      headers: {
-        Accept: "application/json",
-        "User-Agent": "mtg-deckchecker/0.1",
-      },
-      signal: AbortSignal.timeout(4_000),
-    });
-
-    if (!response.ok) {
-      recommendationCardCache.set(cacheKey, null);
-      return null;
-    }
-
-    const card = (await response.json()) as ScryfallCard;
-    recommendationCardCache.set(cacheKey, card);
-    return card;
+    return await resolveScryfallCardsByName(names);
   } catch {
-    recommendationCardCache.set(cacheKey, null);
-    return null;
+    return new Map<string, ScryfallCard>();
   }
 }
 
@@ -3368,7 +3403,8 @@ function getRecommendationTopicUrgency(
   const efficiencyGap = isEfficiencyTopic(topicKey)
     ? context.efficiency[topicKey].gap * 20
     : 0;
-  return roundTo(scoreDelta + targetGap + efficiencyGap, 2);
+  const bracketGateGap = getBracketGateTopicGap(context, topicKey) * 2.5;
+  return roundTo(scoreDelta + targetGap + efficiencyGap + bracketGateGap, 2);
 }
 
 function getRecommendationTopicScoreDelta(
@@ -3912,6 +3948,65 @@ function getTargetLabel(context: RecommendationContext) {
   return context.bracket.targetLabel
     ? `${context.bracket.targetLabel} (${context.bracket.targetName})`
     : context.bracket.recommendedLabel;
+}
+
+function getBracketGateTopicGap(
+  context: RecommendationContext,
+  topicKey: DeckRecommendationTopic,
+) {
+  if (context.bracket.targetAlignment !== "below" || !context.power) {
+    return 0;
+  }
+
+  const dimensionKey = BRACKET_GATE_TOPIC_DIMENSIONS[topicKey];
+  if (!dimensionKey) {
+    return 0;
+  }
+
+  const target = BRACKET_GATE_DIMENSION_TARGETS[context.targetBracket]?.[dimensionKey];
+  if (target === undefined) {
+    return 0;
+  }
+
+  const current = getPowerDimensionScore(context.power, dimensionKey);
+  return current < target ? roundTo((target - current) / 8, 2) : 0;
+}
+
+function getBracketGateTopicSummary(
+  context: RecommendationContext,
+  topicKey: DeckRecommendationTopic,
+) {
+  const dimensionKey = BRACKET_GATE_TOPIC_DIMENSIONS[topicKey];
+  const target = dimensionKey
+    ? BRACKET_GATE_DIMENSION_TARGETS[context.targetBracket]?.[dimensionKey]
+    : undefined;
+
+  if (!context.power || !dimensionKey || target === undefined) {
+    return null;
+  }
+
+  const current = getPowerDimensionScore(context.power, dimensionKey);
+  const targetLabel = getTargetLabel(context);
+  const currentLabel = Math.round(current);
+
+  switch (topicKey) {
+    case "land_base":
+      return `Mana quality is holding the bracket read below ${targetLabel}: ${currentLabel} is below the ${target} gate, so a cleaner mana slot is the direct fix.`;
+    case "ramp":
+      return `Speed is holding the bracket read below ${targetLabel}: ${currentLabel} is below the ${target} gate, so faster mana development is the direct fix.`;
+    case "consistency":
+      return `Consistency is holding the bracket read below ${targetLabel}: ${currentLabel} is below the ${target} gate, so stronger access to the main plan is the direct fix.`;
+    case "interaction":
+      return `Interaction is holding the bracket read below ${targetLabel}: ${currentLabel} is below the ${target} gate, so a cleaner answer slot is the direct fix.`;
+    case "closing":
+      return `Closing power is holding the bracket read below ${targetLabel}: ${currentLabel} is below the ${target} gate, so a stronger win-line card is the direct fix.`;
+    default:
+      return null;
+  }
+}
+
+function getPowerDimensionScore(power: DeckPowerAnalysis, key: DeckPowerDimensionKey) {
+  return readNumber(power.dimensions.find((dimension) => dimension.key === key)?.score);
 }
 
 function getStrategyKeys(context: RecommendationContext) {

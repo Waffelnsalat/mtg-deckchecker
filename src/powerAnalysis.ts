@@ -99,6 +99,11 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
   const exactComboCount =
     input.winConditions.combos.lookupStatus === "ok" ? input.winConditions.combos.exactCount : 0;
   const comboPressure = getComboPressure(input.winConditions);
+  const handSelectionLeverage = getHandSelectionLeverage(input, {
+    curveEfficiency,
+    planClarity,
+    comboPressure,
+  });
 
   const speed = clampScore(
     input.ramp.rampScore * 0.38 +
@@ -109,7 +114,8 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       input.commander.counts.mana * 2.4 +
       input.commander.counts.costReduction * 1.8 +
       Math.min(input.gameChangers.counts.total, 3) * 1.5 +
-      getComboSpeedBonus(comboPressure),
+      getComboSpeedBonus(comboPressure) +
+      handSelectionLeverage * 0.62,
   );
 
   const consistency = clampScore(
@@ -119,7 +125,8 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       planClarity * 0.06 +
       input.commander.counts.cards * 2.2 +
       input.commander.counts.tutors * 2 +
-      getConsistencyBonus(input.consistency, comboPressure),
+      getConsistencyBonus(input.consistency, comboPressure) +
+      handSelectionLeverage * 0.78,
   );
 
   const interaction = clampScore(
@@ -165,6 +172,7 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
+      handSelectionLeverage,
     }),
     createDimension("consistency", consistency, {
       planClarity,
@@ -172,6 +180,7 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
+      handSelectionLeverage,
     }),
     createDimension("interaction", interaction, {
       planClarity,
@@ -179,6 +188,7 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
+      handSelectionLeverage,
     }),
     createDimension("resilience", resilience, {
       planClarity,
@@ -186,6 +196,7 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
+      handSelectionLeverage,
     }),
     createDimension("closing", closing, {
       planClarity,
@@ -193,6 +204,7 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
+      handSelectionLeverage,
     }),
     createDimension("mana", mana, {
       planClarity,
@@ -200,6 +212,7 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
       exactComboCount,
       comboPressure,
       strategySynergy,
+      handSelectionLeverage,
     }),
   ];
 
@@ -222,13 +235,14 @@ export function analyzeDeckPower(input: DeckPowerInput): DeckPowerAnalysis {
     exactComboCount,
     comboPressure,
     strategySynergy,
+    handSelectionLeverage,
   });
   powerIndex = clampScore(powerIndex);
 
   const powerScore = mapPowerScore(powerIndex);
   const powerTier = getPowerTier(powerScore);
   const findings = dimensions.map((dimension) => createDimensionFinding(dimension));
-  const strengths = buildStrengths(dimensions, input, exactComboCount, comboPressure);
+  const strengths = buildStrengths(dimensions, input, exactComboCount, comboPressure, handSelectionLeverage);
   const weaknesses = buildWeaknesses(dimensions, input, exactComboCount);
   const summary = buildPowerSummary(powerScore, powerTier, strengths, weaknesses);
 
@@ -253,6 +267,7 @@ function createDimension(
     exactComboCount: number;
     comboPressure: number;
     strategySynergy: number;
+    handSelectionLeverage: number;
   },
 ): DeckPowerDimension {
   return {
@@ -272,12 +287,13 @@ function summarizeDimension(
     exactComboCount: number;
     comboPressure: number;
     strategySynergy: number;
+    handSelectionLeverage: number;
   },
 ): string {
   switch (key) {
     case "speed":
       if (score >= 75) {
-        return `The shell ramps cleanly, develops mana well, and converts setup into action quickly${context.comboPressure >= 1.9 ? ", with combo pressure on top" : ""}.`;
+        return `The shell ramps cleanly, develops mana well, and converts setup into action quickly${context.comboPressure >= 1.9 ? ", with combo pressure on top" : ""}${context.handSelectionLeverage >= 3.5 ? ", and mulligans improve its opening reliability" : ""}.`;
       }
 
       if (score >= 55) {
@@ -288,7 +304,9 @@ function summarizeDimension(
 
     case "consistency":
       if (score >= 75) {
-        return "Draw, tutors, and strategy focus make the main plan show up reliably.";
+        return context.handSelectionLeverage >= 3.5
+          ? "Draw, tutors, strategy focus, and aggressive hand selection make the main plan show up reliably."
+          : "Draw, tutors, and strategy focus make the main plan show up reliably.";
       }
 
       if (score >= 55) {
@@ -373,6 +391,7 @@ function buildStrengths(
   input: DeckPowerInput,
   exactComboCount: number,
   comboPressure: number,
+  handSelectionLeverage: number,
 ): string[] {
   const dimensionNotes = [...dimensions]
     .sort((left, right) => right.score - left.score)
@@ -384,6 +403,10 @@ function buildStrengths(
     dimensionNotes.unshift(
       `${exactComboCount} exact infinite combo line${exactComboCount === 1 ? "" : "s"} raise the shell's ceiling immediately.`,
     );
+  }
+
+  if (handSelectionLeverage >= 4) {
+    dimensionNotes.unshift("Aggressive mulligans materially improve how often the deck opens on its best plan.");
   }
 
   if (input.commander.impactScore >= 75) {
@@ -549,6 +572,55 @@ function getConsistencyBonus(
   return modifier;
 }
 
+function getHandSelectionLeverage(
+  input: DeckPowerInput,
+  context: {
+    curveEfficiency: number;
+    planClarity: number;
+    comboPressure: number;
+  },
+): number {
+  const averageManaValue = input.structure.mana.averageManaValue;
+  const earlyShare = input.structure.mana.shares.early;
+  const directTutors = input.consistency.counts.direct;
+  const directTarget = Math.max(1, input.consistency.recommendations.directTarget);
+  const repeatableAccess = input.consistency.counts.repeatable;
+  const repeatableTarget = Math.max(0.6, input.consistency.recommendations.repeatableTarget);
+  const hasHighPowerShape =
+    input.consistency.consistencyScore >= 68 ||
+    context.comboPressure >= 1.6 ||
+    input.commander.commanderInvolvedCombos > 0;
+
+  if (!hasHighPowerShape || averageManaValue > 3.35 || input.ramp.rampScore < 58) {
+    return 0;
+  }
+
+  let leverage = 0;
+  leverage += clampValue((2.95 - averageManaValue) * 2.4, 0, 2.2);
+  leverage += clampValue((earlyShare - 0.32) * 10, 0, 2.1);
+  leverage += clampValue((input.ramp.rampScore - 70) * 0.045, 0, 1.6);
+  leverage += clampValue((input.consistency.consistencyScore - 68) * 0.055, 0, 2.1);
+  leverage += clampValue((directTutors / directTarget - 0.75) * 1.4, 0, 2);
+  leverage += clampValue((repeatableAccess / repeatableTarget - 0.8) * 0.6, 0, 0.8);
+  leverage += clampValue((context.curveEfficiency - 74) * 0.035, 0, 1);
+
+  if (context.planClarity >= 80) {
+    leverage += 0.8;
+  } else if (context.planClarity >= 70) {
+    leverage += 0.35;
+  }
+
+  if (context.comboPressure >= 1.6) {
+    leverage += Math.min(2.2, context.comboPressure * 0.5);
+  }
+
+  if (input.commander.commanderInvolvedCombos > 0) {
+    leverage += Math.min(1.4, input.commander.commanderInvolvedCombos * 0.45);
+  }
+
+  return roundTo(clampValue(leverage, 0, 7), 2);
+}
+
 function getComboPressure(winConditions: DeckWinConditionAnalysis) {
   const exactCombos = winConditions.combos.exact ?? [];
 
@@ -673,6 +745,7 @@ function getPowerAdjustment(
     exactComboCount: number;
     comboPressure: number;
     strategySynergy: number;
+    handSelectionLeverage: number;
   },
 ): number {
   let adjustment = 0;
@@ -747,6 +820,8 @@ function getPowerAdjustment(
     adjustment += 1.5;
   }
 
+  adjustment += context.handSelectionLeverage * 0.28;
+
   return adjustment;
 }
 
@@ -801,7 +876,28 @@ function roundTo(value: number, places: number): number {
 }
 
 function mapPowerScore(powerIndex: number): number {
-  const baselineScore = 0.85 + powerIndex * 0.083;
-  const topEndBonus = Math.max(0, powerIndex - 80) * 0.018;
-  return roundTo(clampValue(baselineScore + topEndBonus, 1, 10), 1);
+  const anchors: Array<[number, number]> = [
+    [0, 1],
+    [30, 2.6],
+    [45, 4],
+    [58, 5.2],
+    [68, 6.1],
+    [76, 7],
+    [84, 8],
+    [91, 9.1],
+    [100, 10],
+  ];
+  const clampedIndex = clampValue(powerIndex, 0, 100);
+
+  for (let index = 1; index < anchors.length; index += 1) {
+    const [leftIndex, leftScore] = anchors[index - 1];
+    const [rightIndex, rightScore] = anchors[index];
+
+    if (clampedIndex <= rightIndex) {
+      const position = (clampedIndex - leftIndex) / (rightIndex - leftIndex);
+      return roundTo(leftScore + (rightScore - leftScore) * position, 1);
+    }
+  }
+
+  return 10;
 }

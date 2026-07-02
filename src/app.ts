@@ -210,6 +210,7 @@ export function createApp() {
         document,
         commander,
         bracket,
+        power,
         strategy,
         winStrategy,
         structure,
