@@ -94,7 +94,7 @@ window.MtgDeckcheckerCardBreakdown = {
       const roleIndex = buildRoleIndex(analysis);
 
       return (deckDocument?.result?.resolvedCards ?? [])
-        .filter((deckCard) => ["commander", "mainboard", "companion"].includes(deckCard.section))
+        .filter((deckCard) => ["commander", "mainboard", "companion", "attraction", "sticker"].includes(deckCard.section))
         .map((deckCard, index) => {
           const lookupKey = getLookupKey(deckCard);
           const mergedRoles = mergeRoles(
@@ -788,8 +788,12 @@ window.MtgDeckcheckerCardBreakdown = {
           return 1;
         case "mainboard":
           return 2;
-        default:
+        case "attraction":
           return 3;
+        case "sticker":
+          return 4;
+        default:
+          return 5;
       }
     }
 

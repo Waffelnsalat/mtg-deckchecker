@@ -38,6 +38,8 @@ window.MtgDeckcheckerFrontendConfig = {
       "commander",
       "mainboard",
       "companion",
+      "attraction",
+      "sticker",
       "utility",
       "activated_utility",
       "generic_utility",

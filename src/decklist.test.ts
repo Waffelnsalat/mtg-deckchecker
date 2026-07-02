@@ -81,6 +81,38 @@ test("parseDecklist treats partner and background headers as commander slots", (
   );
 });
 
+test("parseDecklist handles attraction decks and sticker sheets as supplemental sections", () => {
+  const result = parseDecklist(`
+[COMMANDER]
+1 The Most Dangerous Gamer
+
+[DECK]
+99 Forest
+
+[ATTRACTION DECK]
+1 Haunted House
+1 Pick-a-Beeble
+
+[STICKER SHEETS]
+1 Eldrazi Guacamole Tightrope
+`);
+
+  assert.deepEqual(
+    result.entries.map((entry) => ({
+      name: entry.name,
+      quantity: entry.quantity,
+      section: entry.section,
+    })),
+    [
+      { name: "The Most Dangerous Gamer", quantity: 1, section: "commander" },
+      { name: "Forest", quantity: 99, section: "mainboard" },
+      { name: "Haunted House", quantity: 1, section: "attraction" },
+      { name: "Pick-a-Beeble", quantity: 1, section: "attraction" },
+      { name: "Eldrazi Guacamole Tightrope", quantity: 1, section: "sticker" },
+    ],
+  );
+});
+
 test("parseDecklist ignores unknown bracketed section headers in any language", () => {
   const result = parseDecklist(
     `

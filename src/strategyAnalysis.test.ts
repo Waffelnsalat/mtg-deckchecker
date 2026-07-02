@@ -49,6 +49,89 @@ test("analyzeDeckStrategy identifies spellslinger shells", () => {
   assert.ok((analysis.synergy?.supportCards ?? 0) >= 20);
 });
 
+test("analyzeDeckStrategy keeps lightly supported clear plans below a perfect strategy score", () => {
+  const analysis = analyzeDeckStrategy(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Kykar, Wind's Fury",
+        "Legendary Creature - Bird Wizard",
+        4,
+        "Whenever you cast a noncreature spell, create a 1/1 white Spirit creature token with flying. Sacrifice a Spirit: Add {R}.",
+        { color_identity: ["U", "R", "W"] },
+      ),
+      createResolvedCard("mainboard", 29, "Island", "Basic Land - Island", 0, ""),
+      createResolvedCard("mainboard", 30, "Plains", "Basic Land - Plains", 0, ""),
+      createResolvedCard("mainboard", 30, "Mountain", "Basic Land - Mountain", 0, ""),
+      createResolvedCard("mainboard", 1, "Sol Ring", "Artifact", 1, "{T}: Add {C}{C}."),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Talrand, Sky Summoner",
+        "Creature - Merfolk Wizard",
+        4,
+        "Whenever you cast an instant or sorcery spell, create a 2/2 blue Drake creature token with flying.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Young Pyromancer",
+        "Creature - Human Shaman",
+        2,
+        "Whenever you cast an instant or sorcery spell, create a 1/1 red Elemental creature token.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Monastery Mentor",
+        "Creature - Human Monk",
+        3,
+        "Prowess. Whenever you cast a noncreature spell, create a 1/1 white Monk creature token with prowess.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Impact Tremors",
+        "Enchantment",
+        2,
+        "Whenever a creature enters the battlefield under your control, Impact Tremors deals 1 damage to each opponent.",
+      ),
+      createResolvedCard("mainboard", 1, "Opt", "Instant", 1, "Scry 1. Draw a card."),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Brainstorm",
+        "Instant",
+        1,
+        "Draw three cards, then put two cards from your hand on top of your library in any order.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Ponder",
+        "Sorcery",
+        1,
+        "Look at the top three cards of your library, then put them back in any order. Draw a card.",
+      ),
+      createResolvedCard("mainboard", 1, "Counterspell", "Instant", 2, "Counter target spell."),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Lightning Bolt",
+        "Instant",
+        1,
+        "Lightning Bolt deals 3 damage to any target.",
+      ),
+    ]),
+    createEmptyWinConditions(),
+  );
+
+  assert.equal(analysis.mainStrategy?.key, "spellslinger");
+  assert.ok((analysis.mainStrategy?.score ?? 0) >= 80);
+  assert.ok((analysis.mainStrategy?.score ?? 100) <= 95);
+});
+
 test("analyzeDeckStrategy identifies X-spell shells", () => {
   const analysis = analyzeDeckStrategy(
     createDocument([

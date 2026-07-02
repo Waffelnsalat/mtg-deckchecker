@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { runInNewContext } from "node:vm";
 import { buildAnalysisSources } from "./app";
 import { analyzeDeckAdvancedRoles } from "./advancedCardScan";
 
@@ -153,6 +154,47 @@ test("advanced UI smoke anchors and card breakdown data stay wired", () => {
   assert.ok(advancedRoles.taggedCards.length >= 2);
   assert.ok(advancedRoles.taggedCards.some((card) => card.name === "Smoke Draw"));
   assert.ok(advancedRoles.taggedCards.some((card) => card.hits.some((hit) => hit.tag === "draw")));
+});
+
+test("decklist intake removes copied sideboard blocks without dropping supplemental decks", () => {
+  const sandbox = { window: {} as any };
+  runInNewContext(readFileSync("public/decklist-intake.js", "utf8"), sandbox);
+
+  const sanitized = sandbox.window.MtgDeckcheckerDecklistIntake.sanitizeDecklistInput([
+    "[COMMANDER]",
+    "1 The Most Dangerous Gamer",
+    "",
+    "[DECK]",
+    "99 Forest",
+    "",
+    "[SIDEBOARD]",
+    "1 Dispel",
+    "1 Chaos Warp",
+    "",
+    "[ATTRACTION DECK]",
+    "1 Haunted House",
+    "",
+    "[MAYBEBOARD]",
+    "1 Cyclonic Rift",
+    "",
+    "[STICKER SHEETS]",
+    "1 Eldrazi Guacamole Tightrope",
+  ].join("\n"));
+
+  assert.equal(
+    sanitized,
+    [
+      "1 The Most Dangerous Gamer",
+      "",
+      "99 Forest",
+      "",
+      "[ATTRACTION DECK]",
+      "1 Haunted House",
+      "",
+      "[STICKER SHEETS]",
+      "1 Eldrazi Guacamole Tightrope",
+    ].join("\n"),
+  );
 });
 
 function createDocument(input: { unresolvedCount: number; mainboardCount: number }) {

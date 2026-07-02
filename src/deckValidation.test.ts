@@ -448,6 +448,186 @@ test("validateEdhDeck accepts a legal companion outside the 100-card deck", () =
   assert.equal(validation.issues.length, 0);
 });
 
+test("validateEdhDeck accepts attraction and sticker supplemental sections outside the 100-card deck", () => {
+  const commanderCard = createCard({
+    name: "The Most Dangerous Gamer",
+    type_line: "Legendary Creature â€” Human Gamer Guest",
+    color_identity: ["B", "G"],
+    legalities: { commander: "legal" },
+  });
+  const forestCard = createCard({
+    name: "Forest",
+    type_line: "Basic Land â€” Forest",
+    color_identity: ["G"],
+    legalities: { commander: "legal" },
+    oracle_text: "({T}: Add {G}.)",
+  });
+  const attractionCard = createCard({
+    name: "Haunted House",
+    type_line: "Artifact â€” Attraction",
+    color_identity: [],
+    legalities: { commander: "legal" },
+  });
+  const stickerCard = createCard({
+    name: "Eldrazi Guacamole Tightrope",
+    type_line: "Sticker",
+    color_identity: [],
+    legalities: { commander: "legal" },
+  });
+
+  const validation = validateEdhDeck(
+    createDocument([
+      createResolvedCard(1, "commander", "The Most Dangerous Gamer", commanderCard),
+      createResolvedCard(2, "mainboard", "Forest", forestCard, 99),
+      createResolvedCard(102, "attraction", "Haunted House", attractionCard),
+      createResolvedCard(103, "sticker", "Eldrazi Guacamole Tightrope", stickerCard),
+    ]),
+  );
+
+  assert.equal(validation.isValid, true);
+  assert.equal(validation.issues.length, 0);
+});
+
+test("validateEdhDeck warns when attraction support cards have no attraction deck", () => {
+  const commanderCard = createCard({
+    name: "The Most Dangerous Gamer",
+    type_line: "Legendary Creature â€” Human Gamer Guest",
+    color_identity: ["B", "G"],
+    legalities: { commander: "legal" },
+  });
+  const forestCard = createCard({
+    name: "Forest",
+    type_line: "Basic Land â€” Forest",
+    color_identity: ["G"],
+    legalities: { commander: "legal" },
+    oracle_text: "({T}: Add {G}.)",
+  });
+  const attractionSupportCard = createCard({
+    name: "Deadbeat Attendant",
+    type_line: "Creature â€” Vampire Employee",
+    color_identity: ["B"],
+    legalities: { commander: "legal" },
+    oracle_text: "When Deadbeat Attendant enters the battlefield, open an Attraction.",
+  });
+
+  const validation = validateEdhDeck(
+    createDocument([
+      createResolvedCard(1, "commander", "The Most Dangerous Gamer", commanderCard),
+      createResolvedCard(2, "mainboard", "Forest", forestCard, 98),
+      createResolvedCard(100, "mainboard", "Deadbeat Attendant", attractionSupportCard),
+    ]),
+  );
+
+  assert.equal(validation.isValid, false);
+  assert.ok(
+    validation.issues.some(
+      (issue) =>
+        issue.code === "missing_attraction_deck" &&
+        issue.message ===
+          "Attraction synergy was detected, but no Attraction Deck section was provided. Add an [ATTRACTION DECK] section if this deck is meant to use Attractions." &&
+        !issue.cardName,
+    ),
+  );
+});
+
+test("validateEdhDeck warns when sticker support cards have no sticker sheets", () => {
+  const commanderCard = createCard({
+    name: "The Most Dangerous Gamer",
+    type_line: "Legendary Creature â€” Human Gamer Guest",
+    color_identity: ["B", "G"],
+    legalities: { commander: "legal" },
+  });
+  const forestCard = createCard({
+    name: "Forest",
+    type_line: "Basic Land â€” Forest",
+    color_identity: ["G"],
+    legalities: { commander: "legal" },
+    oracle_text: "({T}: Add {G}.)",
+  });
+  const stickerSupportCard = createCard({
+    name: "_____ Goblin",
+    type_line: "Creature â€” Goblin Guest",
+    color_identity: ["B"],
+    legalities: { commander: "legal" },
+    oracle_text: "When this creature enters the battlefield, you get {TK}, then you may put a sticker on a nonland permanent you own.",
+  });
+
+  const validation = validateEdhDeck(
+    createDocument([
+      createResolvedCard(1, "commander", "The Most Dangerous Gamer", commanderCard),
+      createResolvedCard(2, "mainboard", "Forest", forestCard, 98),
+      createResolvedCard(100, "mainboard", "_____ Goblin", stickerSupportCard),
+    ]),
+  );
+
+  assert.equal(validation.isValid, false);
+  assert.ok(
+    validation.issues.some(
+      (issue) =>
+        issue.code === "missing_sticker_sheets" &&
+        issue.message ===
+          "Sticker synergy was detected, but no Sticker Sheets section was provided. Add a [STICKER SHEETS] section if this deck is meant to use sticker cards." &&
+        !issue.cardName,
+    ),
+  );
+});
+
+test("validateEdhDeck accepts attraction and sticker support when supplemental sections are present", () => {
+  const commanderCard = createCard({
+    name: "The Most Dangerous Gamer",
+    type_line: "Legendary Creature â€” Human Gamer Guest",
+    color_identity: ["B", "G"],
+    legalities: { commander: "legal" },
+  });
+  const forestCard = createCard({
+    name: "Forest",
+    type_line: "Basic Land â€” Forest",
+    color_identity: ["G"],
+    legalities: { commander: "legal" },
+    oracle_text: "({T}: Add {G}.)",
+  });
+  const attractionSupportCard = createCard({
+    name: "Deadbeat Attendant",
+    type_line: "Creature â€” Vampire Employee",
+    color_identity: ["B"],
+    legalities: { commander: "legal" },
+    oracle_text: "When Deadbeat Attendant enters the battlefield, open an Attraction.",
+  });
+  const stickerSupportCard = createCard({
+    name: "_____ Goblin",
+    type_line: "Creature â€” Goblin Guest",
+    color_identity: ["B"],
+    legalities: { commander: "legal" },
+    oracle_text: "When this creature enters the battlefield, you get {TK}, then you may put a sticker on a nonland permanent you own.",
+  });
+  const attractionCard = createCard({
+    name: "Haunted House",
+    type_line: "Artifact â€” Attraction",
+    color_identity: [],
+    legalities: { commander: "legal" },
+  });
+  const stickerCard = createCard({
+    name: "Eldrazi Guacamole Tightrope",
+    type_line: "Sticker",
+    color_identity: [],
+    legalities: { commander: "legal" },
+  });
+
+  const validation = validateEdhDeck(
+    createDocument([
+      createResolvedCard(1, "commander", "The Most Dangerous Gamer", commanderCard),
+      createResolvedCard(2, "mainboard", "Forest", forestCard, 97),
+      createResolvedCard(99, "mainboard", "Deadbeat Attendant", attractionSupportCard),
+      createResolvedCard(100, "mainboard", "_____ Goblin", stickerSupportCard),
+      createResolvedCard(101, "attraction", "Haunted House", attractionCard),
+      createResolvedCard(102, "sticker", "Eldrazi Guacamole Tightrope", stickerCard),
+    ]),
+  );
+
+  assert.equal(validation.isValid, true);
+  assert.equal(validation.issues.length, 0);
+});
+
 function createDocument(resolvedCards: DeckResolutionDocument["result"]["resolvedCards"]): DeckResolutionDocument {
   const totalCards = resolvedCards.reduce((sum, card) => sum + card.quantity, 0);
 
@@ -477,7 +657,7 @@ function createDocument(resolvedCards: DeckResolutionDocument["result"]["resolve
 
 function createResolvedCard(
   lineNumber: number,
-  section: "commander" | "mainboard" | "companion",
+  section: DeckResolutionDocument["result"]["resolvedCards"][number]["section"],
   requestedName: string,
   card: ScryfallCard,
   quantity = 1,

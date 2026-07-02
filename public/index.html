@@ -1555,6 +1555,8 @@
                       <option value="commander">Commander</option>
                       <option value="mainboard">Mainboard</option>
                       <option value="companion">Companion</option>
+                      <option value="attraction">Attraction Deck</option>
+                      <option value="sticker">Sticker Sheets</option>
                     </select>
                   </label>
                   <label class="card-breakdown-control">
@@ -1693,6 +1695,27 @@
         </div>
         <div class="bracket-prompt-actions">
           <button id="target-bracket-cancel" type="button" class="secondary-button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="strategy-choice-prompt" class="loading-overlay strategy-choice-overlay hidden" aria-hidden="true">
+      <div
+        class="loading-dialog strategy-choice-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="strategy-choice-title"
+      >
+        <div class="loading-copy-wrap">
+          <p class="panel-kicker">Before Results</p>
+          <h2 id="strategy-choice-title" class="loading-title">Choose the intended main plan</h2>
+        </div>
+        <p id="strategy-choice-copy" class="loading-copy strategy-choice-copy">
+          The scan found multiple plausible ways to read this deck. Pick the one you actually want to play so the scores and suggestions are calculated against that plan.
+        </p>
+        <div id="strategy-choice-list" class="strategy-choice-list"></div>
+        <div class="bracket-prompt-actions">
+          <button id="strategy-choice-detected" type="button" class="secondary-button">Use detected plan</button>
         </div>
       </div>
     </div>

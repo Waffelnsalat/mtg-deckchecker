@@ -7,7 +7,7 @@ import {
   ScryfallCard,
 } from "./types";
 
-const ALLOWED_SECTIONS = new Set(["commander", "mainboard", "companion"]);
+const ALLOWED_SECTIONS = new Set(["commander", "mainboard", "companion", "attraction", "sticker"]);
 const ANY_NUMBER_OF_CARDS_PATTERN = /a deck can have any number of cards named/i;
 const COLOR_ORDER = ["W", "U", "B", "R", "G"] as const;
 
@@ -90,6 +90,7 @@ export function validateEdhDeck(
   const commanderCards = document.result.resolvedCards.filter((card) => card.section === "commander");
   const mainboardCards = document.result.resolvedCards.filter((card) => card.section === "mainboard");
   const companionCards = document.result.resolvedCards.filter((card) => card.section === "companion");
+  const activeDeckCards = [...commanderCards, ...mainboardCards, ...companionCards];
   const commanderQuantity = sumQuantities(commanderCards);
   const commanderMode = determineCommanderMode(commanderCards, options);
   const expectedCommanderCount = commanderMode === "single" ? 1 : 2;
@@ -142,6 +143,7 @@ export function validateEdhDeck(
   }
 
   validateSingletonRules([...commanderCards, ...mainboardCards], issues);
+  validateSupplementalDeckNeeds(document, activeDeckCards, issues);
 
   const commanderRoles = assignCommanderRoles(commanderCards, commanderMode, options);
 
@@ -164,6 +166,33 @@ export function validateEdhDeck(
       role: entry.role,
     })),
   };
+}
+
+function validateSupplementalDeckNeeds(
+  document: DeckResolutionDocument,
+  activeDeckCards: ResolvedDeckCard[],
+  issues: DeckValidationIssue[],
+) {
+  const hasAttractionDeck = document.parse.entries.some((entry) => entry.section === "attraction");
+  const hasStickerSheets = document.parse.entries.some((entry) => entry.section === "sticker");
+
+  if (!hasAttractionDeck) {
+    if (activeDeckCards.some((deckCard) => cardNeedsAttractionDeck(deckCard.card))) {
+      issues.push({
+        code: "missing_attraction_deck",
+        message: "Attraction synergy was detected, but no Attraction Deck section was provided. Add an [ATTRACTION DECK] section if this deck is meant to use Attractions.",
+      });
+    }
+  }
+
+  if (!hasStickerSheets) {
+    if (activeDeckCards.some((deckCard) => cardNeedsStickerSheets(deckCard.card))) {
+      issues.push({
+        code: "missing_sticker_sheets",
+        message: "Sticker synergy was detected, but no Sticker Sheets section was provided. Add a [STICKER SHEETS] section if this deck is meant to use sticker cards.",
+      });
+    }
+  }
 }
 
 function validateCommanderLegality(
@@ -656,6 +685,38 @@ function hasDoctorsCompanion(card: ScryfallCard) {
 
 function isDoctorCommanderCard(card: ScryfallCard) {
   return /\bdoctor\b/.test(getPrimaryTypeLine(card));
+}
+
+function cardNeedsAttractionDeck(card: ScryfallCard) {
+  if (getTypeLines(card).some((typeLine) => /\battraction\b/i.test(typeLine))) {
+    return false;
+  }
+
+  const text = getOracleText(card);
+  return (
+    /\bopen an attraction\b/.test(text) ||
+    /\bopen (?:one|two|three|four|five|six|seven|eight|nine|ten|\d+) attractions?\b/.test(text) ||
+    /\bvisit an attraction\b/.test(text) ||
+    /\battraction deck\b/.test(text)
+  );
+}
+
+function cardNeedsStickerSheets(card: ScryfallCard) {
+  if (getTypeLines(card).some((typeLine) => /\bsticker\b/i.test(typeLine))) {
+    return false;
+  }
+
+  const text = getOracleText(card);
+  return (
+    /\bput (?:a|an|one|\d+) [^.]{0,80}stickers?\b/.test(text) ||
+    /\bsticker sheets?\b/.test(text) ||
+    /\bname sticker\b/.test(text) ||
+    /\bart sticker\b/.test(text) ||
+    /\bability sticker\b/.test(text) ||
+    /\bpower and toughness sticker\b/.test(text) ||
+    /\bticket counter\b/.test(text) ||
+    /\b\{tk\}/.test(text)
+  );
 }
 
 function buildCombinedColorIdentity(commanderCards: ResolvedDeckCard[]) {

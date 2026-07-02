@@ -2088,7 +2088,8 @@ function normalizeStrategyScore(
   rawScore: number,
   totals: Record<StrategyKey, number>,
 ) {
-  let score = (rawScore / STRATEGY_TARGETS[key]) * 100;
+  const rawRatio = rawScore / Math.max(STRATEGY_TARGETS[key], 0.01);
+  let score = scaleStrategyRawRatio(rawRatio);
 
   if (key === "aristocrats" && totals.tokens >= 3 && totals.aristocrats >= 3) {
     score += 6;
@@ -2146,7 +2147,43 @@ function normalizeStrategyScore(
     score += 4;
   }
 
-  return clamp(Math.round(score), 0, 100);
+  return clamp(Math.round(applyStrategyScoreSoftCeiling(score, rawRatio)), 0, 100);
+}
+
+function scaleStrategyRawRatio(rawRatio: number) {
+  if (rawRatio <= 1) {
+    return rawRatio * 84;
+  }
+
+  if (rawRatio <= 1.5) {
+    return 84 + (rawRatio - 1) * 18;
+  }
+
+  if (rawRatio <= 2.3) {
+    return 93 + (rawRatio - 1.5) * 6;
+  }
+
+  return 98 + Math.min(2, (rawRatio - 2.3) * 1.2);
+}
+
+function applyStrategyScoreSoftCeiling(score: number, rawRatio: number) {
+  if (rawRatio < 1) {
+    return Math.min(score, 88);
+  }
+
+  if (rawRatio < 1.25) {
+    return Math.min(score, 92);
+  }
+
+  if (rawRatio < 1.7) {
+    return Math.min(score, 96);
+  }
+
+  if (rawRatio < 2.3) {
+    return Math.min(score, 99);
+  }
+
+  return score;
 }
 
 function summarizeStrategies(

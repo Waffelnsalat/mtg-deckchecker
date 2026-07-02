@@ -3,7 +3,9 @@ export type DeckSection =
   | "mainboard"
   | "sideboard"
   | "maybeboard"
-  | "companion";
+  | "companion"
+  | "attraction"
+  | "sticker";
 
 export interface ParsedDeckEntry {
   lineNumber: number;

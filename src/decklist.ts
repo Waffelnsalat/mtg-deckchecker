@@ -17,6 +17,15 @@ const SECTION_HEADERS: Record<string, DeckSection> = {
   maybeboard: "maybeboard",
   maybe: "maybeboard",
   companion: "companion",
+  attraction: "attraction",
+  attractions: "attraction",
+  "attraction deck": "attraction",
+  "attractions deck": "attraction",
+  sticker: "sticker",
+  stickers: "sticker",
+  "sticker sheet": "sticker",
+  "sticker sheets": "sticker",
+  "sticker deck": "sticker",
 };
 
 const SECTION_PREFIXES: Record<string, DeckSection> = {
@@ -38,6 +47,10 @@ const SECTION_PREFIXES: Record<string, DeckSection> = {
   maybe: "maybeboard",
   maybeboard: "maybeboard",
   companion: "companion",
+  attraction: "attraction",
+  attractions: "attraction",
+  sticker: "sticker",
+  stickers: "sticker",
 };
 
 const QUANTITY_PREFIX = /^(?<quantity>\d+)\s*x?\s+(?<card>.+)$/i;

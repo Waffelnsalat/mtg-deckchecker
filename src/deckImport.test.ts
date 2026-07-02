@@ -20,12 +20,14 @@ test("parseDeckImportUrl accepts Archidekt and Moxfield deck URLs", () => {
   });
 });
 
-test("serializeImportedDecklist keeps only commander, companion, and main deck sections", () => {
+test("serializeImportedDecklist keeps playable and supplemental deck sections", () => {
   assert.equal(
     serializeImportedDecklist([
       { section: "commander", quantity: 1, name: "The Ur-Dragon" },
       { section: "companion", quantity: 1, name: "Jegantha, the Wellspring" },
       { section: "mainboard", quantity: 1, name: "Sol Ring" },
+      { section: "attraction", quantity: 1, name: "Haunted House" },
+      { section: "sticker", quantity: 1, name: "Eldrazi Guacamole Tightrope" },
       { section: "sideboard", quantity: 1, name: "Swords to Plowshares" },
       { section: "maybeboard", quantity: 1, name: "Cyclonic Rift" },
     ]),
@@ -38,6 +40,12 @@ test("serializeImportedDecklist keeps only commander, companion, and main deck s
       "",
       "[DECK]",
       "1 Sol Ring",
+      "",
+      "[ATTRACTION DECK]",
+      "1 Haunted House",
+      "",
+      "[STICKER SHEETS]",
+      "1 Eldrazi Guacamole Tightrope",
     ].join("\n"),
   );
 });
@@ -73,11 +81,21 @@ test("importDecklistFromUrl maps Archidekt cards into decklist text", async () =
         },
         {
           quantity: 1,
-          categories: ["Sideboard"],
+          categories: ["Attraction Deck"],
           companion: false,
           card: {
             oracleCard: {
-              name: "Dispel",
+              name: "Haunted House",
+            },
+          },
+        },
+        {
+          quantity: 1,
+          categories: ["Sticker Sheets"],
+          companion: false,
+          card: {
+            oracleCard: {
+              name: "Eldrazi Guacamole Tightrope",
             },
           },
         },
@@ -111,11 +129,23 @@ test("importDecklistFromUrl maps Archidekt cards into decklist text", async () =
         "",
         "[DECK]",
         "1 Command Tower",
+        "",
+        "[ATTRACTION DECK]",
+        "1 Haunted House",
+        "",
+        "[STICKER SHEETS]",
+        "1 Eldrazi Guacamole Tightrope",
       ].join("\n"),
     );
     assert.deepEqual(
       result.cards.map((card) => card.name),
-      ["Raffine, Scheming Seer", "Command Tower", "Jegantha, the Wellspring"],
+      [
+        "Raffine, Scheming Seer",
+        "Command Tower",
+        "Haunted House",
+        "Eldrazi Guacamole Tightrope",
+        "Jegantha, the Wellspring",
+      ],
     );
   } finally {
     restoreFetch();
@@ -165,6 +195,22 @@ test("importDecklistFromUrl maps Moxfield boards into decklist text", async () =
         maybeboard: {
           cards: {},
         },
+        attractions: {
+          cards: {
+            attraction: {
+              quantity: 1,
+              card: { name: "Haunted House" },
+            },
+          },
+        },
+        stickers: {
+          cards: {
+            sticker: {
+              quantity: 1,
+              card: { name: "Eldrazi Guacamole Tightrope" },
+            },
+          },
+        },
       },
     });
   });
@@ -183,11 +229,17 @@ test("importDecklistFromUrl maps Moxfield boards into decklist text", async () =
         "[DECK]",
         "1 Idol of Oblivion",
         "2 Mountain",
+        "",
+        "[ATTRACTION DECK]",
+        "1 Haunted House",
+        "",
+        "[STICKER SHEETS]",
+        "1 Eldrazi Guacamole Tightrope",
       ].join("\n"),
     );
     assert.deepEqual(
       result.cards.map((card) => card.name),
-      ["The Rani", "Idol of Oblivion", "Mountain"],
+      ["The Rani", "Idol of Oblivion", "Mountain", "Haunted House", "Eldrazi Guacamole Tightrope"],
     );
   } finally {
     restoreFetch();

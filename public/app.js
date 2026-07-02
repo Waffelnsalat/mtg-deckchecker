@@ -27,6 +27,10 @@ const targetBracketPromptCancel = document.querySelector("#target-bracket-cancel
 const targetBracketChoiceButtons = Array.from(
   document.querySelectorAll("[data-target-bracket-choice]"),
 );
+const strategyChoicePrompt = document.querySelector("#strategy-choice-prompt");
+const strategyChoiceList = document.querySelector("#strategy-choice-list");
+const strategyChoiceDetectedButton = document.querySelector("#strategy-choice-detected");
+const strategyChoiceCopy = document.querySelector("#strategy-choice-copy");
 const additionalCommanderEnabledField = document.querySelector("#additional-commander-enabled");
 const companionEnabledField = document.querySelector("#companion-enabled");
 const secretCommanderEnabledField = document.querySelector("#secret-commander-enabled");
@@ -316,6 +320,7 @@ let analyzeRequestCounter = 0;
 let resultsViewMode = "simple";
 let advancedTabKey = "identity";
 let pendingTargetBracketPromptResolve = null;
+let pendingStrategyChoicePromptResolve = null;
 let recommendationVisualRenderToken = 0;
 let metricHelpTooltip = null;
 const FRONTEND_CONFIG = window.MtgDeckcheckerFrontendConfig ?? {};
@@ -906,9 +911,23 @@ targetBracketPrompt?.addEventListener("click", (event) => {
   }
 });
 
+strategyChoiceDetectedButton?.addEventListener("click", () => {
+  resolveStrategyChoicePrompt(null);
+});
+
+strategyChoicePrompt?.addEventListener("click", (event) => {
+  if (event.target === strategyChoicePrompt) {
+    resolveStrategyChoicePrompt(null);
+  }
+});
+
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && pendingTargetBracketPromptResolve) {
     resolveTargetBracketPrompt(null);
+  }
+
+  if (event.key === "Escape" && pendingStrategyChoicePromptResolve) {
+    resolveStrategyChoicePrompt(null);
   }
 });
 
@@ -1017,6 +1036,148 @@ function resolveTargetBracketPrompt(value) {
   pendingTargetBracketPromptResolve = null;
   setTargetBracketPromptState(false);
   resolve(value);
+}
+
+function setStrategyChoicePromptState(isOpen, strategy = null) {
+  if (!strategyChoicePrompt || !strategyChoiceList) {
+    return;
+  }
+
+  strategyChoicePrompt.classList.toggle("hidden", !isOpen);
+  strategyChoicePrompt.setAttribute("aria-hidden", String(!isOpen));
+  document.body.classList.toggle("modal-active", isOpen);
+
+  if (!isOpen) {
+    strategyChoiceList.replaceChildren();
+    return;
+  }
+
+  renderStrategyChoicePrompt(strategy);
+  strategyChoiceList.querySelector("button")?.focus();
+}
+
+function promptForStrategyChoice(strategy) {
+  const perspectives = getPromptableStrategyPerspectives(strategy);
+  if (!strategyChoicePrompt || !strategyChoiceList || perspectives.length <= 1) {
+    return Promise.resolve(null);
+  }
+
+  if (pendingStrategyChoicePromptResolve) {
+    resolveStrategyChoicePrompt(null);
+  }
+
+  setStrategyChoicePromptState(true, strategy);
+  return new Promise((resolve) => {
+    pendingStrategyChoicePromptResolve = resolve;
+  });
+}
+
+function resolveStrategyChoicePrompt(value) {
+  if (!pendingStrategyChoicePromptResolve) {
+    setStrategyChoicePromptState(false);
+    return;
+  }
+
+  const resolve = pendingStrategyChoicePromptResolve;
+  pendingStrategyChoicePromptResolve = null;
+  setStrategyChoicePromptState(false);
+  resolve(value);
+}
+
+function renderStrategyChoicePrompt(strategy) {
+  const perspectives = getPromptableStrategyPerspectives(strategy);
+  const detectedKey = getDetectedStrategyKey(strategy);
+
+  if (strategyChoiceCopy) {
+    strategyChoiceCopy.textContent =
+      detectedKey
+        ? "The scan found multiple plausible ways to read this deck. Pick the one you actually want to play so the scores and suggestions are calculated against that plan."
+        : "The scan found multiple possible plans. Pick the one you actually want to play so the results use the right context.";
+  }
+
+  const cards = perspectives.map((perspective) =>
+    createStrategyChoiceCard(perspective, perspective.strategy.key === detectedKey),
+  );
+  strategyChoiceList.replaceChildren(...cards);
+}
+
+function createStrategyChoiceCard(perspective, isDetected) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "strategy-choice-card";
+  if (isDetected) {
+    button.classList.add("is-detected");
+  }
+
+  const head = document.createElement("div");
+  head.className = "strategy-choice-card-head";
+
+  const title = document.createElement("div");
+  title.className = "strategy-choice-title";
+  const eyebrow = document.createElement("span");
+  eyebrow.textContent = isDetected ? "Detected plan" : "Alternate plan";
+  const name = document.createElement("strong");
+  name.textContent = perspective.strategy.label;
+  title.append(eyebrow, name);
+
+  head.append(title);
+  if (isDetected) {
+    const badge = document.createElement("span");
+    badge.className = "strategy-choice-badge";
+    badge.textContent = "Detected";
+    head.append(badge);
+  }
+
+  const summary = document.createElement("p");
+  summary.textContent = buildStrategyChoiceSummary(perspective);
+
+  const stats = document.createElement("div");
+  stats.className = "strategy-choice-card-stats";
+  stats.append(
+    createStrategyChoiceStat("Score", perspective.strategy.score),
+    createStrategyChoiceStat("Synergy", perspective.synergy?.synergyScore ?? 0),
+    createStrategyChoiceStat("Support", perspective.synergy?.supportCards ?? 0),
+    createStrategyChoiceStat("Core", perspective.synergy?.coreCards ?? 0),
+  );
+
+  button.append(head, summary, stats);
+  button.addEventListener("click", () => {
+    resolveStrategyChoicePrompt(perspective.strategy.key);
+  });
+
+  return button;
+}
+
+function createStrategyChoiceStat(label, value) {
+  const stat = document.createElement("span");
+  stat.className = "strategy-choice-stat";
+
+  const statLabel = document.createElement("span");
+  statLabel.textContent = label;
+  const statValue = document.createElement("strong");
+  statValue.textContent = String(value);
+
+  stat.append(statLabel, statValue);
+  return stat;
+}
+
+function buildStrategyChoiceSummary(perspective) {
+  const cards = perspective.strategy.keyCards?.slice(0, 4) ?? [];
+  if (cards.length > 0) {
+    return `Key cards: ${cards.join(", ")}.`;
+  }
+
+  return perspective.synergy?.summary ?? "This plan is plausible, but no compact card package was isolated yet.";
+}
+
+function getPromptableStrategyPerspectives(strategy) {
+  return (strategy?.perspectives ?? [])
+    .filter((perspective) => perspective?.strategy?.key && perspective?.strategy?.label)
+    .slice(0, 5);
+}
+
+function getDetectedStrategyKey(strategy) {
+  return strategy?.detectedMainStrategy?.key ?? strategy?.mainStrategy?.key ?? null;
 }
 
 function setResultsViewMode(mode) {
@@ -1406,6 +1567,7 @@ async function runDeckAnalysis(options = {}) {
     successMessage = "Deck analyzed successfully.",
     loadingTitleText,
     loadingCopyText,
+    skipStrategyChoicePrompt = false,
   } = options;
   const payloadResult = buildAnalyzePayload(preferredStrategyKey, targetBracket);
 
@@ -1460,6 +1622,35 @@ async function runDeckAnalysis(options = {}) {
       }
 
       throw new Error(result.details || result.error || "Analysis failed.");
+    }
+
+    const shouldPromptForStrategy =
+      !skipStrategyChoicePrompt &&
+      !preferredStrategyKey &&
+      !preserveCurrentView &&
+      getPromptableStrategyPerspectives(result.analysis?.strategy).length > 1;
+
+    if (shouldPromptForStrategy) {
+      setLoadingState(false);
+      formStatus.textContent = "Choose the intended main strategy before the final read is shown.";
+      const selectedStrategyKey = await promptForStrategyChoice(result.analysis.strategy);
+
+      if (requestId !== analyzeRequestCounter) {
+        return false;
+      }
+
+      if (selectedStrategyKey && selectedStrategyKey !== getDetectedStrategyKey(result.analysis.strategy)) {
+        return await runDeckAnalysis({
+          preferredStrategyKey: selectedStrategyKey,
+          targetBracket: payload.targetBracket,
+          preserveCurrentView: false,
+          statusMessage: "Re-scoring the deck against the selected main strategy...",
+          successMessage: "Deck analyzed with the selected main strategy.",
+          loadingTitleText: "Recalculating Strategy",
+          loadingCopyText: "Refreshing power, bracket, recommendations, and matchup reads against the selected plan.",
+          skipStrategyChoicePrompt: true,
+        });
+      }
     }
 
     renderAnalyzedDeck(result);

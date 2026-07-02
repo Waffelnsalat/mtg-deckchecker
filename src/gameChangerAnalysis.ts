@@ -230,6 +230,8 @@ function compareTaggedCards(
     mainboard: 2,
     sideboard: 3,
     maybeboard: 4,
+    attraction: 5,
+    sticker: 6,
   };
 
   return (

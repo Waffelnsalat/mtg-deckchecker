@@ -1,9 +1,11 @@
+import { DeckSection } from "./types";
+
 export type SupportedDeckImportSource = "archidekt" | "moxfield";
 
 export interface ImportedDecklistCard {
   name: string;
   quantity: number;
-  section: "commander" | "mainboard" | "companion" | "sideboard" | "maybeboard";
+  section: DeckSection;
 }
 
 export interface ImportedDecklistResult {
@@ -132,6 +134,8 @@ export function serializeImportedDecklist(cards: ImportedDecklistCard[]): string
   appendDeckSection(lines, "COMMANDER", cards.filter((card) => card.section === "commander"));
   appendDeckSection(lines, "COMPANION", cards.filter((card) => card.section === "companion"));
   appendDeckSection(lines, "DECK", cards.filter((card) => card.section === "mainboard"));
+  appendDeckSection(lines, "ATTRACTION DECK", cards.filter((card) => card.section === "attraction"));
+  appendDeckSection(lines, "STICKER SHEETS", cards.filter((card) => card.section === "sticker"));
 
   return lines.join("\n").trim();
 }
@@ -229,6 +233,14 @@ function getArchidektCardSection(
     return "commander";
   }
 
+  if (hasNormalizedCategory(categories, ["Attraction Deck", "Attractions", "Attraction"])) {
+    return "attraction";
+  }
+
+  if (hasNormalizedCategory(categories, ["Sticker Sheets", "Stickers", "Sticker Sheet", "Sticker"])) {
+    return "sticker";
+  }
+
   if (categories.has("Maybeboard")) {
     return "maybeboard";
   }
@@ -238,6 +250,18 @@ function getArchidektCardSection(
   }
 
   return "mainboard";
+}
+
+function hasNormalizedCategory(categories: Set<string>, aliases: string[]) {
+  const normalizedCategories = new Set(
+    [...categories].map((category) => normalizeImportSectionLabel(category)),
+  );
+
+  return aliases.some((alias) => normalizedCategories.has(normalizeImportSectionLabel(alias)));
+}
+
+function normalizeImportSectionLabel(label: string) {
+  return label.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
 async function fetchMoxfieldDeck(parsedUrl: ParsedDeckImportUrl): Promise<MoxfieldDeckResponse> {
@@ -437,6 +461,10 @@ function convertMoxfieldBoards(
     ...extractMoxfieldBoardCards(boards.commanders, "commander"),
     ...extractMoxfieldBoardCards(boards.companions, "companion"),
     ...extractMoxfieldBoardCards(boards.mainboard, "mainboard"),
+    ...extractMoxfieldBoardCards(boards.attractions, "attraction"),
+    ...extractMoxfieldBoardCards(boards.attractionDeck, "attraction"),
+    ...extractMoxfieldBoardCards(boards.stickers, "sticker"),
+    ...extractMoxfieldBoardCards(boards.stickerSheets, "sticker"),
   ];
 }
 

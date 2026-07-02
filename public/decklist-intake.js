@@ -47,6 +47,13 @@ window.MtgDeckcheckerDecklistIntake = {
         continue;
       }
 
+      if (
+        ["attraction", "sticker"].includes(prefixedLine.section) ||
+        ["attraction", "sticker"].includes(currentSection)
+      ) {
+        continue;
+      }
+
       fallbackCards.push(cleanedName);
     }
 
@@ -90,9 +97,50 @@ window.MtgDeckcheckerDecklistIntake = {
   },
 
   sanitizeDecklistInput(decklistText) {
-    const sanitizedLines = decklistText
-      .split(/\r?\n/)
-      .filter((line) => !isRemovableDeckSectionLine(line));
+    const sanitizedLines = [];
+    let skippedSection = null;
+
+    for (const line of decklistText.split(/\r?\n/)) {
+      const trimmedLine = line.trim();
+
+      if (!trimmedLine) {
+        if (!skippedSection) {
+          sanitizedLines.push(line);
+        }
+        continue;
+      }
+
+      const sectionHeader = normalizeSectionHeader(trimmedLine);
+      if (sectionHeader) {
+        skippedSection = isSkippedCopiedDeckSection(sectionHeader) ? sectionHeader : null;
+        if (!skippedSection && !isRemovableDeckSectionLine(line)) {
+          sanitizedLines.push(line);
+        }
+        continue;
+      }
+
+      const prefixedLine = extractSectionPrefix(trimmedLine);
+      if (prefixedLine.section) {
+        if (isSkippedCopiedDeckSection(prefixedLine.section)) {
+          continue;
+        }
+
+        skippedSection = null;
+        sanitizedLines.push(line);
+        continue;
+      }
+
+      if (skippedSection) {
+        if (isStandaloneBracketSectionLine(trimmedLine)) {
+          continue;
+        }
+        continue;
+      }
+
+      if (!isRemovableDeckSectionLine(line)) {
+        sanitizedLines.push(line);
+      }
+    }
 
     return sanitizedLines.join("\n").replace(/\n{3,}/g, "\n\n").trimEnd();
   },
@@ -225,6 +273,14 @@ function normalizeSectionHeader(line) {
     return "maybeboard";
   }
 
+  if (["attraction", "attractions", "attraction deck", "attractions deck"].includes(normalized)) {
+    return "attraction";
+  }
+
+  if (["sticker", "stickers", "sticker sheet", "sticker sheets", "sticker deck"].includes(normalized)) {
+    return "sticker";
+  }
+
   return null;
 }
 
@@ -240,11 +296,18 @@ function normalizeHeaderLabel(line) {
 }
 
 function isRemovableDeckSectionLine(line) {
+  const normalized = normalizeHeaderLabel(line.trim());
+
+  if (
+    ["attraction", "attractions", "attraction deck", "attractions deck", "sticker", "stickers", "sticker sheet", "sticker sheets", "sticker deck"]
+      .includes(normalized)
+  ) {
+    return false;
+  }
+
   if (isStandaloneBracketSectionLine(line.trim())) {
     return true;
   }
-
-  const normalized = normalizeHeaderLabel(line.trim());
 
   if (!normalized) {
     return false;
@@ -284,7 +347,20 @@ function isRemovableDeckSectionLine(line) {
     "side",
     "maybeboard",
     "maybe",
+    "attraction",
+    "attractions",
+    "attraction deck",
+    "attractions deck",
+    "sticker",
+    "stickers",
+    "sticker sheet",
+    "sticker sheets",
+    "sticker deck",
   ]).has(normalized);
+}
+
+function isSkippedCopiedDeckSection(section) {
+  return section === "sideboard" || section === "maybeboard";
 }
 
 function isStandaloneBracketSectionLine(line) {
@@ -320,6 +396,10 @@ function extractSectionPrefix(line) {
     sideboard: "sideboard",
     maybe: "maybeboard",
     maybeboard: "maybeboard",
+    attraction: "attraction",
+    attractions: "attraction",
+    sticker: "sticker",
+    stickers: "sticker",
   };
 
   return {
