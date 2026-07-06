@@ -1,5 +1,25 @@
 # Changelog
 
+## Unreleased
+
+### Neu
+
+- Scryfall-Aufloesung nutzt staerker gebuendelte Collection-Requests, Cache-Wiederverwendung, Throttling und Retry-After-Behandlung, damit 429-Antworten seltener auftreten.
+- Power-Skala wurde nach unten und oben besser gespreizt; sehr schnelle, tutorlastige Combo-Decks erhalten zusaetzlichen Mulligan-/Hand-Selection-Kontext.
+- Ueberfuellte Kategorien wie Draw, Ramp, Interaction, Protection, Recursion und Closing Power werden weicher bestraft, wenn ein Deck bewusst ueber den Richtwert hinausgeht.
+- Bracket-Zuweisung nutzt jetzt weiche Naehe-Grenzen und zusammengerechnete Gate-Gaps, damit knappe Faelle als `2+`, `3+`, `3-` oder `4-` lesbarer werden.
+- cEDH-nahe Decks koennen auch ohne externen Combo-Lookup durch extreme Power-, Speed-, Consistency- und Closing-Werte in Bracket 5 landen.
+- Empfehlungen erhalten den Power-Read und koennen gezielter Vorschlaege fuer den Wert machen, der ein Ziel-Bracket blockiert.
+
+### Doku
+
+- README, Backend-/Frontend-Guides und Analyse-Flow wurden auf die aktuelle App-Struktur, Zusatzdeck-Erkennung, Strategieauswahl und Bracket-Toleranzen gebracht.
+
+### Validierung
+
+- `npm run build`
+- `npm test`
+
 ## 1.2.0 - 2026-07-02
 
 ### Neu

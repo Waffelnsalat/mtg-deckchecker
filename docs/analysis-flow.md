@@ -6,7 +6,7 @@ This document explains how a submitted EDH decklist moves through the app, how t
 
 ```mermaid
 flowchart TD
-  Browser[Browser UI<br/>public/app.js] --> AnalyzeEndpoint[POST /api/edh/decklists/analyze<br/>src/app.ts]
+  Browser[Browser UI<br/>public/*.js] --> AnalyzeEndpoint[POST /api/edh/decklists/analyze<br/>src/app.ts]
   AnalyzeEndpoint --> ValidateBody[Validate request body<br/>zod schema]
   ValidateBody --> ResolveDocument[resolveDecklistForAnalysis<br/>src/deckExport.ts]
   ResolveDocument --> ParseDecklist[parseDecklist<br/>src/decklist.ts]
@@ -18,7 +18,7 @@ flowchart TD
   ValidateDeck -->|hard parse/resolve failure| Error400[400/502 no analysis]
   AnalysisPipeline --> Sources[Build source status<br/>Scryfall + EDHREC + Spellbook + Recommander]
   Sources --> Response[Return document + validation + sources + analysis]
-  Response --> Render[Render results<br/>public/app.js]
+  Response --> Render[Render results<br/>public/*.js]
 ```
 
 Important detail: `/api/edh/decklists/analyze` now uses a lenient resolver. Soft EDH validation issues are returned with the analysis so the UI can show a clear "Analysis Limited" warning. Strict flows such as `/api/edh/decklists/resolve` and `/api/edh/decklists/export` still reject invalid EDH decks.
@@ -88,6 +88,7 @@ flowchart TD
   Document --> Recommendations[recommendationAnalysis]
   Commander --> Recommendations
   Bracket --> Recommendations
+  Power --> Recommendations
   Strategy --> Recommendations
   WinStrategy --> Recommendations
   Structure --> Recommendations
@@ -102,6 +103,20 @@ flowchart TD
   SpellInteraction --> Recommendations
   EDHREC --> Recommendations
   Recommander[Recommander lookup] --> Recommendations
+
+  Power --> Weaknesses[weaknessAnalysis]
+  Strategy --> Weaknesses
+  WinStrategy --> Weaknesses
+  Structure --> Weaknesses
+  Ramp --> Weaknesses
+  Draw --> Weaknesses
+  Consistency --> Weaknesses
+  Protection --> Weaknesses
+  Recursion --> Weaknesses
+  WinConditions --> Weaknesses
+  Removal --> Weaknesses
+  SpellInteraction --> Weaknesses
+  AdvancedRoles --> Weaknesses
 ```
 
 ## Result Calculation
@@ -125,7 +140,8 @@ flowchart TD
 | `commander` | `src/commanderAnalysis.ts` | document, strategy, win strategy, win conditions | Scores command-zone impact, dependency, ceiling, roles, and commander involvement in combos. |
 | `power` | `src/powerAnalysis.ts` | most analysis modules | Combines dimensions into power index, power score, tier, strengths, and weaknesses. |
 | `bracket` | `src/bracketAnalysis.ts` | document, power, game changers, win conditions, target bracket | Turns the power read and bracket rule signals into the recommended Commander bracket. |
-| `recommendations` | `src/recommendationAnalysis.ts` | most analysis modules, EDHREC, Recommander | Suggests upgrade or downshift cards based on gaps and target bracket. |
+| `recommendations` | `src/recommendationAnalysis.ts` | most analysis modules, power, bracket, EDHREC, Recommander | Suggests upgrade or downshift cards based on gaps, target bracket, and the dimension blocking the requested bracket. |
+| `weaknesses` | `src/weaknessAnalysis.ts` | power, strategy, win strategy, structure, role modules, advanced roles | Explains which opposing plans and hate pieces are likely to pressure the deck. |
 
 ## Power Score Shape
 
@@ -179,6 +195,10 @@ flowchart LR
 
 The final `powerScore` is derived from an internal `powerIndex`. After the weighted dimensions are combined, extra adjustments are applied for combo pressure, commander impact, game changers, plan clarity, weak ramp, weak draw, weak interaction, and weak mana.
 
+High-power shells also get hand-selection context. Low-curve, tutor-heavy, combo-focused decks are expected to mulligan more aggressively, so the power read can add a small amount of leverage when the opening-hand quality is structurally better than a casual keep-any-seven deck.
+
+Category targets are not hard caps. If a deck plays more draw, ramp, protection, recursion, or interaction than the baseline asks for, the overflow is dampened instead of treated as a direct failure. This keeps intentional redundancy from collapsing a category score just because it exceeds the expected count.
+
 ## Bracket Calculation Shape
 
 ```mermaid
@@ -194,19 +214,29 @@ flowchart TD
   FinalBracket --> TargetComparison
 ```
 
-The recommended bracket is the higher value between the power read and the rules floor. For example, a lower-power deck can still be lifted by Game Changers, compact two-card combos, repeated extra turns, or mass land denial.
+The recommended bracket starts from the higher value between the power read and the hard rules floor. For example, a lower-power deck can still be lifted by Game Changers, compact two-card combos, repeated extra turns, or mass land denial.
+
+After that, `src/bracketAnalysis.ts` applies target-aware soft boundaries:
+
+- Near misses can read as `3-`, `4-`, or the matching bracket when the score is close and the combined gate gap is still small.
+- If the user expected Bracket 2 or Bracket 3 and the deck is only slightly over, the read can stay at `2+` or `3+`.
+- The current near-score margins are 0.24 for Bracket 3, 0.36 for Bracket 4, and 0.24 for Bracket 5.
+- The current combined gate-gap budgets are 14 for Bracket 3, 16 for Bracket 4, and 12 for Bracket 5.
+- The current over-target tolerance is 0.36 for Bracket 2 and Bracket 3.
+
+Hard pressure still wins over soft tolerance. Game Changers, compact two-card infinite combos, repeated extra turns, mass land denial, or an overwhelming cEDH profile can still force the higher bracket.
 
 ## Key Weak Spots
 
 | Area | Why it can be fragile | Where to inspect first |
 | --- | --- | --- |
-| Limited-analysis confidence | Invalid or incomplete decks can now receive partial analysis, but those results are less reliable and must stay clearly marked in the UI. | `src/deckExport.ts`, `src/app.ts`, `public/app.js`, `public/deck-identity.js` |
+| Limited-analysis confidence | Invalid or incomplete decks can now receive partial analysis, but those results are less reliable and must stay clearly marked in the UI. | `src/deckExport.ts`, `src/app.ts`, `public/app.js`, `public/deck-identity.js`, focused `public/*.js` renderers |
 | External service dependence | Scryfall is required for card resolution. Commander Spellbook, EDHREC, and Recommander can change or fail independently. The `sources` result must make that visible immediately. | `src/scryfall.ts`, `src/commanderSpellbook.ts`, `src/edhrec.ts`, `src/recommander.ts`, `src/app.ts` |
 | Regex-based card role detection | Many effects are inferred from oracle text patterns. New card wording can be missed or misclassified. | `src/advancedCardScan.ts`, `src/drawAnalysis.ts`, `src/rampAnalysis.ts`, `src/interactionAnalysis.ts` |
 | Large strategy rules file | Strategy detection has many overlapping archetype rules, so small changes can affect many decks. | `src/strategyAnalysis.ts`, `src/strategyAnalysis.test.ts` |
 | Large recommendation rules file | Recommendations combine static cards, bracket target, EDHREC, Recommander, and weak-topic logic. Priority bugs can be subtle. | `src/recommendationAnalysis.ts`, `src/recommendationAnalysis.test.ts` |
 | Score explainability | Power score is weighted and then adjusted, so a surprising final number may require checking several modules. | `src/powerAnalysis.ts`, `src/bracketAnalysis.ts` |
-| Frontend response coupling | The browser expects many specific analysis fields. Backend response changes can silently break rendering. | `public/app.js`, `src/types.ts` |
+| Frontend response coupling | The browser expects many specific analysis fields. Backend response changes can silently break rendering. | `public/app.js`, focused `public/*.js` renderers, `src/types.ts` |
 
 ## Debugging A Suspicious Result
 

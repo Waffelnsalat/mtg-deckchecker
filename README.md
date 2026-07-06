@@ -1,6 +1,15 @@
-# MTG Deckchecker API
+# MTG Deckchecker
 
-First iteration of the backend and website for an EDH deck checker. The app accepts a decklist as text or `.txt` upload, parses common decklist formats, resolves the cards through the Scryfall API, and can save a generated JSON export for later analysis.
+Backend and browser UI for checking Commander / EDH decklists. The app accepts pasted text, `.txt` uploads, and supported public deck URLs, resolves cards through Scryfall, then returns a structured deck analysis with strategy, power, bracket, recommendations, weaknesses, card roles, and a small opening-hand tester.
+
+## What It Checks
+
+- Deck structure, curve, land base, ramp, draw, consistency, interaction, protection, recursion, win conditions, and commander impact.
+- Main strategy and alternate plans, with a strategy confirmation step before the final analysis is shown.
+- Power score, bracket read, target-bracket fit, and recommendations for both upgrades and downshifts.
+- Tag frequency, card breakdown, matchup / weakness notes, and visual summary panels.
+- Commander, partner/background, companion, sideboard cleanup, Attraction decks, and Sticker sheets.
+- Scryfall resolution through collection batching, cache reuse, throttling, and retry handling to reduce 429 errors.
 
 ## Scripts
 
@@ -39,8 +48,12 @@ The page lets you:
 
 - paste a decklist into a textarea
 - upload a `.txt` decklist file
-- generate and download a JSON export
-- keep a saved copy of the JSON in `generated-decks/`
+- import supported public deck URLs
+- choose the expected target bracket
+- confirm the intended strategy when multiple plans are detected
+- inspect the full deck analysis, recommendations, tag frequency, and card breakdown
+- draw random seven-card opening hands as a user-facing playtest aid
+- generate and download a JSON export saved under `generated-decks/`
 
 Moxfield URL import uses a headless local Chromium fallback only when the direct API request is
 blocked. Set `MTG_DECKCHECKER_ALLOW_HEADED_BROWSER=1` if you intentionally want that fallback to
@@ -56,9 +69,34 @@ npm run export:deck -- "C:\Users\Waffelnsalat\Downloads\delina.txt"
 
 If no output path is provided, the exporter writes the JSON next to the input file using the same base name, for example `delina.json`.
 
-## Endpoint
+## API Endpoints
+
+`POST /api/edh/decklists/analyze`
+
+Runs the full analysis. This is the endpoint used by the browser UI.
+
+Request body:
+
+```json
+{
+  "decklist": "Commander\n1 Atraxa, Praetors' Voice\n\nDeck\n1 Sol Ring\n1 Arcane Signet\n12 Forest",
+  "targetBracket": 3,
+  "preferredStrategyKey": "counters"
+}
+```
+
+Optional commander fields are also accepted: `commanderName`, `additionalCommanderName`, `partnerName`, `backgroundName`, `companionName`, and `secretCommanderName`.
+
+The response includes:
+
+- `document`: parsed entries, resolved cards, sections, and deck metadata
+- `validation`: EDH validation result, including soft analysis warnings
+- `sources`: Scryfall, EDHREC, Commander Spellbook, and Recommander status
+- `analysis`: structure, land base, ramp, draw, consistency, interaction, protection, recursion, win conditions, strategy, commander, power, bracket, recommendations, weaknesses, and advanced role tags
 
 `POST /api/edh/decklists/resolve`
+
+Resolves and validates a decklist without running the full analysis.
 
 Request body:
 
@@ -82,3 +120,10 @@ The response includes:
 - Scryfall card data for every resolved card
 - unmatched lines when a card could not be found
 - deck-level warnings such as a non-100-card EDH total
+
+Other routes:
+
+- `POST /api/edh/decklists/import`: imports supported public deck URLs.
+- `POST /api/edh/decklists/export`: resolves a deck and writes a JSON export.
+- `POST /api/reports`: stores website or deck-evaluation feedback locally.
+- `GET /health`: basic service health check.
