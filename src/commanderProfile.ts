@@ -276,6 +276,16 @@ const BASE_COMMANDER_PROFILE_RULES: CommanderProfileRule[] = [
       /\bcopy target\b|\bcopy (?:that|the|a) (?:spell|permanent|creature|artifact|enchantment|instant|sorcery|ability)\b|\btoken that's? a copy\b|\benters the battlefield as a copy\b|\bbecomes? a copy\b/.test(text),
     supportMatcher: (deckCard) => hasCopyCloneProfileText(getCardText(deckCard.card)),
   },
+  {
+    key: "copy_clone",
+    label: "Legend-Rule Clone Package",
+    supportReason:
+      "Creature and permanent clone effects can copy this legendary commander, then the legend rule turns the copy into commander death-trigger value.",
+    supportTarget: 7,
+    coreTarget: 4,
+    askMatcher: (text, commander) => isLegendaryCard(commander) && hasCommanderDeathTrigger(text, commander.name),
+    supportMatcher: (deckCard) => hasLegendRuleCloneSupportText(getCardText(deckCard.card)),
+  },
 ];
 
 function getDynamicCommanderProfileRules(
@@ -441,9 +451,31 @@ function hasCopyCloneProfileText(text: string) {
     /\bcopy (?:that|the|a) (?:spell|permanent|creature|artifact|enchantment|instant|sorcery|ability)\b/.test(text) ||
     /\btoken that's? a copy\b/.test(text) ||
     /\bcreate\b[^.]{0,120}\btoken\b[^.]{0,120}\bcopy\b/.test(text) ||
-    /\benters the battlefield as a copy\b/.test(text) ||
+    /\benters?(?: the battlefield)? as a copy\b/.test(text) ||
     /\bbecomes? a copy\b/.test(text)
   );
+}
+
+function hasLegendRuleCloneSupportText(text: string) {
+  return (
+    /\benters?(?: the battlefield)? as a copy of (?:any|another|target|a)\b[^.]{0,120}\b(?:creature|permanent|artifact)\b/.test(text) ||
+    /\bbecomes? a copy of (?:any|another|target|a)\b[^.]{0,120}\b(?:creature|permanent|artifact)\b/.test(text) ||
+    /\bcreate\b[^.]{0,160}\btokens?\b[^.]{0,160}\b(?:copy|copies)\b[^.]{0,120}\b(?:creature|permanent|artifact)\b/.test(text) ||
+    /\btokens? (?:that'?s? a copy|that are copies) of (?:target|that|a|the)\b[^.]{0,120}\b(?:creature|permanent|artifact)\b/.test(text) ||
+    /\bcopy of target (?:creature|nonland permanent|artifact or creature|artifact, creature, enchantment, or land)\b/.test(text)
+  );
+}
+
+function hasCommanderDeathTrigger(text: string, commanderName: string) {
+  const escapedName = escapeRegex(normalizeText(commanderName));
+  return (
+    new RegExp(`\\bwhen(?:ever)?\\b[^.]{0,140}\\b(?:this creature|this commander|this permanent|${escapedName})\\b[^.]{0,80}\\bdies\\b`).test(text) ||
+    new RegExp(`\\bwhen(?:ever)?\\b\\s*${escapedName}\\s+dies\\b`).test(text)
+  );
+}
+
+function isLegendaryCard(card: ScryfallCard) {
+  return /\blegendary\b/i.test(card.type_line) || !!card.card_faces?.some((face) => /\blegendary\b/i.test(face.type_line ?? ""));
 }
 
 function getCreatureTypeCounts(deckCards: ResolvedDeckCard[]) {

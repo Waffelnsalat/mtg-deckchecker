@@ -2866,7 +2866,7 @@ function hasCopyCloneText(text: string) {
     /\bcopy (?:that|the|a) (?:spell|permanent|creature|artifact|enchantment|instant|sorcery|ability)\b/.test(text) ||
     /\btoken that's? a copy\b/.test(text) ||
     /\bcreate\b[^.]{0,120}\btoken\b[^.]{0,120}\bcopy\b/.test(text) ||
-    /\benters the battlefield as a copy\b/.test(text) ||
+    /\benters?(?: the battlefield)? as a copy\b/.test(text) ||
     /\bbecomes? a copy\b/.test(text) ||
     /\bcopy of (?:another|target|that|a)\b/.test(text) ||
     /\bwhenever\b[^.]{0,120}\bcopy\b[^.]{0,120}\bspell\b/.test(text)
@@ -3912,6 +3912,19 @@ function getCommanderBuildAroundProfiles(context: StrategyContext): CommanderBui
       });
     }
 
+    if (commanderHasLegendRuleClonePlan(commander.card, text)) {
+      profiles.push({
+        key: "copy_clone",
+        commander,
+        label: "legend-rule clone cards",
+        supportReason:
+          "Creature and permanent clones copy the legendary commander, then the legend rule turns the copy into commander death-trigger value.",
+        minimumSupport: 4,
+        supportWeight: 0.92,
+        matcher: (deckCard) => isLegendRuleCloneSupport(deckCard.card),
+      });
+    }
+
     if (commanderAsksForTokens(text)) {
       profiles.push({
         key: "tokens",
@@ -4771,6 +4784,18 @@ function commanderAsksForDeathTriggers(text: string) {
   );
 }
 
+function commanderHasLegendRuleClonePlan(commander: ScryfallCard, text: string) {
+  return isLegendaryCard(commander) && hasCommanderSelfDeathTrigger(text, commander.name);
+}
+
+function hasCommanderSelfDeathTrigger(text: string, commanderName: string) {
+  const escapedName = escapeRegex(normalizeText(commanderName));
+  return (
+    new RegExp(`\\bwhen(?:ever)?\\b[^.]{0,140}\\b(?:this creature|this commander|this permanent|${escapedName})\\b[^.]{0,80}\\bdies\\b`).test(text) ||
+    new RegExp(`\\bwhen(?:ever)?\\b\\s*${escapedName}\\s+dies\\b`).test(text)
+  );
+}
+
 function commanderAsksForArtifacts(text: string) {
   return (
     /\bartifact spells? you cast\b/.test(text) ||
@@ -5206,6 +5231,20 @@ function isPillowfortSupport(card: ScryfallCard) {
 
 function isCopyCloneSupport(card: ScryfallCard) {
   return getStrategySegments(card).some((segment) => hasCopyCloneText(segment.text));
+}
+
+function isLegendRuleCloneSupport(card: ScryfallCard) {
+  return getStrategySegments(card).some((segment) => hasLegendRuleCloneSupportText(segment.text));
+}
+
+function hasLegendRuleCloneSupportText(text: string) {
+  return (
+    /\benters?(?: the battlefield)? as a copy of (?:any|another|target|a)\b[^.]{0,120}\b(?:creature|permanent|artifact)\b/.test(text) ||
+    /\bbecomes? a copy of (?:any|another|target|a)\b[^.]{0,120}\b(?:creature|permanent|artifact)\b/.test(text) ||
+    /\bcreate\b[^.]{0,160}\btokens?\b[^.]{0,160}\b(?:copy|copies)\b[^.]{0,120}\b(?:creature|permanent|artifact)\b/.test(text) ||
+    /\btokens? (?:that'?s? a copy|that are copies) of (?:target|that|a|the)\b[^.]{0,120}\b(?:creature|permanent|artifact)\b/.test(text) ||
+    /\bcopy of target (?:creature|nonland permanent|artifact or creature|artifact, creature, enchantment, or land)\b/.test(text)
+  );
 }
 
 function isTargetedCreatureSpellSupport(card: ScryfallCard) {

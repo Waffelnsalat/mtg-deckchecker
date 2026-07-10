@@ -2474,6 +2474,81 @@ test("analyzeDeckStrategy identifies copy and clone commander shells", () => {
   assert.equal(analysis.synergy?.commanderAligned, true);
 });
 
+test("analyzeDeckStrategy recognizes legend-rule clone death-trigger commander shells", () => {
+  const analysis = analyzeDeckStrategy(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Hidetsugu and Kairi",
+        "Legendary Creature - Ogre Demon Dragon",
+        5,
+        "Flying. When Hidetsugu and Kairi enters the battlefield, draw three cards, then put two cards from your hand on top of your library in any order. When Hidetsugu and Kairi dies, exile the top card of your library. Target opponent loses life equal to its mana value. If it's an instant or sorcery card, you may cast it without paying its mana cost.",
+        { color_identity: ["U", "B"] },
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Clever Impersonator",
+        "Creature - Shapeshifter",
+        4,
+        "You may have Clever Impersonator enter the battlefield as a copy of any nonland permanent on the battlefield.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Phantasmal Image",
+        "Creature - Illusion",
+        2,
+        "You may have Phantasmal Image enter the battlefield as a copy of any creature on the battlefield, except it's an Illusion in addition to its other types and it has \"When this creature becomes the target of a spell or ability, sacrifice it.\"",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Cackling Counterpart",
+        "Instant",
+        3,
+        "Create a token that's a copy of target creature you control.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Saw in Half",
+        "Instant",
+        3,
+        "Destroy target creature. If that creature dies this way, its controller creates two tokens that are copies of that creature, except their base power is half that creature's power and their base toughness is half that creature's toughness. Round up each time.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Aminatou's Augury",
+        "Sorcery",
+        8,
+        "Exile the top eight cards of your library. You may put a land card from among them onto the battlefield. Until end of turn, for each nonland card type, you may cast a spell of that type from among the exiled cards without paying its mana cost.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Expropriate",
+        "Sorcery",
+        9,
+        "Starting with you, each player votes for time or money. For each time vote, take an extra turn after this one. For each money vote, choose a permanent owned by the voter and gain control of it. Exile Expropriate.",
+      ),
+      createResolvedCard("mainboard", 93, "Island", "Basic Land - Island", 0, ""),
+    ]),
+    createEmptyWinConditions(),
+  );
+
+  assert.equal(analysis.mainStrategy?.key, "copy_clone");
+  assert.equal(analysis.synergy?.commanderAligned, true);
+  assert.ok(
+    analysis.commanderProfiles?.some(
+      (profile) => profile.key === "copy_clone" && profile.label === "Legend-Rule Clone Package",
+    ),
+  );
+  assert.ok(analysis.mainStrategy?.keyCards.includes("Hidetsugu and Kairi"));
+});
+
 test("analyzeDeckStrategy keeps political donation shells out of token and upkeep plans", () => {
   const analysis = analyzeDeckStrategy(
     createDocument([
