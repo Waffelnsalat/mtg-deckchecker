@@ -349,6 +349,59 @@ test("analyzeDeckCommander treats supported X-copy commanders as high peak-turn 
   assert.ok(analysis.findings.some((entry) => entry.code === "commander_profile_influence_bonus"));
 });
 
+test("analyzeDeckCommander treats death-trigger free-cast commanders as combo burst engines", () => {
+  const analysis = analyzeDeckCommander(
+    createDocument([
+      createCommanderCard({
+        name: "Hidetsugu and Kairi",
+        cmc: 5,
+        type_line: "Legendary Creature - Ogre Demon Dragon",
+        oracle_text:
+          "Flying. When Hidetsugu and Kairi enters the battlefield, draw three cards, then put two cards from your hand on top of your library in any order. When Hidetsugu and Kairi dies, exile the top card of your library. Target opponent loses life equal to its mana value. If it's an instant or sorcery card, you may cast it without paying its mana cost.",
+        color_identity: ["U", "B"],
+      }),
+    ]),
+    {
+      mainStrategy: { key: "copy_clone", label: "Copy / Clone" },
+      synergy: {
+        commanderAligned: true,
+      },
+      commanderProfiles: [
+        {
+          commanderName: "Hidetsugu and Kairi",
+          key: "copy_clone",
+          label: "Legend-Rule Clone Package",
+          supportReason: "Clones turn the commander's death trigger into burst value.",
+          supportTarget: 7,
+          supportCount: 8,
+          coreCount: 5,
+          confidence: 92,
+          supportCards: [],
+          missingPieces: [],
+        },
+      ],
+      perspectives: [],
+    } as any,
+    {
+      primaryPlan: {
+        key: "spell_burst",
+        label: "Spell Burst",
+      },
+    } as any,
+    {
+      combos: {
+        lookupStatus: "ok",
+        exact: [],
+      },
+    } as any,
+  );
+
+  assert.ok(analysis.counts.combo >= 1);
+  assert.ok(analysis.counts.costReduction >= 1);
+  assert.ok(analysis.counts.finisher >= 1);
+  assert.ok(analysis.ceilingScore >= 78);
+});
+
 function createDocument(resolvedCards: any[]) {
   return {
     format: "edh",

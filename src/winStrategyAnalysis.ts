@@ -21,6 +21,7 @@ import {
 interface WinStrategyContext {
   deckCards: ResolvedDeckCard[];
   commanderNames: string[];
+  commanderFreeCastDeathNames: string[];
   creatureCount: number;
   highManaFinisherNames: string[];
   comboCardNames: string[];
@@ -373,7 +374,9 @@ function mapStrategyToWinPlan(
     case "pillowfort":
       return "lock_attrition";
     case "copy_clone":
-      return winConditions.combos.exactCount > 0 ? "infinite_combo" : "value_attrition";
+      return winConditions.combos.exactCount > 0 ? "infinite_combo"
+        : context.commanderFreeCastDeathNames.length > 0 ? "spell_burst"
+        : "value_attrition";
     case "power_matter":
       return context.combatFinisherNames.length > 0 ? "go_wide_combat" : "value_attrition";
     case "mana_value_matter":
@@ -480,9 +483,21 @@ function getPlanSupport(
       };
     case "spell_burst":
       return {
-        scoreBonus: 10 + winConditions.counts.direct * 7 + winConditions.counts.combo * 5,
-        reasons: ["The shell looks built to chain spell-based pressure into a closing burst turn."],
-        keyCards: dedupeLabels([...context.directFinisherNames, ...context.comboCardNames]),
+        scoreBonus:
+          10 +
+          winConditions.counts.direct * 7 +
+          winConditions.counts.combo * 5 +
+          context.commanderFreeCastDeathNames.length * 12,
+        reasons: [
+          context.commanderFreeCastDeathNames.length > 0
+            ? `${context.commanderFreeCastDeathNames.join(" + ")} can turn death triggers into free spell casts, so the deck's clone package converts into burst turns.`
+            : "The shell looks built to chain spell-based pressure into a closing burst turn.",
+        ],
+        keyCards: dedupeLabels([
+          ...context.commanderFreeCastDeathNames,
+          ...context.directFinisherNames,
+          ...context.comboCardNames,
+        ]),
       };
     case "mill_out":
       return {
@@ -555,6 +570,9 @@ function getWinStrategyContext(
     commanderNames: deckCards
       .filter((card) => card.section === "commander")
       .map((card) => card.card.name),
+    commanderFreeCastDeathNames: deckCards
+      .filter((card) => card.section === "commander" && hasDeathTriggerFreeTopdeckCast(card.card))
+      .map((card) => card.card.name),
     creatureCount: deckCards.reduce(
       (sum, card) => sum + (hasCardType(card.card, "Creature") ? card.quantity : 0),
       0,
@@ -598,6 +616,13 @@ function hasPoisonStrategyText(card: ScryfallCard) {
 
   return getTextSegments(card).some((text) =>
     /\bpoison counters?\b|\bgain infect\b|\btoxic\b|\bten or more poison counters\b/.test(text),
+  );
+}
+
+function hasDeathTriggerFreeTopdeckCast(card: ScryfallCard) {
+  return getTextSegments(card).some((text) =>
+    /\bwhen(?:ever)?\b[\s\S]{0,180}\bdies\b[\s\S]{0,360}\bexile the top card of your library\b[\s\S]{0,260}\bmay cast it without paying its mana cost\b/.test(text) ||
+    /\bwhen(?:ever)?\b[\s\S]{0,180}\bdies\b[\s\S]{0,360}\bmay cast\b[\s\S]{0,160}\bwithout paying (?:its|their) mana cost\b/.test(text),
   );
 }
 

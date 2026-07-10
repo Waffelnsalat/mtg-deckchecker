@@ -379,6 +379,31 @@ test("analyzeDeckWinConditions recognizes commanders that convert infinite mana"
   assert.ok(analysis.finisherScore > 40);
 });
 
+test("analyzeDeckWinConditions treats mana-value death triggers as repeatable direct pressure", async () => {
+  const analysis = await analyzeDeckWinConditions(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Hidetsugu and Kairi",
+        "Legendary Creature - Ogre Demon Dragon",
+        5,
+        "Flying. When Hidetsugu and Kairi enters the battlefield, draw three cards, then put two cards from your hand on top of your library in any order. When Hidetsugu and Kairi dies, exile the top card of your library. Target opponent loses life equal to its mana value. If it's an instant or sorcery card, you may cast it without paying its mana cost.",
+        { color_identity: ["U", "B"] },
+      ),
+      createResolvedCard("mainboard", 99, "Island", "Basic Land - Island", 0, ""),
+    ]),
+    createEmptyComboLookup(),
+  );
+
+  const commander = analysis.taggedCards.find((card) => card.name === "Hidetsugu and Kairi");
+
+  assert.ok(commander?.hits.some((hit) => hit.tag === "direct_finisher"));
+  assert.ok(commander?.hits.some((hit) => hit.tag === "repeatable_finisher"));
+  assert.ok(analysis.counts.direct > 0);
+  assert.ok(analysis.counts.repeatable > 0);
+});
+
 function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocument {
   return {
     format: "edh",

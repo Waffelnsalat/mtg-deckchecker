@@ -1380,6 +1380,13 @@ function getRecursionProfile(text: string): CommanderRoleProfile | null {
 }
 
 function getFinisherProfile(text: string, typeLine: string): CommanderRoleProfile | null {
+  if (hasDeathTriggerManaValueLifeLoss(text)) {
+    return {
+      weight: 1.18,
+      reason: "Turns commander death into mana-value-based life loss, which becomes lethal with topdeck setup and repeated clone deaths.",
+    };
+  }
+
   if (
     /\byou win the game\b/.test(text) ||
     /\beach opponent loses\b[^.]{0,120}\blife\b/.test(text) ||
@@ -1402,6 +1409,10 @@ function getFinisherProfile(text: string, typeLine: string): CommanderRoleProfil
   return null;
 }
 
+function hasDeathTriggerManaValueLifeLoss(text: string) {
+  return /\bwhen(?:ever)?\b[\s\S]{0,180}\bdies\b[\s\S]{0,320}\btarget opponent loses life equal to its mana value\b/.test(text);
+}
+
 function getTokenProfile(text: string): CommanderRoleProfile | null {
   if (/\bcreate\b[^.]{0,120}\btoken\b/.test(text)) {
     return { weight: /\bwhenever\b|\bat the beginning of\b/.test(text) ? 1.02 : 0.8, reason: "Generates board presence from the command zone." };
@@ -1411,6 +1422,13 @@ function getTokenProfile(text: string): CommanderRoleProfile | null {
 }
 
 function getCostReductionProfile(text: string): CommanderRoleProfile | null {
+  if (hasDeathTriggerFreeTopdeckCast(text)) {
+    return {
+      weight: 1.26,
+      reason: "Turns commander death triggers into free high-mana-value spell casts from the top of the library.",
+    };
+  }
+
   if (
     /\bspells? you cast cost\b[^.]{0,80}\bless to cast\b/.test(text) ||
     /\bartifact spells you cast cost\b[^.]{0,80}\bless to cast\b/.test(text) ||
@@ -1424,6 +1442,13 @@ function getCostReductionProfile(text: string): CommanderRoleProfile | null {
 }
 
 function getComboProfile(text: string): CommanderRoleProfile | null {
+  if (hasDeathTriggerFreeTopdeckCast(text)) {
+    return {
+      weight: 1.22,
+      reason: "Can convert commander death loops or legend-rule clones into free spell-burst turns.",
+    };
+  }
+
   if (
     /\bcopy\b[^.]{0,180}\b(?:spell|ability)\b/.test(text) ||
     /\bcopy (?:that|the|next|target)\b[^.]{0,140}\b(?:spell|ability)\b/.test(text)
@@ -1450,6 +1475,13 @@ function getComboProfile(text: string): CommanderRoleProfile | null {
   }
 
   return null;
+}
+
+function hasDeathTriggerFreeTopdeckCast(text: string) {
+  return (
+    /\bwhen(?:ever)?\b[\s\S]{0,180}\bdies\b[\s\S]{0,360}\bexile the top card of your library\b[\s\S]{0,260}\bmay cast it without paying its mana cost\b/.test(text) ||
+    /\bwhen(?:ever)?\b[\s\S]{0,180}\bdies\b[\s\S]{0,360}\bmay cast\b[\s\S]{0,160}\bwithout paying (?:its|their) mana cost\b/.test(text)
+  );
 }
 
 function addHit(

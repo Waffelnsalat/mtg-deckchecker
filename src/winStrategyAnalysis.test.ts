@@ -196,6 +196,53 @@ test("analyzeDeckWinStrategy promotes poison for counters shells with infect fin
   assert.equal(analysis.primaryPlan?.key, "poison");
 });
 
+test("analyzeDeckWinStrategy maps legend-rule clone free-cast commanders to spell burst", () => {
+  const analysis = analyzeDeckWinStrategy(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Hidetsugu and Kairi",
+        "Legendary Creature - Ogre Demon Dragon",
+        5,
+        "Flying. When Hidetsugu and Kairi enters the battlefield, draw three cards, then put two cards from your hand on top of your library in any order. When Hidetsugu and Kairi dies, exile the top card of your library. Target opponent loses life equal to its mana value. If it's an instant or sorcery card, you may cast it without paying its mana cost.",
+        { color_identity: ["U", "B"] },
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Cackling Counterpart",
+        "Instant",
+        3,
+        "Create a token that's a copy of target creature you control.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Expropriate",
+        "Sorcery",
+        9,
+        "Starting with you, each player votes for time or money. For each time vote, take an extra turn after this one. For each money vote, choose a permanent owned by the voter and gain control of it. Exile Expropriate.",
+      ),
+      createResolvedCard("mainboard", 97, "Island", "Basic Land - Island", 0, ""),
+    ]),
+    createStrategyAnalysis("copy_clone"),
+    createWinConditions({
+      counts: {
+        core: 2.2,
+        direct: 0.9,
+        repeatable: 0.9,
+      },
+      taggedCards: [
+        createTaggedFinisher("Hidetsugu and Kairi", ["direct_finisher", "repeatable_finisher"]),
+      ],
+    }),
+  );
+
+  assert.equal(analysis.primaryPlan?.key, "spell_burst");
+  assert.ok(analysis.primaryPlan?.keyCards.includes("Hidetsugu and Kairi"));
+});
+
 function createStrategyAnalysis(
   mainKey: StrategyKey,
   subKeys: StrategyKey[] = [],

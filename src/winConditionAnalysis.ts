@@ -355,6 +355,14 @@ function getCombatFinisherProfile(typeLine: string, text: string): FinisherProfi
 }
 
 function getDirectFinisherProfile(typeLine: string, text: string): FinisherProfile | null {
+  if (hasDeathTriggerManaValueLifeLoss(text)) {
+    return {
+      weight: 0.9,
+      reason: "A commander death trigger that drains by mana value can become a real finisher with topdeck setup or repeated clone deaths.",
+      repeatable: true,
+    };
+  }
+
   if (hasTableLossOrDamage(text)) {
     return {
       weight: isScalingDirectFinisher(text) ? 1 : 0.88,
@@ -380,6 +388,10 @@ function getDirectFinisherProfile(typeLine: string, text: string): FinisherProfi
   }
 
   return null;
+}
+
+function hasDeathTriggerManaValueLifeLoss(text: string) {
+  return /\bwhen(?:ever)?\b[\s\S]{0,180}\bdies\b[\s\S]{0,320}\btarget opponent loses life equal to its mana value\b/.test(text);
 }
 
 function getAlternateFinisherProfile(
@@ -414,6 +426,14 @@ function getAlternateFinisherProfile(
 }
 
 function getRepeatableFinisherProfile(typeLine: string, text: string): FinisherProfile | null {
+  if (typeLine.includes("Legendary") && hasDeathTriggerManaValueLifeLoss(text)) {
+    return {
+      weight: 0.82,
+      reason: "A repeatable commander death trigger can keep converting topdeck mana value into life loss.",
+      repeatable: true,
+    };
+  }
+
   if (!isRepeatableFinisherText(text) || !isPermanentType(typeLine)) {
     return null;
   }
