@@ -1277,7 +1277,48 @@ function scoreRemoval(input: {
     score -= 2;
   }
 
-  return clamp(Math.round(score), 0, 100);
+  return clamp(Math.round(Math.max(score, getRemovalCoverageFloor(input, targetedCoverage))), 0, 100);
+}
+
+function getRemovalCoverageFloor(
+  input: {
+    core: number;
+    targeted: number;
+    mass: number;
+    tempo: number;
+    handAttack: number;
+    recommendations: {
+      coreTarget: number;
+      targetedTarget: number;
+      massTarget: number;
+      tempoTarget: number;
+      handTarget: number;
+    };
+  },
+  targetedCoverage: number,
+) {
+  const coreRatio = getTargetRatio(input.core, input.recommendations.coreTarget);
+  const targetedRatio = getTargetRatio(targetedCoverage, input.recommendations.targetedTarget);
+  const massRatio = getTargetRatio(input.mass, input.recommendations.massTarget);
+  const tempoRatio = getTargetRatio(input.tempo, input.recommendations.tempoTarget);
+  const handRatio = getTargetRatio(input.handAttack, input.recommendations.handTarget);
+
+  return Math.min(
+    58,
+    coreRatio * 34 +
+      targetedRatio * 25 +
+      massRatio * 14 +
+      tempoRatio * 12 +
+      handRatio * 4,
+  );
+}
+
+function getTargetRatio(actual: number, target: number) {
+  if (target <= 0) {
+    return actual > 0 ? 1 : 0;
+  }
+
+  return clamp(actual / target, 0, 1);
 }
 
 function scoreSpellInteraction(input: {

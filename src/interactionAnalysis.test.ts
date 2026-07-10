@@ -395,6 +395,71 @@ test("analyzeDeckRemoval does not bottom out mono-blue tempo shells", () => {
   assert.ok(analysis.removalScore >= 35);
 });
 
+test("analyzeDeckRemoval does not show zero when targeted and tempo removal are present", () => {
+  const analysis = analyzeDeckRemoval(
+    createDocument([
+      createResolvedCard("commander", 1, "Dimir Commander", "Legendary Creature - Demon Wizard", 5, "", {
+        color_identity: ["U", "B"],
+      }),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Murder Style",
+        "Instant",
+        3,
+        "Destroy target creature.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Feed the Swarm Style",
+        "Sorcery",
+        2,
+        "Destroy target creature or enchantment an opponent controls. You lose life equal to that permanent's mana value.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Hero's Downfall Style",
+        "Instant",
+        3,
+        "Destroy target creature or planeswalker.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Into the Flood Maw Style",
+        "Instant",
+        1,
+        "Return target creature an opponent controls to its owner's hand.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Sink into Stupor Style",
+        "Instant",
+        2,
+        "Return target spell or nonland permanent an opponent controls to its owner's hand.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Aether Gale Style",
+        "Sorcery",
+        5,
+        "Return six target nonland permanents to their owners' hands.",
+      ),
+      createResolvedCard("mainboard", 93, "Expensive Filler", "Sorcery", 4, ""),
+    ]),
+  );
+
+  assert.ok(analysis.counts.targeted > 2.5);
+  assert.ok(analysis.counts.tempo > 1.5);
+  assert.equal(analysis.counts.mass, 0);
+  assert.ok(analysis.removalScore >= 30);
+  assert.ok(analysis.removalScore < 58);
+});
+
 test("analyzeDeckSpellInteraction classifies hard, soft, tempo, and broad stack answers", () => {
   const analysis = analyzeDeckSpellInteraction(
     createDocument([
