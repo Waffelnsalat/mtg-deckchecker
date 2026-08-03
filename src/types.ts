@@ -867,6 +867,28 @@ export interface DeckBracketAnalysis {
   findings: DeckStructureFinding[];
 }
 
+export type DeckSaltLevel = "low" | "medium" | "high" | "extreme";
+
+export interface DeckSaltCard {
+  name: string;
+  quantity: number;
+  section: DeckSection;
+  saltWeight: number;
+  category: string;
+  reason: string;
+}
+
+export interface DeckSaltAnalysis {
+  summary: string;
+  saltScore: number;
+  saltLevel: DeckSaltLevel;
+  totalSaltWeight: number;
+  highSaltCount: number;
+  mainSource: string;
+  topCards: DeckSaltCard[];
+  findings: DeckStructureFinding[];
+}
+
 export type DeckRecommendationTopic =
   | "shell"
   | "land_base"
@@ -953,6 +975,7 @@ export interface DeckAnalysisDocument {
     commander: DeckCommanderAnalysis;
     power: DeckPowerAnalysis;
     bracket: DeckBracketAnalysis;
+    salt: DeckSaltAnalysis;
     recommendations: DeckRecommendationAnalysis;
     weaknesses: DeckWeaknessAnalysis;
     strategy: DeckStrategyAnalysis;

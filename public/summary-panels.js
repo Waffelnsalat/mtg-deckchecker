@@ -3,6 +3,7 @@ window.MtgDeckcheckerSummaryPanels = {
     function render(analysis) {
       renderPower(analysis.power, analysis.strategy);
       renderBracket(analysis.bracket);
+      renderSalt(analysis.salt);
       renderCommander(analysis.commander);
     }
 
@@ -10,6 +11,14 @@ window.MtgDeckcheckerSummaryPanels = {
       elements.power.strengthsList.replaceChildren();
       elements.power.weaknessesList.replaceChildren();
       elements.bracket.findingsList.replaceChildren();
+      elements.salt.summary.textContent =
+        "Social pressure from commonly disliked cards appears here after analysis.";
+      elements.salt.score.textContent = "0 / 100";
+      elements.salt.level.textContent = "Low";
+      elements.salt.mainSource.textContent = "Low";
+      elements.salt.highCount.textContent = "0";
+      elements.salt.cardsList.replaceChildren();
+      elements.salt.findingsList.replaceChildren();
       elements.commander.findingsList.replaceChildren();
     }
 
@@ -52,6 +61,30 @@ window.MtgDeckcheckerSummaryPanels = {
       elements.bracket.extraTurns.textContent = String(bracket.signals.extraTurns);
       elements.bracket.landDenial.textContent = String(bracket.signals.massLandDenial);
       renderFindings(bracket.findings, elements.bracket.findingsList);
+    }
+
+    function renderSalt(salt) {
+      if (!salt) {
+        return;
+      }
+
+      elements.salt.summary.textContent = salt.summary;
+      elements.salt.score.textContent = `${formatWholeScore(salt.saltScore)} / 100`;
+      elements.salt.level.textContent = formatSaltLevel(salt.saltLevel);
+      elements.salt.mainSource.textContent = salt.mainSource ?? "Low";
+      elements.salt.highCount.textContent = String(salt.highSaltCount ?? 0);
+
+      applySaltTone(elements.salt.score, salt.saltScore);
+      applySaltTone(elements.salt.level, salt.saltScore);
+      applySaltTone(elements.salt.highCount, salt.saltScore);
+      renderSimpleList(
+        elements.salt.cardsList,
+        (salt.topCards ?? []).map(
+          (card) => `${card.name}: ${card.category} (${card.saltWeight.toFixed(1)})`,
+        ),
+        "No major high-salt cards detected.",
+      );
+      renderFindings(salt.findings ?? [], elements.salt.findingsList);
     }
 
     function renderCommander(commander) {
@@ -135,6 +168,23 @@ window.MtgDeckcheckerSummaryPanels = {
       card.style.setProperty("--score-ratio", String(Math.max(0, Math.min(1, score / 100))));
     }
 
+    function applySaltTone(element, score) {
+      const card = element.closest(".future-stat, .stat-card");
+      if (!card) {
+        return;
+      }
+
+      card.classList.remove(
+        "score-card",
+        "score-card-good",
+        "score-card-healthy",
+        "score-card-watch",
+        "score-card-risk",
+      );
+      card.classList.add("score-card", `score-card-${getSaltTone(score)}`);
+      card.style.setProperty("--score-ratio", String(Math.max(0, Math.min(1, score / 100))));
+    }
+
     function getScoreTone(score) {
       if (score >= 70) {
         return "good";
@@ -145,6 +195,26 @@ window.MtgDeckcheckerSummaryPanels = {
       }
 
       return "risk";
+    }
+
+    function getSaltTone(score) {
+      if (score >= 75) {
+        return "risk";
+      }
+
+      if (score >= 40) {
+        return "watch";
+      }
+
+      return "good";
+    }
+
+    function formatSaltLevel(level) {
+      if (!level) {
+        return "Low";
+      }
+
+      return String(level).replace(/^\w/, (letter) => letter.toUpperCase());
     }
 
     function getPowerDimensionScore(power, key) {

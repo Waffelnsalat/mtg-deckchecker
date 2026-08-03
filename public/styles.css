@@ -2372,6 +2372,15 @@ html[data-theme="dark"] .quick-read-box {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.salt-risk-box {
+  grid-column: 1 / -1;
+  border-color: rgba(199, 155, 57, 0.24);
+}
+
+.salt-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .score-radar-chart {
   display: grid;
   grid-template-columns: minmax(260px, 390px) minmax(220px, 1fr);

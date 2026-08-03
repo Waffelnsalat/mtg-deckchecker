@@ -258,6 +258,140 @@ test("analyzeDeckBracket keeps bracket 5 reserved for very high-end cEDH signals
   assert.equal(analysis.powerBracket, 5);
 });
 
+test("analyzeDeckBracket treats bracket 5 barometers as context when bracket 5 is the target", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(
+      9.7,
+      {
+        speed: 90,
+        consistency: 91,
+        interaction: 72,
+        resilience: 68,
+        closing: 92,
+        mana: 86,
+      },
+      "cEDH-Adjacent",
+    ),
+    gameChangers: createGameChangerAnalysis(23),
+    winConditions: createWinConditions({
+      exact: [
+        {
+          cardNames: ["Thassa's Oracle", "Demonic Consultation"],
+        },
+        {
+          cardNames: ["Underworld Breach", "Lion's Eye Diamond"],
+        },
+      ],
+    }),
+    targetBracket: 5,
+  });
+
+  const readFinding = analysis.findings.find((finding: any) => finding.code === "bracket_read");
+  const gameChangerFinding = analysis.findings.find(
+    (finding: any) => finding.code === "bracket_game_changers",
+  );
+  const comboFinding = analysis.findings.find(
+    (finding: any) => finding.code === "bracket_two_card_combo",
+  );
+
+  assert.equal(analysis.recommendedBracket, 5);
+  assert.equal(readFinding?.status, "good");
+  assert.equal(gameChangerFinding?.status, "note");
+  assert.equal(comboFinding?.status, "note");
+});
+
+test("analyzeDeckBracket treats optimized barometers as context when bracket 4 is the target", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([]),
+    power: createPowerAnalysis(6.4, {
+      speed: 56,
+      consistency: 55,
+      interaction: 44,
+      resilience: 60,
+      closing: 64,
+      mana: 58,
+    }),
+    gameChangers: createGameChangerAnalysis(4),
+    winConditions: createWinConditions({
+      exact: [
+        {
+          cardNames: ["Basalt Monolith", "Rings of Brighthearth"],
+        },
+      ],
+    }),
+    targetBracket: 4,
+  });
+
+  const readFinding = analysis.findings.find((finding: any) => finding.code === "bracket_read");
+  const rulesFloorFinding = analysis.findings.find(
+    (finding: any) => finding.code === "bracket_rules_floor",
+  );
+  const gameChangerFinding = analysis.findings.find(
+    (finding: any) => finding.code === "bracket_game_changers",
+  );
+  const comboFinding = analysis.findings.find(
+    (finding: any) => finding.code === "bracket_two_card_combo",
+  );
+
+  assert.equal(analysis.recommendedBracket, 4);
+  assert.equal(readFinding?.status, "good");
+  assert.equal(rulesFloorFinding?.status, "note");
+  assert.equal(gameChangerFinding?.status, "note");
+  assert.equal(comboFinding?.status, "note");
+  assert.match(rulesFloorFinding?.title ?? "", /support/);
+  assert.match(gameChangerFinding?.title ?? "", /support/);
+});
+
+test("analyzeDeckBracket treats extra-turn and mass-land-denial context as notes when bracket 4 is the target", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([
+      createResolvedCard(
+        "mainboard",
+        "Temporal Manipulation",
+        "Sorcery",
+        "Target player takes an extra turn after this one.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        "Time Warp",
+        "Sorcery",
+        "Target player takes an extra turn after this one.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        "Armageddon",
+        "Sorcery",
+        "Destroy all lands.",
+      ),
+    ]),
+    power: createPowerAnalysis(7.65, {
+      speed: 70,
+      consistency: 66,
+      interaction: 48,
+      resilience: 59,
+      closing: 81,
+      mana: 70,
+    }),
+    gameChangers: createGameChangerAnalysis(0),
+    winConditions: createWinConditions(),
+    targetBracket: 4,
+  });
+
+  const extraTurnFinding = analysis.findings.find(
+    (finding: any) => finding.code === "bracket_extra_turns",
+  );
+  const massLandDenialFinding = analysis.findings.find(
+    (finding: any) => finding.code === "bracket_mass_land_denial",
+  );
+
+  assert.equal(analysis.recommendedBracket, 4);
+  assert.equal(extraTurnFinding?.status, "note");
+  assert.equal(massLandDenialFinding?.status, "note");
+  assert.match(extraTurnFinding?.title ?? "", /support/);
+  assert.match(massLandDenialFinding?.title ?? "", /support/);
+});
+
 test("analyzeDeckBracket treats overwhelming cEDH power as bracket 5 even without combo lookup hits", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([]),

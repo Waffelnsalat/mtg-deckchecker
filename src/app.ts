@@ -16,6 +16,7 @@ import { analyzeDeckProtection } from "./protectionAnalysis";
 import { analyzeDeckRecommendations } from "./recommendationAnalysis";
 import { analyzeDeckRecursion } from "./recursionAnalysis";
 import { analyzeDeckRamp } from "./rampAnalysis";
+import { analyzeDeckSalt } from "./saltAnalysis";
 import { analyzeDeckStrategy } from "./strategyAnalysis";
 import { analyzeDeckWinConditions } from "./winConditionAnalysis";
 import { analyzeDeckWinStrategy } from "./winStrategyAnalysis";
@@ -206,6 +207,7 @@ export function createApp() {
         winConditions,
         targetBracket,
       });
+      const salt = analyzeDeckSalt(document);
       const recommendations = await analyzeDeckRecommendations({
         document,
         commander,
@@ -258,6 +260,7 @@ export function createApp() {
           commander,
           power,
           bracket,
+          salt,
           recommendations,
           weaknesses,
           strategy,

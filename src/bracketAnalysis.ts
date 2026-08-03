@@ -446,7 +446,7 @@ function buildBracketFindings(input: {
   findings.push({
     code: "bracket_read",
     title: `Recommended bracket: ${formatBracketLabel(input.recommendedBracket, input.recommendedModifier)}`,
-    status: input.recommendedBracket >= 4 ? "warning" : "note",
+    status: getBracketReadFindingStatus(input),
     message: `Power profile reads as ${formatBracketLabel(input.powerBracketInfo.bracket, input.powerBracketInfo.modifier)}. Rules floor is Bracket ${input.rulesFloor}. Final recommendation is ${formatBracketLabel(input.recommendedBracket, input.recommendedModifier)} (${BRACKET_NAMES[input.recommendedBracket]}).`,
   });
 
@@ -462,8 +462,10 @@ function buildBracketFindings(input: {
   if (input.adjustedByRules) {
     findings.push({
       code: "bracket_rules_floor",
-      title: "Bracket floor was raised by barometers",
-      status: "warning",
+      title: isTargetAligned(input)
+        ? "Bracket barometers support the target bracket"
+        : "Bracket floor was raised by barometers",
+      status: getTargetAwareFindingStatus(input, "warning"),
       message: `The raw power read looked closer to ${formatBracketLabel(input.powerBracketInfo.bracket, input.powerBracketInfo.modifier)}, but the rules floor is ${describeRulesFloor(input.rulesFloor, input.signals, input.gameChangers)}.`,
     });
   }
@@ -485,8 +487,13 @@ function buildBracketFindings(input: {
   if (input.signals.gameChangers > 0) {
     findings.push({
       code: "bracket_game_changers",
-      title: "Game Changers affect the bracket floor",
-      status: input.gameChangers.bracket.bracketThreeLegal ? "note" : "risk",
+      title: isTargetAligned(input)
+        ? "Game Changers support the bracket read"
+        : "Game Changers affect the bracket floor",
+      status: getTargetAwareFindingStatus(
+        input,
+        input.gameChangers.bracket.bracketThreeLegal ? "note" : "risk",
+      ),
       message: input.gameChangers.bracket.bracketThreeLegal
         ? `${input.signals.gameChangers} Game Changer${input.signals.gameChangers === 1 ? "" : "s"} rule the deck out of Bracket 1-2 under the current Commander rules.`
         : `${input.signals.gameChangers} Game Changers exceed the current Bracket 3 cap of ${input.gameChangers.bracket.bracketThreeCap}, so the deck cannot sit below Bracket 4.`,
@@ -496,8 +503,10 @@ function buildBracketFindings(input: {
   if (input.signals.twoCardCombos > 0) {
     findings.push({
       code: "bracket_two_card_combo",
-      title: "Exact two-card infinite combos are present",
-      status: "warning",
+      title: isTargetAligned(input)
+        ? "Exact two-card infinite combos support the bracket read"
+        : "Exact two-card infinite combos are present",
+      status: getTargetAwareFindingStatus(input, "warning"),
       message: `${input.signals.twoCardCombos} exact two-card infinite combo line${input.signals.twoCardCombos === 1 ? "" : "s"} were found. That is treated as an Optimized-level barometer in this bracket read.`,
     });
   }
@@ -505,8 +514,13 @@ function buildBracketFindings(input: {
   if (input.signals.extraTurns > 0) {
     findings.push({
       code: "bracket_extra_turns",
-      title: "Extra turn cards are present",
-      status: input.signals.extraTurns >= 2 ? "warning" : "note",
+      title: isTargetAligned(input)
+        ? "Extra turn cards support the bracket read"
+        : "Extra turn cards are present",
+      status: getTargetAwareFindingStatus(
+        input,
+        input.signals.extraTurns >= 2 ? "warning" : "note",
+      ),
       message:
         input.signals.extraTurns >= 2
           ? `${input.signals.extraTurns} extra-turn cards were found, which pushes the deck toward higher-bracket expectations.`
@@ -517,13 +531,47 @@ function buildBracketFindings(input: {
   if (input.signals.massLandDenial > 0) {
     findings.push({
       code: "bracket_mass_land_denial",
-      title: "Mass land denial is present",
-      status: "warning",
+      title: isTargetAligned(input)
+        ? "Mass land denial supports the bracket read"
+        : "Mass land denial is present",
+      status: getTargetAwareFindingStatus(input, "warning"),
       message: `${input.signals.massLandDenial} mass land denial card${input.signals.massLandDenial === 1 ? "" : "s"} were found, which pushes the deck into higher-bracket expectations.`,
     });
   }
 
   return findings.slice(0, 6);
+}
+
+function getBracketReadFindingStatus(input: {
+  recommendedBracket: DeckBracketNumber;
+  targetComparison: TargetBracketComparison | null;
+}): DeckStructureFinding["status"] {
+  if (isTargetAligned(input)) {
+    return "good";
+  }
+
+  return input.recommendedBracket >= 4 ? "warning" : "note";
+}
+
+function getTargetAwareFindingStatus(
+  input: {
+    recommendedBracket: DeckBracketNumber;
+    targetComparison: TargetBracketComparison | null;
+  },
+  fallbackStatus: DeckStructureFinding["status"],
+): DeckStructureFinding["status"] {
+  return isTargetAligned(input) ? "note" : fallbackStatus;
+}
+
+function isTargetAligned(input: {
+  recommendedBracket: DeckBracketNumber;
+  targetComparison: TargetBracketComparison | null;
+}) {
+  return (
+    input.targetComparison !== null &&
+    input.recommendedBracket === input.targetComparison.bracket &&
+    input.targetComparison.alignment === "aligned"
+  );
 }
 
 function describeRulesFloor(

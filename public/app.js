@@ -114,6 +114,13 @@ const bracketTwoCardCombos = document.querySelector("#bracket-two-card-combos");
 const bracketExtraTurns = document.querySelector("#bracket-extra-turns");
 const bracketLandDenial = document.querySelector("#bracket-land-denial");
 const bracketFindingsList = document.querySelector("#bracket-findings-list");
+const saltSummary = document.querySelector("#salt-summary");
+const saltScore = document.querySelector("#salt-score");
+const saltLevel = document.querySelector("#salt-level");
+const saltMainSource = document.querySelector("#salt-main-source");
+const saltHighCount = document.querySelector("#salt-high-count");
+const saltCardsList = document.querySelector("#salt-cards-list");
+const saltFindingsList = document.querySelector("#salt-findings-list");
 const powerStrengthsList = document.querySelector("#power-strengths-list");
 const powerWeaknessesList = document.querySelector("#power-weaknesses-list");
 const matchupSummary = document.querySelector("#matchup-summary");
@@ -704,6 +711,15 @@ const summaryPanelsController = window.MtgDeckcheckerSummaryPanels.create({
       extraTurns: bracketExtraTurns,
       landDenial: bracketLandDenial,
       findingsList: bracketFindingsList,
+    },
+    salt: {
+      summary: saltSummary,
+      score: saltScore,
+      level: saltLevel,
+      mainSource: saltMainSource,
+      highCount: saltHighCount,
+      cardsList: saltCardsList,
+      findingsList: saltFindingsList,
     },
     commander: {
       summary: commanderSummary,
