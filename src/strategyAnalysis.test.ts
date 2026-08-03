@@ -853,6 +853,96 @@ test("analyzeDeckStrategy counts exact combo pieces toward combo synergy", () =>
   assert.equal(comboPerspective?.synergy.commanderAligned, true);
 });
 
+test("analyzeDeckStrategy promotes dense exact combo packages over broad X-spell noise", () => {
+  const analysis = analyzeDeckStrategy(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Card Sink Commander",
+        "Legendary Creature - Merfolk Wizard",
+        2,
+        "{4}: Scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card.",
+        { color_identity: ["G", "U"] },
+      ),
+      createResolvedCard("mainboard", 1, "Finale Style", "Sorcery", 2, "Search your library for a creature card with mana value X or less and put it onto the battlefield. If X is 10 or more, creatures you control get +X/+X.", { mana_cost: "{X}{G}{G}" } as any),
+      createResolvedCard("mainboard", 1, "Oracle Style", "Creature - Merfolk Wizard", 2, "When this creature enters the battlefield, look at the top X cards of your library, where X is your devotion to blue."),
+      createResolvedCard("mainboard", 1, "Consult Style", "Instant", 1, "Name a card. Exile cards from the top of your library until you exile the named card."),
+      createResolvedCard("mainboard", 1, "Scepter Style", "Artifact", 2, ""),
+      createResolvedCard("mainboard", 1, "Reversal Style", "Instant", 2, "Untap all nonland permanents you control."),
+      createResolvedCard("mainboard", 1, "Bloom Style", "Creature - Elf Druid", 2, "{T}: Add one mana of each color among permanents you control."),
+      createResolvedCard("mainboard", 1, "Freed Style", "Enchantment - Aura", 3, "{U}: Untap enchanted creature."),
+      createResolvedCard("mainboard", 91, "Island", "Basic Land - Island", 0, ""),
+    ]),
+    {
+      ...createEmptyWinConditions(),
+      combos: {
+        source: "Commander Spellbook",
+        lookupStatus: "ok",
+        exactCount: 4,
+        finisherCount: 2,
+        engineCount: 2,
+        nearMissCount: 0,
+        exact: [
+          createComboLine("oracle-consult", "finisher", ["Oracle Style", "Consult Style"]),
+          createComboLine("scepter-reversal", "engine", ["Scepter Style", "Reversal Style"]),
+          createComboLine("bloom-freed", "engine", ["Bloom Style", "Freed Style"]),
+          createComboLine("finale-payoff", "finisher", ["Finale Style", "Bloom Style", "Freed Style"]),
+        ],
+      },
+    },
+  );
+
+  assert.equal(analysis.mainStrategy?.key, "combo");
+  assert.notEqual(analysis.mainStrategy?.key, "x_spells");
+  assert.ok((analysis.topStrategies.find((entry) => entry.key === "x_spells")?.score ?? 0) < 90);
+});
+
+test("analyzeDeckStrategy does not treat ordinary where-X formulas as X-spells", () => {
+  const analysis = analyzeDeckStrategy(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Attack Mana Commander",
+        "Legendary Creature - Dragon",
+        7,
+        "Whenever this creature attacks, add X mana in any combination of colors, where X is the total power of attacking creatures.",
+        { color_identity: ["R", "G"] },
+      ),
+      createResolvedCard(
+        "mainboard",
+        12,
+        "Power Draw",
+        "Sorcery",
+        5,
+        "Draw cards equal to the greatest power among creatures you control.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        4,
+        "Life Payment Draw",
+        "Creature - Cleric",
+        3,
+        "At the beginning of your postcombat main phase, you may pay X life. If you do, draw X cards, where X is the number of opponents that were dealt combat damage this turn.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        10,
+        "Big Creature",
+        "Creature - Beast",
+        6,
+        "Trample.",
+      ),
+      createResolvedCard("mainboard", 77, "Forest", "Basic Land - Forest", 0, ""),
+    ]),
+    createEmptyWinConditions(),
+  );
+
+  assert.equal(analysis.mainStrategy?.key, "power_matter");
+  assert.ok((analysis.topStrategies.find((entry) => entry.key === "x_spells")?.score ?? 0) < 55);
+});
+
 test("analyzeDeckStrategy gives a secret commander a small extra pull", () => {
   const document = createDocument([
     createResolvedCard(
@@ -2740,6 +2830,27 @@ function createVariedFillerCreatures(entries: Array<[string, string, number]>) {
   return entries.map(([name, typeLine, quantity]) =>
     createResolvedCard("mainboard", quantity, name, typeLine, 2, ""),
   );
+}
+
+function createComboLine(
+  id: string,
+  lineType: "engine" | "finisher",
+  cardNames: string[],
+  commanderInvolved = false,
+) {
+  return {
+    id,
+    comboValue: 1.2,
+    lineType,
+    cardNames,
+    outcomeNames: lineType === "finisher" ? ["Wins the game"] : ["Infinite mana"],
+    description: "",
+    manaNeeded: "",
+    notablePrerequisites: [],
+    bracketTag: "S",
+    variantCount: 1,
+    commanderInvolved,
+  };
 }
 
 function createEmptyWinConditions(): DeckWinConditionAnalysis {

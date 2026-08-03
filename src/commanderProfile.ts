@@ -23,6 +23,47 @@ interface CommanderProfileContext {
   creatureTypes: Map<string, number>;
 }
 
+const KNOWN_COMMANDER_CREATURE_TYPES = [
+  "advisor",
+  "angel",
+  "army",
+  "assassin",
+  "beast",
+  "bird",
+  "cat",
+  "cleric",
+  "demon",
+  "dinosaur",
+  "dog",
+  "dragon",
+  "eldrazi",
+  "elemental",
+  "elf",
+  "faerie",
+  "frog",
+  "goblin",
+  "human",
+  "merfolk",
+  "mutant",
+  "ninja",
+  "orc",
+  "phyrexian",
+  "pirate",
+  "rat",
+  "rogue",
+  "samurai",
+  "saproling",
+  "sliver",
+  "soldier",
+  "squirrel",
+  "thopter",
+  "vampire",
+  "wall",
+  "warrior",
+  "wizard",
+  "zombie",
+];
+
 export function analyzeCommanderProfiles(document: DeckResolutionDocument): DeckCommanderProfile[] {
   const deckCards = document.result.resolvedCards.filter(
     (card) => card.section === "commander" || card.section === "mainboard",
@@ -115,8 +156,11 @@ const BASE_COMMANDER_PROFILE_RULES: CommanderProfileRule[] = [
     supportReason: "Token makers, token payoffs, and populate-style effects are the material this commander asks for.",
     supportTarget: 16,
     coreTarget: 8,
-    askMatcher: (text) => /\btokens? you control\b|\bcreature tokens? you control\b|\bpopulate\b|\bwhenever\b[^.]{0,120}\btokens?\b/.test(text),
-    supportMatcher: (deckCard) => /\bcreate\b[^.]{0,120}\btokens?\b|\btokens? you control\b|\bpopulate\b/.test(getCardText(deckCard.card)),
+    askMatcher: (text) =>
+      /\btokens? you control\b|\bcreature tokens? you control\b|\bpopulate\b|\bwhenever\b[^.]{0,120}\btokens?\b|\btokens? would be created\b|\bcreate\b[^.]{0,160}\btokens?\b|\bamass\b/.test(
+        text,
+      ),
+    supportMatcher: (deckCard) => /\bcreate\b[^.]{0,120}\btokens?\b|\btokens? you control\b|\bpopulate\b|\bamass\b/.test(getCardText(deckCard.card)),
   },
   {
     key: "aristocrats",
@@ -147,6 +191,25 @@ const BASE_COMMANDER_PROFILE_RULES: CommanderProfileRule[] = [
     coreMatcher: (deckCard) => !hasCardType(deckCard.card, "Land"),
   },
   {
+    key: "reanimator",
+    label: "Graveyard Recursion Package",
+    supportReason: "Graveyard setup, replay effects, and reanimation cards are the material this commander asks for.",
+    supportTarget: 15,
+    coreTarget: 7,
+    askMatcher: (text) =>
+      /\b(?:cast|play)\b[^.]{0,140}\bfrom your graveyard\b|\bfrom your graveyard to the battlefield\b|\breturn\b[^.]{0,160}\bfrom your graveyard\b|\bcreature cards? in your graveyard\b|\bcards? leave your graveyard\b/.test(
+        text,
+      ),
+    supportMatcher: (deckCard) =>
+      /\b(?:cast|play)\b[^.]{0,140}\bfrom your graveyard\b|\bfrom your graveyard to the battlefield\b|\breturn\b[^.]{0,160}\bfrom your graveyard\b|\bmill\b|\bsurveil\b|\bdiscard\b[^.]{0,120}\bcard\b/.test(
+        getCardText(deckCard.card),
+      ),
+    coreMatcher: (deckCard) =>
+      /\b(?:cast|play)\b[^.]{0,140}\bfrom your graveyard\b|\bfrom your graveyard to the battlefield\b|\breturn\b[^.]{0,160}\bfrom your graveyard\b/.test(
+        getCardText(deckCard.card),
+      ),
+  },
+  {
     key: "spellslinger",
     label: "Instant / Sorcery Package",
     supportReason: "Instants, sorceries, spell-copy effects, and cast triggers are the material this commander asks for.",
@@ -161,8 +224,13 @@ const BASE_COMMANDER_PROFILE_RULES: CommanderProfileRule[] = [
     supportReason: "Artifacts, artifact payoffs, and artifact cost reducers are the material this commander asks for.",
     supportTarget: 20,
     coreTarget: 10,
-    askMatcher: (text) => /\bartifact spells? you cast\b|\bartifacts? you control\b|\bfor each artifact\b|\bwhenever\b[^.]{0,120}\bartifacts?\b/.test(text),
-    supportMatcher: (deckCard) => hasCardType(deckCard.card, "Artifact") || /\bartifacts? you control\b|\bartifact spells? you cast\b/.test(getCardText(deckCard.card)),
+    askMatcher: (text) =>
+      /\bartifact spells? you cast\b|\bartifacts? you control\b|\bfor each artifact\b|\bsacrifice\b[^.]{0,100}\bartifacts?\b|\bwhenever\b[^.]{0,120}\bartifacts?\b/.test(
+        text,
+      ),
+    supportMatcher: (deckCard) =>
+      hasCardType(deckCard.card, "Artifact") ||
+      /\bartifacts? you control\b|\bartifact spells? you cast\b|\bsacrifice\b[^.]{0,100}\bartifacts?\b/.test(getCardText(deckCard.card)),
   },
   {
     key: "enchantress",
@@ -190,6 +258,81 @@ const BASE_COMMANDER_PROFILE_RULES: CommanderProfileRule[] = [
     coreTarget: 7,
     askMatcher: (text) => /\bcounters? on\b|\bput\b[^.]{0,100}\bcounters?\b|\bremove\b[^.]{0,100}\bcounters?\b|\bproliferate\b|\bchoose a kind of counter\b/.test(text),
     supportMatcher: (deckCard) => /\bcounters?\b|\bproliferate\b/.test(getCardText(deckCard.card)),
+  },
+  {
+    key: "legends_matter",
+    label: "Legendary Package",
+    supportReason: "Legendary permanents, historic cards, and legendary payoffs are the material this commander asks for.",
+    supportTarget: 13,
+    coreTarget: 6,
+    askMatcher: (text) =>
+      /\blegendary (?:spells?|creatures?|permanents?|cards?)\b|\banother legendary\b|\bfor each legendary\b|\bhistoric\b/.test(text),
+    supportMatcher: (deckCard) =>
+      isLegendaryCard(deckCard.card) || /\blegendary (?:spells?|creatures?|permanents?|cards?)\b|\bhistoric\b/.test(getCardText(deckCard.card)),
+    coreMatcher: (deckCard) => isLegendaryCard(deckCard.card),
+  },
+  {
+    key: "ninjutsu",
+    label: "Ninjutsu Package",
+    supportReason: "Ninjas, evasive attackers, and topdeck damage payoffs are the material this commander asks for.",
+    supportTarget: 13,
+    coreTarget: 6,
+    askMatcher: (text) => /\bninjutsu\b|\bcommander ninjutsu\b|\bunblocked attacker\b|\bninjas? you control\b/.test(text),
+    supportMatcher: (deckCard) =>
+      hasCreatureType(deckCard.card, "ninja") ||
+      /\bninjutsu\b|\bcommander ninjutsu\b|\bcan't be blocked\b|\bunblockable\b|\bflying\b|\bmenace\b|\btop card of your library\b/.test(getCardText(deckCard.card)),
+    coreMatcher: (deckCard) => hasCreatureType(deckCard.card, "ninja") || /\bninjutsu\b|\bcommander ninjutsu\b/.test(getCardText(deckCard.card)),
+  },
+  {
+    key: "food",
+    label: "Food Package",
+    supportReason: "Food production, Food sacrifice, and Food payoffs are the material this commander asks for.",
+    supportTarget: 12,
+    coreTarget: 6,
+    askMatcher: (text) => /\bfoods? you control\b|\bfood tokens?\b|\bcreate\b[^.]{0,120}\bfood\b|\bsacrifice\b[^.]{0,80}\bfood\b|\bwhenever\b[^.]{0,120}\bfood\b/.test(text),
+    supportMatcher: (deckCard) => /\bfoods? you control\b|\bfood tokens?\b|\bcreate\b[^.]{0,120}\bfood\b|\bsacrifice\b[^.]{0,80}\bfood\b|\bwhenever\b[^.]{0,120}\bfood\b/.test(getCardText(deckCard.card)),
+  },
+  {
+    key: "dice_rolls",
+    label: "Dice-Roll Package",
+    supportReason: "Dice rolling, Attractions, and dice payoffs are the material this commander asks for.",
+    supportTarget: 8,
+    coreTarget: 4,
+    askMatcher: (text) => /\broll (?:a|one or more|two|three|four|six-sided)\b|\bwhenever you roll\b|\brolled\b|\bdie result\b|\bdice\b/.test(text),
+    supportMatcher: (deckCard) => /\broll (?:a|one or more|two|three|four|six-sided)\b|\bwhenever you roll\b|\brolled\b|\bdie result\b|\bdice\b|\battraction\b/.test(getCardText(deckCard.card)),
+  },
+  {
+    key: "treasure",
+    label: "Treasure Package",
+    supportReason: "Treasure production, Treasure payoffs, and token-mana engines are the material this commander asks for.",
+    supportTarget: 13,
+    coreTarget: 6,
+    askMatcher: (text) => /\btreasures? you control\b|\btreasure tokens?\b|\bcreate\b[^.]{0,120}\btreasure\b|\bsacrifice\b[^.]{0,80}\btreasure\b|\bwhenever\b[^.]{0,120}\btreasure\b/.test(text),
+    supportMatcher: (deckCard) => /\btreasures? you control\b|\btreasure tokens?\b|\bcreate\b[^.]{0,120}\btreasure\b|\bsacrifice\b[^.]{0,80}\btreasure\b|\bwhenever\b[^.]{0,120}\btreasure\b/.test(getCardText(deckCard.card)),
+  },
+  {
+    key: "aggro",
+    label: "Attack-Trigger Package",
+    supportReason: "Attack triggers, extra combat steps, haste, and combat payoffs are the material this commander asks for.",
+    supportTarget: 18,
+    coreTarget: 8,
+    askMatcher: (text) =>
+      /\bwhenever\b[^.]{0,120}\battacks?\b|\bwhenever you attack\b|\bif a creature attacking causes\b|\battacking causes a triggered ability\b|\btriggers? an additional time\b/.test(
+        text,
+      ),
+    supportMatcher: (deckCard) =>
+      /\bwhenever\b[^.]{0,120}\battacks?\b|\bwhenever you attack\b|\battacking creature\b|\bextra combat\b|\badditional combat\b|\bhaste\b|\bmenace\b|\bdouble strike\b/.test(
+        getCardText(deckCard.card),
+      ),
+  },
+  {
+    key: "madness",
+    label: "Discard Package",
+    supportReason: "Discard outlets, discard payoffs, madness cards, and graveyard setup are the material this commander asks for.",
+    supportTarget: 12,
+    coreTarget: 6,
+    askMatcher: (text) => /\bwhenever you discard\b|\bdiscard a (?:creature |nonland |land )?card\b|\bmadness\b/.test(text),
+    supportMatcher: (deckCard) => /\bwhenever you discard\b|\bdiscard (?:a|one or more|your hand|cards?)\b|\bmadness\b|\bcycling\b/.test(getCardText(deckCard.card)),
   },
   {
     key: "extra_upkeep",
@@ -233,8 +376,14 @@ const BASE_COMMANDER_PROFILE_RULES: CommanderProfileRule[] = [
     supportReason: "Broad damage, life-loss, and punishment effects are the material this commander asks for.",
     supportTarget: 12,
     coreTarget: 6,
-    askMatcher: (text) => /\beach opponent loses\b|\bdeals? \d+ damage to each opponent\b|\bwhenever an opponent\b[^.]{0,120}\bloses life\b/.test(text),
-    supportMatcher: (deckCard) => /\beach opponent loses\b|\bdeals? \d+ damage to each opponent\b|\bwhenever an opponent\b[^.]{0,120}\bloses life\b/.test(getCardText(deckCard.card)),
+    askMatcher: (text) =>
+      /\beach opponent loses\b|\bdeals? \d+ damage to each opponent\b|\bwhenever an opponent\b[^.]{0,120}\bloses life\b|\bwhenever an opponent draws\b[^.]{0,120}\b(?:deals? \d+ damage|loses? \d+ life)\b/.test(
+        text,
+      ),
+    supportMatcher: (deckCard) =>
+      /\beach opponent loses\b|\bdeals? \d+ damage to each opponent\b|\bwhenever an opponent\b[^.]{0,120}\bloses life\b|\bwhenever an opponent draws\b[^.]{0,120}\b(?:deals? \d+ damage|loses? \d+ life)\b|\beach player draws\b|\bplayers? discards? (?:their|his or her) hand\b|\bdiscard their hands?\b/.test(
+        getCardText(deckCard.card),
+      ),
   },
   {
     key: "lifegain",
@@ -502,16 +651,31 @@ function getCreatureTypes(card: ScryfallCard) {
 
 function extractRequestedCreatureTypes(text: string, creatureTypes: Map<string, number>) {
   const requested: string[] = [];
+  const candidateTypes = new Set<string>();
+
   for (const [type, count] of creatureTypes) {
-    if (count < 5 || type.length < 3) {
+    if (count >= 5 && type.length >= 3) {
+      candidateTypes.add(type);
+    }
+  }
+
+  for (const type of KNOWN_COMMANDER_CREATURE_TYPES) {
+    candidateTypes.add(type);
+  }
+
+  for (const type of candidateTypes) {
+    if (type.length < 3) {
       continue;
     }
-    const pattern = new RegExp(`\\b${escapeRegex(type)}s?\\b[^.]{0,120}\\b(?:you control|spell|spells|card|cards|attack|attacks|deals|enters|dies|draw|create|costs?|have|gain)\\b|\\b(?:whenever|if|as)\\b[^.]{0,100}\\b${escapeRegex(type)}s?\\b`);
+    const escapedType = escapeRegex(type);
+    const pattern = new RegExp(
+      `\\b${escapedType}s?\\b[^.]{0,140}\\b(?:you control|spell|spells|card|cards|attack|attacks|deals|enters|dies|draw|create|costs?|have|gain|permanent|permanents)\\b|\\b(?:whenever|if|as|each|another|other)\\b[^.]{0,120}\\b${escapedType}s?\\b|\\bamass\\s+${escapedType}s?\\b`,
+    );
     if (pattern.test(text)) {
       requested.push(type);
     }
   }
-  return requested.slice(0, 2);
+  return requested.slice(0, 3);
 }
 
 function hasCardType(card: ScryfallCard, type: string) {

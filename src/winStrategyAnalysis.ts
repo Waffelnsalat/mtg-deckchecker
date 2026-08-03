@@ -378,7 +378,7 @@ function mapStrategyToWinPlan(
         : context.commanderFreeCastDeathNames.length > 0 ? "spell_burst"
         : "value_attrition";
     case "power_matter":
-      return context.combatFinisherNames.length > 0 ? "go_wide_combat" : "value_attrition";
+      return context.combatFinisherNames.length > 0 ? "extra_combat_pressure" : "value_attrition";
     case "mana_value_matter":
       return winConditions.combos.exactCount > 0 ? "infinite_combo" : "big_mana_haymakers";
     case "x_spells":

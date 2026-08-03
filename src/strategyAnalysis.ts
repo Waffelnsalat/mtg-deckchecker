@@ -354,8 +354,9 @@ export function analyzeDeckStrategy(
     .sort((left, right) => right.score - left.score || right.rawScore - left.rawScore);
 
   const strongestByScore = rankedStrategies[0] ?? null;
+  const comboStrategy = selectComboMainStrategy(rankedStrategies, winConditions);
   const commanderProfileStrategy = selectCommanderProfileMainStrategy(rankedStrategies, context);
-  const strongestStrategy = commanderProfileStrategy ?? strongestByScore;
+  const strongestStrategy = comboStrategy ?? commanderProfileStrategy ?? strongestByScore;
   const mainStrategy =
     strongestStrategy && strongestStrategy.score >= 24 ? strongestStrategy : null;
   const mainStrategySeed =
@@ -458,6 +459,27 @@ function selectCommanderProfileMainStrategy(
   ]);
 
   if (candidate.key !== strongest.key && !broadStrategies.has(strongest.key)) {
+    return null;
+  }
+
+  return candidate;
+}
+
+function selectComboMainStrategy(
+  rankedStrategies: DeckStrategyEntry[],
+  winConditions: DeckWinConditionAnalysis,
+) {
+  if (winConditions.combos.lookupStatus !== "ok" || winConditions.combos.exactCount < 3) {
+    return null;
+  }
+
+  const strongest = rankedStrategies[0] ?? null;
+  const candidate = rankedStrategies.find((entry) => entry.key === "combo") ?? null;
+  if (!strongest || !candidate) {
+    return null;
+  }
+
+  if (candidate.score < 82 || candidate.score < strongest.score - 10) {
     return null;
   }
 
@@ -1200,7 +1222,7 @@ function detectStrategyHits(card: ScryfallCard, context: StrategyContext): Strat
       addStrategyHit(hits, "spellslinger", 0.1, "X-spells often overlap with spell velocity.");
     }
 
-    if (hasXSpellPayoffText(text)) {
+    if (hasXSpellPayoffText(text, card)) {
       addStrategyHit(
         hits,
         "x_spells",
@@ -1995,6 +2017,7 @@ function selectPerspectiveSubStrategies(
 
   const selected = rankedStrategies
     .filter((entry) => entry.key !== mainStrategy.key)
+    .filter((entry) => isUsefulPerspectiveSubStrategy(mainStrategy, entry))
     .filter(
       (entry) => entry.score >= minimumScore && entry.rawScore >= minimumRaw,
     )
@@ -2028,6 +2051,19 @@ function selectPerspectiveSubStrategies(
   return selected
     .sort((left, right) => right.score - left.score || right.rawScore - left.rawScore)
     .slice(0, 3);
+}
+
+function isUsefulPerspectiveSubStrategy(mainStrategy: DeckStrategyEntry, entry: DeckStrategyEntry) {
+  if (
+    mainStrategy.key === "combo" &&
+    entry.key === "x_spells" &&
+    entry.rawScore < mainStrategy.rawScore * 0.6 &&
+    entry.rawScore < 14
+  ) {
+    return false;
+  }
+
+  return true;
 }
 
 function includeRelatedPerspectiveStrategy(
@@ -2145,6 +2181,10 @@ function normalizeStrategyScore(
     rawScore > 0
   ) {
     score += 4;
+  }
+
+  if (key === "x_spells" && totals.combo >= 10 && totals.combo >= rawScore * 1.6) {
+    score = Math.min(score, 82);
   }
 
   return clamp(Math.round(applyStrategyScoreSoftCeiling(score, rawRatio)), 0, 100);
@@ -2942,13 +2982,12 @@ function getManaValueMatterWeight(text: string) {
 }
 
 function hasXSpellText(text: string, card?: ScryfallCard) {
-  return hasXInManaCost(card) || hasScalableXEffectText(text);
+  return hasXInManaCost(card) || hasExplicitXSpellScalingText(text);
 }
 
-function hasXSpellPayoffText(text: string) {
+function hasXSpellPayoffText(text: string, card?: ScryfallCard) {
   return (
-    /\bwhere x is\b/.test(text) ||
-    /\bif x is (?:\d+|ten|five|six|seven|eight|nine) or (?:more|greater)\b/.test(text) ||
+    (hasXInManaCost(card) && /\bif x is (?:\d+|ten|five|six|seven|eight|nine) or (?:more|greater)\b/.test(text)) ||
     /\bspent to cast\b[^.]{0,120}\b(?:x|mana)\b/.test(text) ||
     /\bwhenever\b[^.]{0,160}\bcast\b[^.]{0,160}\b(?:mana value|x)\b/.test(text)
   );
@@ -3016,8 +3055,15 @@ function hasScalableXEffectText(text: string) {
     hasXTutorText(text) ||
     hasXRemovalText(text) ||
     hasXMillText(text) ||
-    hasXCounterOrPumpText(text) ||
-    /\bwhere x is\b/.test(text)
+    hasXCounterOrPumpText(text)
+  );
+}
+
+function hasExplicitXSpellScalingText(text: string) {
+  return (
+    /\bspend only\b[^.]{0,80}\bx\b/.test(text) ||
+    /\bx can'?t be\b/.test(text) ||
+    /\bwith x in (?:its|their) mana cost\b/.test(text)
   );
 }
 
@@ -3541,7 +3587,7 @@ function hasXSpellCardText(card: ScryfallCard) {
 }
 
 function hasXSpellPayoffCardText(card: ScryfallCard) {
-  return getStrategySegments(card).some((segment) => hasXSpellPayoffText(segment.text));
+  return getStrategySegments(card).some((segment) => hasXSpellPayoffText(segment.text, card));
 }
 
 function hasManaEngineCardText(card: ScryfallCard) {

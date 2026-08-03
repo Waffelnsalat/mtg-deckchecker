@@ -1330,6 +1330,8 @@ function getInteractionProfile(text: string): CommanderRoleProfile | null {
     /\bdestroy target\b/.test(text) ||
     /\bexile target\b/.test(text) ||
     /\breturn target (?:spell|nonland permanent|creature|artifact|enchantment)\b/.test(text) ||
+    /\bgain control of target\b[^.]{0,100}\b(?:artifact|creature|permanent|spell|planeswalker)\b/.test(text) ||
+    /\byou control enchanted (?:artifact|creature|permanent|planeswalker)\b/.test(text) ||
     /\btarget opponent sacrifices\b/.test(text) ||
     /\bfight target\b/.test(text)
   ) {

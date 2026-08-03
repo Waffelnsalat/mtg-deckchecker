@@ -373,6 +373,13 @@ function detectRemovalHits(
         continue;
       }
 
+      if (
+        (tag === "targeted_removal" || tag === "tempo_removal") &&
+        isSelfFocusedAdvancedRemoval(qualityText)
+      ) {
+        continue;
+      }
+
       addWeightedHit(hits, tag, weight, getRoleReason(advancedProfile, role));
     }
   }
@@ -382,6 +389,13 @@ function detectRemovalHits(
     weight: roundTo(applyEffectQualityDiscount(value.weight, qualityText), 2),
     reason: [...value.reasons].join(" "),
   }));
+}
+
+function isSelfFocusedAdvancedRemoval(text: string) {
+  return (
+    /\b(?:exile|return|destroy)\b[^.]{0,160}\btarget\b[^.]{0,160}\b(?:you control|you own)\b/.test(text) ||
+    /\b(?:exile|return|destroy)\b[^.]{0,160}\b(?:a|an|one|target)\b[^.]{0,120}\b(?:card|permanent|artifact|creature|land)\b[^.]{0,120}\bfrom your\b/.test(text)
+  );
 }
 
 function detectSpellInteractionHits(

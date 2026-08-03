@@ -460,6 +460,28 @@ test("analyzeDeckRemoval does not show zero when targeted and tempo removal are 
   assert.ok(analysis.removalScore < 58);
 });
 
+test("analyzeDeckRemoval ignores self-exile utility from advanced fallback", () => {
+  const analysis = analyzeDeckRemoval(
+    createDocument([
+      createResolvedCard("commander", 1, "Blue Artifact Commander", "Legendary Creature - Wizard", 4, "", {
+        color_identity: ["U"],
+      }),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Lens Style",
+        "Artifact",
+        3,
+        "Imprint - When this artifact enters the battlefield, you may exile target land you control. Whenever a land with the same name is tapped for mana, its controller adds one mana of any type that land produced.",
+      ),
+      createResolvedCard("mainboard", 98, "Island", "Basic Land - Island", 0, ""),
+    ]),
+  );
+
+  assert.equal(analysis.taggedCards.some((card) => card.name === "Lens Style"), false);
+  assert.equal(analysis.counts.targeted, 0);
+});
+
 test("analyzeDeckSpellInteraction classifies hard, soft, tempo, and broad stack answers", () => {
   const analysis = analyzeDeckSpellInteraction(
     createDocument([

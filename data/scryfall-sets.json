@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "retrievedAt": "2026-06-20T21:59:22.020Z",
+  "retrievedAt": "2026-08-03T09:40:48.544Z",
   "sourceUrl": "https://api.scryfall.com/sets",
-  "setCount": 1043,
+  "setCount": 1047,
   "sets": [
     {
       "code": "lea",
@@ -174,7 +174,7 @@
       "name": "Media and Collaboration Promos",
       "releasedAt": "1995-01-01",
       "setType": "promo",
-      "cardCount": 98,
+      "cardCount": 101,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/pmei",
@@ -1241,7 +1241,7 @@
       "name": "Magic Online Promos",
       "releasedAt": "2002-06-24",
       "setType": "promo",
-      "cardCount": 3110,
+      "cardCount": 3094,
       "digital": true,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/prm",
@@ -2539,7 +2539,7 @@
       "name": "URL/Convention Promos",
       "releasedAt": "2009-02-08",
       "setType": "promo",
-      "cardCount": 16,
+      "cardCount": 18,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/purl",
@@ -6033,17 +6033,6 @@
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Aph17&unique=prints"
     },
     {
-      "code": "oc18",
-      "name": "Commander 2018 Oversized",
-      "releasedAt": "2018-08-09",
-      "setType": "memorabilia",
-      "cardCount": 4,
-      "digital": false,
-      "parentSetCode": "c18",
-      "scryfallUri": "https://scryfall.com/sets/oc18",
-      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Aoc18&unique=prints"
-    },
-    {
       "code": "tc18",
       "name": "Commander 2018 Tokens",
       "releasedAt": "2018-08-09",
@@ -6064,6 +6053,17 @@
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/c18",
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ac18&unique=prints"
+    },
+    {
+      "code": "oc18",
+      "name": "Commander 2018 Oversized",
+      "releasedAt": "2018-08-10",
+      "setType": "memorabilia",
+      "cardCount": 4,
+      "digital": false,
+      "parentSetCode": "c18",
+      "scryfallUri": "https://scryfall.com/sets/oc18",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Aoc18&unique=prints"
     },
     {
       "code": "grn",
@@ -6343,7 +6343,7 @@
     {
       "code": "amh1",
       "name": "Modern Horizons Art Series",
-      "releasedAt": "2019-06-05",
+      "releasedAt": "2019-06-14",
       "setType": "memorabilia",
       "cardCount": 54,
       "digital": false,
@@ -6475,7 +6475,7 @@
     {
       "code": "oc19",
       "name": "Commander 2019 Oversized",
-      "releasedAt": "2019-08-31",
+      "releasedAt": "2019-08-23",
       "setType": "memorabilia",
       "cardCount": 4,
       "digital": false,
@@ -6587,7 +6587,7 @@
       "name": "Secret Lair Drop",
       "releasedAt": "2019-12-02",
       "setType": "box",
-      "cardCount": 2581,
+      "cardCount": 2640,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/sld",
@@ -8816,39 +8816,6 @@
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Awone&unique=prints"
     },
     {
-      "code": "aone",
-      "name": "Phyrexia: All Will Be One Art Series",
-      "releasedAt": "2023-02-03",
-      "setType": "memorabilia",
-      "cardCount": 81,
-      "digital": false,
-      "parentSetCode": "one",
-      "scryfallUri": "https://scryfall.com/sets/aone",
-      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Aaone&unique=prints"
-    },
-    {
-      "code": "fone",
-      "name": "Phyrexia: All Will Be One Jumpstart Front Cards",
-      "releasedAt": "2023-02-03",
-      "setType": "memorabilia",
-      "cardCount": 5,
-      "digital": false,
-      "parentSetCode": "one",
-      "scryfallUri": "https://scryfall.com/sets/fone",
-      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Afone&unique=prints"
-    },
-    {
-      "code": "mone",
-      "name": "Phyrexia: All Will Be One Minigames",
-      "releasedAt": "2023-02-03",
-      "setType": "minigame",
-      "cardCount": 5,
-      "digital": false,
-      "parentSetCode": "one",
-      "scryfallUri": "https://scryfall.com/sets/mone",
-      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Amone&unique=prints"
-    },
-    {
       "code": "tonc",
       "name": "Phyrexia: All Will Be One Commander Tokens",
       "releasedAt": "2023-02-03",
@@ -8869,6 +8836,39 @@
       "parentSetCode": "one",
       "scryfallUri": "https://scryfall.com/sets/tone",
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Atone&unique=prints"
+    },
+    {
+      "code": "aone",
+      "name": "Phyrexia: All Will Be One Art Series",
+      "releasedAt": "2023-02-10",
+      "setType": "memorabilia",
+      "cardCount": 81,
+      "digital": false,
+      "parentSetCode": "one",
+      "scryfallUri": "https://scryfall.com/sets/aone",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Aaone&unique=prints"
+    },
+    {
+      "code": "fone",
+      "name": "Phyrexia: All Will Be One Jumpstart Front Cards",
+      "releasedAt": "2023-02-10",
+      "setType": "memorabilia",
+      "cardCount": 5,
+      "digital": false,
+      "parentSetCode": "one",
+      "scryfallUri": "https://scryfall.com/sets/fone",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Afone&unique=prints"
+    },
+    {
+      "code": "mone",
+      "name": "Phyrexia: All Will Be One Minigames",
+      "releasedAt": "2023-02-10",
+      "setType": "minigame",
+      "cardCount": 5,
+      "digital": false,
+      "parentSetCode": "one",
+      "scryfallUri": "https://scryfall.com/sets/mone",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Amone&unique=prints"
     },
     {
       "code": "onc",
@@ -9894,17 +9894,6 @@
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ayotj&unique=prints"
     },
     {
-      "code": "h2r",
-      "name": "Modern Horizons 2 Timeshifts",
-      "releasedAt": "2024-06-07",
-      "setType": "draft_innovation",
-      "cardCount": 16,
-      "digital": false,
-      "parentSetCode": "mh3",
-      "scryfallUri": "https://scryfall.com/sets/h2r",
-      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ah2r&unique=prints"
-    },
-    {
       "code": "amh3",
       "name": "Modern Horizons 3 Art Series",
       "releasedAt": "2024-06-14",
@@ -9914,6 +9903,17 @@
       "parentSetCode": "mh3",
       "scryfallUri": "https://scryfall.com/sets/amh3",
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Aamh3&unique=prints"
+    },
+    {
+      "code": "h2r",
+      "name": "Modern Horizons 2 Timeshifts",
+      "releasedAt": "2024-06-14",
+      "setType": "draft_innovation",
+      "cardCount": 16,
+      "digital": false,
+      "parentSetCode": "mh3",
+      "scryfallUri": "https://scryfall.com/sets/h2r",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ah2r&unique=prints"
     },
     {
       "code": "m3c",
@@ -10349,7 +10349,7 @@
       "name": "Spotlight Series",
       "releasedAt": "2025-01-03",
       "setType": "promo",
-      "cardCount": 12,
+      "cardCount": 13,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/pspl",
@@ -11075,7 +11075,7 @@
       "name": "MagicFest 2026",
       "releasedAt": "2026-01-01",
       "setType": "promo",
-      "cardCount": 7,
+      "cardCount": 13,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/pf26",
@@ -11086,7 +11086,7 @@
       "name": "Wizards Play Network 2026",
       "releasedAt": "2026-01-01",
       "setType": "promo",
-      "cardCount": 16,
+      "cardCount": 23,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/pw26",
@@ -11416,7 +11416,7 @@
       "name": "The Hobbit",
       "releasedAt": "2026-08-14",
       "setType": "expansion",
-      "cardCount": 39,
+      "cardCount": 321,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/hob",
@@ -11424,10 +11424,10 @@
     },
     {
       "code": "hoc",
-      "name": "The Hobbit Commander",
+      "name": "The Hobbit Eternal",
       "releasedAt": "2026-08-14",
-      "setType": "commander",
-      "cardCount": 7,
+      "setType": "eternal",
+      "cardCount": 158,
       "digital": false,
       "parentSetCode": "hob",
       "scryfallUri": "https://scryfall.com/sets/hoc",
@@ -11438,29 +11438,62 @@
       "name": "The Hobbit Tokens",
       "releasedAt": "2026-08-14",
       "setType": "token",
-      "cardCount": 2,
+      "cardCount": 15,
       "digital": false,
       "parentSetCode": "hob",
       "scryfallUri": "https://scryfall.com/sets/thob",
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Athob&unique=prints"
     },
     {
+      "code": "mbc",
+      "name": "Mystery Booster: Commander Edition",
+      "releasedAt": "2026-10-01",
+      "setType": "draft_innovation",
+      "cardCount": 2,
+      "digital": false,
+      "parentSetCode": null,
+      "scryfallUri": "https://scryfall.com/sets/mbc",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ambc&unique=prints"
+    },
+    {
       "code": "fra",
       "name": "Reality Fracture",
       "releasedAt": "2026-10-02",
       "setType": "expansion",
-      "cardCount": 7,
+      "cardCount": 43,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/fra",
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Afra&unique=prints"
     },
     {
+      "code": "frc",
+      "name": "Reality Fracture Commander",
+      "releasedAt": "2026-10-02",
+      "setType": "commander",
+      "cardCount": 2,
+      "digital": false,
+      "parentSetCode": "fra",
+      "scryfallUri": "https://scryfall.com/sets/frc",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Afrc&unique=prints"
+    },
+    {
+      "code": "sds",
+      "name": "Stardates",
+      "releasedAt": "2026-11-13",
+      "setType": "masterpiece",
+      "cardCount": 1,
+      "digital": false,
+      "parentSetCode": "trk",
+      "scryfallUri": "https://scryfall.com/sets/sds",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Asds&unique=prints"
+    },
+    {
       "code": "trc",
       "name": "Star Trek Commander",
-      "releasedAt": "2026-11-20",
+      "releasedAt": "2026-11-13",
       "setType": "commander",
-      "cardCount": 1,
+      "cardCount": 11,
       "digital": false,
       "parentSetCode": "trk",
       "scryfallUri": "https://scryfall.com/sets/trc",
@@ -11469,13 +11502,24 @@
     {
       "code": "trk",
       "name": "Star Trek",
-      "releasedAt": "2026-11-20",
+      "releasedAt": "2026-11-13",
       "setType": "expansion",
-      "cardCount": 0,
+      "cardCount": 61,
       "digital": false,
       "parentSetCode": null,
       "scryfallUri": "https://scryfall.com/sets/trk",
       "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Atrk&unique=prints"
+    },
+    {
+      "code": "ttrk",
+      "name": "Star Trek Tokens",
+      "releasedAt": "2026-11-13",
+      "setType": "token",
+      "cardCount": 1,
+      "digital": false,
+      "parentSetCode": "trk",
+      "scryfallUri": "https://scryfall.com/sets/ttrk",
+      "searchUri": "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Attrk&unique=prints"
     }
   ]
 }

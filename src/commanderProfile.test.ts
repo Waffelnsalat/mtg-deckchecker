@@ -110,6 +110,125 @@ test("analyzeCommanderProfiles does not treat standalone lifelink as a lifegain 
   assert.ok(!profiles.some((profile) => profile.key === "lifegain"));
 });
 
+test("analyzeCommanderProfiles reads creature-type asks from commander text without existing density", () => {
+  const profiles = analyzeCommanderProfiles(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "The Ur-Dragon",
+        "Legendary Creature - Dragon Avatar",
+        9,
+        "Other Dragon spells you cast cost {1} less to cast. Whenever one or more Dragons you control attack, draw that many cards.",
+      ),
+      createResolvedCard("mainboard", 99, "Mountain", "Basic Land - Mountain", 0, ""),
+    ]),
+  );
+
+  const dragonProfile = profiles.find((profile) => profile.key === "kindred" && profile.label.includes("Dragon"));
+  assert.ok(dragonProfile);
+  assert.equal(dragonProfile.supportCount, 0);
+});
+
+test("analyzeCommanderProfiles detects broad top-commander package asks", () => {
+  const profiles = analyzeCommanderProfiles(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Jodah, the Unifier",
+        "Legendary Creature - Human Wizard",
+        5,
+        "Legendary creatures you control get +X/+X, where X is the number of legendary creatures you control. Whenever you cast a legendary spell from your hand, exile cards from the top of your library.",
+      ),
+      createResolvedCard(
+        "commander",
+        1,
+        "Muldrotha, the Gravetide",
+        "Legendary Creature - Elemental Avatar",
+        6,
+        "During each of your turns, you may play a land and cast a permanent spell of each permanent type from your graveyard.",
+      ),
+      createResolvedCard(
+        "commander",
+        1,
+        "Isshin, Two Heavens as One",
+        "Legendary Creature - Human Samurai",
+        3,
+        "If a creature attacking causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.",
+      ),
+      createResolvedCard("mainboard", 97, "Plains", "Basic Land - Plains", 0, ""),
+    ]),
+  );
+
+  assert.ok(profiles.some((profile) => profile.key === "legends_matter"));
+  assert.ok(profiles.some((profile) => profile.key === "reanimator"));
+  assert.ok(profiles.some((profile) => profile.key === "aggro" && profile.label === "Attack-Trigger Package"));
+});
+
+test("analyzeCommanderProfiles detects draw-punisher commanders as group-slug asks", () => {
+  const profiles = analyzeCommanderProfiles(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Nekusar, the Mindrazer",
+        "Legendary Creature - Zombie Wizard",
+        5,
+        "At the beginning of each player's draw step, that player draws an additional card. Whenever an opponent draws a card, Nekusar deals 1 damage to that player.",
+      ),
+      createResolvedCard("mainboard", 99, "Swamp", "Basic Land - Swamp", 0, ""),
+    ]),
+  );
+
+  assert.ok(profiles.some((profile) => profile.key === "group_slug"));
+});
+
+test("analyzeCommanderProfiles detects dice, food, discard, and artifact-sacrifice asks", () => {
+  const profiles = analyzeCommanderProfiles(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Mr. House, President and CEO",
+        "Legendary Artifact Creature - Human",
+        4,
+        "Whenever you roll a 4 or higher, create a 3/3 colorless Robot artifact creature token. {4}, {T}: Roll a six-sided die.",
+      ),
+      createResolvedCard(
+        "commander",
+        1,
+        "Ygra, Eater of All",
+        "Legendary Creature - Elemental Cat",
+        5,
+        "Other creatures are Food artifacts in addition to their other types. Whenever a Food is put into a graveyard from the battlefield, put two +1/+1 counters on Ygra.",
+      ),
+      createResolvedCard(
+        "commander",
+        1,
+        "Hashaton, Scarab's Fist",
+        "Legendary Creature - Zombie Wizard",
+        3,
+        "Whenever you discard a creature card, you may pay {2}{U}. If you do, create a tapped token that's a copy of that card.",
+      ),
+      createResolvedCard(
+        "commander",
+        1,
+        "Breya, Etherium Shaper",
+        "Legendary Artifact Creature - Human",
+        4,
+        "When Breya enters, create two 1/1 blue Thopter artifact creature tokens with flying. {2}, Sacrifice two artifacts: Choose one.",
+      ),
+      createResolvedCard("mainboard", 96, "Island", "Basic Land - Island", 0, ""),
+    ]),
+  );
+
+  assert.ok(profiles.some((profile) => profile.key === "dice_rolls"));
+  assert.ok(profiles.some((profile) => profile.key === "food"));
+  assert.ok(profiles.some((profile) => profile.key === "madness"));
+  assert.ok(profiles.some((profile) => profile.key === "artifacts"));
+});
+
 function createDocument(resolvedCards: ResolvedDeckCard[]): DeckResolutionDocument {
   return {
     format: "edh",

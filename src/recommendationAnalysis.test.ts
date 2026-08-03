@@ -75,7 +75,7 @@ test("analyzeDeckRecommendations caps weak-topic output at the two strongest sug
   );
 });
 
-test("analyzeDeckRecommendations does not ask for more ramp when the deck is already over target", async () => {
+test("analyzeDeckRecommendations keeps one optional ramp card when ramp is already over target", async () => {
   const recommendations = await analyzeDeckRecommendations(
     createInput({
       bracket: createBracket(5, "below"),
@@ -98,7 +98,8 @@ test("analyzeDeckRecommendations does not ask for more ramp when the deck is alr
   const rampTopic = recommendations.topics.find((topic) => topic.key === "ramp");
 
   assert.ok(rampTopic);
-  assert.equal(rampTopic?.cards.length, 0);
+  assert.equal(rampTopic?.cards.length, 1);
+  assert.match(rampTopic?.cards[0]?.reason ?? "", /optional fit/i);
 });
 
 test("analyzeDeckRecommendations suggests fast-mana staples when high-bracket ramp is slot-inefficient", async () => {
@@ -481,6 +482,25 @@ test("analyzeDeckRecommendations does not suggest lower-pressure consistency whe
   assert.ok(consistencyTopic);
   assert.equal(consistencyTopic?.cards.some((card) => card.direction === "down"), false);
   assert.doesNotMatch(JSON.stringify(consistencyTopic), /0 direct tutors|sharper than|depower/i);
+});
+
+test("analyzeDeckRecommendations gives every topic at least one card", async () => {
+  const recommendations = await analyzeDeckRecommendations(createInput() as any);
+
+  assert.deepEqual(
+    recommendations.topics.map((topic) => topic.key),
+    [
+      "shell",
+      "land_base",
+      "ramp",
+      "card_flow",
+      "consistency",
+      "interaction",
+      "resilience",
+      "closing",
+    ],
+  );
+  assert.ok(recommendations.topics.every((topic) => topic.cards.length >= 1));
 });
 
 test("analyzeDeckRecommendations lets EDHREC reorder a same-bracket shell suggestion", async () => {

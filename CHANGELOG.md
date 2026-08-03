@@ -2,8 +2,14 @@
 
 ## Unreleased
 
+## 1.3.0 - 2026-08-03
+
 ### Neu
 
+- Recommendations zeigen jetzt fuer jedes Feld mindestens eine Karte; Felder mit echtem Anpassungsbedarf behalten bis zu zwei Vorschlaege.
+- Optionale Vorschlaege werden als optionaler Fit formuliert, damit stabile Felder nicht wie Pflicht-Fixes wirken.
+- Commander-Fit-Profile erkennen mehr Top-Commander-Pakete direkt aus dem Commandertext, darunter Typal, Graveyard Recursion, Legendary, Ninjutsu, Food, Dice, Treasure, Attack-Trigger, Discard und Draw-Punisher.
+- Neue Scryfall-Sets wurden in den lokalen Set-Progress aufgenommen und gegen fehlende Analyzer-Rollen gescannt.
 - Scryfall-Aufloesung nutzt staerker gebuendelte Collection-Requests, Cache-Wiederverwendung, Throttling und Retry-After-Behandlung, damit 429-Antworten seltener auftreten.
 - Power-Skala wurde nach unten und oben besser gespreizt; sehr schnelle, tutorlastige Combo-Decks erhalten zusaetzlichen Mulligan-/Hand-Selection-Kontext.
 - Ueberfuellte Kategorien wie Draw, Ramp, Interaction, Protection, Recursion und Closing Power werden weicher bestraft, wenn ein Deck bewusst ueber den Richtwert hinausgeht.

@@ -196,6 +196,42 @@ test("analyzeDeckWinStrategy promotes poison for counters shells with infect fin
   assert.equal(analysis.primaryPlan?.key, "poison");
 });
 
+test("analyzeDeckWinStrategy maps power-matters combat shells to extra combat pressure", () => {
+  const analysis = analyzeDeckWinStrategy(
+    createDocument([
+      createResolvedCard(
+        "commander",
+        1,
+        "Klauth, Unrivaled Ancient",
+        "Legendary Creature - Dragon",
+        7,
+        "Whenever Klauth attacks, add X mana in any combination of colors, where X is the total power of attacking creatures.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Relentless Assault",
+        "Sorcery",
+        4,
+        "Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.",
+      ),
+      createResolvedCard("mainboard", 1, "Huge Beast", "Creature - Beast", 7, "Trample."),
+    ]),
+    createStrategyAnalysis("power_matter", ["extra_combat", "aggro"]),
+    createWinConditions({
+      counts: {
+        core: 2.4,
+        combat: 1.8,
+      },
+      taggedCards: [
+        createTaggedFinisher("Relentless Assault", ["combat_finisher"]),
+      ],
+    }),
+  );
+
+  assert.equal(analysis.primaryPlan?.key, "extra_combat_pressure");
+});
+
 test("analyzeDeckWinStrategy maps legend-rule clone free-cast commanders to spell burst", () => {
   const analysis = analyzeDeckWinStrategy(
     createDocument([

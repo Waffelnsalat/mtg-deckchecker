@@ -95,6 +95,7 @@ interface RecommendationLibraryEntry {
   name: string;
   idealBracket: DeckBracketNumber;
   reason: string;
+  optionalSuggestion?: boolean;
   source?: "library" | "recommander";
   oracleId?: string | null;
   recommanderScore?: number;
@@ -198,7 +199,6 @@ const BRACKET_GATE_TOPIC_DIMENSIONS: Partial<
 
 const RECOMMENDER_CLASSIFICATION_LIMIT = 32;
 const MAX_TOPIC_SUGGESTIONS = 2;
-const MAX_TOTAL_RECOMMENDATION_CARDS = 3;
 
 const STAPLE_UP_CANDIDATES: Record<EfficiencyTopic, RecommendationLibraryEntry[]> = {
   ramp: [
@@ -1041,6 +1041,12 @@ const CARD_FLOW_DOWN_CANDIDATES: RecommendationLibraryEntry[] = [
 
 const CONSISTENCY_UP_CANDIDATES: RecommendationLibraryEntry[] = [
   {
+    name: "Diabolic Tutor",
+    idealBracket: 3,
+    requiredColors: ["B"],
+    reason: "it gives black decks a clear access card without jumping all the way to premium tutor pressure.",
+  },
+  {
     name: "Solve the Equation",
     idealBracket: 3,
     requiredColors: ["U"],
@@ -1380,6 +1386,13 @@ const RESILIENCE_DOWN_CANDIDATES: RecommendationLibraryEntry[] = [
 
 const CLOSING_UP_CANDIDATES: RecommendationLibraryEntry[] = [
   {
+    name: "Akroma's Will",
+    idealBracket: 4,
+    requiredColors: ["W"],
+    strategyKeys: ["tokens", "kindred", "aggro", "voltron"],
+    reason: "it lets creature-heavy white decks turn an established board into a real finishing attack.",
+  },
+  {
     name: "Overwhelming Stampede",
     idealBracket: 3,
     requiredColors: ["G"],
@@ -1536,7 +1549,7 @@ export async function analyzeDeckRecommendations(
   ]);
   const context = createContext(input, edhrec, recommander, targetBracket);
   context.recommanderTopicLibraries = await buildRecommanderTopicLibraries(context);
-  const topics = limitRecommendationCards(context, [
+  const topics = limitRecommendationCards(context, ensureMinimumRecommendationCards(context, [
     buildShellTopic(context),
     buildLandBaseTopic(context),
     buildRampTopic(context),
@@ -1545,7 +1558,7 @@ export async function analyzeDeckRecommendations(
     buildInteractionTopic(context),
     buildResilienceTopic(context),
     buildClosingTopic(context),
-  ]);
+  ]));
 
   return {
     summary: summarizeRecommendations(context, topics),
@@ -3164,11 +3177,7 @@ function reserveCandidates(
 function getDesiredSuggestionCount(...severitySignals: number[]) {
   const severity = severitySignals.reduce((sum, value) => sum + Math.max(0, value), 0);
 
-  if (severity >= 4) {
-    return MAX_TOPIC_SUGGESTIONS;
-  }
-
-  if (severity >= 1.5) {
+  if (severity > 0) {
     return MAX_TOPIC_SUGGESTIONS;
   }
 
@@ -3345,44 +3354,67 @@ function createTopicEntry(
 ): DeckRecommendationTopicEntry {
   return {
     key,
-    label: TOPIC_ORDER.find((topic) => topic.key === key)?.label ?? "Suggestion",
+    label: getRecommendationTopicLabel(key),
     summary,
     cards,
   };
+}
+
+function getRecommendationTopicLabel(key: DeckRecommendationTopic) {
+  return TOPIC_ORDER.find((topic) => topic.key === key)?.label ?? "Suggestion";
+}
+
+function ensureMinimumRecommendationCards(
+  context: RecommendationContext,
+  topics: DeckRecommendationTopicEntry[],
+) {
+  return topics.map((topic) => {
+    const hasAdjustmentCards = topic.cards.length > 0;
+    const desiredCount = hasAdjustmentCards ? MAX_TOPIC_SUGGESTIONS : 1;
+
+    if (topic.cards.length >= desiredCount) {
+      return topic;
+    }
+
+    const direction = topic.cards[0]?.direction ?? "up";
+    const existingNames = new Set(topic.cards.map((card) => normalizeText(card.name)));
+    const candidates = chooseFallbackTopicCandidates(
+      context,
+      topic.key,
+      direction,
+      desiredCount - topic.cards.length,
+      existingNames,
+    );
+
+    if (candidates.length === 0) {
+      return topic;
+    }
+
+    const preparedCandidates = hasAdjustmentCards
+      ? candidates
+      : candidates.map((candidate) => ({
+          ...candidate,
+          optionalSuggestion: true,
+        }));
+
+    reserveCandidates(context, preparedCandidates);
+
+    return {
+      ...topic,
+      cards: [
+        ...topic.cards,
+        ...createCards(topic.key, preparedCandidates, direction, context),
+      ],
+    };
+  });
 }
 
 function limitRecommendationCards(
   context: RecommendationContext,
   topics: DeckRecommendationTopicEntry[],
 ) {
-  let remaining = MAX_TOTAL_RECOMMENDATION_CARDS;
-  const allocations = new Map<DeckRecommendationTopic, number>();
-  const prioritizedTopics = topics
-    .map((topic, index) => ({
-      topic,
-      index,
-      urgency: getRecommendationTopicUrgency(context, topic.key),
-    }))
-    .filter((entry) => entry.topic.cards.length > 0)
-    .sort(
-      (left, right) =>
-        right.urgency - left.urgency ||
-        right.topic.cards.length - left.topic.cards.length ||
-        left.index - right.index,
-    );
-
-  for (const entry of prioritizedTopics) {
-    if (remaining <= 0) {
-      break;
-    }
-
-    const count = Math.min(entry.topic.cards.length, remaining);
-    allocations.set(entry.topic.key, count);
-    remaining -= count;
-  }
-
   return topics.map((topic) => {
-    const allowedCount = allocations.get(topic.key) ?? 0;
+    const allowedCount = Math.min(MAX_TOPIC_SUGGESTIONS, Math.max(1, topic.cards.length));
     if (allowedCount >= topic.cards.length) {
       return topic;
     }
@@ -3394,135 +3426,102 @@ function limitRecommendationCards(
   });
 }
 
-function getRecommendationTopicUrgency(
+function chooseFallbackTopicCandidates(
   context: RecommendationContext,
   topicKey: DeckRecommendationTopic,
-) {
-  const scoreDelta = getRecommendationTopicScoreDelta(context, topicKey);
-  const targetGap = getRecommendationTopicTargetGap(context, topicKey);
-  const efficiencyGap = isEfficiencyTopic(topicKey)
-    ? context.efficiency[topicKey].gap * 20
-    : 0;
-  const bracketGateGap = getBracketGateTopicGap(context, topicKey) * 2.5;
-  return roundTo(scoreDelta + targetGap + efficiencyGap + bracketGateGap, 2);
-}
-
-function getRecommendationTopicScoreDelta(
-  context: RecommendationContext,
-  topicKey: DeckRecommendationTopic,
-) {
-  const score = getRecommendationTopicScore(context, topicKey);
-  if (context.bracket.targetAlignment === "above") {
-    return getScoreDeltaWeight(score, getTopicCeiling(topicKey, context.targetBracket));
+  direction: DeckRecommendationDirection,
+  limit: number,
+  excludeNames: Set<string>,
+): RecommendationLibraryEntry[] {
+  if (limit <= 0) {
+    return [];
   }
 
-  return getScoreDeltaWeight(score, getTopicFloor(topicKey, context.targetBracket));
+  const chooserContext = {
+    ...context,
+    usedSuggestionNames: new Set([
+      ...context.usedSuggestionNames,
+      ...excludeNames,
+    ]),
+  };
+
+  if (direction === "down") {
+    return chooseFallbackDowngradeCandidates(chooserContext, topicKey, limit);
+  }
+
+  return chooseFallbackUpgradeCandidates(chooserContext, topicKey, limit);
 }
 
-function getRecommendationTopicScore(
+function chooseFallbackUpgradeCandidates(
   context: RecommendationContext,
   topicKey: DeckRecommendationTopic,
-) {
+  limit: number,
+): RecommendationLibraryEntry[] {
   switch (topicKey) {
-    case "shell":
-      return readFiniteNumberOrDefault(
-        context.strategy.synergy?.synergyScore,
-        getTopicFloor("shell", context.targetBracket),
-      );
+    case "shell": {
+      const profileLibrary = getCommanderProfileUpgradeLibrary(context);
+      const recommanderLibrary = getRecommanderTopicLibrary(context, "shell");
+      return profileLibrary.length > 0
+        ? chooseCandidatesFromLibraries(profileLibrary, SHELL_UP_CANDIDATES, context, limit)
+        : recommanderLibrary.length > 0
+          ? chooseCandidatesFromLibraries(recommanderLibrary, SHELL_UP_CANDIDATES, context, limit)
+          : chooseCandidates(SHELL_UP_CANDIDATES, context, { limit });
+    }
     case "land_base":
-      return readNumber(context.landBase.landBaseScore);
+      return chooseLandBaseUpgradeCandidates(context, "quality", limit);
     case "ramp":
-      return readNumber(context.ramp.rampScore);
+      return chooseUpgradeCandidates("ramp", RAMP_UP_CANDIDATES, context, limit);
     case "card_flow":
-      return readNumber(context.draw.drawScore);
+      return chooseUpgradeCandidates("card_flow", CARD_FLOW_UP_CANDIDATES, context, limit);
     case "consistency":
-      return readNumber(context.consistency.consistencyScore);
-    case "interaction":
-      return average(
-        readNumber(context.removal.removalScore),
-        readNumber(context.spellInteraction.interactionScore),
+      return chooseUpgradeCandidates("consistency", CONSISTENCY_UP_CANDIDATES, context, limit);
+    case "interaction": {
+      const upgradeLibrary = getUpgradeLibrary("interaction", context);
+      return chooseCandidatesFromLibraries(
+        [...getRecommanderTopicLibrary(context, "interaction"), ...upgradeLibrary],
+        [...INTERACTION_UP_REMOVAL_CANDIDATES, ...INTERACTION_UP_STACK_CANDIDATES],
+        context,
+        limit,
       );
+    }
     case "resilience":
-      return average(
-        readNumber(context.protection.protectionScore),
-        readNumber(context.commander.dependencyScore),
+      return chooseCandidatesFromLibraries(
+        getRecommanderTopicLibrary(context, "resilience"),
+        [...RESILIENCE_UP_PROTECTION_CANDIDATES, ...RESILIENCE_UP_RECURSION_CANDIDATES],
+        context,
+        limit,
       );
-    case "closing":
-      return readNumber(context.winConditions.finisherScore);
+    case "closing": {
+      const contextFitLibrary = getRecommanderTopicLibrary(context, "closing");
+      return contextFitLibrary.length > 0
+        ? chooseCandidatesFromLibraries(contextFitLibrary, CLOSING_UP_CANDIDATES, context, limit)
+        : chooseClosingCandidates(context, "up", limit);
+    }
   }
 }
 
-function readFiniteNumberOrDefault(value: unknown, fallback: number) {
-  return typeof value === "number" && Number.isFinite(value) ? value : fallback;
-}
-
-function getRecommendationTopicTargetGap(
+function chooseFallbackDowngradeCandidates(
   context: RecommendationContext,
   topicKey: DeckRecommendationTopic,
-) {
+  limit: number,
+): RecommendationLibraryEntry[] {
   switch (topicKey) {
     case "shell":
-      return Math.max(
-        0,
-        readNumber(context.strategy.synergy?.recommendations.supportTarget) -
-          readNumber(context.strategy.synergy?.supportCards),
-      ) / 4;
+      return chooseCandidates(SHELL_DOWN_CANDIDATES, context, { limit });
     case "land_base":
-      return Math.max(
-        0,
-        readNumber(context.structure.mana.recommendedLands.min) -
-          readNumber(context.structure.counts.lands),
-        readNumber(context.landBase.counts.alwaysTapped) -
-          readNumber(context.landBase.recommendations.alwaysTappedMax),
-        readNumber(context.landBase.counts.colorlessOnly) -
-          readNumber(context.landBase.recommendations.colorlessOnlyMax),
-        readNumber(context.landBase.counts.costly) -
-          readNumber(context.landBase.recommendations.costlyMax),
-      );
+      return chooseLandBaseDowngradeCandidates(context, limit);
     case "ramp":
-      return Math.max(
-        0,
-        readNumber(context.ramp.recommendations.coreTarget) - readNumber(context.ramp.counts.core),
-        readNumber(context.ramp.recommendations.stableTarget) -
-          readNumber(context.ramp.counts.stable),
-      ) / 2;
+      return chooseCandidates(RAMP_DOWN_CANDIDATES, context, { limit });
     case "card_flow":
-      return Math.max(
-        0,
-        readNumber(context.draw.recommendations.drawTarget) - readNumber(context.draw.counts.draw),
-        readNumber(context.draw.recommendations.repeatableTarget) -
-          readNumber(context.draw.counts.repeatable),
-      ) / 2;
+      return chooseCandidates(CARD_FLOW_DOWN_CANDIDATES, context, { limit });
     case "consistency":
-      return Math.max(
-        0,
-        readNumber(context.consistency.recommendations.directTarget) -
-          readNumber(context.consistency.counts.direct),
-        readNumber(context.consistency.recommendations.repeatableTarget) -
-          readNumber(context.consistency.counts.repeatable),
-      );
+      return chooseCandidates(CONSISTENCY_DOWN_CANDIDATES, context, { limit });
     case "interaction":
-      return Math.max(
-        0,
-        readNumber(context.removal.recommendations.targetedTarget) -
-          readNumber(context.removal.counts.targeted),
-        readNumber(context.spellInteraction.recommendations.hardTarget) -
-          readNumber(context.spellInteraction.counts.hard),
-      ) / 2;
+      return chooseCandidates(INTERACTION_DOWN_CANDIDATES, context, { limit });
     case "resilience":
-      return Math.max(
-        0,
-        readNumber(context.protection.recommendations?.coreTarget) -
-          readNumber(context.protection.counts?.core),
-        readNumber(context.recursion.recommendations?.coreTarget) -
-          readNumber(context.recursion.counts?.core),
-      ) / 2;
+      return chooseCandidates(RESILIENCE_DOWN_CANDIDATES, context, { limit });
     case "closing":
-      return Math.max(
-        0,
-        readNumber(context.winConditions.recommendations?.coreTarget) -
-          readNumber(context.winConditions.counts?.core),
-      ) / 2;
+      return chooseClosingCandidates(context, "down", limit);
   }
 }
 
@@ -3641,6 +3640,10 @@ function buildRecommendationLead(
   direction: DeckRecommendationDirection,
   context: RecommendationContext,
 ) {
+  if (candidate.optionalSuggestion) {
+    return `${getRecommendationTopicLabel(topicKey)} is already close to ${getTargetLabel(context)}. This is an optional fit for that field, not a required fix.`;
+  }
+
   if (direction === "up" && isEfficiencyTopic(topicKey)) {
     const profile = context.efficiency[topicKey];
     if (context.targetBracket >= 4 && profile.gap >= 0.14 && profile.slots > 0) {
