@@ -539,7 +539,7 @@ function buildBracketFindings(input: {
     });
   }
 
-  return findings.slice(0, 6);
+  return findings;
 }
 
 function getBracketReadFindingStatus(input: {

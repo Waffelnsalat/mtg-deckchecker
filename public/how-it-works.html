@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How MTG Deckchecker analyzes Commander decks, including card roles, strategy detection, bracket fit, recommendations, weaknesses, and salt risk."
+    />
+    <title>How It Works | MTG Deckchecker</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="static-page-shell">
+      <header class="static-header">
+        <a class="static-brand" href="/">MTG Deckchecker</a>
+        <nav class="site-nav" aria-label="Site">
+          <a href="/">Analyzer</a>
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main class="static-main">
+        <section class="content-hero">
+          <p class="panel-kicker">Method</p>
+          <h1>How the deck analysis works</h1>
+          <p>
+            The analyzer combines card text, type lines, Commander context, known package patterns,
+            and external card data to produce a structured deck read. The output should be treated
+            as a useful review, not an absolute verdict.
+          </p>
+        </section>
+
+        <section class="content-grid content-grid-wide">
+          <article class="content-card">
+            <h2>1. Card resolution</h2>
+            <p>
+              Decklists are parsed into sections such as commander, mainboard, companion, attraction
+              deck, and sticker sheets. Card names are resolved through Scryfall data so the app can
+              work with oracle text, mana value, color identity, type line, and images.
+            </p>
+          </article>
+          <article class="content-card">
+            <h2>2. Role tagging</h2>
+            <p>
+              Cards are tagged for practical deck roles such as ramp, draw, tutors, protection,
+              removal, recursion, finishers, combo support, and drawbacks. Similar tags are grouped
+              for display so a card does not become unreadable.
+            </p>
+          </article>
+          <article class="content-card">
+            <h2>3. Strategy detection</h2>
+            <p>
+              The tool compares the command zone, mainboard cards, and detected role packages to
+              infer the likely strategy. If several strategies are plausible, the app asks which one
+              you intend to play and recalculates against that plan.
+            </p>
+          </article>
+          <article class="content-card">
+            <h2>4. Power and bracket read</h2>
+            <p>
+              Power is split into speed, consistency, interaction, resilience, closing power, and
+              mana quality. Bracket read then combines that profile with Commander barometers such
+              as Game Changers, compact combos, extra turns, and mass land denial.
+            </p>
+          </article>
+          <article class="content-card">
+            <h2>5. Weak matchups</h2>
+            <p>
+              Weaknesses compare what the deck depends on against what it can answer. Graveyard
+              decks are checked against graveyard hate, combat decks against pillowfort and wipes,
+              spell-chain decks against Rule of Law effects, and high-salt decks against table focus.
+            </p>
+          </article>
+          <article class="content-card">
+            <h2>6. Table salt</h2>
+            <p>
+              Salt risk is separate from power. It estimates whether a deck may draw social pressure
+              because of commonly disliked cards or play patterns such as hard locks, mass land
+              denial, extra turns, oppressive tax engines, or compact win lines.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <strong>MTG Deckchecker</strong>
+          <span>Analysis logic is heuristic and should be reviewed by the player.</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="/about.html">About</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

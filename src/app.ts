@@ -208,6 +208,23 @@ export function createApp() {
         targetBracket,
       });
       const salt = analyzeDeckSalt(document);
+      const weaknesses = analyzeDeckWeaknesses({
+        power,
+        strategy,
+        winStrategy,
+        structure,
+        landBase,
+        ramp,
+        draw,
+        consistency,
+        salt,
+        protection,
+        recursion,
+        winConditions,
+        removal,
+        spellInteraction,
+        advancedRoles,
+      });
       const recommendations = await analyzeDeckRecommendations({
         document,
         commander,
@@ -225,25 +242,9 @@ export function createApp() {
         winConditions,
         removal,
         spellInteraction,
+        weaknesses,
         edhrec,
         recommander,
-      });
-      const weaknesses = analyzeDeckWeaknesses({
-        power,
-        strategy,
-        winStrategy,
-        structure,
-        landBase,
-        ramp,
-        draw,
-        consistency,
-        salt,
-        protection,
-        recursion,
-        winConditions,
-        removal,
-        spellInteraction,
-        advancedRoles,
       });
       const sources = buildAnalysisSources({
         document,

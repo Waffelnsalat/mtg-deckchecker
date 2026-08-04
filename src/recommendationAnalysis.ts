@@ -36,6 +36,8 @@ import {
   DeckResolutionDocument,
   DeckSpellInteractionAnalysis,
   DeckStrategyAnalysis,
+  DeckWeaknessAnalysis,
+  DeckWeaknessExposure,
   DeckWinConditionAnalysis,
   DeckWinStrategyAnalysis,
   ResolvedDeckCard,
@@ -75,6 +77,7 @@ interface AnalyzeDeckRecommendationsInput {
   winConditions: DeckWinConditionAnalysis;
   removal: DeckRemovalAnalysis;
   spellInteraction: DeckSpellInteractionAnalysis;
+  weaknesses?: DeckWeaknessAnalysis;
 }
 
 interface RecommendationContext extends AnalyzeDeckRecommendationsInput {
@@ -133,6 +136,19 @@ const TOPIC_ORDER: Array<{ key: DeckRecommendationTopic; label: string }> = [
   { key: "resilience", label: "Resilience" },
   { key: "closing", label: "Closing" },
 ];
+
+const WEAKNESS_TOPIC_MAP: Record<string, DeckRecommendationTopic[]> = {
+  graveyard_hate: ["interaction", "resilience"],
+  board_wipes: ["resilience"],
+  spot_removal_edicts: ["resilience"],
+  rule_of_law_stax: ["interaction", "consistency"],
+  pillowfort_fogs: ["interaction", "closing"],
+  counterspell_pressure: ["interaction", "consistency"],
+  artifact_enchantment_hate: ["interaction", "resilience"],
+  mana_hate_tempo: ["land_base", "ramp"],
+  fast_combo: ["interaction", "consistency"],
+  table_threat_perception: ["resilience", "interaction"],
+};
 
 const TOPIC_FLOORS: Record<DeckRecommendationTopic, Record<DeckBracketNumber, number>> = {
   shell: { 1: 48, 2: 58, 3: 68, 4: 78, 5: 86 },
@@ -1549,7 +1565,7 @@ export async function analyzeDeckRecommendations(
   ]);
   const context = createContext(input, edhrec, recommander, targetBracket);
   context.recommanderTopicLibraries = await buildRecommanderTopicLibraries(context);
-  const topics = limitRecommendationCards(context, ensureMinimumRecommendationCards(context, [
+  const topics = annotateRecommendationTopics(context, limitRecommendationCards(context, ensureMinimumRecommendationCards(context, [
     buildShellTopic(context),
     buildLandBaseTopic(context),
     buildRampTopic(context),
@@ -1558,7 +1574,7 @@ export async function analyzeDeckRecommendations(
     buildInteractionTopic(context),
     buildResilienceTopic(context),
     buildClosingTopic(context),
-  ]));
+  ])));
 
   return {
     summary: summarizeRecommendations(context, topics),
@@ -3327,6 +3343,13 @@ function summarizeRecommendations(
 ) {
   const cardCount = topics.reduce((sum, topic) => sum + topic.cards.length, 0);
   const targetLabel = getTargetLabel(context);
+  const weaknessLabels = getRecommendationWeaknesses(context)
+    .slice(0, 2)
+    .map((weakness) => weakness.label.toLowerCase());
+  const weaknessClause =
+    weaknessLabels.length > 0
+      ? ` It also accounts for matchup pressure from ${formatRecommendationList(weaknessLabels)}.`
+      : "";
 
   if (cardCount === 0) {
     if (context.bracket.targetAlignment === "above") {
@@ -3337,14 +3360,14 @@ function summarizeRecommendations(
   }
 
   if (context.bracket.targetAlignment === "above") {
-    return `These are lower-pressure replacements aimed at bringing the deck back toward ${targetLabel}.`;
+    return `These are lower-pressure replacements aimed at bringing the deck back toward ${targetLabel}.${weaknessClause}`;
   }
 
   if (context.bracket.targetAlignment === "below") {
-    return `These upgrades focus on the weakest parts of the deck and move it toward ${targetLabel}.`;
+    return `These upgrades focus on the weakest parts of the deck and move it toward ${targetLabel}.${weaknessClause}`;
   }
 
-  return `These topic suggestions clean up the weakest current pillars while keeping the shell close to ${targetLabel}.`;
+  return `These topic suggestions clean up the weakest current pillars while keeping the shell close to ${targetLabel}.${weaknessClause}`;
 }
 
 function createTopicEntry(
@@ -3362,6 +3385,23 @@ function createTopicEntry(
 
 function getRecommendationTopicLabel(key: DeckRecommendationTopic) {
   return TOPIC_ORDER.find((topic) => topic.key === key)?.label ?? "Suggestion";
+}
+
+function annotateRecommendationTopics(
+  context: RecommendationContext,
+  topics: DeckRecommendationTopicEntry[],
+) {
+  return topics.map((topic) => {
+    const weakness = getPrimaryWeaknessForTopic(context, topic.key);
+    if (!weakness) {
+      return topic;
+    }
+
+    return {
+      ...topic,
+      summary: `${topic.summary} Matchup note: ${weakness.label.toLowerCase()} is one of the deck's current pressure points.`,
+    };
+  });
 }
 
 function ensureMinimumRecommendationCards(
@@ -3574,9 +3614,28 @@ function buildRecommendationReason(
 ) {
   const lead = buildRecommendationLead(topicKey, candidate, direction, context);
   const body = capitalizeFirst(polishRecommendationText(candidate.reason));
+  const weaknessNote = buildWeaknessRecommendationNote(topicKey, candidate, direction, context);
   const recommanderNote = buildRecommanderRecommendationNote(candidate, direction, context);
   const edhrecNote = buildEdhrecRecommendationNote(candidate, direction, context);
-  return [lead, body, recommanderNote, edhrecNote].filter(Boolean).join(" ");
+  return [lead, body, weaknessNote, recommanderNote, edhrecNote].filter(Boolean).join(" ");
+}
+
+function buildWeaknessRecommendationNote(
+  topicKey: DeckRecommendationTopic,
+  candidate: RecommendationLibraryEntry,
+  direction: DeckRecommendationDirection,
+  context: RecommendationContext,
+) {
+  if (candidate.optionalSuggestion || direction !== "up") {
+    return "";
+  }
+
+  const weakness = getPrimaryWeaknessForTopic(context, topicKey);
+  if (!weakness) {
+    return "";
+  }
+
+  return `This also helps cover ${weakness.label.toLowerCase()}.`;
 }
 
 function polishRecommendationText(text: string) {
@@ -3951,6 +4010,21 @@ function getTargetLabel(context: RecommendationContext) {
   return context.bracket.targetLabel
     ? `${context.bracket.targetLabel} (${context.bracket.targetName})`
     : context.bracket.recommendedLabel;
+}
+
+function getRecommendationWeaknesses(context: RecommendationContext): DeckWeaknessExposure[] {
+  return (context.weaknesses?.exposures ?? []).filter(
+    (weakness) => weakness.severity === "high" || weakness.vulnerabilityScore >= 48,
+  );
+}
+
+function getPrimaryWeaknessForTopic(
+  context: RecommendationContext,
+  topicKey: DeckRecommendationTopic,
+) {
+  return getRecommendationWeaknesses(context).find((weakness) =>
+    WEAKNESS_TOPIC_MAP[weakness.key]?.includes(topicKey),
+  );
 }
 
 function getBracketGateTopicGap(
@@ -4479,6 +4553,18 @@ function normalizeText(value: string) {
 
 function formatOneDecimal(value: number) {
   return value.toFixed(1).replace(/\.0$/, "");
+}
+
+function formatRecommendationList(values: string[]) {
+  if (values.length <= 1) {
+    return values[0] ?? "";
+  }
+
+  if (values.length === 2) {
+    return `${values[0]} and ${values[1]}`;
+  }
+
+  return `${values.slice(0, -1).join(", ")}, and ${values[values.length - 1]}`;
 }
 
 function capitalizeFirst(value: string) {

@@ -15,6 +15,10 @@ interface SaltDefinition {
   reason: string;
 }
 
+interface SaltHit extends DeckSaltCard {
+  exposureWeight: number;
+}
+
 const HIGH_SALT_CARDS: SaltDefinition[] = [
   defineSalt("Stasis", 4, "Lock Piece", "Locks normal untap patterns and often stalls the table."),
   defineSalt("Winter Orb", 3.9, "Resource Denial", "Restricts mana development for the whole table."),
@@ -29,12 +33,21 @@ const HIGH_SALT_CARDS: SaltDefinition[] = [
   defineSalt("Vorinclex, Voice of Hunger", 3.6, "Resource Denial", "Doubles your mana while locking down opposing lands."),
   defineSalt("Tergrid, God of Fright", 3.6, "Punisher Engine", "Turns discard and sacrifice into stolen permanents."),
   defineSalt("Jin-Gitaxias, Core Augur", 3.5, "Hand Lock", "Refills you while stripping opposing hands."),
+  defineSalt("Sen Triplets", 3.5, "Theft/Control", "Lets one player use another player's hand and restricts interaction windows."),
+  defineSalt("Mindslaver", 3.4, "Turn Control", "Lets one player control another player's turn."),
+  defineSalt("Emrakul, the Promised End", 3.2, "Turn Control", "Can take over an opponent's turn and disrupt their own board."),
   defineSalt("Grand Arbiter Augustin IV", 3.4, "Tax/Stax", "Taxes opponents and slows spell sequencing."),
   defineSalt("Humility", 3.4, "Lock Piece", "Turns off creature text and compresses board identity."),
+  defineSalt("Knowledge Pool", 3.3, "Cast Lock", "Can lock normal casting when paired with cast restriction pieces."),
+  defineSalt("Teferi, Time Raveler", 3.1, "Timing Lock", "Restricts opponents to sorcery-speed interaction."),
+  defineSalt("Decree of Silence", 3.1, "Lock Piece", "Can shut down several opposing spells in a row."),
   defineSalt("Drannith Magistrate", 3.3, "Lock Piece", "Blocks commanders and many cast-from-zone plans."),
+  defineSalt("Gaddock Teeg", 3, "Cast Lock", "Restricts large noncreature spells and many sweepers."),
   defineSalt("Opposition Agent", 3.2, "Search Hate", "Punishes tutors and fetch-style sequencing."),
+  defineSalt("Ashiok, Dream Render", 2.8, "Search Hate", "Turns off searching while pressuring graveyards."),
   defineSalt("Narset, Parter of Veils", 3.1, "Draw Lock", "Can lock draw-heavy tables out of extra cards."),
   defineSalt("Notion Thief", 3.1, "Draw Punisher", "Steals opposing draw bursts."),
+  defineSalt("Sheoldred, the Apocalypse", 2.8, "Draw Punisher", "Turns normal draw patterns into life pressure."),
   defineSalt("Thassa's Oracle", 3.2, "Fast Combo", "Represents compact win lines with low table counterplay windows."),
   defineSalt("Demonic Consultation", 3.1, "Fast Combo", "Enables compact win lines with Thassa's Oracle."),
   defineSalt("Tainted Pact", 3.1, "Fast Combo", "Enables compact win lines with Thassa's Oracle."),
@@ -42,6 +55,8 @@ const HIGH_SALT_CARDS: SaltDefinition[] = [
   defineSalt("Underworld Breach", 3, "Combo Engine", "Enables compact graveyard combo turns."),
   defineSalt("Cyclonic Rift", 2.9, "Asymmetric Reset", "Resets opposing boards while preserving yours."),
   defineSalt("Expropriate", 2.9, "Extra Turns", "Combines extra turns with permanent theft."),
+  defineSalt("Blatant Thievery", 2.8, "Theft/Control", "Takes important permanents from every opponent."),
+  defineSalt("Agent of Treachery", 2.7, "Theft/Control", "Steals key permanents and can be blinked or copied."),
   defineSalt("Time Stretch", 2.8, "Extra Turns", "Creates back-to-back extra turns."),
   defineSalt("Nexus of Fate", 2.8, "Extra Turns", "Can create repeated extra-turn pressure."),
   defineSalt("Rhystic Study", 2.7, "Taxed Draw", "Creates constant table tax decisions."),
@@ -59,10 +74,11 @@ const HIGH_SALT_BY_NAME = new Map(
 
 export function analyzeDeckSalt(document: DeckResolutionDocument): DeckSaltAnalysis {
   const deckCards = document.result.resolvedCards.filter(isSaltRelevantSection);
-  const topCards = deckCards
-    .map(detectSaltCard)
-    .filter((card): card is DeckSaltCard => card !== null)
+  const saltHits = deckCards
+    .map(detectSaltHit)
+    .filter((card): card is SaltHit => card !== null)
     .sort(compareSaltCards);
+  const topCards: DeckSaltCard[] = saltHits.map(({ exposureWeight, ...card }) => card);
   const totalSaltWeight = roundOne(topCards.reduce(
     (sum, card) => sum + card.saltWeight * card.quantity,
     0,
@@ -71,7 +87,7 @@ export function analyzeDeckSalt(document: DeckResolutionDocument): DeckSaltAnaly
     (sum, card) => sum + (card.saltWeight >= 3 ? card.quantity : 0),
     0,
   );
-  const saltScore = calculateSaltScore(totalSaltWeight, highSaltCount);
+  const saltScore = calculateSaltScore(saltHits);
   const saltLevel = getSaltLevel(saltScore);
   const mainSource = getMainSaltSource(topCards);
   const findings = buildSaltFindings({
@@ -112,11 +128,11 @@ function isSaltRelevantSection(card: { section: DeckSection }) {
   return card.section === "commander" || card.section === "mainboard" || card.section === "companion";
 }
 
-function detectSaltCard(card: {
+function detectSaltHit(card: {
   card: ScryfallCard;
   quantity: number;
   section: DeckSection;
-}): DeckSaltCard | null {
+}): SaltHit | null {
   const exact = findExactSaltDefinition(card.card);
   const heuristic = detectHeuristicSalt(card.card);
   const best = chooseStrongerSaltDefinition(exact, heuristic);
@@ -132,6 +148,10 @@ function detectSaltCard(card: {
     saltWeight: best.saltWeight,
     category: best.category,
     reason: best.reason,
+    exposureWeight:
+      best.saltWeight *
+      Math.sqrt(Math.max(1, card.quantity)) *
+      getSaltExposureMultiplier(card.card, card.section),
   };
 }
 
@@ -232,6 +252,33 @@ function detectHeuristicSalt(card: ScryfallCard): SaltDefinition | null {
     );
   }
 
+  if (/\bcontrol target player\b|\byou control (that|target) player\b/.test(text)) {
+    return defineSalt(
+      name,
+      3,
+      "Turn Control",
+      "Controlling another player's decisions tends to create high social friction.",
+    );
+  }
+
+  if (/\bgain control of target\b|\bgain control of (up to )?one target\b/.test(text)) {
+    return defineSalt(
+      name,
+      2.5,
+      "Theft/Control",
+      "Permanent theft can create more table frustration than ordinary removal.",
+    );
+  }
+
+  if (/\beach opponent discards\b|\btarget opponent discards (their|his or her) hand\b/.test(text)) {
+    return defineSalt(
+      name,
+      2.5,
+      "Discard Pressure",
+      "Repeatable or broad discard can make players feel locked out of the game.",
+    );
+  }
+
   return null;
 }
 
@@ -250,8 +297,48 @@ function chooseStrongerSaltDefinition(
   return left.saltWeight >= right.saltWeight ? left : right;
 }
 
-function calculateSaltScore(totalSaltWeight: number, highSaltCount: number) {
-  return Math.min(100, Math.round(totalSaltWeight * 7.5 + highSaltCount * 6));
+function calculateSaltScore(saltHits: SaltHit[]) {
+  const exposurePressure = saltHits.reduce((sum, card) => sum + card.exposureWeight, 0);
+  const categoryPressure = [...getSaltCategoryExposure(saltHits).values()].reduce(
+    (sum, exposure) => sum + Math.sqrt(exposure),
+    0,
+  );
+  const pressure = exposurePressure + categoryPressure * 0.45;
+
+  return Math.min(100, Math.round(100 * (1 - Math.exp(-pressure / 13))));
+}
+
+function getSaltExposureMultiplier(card: ScryfallCard, section: DeckSection) {
+  const manaValue = Number.isFinite(card.cmc) ? card.cmc : 0;
+  const manaAccess =
+    manaValue <= 2
+      ? 1
+      : manaValue <= 3
+        ? 0.92
+        : manaValue <= 4
+          ? 0.82
+          : manaValue <= 5
+            ? 0.7
+            : manaValue <= 6
+              ? 0.58
+              : 0.45;
+  const sectionAccess =
+    section === "commander"
+      ? 1.25
+      : section === "companion"
+        ? 0.9
+        : 1;
+
+  return manaAccess * sectionAccess;
+}
+
+function getSaltCategoryExposure(cards: SaltHit[]) {
+  const byCategory = new Map<string, number>();
+  for (const card of cards) {
+    byCategory.set(card.category, (byCategory.get(card.category) ?? 0) + card.exposureWeight);
+  }
+
+  return byCategory;
 }
 
 function getSaltLevel(score: number) {

@@ -5,9 +5,9 @@ import { ParsedDeckEntry, ResolvedDeckCard, ScryfallCard, UnresolvedDeckCard } f
 const SCRYFALL_API_BASE = "https://api.scryfall.com";
 const SCRYFALL_BATCH_SIZE = 75;
 const SCRYFALL_TIMEOUT_MS = 15_000;
-const SCRYFALL_RETRY_DELAYS_MS = [0, 700, 1_600];
-const SCRYFALL_FUZZY_CONCURRENCY = 4;
-const SCRYFALL_MIN_REQUEST_INTERVAL_MS = 120;
+const SCRYFALL_RETRY_DELAYS_MS = [0, 1_000, 2_500, 5_000];
+const SCRYFALL_FUZZY_CONCURRENCY = 1;
+const SCRYFALL_MIN_REQUEST_INTERVAL_MS = 250;
 
 const cardLookupCache = new Map<string, ScryfallCard>();
 const finalUnmatchedCache = new Set<string>();
@@ -234,15 +234,15 @@ async function fetchScryfallWithRetry(url: string, init: RequestInit): Promise<R
   let lastError: unknown = null;
 
   for (let attempt = 0; attempt < SCRYFALL_RETRY_DELAYS_MS.length; attempt += 1) {
-    await waitForScryfallTurn();
-
     const delayMs =
       attempt > 0 && lastError instanceof Response
         ? getRetryDelayMs(lastError, attempt)
         : SCRYFALL_RETRY_DELAYS_MS[attempt];
     if (delayMs > 0) {
-      await sleep(delayMs);
+      registerScryfallBackoff(delayMs);
     }
+
+    await waitForScryfallTurn();
 
     try {
       const response = await fetch(url, {
@@ -285,6 +285,14 @@ function getRetryDelayMs(response: Response, attempt: number) {
   }
 
   return SCRYFALL_RETRY_DELAYS_MS[attempt] ?? SCRYFALL_RETRY_DELAYS_MS.at(-1) ?? 1_600;
+}
+
+function registerScryfallBackoff(delayMs: number) {
+  if (delayMs <= 0) {
+    return;
+  }
+
+  nextScryfallRequestAt = Math.max(nextScryfallRequestAt, Date.now() + delayMs);
 }
 
 async function waitForScryfallTurn() {

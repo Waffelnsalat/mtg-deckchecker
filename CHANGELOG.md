@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+## 1.3.1 - 2026-08-04
+
+### Neu
+
+- Oeffentliche Info-Seiten fuer About, How it works, Privacy, Terms und Contact ergaenzt und im Footer verlinkt.
+- Salt-Analyse erkennt mehr soziale Reizquellen wie Turn-Control, Theft/Control und breite Discard-Pressure.
+- Salt-Score nutzt jetzt ein nichtlineares Expositionsmodell: Command-Zone-Zugriff, Mana Value und dichte Salt-Pakete zaehlen staerker als rohe Kartensummen.
+- Recommendations koennen erkannte Matchup-Schwaechen in Summary, Topic-Texten und Kartenbegruendungen aufgreifen.
+- Bracket-Findings werden nicht mehr frueh abgeschnitten, wenn mehrere relevante Barometer gleichzeitig vorliegen.
+- Scryfall-Retry- und Throttle-Verhalten wurde vorsichtiger eingestellt, damit 429-Antworten seltener auftreten.
+
+### Validierung
+
+- `npm run build`
+- `npm test`
+
 ## 1.3.0 - 2026-08-03
 
 ### Neu

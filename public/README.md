@@ -5,6 +5,7 @@
 ## Files
 
 - `index.html`: page structure, form fields, result sections, modal markup.
+- `about.html`, `how-it-works.html`, `privacy.html`, `terms.html`, `contact.html`: crawlable content and policy pages for public launch / ad-network readiness.
 - `styles.css`: layout, responsive behavior, visual states.
 - `app.js`: central browser state, API calls, orchestration, and shared render helpers.
 - `deck-input.js` / `decklist-intake.js`: paste, upload, URL import, target bracket prompt, and scan start flow.
@@ -51,3 +52,4 @@
 - If tag wording or tag aggregation changes, update the shared backend alias list and mirror user-facing aliases in `frontend-config.js`.
 - If a metric label is unclear, update the hover help in `frontend-config.js` before adding more visible text to the UI.
 - After changing UI behavior, run `npm run build` and open the local site with `npm run dev`.
+- Do not add live ad scripts until a real publisher id, privacy wording, and consent requirements are confirmed.

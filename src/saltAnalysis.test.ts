@@ -30,11 +30,32 @@ test("analyzeDeckSalt detects known high-salt cards and summarizes the main sour
     ]),
   );
 
-  assert.equal(analysis.saltLevel, "extreme");
+  assert.equal(analysis.saltLevel, "high");
   assert.equal(analysis.highSaltCount, 3);
+  assert.ok(analysis.saltScore >= 60);
+  assert.ok(analysis.saltScore < 100);
   assert.equal(analysis.mainSource, "Resource Denial");
   assert.equal(analysis.topCards[0]?.name, "Winter Orb");
   assert.match(analysis.summary, /social pressure/i);
+});
+
+test("analyzeDeckSalt reserves extreme scores for dense accessible salt packages", () => {
+  const analysis = analyzeDeckSalt(
+    createDocument([
+      createResolvedCard("commander", 1, "Grand Arbiter Augustin IV", "Legendary Creature - Human Advisor", 4),
+      createResolvedCard("mainboard", 1, "Winter Orb", "Artifact", 2),
+      createResolvedCard("mainboard", 1, "Static Orb", "Artifact", 3),
+      createResolvedCard("mainboard", 1, "Stasis", "Enchantment", 2),
+      createResolvedCard("mainboard", 1, "Drannith Magistrate", "Creature - Human Wizard", 2),
+      createResolvedCard("mainboard", 1, "Opposition Agent", "Creature - Human Rogue", 3),
+      createResolvedCard("mainboard", 1, "Rhystic Study", "Enchantment", 3),
+      createResolvedCard("mainboard", 32, "Island", "Basic Land - Island", 0),
+    ]),
+  );
+
+  assert.equal(analysis.saltLevel, "extreme");
+  assert.ok(analysis.saltScore >= 85);
+  assert.ok(analysis.saltScore < 100);
 });
 
 test("analyzeDeckSalt uses oracle text heuristics for salt patterns outside the local list", () => {
@@ -57,6 +78,28 @@ test("analyzeDeckSalt uses oracle text heuristics for salt patterns outside the 
   assert.equal(analysis.highSaltCount, 1);
   assert.equal(analysis.topCards[0]?.category, "Mass Land Denial");
   assert.ok(analysis.topCards.some((card) => card.category === "Extra Turns"));
+});
+
+test("analyzeDeckSalt detects turn control and theft as social pressure", () => {
+  const analysis = analyzeDeckSalt(
+    createDocument([
+      createResolvedCard("mainboard", 1, "Mindslaver", "Legendary Artifact", 6),
+      createResolvedCard(
+        "mainboard",
+        1,
+        "Custom Thief",
+        "Creature - Rogue",
+        5,
+        "When Custom Thief enters the battlefield, gain control of target artifact.",
+      ),
+      createResolvedCard("mainboard", 36, "Island", "Basic Land - Island", 0),
+    ]),
+  );
+
+  assert.ok(analysis.topCards.some((card) => card.category === "Turn Control"));
+  assert.ok(analysis.topCards.some((card) => card.category === "Theft/Control"));
+  assert.ok(analysis.saltScore >= 30);
+  assert.ok(analysis.saltScore < 50);
 });
 
 test("analyzeDeckSalt matches front-face names on modal cards", () => {

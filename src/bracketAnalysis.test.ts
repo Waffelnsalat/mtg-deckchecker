@@ -392,6 +392,59 @@ test("analyzeDeckBracket treats extra-turn and mass-land-denial context as notes
   assert.match(massLandDenialFinding?.title ?? "", /support/);
 });
 
+test("analyzeDeckBracket keeps all relevant bracket findings when several barometers are present", () => {
+  const analysis = analyzeDeckBracket({
+    document: createDocument([
+      createResolvedCard(
+        "mainboard",
+        "Temporal Manipulation",
+        "Sorcery",
+        "Target player takes an extra turn after this one.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        "Time Warp",
+        "Sorcery",
+        "Target player takes an extra turn after this one.",
+      ),
+      createResolvedCard(
+        "mainboard",
+        "Armageddon",
+        "Sorcery",
+        "Destroy all lands.",
+      ),
+    ]),
+    power: createPowerAnalysis(6.2, {
+      speed: 54,
+      consistency: 55,
+      interaction: 43,
+      resilience: 54,
+      closing: 64,
+      mana: 58,
+    }),
+    gameChangers: createGameChangerAnalysis(5),
+    winConditions: createWinConditions({
+      exact: [
+        {
+          cardNames: ["Thassa's Oracle", "Demonic Consultation"],
+        },
+      ],
+    }),
+    targetBracket: 4,
+  });
+
+  const codes = new Set(analysis.findings.map((finding: any) => finding.code));
+  assert.equal(analysis.findings.length, 8);
+  assert.ok(codes.has("bracket_read"));
+  assert.ok(codes.has("bracket_target_fit"));
+  assert.ok(codes.has("bracket_rules_floor"));
+  assert.ok(codes.has("bracket_not_higher"));
+  assert.ok(codes.has("bracket_game_changers"));
+  assert.ok(codes.has("bracket_two_card_combo"));
+  assert.ok(codes.has("bracket_extra_turns"));
+  assert.ok(codes.has("bracket_mass_land_denial"));
+});
+
 test("analyzeDeckBracket treats overwhelming cEDH power as bracket 5 even without combo lookup hits", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([]),

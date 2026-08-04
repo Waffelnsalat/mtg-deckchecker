@@ -130,6 +130,9 @@ test("advanced UI smoke anchors and card breakdown data stay wired", () => {
   assert.match(html, /id="card-breakdown-body"/);
   assert.match(html, /id="card-breakdown-tag-stats"/);
   assert.match(html, /id="composition-chart"/);
+  assert.match(html, /href="\/privacy\.html"/);
+  assert.match(html, /href="\/terms\.html"/);
+  assert.match(html, /href="\/contact\.html"/);
   assert.match(frontendConfig, /tagStatAliases/);
 
   const advancedRoles = analyzeDeckAdvancedRoles({
@@ -157,6 +160,26 @@ test("advanced UI smoke anchors and card breakdown data stay wired", () => {
   assert.ok(advancedRoles.taggedCards.length >= 2);
   assert.ok(advancedRoles.taggedCards.some((card) => card.name === "Smoke Draw"));
   assert.ok(advancedRoles.taggedCards.some((card) => card.hits.some((hit) => hit.tag === "draw")));
+});
+
+test("static content and policy pages stay available", () => {
+  const pages = [
+    "public/about.html",
+    "public/how-it-works.html",
+    "public/privacy.html",
+    "public/terms.html",
+    "public/contact.html",
+  ];
+
+  for (const page of pages) {
+    const html = readFileSync(page, "utf8");
+    assert.match(html, /MTG Deckchecker/);
+    assert.match(html, /href="\/styles\.css"/);
+    assert.match(html, /href="\//);
+  }
+
+  assert.match(readFileSync("public/privacy.html", "utf8"), /Cookies and advertising/);
+  assert.match(readFileSync("public/terms.html", "utf8"), /Unofficial tool/);
 });
 
 test("decklist intake removes copied sideboard blocks without dropping supplemental decks", () => {

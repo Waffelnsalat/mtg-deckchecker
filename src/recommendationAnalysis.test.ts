@@ -503,6 +503,61 @@ test("analyzeDeckRecommendations gives every topic at least one card", async () 
   assert.ok(recommendations.topics.every((topic) => topic.cards.length >= 1));
 });
 
+test("analyzeDeckRecommendations connects suggestions to matchup weaknesses", async () => {
+  const recommendations = await analyzeDeckRecommendations(
+    createInput({
+      spellInteraction: {
+        interactionScore: 32,
+        counts: {
+          hard: 0,
+          soft: 1,
+        },
+        recommendations: {
+          hardTarget: 3,
+          softTarget: 2,
+        },
+        taggedCards: [],
+      },
+      removal: {
+        removalScore: 45,
+        counts: {
+          targeted: 3,
+          mass: 1,
+        },
+        recommendations: {
+          targetedTarget: 6,
+          massTarget: 2,
+        },
+        taggedCards: [],
+      },
+      weaknesses: {
+        summary: "Counterspell pressure is the clearest matchup issue.",
+        exposures: [
+          {
+            key: "counterspell_pressure",
+            label: "Counterspell Pressure",
+            severity: "high",
+            vulnerabilityScore: 72,
+            weakAgainst: [],
+            summary: "",
+            evidence: [],
+            answerGaps: [],
+            resistantFactors: [],
+          },
+        ],
+        resistantTo: [],
+        watchPoints: [],
+      },
+    }) as any,
+  );
+
+  const interactionTopic = recommendations.topics.find((topic) => topic.key === "interaction");
+
+  assert.match(recommendations.summary, /counterspell pressure/i);
+  assert.match(interactionTopic?.summary ?? "", /counterspell pressure/i);
+  assert.match(interactionTopic?.cards[0]?.reason ?? "", /cover counterspell pressure/i);
+});
+
 test("analyzeDeckRecommendations lets EDHREC reorder a same-bracket shell suggestion", async () => {
   const recommendations = await analyzeDeckRecommendations(
     createInput({
