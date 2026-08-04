@@ -1,11 +1,13 @@
 import {
   DeckConsistencyAnalysis,
   DeckDrawAnalysis,
+  DeckLandBaseAnalysis,
   DeckPowerAnalysis,
   DeckProtectionAnalysis,
   DeckRampAnalysis,
   DeckRecursionAnalysis,
   DeckRemovalAnalysis,
+  DeckSaltAnalysis,
   DeckSpellInteractionAnalysis,
   DeckStrategyAnalysis,
   DeckStructureAnalysis,
@@ -32,9 +34,11 @@ interface DeckWeaknessInput {
   strategy: DeckStrategyAnalysis;
   winStrategy: DeckWinStrategyAnalysis;
   structure: DeckStructureAnalysis;
+  landBase: DeckLandBaseAnalysis;
   ramp: DeckRampAnalysis;
   draw: DeckDrawAnalysis;
   consistency: DeckConsistencyAnalysis;
+  salt?: DeckSaltAnalysis;
   protection: DeckProtectionAnalysis;
   recursion: DeckRecursionAnalysis;
   winConditions: DeckWinConditionAnalysis;
@@ -71,17 +75,20 @@ export function analyzeDeckWeaknesses(input: DeckWeaknessInput): DeckWeaknessAna
     assessPillowfortAndFogs(input),
     assessCounterspellPressure(input),
     assessPermanentHate(input),
+    assessManaHateAndTempo(input),
     assessFastCombo(input),
+    assessThreatPerception(input),
   ].filter((draft): draft is RiskDraft => draft !== null);
 
-  const exposures = drafts
+  const finalized = drafts
     .map(finalizeExposure)
+    .sort((left, right) => right.vulnerabilityScore - left.vulnerabilityScore);
+
+  const exposures = finalized
     .filter((exposure) => exposure.vulnerabilityScore >= 36)
-    .sort((left, right) => right.vulnerabilityScore - left.vulnerabilityScore)
     .slice(0, 6);
 
-  const resistantTo = drafts
-    .map(finalizeExposure)
+  const resistantTo = finalized
     .filter((exposure) => exposure.vulnerabilityScore < 36 && exposure.resistantFactors.length > 0)
     .sort((left, right) => left.vulnerabilityScore - right.vulnerabilityScore)
     .slice(0, 3)
@@ -424,6 +431,69 @@ function assessPermanentHate(input: DeckWeaknessInput): RiskDraft | null {
   };
 }
 
+function assessManaHateAndTempo(input: DeckWeaknessInput): RiskDraft | null {
+  const tappedBurden =
+    input.landBase.counts.alwaysTapped + input.landBase.counts.conditionalTapped * 0.6;
+  const colorBurden =
+    input.landBase.counts.colorlessOnly + input.landBase.counts.costly * 0.8;
+  const nonbasicPressure =
+    input.landBase.counts.utility +
+    input.landBase.counts.fetch +
+    input.landBase.counts.typed +
+    input.landBase.counts.costly;
+  const manaConcern =
+    input.landBase.landBaseScore < 58 ||
+    tappedBurden >= 9 ||
+    colorBurden > input.landBase.recommendations.colorlessOnlyMax + 2 ||
+    nonbasicPressure >= 20;
+
+  if (!manaConcern) {
+    return null;
+  }
+
+  const dependency = clamp(
+    26 +
+      Math.max(0, 72 - input.landBase.landBaseScore) * 0.9 +
+      tappedBurden * 1.8 +
+      Math.max(0, colorBurden - input.landBase.recommendations.colorlessOnlyMax) * 3 +
+      Math.max(0, nonbasicPressure - 14) * 1.1,
+    0,
+    94,
+  );
+  const mitigation = clamp(
+    input.ramp.counts.stable * 4 +
+      input.ramp.counts.manaFixing * 5 +
+      input.ramp.counts.landAcceleration * 3 +
+      input.landBase.counts.reliableUntapped * 0.5,
+    0,
+    60,
+  );
+
+  return {
+    key: "mana_hate_tempo",
+    label: "Mana Hate and Tempo",
+    weakAgainst: [
+      "Blood Moon / Back to Basics effects",
+      "land destruction tempo",
+      "fast decks that punish tapped starts",
+    ],
+    dependency,
+    mitigation,
+    evidence: [
+      `land-base score ${Math.round(input.landBase.landBaseScore)}, ${tappedBurden.toFixed(1)} tapped-land burden`,
+      `${colorBurden.toFixed(1)} colorless/costly land burden against a target of ${input.landBase.recommendations.colorlessOnlyMax}`,
+    ],
+    answerGaps:
+      mitigation < 22
+        ? ["mana fixing or stable ramp may not cover games where the land base is attacked or starts tapped"]
+        : [],
+    resistantFactors:
+      mitigation >= 30
+        ? ["stable ramp and fixing help absorb mana pressure"]
+        : [],
+  };
+}
+
 function assessFastCombo(input: DeckWeaknessInput): RiskDraft | null {
   const slowPlan =
     hasStrategy(input.strategy, SLOW_VALUE_STRATEGIES) ||
@@ -469,6 +539,51 @@ function assessFastCombo(input: DeckWeaknessInput): RiskDraft | null {
     resistantFactors:
       mitigation >= 28
         ? ["stack interaction, hand pressure, or stax pieces help slow fast combo"]
+        : [],
+  };
+}
+
+function assessThreatPerception(input: DeckWeaknessInput): RiskDraft | null {
+  const salt = input.salt;
+
+  if (!salt || salt.saltScore < 25) {
+    return null;
+  }
+
+  const interactionShield =
+    input.protection.counts.broad * 8 +
+    input.protection.counts.targeted * 3 +
+    input.spellInteraction.counts.hard * 4 +
+    input.recursion.counts.core * 1.5;
+  const dependency = clamp(
+    salt.saltScore * 0.72 +
+      salt.highSaltCount * 5 +
+      (salt.mainSource === "Resource Denial" || salt.mainSource === "Lock Piece" ? 12 : 0),
+    0,
+    96,
+  );
+  const mitigation = clamp(interactionShield, 0, 58);
+  const topCards = salt.topCards.slice(0, 3).map((card) => card.name).join(", ");
+
+  return {
+    key: "table_threat_perception",
+    label: "Table Threat Perception",
+    weakAgainst: ["focus-fire tables", "politics decks", "pods that remove high-salt pieces on sight"],
+    dependency,
+    mitigation,
+    evidence: [
+      `salt risk ${salt.saltScore}/100 from ${salt.mainSource.toLowerCase()}`,
+      topCards
+        ? `highest-salt cards: ${topCards}`
+        : "salt comes from the overall pattern rather than one card",
+    ],
+    answerGaps:
+      mitigation < 24
+        ? ["the deck may draw early table pressure without enough protection or redundancy to absorb it"]
+        : [],
+    resistantFactors:
+      mitigation >= 30
+        ? ["protection, recursion, or stack interaction helps keep key pieces through table pressure"]
         : [],
   };
 }

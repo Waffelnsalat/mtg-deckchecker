@@ -53,6 +53,49 @@ test("analyzeDeckWeaknesses can mark a covered axis as resistant instead of weak
   assert.ok(analysis.resistantTo.some((entry) => /Board Wipes/i.test(entry)));
 });
 
+test("analyzeDeckWeaknesses flags shaky land bases as soft to mana hate and tempo", () => {
+  const analysis = analyzeDeckWeaknesses(createInput({
+    landBaseScore: 43,
+    alwaysTappedLands: 11,
+    conditionalTappedLands: 5,
+    colorlessOnlyLands: 6,
+    costlyLands: 4,
+    reliableUntappedLands: 8,
+    stableRamp: 1,
+    manaFixing: 0,
+    landAcceleration: 0,
+  }));
+
+  const manaHate = analysis.exposures.find((entry) => entry.key === "mana_hate_tempo");
+  assert.ok(manaHate);
+  assert.ok(manaHate.vulnerabilityScore >= 48);
+  assert.ok(manaHate.weakAgainst.some((entry) => /Blood Moon|Back to Basics/i.test(entry)));
+  assert.ok(manaHate.answerGaps.some((entry) => /mana fixing|stable ramp/i.test(entry)));
+});
+
+test("analyzeDeckWeaknesses uses salt score as table threat perception", () => {
+  const analysis = analyzeDeckWeaknesses(createInput({
+    saltScore: 84,
+    highSaltCount: 5,
+    saltMainSource: "Resource Denial",
+    saltTopCards: [
+      { name: "Winter Orb", category: "Resource Denial" },
+      { name: "Static Orb", category: "Resource Denial" },
+    ],
+    broadProtection: 0,
+    targetedProtection: 0,
+    hardStack: 0,
+  }));
+
+  const tablePressure = analysis.exposures.find(
+    (entry) => entry.key === "table_threat_perception",
+  );
+  assert.ok(tablePressure);
+  assert.equal(tablePressure.severity, "high");
+  assert.ok(tablePressure.evidence.some((entry) => /salt risk 84/i.test(entry)));
+  assert.ok(tablePressure.weakAgainst.some((entry) => /focus-fire/i.test(entry)));
+});
+
 function createInput(overrides: Record<string, any> = {}) {
   const strategy = {
     key: overrides.strategyKey ?? "control",
@@ -141,10 +184,40 @@ function createInput(overrides: Record<string, any> = {}) {
       },
       findings: [],
     },
+    landBase: {
+      landBaseScore: overrides.landBaseScore ?? 64,
+      summary: "",
+      counts: {
+        lands: 36,
+        reliableUntapped: overrides.reliableUntappedLands ?? 28,
+        alwaysTapped: overrides.alwaysTappedLands ?? 3,
+        conditionalTapped: overrides.conditionalTappedLands ?? 2,
+        typed: overrides.typedLands ?? 5,
+        fetch: overrides.fetchLands ?? 2,
+        utility: overrides.utilityLands ?? 2,
+        colorlessOnly: overrides.colorlessOnlyLands ?? 1,
+        costly: overrides.costlyLands ?? 1,
+      },
+      recommendations: {
+        alwaysTappedMax: 6,
+        conditionalTappedMax: 5,
+        colorlessOnlyMax: overrides.colorlessOnlyMax ?? 4,
+        costlyMax: 3,
+      },
+      findings: [],
+      taggedCards: [],
+    },
     ramp: {
       rampScore: 60,
       summary: "",
-      counts: { core: 8, stable: 7, burst: 0, landAcceleration: 1, manaFixing: 2, costReduction: 0 },
+      counts: {
+        core: 8,
+        stable: overrides.stableRamp ?? 7,
+        burst: 0,
+        landAcceleration: overrides.landAcceleration ?? 1,
+        manaFixing: overrides.manaFixing ?? 2,
+        costReduction: 0,
+      },
       recommendations: { coreTarget: 8, stableTarget: 6, fixingTarget: 2 },
       findings: [],
       taggedCards: [],
@@ -171,6 +244,23 @@ function createInput(overrides: Record<string, any> = {}) {
       bracket: { bracketOneTwoLegal: true, bracketThreeLegal: true, bracketThreeCap: 3 },
       findings: [],
       taggedCards: [],
+    },
+    salt: {
+      summary: "",
+      saltScore: overrides.saltScore ?? 0,
+      saltLevel: getSaltLevel(overrides.saltScore ?? 0),
+      totalSaltWeight: overrides.totalSaltWeight ?? 0,
+      highSaltCount: overrides.highSaltCount ?? 0,
+      mainSource: overrides.saltMainSource ?? "Low",
+      topCards: (overrides.saltTopCards ?? []).map((card: any) => ({
+        name: card.name,
+        quantity: 1,
+        section: "mainboard",
+        saltWeight: card.saltWeight ?? 3.5,
+        category: card.category,
+        reason: "",
+      })),
+      findings: [],
     },
     protection: {
       protectionScore: 45,
@@ -260,4 +350,20 @@ function createInput(overrides: Record<string, any> = {}) {
       taggedCards: [],
     },
   } as any;
+}
+
+function getSaltLevel(score: number) {
+  if (score >= 75) {
+    return "extreme";
+  }
+
+  if (score >= 50) {
+    return "high";
+  }
+
+  if (score >= 25) {
+    return "medium";
+  }
+
+  return "low";
 }
