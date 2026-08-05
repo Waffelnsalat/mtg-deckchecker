@@ -48,6 +48,10 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   min-height: 100%;
 }
@@ -208,6 +212,7 @@ html[data-theme="dark"] body::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1.2rem;
   padding: 0.9rem 1rem;
@@ -218,12 +223,609 @@ html[data-theme="dark"] body::after {
 }
 
 .static-brand {
+  flex: 0 0 auto;
   font-size: 1.05rem;
+}
+
+.static-header .site-nav {
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  min-width: min(100%, 280px);
+}
+
+.static-header .theme-toggle {
+  flex: 0 0 auto;
+  min-height: 2.35rem;
+  padding: 0.55rem 0.8rem;
 }
 
 .static-main {
   display: grid;
   gap: 1rem;
+}
+
+.combo-page-shell {
+  max-width: 1580px;
+}
+
+.combo-header {
+  margin-bottom: 1rem;
+}
+
+.combo-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.combo-hero-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 252, 247, 0.96), rgba(255, 247, 233, 0.82)),
+    repeating-linear-gradient(135deg, rgba(80, 49, 24, 0.055) 0 1px, transparent 1px 14px);
+  box-shadow: var(--shadow);
+}
+
+html[data-theme="dark"] .combo-hero-panel {
+  background:
+    linear-gradient(135deg, rgba(24, 30, 40, 0.98), rgba(38, 34, 30, 0.9)),
+    repeating-linear-gradient(135deg, rgba(232, 214, 191, 0.045) 0 1px, transparent 1px 14px);
+}
+
+.combo-hero-panel h1 {
+  max-width: 17ch;
+  margin: 0.2rem 0 0.65rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+.combo-hero-panel p {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.combo-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  max-width: 430px;
+}
+
+.combo-hero-stats span {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(72, 148, 98, 0.2);
+  border-radius: 999px;
+  color: #2d6940;
+  background: rgba(232, 246, 235, 0.72);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+html[data-theme="dark"] .combo-hero-stats span {
+  color: #c1f2cf;
+  background: rgba(50, 99, 68, 0.26);
+}
+
+.combo-workspace {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.72fr) minmax(0, 1.28fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.combo-intake-panel,
+.combo-results-panel {
+  min-width: 0;
+  padding: clamp(1.15rem, 2vw, 1.65rem);
+}
+
+.combo-intake-panel {
+  position: sticky;
+  top: 1rem;
+}
+
+.combo-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.combo-intake-panel > .panel-heading,
+.combo-results-panel > .panel-heading {
+  padding-inline: 0.05rem;
+}
+
+.combo-form .input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.6rem;
+}
+
+.combo-form .field {
+  gap: 0.45rem;
+}
+
+.combo-form .field input,
+.combo-form .field textarea {
+  padding-inline: 1rem;
+}
+
+.combo-form .field textarea {
+  padding-block: 0.95rem;
+}
+
+.combo-form .file-picker {
+  padding: 0.7rem 0.85rem;
+}
+
+.combo-form .form-status {
+  margin: 0.1rem 0 0;
+  padding-inline: 0.1rem;
+  line-height: 1.45;
+}
+
+.combo-decklist-field textarea {
+  min-height: 438px;
+  resize: vertical;
+  line-height: 1.45;
+  background:
+    linear-gradient(180deg, var(--surface-card-strong), var(--surface-card)),
+    repeating-linear-gradient(180deg, transparent 0 27px, rgba(80, 49, 24, 0.055) 27px 28px);
+}
+
+.combo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.combo-empty-state {
+  position: relative;
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.combo-empty-state::before {
+  content: "";
+  position: absolute;
+  width: min(420px, 78%);
+  aspect-ratio: 1;
+  border: 1px solid rgba(199, 155, 57, 0.26);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 49.5%, rgba(199, 155, 57, 0.18) 49.5% 50.5%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(154, 61, 33, 0.14) 49.5% 50.5%, transparent 50.5%);
+  opacity: 0.7;
+}
+
+.combo-empty-copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.35rem;
+  max-width: 370px;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-strong);
+  box-shadow: 0 18px 40px rgba(90, 43, 16, 0.12);
+}
+
+.combo-empty-copy strong {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+}
+
+.combo-empty-copy span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.combo-results {
+  display: grid;
+  gap: 1rem;
+}
+
+.combo-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.combo-stat-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 112px;
+  padding: 1rem;
+}
+
+.combo-stat-card::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0.8rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: rgba(80, 49, 24, 0.12);
+}
+
+.combo-stat-card span,
+.combo-stat-card strong {
+  position: relative;
+  z-index: 1;
+}
+
+.combo-stat-card strong {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 2.2rem;
+}
+
+.combo-stat-complete::after {
+  background: linear-gradient(90deg, #489462, #7bd392);
+}
+
+.combo-stat-missing::after {
+  background: linear-gradient(90deg, #c79b39, #e0b864);
+}
+
+.combo-stat-color::after {
+  background: linear-gradient(90deg, #5f88b5, #8bb9de);
+}
+
+.combo-stat-commander::after {
+  background: linear-gradient(90deg, #9a3d21, #d68449);
+}
+
+.combo-summary {
+  margin: 0;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(199, 155, 57, 0.2);
+  border-radius: 8px;
+  color: var(--muted);
+  background: rgba(199, 155, 57, 0.08);
+  line-height: 1.55;
+}
+
+.combo-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-card);
+}
+
+.segmented-control {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.28rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="dark"] .segmented-control {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.combo-filter {
+  min-height: 38px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.5rem 0.78rem;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.combo-filter:hover,
+.combo-filter:focus-visible,
+.combo-filter.is-active {
+  color: var(--ink);
+  background: var(--paper-strong);
+  outline: none;
+  box-shadow: 0 8px 18px rgba(90, 43, 16, 0.12);
+}
+
+html[data-theme="dark"] .combo-filter:hover,
+html[data-theme="dark"] .combo-filter:focus-visible,
+html[data-theme="dark"] .combo-filter.is-active {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.combo-search-field {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: min(100%, 300px);
+}
+
+.combo-search-field span {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.combo-search-field input {
+  width: 100%;
+  padding-inline: 0.75rem;
+}
+
+.combo-lines {
+  display: grid;
+  gap: 1rem;
+}
+
+.combo-line-card {
+  --line-accent: var(--gold);
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-left: 0.35rem solid var(--line-accent);
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, var(--surface-card-strong), var(--surface-card)),
+    repeating-linear-gradient(135deg, rgba(80, 49, 24, 0.045) 0 1px, transparent 1px 16px);
+  box-shadow: 0 18px 34px rgba(90, 43, 16, 0.08);
+}
+
+html[data-theme="dark"] .combo-line-card {
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.26);
+}
+
+.combo-line-complete {
+  --line-accent: #489462;
+}
+
+.combo-line-missing {
+  --line-accent: #c79b39;
+}
+
+.combo-line-color {
+  --line-accent: #5f88b5;
+}
+
+.combo-line-commander {
+  --line-accent: #9a3d21;
+}
+
+.combo-line-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.combo-line-header h3 {
+  margin: 0.15rem 0 0;
+  font-size: 1.28rem;
+  line-height: 1.25;
+}
+
+.combo-line-badges {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-width: 160px;
+}
+
+.combo-missing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid rgba(154, 61, 33, 0.24);
+  border-radius: 8px;
+  color: var(--accent-strong);
+  background: rgba(154, 61, 33, 0.08);
+  font-weight: 900;
+}
+
+.combo-missing span {
+  padding: 0.18rem 0.46rem;
+  border-radius: 999px;
+  color: #fff7ed;
+  background: #9a3d21;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.combo-card-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(126px, 1fr));
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.combo-card-preview {
+  position: relative;
+  margin: 0;
+  min-width: 0;
+}
+
+.combo-card-link {
+  display: grid;
+  grid-template-rows: 176px auto;
+  gap: 0.55rem;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+.combo-card-link:hover img,
+.combo-card-link:hover .combo-card-placeholder,
+.combo-card-link:focus-visible img,
+.combo-card-link:focus-visible .combo-card-placeholder {
+  border-color: var(--gold);
+  box-shadow:
+    0 16px 28px rgba(0, 0, 0, 0.16),
+    0 0 0 3px rgba(199, 155, 57, 0.2);
+  transform: translateY(-1px);
+}
+
+.combo-card-preview img,
+.combo-card-placeholder {
+  width: 100%;
+  height: 176px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.16);
+  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.combo-card-preview.is-owned img,
+.combo-card-preview.is-owned .combo-card-placeholder {
+  border-color: rgba(72, 148, 98, 0.42);
+}
+
+.combo-card-placeholder {
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.combo-card-preview figcaption {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.combo-card-preview figcaption strong,
+.combo-card-preview figcaption span {
+  overflow-wrap: anywhere;
+}
+
+.combo-card-preview figcaption strong {
+  font-size: 0.86rem;
+  line-height: 1.2;
+}
+
+.combo-card-preview figcaption span {
+  width: fit-content;
+  padding: 0.16rem 0.42rem;
+  border-radius: 999px;
+  color: #2d6940;
+  background: rgba(232, 246, 235, 0.9);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+html[data-theme="dark"] .combo-card-preview figcaption span {
+  color: #c1f2cf;
+  background: rgba(50, 99, 68, 0.28);
+}
+
+.combo-card-preview.is-missing img,
+.combo-card-preview.is-missing .combo-card-placeholder {
+  border-color: rgba(154, 61, 33, 0.54);
+  filter: saturate(0.82) contrast(0.98);
+}
+
+.combo-card-preview.is-missing figcaption span {
+  color: #fff7ed;
+  background: #9a3d21;
+}
+
+.combo-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.combo-detail-grid > div {
+  padding: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+html[data-theme="dark"] .combo-detail-grid > div {
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.combo-detail-grid p {
+  margin: 0.25rem 0 0;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.combo-steps {
+  counter-reset: combo-step;
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.55;
+}
+
+.combo-steps li {
+  position: relative;
+  min-height: 2.35rem;
+  padding: 0.55rem 0.7rem 0.55rem 3rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+html[data-theme="dark"] .combo-steps li {
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.combo-steps li::before {
+  counter-increment: combo-step;
+  content: counter(combo-step);
+  position: absolute;
+  left: 0.75rem;
+  top: 0.55rem;
+  display: grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  color: #fff7ed;
+  background: var(--line-accent);
+  font-size: 0.78rem;
+  font-weight: 900;
 }
 
 .content-hero,
@@ -4818,6 +5420,101 @@ html[data-theme="dark"] #issues-box {
   }
 }
 
+@media (max-width: 1100px) {
+  .combo-hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .combo-hero-stats {
+    justify-content: flex-start;
+    max-width: none;
+  }
+
+  .combo-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .combo-intake-panel {
+    position: static;
+  }
+
+  .combo-decklist-field textarea {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 760px) {
+  .combo-hero-panel h1 {
+    font-size: 2rem;
+  }
+
+  .combo-summary-grid,
+  .combo-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .combo-line-header,
+  .combo-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .combo-line-badges {
+    justify-content: flex-start;
+    min-width: 0;
+  }
+
+  .combo-card-strip {
+    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  }
+
+  .combo-card-preview {
+    grid-template-rows: none;
+  }
+
+  .combo-card-link {
+    grid-template-rows: 154px auto;
+  }
+
+  .combo-card-preview img,
+  .combo-card-placeholder {
+    height: 154px;
+  }
+}
+
+@media (max-width: 520px) {
+  .combo-hero-panel,
+  .combo-line-card {
+    padding: 0.85rem;
+  }
+
+  .combo-summary-grid,
+  .combo-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .combo-actions,
+  .combo-actions .primary-button,
+  .combo-actions .secondary-button,
+  .combo-search-field {
+    width: 100%;
+  }
+
+  .combo-form .input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .segmented-control {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .combo-filter {
+    width: 100%;
+  }
+}
+
 @keyframes radar-area-in {
   from {
     opacity: 0;
@@ -4955,6 +5652,11 @@ html[data-theme="dark"] #issues-box {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .static-header .site-nav {
+    justify-content: flex-start;
+    min-width: 0;
   }
 
   .page-shell.intake-mode .hero {

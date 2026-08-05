@@ -165,6 +165,7 @@ test("advanced UI smoke anchors and card breakdown data stay wired", () => {
 test("static content and policy pages stay available", () => {
   const pages = [
     "public/about.html",
+    "public/combo-finder.html",
     "public/how-it-works.html",
     "public/privacy.html",
     "public/terms.html",
@@ -174,12 +175,21 @@ test("static content and policy pages stay available", () => {
   for (const page of pages) {
     const html = readFileSync(page, "utf8");
     assert.match(html, /MTG Deckchecker/);
+    assert.match(html, /src="\/theme-preload\.js"/);
+    assert.match(html, /src="\/theme-toggle\.js"/);
+    assert.match(html, /data-theme-toggle/);
     assert.match(html, /href="\/styles\.css"/);
     assert.match(html, /href="\//);
   }
 
+  assert.match(readFileSync("public/index.html", "utf8"), /src="\/theme-preload\.js"/);
+
   assert.match(readFileSync("public/privacy.html", "utf8"), /Cookies and advertising/);
   assert.match(readFileSync("public/terms.html", "utf8"), /Unofficial tool/);
+  const comboFinderHtml = readFileSync("public/combo-finder.html", "utf8");
+  assert.match(comboFinderHtml, /id="combo-form"/);
+  assert.match(comboFinderHtml, /id="combo-lines"/);
+  assert.match(comboFinderHtml, /src="\/combo-finder\.js"/);
 });
 
 test("decklist intake removes copied sideboard blocks without dropping supplemental decks", () => {

@@ -22,6 +22,7 @@ import { analyzeDeckWinConditions } from "./winConditionAnalysis";
 import { analyzeDeckWinStrategy } from "./winStrategyAnalysis";
 import { analyzeDeckAdvancedRoles } from "./advancedCardScan";
 import { analyzeDeckWeaknesses } from "./weaknessAnalysis";
+import { lookupDeckComboFinder } from "./commanderSpellbook";
 import { DeckImportError, importDecklistFromUrl } from "./deckImport";
 import { DeckValidationError } from "./deckValidation";
 import { createDeckExport, getGeneratedExportsDir, resolveDecklistForAnalysis, resolveDecklistToDocument } from "./deckExport";
@@ -281,6 +282,41 @@ export function createApp() {
           spellInteraction,
           advancedRoles,
         },
+      });
+    } catch (error) {
+      sendDeckError(response, error);
+    }
+  });
+
+  app.post("/api/edh/combos/find", async (request, response) => {
+    const parsedBody = resolveDeckSchema.safeParse(request.body);
+
+    if (!parsedBody.success) {
+      response.status(400).json({
+        error: "Invalid request body.",
+        details: parsedBody.error.flatten(),
+      });
+      return;
+    }
+
+    try {
+      const additionalCommanderName =
+        parsedBody.data.additionalCommanderName ??
+        parsedBody.data.partnerName ??
+        parsedBody.data.backgroundName;
+      const { document, validation } = await resolveDecklistForAnalysis(parsedBody.data.decklist, {
+        commanderName: parsedBody.data.commanderName,
+        additionalCommanderName,
+        partnerName: parsedBody.data.partnerName,
+        backgroundName: parsedBody.data.backgroundName,
+        companionName: parsedBody.data.companionName,
+      });
+      const combos = await lookupDeckComboFinder(document);
+
+      response.json({
+        document,
+        validation,
+        combos,
       });
     } catch (error) {
       sendDeckError(response, error);

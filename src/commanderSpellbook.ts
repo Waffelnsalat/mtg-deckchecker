@@ -1,4 +1,8 @@
 import {
+  DeckComboFinderAnalysis,
+  DeckComboFinderCard,
+  DeckComboFinderLine,
+  DeckComboFinderLineStatus,
   DeckResolutionDocument,
   DeckWinConditionComboLookup,
   ResolvedDeckCard,
@@ -6,6 +10,7 @@ import {
   WinConditionComboLineType,
 } from "./types";
 import { createLogger } from "./logger";
+import { normalizeLookupKey } from "./decklist";
 
 const COMMANDER_SPELLBOOK_FIND_MY_COMBOS_URL =
   "https://backend.commanderspellbook.com/find-my-combos";
@@ -37,8 +42,20 @@ interface CommanderSpellbookCombo {
   uses?: Array<{
     card?: {
       name?: string;
+      typeLine?: string;
+      imageUriFrontNormal?: string | null;
+      imageUriFrontLarge?: string | null;
+      imageUriFrontSmall?: string | null;
+      scryfallUri?: string | null;
     };
     mustBeCommander?: boolean;
+    zoneLocations?: string[];
+  }>;
+  requires?: Array<{
+    template?: {
+      name?: string;
+    };
+    quantity?: number;
   }>;
   produces?: Array<{
     quantity?: number;
@@ -46,16 +63,13 @@ interface CommanderSpellbookCombo {
       name?: string;
     };
   }>;
+  popularity?: number;
 }
 
 export async function lookupDeckInfiniteCombos(
   document: DeckResolutionDocument,
 ): Promise<DeckWinConditionComboLookup> {
-  const commanderNames = new Set(
-    document.result.resolvedCards
-      .filter((card) => card.section === "commander")
-      .map((card) => card.card.name),
-  );
+  const commanderNames = getCommanderNames(document);
   const decklists = buildCommanderSpellbookDecklists(document);
 
   try {
@@ -96,6 +110,91 @@ export async function lookupDeckInfiniteCombos(
       nearMissCount: 0,
       exact: [],
     };
+  }
+}
+
+export async function lookupDeckComboFinder(
+  document: DeckResolutionDocument,
+): Promise<DeckComboFinderAnalysis> {
+  const commanderNames = getCommanderNames(document);
+  const deckNameSet = getDeckNameSet(document);
+  const deckCardUriMap = getDeckCardUriMap(document);
+  const decklists = buildCommanderSpellbookDecklists(document);
+
+  try {
+    const response = await fetchCommanderSpellbookCombos(decklists);
+
+    if (!response.ok) {
+      throw new Error(
+        `Commander Spellbook request failed with status ${response.status}.`,
+      );
+    }
+
+    const payload = (await response.json()) as CommanderSpellbookResponse;
+    const results = payload.results ?? {};
+    const complete = dedupeComboFinderLines(
+      (results.included ?? []).map((combo) =>
+        normalizeComboFinderLine(combo, {
+          status: "complete",
+          commanderNames,
+          deckNameSet,
+          deckCardUriMap,
+        }),
+      ),
+    );
+    const missingOne = dedupeComboFinderLines(
+      (results.almostIncluded ?? []).map((combo) =>
+        normalizeComboFinderLine(combo, {
+          status: "missing_one",
+          commanderNames,
+          deckNameSet,
+          deckCardUriMap,
+        }),
+      ),
+    ).filter((combo) => combo.missingCardNames.length + combo.missingTemplates.length <= 1);
+    const colorLocked = dedupeComboFinderLines(
+      (results.almostIncludedByAddingColors ?? []).map((combo) =>
+        normalizeComboFinderLine(combo, {
+          status: "color_locked",
+          commanderNames,
+          deckNameSet,
+          deckCardUriMap,
+        }),
+      ),
+    );
+    const commanderSwap = dedupeComboFinderLines(
+      [
+        ...(results.includedByChangingCommanders ?? []),
+        ...(results.almostIncludedByChangingCommanders ?? []),
+        ...(results.almostIncludedByAddingColorsAndChangingCommanders ?? []),
+      ].map((combo) =>
+        normalizeComboFinderLine(combo, {
+          status: "commander_swap",
+          commanderNames,
+          deckNameSet,
+          deckCardUriMap,
+        }),
+      ),
+    );
+
+    return buildComboFinderAnalysis({
+      lookupStatus: "ok",
+      complete,
+      missingOne,
+      colorLocked,
+      commanderSwap,
+    });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Unknown combo lookup error.";
+    logger.warn("Commander Spellbook finder lookup failed.", message);
+    return buildComboFinderAnalysis({
+      lookupStatus: "unavailable",
+      error: message,
+      complete: [],
+      missingOne: [],
+      colorLocked: [],
+      commanderSwap: [],
+    });
   }
 }
 
@@ -234,6 +333,139 @@ function normalizeExactCombo(
   };
 }
 
+function normalizeComboFinderLine(
+  combo: CommanderSpellbookCombo,
+  input: {
+    status: DeckComboFinderLineStatus;
+    commanderNames: Set<string>;
+    deckNameSet: Set<string>;
+    deckCardUriMap: Map<string, string>;
+  },
+): DeckComboFinderLine {
+  const cards = normalizeComboFinderCards(combo, input.deckNameSet, input.deckCardUriMap);
+  const cardNames = cards.map((card) => card.name);
+  const missingCardNames = cards
+    .filter((card) => !card.inDeck)
+    .map((card) => card.name);
+  const missingTemplates = normalizeMissingTemplates(combo);
+  const outcomeNames = normalizeOutcomeNames(combo.produces ?? []);
+  const lineType = determineComboLineType(outcomeNames);
+  const commanderInvolved =
+    (combo.uses ?? []).some((use) => use.mustBeCommander) ||
+    cardNames.some((name) => input.commanderNames.has(name));
+
+  return {
+    id: String(combo.id),
+    status: input.status,
+    statusLabel: getComboFinderStatusLabel(input.status),
+    lineType,
+    cardNames,
+    missingCardNames,
+    missingTemplates,
+    cards,
+    outcomeNames,
+    description: combo.description?.trim() ?? "",
+    steps: splitComboSteps(combo.description),
+    manaNeeded: combo.manaNeeded?.trim() || undefined,
+    notablePrerequisites: splitPrerequisites(combo.notablePrerequisites),
+    bracketTag: combo.bracketTag,
+    variantCount: combo.variantCount ?? 1,
+    commanderInvolved,
+    popularity: combo.popularity,
+  };
+}
+
+function normalizeComboFinderCards(
+  combo: CommanderSpellbookCombo,
+  deckNameSet: Set<string>,
+  deckCardUriMap: Map<string, string>,
+): DeckComboFinderCard[] {
+  const byName = new Map<string, DeckComboFinderCard>();
+
+  for (const use of combo.uses ?? []) {
+    const name = use.card?.name?.trim();
+    if (!name) {
+      continue;
+    }
+
+    const existing = byName.get(name);
+    const normalizedName = normalizeName(name);
+    const next: DeckComboFinderCard = {
+      name,
+      typeLine: use.card?.typeLine,
+      imageUri:
+        use.card?.imageUriFrontNormal ??
+        use.card?.imageUriFrontLarge ??
+        use.card?.imageUriFrontSmall ??
+        undefined,
+      scryfallUri:
+        use.card?.scryfallUri?.trim() ||
+        deckCardUriMap.get(normalizedName) ||
+        createScryfallSearchUri(name),
+      inDeck: deckNameSet.has(normalizedName),
+      mustBeCommander: Boolean(use.mustBeCommander),
+      zoneLocations: use.zoneLocations ?? [],
+    };
+
+    byName.set(name, existing ? mergeComboFinderCard(existing, next) : next);
+  }
+
+  return [...byName.values()].sort(
+    (left, right) => Number(right.inDeck) - Number(left.inDeck) || left.name.localeCompare(right.name),
+  );
+}
+
+function mergeComboFinderCard(left: DeckComboFinderCard, right: DeckComboFinderCard): DeckComboFinderCard {
+  return {
+    name: left.name,
+    typeLine: left.typeLine ?? right.typeLine,
+    imageUri: left.imageUri ?? right.imageUri,
+    scryfallUri: left.scryfallUri || right.scryfallUri,
+    inDeck: left.inDeck || right.inDeck,
+    mustBeCommander: left.mustBeCommander || right.mustBeCommander,
+    zoneLocations: [...new Set([...left.zoneLocations, ...right.zoneLocations])],
+  };
+}
+
+function normalizeMissingTemplates(combo: CommanderSpellbookCombo) {
+  return [
+    ...new Set(
+      (combo.requires ?? [])
+        .map((requirement) => {
+          const name = requirement.template?.name?.trim();
+          if (!name) {
+            return "";
+          }
+
+          return requirement.quantity && requirement.quantity > 1
+            ? `${requirement.quantity}x ${name}`
+            : name;
+        })
+        .filter(Boolean),
+    ),
+  ];
+}
+
+function splitComboSteps(description?: string) {
+  return (description ?? "")
+    .split(/\n+/)
+    .map((step) => step.trim())
+    .filter(Boolean);
+}
+
+function getComboFinderStatusLabel(status: DeckComboFinderLineStatus) {
+  switch (status) {
+    case "complete":
+      return "Complete combo";
+    case "missing_one":
+      return "One piece missing";
+    case "color_locked":
+      return "Needs color change";
+    case "commander_swap":
+      return "Needs commander change";
+  }
+}
+
 function normalizeOutcomeNames(
   produces: NonNullable<CommanderSpellbookCombo["produces"]>,
 ) {
@@ -337,7 +569,135 @@ function dedupeExactCombos(combos: WinConditionComboEntry[]) {
       right.comboValue - left.comboValue ||
       left.cardNames.length - right.cardNames.length ||
       left.cardNames.join(", ").localeCompare(right.cardNames.join(", ")),
+    );
+}
+
+function buildComboFinderAnalysis(input: {
+  lookupStatus: DeckComboFinderAnalysis["lookupStatus"];
+  error?: string;
+  complete: DeckComboFinderLine[];
+  missingOne: DeckComboFinderLine[];
+  colorLocked: DeckComboFinderLine[];
+  commanderSwap: DeckComboFinderLine[];
+}): DeckComboFinderAnalysis {
+  const counts = {
+    complete: input.complete.length,
+    missingOne: input.missingOne.length,
+    colorLocked: input.colorLocked.length,
+    commanderSwap: input.commanderSwap.length,
+    total:
+      input.complete.length +
+      input.missingOne.length +
+      input.colorLocked.length +
+      input.commanderSwap.length,
+  };
+
+  return {
+    source: COMMANDER_SPELLBOOK_SOURCE,
+    lookupStatus: input.lookupStatus,
+    error: input.error,
+    summary: summarizeComboFinder(counts, input.lookupStatus),
+    counts,
+    complete: input.complete.slice(0, 80),
+    missingOne: input.missingOne.slice(0, 120),
+    colorLocked: input.colorLocked.slice(0, 40),
+    commanderSwap: input.commanderSwap.slice(0, 40),
+  };
+}
+
+function summarizeComboFinder(
+  counts: DeckComboFinderAnalysis["counts"],
+  lookupStatus: DeckComboFinderAnalysis["lookupStatus"],
+) {
+  if (lookupStatus !== "ok") {
+    return "Combo lookup is currently unavailable. Try again later.";
+  }
+
+  if (counts.complete === 0 && counts.missingOne === 0) {
+    return "No complete or one-card-away Commander Spellbook combo lines were found for this list.";
+  }
+
+  return `${counts.complete} complete combo line${counts.complete === 1 ? "" : "s"} and ${counts.missingOne} one-card-away line${counts.missingOne === 1 ? "" : "s"} found.`;
+}
+
+function dedupeComboFinderLines(combos: DeckComboFinderLine[]) {
+  const bySignature = new Map<string, DeckComboFinderLine>();
+
+  for (const combo of combos) {
+    const signature = [
+      combo.status,
+      combo.cardNames.join("|"),
+      [...combo.outcomeNames].sort((left, right) => left.localeCompare(right)).join("|"),
+      combo.missingTemplates.join("|"),
+    ].join("::");
+    const existing = bySignature.get(signature);
+
+    if (!existing || compareComboFinderLines(combo, existing) < 0) {
+      bySignature.set(signature, combo);
+    }
+  }
+
+  return [...bySignature.values()].sort(compareComboFinderLines);
+}
+
+function compareComboFinderLines(left: DeckComboFinderLine, right: DeckComboFinderLine) {
+  return (
+    getLineTypeRank(right.lineType) - getLineTypeRank(left.lineType) ||
+    Number(right.commanderInvolved) - Number(left.commanderInvolved) ||
+    left.missingCardNames.length + left.missingTemplates.length -
+      (right.missingCardNames.length + right.missingTemplates.length) ||
+    left.cardNames.length - right.cardNames.length ||
+    (right.popularity ?? 0) - (left.popularity ?? 0) ||
+    left.cardNames.join(", ").localeCompare(right.cardNames.join(", "))
   );
+}
+
+function getLineTypeRank(lineType: WinConditionComboLineType) {
+  return lineType === "finisher" ? 2 : 1;
+}
+
+function getCommanderNames(document: DeckResolutionDocument) {
+  return new Set(
+    document.result.resolvedCards
+      .filter((card) => card.section === "commander")
+      .map((card) => card.card.name),
+  );
+}
+
+function getDeckNameSet(document: DeckResolutionDocument) {
+  return new Set(
+    document.result.resolvedCards
+      .filter((card) => card.section === "commander" || card.section === "mainboard" || card.section === "companion")
+      .flatMap((card) => [card.card.name, card.requestedName])
+      .map(normalizeName),
+  );
+}
+
+function getDeckCardUriMap(document: DeckResolutionDocument) {
+  const byName = new Map<string, string>();
+
+  for (const card of document.result.resolvedCards) {
+    if (card.section !== "commander" && card.section !== "mainboard" && card.section !== "companion") {
+      continue;
+    }
+
+    if (!card.card.scryfall_uri) {
+      continue;
+    }
+
+    byName.set(normalizeName(card.card.name), card.card.scryfall_uri);
+    byName.set(normalizeName(card.requestedName), card.card.scryfall_uri);
+  }
+
+  return byName;
+}
+
+function createScryfallSearchUri(name: string) {
+  return `https://scryfall.com/search?q=${encodeURIComponent(`!"${name}"`)}`;
+}
+
+function normalizeName(name: string) {
+  return normalizeLookupKey(name);
 }
 
 function countNearMisses(results: NonNullable<CommanderSpellbookResponse["results"]>) {

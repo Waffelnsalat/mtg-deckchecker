@@ -478,6 +478,60 @@ export interface WinConditionComboEntry {
   commanderInvolved: boolean;
 }
 
+export type DeckComboFinderLineStatus =
+  | "complete"
+  | "missing_one"
+  | "color_locked"
+  | "commander_swap";
+
+export interface DeckComboFinderCard {
+  name: string;
+  typeLine?: string;
+  imageUri?: string;
+  scryfallUri: string;
+  inDeck: boolean;
+  mustBeCommander: boolean;
+  zoneLocations: string[];
+}
+
+export interface DeckComboFinderLine {
+  id: string;
+  status: DeckComboFinderLineStatus;
+  statusLabel: string;
+  lineType: WinConditionComboLineType;
+  cardNames: string[];
+  missingCardNames: string[];
+  missingTemplates: string[];
+  cards: DeckComboFinderCard[];
+  outcomeNames: string[];
+  description: string;
+  steps: string[];
+  manaNeeded?: string;
+  notablePrerequisites: string[];
+  bracketTag?: string;
+  variantCount: number;
+  commanderInvolved: boolean;
+  popularity?: number;
+}
+
+export interface DeckComboFinderAnalysis {
+  source: string;
+  lookupStatus: "ok" | "unavailable";
+  error?: string;
+  summary: string;
+  counts: {
+    complete: number;
+    missingOne: number;
+    colorLocked: number;
+    commanderSwap: number;
+    total: number;
+  };
+  complete: DeckComboFinderLine[];
+  missingOne: DeckComboFinderLine[];
+  colorLocked: DeckComboFinderLine[];
+  commanderSwap: DeckComboFinderLine[];
+}
+
 export interface DeckWinConditionComboLookup {
   source: string;
   lookupStatus: "ok" | "unavailable";

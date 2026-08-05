@@ -9,6 +9,7 @@
     />
     <title>Terms | MTG Deckchecker</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script src="/theme-preload.js"></script>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -17,10 +18,20 @@
         <a class="static-brand" href="/">MTG Deckchecker</a>
         <nav class="site-nav" aria-label="Site">
           <a href="/">Analyzer</a>
+          <a href="/combo-finder.html">Combo Finder</a>
           <a href="/how-it-works.html">How it works</a>
           <a href="/about.html">About</a>
           <a href="/privacy.html">Privacy</a>
         </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          aria-label="Switch to dark mode"
+        >
+          Dark mode
+        </button>
       </header>
 
       <main class="static-main legal-copy">
@@ -84,5 +95,6 @@
         </nav>
       </footer>
     </div>
+    <script src="/theme-toggle.js" defer></script>
   </body>
 </html>
