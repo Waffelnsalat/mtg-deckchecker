@@ -65,6 +65,16 @@ const cardBreakdownSort = document.querySelector("#card-breakdown-sort");
 const openingHandDrawButton = document.querySelector("#opening-hand-draw-button");
 const openingHandSummary = document.querySelector("#opening-hand-summary");
 const openingHandBody = document.querySelector("#opening-hand-body");
+const playGuideController = window.MtgDeckcheckerPlayGuide.create({
+  title: document.querySelector("#play-guide-title"),
+  summary: document.querySelector("#play-guide-summary"),
+  turns: document.querySelector("#play-guide-turns"),
+  priorities: document.querySelector("#play-guide-priorities"),
+  handRules: document.querySelector("#play-guide-hand-rules"),
+  handRead: document.querySelector("#play-guide-hand-read"),
+  handReasons: document.querySelector("#play-guide-hand-reasons"),
+  drawButton: document.querySelector("#play-guide-draw-button"),
+});
 const resultEmpty = document.querySelector("#result-empty");
 const resultContent = document.querySelector("#result-content");
 const successContent = document.querySelector("#success-content");
@@ -898,6 +908,9 @@ openingHandDrawButton?.addEventListener("click", () => {
   }
 
   renderOpeningHand(currentAnalysisDocument);
+});
+document.querySelector("#play-guide-draw-button")?.addEventListener("click", () => {
+  if (currentAnalysisDocument) renderOpeningHand(currentAnalysisDocument);
 });
 
 initializeMetricHelp();
@@ -1853,6 +1866,7 @@ function renderAnalyzedDeck(result) {
   renderWeakMatchups(analysis.weaknesses);
   metricDetailsController.render(analysis);
   strategyRendererController.render(strategy, winStrategy);
+  playGuideController.render(analysis, document);
   quickReadController.render(analysis);
   recommendationVisualRenderToken += 1;
   const recommendationRenderToken = recommendationVisualRenderToken;
@@ -2364,6 +2378,7 @@ function renderOpeningHand(deckDocument) {
   }
 
   const hand = drawRandomHand(pool, 7);
+  playGuideController.assessHand(hand, currentAnalysisSnapshot);
   const displayHand = [...hand].sort(compareOpeningHandCards);
 
   if (openingHandSummary) {
@@ -2380,6 +2395,7 @@ function resetOpeningHand(message = "Seven cards are drawn from the resolved mai
     openingHandSummary.textContent = message;
   }
   openingHandBody?.replaceChildren();
+  playGuideController.assessHand(null);
 }
 
 function buildOpeningHandPool(deckDocument) {
