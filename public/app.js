@@ -73,7 +73,8 @@ const playGuideController = window.MtgDeckcheckerPlayGuide.create({
   handRules: document.querySelector("#play-guide-hand-rules"),
   handRead: document.querySelector("#play-guide-hand-read"),
   handReasons: document.querySelector("#play-guide-hand-reasons"),
-  drawButton: document.querySelector("#play-guide-draw-button"),
+  commanderTitle: document.querySelector("#play-guide-commander-title"),
+  commanderRead: document.querySelector("#play-guide-commander-read"),
 });
 const resultEmpty = document.querySelector("#result-empty");
 const resultContent = document.querySelector("#result-content");
@@ -908,9 +909,6 @@ openingHandDrawButton?.addEventListener("click", () => {
   }
 
   renderOpeningHand(currentAnalysisDocument);
-});
-document.querySelector("#play-guide-draw-button")?.addEventListener("click", () => {
-  if (currentAnalysisDocument) renderOpeningHand(currentAnalysisDocument);
 });
 
 initializeMetricHelp();
