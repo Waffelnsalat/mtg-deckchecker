@@ -5,11 +5,9 @@
 ## Files
 
 - `index.html`: page structure, form fields, result sections, modal markup.
-- `combo-finder.html`: standalone combo lookup page separate from the analyzer result state.
 - `about.html`, `how-it-works.html`, `privacy.html`, `terms.html`, `contact.html`: crawlable content and policy pages for public launch / ad-network readiness.
 - `styles.css`: layout, responsive behavior, visual states.
 - `app.js`: central browser state, API calls, orchestration, and shared render helpers.
-- `combo-finder.js`: standalone UI for complete and one-card-away Commander Spellbook combo lines.
 - `deck-input.js` / `decklist-intake.js`: paste, upload, URL import, target bracket prompt, and scan start flow.
 - `deck-identity.js`: deck name, commander, partner/background, companion, and extra-deck identity fields.
 - `quick-read.js`: compact top-level read and opening-hand playtest widget.
@@ -18,9 +16,7 @@
 - `report-dialog.js`: feedback / report modal.
 - `result-state.js`: shared UI state helpers.
 - `frontend-config.js`: app version, release link, tag aliases, metric help text, and UI config values.
-- `theme-preload.js`: early theme bootstrap before CSS loads to avoid light/dark flashes.
 - `theme-media.js`: theme and background media behavior.
-- `theme-toggle.js`: shared dark/light mode toggle for static pages and the Combo Finder.
 - `assets/`: local hero images used by the page.
 
 ## UI Flow
@@ -31,8 +27,6 @@
 4. If multiple meaningful plans exist, the UI asks which strategy the user intends to play and recalculates with `preferredStrategyKey`.
 5. The API returns `{ document, validation, sources, analysis }`.
 6. The UI renders quick read, power, bracket, strategy, weaknesses, recommendations, tag frequency, card breakdown, and opening-hand tools.
-
-`combo-finder.html` has its own smaller flow: paste, upload, or import a decklist, call `/api/edh/combos/find`, then render complete combos, one-card-away lines, color-locked lines, and commander-swap lines without running the full analyzer.
 
 ## Good Starting Points In `app.js`
 

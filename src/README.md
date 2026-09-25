@@ -29,7 +29,7 @@ Each `*Analysis.ts` file is responsible for one slice of the deck read. The matc
 - `interactionAnalysis.ts`: removal, stack interaction, stax, graveyard hate.
 - `protectionAnalysis.ts`: shields, bounce, flicker, equipment protection.
 - `recursionAnalysis.ts`: graveyard and replay effects.
-- `winConditionAnalysis.ts`: finishers and compact Commander Spellbook combo scoring.
+- `winConditionAnalysis.ts`: finishers and Commander Spellbook combo lookup.
 - `strategyAnalysis.ts`: broad archetype detection.
 - `winStrategyAnalysis.ts`: primary and backup win plans.
 - `commanderAnalysis.ts`: commander impact and dependency.
@@ -47,7 +47,7 @@ Each `*Analysis.ts` file is responsible for one slice of the deck read. The matc
 - `commanderColorProfile.ts`: color identity profile helpers.
 - `commanderManaSink.ts`: detects infinite-mana sink potential.
 - `commanderProfile.ts`: commander-specific deck profile inference.
-- `commanderSpellbook.ts`: external combo lookup for scoring plus the standalone combo-finder endpoint.
+- `commanderSpellbook.ts`: external combo lookup.
 - `edhrec.ts`: external EDHREC context.
 - `recommander.ts`: external recommendation context.
 - `asyncUtils.ts`: small shared async helpers.

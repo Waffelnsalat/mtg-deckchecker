@@ -2,20 +2,7 @@
 
 ## Unreleased
 
-## 1.4.0 - 2026-08-05
-
-### Neu
-
-- Standalone Combo-Finder-Seite ergaenzt, getrennt vom normalen Analyzer.
-- Neuer API-Endpunkt `/api/edh/combos/find` zeigt komplette Commander-Spellbook-Combos, One-Piece-Misses, farbgesperrte Linien und Commander-Swap-Linien.
-- Combo-Finder zeigt Kartenbilder, fehlende Pieces, Outputs, Mana-/Setup-Hinweise und Schritt-fuer-Schritt-Text aus Commander Spellbook.
-- Darkmode-Toggle gilt jetzt auch fuer Combo Finder und statische Info-/Policy-Seiten.
-- Theme wird vor dem Stylesheet gesetzt, damit gespeicherter Darkmode nicht kurz als heller Screen aufblitzt.
-
-### Validierung
-
-- `npm run build`
-- `npm test`
+- Standalone Combo Finder samt separatem API-Endpunkt entfernt. Die Combo-Bewertung im Analyzer bleibt bestehen.
 
 ## 1.3.1 - 2026-08-04
 
