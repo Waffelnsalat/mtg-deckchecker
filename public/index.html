@@ -599,6 +599,15 @@
                   <button
                     class="advanced-tab-button"
                     type="button"
+                    data-advanced-tab="play-guide"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    How to Play
+                  </button>
+                  <button
+                    class="advanced-tab-button"
+                    type="button"
                     data-advanced-tab="matchups"
                     role="tab"
                     aria-selected="false"
@@ -902,6 +911,35 @@
                 </section>
               </div>
 
+              </div>
+
+              <div class="analysis-tab-panel" data-analysis-tab-panel="play-guide">
+                <section class="dashboard-section">
+                  <p class="panel-kicker">Pilot Guide</p>
+                  <h3>How to Play Your Deck</h3>
+                  <p>Priorities based on the detected plan and resolved cards. Adapt them to your hand and the table.</p>
+                </section>
+                <section class="note-box play-guide-box">
+                  <p class="panel-kicker">Your Plan</p>
+                  <h3 id="play-guide-title">Game Plan</h3>
+                  <p id="play-guide-summary" class="strategy-summary"></p>
+                  <div id="play-guide-turns" class="play-guide-grid"></div>
+                </section>
+                <div class="result-columns">
+                  <section class="note-box play-guide-box">
+                    <p class="panel-kicker">Priorities</p>
+                    <h3>What to Watch For</h3>
+                    <ul id="play-guide-priorities" class="note-list"></ul>
+                  </section>
+                  <section class="note-box play-guide-box">
+                    <p class="panel-kicker">Opening Seven</p>
+                    <h3>Keep Criteria</h3>
+                    <p id="play-guide-hand-rules" class="strategy-summary"></p>
+                    <p id="play-guide-hand-read" class="play-guide-hand-read" aria-live="polite"></p>
+                    <ul id="play-guide-hand-reasons" class="note-list"></ul>
+                    <button id="play-guide-draw-button" class="secondary-button" type="button">Draw Another Hand</button>
+                  </section>
+                </div>
               </div>
 
               <div class="analysis-tab-panel" data-analysis-tab-panel="matchups">
@@ -1895,6 +1933,7 @@
     <script src="/quick-read.js" defer></script>
     <script src="/theme-media.js" defer></script>
     <script src="/strategy-renderer.js" defer></script>
+    <script src="/play-guide.js" defer></script>
     <script src="/deck-identity.js" defer></script>
     <script src="/structure-overview.js" defer></script>
     <script src="/metric-details.js" defer></script>
