@@ -147,6 +147,7 @@ export function createApp() {
     }
 
     try {
+      const startedAt = performance.now();
       const additionalCommanderName =
         parsedBody.data.additionalCommanderName ??
         parsedBody.data.partnerName ??
@@ -158,11 +159,17 @@ export function createApp() {
         backgroundName: parsedBody.data.backgroundName,
         companionName: parsedBody.data.companionName,
       });
-      const draw = analyzeDeckDraw(document);
-      const winConditions = await analyzeDeckWinConditions(document);
+      const resolvedAt = performance.now();
       const targetBracket = toDeckBracketNumber(parsedBody.data.targetBracket);
-      const edhrec = await lookupCommanderEdhrecInsights(document, targetBracket);
-      const recommander = await lookupRecommanderRecommendations(document);
+      // These lookups are independent; start them together to avoid adding their
+      // network time (and timeout budgets) to every analysis.
+      const [winConditions, edhrec, recommander] = await Promise.all([
+        analyzeDeckWinConditions(document),
+        lookupCommanderEdhrecInsights(document, targetBracket),
+        lookupRecommanderRecommendations(document),
+      ]);
+      const lookupsFinishedAt = performance.now();
+      const draw = analyzeDeckDraw(document);
       const strategy = analyzeDeckStrategy(document, winConditions, {
         secretCommanderName: parsedBody.data.secretCommanderName,
         preferredStrategyKey: parsedBody.data.preferredStrategyKey,
@@ -254,6 +261,12 @@ export function createApp() {
         recommendations,
         winConditions,
       });
+
+      response.setHeader("Server-Timing", [
+        `resolve;dur=${(resolvedAt - startedAt).toFixed(1)}`,
+        `lookups;dur=${(lookupsFinishedAt - resolvedAt).toFixed(1)}`,
+        `analysis;dur=${(performance.now() - lookupsFinishedAt).toFixed(1)}`,
+      ].join(", "));
 
       response.json({
         document,

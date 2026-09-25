@@ -14,7 +14,14 @@ const COMMANDER_SPELLBOOK_TIMEOUT_MS = 12_000;
 const COMMANDER_SPELLBOOK_MAX_TOTAL_MS = 35_000;
 const COMMANDER_SPELLBOOK_MAX_ATTEMPTS = 2;
 const COMMANDER_SPELLBOOK_RETRY_DELAY_MS = 1_200;
+const COMBO_CACHE_TTL_MS = 10 * 60_000;
+const COMBO_FAILURE_CACHE_TTL_MS = 60_000;
+const COMBO_CACHE_MAX_ENTRIES = 100;
 const logger = createLogger("combo-lookup");
+const comboCache = new Map<string, {
+  expiresAt: number;
+  value: Promise<DeckWinConditionComboLookup>;
+}>();
 
 interface CommanderSpellbookResponse {
   results?: {
@@ -57,7 +64,35 @@ export async function lookupDeckInfiniteCombos(
       .map((card) => card.card.name),
   );
   const decklists = buildCommanderSpellbookDecklists(document);
+  const cacheKey = decklists.join("\n---\n");
+  const now = Date.now();
+  const cached = comboCache.get(cacheKey);
+  if (cached && cached.expiresAt > now) {
+    return cached.value;
+  }
 
+  // Store the pending promise so a strategy rescore or concurrent request
+  // doesn't send the same full decklist to Commander Spellbook again.
+  const value = fetchDeckInfiniteCombos(decklists, commanderNames);
+  comboCache.set(cacheKey, { expiresAt: now + COMBO_CACHE_TTL_MS, value });
+  if (comboCache.size > COMBO_CACHE_MAX_ENTRIES) {
+    comboCache.delete(comboCache.keys().next().value!);
+  }
+  void value.then((result) => {
+    if (result.lookupStatus !== "ok" && comboCache.get(cacheKey)?.value === value) {
+      comboCache.set(cacheKey, {
+        expiresAt: Date.now() + COMBO_FAILURE_CACHE_TTL_MS,
+        value,
+      });
+    }
+  });
+  return value;
+}
+
+async function fetchDeckInfiniteCombos(
+  decklists: string[],
+  commanderNames: Set<string>,
+): Promise<DeckWinConditionComboLookup> {
   try {
     const response = await fetchCommanderSpellbookCombos(decklists);
 
