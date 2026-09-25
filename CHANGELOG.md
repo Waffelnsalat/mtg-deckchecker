@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Bracket-Einstufung behandelt Zweikarten-Combos anhand des erwarteten Spieltempos statt automatisch als Bracket 4; Game-Changer-Liste mit Wizards-Stand Februar 2026 abgeglichen.
+- Die vom Nutzer bereitgestellte Bracket-Uebersicht ist in Tempo-, Intent- und Nachbar-Bracket-Erklaerungen eingearbeitet; Zweikarten-Lockouts werden als Combo-Signal gezaehlt.
 - Standalone Combo Finder samt separatem API-Endpunkt entfernt. Die Combo-Bewertung im Analyzer bleibt bestehen.
 - Unabhaengige externe Analyseabfragen laufen parallel; identische Commander-Spellbook-Abfragen werden kurzzeitig geteilt und gecacht.
 - Der Analyse-Endpunkt liefert `Server-Timing` fuer Kartenaufloesung, externe Abfragen und restliche Analyse.

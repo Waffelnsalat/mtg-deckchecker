@@ -28,6 +28,23 @@ const BRACKET_NAMES: Record<DeckBracketNumber, DeckBracketName> = {
   5: "cEDH",
 };
 
+// Wizards' bracket descriptions refer to turns a player should generally
+// expect to play before winning or losing, not a guaranteed win turn.
+const BRACKET_PACE: Record<DeckBracketNumber, string> = {
+  1: "at least nine turns to show off a theme",
+  2: "at least eight turns with incremental, disruptable wins",
+  3: "at least six turns before a player wins or loses",
+  4: "at least four turns despite fast, efficient win conditions",
+  5: "games can end on any turn in a cEDH metagame",
+};
+const BRACKET_DISTINCTION: Record<DeckBracketNumber, string> = {
+  1: "theme and intent matter more than raw power",
+  2: "mechanical focus and card choices distinguish Core from Exhibition and Upgraded",
+  3: "speed and reliable early wins distinguish Upgraded from Optimized",
+  4: "competitive metagame fit distinguishes Optimized from cEDH",
+  5: "cEDH metagame fit and playing to win define this bracket",
+};
+
 const BRACKET_BANDS: Record<
   Exclude<DeckBracketNumber, 5>,
   { min: number; max: number }
@@ -424,6 +441,8 @@ function buildBracketSummary(input: {
   });
   const lines = [
     `Final read: ${recommendedLabel} (${recommendedName})`,
+    `- Expected experience: ${BRACKET_PACE[input.recommendedBracket]}; confirm deck intent and typical win turns with the table`,
+    `- Key distinction: ${BRACKET_DISTINCTION[input.recommendedBracket]}`,
     `- Power read: ${powerLabel}`,
     `- Rules floor: ${rulesFloorText}`,
     `- Main drivers: ${driversText}`,
@@ -456,6 +475,13 @@ function buildBracketFindings(input: {
     title: `Recommended bracket: ${formatBracketLabel(input.recommendedBracket, input.recommendedModifier)}`,
     status: getBracketReadFindingStatus(input),
     message: `Power profile reads as ${formatBracketLabel(input.powerBracketInfo.bracket, input.powerBracketInfo.modifier)}. Rules floor is Bracket ${input.rulesFloor}. Final recommendation is ${formatBracketLabel(input.recommendedBracket, input.recommendedModifier)} (${BRACKET_NAMES[input.recommendedBracket]}).`,
+  });
+
+  findings.push({
+    code: "bracket_expected_pace",
+    title: "Check the expected game length and deck intent",
+    status: "note",
+    message: `Wizards describes Bracket ${input.recommendedBracket} as ${BRACKET_PACE[input.recommendedBracket]}. ${BRACKET_DISTINCTION[input.recommendedBracket]}. This analyzer estimates power from the decklist; it cannot measure actual win turns, identify a thematic exception, or verify cEDH metagame intent. Confirm those expectations before playing.`,
   });
 
   if (input.targetComparison) {
@@ -515,7 +541,7 @@ function buildBracketFindings(input: {
         ? "Exact two-card infinite combos support the bracket read"
         : "Exact two-card infinite combos are present",
       status: getTargetAwareFindingStatus(input, "warning"),
-      message: `${input.signals.twoCardCombos} exact two-card infinite combo line${input.signals.twoCardCombos === 1 ? "" : "s"} were found. Check how often the deck can assemble and win with them: a later, infrequent line may fit Upgraded, while a fast, reliable win points toward Optimized or higher.`,
+      message: `${input.signals.twoCardCombos} exact two-card game-ending, lockout, or infinite combo line${input.signals.twoCardCombos === 1 ? "" : "s"} were found. Core excludes these lines; for Upgraded, check whether they can frequently decide a game before turn six. A fast, reliable line points toward Optimized or higher.`,
     });
   }
 
@@ -1097,28 +1123,14 @@ function isBracketFloorCombo(combo: DeckWinConditionAnalysis["combos"]["exact"][
     return true;
   }
 
-  if (isSoftLockOnlyCombo(combo)) {
-    return false;
-  }
-
-  return combo.outcomeNames.some((name) =>
+  const lockout = [...combo.outcomeNames, combo.description].some((text) =>
+    /\block(?:out)?\b|\bskip(?:s)? (?:their|your) untap steps?\b/i.test(text),
+  );
+  return lockout || combo.outcomeNames.some((name) =>
     /\binfinite\b[\s\S]{0,80}\b(?:mana|tokens?|draw|cards?|damage|life|mill|turns?|combat|storm)\b|\btreasure tokens?\b|\bstorm count\b/i.test(
       name,
     ),
   );
-}
-
-function isSoftLockOnlyCombo(combo: DeckWinConditionAnalysis["combos"]["exact"][number]) {
-  const text = [...combo.outcomeNames, combo.description].join(" ").toLowerCase();
-  const hasLockText = /\block\b|\bskip(?:s)? their untap steps?\b|\bskip(?:s)? (?:his|her|their|your) next untap step\b/.test(
-    text,
-  );
-  const hasClosingOrResourceText =
-    /\bwin the game\b|\blose the game\b|\bdamage\b|\blife\b|\bpoison\b|\bmill\b|\bcombat\b|\bextra turns?\b|\binfinite\b[\s\S]{0,80}\b(?:mana|tokens?|draw|cards?|damage|life|mill|turns?|combat|storm)\b/.test(
-      text,
-    );
-
-  return hasLockText && !hasClosingOrResourceText;
 }
 
 function countMatchingCards(

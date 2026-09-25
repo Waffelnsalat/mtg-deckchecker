@@ -175,7 +175,7 @@ test("analyzeDeckBracket does not automatically promote a slower two-card combo 
   assert.ok(analysis.findings.some((finding: any) => finding.code === "bracket_two_card_combo"));
 });
 
-test("analyzeDeckBracket does not treat slow lock-only engine loops as two-card bracket floor combos", () => {
+test("analyzeDeckBracket flags two-card lockouts without automatically promoting them to bracket 4", () => {
   const analysis = analyzeDeckBracket({
     document: createDocument([]),
     power: createPowerAnalysis(5.8, {
@@ -199,8 +199,8 @@ test("analyzeDeckBracket does not treat slow lock-only engine loops as two-card 
     }),
   });
 
-  assert.equal(analysis.signals.twoCardCombos, 0);
-  assert.notEqual(analysis.rulesFloor, 4);
+  assert.equal(analysis.signals.twoCardCombos, 1);
+  assert.equal(analysis.rulesFloor, 3);
 });
 
 test("analyzeDeckBracket flags compact infinite-mana engines for an upgraded win-turn check", () => {
@@ -434,8 +434,9 @@ test("analyzeDeckBracket keeps all relevant bracket findings when several barome
   });
 
   const codes = new Set(analysis.findings.map((finding: any) => finding.code));
-  assert.equal(analysis.findings.length, 8);
+  assert.equal(analysis.findings.length, 9);
   assert.ok(codes.has("bracket_read"));
+  assert.ok(codes.has("bracket_expected_pace"));
   assert.ok(codes.has("bracket_target_fit"));
   assert.ok(codes.has("bracket_rules_floor"));
   assert.ok(codes.has("bracket_not_higher"));
