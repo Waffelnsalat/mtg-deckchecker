@@ -5236,3 +5236,24 @@ html[data-theme="dark"] #issues-box {
     grid-template-columns: 1fr;
   }
 }
+.play-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.play-guide-turn {
+  padding: 1rem;
+  border: 1px solid var(--border, rgba(130, 150, 130, 0.35));
+  border-radius: 0.9rem;
+  background: var(--surface, rgba(130, 150, 130, 0.07));
+}
+
+.play-guide-turn h4 { margin: 0 0 0.5rem; }
+.play-guide-turn p { margin: 0; line-height: 1.55; }
+.play-guide-hand-read { font-weight: 700; margin-top: 1rem; }
+
+@media (max-width: 650px) {
+  .play-guide-grid { grid-template-columns: 1fr; }
+}
