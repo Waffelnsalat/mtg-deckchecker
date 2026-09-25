@@ -214,7 +214,9 @@ flowchart TD
   FinalBracket --> TargetComparison
 ```
 
-The recommended bracket starts from the higher value between the power read and the hard rules floor. For example, a lower-power deck can still be lifted by Game Changers, compact two-card combos, repeated extra turns, or mass land denial.
+The recommended bracket starts from the higher value between the power read and the rules floor. Game Changers, compact two-card combos, repeated extra turns, and mass land denial can lift a lower-power deck. An exact two-card combo alone calls for at least an Upgraded win-turn check; it does not automatically make the deck Optimized.
+
+Rules reference (checked 2026-09-25): [Wizards' October 2025 bracket expectations](https://magic.wizards.com/en/news/announcements/commander-brackets-beta-update-october-21-2025) and [February 2026 Game Changer update](https://magic.wizards.com/en/news/announcements/commander-brackets-beta-update-february-9-2026). The numeric power and speed thresholds in this project are local estimates, not official Wizards cutoffs; the expected win turn and deck intent still need a pregame conversation.
 
 After that, `src/bracketAnalysis.ts` applies target-aware soft boundaries:
 
@@ -224,7 +226,7 @@ After that, `src/bracketAnalysis.ts` applies target-aware soft boundaries:
 - The current combined gate-gap budgets are 14 for Bracket 3, 16 for Bracket 4, and 12 for Bracket 5.
 - The current over-target tolerance is 0.36 for Bracket 2 and Bracket 3.
 
-Hard pressure still wins over soft tolerance. Game Changers, compact two-card infinite combos, repeated extra turns, mass land denial, or an overwhelming cEDH profile can still force the higher bracket.
+Hard pressure still wins over soft tolerance. Game Changers, repeated extra turns, mass land denial, or an overwhelming cEDH profile can still force the higher bracket. Compact two-card combos are assessed alongside the deck's speed and consistency.
 
 ## Key Weak Spots
 

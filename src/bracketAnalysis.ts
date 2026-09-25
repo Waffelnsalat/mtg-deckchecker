@@ -202,7 +202,7 @@ function getPowerBracketRead(
     targetBracket === 2 &&
     score < BRACKET_BANDS[2].max + (BRACKET_OVER_SCORE_MARGIN[2] ?? 0) &&
     (upgradedSignals || nearUpgradedSignals) &&
-    !hasHardUpgradePressure(signals)
+    !hasHardUpgradePressure(signals, speed, consistency, closing)
   ) {
     return {
       bracket: 2,
@@ -239,7 +239,7 @@ function getPowerBracketRead(
     targetBracket === 3 &&
     score < BRACKET_BANDS[3].max + (BRACKET_OVER_SCORE_MARGIN[3] ?? 0) &&
     (optimizedSignals || nearOptimizedSignals) &&
-    !hasHardOptimizedPressure(signals)
+    !hasHardOptimizedPressure(signals, speed, consistency, closing)
   ) {
     return {
       bracket: 3,
@@ -262,12 +262,17 @@ function getPowerBracketRead(
   };
 }
 
-function hasHardUpgradePressure(signals: DeckBracketAnalysis["signals"]) {
-  return signals.gameChangers > 0 || hasHardOptimizedPressure(signals);
+function hasHardUpgradePressure(
+  signals: DeckBracketAnalysis["signals"], speed: number, consistency: number, closing: number,
+) {
+  return signals.gameChangers > 0 || hasHardOptimizedPressure(signals, speed, consistency, closing);
 }
 
-function hasHardOptimizedPressure(signals: DeckBracketAnalysis["signals"]) {
-  return signals.twoCardCombos > 0 || signals.extraTurns > 0 || signals.massLandDenial > 0;
+function hasHardOptimizedPressure(
+  signals: DeckBracketAnalysis["signals"], speed: number, consistency: number, closing: number,
+) {
+  return signals.extraTurns > 0 || signals.massLandDenial > 0 ||
+    (signals.twoCardCombos > 0 && speed >= 74 && consistency >= 66 && closing >= 78);
 }
 
 function getBestUpgradedGateGap(input: {
@@ -370,7 +375,10 @@ function getRulesFloor(
   }
 
   if (signals.twoCardCombos > 0) {
-    floor = 4;
+    // An exact two-card combo is a reason to discuss expected win turns.
+    // The official Bracket 3 guidance allows later, infrequent combos;
+    // card count alone does not establish an Optimized (Bracket 4) deck.
+    floor = Math.max(floor, 3) as DeckBracketNumber;
   }
 
   if (signals.massLandDenial > 0) {
@@ -507,7 +515,7 @@ function buildBracketFindings(input: {
         ? "Exact two-card infinite combos support the bracket read"
         : "Exact two-card infinite combos are present",
       status: getTargetAwareFindingStatus(input, "warning"),
-      message: `${input.signals.twoCardCombos} exact two-card infinite combo line${input.signals.twoCardCombos === 1 ? "" : "s"} were found. That is treated as an Optimized-level barometer in this bracket read.`,
+      message: `${input.signals.twoCardCombos} exact two-card infinite combo line${input.signals.twoCardCombos === 1 ? "" : "s"} were found. Check how often the deck can assemble and win with them: a later, infrequent line may fit Upgraded, while a fast, reliable win points toward Optimized or higher.`,
     });
   }
 
@@ -594,7 +602,7 @@ function describeRulesFloor(
   }
 
   if (signals.twoCardCombos > 0) {
-    reasons.push(`${formatCount(signals.twoCardCombos, "exact two-card combo")} set an Optimized floor`);
+    reasons.push(`the presence of ${formatCount(signals.twoCardCombos, "exact two-card combo")} warrants an Upgraded-or-higher win-turn check`);
   }
 
   if (signals.massLandDenial > 0) {
