@@ -3,6 +3,8 @@
 ## Unreleased
 
 - Standalone Combo Finder samt separatem API-Endpunkt entfernt. Die Combo-Bewertung im Analyzer bleibt bestehen.
+- Unabhaengige externe Analyseabfragen laufen parallel; identische Commander-Spellbook-Abfragen werden kurzzeitig geteilt und gecacht.
+- Der Analyse-Endpunkt liefert `Server-Timing` fuer Kartenaufloesung, externe Abfragen und restliche Analyse.
 
 ## 1.3.1 - 2026-08-04
 
