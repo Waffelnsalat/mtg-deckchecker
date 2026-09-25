@@ -5243,6 +5243,20 @@ html[data-theme="dark"] #issues-box {
   margin-top: 1.25rem;
 }
 
+.play-guide-box {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 1281px) {
+  .analysis-tab-panel[data-analysis-tab-panel="play-guide"] > .play-guide-box {
+    grid-column: 1 / -1;
+  }
+
+  .analysis-tab-panel[data-analysis-tab-panel="play-guide"] > .result-columns > .play-guide-box {
+    grid-column: span 6;
+  }
+}
+
 .play-guide-turn {
   padding: 1rem;
   border: 1px solid var(--border, rgba(130, 150, 130, 0.35));
