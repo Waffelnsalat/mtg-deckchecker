@@ -79,6 +79,9 @@ export function createApp() {
   const exportsDir = getGeneratedExportsDir();
 
   app.use(express.json({ limit: "1mb" }));
+  app.get("/combo-finder.html", (_request, response) => {
+    response.redirect(301, "/");
+  });
   app.use(express.static(publicDir));
 
   app.get("/health", (_request, response) => {
