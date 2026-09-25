@@ -32,6 +32,41 @@ window.MtgDeckcheckerPlayGuide = {
       return items.length ? ` Examples: ${items.join(", ")}.` : "";
     }
 
+    function commanderGuidance(analysis, deckDocument) {
+      const commanders = (deckDocument?.result?.resolvedCards ?? [])
+        .filter((entry) => entry.section === "commander");
+      if (!commanders.length) return null;
+
+      const names = commanders.map((entry) => entry.card.name);
+      const firstCommander = [...commanders].sort((left, right) =>
+        (Number(left.card.cmc) || 0) - (Number(right.card.cmc) || 0))[0];
+      const earliest = Number(firstCommander.card.cmc) || 0;
+      const dependency = analysis?.commander?.dependencyScore ?? 0;
+      const role = analysis?.commander?.taggedCommanders?.[0]?.hits
+        ?.slice().sort((left, right) => right.weight - left.weight)[0]?.tag;
+      const roleHints = {
+        mana_engine: "adds mana", card_engine: "generates cards", tutor_engine: "finds key pieces",
+        interaction_engine: "interacts with opponents", protection_engine: "protects your board",
+        recursion_engine: "recovers resources", combo_enabler: "enables a combo",
+        finisher_engine: "helps close the game", token_engine: "creates tokens",
+        cost_reducer: "reduces costs",
+      };
+      const timing = earliest <= 2 ? "can come down early"
+        : earliest <= 4 ? "can usually enter during the setup turns if your mana is ready"
+          : "usually needs more mana than the first four turns provide";
+      const caution = dependency >= 72
+        ? "The deck relies heavily on the command zone; prepare mana and protection before exposing it to removal."
+        : dependency <= 38
+          ? "The 99 can function without it, so you need not cast it into removal just because you have the mana."
+          : "Cast it when its effect advances your board and you can use or protect that value.";
+      return {
+        title: `Commander: ${names.join(" & ")}`,
+        text: `${names.join(" & ")} ${timing}${roleHints[role] ? ` and ${roleHints[role]}` : ""}. ${caution} Check your available colors and the actual board before casting.`,
+        turn: earliest <= 1 ? 0 : earliest <= 2 ? 1 : earliest <= 3 ? 2 : earliest <= 4 ? 3 : -1,
+        name: firstCommander.card.name,
+      };
+    }
+
     function render(analysis, deckDocument) {
       const strategy = analysis?.strategy?.mainStrategy;
       const win = analysis?.winStrategy?.primaryPlan;
@@ -47,12 +82,16 @@ window.MtgDeckcheckerPlayGuide = {
       const ramp = names(analysis, "ramp");
       const draw = names(analysis, "draw");
       const payoff = (strategy?.keyCards ?? []).slice(0, 2);
+      const commander = commanderGuidance(analysis, deckDocument);
       const turns = [
         ["Turn 1", "Make a land drop. If you have cheap mana or setup, develop it without spending key payoff pieces." + example(ramp)],
         ["Turn 2", "Prioritize reliable mana and a playable next turn; use card selection if your hand needs it." + example(ramp)],
         ["Turn 3", directions[0] + example(draw)],
         ["Turn 4", directions[1] + example(payoff)],
       ];
+      if (commander?.turn >= 0) {
+        turns[commander.turn][1] += ` If ready, consider ${commander.name} here; do not force it into removal.`;
+      }
       elements.turns.replaceChildren(...turns.map(([title, copy]) => {
         const article = document.createElement("article");
         article.className = "play-guide-turn";
@@ -63,6 +102,8 @@ window.MtgDeckcheckerPlayGuide = {
         article.append(heading, paragraph);
         return article;
       }));
+      elements.commanderTitle.textContent = commander?.title ?? "Commander";
+      elements.commanderRead.textContent = commander?.text ?? "No resolved commander is available for a timing recommendation.";
 
       list(elements.priorities, [
         `First: ${directions[0]}`,
@@ -73,7 +114,6 @@ window.MtgDeckcheckerPlayGuide = {
       elements.handRules.textContent = "Look for 2–4 lands, a play in the first two turns, and a path to your main plan. Check that your lands actually cast your spells.";
       elements.handRead.textContent = "Draw an opening seven to see a hand-specific read.";
       elements.handReasons.replaceChildren();
-      elements.drawButton.disabled = !deckDocument?.result?.resolvedCards?.some((entry) => entry.section === "mainboard");
     }
 
     function assessHand(hand, analysis) {

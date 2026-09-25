@@ -5266,6 +5266,9 @@ html[data-theme="dark"] #issues-box {
 
 .play-guide-turn h4 { margin: 0 0 0.5rem; }
 .play-guide-turn p { margin: 0; line-height: 1.55; }
+.play-guide-commander { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.play-guide-commander h4 { margin: 0 0 0.45rem; }
+.play-guide-commander p { margin: 0; line-height: 1.55; }
 .play-guide-hand-read { font-weight: 700; margin-top: 1rem; }
 
 @media (max-width: 650px) {
